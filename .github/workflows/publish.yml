@@ -1,0 +1,103 @@
+# Publish @nubjs/extensions to npm via trusted publishing (OIDC).
+#
+# NO NPM_TOKEN. npm mints a short-lived credential from this job's OIDC identity,
+# which is why `id-token: write` is the load-bearing permission — without it
+# `npm publish` falls back to looking for a token and fails. The trust
+# relationship is registered against THIS FILENAME (`publish.yml`), so renaming
+# or moving this file silently breaks publishing until the trust is re-created.
+#
+# Manual only, deliberately. The dataset rebuilds daily, but a rebuild is not a
+# release: publishing every scan would burn a version per day for data that
+# usually has not moved. Bump `harness/version.json` in a reviewable commit, then
+# run this.
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Pack and gate, but do not publish"
+        type: boolean
+        default: false
+
+permissions: {}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # npm publish authenticates via OIDC trusted publishing, which mints its
+      # credential from this identity. Nothing else here needs a token.
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          # Trusted publishing requires npm >= 11.5.1 and Node >= 22.14.0. Node 24
+          # ships an npm new enough; the check below fails loudly rather than
+          # letting a too-old npm fall through to a confusing auth error.
+          node-version: 24
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Check the toolchain can do OIDC
+        run: |
+          set -euo pipefail
+          NPM_VERSION=$(npm --version)
+          echo "npm $NPM_VERSION, node $(node --version)"
+          NPM_VERSION="$NPM_VERSION" node -e '
+            const [maj, min, pat] = process.env.NPM_VERSION.split(".").map(Number);
+            const ok = maj > 11 || (maj === 11 && (min > 5 || (min === 5 && pat >= 1)));
+            if (!ok) { console.error(`npm ${process.env.NPM_VERSION} is too old for trusted publishing (need >= 11.5.1)`); process.exit(1); }
+          '
+
+      - name: Build the publishable directory
+        run: |
+          set -euo pipefail
+          node harness/pack.mjs
+          node -e 'console.log("packing", require("./npm/package.json").name + "@" + require("./npm/package.json").version)'
+
+      - name: Gate
+        # The same suite that guards a dataset commit. A release must not be able
+        # to ship something a normal build would have refused — above all the
+        # no-regression contract that every `@yarnpkg/extensions` rule survives.
+        run: node harness/verify.mjs
+
+      - name: Refuse to republish an existing version
+        # `npm publish` would fail on a duplicate anyway, but it fails AFTER
+        # uploading, and the error reads like an auth problem. Checking first
+        # makes a re-run of this workflow a clean no-op instead.
+        run: |
+          set -euo pipefail
+          VERSION=$(node -p 'require("./npm/package.json").version')
+          CODE=$(curl -s -o /dev/null -w '%{http_code}' "https://registry.npmjs.org/@nubjs%2fextensions/$VERSION")
+          if [ "$CODE" = "200" ]; then
+            echo "::error::@nubjs/extensions@$VERSION is already published — bump harness/version.json"
+            exit 1
+          fi
+          echo "$VERSION is unpublished (registry returned $CODE)"
+
+      - name: Publish
+        if: ${{ !inputs.dry_run }}
+        working-directory: npm
+        run: npm publish --access public
+
+      - name: Summary
+        if: always()
+        run: |
+          set -euo pipefail
+          VERSION=$(node -p 'require("./npm/package.json").version')
+          {
+            echo "### @nubjs/extensions@$VERSION"
+            echo
+            node -e '
+              const d = require("./npm/package-extensions.json");
+              const t = d.totals;
+              console.log(`- ${Object.keys(d.packageExtensions).length} packages, ${t.entries} entries`);
+              console.log(`- classes: ${Object.entries(t.byClass).map(([k, v]) => `${k} ${v}`).join(", ")}`);
+            '
+            if [ "${{ inputs.dry_run }}" = "true" ]; then echo "- dry run, nothing published"; fi
+          } >> "$GITHUB_STEP_SUMMARY"
