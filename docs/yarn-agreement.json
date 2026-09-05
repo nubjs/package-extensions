@@ -16,12 +16,12 @@
     "unresolved": 0
   },
   "agreement": {
-    "entriesFullyMatched": 8,
+    "entriesFullyMatched": 9,
     "entriesPartiallyMatched": 1,
-    "entriesMissed": 8,
-    "edgeAgreement": "8/23",
-    "edgesNotReferenced": 5,
-    "edgesDynamicSpecifier": 9
+    "entriesMissed": 7,
+    "edgeAgreement": "8/22",
+    "edgesNotReferenced": 6,
+    "edgesDynamicSpecifier": 10
   },
   "detail": {
     "applicable": [
@@ -259,7 +259,7 @@
         ],
         "scanned": true,
         "missDetail": {
-          "typescript": "literal"
+          "typescript": "dynamic"
         },
         "notReferenced": []
       },
@@ -284,10 +284,11 @@
         "scanned": true,
         "missDetail": {
           "typescript": "absent",
-          "webpack": "literal"
+          "webpack": "absent"
         },
         "notReferenced": [
-          "typescript"
+          "typescript",
+          "webpack"
         ]
       },
       {
@@ -522,36 +523,9 @@
         ],
         "scanned": true,
         "missDetail": {
-          "typescript": "literal"
+          "typescript": "dynamic"
         },
         "notReferenced": []
-      },
-      {
-        "package": "react-dev-utils",
-        "range": "*",
-        "targets": [
-          "typescript",
-          "webpack"
-        ],
-        "metaOnly": false,
-        "version": "12.0.1",
-        "undeclared": [
-          "typescript",
-          "webpack"
-        ],
-        "hit": [],
-        "miss": [
-          "typescript",
-          "webpack"
-        ],
-        "scanned": true,
-        "missDetail": {
-          "typescript": "absent",
-          "webpack": "literal"
-        },
-        "notReferenced": [
-          "typescript"
-        ]
       },
       {
         "package": "vite-plugin-vue-devtools",

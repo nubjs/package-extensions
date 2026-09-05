@@ -33,6 +33,11 @@ import { join } from 'node:path';
 import semver from 'semver';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname), '..');
+
+// String delimiters a specifier can be written with. Declared here rather than
+// beside its helpers: `const` is not hoisted, and the bucketing loop that calls
+// them runs earlier in the module.
+const DELIMS = ["'", '"', '`'];
 const arg = (n, d) => {
   const i = process.argv.indexOf(`--${n}`);
   return i === -1 ? d : process.argv[i + 1];
@@ -197,7 +202,7 @@ for (const e of buckets.applicable) {
   if (text === null) continue; // fetch failed; leave the miss as-is rather than excusing it
   e.missDetail = {};
   for (const t of e.miss) {
-    if (quoted(text, t)) e.missDetail[t] = 'literal';
+    if (quotedExact(text, t)) e.missDetail[t] = 'literal';
     else if (longestPrefixPresent(text, t) >= 8) e.missDetail[t] = 'dynamic';
     else e.missDetail[t] = 'absent';
   }
@@ -233,22 +238,37 @@ async function publishedText(pkg) {
 }
 
 /**
- * Whether `s` appears opened by any string delimiter.
+ * Whether `name` appears as a COMPLETE specifier, not merely as a prefix.
  *
- * The BACKTICK is the one that matters and the one first missed here: a dynamic
- * specifier is written `` `eslint-import-resolver-${name}` ``, so checking only
- * `'` and `"` classed four of `eslint-module-utils`'s edges as never-referenced
- * and dropped them from the denominator — improving the score by hiding real
- * misses, which is the wrong direction to be wrong in.
+ * The boundary is the whole point and it was missing twice. Without it,
+ * `'typescript` matches `'typescript-eslint'`, so every package whose name
+ * prefixes another one scored as a literal reference — `eslint-config-react-app`
+ * and `volar-service-typescript-twoslash-queries` both reported a `typescript`
+ * import they do not have. A real specifier ends at the closing delimiter or at
+ * a subpath slash, and nowhere else.
  */
-function quoted(text, s) {
-  return text.includes(`'${s}`) || text.includes(`"${s}`) || text.includes(`\`${s}`);
+function quotedExact(text, name) {
+  return DELIMS.some((d) => text.includes(`${d}${name}${d}`) || text.includes(`${d}${name}/`));
+}
+
+/**
+ * Whether `s` appears opened by any string delimiter — a PREFIX match, wanted
+ * only for the dynamic-specifier test.
+ *
+ * The backtick is the one that matters: a dynamic specifier is written
+ * `` `eslint-import-resolver-${name}` ``, so checking only `'` and `"` classed
+ * four of `eslint-module-utils`'s edges as never-referenced and dropped them
+ * from the denominator — improving the score by hiding real misses, which is the
+ * wrong direction to be wrong in.
+ */
+function quotedPrefix(text, s) {
+  return DELIMS.some((d) => text.includes(`${d}${s}`));
 }
 
 /** Length of the longest prefix of `target` appearing as a quoted literal. */
 function longestPrefixPresent(text, target) {
   for (let n = target.length - 1; n >= 8; n--) {
-    if (quoted(text, target.slice(0, n))) return n;
+    if (quotedPrefix(text, target.slice(0, n))) return n;
   }
   return 0;
 }

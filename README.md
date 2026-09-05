@@ -187,9 +187,11 @@ Placing all 159 entries of `@yarnpkg/extensions@2.0.7` against this scan:
 | **applicable** | **17** | the rule still applies to what was scanned |
 | optionality-only | 1 | marks an already-declared peer optional, so nothing is undeclared |
 
-Of the 17 applicable entries the detector fully matched 8, partially matched 1, and missed 8, or **8 of 23 edges**. That gap is the honest headline, and [`docs/yarn-agreement.json`](docs/yarn-agreement.json) records every miss.
+Of the 17 applicable entries the detector fully matched 9, partially matched 1, and missed 7, or **8 of 22 edges**. That gap is the honest headline, and [`docs/yarn-agreement.json`](docs/yarn-agreement.json) records every miss.
 
-Five further edges sit outside that denominator, because the published source never names the target at all. Yarn's rules are hand-written and outlive the code that justified them: it carries `notistack@^3.0.0 → csstype`, and notistack 3.0.2 ships eleven files with zero `csstype` references. There is nothing there for a detector to find, so charging it for silence would measure the wrong thing. Nine other edges *are* charged, and are the dynamic-specifier case below — the reference is real, only the name is computed.
+Six further edges sit outside that denominator, because the published source never names the target at all. Yarn's rules are hand-written and outlive the code that justified them: it carries `notistack@^3.0.0 → csstype`, and notistack 3.0.2 ships eleven files with zero `csstype` references. There is nothing there for a detector to find, so charging it for silence would measure the wrong thing. Ten other edges *are* charged, and are the dynamic-specifier case below — the reference is real, only the name is computed.
+
+How Yarn's list was built, and what that implies about the gap, is in [`docs/yarn-provenance.md`](docs/yarn-provenance.md). The short version: every entry traces to somebody's install breaking, so its coverage follows attention where a scan's follows a ranking.
 
 A miss is a statement about the detector, not about the dataset. Every Yarn rule is carried verbatim and gated, so a rule the scan failed to rediscover still ships: `postcss-syntax@*` carries all five of its `postcss-*` targets in this dataset right now, having been copied rather than derived. What the gap measures is how much of Yarn's hand-curated work the scan reproduces on its own.
 
