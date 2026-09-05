@@ -1,0 +1,805 @@
+{
+  "generated": "2026-09-05",
+  "instrument": {
+    "yarn": "unknown",
+    "mode": "pnp, pnpFallbackMode: none"
+  },
+  "tally": {
+    "confirmed": 9,
+    "notOnImport": 51,
+    "installFailed": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "package": "@applitools/spec-driver-webdriver",
+      "version": "1.6.10",
+      "expected": [
+        "@applitools/test-utils"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@ardatan/relay-compiler",
+      "version": "13.0.2",
+      "expected": [
+        "glob"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "graphql"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@aws-sdk/eventstream-serde-node",
+      "version": "3.374.0",
+      "expected": [
+        "@smithy/eventstream-serde-node"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "@smithy/eventstream-serde-node"
+      ],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@edge-runtime/ponyfill",
+      "version": "4.0.0",
+      "expected": [
+        "@edge-runtime/primitives"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "@edge-runtime/primitives"
+      ],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@electric-sql/pglite",
+      "version": "0.5.8",
+      "expected": [
+        "ws"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@electric-sql/pglite-tools",
+      "version": "0.4.8",
+      "expected": [
+        "ws"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@expo/dom-webview",
+      "version": "57.0.1",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@globalart/ddd",
+      "version": "4.2.0",
+      "expected": [
+        "date-fns"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "date-fns"
+      ],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@globalart/nestcord",
+      "version": "2.4.0",
+      "expected": [
+        "discord-api-types"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "discord.js"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@jscpd/html-reporter",
+      "version": "4.2.5",
+      "expected": [
+        "@jscpd/core",
+        "@jscpd/finder"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "@jscpd/finder"
+      ],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@lerna/create",
+      "version": "9.0.5",
+      "expected": [
+        "ci-info",
+        "libnpmaccess"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "ci-info"
+      ],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@lhci/cli",
+      "version": "0.15.1",
+      "expected": [
+        "@lhci/server",
+        "puppeteer",
+        "puppeteer-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@mastra/core",
+      "version": "1.64.0",
+      "expected": [
+        "@ast-grep/napi",
+        "@hono/standard-validator",
+        "@standard-community/standard-json",
+        "@standard-community/standard-openapi",
+        "@workflow/serde",
+        "msw",
+        "openapi-types",
+        "undici",
+        "vitest"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "zod"
+      ],
+      "specifiersTried": 26
+    },
+    {
+      "package": "@newrelic/security-agent",
+      "version": "3.0.4",
+      "expected": [
+        "@grpc/grpc-js"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@ngx-translate/http-loader",
+      "version": "18.0.0",
+      "expected": [
+        "rxjs"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "@angular/common"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@nivo/line",
+      "version": "0.99.0",
+      "expected": [
+        "lodash"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "react"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@nuxt/vite-builder",
+      "version": "4.5.2",
+      "expected": [
+        "@babel/core",
+        "@nuxt/schema",
+        "unplugin"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "vue"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@nx/devkit",
+      "version": "23.2.0",
+      "expected": [
+        "@angular-devkit/architect",
+        "@angular-devkit/schematics",
+        "prettier",
+        "rxjs",
+        "typescript"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "nx"
+      ],
+      "specifiersTried": 9
+    },
+    {
+      "package": "@nx/eslint-plugin",
+      "version": "23.2.0",
+      "expected": [
+        "@eslint/js",
+        "angular-eslint",
+        "eslint-plugin-import",
+        "eslint-plugin-jsx-a11y",
+        "eslint-plugin-react",
+        "eslint-plugin-react-hooks",
+        "typescript",
+        "typescript-eslint"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "@eslint/js",
+        "angular-eslint",
+        "eslint-plugin-import"
+      ],
+      "accessedButNotPredicted": [
+        "nx"
+      ],
+      "specifiersTried": 7
+    },
+    {
+      "package": "@nx/rollup",
+      "version": "23.2.0",
+      "expected": [
+        "@swc/core",
+        "typescript"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "nx"
+      ],
+      "specifiersTried": 7
+    },
+    {
+      "package": "@nx/webpack",
+      "version": "23.2.0",
+      "expected": [
+        "@swc/core",
+        "swc-loader",
+        "typescript"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "nx"
+      ],
+      "specifiersTried": 8
+    },
+    {
+      "package": "@oclif/config",
+      "version": "1.18.17",
+      "expected": [
+        "fs-extra-debug",
+        "lodash",
+        "ts-node",
+        "typescript"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@react-native-community/cli",
+      "version": "20.2.0",
+      "expected": [
+        "@react-native-community/cli-config-apple",
+        "@react-native-community/cli-platform-apple",
+        "react-native"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@react-native-community/cli-config-apple",
+      "version": "20.2.0",
+      "expected": [
+        "@react-native-community/cli-types",
+        "fs-extra",
+        "ora"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@react-native-community/cli-doctor",
+      "version": "20.2.0",
+      "expected": [
+        "fs-extra"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@react-native-community/cli-platform-apple",
+      "version": "20.2.0",
+      "expected": [
+        "@react-native-community/cli-types",
+        "fs-extra"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@sentry/react-native",
+      "version": "8.25.0",
+      "expected": [
+        "@expo/env",
+        "@react-navigation/native",
+        "dotenv",
+        "expo-router",
+        "expo-updates",
+        "promise"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "react"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@storybook/nextjs-vite",
+      "version": "10.6.0",
+      "expected": [
+        "sb-original"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "storybook",
+        "next",
+        "react",
+        "vite"
+      ],
+      "specifiersTried": 11
+    },
+    {
+      "package": "@swagger-api/apidom-reference",
+      "version": "1.12.1",
+      "expected": [
+        "@swagger-api/apidom-ns-asyncapi-3",
+        "minim"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "@swagger-api/apidom-core"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@tanstack/query-devtools",
+      "version": "5.102.8",
+      "expected": [
+        "@kobalte/core",
+        "@solid-primitives/keyed",
+        "@solid-primitives/resize-observer",
+        "@solid-primitives/storage",
+        "@tanstack/match-sorter-utils",
+        "@tanstack/query-core",
+        "clsx",
+        "goober",
+        "solid-js",
+        "solid-transition-group",
+        "superjson"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "@whiskeysockets/baileys",
+      "version": "7.0.0-rc14",
+      "expected": [
+        "long"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "long"
+      ],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "domino",
+      "version": "2.1.8",
+      "expected": [
+        "parserlib"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "drizzle-kit",
+      "version": "0.31.10",
+      "expected": [
+        "@electric-sql/pglite",
+        "@libsql/client",
+        "@neondatabase/serverless",
+        "@planetscale/database",
+        "@vercel/postgres",
+        "better-sqlite3",
+        "drizzle-orm",
+        "mysql2",
+        "pg",
+        "postgres",
+        "zod"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "echarts-for-react",
+      "version": "3.0.6",
+      "expected": [
+        "tslib"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "tslib"
+      ],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "eslint-plugin-compat",
+      "version": "7.0.2",
+      "expected": [
+        "caniuse-lite"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "caniuse-lite"
+      ],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-application",
+      "version": "57.0.2",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-asset",
+      "version": "57.0.16",
+      "expected": [
+        "@react-native/assets-registry",
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "expo"
+      ],
+      "specifiersTried": 5
+    },
+    {
+      "package": "expo-auth-session",
+      "version": "57.0.11",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-blur",
+      "version": "57.0.2",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-camera",
+      "version": "57.0.4",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "expo"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-clipboard",
+      "version": "57.0.1",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-constants",
+      "version": "57.0.17",
+      "expected": [
+        "expo-manifests",
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-crypto",
+      "version": "57.0.2",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-dev-menu",
+      "version": "57.0.18",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-device",
+      "version": "57.0.1",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-document-picker",
+      "version": "57.0.1",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-eas-client",
+      "version": "57.0.3",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-file-system",
+      "version": "57.0.6",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "expo"
+      ],
+      "specifiersTried": 5
+    },
+    {
+      "package": "expo-font",
+      "version": "57.0.3",
+      "expected": [
+        "expo-asset",
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "expo"
+      ],
+      "specifiersTried": 5
+    },
+    {
+      "package": "expo-haptics",
+      "version": "57.0.2",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-image",
+      "version": "57.0.4",
+      "expected": [
+        "expo-app-metrics",
+        "expo-modules-core",
+        "expo-observe"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-image-manipulator",
+      "version": "57.0.16",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-image-picker",
+      "version": "57.0.16",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-keep-awake",
+      "version": "57.0.1",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-linking",
+      "version": "57.0.9",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-localization",
+      "version": "57.0.1",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-location",
+      "version": "57.0.16",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "expo"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-notifications",
+      "version": "57.0.17",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "expo"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-router",
+      "version": "57.0.19",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [
+        "react"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-secure-store",
+      "version": "57.0.3",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "specifiersTried": 1
+    }
+  ]
+}

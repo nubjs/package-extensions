@@ -201,11 +201,8 @@ packageExtensions:
       aws-lambda:
         optional: true
   "@aws-sdk/eventstream-serde-node@*":
-    peerDependencies:
+    dependencies:
       "@smithy/eventstream-serde-node": "*"
-    peerDependenciesMeta:
-      "@smithy/eventstream-serde-node":
-        optional: true
   "@aws-sdk/service-error-classification@*":
     dependencies:
       tslib: "*"
@@ -339,11 +336,8 @@ packageExtensions:
       "@edge-runtime/primitives":
         optional: true
   "@edge-runtime/ponyfill@*":
-    peerDependencies:
+    dependencies:
       "@edge-runtime/primitives": "*"
-    peerDependenciesMeta:
-      "@edge-runtime/primitives":
-        optional: true
   "@egjs/hammerjs@*":
     peerDependencies:
       hammerjs: "*"
@@ -621,11 +615,8 @@ packageExtensions:
       babel-plugin-macros:
         optional: true
   "@globalart/ddd@*":
-    peerDependencies:
+    dependencies:
       date-fns: "*"
-    peerDependenciesMeta:
-      date-fns:
-        optional: true
   "@globalart/nestcord@*":
     peerDependencies:
       discord-api-types: "*"
@@ -812,12 +803,11 @@ packageExtensions:
   "@jscpd/html-reporter@*":
     peerDependencies:
       "@jscpd/core": "*"
-      "@jscpd/finder": "*"
     peerDependenciesMeta:
       "@jscpd/core":
         optional: true
-      "@jscpd/finder":
-        optional: true
+    dependencies:
+      "@jscpd/finder": "*"
   "@langchain/langgraph-sdk@*":
     peerDependencies:
       json-schema: "*"
@@ -825,12 +815,11 @@ packageExtensions:
       json-schema:
         optional: true
   "@lerna/create@*":
-    peerDependencies:
+    dependencies:
       ci-info: "*"
+    peerDependencies:
       libnpmaccess: "*"
     peerDependenciesMeta:
-      ci-info:
-        optional: true
       libnpmaccess:
         optional: true
   "@lhci/cli@*":
@@ -1368,22 +1357,17 @@ packageExtensions:
       "@angular-devkit/core":
         optional: true
   "@nx/eslint-plugin@*":
-    peerDependencies:
+    dependencies:
       "@eslint/js": "*"
       angular-eslint: "*"
       eslint-plugin-import: "*"
+    peerDependencies:
       eslint-plugin-jsx-a11y: "*"
       eslint-plugin-react: "*"
       eslint-plugin-react-hooks: "*"
       typescript: "*"
       typescript-eslint: "*"
     peerDependenciesMeta:
-      "@eslint/js":
-        optional: true
-      angular-eslint:
-        optional: true
-      eslint-plugin-import:
-        optional: true
       eslint-plugin-jsx-a11y:
         optional: true
       eslint-plugin-react:
@@ -4200,11 +4184,8 @@ packageExtensions:
     dependencies:
       "@webassemblyjs/helper-numbers": "*"
   "@whiskeysockets/baileys@*":
-    peerDependencies:
+    dependencies:
       long: "*"
-    peerDependenciesMeta:
-      long:
-        optional: true
   "@xterm/addon-web-links@*":
     peerDependencies:
       "@xterm/xterm": "*"
@@ -4626,11 +4607,8 @@ packageExtensions:
       react:
         optional: true
   echarts-for-react@*:
-    peerDependencies:
+    dependencies:
       tslib: "*"
-    peerDependenciesMeta:
-      tslib:
-        optional: true
   electron-log@*:
     peerDependencies:
       electron: "*"
@@ -4695,11 +4673,8 @@ packageExtensions:
       type-fest:
         optional: true
   eslint-plugin-compat@*:
-    peerDependencies:
+    dependencies:
       caniuse-lite: "*"
-    peerDependenciesMeta:
-      caniuse-lite:
-        optional: true
   eslint-plugin-import@*:
     peerDependencies:
       typescript: "*"

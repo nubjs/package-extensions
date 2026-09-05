@@ -29,10 +29,10 @@
       "guarded": 273
     },
     "byField": {
-      "dependency": 10,
-      "peer": 1491
+      "dependency": 21,
+      "peer": 1480
     },
-    "candidatesForReview": 160,
+    "candidatesForReview": 149,
     "droppedUnpublishedTargets": 232,
     "droppedUnresolvedTargets": 0
   },
@@ -507,13 +507,8 @@
       }
     },
     "@aws-sdk/eventstream-serde-node@*": {
-      "peerDependencies": {
+      "dependencies": {
         "@smithy/eventstream-serde-node": "*"
-      },
-      "peerDependenciesMeta": {
-        "@smithy/eventstream-serde-node": {
-          "optional": true
-        }
       }
     },
     "@aws-sdk/service-error-classification@*": {
@@ -731,13 +726,8 @@
       }
     },
     "@edge-runtime/ponyfill@*": {
-      "peerDependencies": {
+      "dependencies": {
         "@edge-runtime/primitives": "*"
-      },
-      "peerDependenciesMeta": {
-        "@edge-runtime/primitives": {
-          "optional": true
-        }
       }
     },
     "@egjs/hammerjs@*": {
@@ -1190,13 +1180,8 @@
       }
     },
     "@globalart/ddd@*": {
-      "peerDependencies": {
+      "dependencies": {
         "date-fns": "*"
-      },
-      "peerDependenciesMeta": {
-        "date-fns": {
-          "optional": true
-        }
       }
     },
     "@globalart/nestcord@*": {
@@ -1491,16 +1476,15 @@
     },
     "@jscpd/html-reporter@*": {
       "peerDependencies": {
-        "@jscpd/core": "*",
-        "@jscpd/finder": "*"
+        "@jscpd/core": "*"
       },
       "peerDependenciesMeta": {
         "@jscpd/core": {
           "optional": true
-        },
-        "@jscpd/finder": {
-          "optional": true
         }
+      },
+      "dependencies": {
+        "@jscpd/finder": "*"
       }
     },
     "@langchain/langgraph-sdk@*": {
@@ -1514,14 +1498,13 @@
       }
     },
     "@lerna/create@*": {
+      "dependencies": {
+        "ci-info": "*"
+      },
       "peerDependencies": {
-        "ci-info": "*",
         "libnpmaccess": "*"
       },
       "peerDependenciesMeta": {
-        "ci-info": {
-          "optional": true
-        },
         "libnpmaccess": {
           "optional": true
         }
@@ -2337,10 +2320,12 @@
       }
     },
     "@nx/eslint-plugin@*": {
-      "peerDependencies": {
+      "dependencies": {
         "@eslint/js": "*",
         "angular-eslint": "*",
-        "eslint-plugin-import": "*",
+        "eslint-plugin-import": "*"
+      },
+      "peerDependencies": {
         "eslint-plugin-jsx-a11y": "*",
         "eslint-plugin-react": "*",
         "eslint-plugin-react-hooks": "*",
@@ -2348,15 +2333,6 @@
         "typescript-eslint": "*"
       },
       "peerDependenciesMeta": {
-        "@eslint/js": {
-          "optional": true
-        },
-        "angular-eslint": {
-          "optional": true
-        },
-        "eslint-plugin-import": {
-          "optional": true
-        },
         "eslint-plugin-jsx-a11y": {
           "optional": true
         },
@@ -6809,13 +6785,8 @@
       }
     },
     "@whiskeysockets/baileys@*": {
-      "peerDependencies": {
+      "dependencies": {
         "long": "*"
-      },
-      "peerDependenciesMeta": {
-        "long": {
-          "optional": true
-        }
       }
     },
     "@xterm/addon-web-links@*": {
@@ -7465,13 +7436,8 @@
       }
     },
     "echarts-for-react@*": {
-      "peerDependencies": {
+      "dependencies": {
         "tslib": "*"
-      },
-      "peerDependenciesMeta": {
-        "tslib": {
-          "optional": true
-        }
       }
     },
     "electron-log@*": {
@@ -7579,13 +7545,8 @@
       }
     },
     "eslint-plugin-compat@*": {
-      "peerDependencies": {
+      "dependencies": {
         "caniuse-lite": "*"
-      },
-      "peerDependenciesMeta": {
-        "caniuse-lite": {
-          "optional": true
-        }
       }
     },
     "eslint-plugin-import@*": {
@@ -13213,9 +13174,9 @@
         {
           "target": "@smithy/eventstream-serde-node",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 3.374.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @smithy/eventstream-serde-node\"",
           "specifiers": [
             "@smithy/eventstream-serde-node"
           ]
@@ -13609,9 +13570,9 @@
         {
           "target": "@edge-runtime/primitives",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 4.0.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @edge-runtime/primitives\"",
           "specifiers": [
             "@edge-runtime/primitives"
           ]
@@ -14392,9 +14353,9 @@
         {
           "target": "date-fns",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 4.2.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access date-fns\"",
           "specifiers": [
             "date-fns"
           ]
@@ -14937,9 +14898,9 @@
         {
           "target": "@jscpd/finder",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 4.2.5: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @jscpd/finder\"",
           "specifiers": [
             "@jscpd/finder"
           ]
@@ -14969,9 +14930,9 @@
         {
           "target": "ci-info",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 9.0.5: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access ci-info\"",
           "specifiers": [
             "ci-info"
           ]
@@ -16614,9 +16575,9 @@
         {
           "target": "@eslint/js",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 23.2.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @eslint/js\"",
           "specifiers": [
             "@eslint/js"
           ]
@@ -16624,9 +16585,9 @@
         {
           "target": "angular-eslint",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 23.2.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access angular-eslint\"",
           "specifiers": [
             "angular-eslint"
           ]
@@ -16634,9 +16595,9 @@
         {
           "target": "eslint-plugin-import",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 23.2.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access eslint-plugin-import\"",
           "specifiers": [
             "eslint-plugin-import"
           ]
@@ -25007,9 +24968,9 @@
         {
           "target": "long",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 7.0.0-rc14: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access long\"",
           "specifiers": [
             "long"
           ]
@@ -26287,9 +26248,9 @@
         {
           "target": "tslib",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 3.0.6: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access tslib\"",
           "specifiers": [
             "tslib"
           ]
@@ -26489,9 +26450,9 @@
         {
           "target": "caniuse-lite",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 7.0.2: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access caniuse-lite\"",
           "specifiers": [
             "caniuse-lite"
           ]
@@ -33492,22 +33453,6 @@
       ]
     },
     {
-      "package": "@aws-sdk/eventstream-serde-node",
-      "measuredVersion": "3.374.0",
-      "target": "@smithy/eventstream-serde-node",
-      "specifiers": [
-        "@smithy/eventstream-serde-node"
-      ]
-    },
-    {
-      "package": "@edge-runtime/ponyfill",
-      "measuredVersion": "4.0.0",
-      "target": "@edge-runtime/primitives",
-      "specifiers": [
-        "@edge-runtime/primitives"
-      ]
-    },
-    {
       "package": "@electric-sql/pglite",
       "measuredVersion": "0.5.8",
       "target": "ws",
@@ -33532,36 +33477,12 @@
       ]
     },
     {
-      "package": "@globalart/ddd",
-      "measuredVersion": "4.2.0",
-      "target": "date-fns",
-      "specifiers": [
-        "date-fns"
-      ]
-    },
-    {
       "package": "@globalart/nestcord",
       "measuredVersion": "2.4.0",
       "target": "discord-api-types",
       "specifiers": [
         "discord-api-types/payloads/v10/_interactions/_applicationCommands/_chatInput/base",
         "discord-api-types/v10"
-      ]
-    },
-    {
-      "package": "@jscpd/html-reporter",
-      "measuredVersion": "4.2.5",
-      "target": "@jscpd/finder",
-      "specifiers": [
-        "@jscpd/finder"
-      ]
-    },
-    {
-      "package": "@lerna/create",
-      "measuredVersion": "9.0.5",
-      "target": "ci-info",
-      "specifiers": [
-        "ci-info"
       ]
     },
     {
@@ -33627,30 +33548,6 @@
       "target": "@angular-devkit/architect",
       "specifiers": [
         "@angular-devkit/architect"
-      ]
-    },
-    {
-      "package": "@nx/eslint-plugin",
-      "measuredVersion": "23.2.0",
-      "target": "@eslint/js",
-      "specifiers": [
-        "@eslint/js"
-      ]
-    },
-    {
-      "package": "@nx/eslint-plugin",
-      "measuredVersion": "23.2.0",
-      "target": "angular-eslint",
-      "specifiers": [
-        "angular-eslint"
-      ]
-    },
-    {
-      "package": "@nx/eslint-plugin",
-      "measuredVersion": "23.2.0",
-      "target": "eslint-plugin-import",
-      "specifiers": [
-        "eslint-plugin-import"
       ]
     },
     {
@@ -33857,14 +33754,6 @@
       ]
     },
     {
-      "package": "@whiskeysockets/baileys",
-      "measuredVersion": "7.0.0-rc14",
-      "target": "long",
-      "specifiers": [
-        "long"
-      ]
-    },
-    {
       "package": "domino",
       "measuredVersion": "2.1.8",
       "target": "parserlib",
@@ -33920,22 +33809,6 @@
         "drizzle-orm/better-sqlite3/migrator",
         "drizzle-orm/version",
         "drizzle-orm/gel-core"
-      ]
-    },
-    {
-      "package": "echarts-for-react",
-      "measuredVersion": "3.0.6",
-      "target": "tslib",
-      "specifiers": [
-        "tslib"
-      ]
-    },
-    {
-      "package": "eslint-plugin-compat",
-      "measuredVersion": "7.0.2",
-      "target": "caniuse-lite",
-      "specifiers": [
-        "caniuse-lite"
       ]
     },
     {

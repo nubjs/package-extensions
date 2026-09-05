@@ -395,13 +395,8 @@ exports.packageExtensions = [
  [
   "@aws-sdk/eventstream-serde-node@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "@smithy/eventstream-serde-node": "*"
-   },
-   "peerDependenciesMeta": {
-    "@smithy/eventstream-serde-node": {
-     "optional": true
-    }
    }
   }
  ],
@@ -682,13 +677,8 @@ exports.packageExtensions = [
  [
   "@edge-runtime/ponyfill@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "@edge-runtime/primitives": "*"
-   },
-   "peerDependenciesMeta": {
-    "@edge-runtime/primitives": {
-     "optional": true
-    }
    }
   }
  ],
@@ -1267,13 +1257,8 @@ exports.packageExtensions = [
  [
   "@globalart/ddd@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "date-fns": "*"
-   },
-   "peerDependenciesMeta": {
-    "date-fns": {
-     "optional": true
-    }
    }
   }
  ],
@@ -1640,16 +1625,15 @@ exports.packageExtensions = [
   "@jscpd/html-reporter@*",
   {
    "peerDependencies": {
-    "@jscpd/core": "*",
-    "@jscpd/finder": "*"
+    "@jscpd/core": "*"
    },
    "peerDependenciesMeta": {
     "@jscpd/core": {
      "optional": true
-    },
-    "@jscpd/finder": {
-     "optional": true
     }
+   },
+   "dependencies": {
+    "@jscpd/finder": "*"
    }
   }
  ],
@@ -1669,14 +1653,13 @@ exports.packageExtensions = [
  [
   "@lerna/create@*",
   {
+   "dependencies": {
+    "ci-info": "*"
+   },
    "peerDependencies": {
-    "ci-info": "*",
     "libnpmaccess": "*"
    },
    "peerDependenciesMeta": {
-    "ci-info": {
-     "optional": true
-    },
     "libnpmaccess": {
      "optional": true
     }
@@ -2645,10 +2628,12 @@ exports.packageExtensions = [
  [
   "@nx/eslint-plugin@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "@eslint/js": "*",
     "angular-eslint": "*",
-    "eslint-plugin-import": "*",
+    "eslint-plugin-import": "*"
+   },
+   "peerDependencies": {
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
@@ -2656,15 +2641,6 @@ exports.packageExtensions = [
     "typescript-eslint": "*"
    },
    "peerDependenciesMeta": {
-    "@eslint/js": {
-     "optional": true
-    },
-    "angular-eslint": {
-     "optional": true
-    },
-    "eslint-plugin-import": {
-     "optional": true
-    },
     "eslint-plugin-jsx-a11y": {
      "optional": true
     },
@@ -8164,13 +8140,8 @@ exports.packageExtensions = [
  [
   "@whiskeysockets/baileys@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "long": "*"
-   },
-   "peerDependenciesMeta": {
-    "long": {
-     "optional": true
-    }
    }
   }
  ],
@@ -8952,13 +8923,8 @@ exports.packageExtensions = [
  [
   "echarts-for-react@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "tslib": "*"
-   },
-   "peerDependenciesMeta": {
-    "tslib": {
-     "optional": true
-    }
    }
   }
  ],
@@ -9102,13 +9068,8 @@ exports.packageExtensions = [
  [
   "eslint-plugin-compat@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "caniuse-lite": "*"
-   },
-   "peerDependenciesMeta": {
-    "caniuse-lite": {
-     "optional": true
-    }
    }
   }
  ],

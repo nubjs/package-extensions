@@ -108,6 +108,18 @@ jobs:
       - name: Cross-check against Yarn's database
         run: node harness/compare-yarn.mjs --scan "records/${{ steps.prov.outputs.run }}/scan.json"
 
+      - name: Probe the review queue and promote what reproduces
+        # Installs each queued package alone under Yarn PnP with the fallback
+        # off and imports it. A throw naming the target is proof the package
+        # needs its own copy, which is the evidence a `dependencies` entry
+        # requires — stronger than anything reading the source can give.
+        run: |
+          node harness/probe.mjs --queue 120 --concurrency 6 --promote
+          node harness/build.mjs --scan "records/${{ steps.prov.outputs.run }}/scan.json"
+          node harness/emit.mjs
+          node harness/pack.mjs
+          node harness/verify.mjs
+
       - name: Drop records older than 30 days
         if: ${{ inputs.commit != false }}
         run: |
@@ -130,7 +142,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package-extensions.json dist docs npm records inputs
+          git add package-extensions.json dist docs npm records inputs harness/overrides.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "rebuild: ${{ steps.prov.outputs.run }} against nub ${{ steps.prov.outputs.sha }}"
           git push

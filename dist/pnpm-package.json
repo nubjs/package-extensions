@@ -310,13 +310,8 @@
         }
       },
       "@aws-sdk/eventstream-serde-node@*": {
-        "peerDependencies": {
+        "dependencies": {
           "@smithy/eventstream-serde-node": "*"
-        },
-        "peerDependenciesMeta": {
-          "@smithy/eventstream-serde-node": {
-            "optional": true
-          }
         }
       },
       "@aws-sdk/service-error-classification@*": {
@@ -534,13 +529,8 @@
         }
       },
       "@edge-runtime/ponyfill@*": {
-        "peerDependencies": {
+        "dependencies": {
           "@edge-runtime/primitives": "*"
-        },
-        "peerDependenciesMeta": {
-          "@edge-runtime/primitives": {
-            "optional": true
-          }
         }
       },
       "@egjs/hammerjs@*": {
@@ -993,13 +983,8 @@
         }
       },
       "@globalart/ddd@*": {
-        "peerDependencies": {
+        "dependencies": {
           "date-fns": "*"
-        },
-        "peerDependenciesMeta": {
-          "date-fns": {
-            "optional": true
-          }
         }
       },
       "@globalart/nestcord@*": {
@@ -1294,16 +1279,15 @@
       },
       "@jscpd/html-reporter@*": {
         "peerDependencies": {
-          "@jscpd/core": "*",
-          "@jscpd/finder": "*"
+          "@jscpd/core": "*"
         },
         "peerDependenciesMeta": {
           "@jscpd/core": {
             "optional": true
-          },
-          "@jscpd/finder": {
-            "optional": true
           }
+        },
+        "dependencies": {
+          "@jscpd/finder": "*"
         }
       },
       "@langchain/langgraph-sdk@*": {
@@ -1317,14 +1301,13 @@
         }
       },
       "@lerna/create@*": {
+        "dependencies": {
+          "ci-info": "*"
+        },
         "peerDependencies": {
-          "ci-info": "*",
           "libnpmaccess": "*"
         },
         "peerDependenciesMeta": {
-          "ci-info": {
-            "optional": true
-          },
           "libnpmaccess": {
             "optional": true
           }
@@ -2140,10 +2123,12 @@
         }
       },
       "@nx/eslint-plugin@*": {
-        "peerDependencies": {
+        "dependencies": {
           "@eslint/js": "*",
           "angular-eslint": "*",
-          "eslint-plugin-import": "*",
+          "eslint-plugin-import": "*"
+        },
+        "peerDependencies": {
           "eslint-plugin-jsx-a11y": "*",
           "eslint-plugin-react": "*",
           "eslint-plugin-react-hooks": "*",
@@ -2151,15 +2136,6 @@
           "typescript-eslint": "*"
         },
         "peerDependenciesMeta": {
-          "@eslint/js": {
-            "optional": true
-          },
-          "angular-eslint": {
-            "optional": true
-          },
-          "eslint-plugin-import": {
-            "optional": true
-          },
           "eslint-plugin-jsx-a11y": {
             "optional": true
           },
@@ -6612,13 +6588,8 @@
         }
       },
       "@whiskeysockets/baileys@*": {
-        "peerDependencies": {
+        "dependencies": {
           "long": "*"
-        },
-        "peerDependenciesMeta": {
-          "long": {
-            "optional": true
-          }
         }
       },
       "@xterm/addon-web-links@*": {
@@ -7268,13 +7239,8 @@
         }
       },
       "echarts-for-react@*": {
-        "peerDependencies": {
+        "dependencies": {
           "tslib": "*"
-        },
-        "peerDependenciesMeta": {
-          "tslib": {
-            "optional": true
-          }
         }
       },
       "electron-log@*": {
@@ -7382,13 +7348,8 @@
         }
       },
       "eslint-plugin-compat@*": {
-        "peerDependencies": {
+        "dependencies": {
           "caniuse-lite": "*"
-        },
-        "peerDependenciesMeta": {
-          "caniuse-lite": {
-            "optional": true
-          }
         }
       },
       "eslint-plugin-import@*": {

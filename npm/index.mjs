@@ -393,13 +393,8 @@ export const packageExtensions = [
  [
   "@aws-sdk/eventstream-serde-node@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "@smithy/eventstream-serde-node": "*"
-   },
-   "peerDependenciesMeta": {
-    "@smithy/eventstream-serde-node": {
-     "optional": true
-    }
    }
   }
  ],
@@ -680,13 +675,8 @@ export const packageExtensions = [
  [
   "@edge-runtime/ponyfill@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "@edge-runtime/primitives": "*"
-   },
-   "peerDependenciesMeta": {
-    "@edge-runtime/primitives": {
-     "optional": true
-    }
    }
   }
  ],
@@ -1265,13 +1255,8 @@ export const packageExtensions = [
  [
   "@globalart/ddd@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "date-fns": "*"
-   },
-   "peerDependenciesMeta": {
-    "date-fns": {
-     "optional": true
-    }
    }
   }
  ],
@@ -1638,16 +1623,15 @@ export const packageExtensions = [
   "@jscpd/html-reporter@*",
   {
    "peerDependencies": {
-    "@jscpd/core": "*",
-    "@jscpd/finder": "*"
+    "@jscpd/core": "*"
    },
    "peerDependenciesMeta": {
     "@jscpd/core": {
      "optional": true
-    },
-    "@jscpd/finder": {
-     "optional": true
     }
+   },
+   "dependencies": {
+    "@jscpd/finder": "*"
    }
   }
  ],
@@ -1667,14 +1651,13 @@ export const packageExtensions = [
  [
   "@lerna/create@*",
   {
+   "dependencies": {
+    "ci-info": "*"
+   },
    "peerDependencies": {
-    "ci-info": "*",
     "libnpmaccess": "*"
    },
    "peerDependenciesMeta": {
-    "ci-info": {
-     "optional": true
-    },
     "libnpmaccess": {
      "optional": true
     }
@@ -2643,10 +2626,12 @@ export const packageExtensions = [
  [
   "@nx/eslint-plugin@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "@eslint/js": "*",
     "angular-eslint": "*",
-    "eslint-plugin-import": "*",
+    "eslint-plugin-import": "*"
+   },
+   "peerDependencies": {
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
@@ -2654,15 +2639,6 @@ export const packageExtensions = [
     "typescript-eslint": "*"
    },
    "peerDependenciesMeta": {
-    "@eslint/js": {
-     "optional": true
-    },
-    "angular-eslint": {
-     "optional": true
-    },
-    "eslint-plugin-import": {
-     "optional": true
-    },
     "eslint-plugin-jsx-a11y": {
      "optional": true
     },
@@ -8162,13 +8138,8 @@ export const packageExtensions = [
  [
   "@whiskeysockets/baileys@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "long": "*"
-   },
-   "peerDependenciesMeta": {
-    "long": {
-     "optional": true
-    }
    }
   }
  ],
@@ -8950,13 +8921,8 @@ export const packageExtensions = [
  [
   "echarts-for-react@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "tslib": "*"
-   },
-   "peerDependenciesMeta": {
-    "tslib": {
-     "optional": true
-    }
    }
   }
  ],
@@ -9100,13 +9066,8 @@ export const packageExtensions = [
  [
   "eslint-plugin-compat@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "caniuse-lite": "*"
-   },
-   "peerDependenciesMeta": {
-    "caniuse-lite": {
-     "optional": true
-    }
    }
   }
  ],
