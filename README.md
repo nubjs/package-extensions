@@ -47,7 +47,15 @@ The setting has a different home in each package manager, so the same data ships
 | --- | --- | --- |
 | Yarn Berry (2+) | `.yarnrc.yml` | [`dist/yarnrc.yml`](dist/yarnrc.yml) |
 | pnpm 10 and 11 | `pnpm-workspace.yaml` | [`dist/pnpm-workspace.yaml`](dist/pnpm-workspace.yaml) |
-| pnpm 10 and earlier | the `pnpm` block of `package.json` | [`dist/pnpm-package.json`](dist/pnpm-package.json) |
+| pnpm 9 and earlier | the `pnpm` block of `package.json` | [`dist/pnpm-package.json`](dist/pnpm-package.json) |
+
+The two pnpm homes overlap on exactly one major, measured against 9.15.9, 10.34.5 and 11.25.0 by extending a package with a dependency it does not have and checking whether the lockfile picked it up:
+
+| | `package.json` | `pnpm-workspace.yaml` |
+| --- | --- | --- |
+| pnpm 9 | applied | ignored |
+| pnpm 10 | applied | applied |
+| pnpm 11 | ignored, warns | applied |
 
 Prefer the workspace file on any pnpm 10 or newer. Version 11 dropped the `package.json` home and says so on stderr rather than failing:
 

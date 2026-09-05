@@ -64,7 +64,13 @@ So the entries here bite under `pnpFallbackMode: none`, under pnpm with `hoist: 
 | pnpm | `pnpm-workspace.yaml` | `package.json` → `pnpm.packageExtensions` |
 | --- | --- | --- |
 | 11.25.0 | honored | **ignored** |
+| 10.34.5 | honored | honored |
 | 10.15.1 | honored | honored |
+| 9.15.9 | **ignored** | honored |
+
+Version 10 is the only major that reads both, so it is the hinge: 9 accepts the `package.json` form alone and 11 accepts the workspace form alone. Neither file works everywhere, which is why both ship.
+
+The 9 and 10.34.5 rows were measured by extending `is-odd` with a dependency on `is-even` and checking whether `pnpm-lock.yaml` picked it up — a positive signal that needs no phantom, so it cannot pass for the wrong reason. Version 9 produced no warning for the workspace-file form; it simply ignored it.
 
 Version 11 warns rather than failing, so a dataset published only in the `package.json` shape would silently do nothing:
 
@@ -74,7 +80,7 @@ keys were ignored: "pnpm.packageExtensions". See https://pnpm.io/settings for th
 new home of each setting.
 ```
 
-The workspace file is the single form that works on both majors.
+The workspace file is the single form that works on both current majors, but it is not universal: a project still on pnpm 9 needs the `package.json` form.
 
 ## Entry shapes, and what each package manager tolerates
 
