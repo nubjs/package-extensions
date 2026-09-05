@@ -13,6 +13,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 
 import { rowsForOffender, extensionFor, fieldFor, keyFor, sortKeys } from './policy.mjs';
+import { fetchYarnDatabase } from './yarn-db.mjs';
 
 const HERE = dirname(new URL(import.meta.url).pathname);
 const CACHE = resolve(HERE, '../inputs/registry-cache.json');
@@ -125,6 +126,56 @@ for (const pkg of [...byPackage.keys()].sort()) {
   });
 }
 
+// Yarn's own database, included verbatim so that swapping this dataset in for
+// `@yarnpkg/extensions` can never lose an entry. pnpm applies that database by
+// DEFAULT (`createReadPackageHook` merges it unless `ignoreCompatibilityDb` is
+// set), so a pnpm user already has these 159 rules and a replacement that
+// dropped them would be a silent regression.
+//
+// Yarn's keys are kept exactly as published — `debug@<4.2.0`, not `debug@*` —
+// and ours are separate `@*` keys. Both package managers accept several entries
+// for one package and apply whichever ranges match, so the two layers coexist
+// with no merge and Yarn's version precision survives intact.
+const yarn = await fetchYarnDatabase();
+let yarnAdded = 0;
+let yarnMerged = 0;
+for (const [selector, ext] of yarn.entries) {
+  if (packageExtensions[selector]) {
+    // Two ways a key collides, and skipping either one drops a rule. Our scan
+    // may already own the exact selector (`eslint-plugin-import@*`), and Yarn's
+    // own list is an ARRAY that repeats a selector — `gatsby-core-utils@<2.14.0
+    // -next.1` appears twice with different fields — so keying it by string
+    // collapses the duplicates. Both are real losses, both measured. Union the
+    // fields instead of choosing.
+    if (mergeInto(packageExtensions[selector], ext)) yarnMerged++;
+    continue;
+  }
+  packageExtensions[selector] = ext;
+  yarnAdded++;
+}
+
+/** Union `from` into `into` without overwriting a range already there. Returns whether anything was added. */
+function mergeInto(into, from) {
+  let changed = false;
+  for (const field of ['dependencies', 'optionalDependencies', 'peerDependencies']) {
+    for (const [name, range] of Object.entries(from[field] ?? {})) {
+      into[field] ??= {};
+      if (into[field][name] === undefined) {
+        into[field][name] = range;
+        changed = true;
+      }
+    }
+  }
+  for (const [name, meta] of Object.entries(from.peerDependenciesMeta ?? {})) {
+    into.peerDependenciesMeta ??= {};
+    if (into.peerDependenciesMeta[name] === undefined) {
+      into.peerDependenciesMeta[name] = meta;
+      changed = true;
+    }
+  }
+  return changed;
+}
+
 const counts = { runtime: 0, adapter: 0, types: 0, guarded: 0 };
 const fieldCounts = { dependency: 0, peer: 0 };
 // The review queue: findings that would be a real `dependencies` entry if a
@@ -155,6 +206,16 @@ const doc = {
     scannedOk: scan.scanned_ok,
     failed: scan.failed?.length ?? 0,
   },
+  sources: {
+    scan: { entries: rows.length, packages: byPackage.size },
+    yarn: {
+      package: '@yarnpkg/extensions',
+      version: yarn.version,
+      entries: yarn.entries.length,
+      addedAsNewKeys: yarnAdded,
+      mergedIntoExistingKeys: yarnMerged,
+    },
+  },
   totals: {
     packages: Object.keys(packageExtensions).length,
     entries: rows.length,
@@ -164,6 +225,7 @@ const doc = {
     droppedUnpublishedTargets: dropped.unpublished.length,
     droppedUnresolvedTargets: dropped.unresolved.length,
   },
+  yarnKeys: yarn.entries.map(([selector]) => selector).sort(),
   packageExtensions,
   findings,
   candidates,
@@ -177,5 +239,6 @@ console.error(
     `(${counts.runtime} runtime, ${counts.adapter} adapter, ${counts.types} types, ${counts.guarded} guarded; ` +
     `${fieldCounts.dependency} dependency, ${fieldCounts.peer} peer), ` +
     `${dropped.unpublished.length} dropped as unpublished, ` +
-    `${candidates.length} candidates for review`
+    `${candidates.length} candidates for review; ` +
+    `+${yarnAdded} from @yarnpkg/extensions@${yarn.version}`
 );

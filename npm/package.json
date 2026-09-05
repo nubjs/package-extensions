@@ -1,0 +1,40 @@
+{
+  "name": "@nubjs/extensions",
+  "version": "2026.9.5",
+  "description": "Undeclared dependencies across the most-downloaded npm packages, as a packageExtensions database for pnpm and Yarn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nubjs/package-extensions.git"
+  },
+  "homepage": "https://github.com/nubjs/package-extensions",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./package-extensions.json": "./package-extensions.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "package-extensions.json",
+    "README.md"
+  ],
+  "keywords": [
+    "packageExtensions",
+    "pnpm",
+    "yarn",
+    "phantom-dependencies",
+    "undeclared-dependencies",
+    "package-manager"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

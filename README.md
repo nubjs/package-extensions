@@ -21,9 +21,25 @@ packageExtensions:
         optional: true
 ```
 
-The current scan covers 9,982 packages and finds **888 with an undeclared dependency, across 1,501 edges**. Yarn's own hand-curated database carries 125 entries.
+**1,040 packages.** The scan covers 9,982 of the top 10,000 and finds 888 with an undeclared dependency across 1,501 edges. The remaining 152 come from Yarn's own database, carried verbatim.
 
-## Using it
+## Installing
+
+```sh
+npm add -D @nubjs/extensions
+```
+
+The package is a drop-in replacement for `@yarnpkg/extensions` — same export name, same `Array<[selector, data]>` shape, no dependencies:
+
+```js
+import { packageExtensions } from '@nubjs/extensions';
+```
+
+Matching that shape is deliberate. pnpm imports `@yarnpkg/extensions` in `createReadPackageHook` and merges it into **every install unless `ignoreCompatibilityDb` is set**, so its 159 rules already apply on any pnpm project. A replacement that dropped one would break installs that work today, which is why every Yarn rule is carried through and a gate fails the build if one goes missing.
+
+Raw data, if you would rather read it than install it: [`package-extensions.json`](package-extensions.json) at the repo root carries the rules plus per-entry evidence, the review queue, and what was dropped and why.
+
+## Pasting it into a project
 
 The setting has a different home in each package manager, so the same data ships three ways. Copy the block from the matching file and merge it into your own config, then re-run the install — pnpm records a `packageExtensionsChecksum` in the lockfile, and Yarn applies extensions at resolution time.
 
@@ -42,20 +58,20 @@ keys were ignored: "pnpm.packageExtensions".
 
 Both package managers merge an extension *under* the real manifest, so an entry for a package that has since declared the dependency itself loses to the manifest. A stale entry is a no-op in pnpm and a `YN0069` warning in Yarn, never an error.
 
-The Yarn file also carries a `logFilters` block, which is load-bearing at this size. Yarn reports `YN0068` for every entry whose package is absent from your tree, twice per entry, so a database covering 888 packages buries the install log:
+The Yarn file also carries a `logFilters` block, which is load-bearing at this size. Yarn reports `YN0068` for every entry whose package is absent from your tree, twice per entry:
 
 | Install of a two-dependency project | Log lines | `YN0068` |
 | --- | --- | --- |
 | dataset pasted as-is | 2,957 | 2,943 |
 | with the `logFilters` block | 14 | 0 |
 
-The extensions still apply either way. `YN0069` is deliberately left on — that one reports an entry a package has since made redundant, which is actionable, and is how an entry gets retired. pnpm needs no filter; it is silent about an extension that matches nothing.
+The extensions still apply either way. `YN0069` is deliberately left on, because that one reports an entry a package has since made redundant, which is actionable and is how an entry gets retired. pnpm needs no filter; it is silent about an extension that matches nothing.
 
-npm has no equivalent setting and needs none. Its flat layout is what makes these imports resolve in the first place.
+Bun has no `packageExtensions` setting. Its source carries no reference to one, or to Yarn's database, as of August 2026. npm has none either and needs none — its flat layout is what makes these imports resolve in the first place.
 
 ### What it fixes, end to end
 
-Installing `@nrwl/devkit` under Yarn PnP, with nothing else changed but the contents of `dist/yarnrc.yml`:
+Installing `@nrwl/devkit` under Yarn PnP, with nothing changed but the contents of `dist/yarnrc.yml`:
 
 ```
 # without the dataset
@@ -79,7 +95,7 @@ Each finding is classed by where the import sits. The class decides which manife
 | `runtime` | 258 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
 | `adapter` | 130 | A non-`.` exports subpath imports a backend the consumer chose. | optional peer |
 
-Two of these are easy to misread. A `types` finding breaks a type-check and nothing else, so it is never treated as a missing runtime dependency — it is also the largest class, and folding it into `runtime` would have put 840 declaration-file imports into the review queue. A `guarded` import looks harmless in the other direction: the package survives absence by design, but under a strict layout the guard swallows a resolution error that fires even when the consumer *has* the package, so the feature silently stays off.
+Two of these are easy to misread. A `types` finding breaks a type-check and nothing else, so it is never treated as a missing runtime dependency — it is also the largest class, and folding it into `runtime` would have put 840 declaration-file imports into the review queue. A `guarded` import misleads in the other direction: the package survives absence by design, but under a strict layout the guard swallows a resolution error that fires even when the consumer *has* the package, so the feature silently stays off.
 
 ## Why the field differs, measured
 
@@ -116,7 +132,7 @@ Which of the two a finding needs is not decidable from the finding. Generating `
 
 The last one is the sharpest. RequireJS's published bundle calls `define('lang', …)` and requires the id back, so the specifier is indistinguishable from a package reference — and an unrelated package named `lang` really is published, so even a registry check passes it. Installing it would put a stranger's code into every consumer's tree.
 
-So every finding ships as an optional peer, which is inert when the consumer lacks the target but never wrong. A `dependencies` entry comes only from [`harness/overrides.json`](harness/overrides.json), where each one records what reading the package showed. The **160 candidates** the policy would otherwise promote are listed in `package-extensions.json` under `candidates`, which is the review queue. Read one with the source in front of you:
+So every finding ships as an optional peer, which is inert when the consumer lacks the target but never wrong. A `dependencies` entry comes only from [`harness/overrides.json`](harness/overrides.json), where each one records what reading the package showed. The 160 candidates the policy would otherwise promote are listed under `candidates`, which is the review queue. Read one with the source in front of you:
 
 ```sh
 node harness/inspect.mjs @firebase/database @firebase/app
@@ -125,7 +141,28 @@ node harness/inspect.mjs --queue 20
 
 ### Version ranges
 
-Every key carries an unbounded `@*` range. The scan measures one version — whatever `latest` was that day — so a narrower range would assert something about versions nobody looked at. Yarn additionally rejects a key with no range at all. Both accept `@*` without complaint.
+Every key this scan contributes carries an unbounded `@*` range. The scan measures one version — whatever `latest` was that day — so a narrower range would assert something about versions nobody looked at. Yarn additionally rejects a key with no range at all. Both package managers accept `@*` without complaint, and Yarn's own entries keep the tighter ranges they were published with.
+
+## Agreement with Yarn's database
+
+Yarn's is the only comparable artifact, so it is the closest thing to ground truth available. Counting shared entries is the wrong way to read it: most Yarn entries are bounded *above* by the release that fixed them, so a scan of current versions should miss them, and missing them is the two databases agreeing.
+
+Placing all 159 entries of `@yarnpkg/extensions@2.0.7` against this scan:
+
+| Bucket | Count | Meaning |
+| --- | --- | --- |
+| out of corpus | 98 | not in the top 10,000 |
+| already fixed | 43 | the range excludes the current version, or the package now declares it |
+| **applicable** | **17** | the rule still applies to what was scanned |
+| optionality-only | 1 | marks an already-declared peer optional, so nothing is undeclared |
+
+Of the 17 applicable entries the detector matched 5 and missed 12, or **6 of 28 edges**. That gap is the honest headline, and [`docs/yarn-agreement.json`](docs/yarn-agreement.json) records every miss. The causes are known static-analysis limits rather than noise:
+
+- **Dynamic specifiers.** `eslint-module-utils` loads its resolvers as `` tryRequire(`eslint-import-resolver-${name}`) ``, and `postcss-syntax` loads syntaxes the same way. Only a string literal is recorded, so an interpolated name is invisible.
+- **Legacy deep-path entry points.** `redux-persist` has no `exports` map, and `lib/index.js` never references `lib/integration/react.js` — so the walk from `main` never reaches the file where `require("react")` lives, even though consumers import `redux-persist/integration/react` directly.
+- **Type-only erasure.** Imports that erase before runtime are dropped by design, which is right for a runtime question and wrong for a type-check.
+
+Regenerate the comparison with `node harness/compare-yarn.mjs --scan records/<run>/scan.json`.
 
 ## What counts as undeclared
 
@@ -153,18 +190,24 @@ nub-phantom scan --top 10000 --concurrency 8 --json > records/<run>/scan.json
 
 node harness/build.mjs --scan records/<run>/scan.json   # -> package-extensions.json
 node harness/emit.mjs                                    # -> dist/
+node harness/pack.mjs                                    # -> npm/
 node harness/verify.mjs                                  # gate
 ```
 
-The workflow in [`.github/workflows/rebuild.yml`](.github/workflows/rebuild.yml) runs all four against a pinned `nubjs/nub` commit, monthly and on demand. Each run keeps its raw detector output and a `meta.json` naming that commit under `records/`, so a published entry traces back to the scan that produced it.
+The workflow in [`.github/workflows/rebuild.yml`](.github/workflows/rebuild.yml) runs all of it daily against a pinned `nubjs/nub` commit, and on demand. Each run keeps its raw detector output and a `meta.json` naming that commit under `records/`, so a published entry traces back to the scan that produced it. Records older than thirty days are pruned.
 
-Regeneration is also what keeps the dataset from rotting. Packages fix their manifests, and `@hookform/resolvers` is the worked example: it declared twenty-two optional peers between version 5.4.0 and 5.9.1, so it appears in an earlier scan with fifteen entries and is absent from this one entirely.
+A daily cadence is what keeps the dataset from rotting, and it moves in both directions:
 
-The gate is where a generated dataset is worth trusting or is not. Every check in `verify.mjs` either compares generator output against a real consumer parser or refuses a document that is structurally fine and empty — a well-formed file that says nothing is the failure mode a shape test passes forever.
+- **Entries disappear** when a package fixes its manifest. Between 5.4.0 and 5.9.1 `@hookform/resolvers` declared twenty-two optional peers, so it appears in an earlier scan with fifteen entries and is absent from this one entirely.
+- **Entries appear** when a new version introduces an import it does not declare.
+
+### The gate
+
+A generated dataset is worth trusting or it is not, and `verify.mjs` is where that gets decided. Every check either compares generator output against a real consumer parser or refuses a document that is structurally fine and empty, because a well-formed file that says nothing is the failure a shape test passes forever. One check exists purely for the compatibility promise: the build fails if any rule from `@yarnpkg/extensions` is missing from the output.
 
 ## Limits
 
-- **One version per package.** The scan reads whatever `latest` resolved to, so a package that fixed its manifest last week still appears until the next regeneration.
+- **One version per package.** The scan reads whatever `latest` resolved to, so a package that fixed its manifest yesterday still appears until the next run.
 - **Guards are lexical.** An import inside a function body a consumer only calls on demand is classed `runtime`, because the classifier reads syntax rather than control flow. It errs toward calling a load unconditional.
 - **A dynamic specifier is invisible.** Only a string literal is recorded, so `require(name)` and a template literal are missed. The list undercounts.
 - **An AMD module id is indistinguishable from a package.** A bundle that calls `define('name', …)` and requires the id back produces a finding for a package it never meant. Those stay optional peers, where they are inert.
@@ -173,6 +216,6 @@ The gate is where a generated dataset is worth trusting or is not. Every check i
 
 ## Related
 
-[Yarn's own database](https://github.com/yarnpkg/berry/blob/master/packages/yarnpkg-extensions/sources/index.ts) ships inside Yarn and carries 125 hand-curated entries, each pinned to the version range a merged upstream pull request later fixed. It is the model for this one and covers a different set: those entries are mostly historical, bounded above by the release that fixed them, while a generated scan finds what is broken in the current release.
+[Yarn's database](https://github.com/yarnpkg/berry/blob/master/packages/yarnpkg-extensions/sources/index.ts) ships inside Yarn, is applied by pnpm on every install, and carries 159 hand-curated entries, each pinned to the version range a merged upstream pull request later fixed. It is the model for this one and covers a different set: those entries are mostly historical, bounded above by the release that fixed them, while a generated scan finds what is broken in the current release. Every one of them is included here.
 
 Nub uses this data to decide which packages need a project-local copy under its global virtual store. The database is published separately because the finding is about the ecosystem rather than about any one package manager.

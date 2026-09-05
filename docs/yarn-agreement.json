@@ -1,0 +1,1092 @@
+{
+  "yarnDatabase": {
+    "package": "@yarnpkg/extensions",
+    "version": "2.0.7",
+    "entries": 159
+  },
+  "corpus": {
+    "scannedOk": 9982,
+    "corpusKnown": true
+  },
+  "buckets": {
+    "applicable": 17,
+    "fixed": 43,
+    "optionality": 1,
+    "outOfCorpus": 98,
+    "unresolved": 0
+  },
+  "agreement": {
+    "entriesFullyMatched": 4,
+    "entriesPartiallyMatched": 1,
+    "entriesMissed": 12,
+    "edgeAgreement": "6/28"
+  },
+  "detail": {
+    "applicable": [
+      {
+        "package": "typescript-language-server",
+        "range": "*",
+        "targets": [
+          "vscode-jsonrpc",
+          "vscode-languageserver-protocol"
+        ],
+        "metaOnly": false,
+        "version": "6.0.0",
+        "undeclared": [
+          "vscode-jsonrpc",
+          "vscode-languageserver-protocol"
+        ],
+        "hit": [],
+        "miss": [
+          "vscode-jsonrpc",
+          "vscode-languageserver-protocol"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "postcss-syntax",
+        "range": "*",
+        "targets": [
+          "postcss-html",
+          "postcss-jsx",
+          "postcss-less",
+          "postcss-markdown",
+          "postcss-scss"
+        ],
+        "metaOnly": true,
+        "version": "0.36.2",
+        "undeclared": [
+          "postcss-html",
+          "postcss-jsx",
+          "postcss-less",
+          "postcss-markdown",
+          "postcss-scss"
+        ],
+        "hit": [],
+        "miss": [
+          "postcss-html",
+          "postcss-jsx",
+          "postcss-less",
+          "postcss-markdown",
+          "postcss-scss"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "promise-inflight",
+        "range": "*",
+        "targets": [
+          "bluebird"
+        ],
+        "metaOnly": true,
+        "version": "1.0.1",
+        "undeclared": [
+          "bluebird"
+        ],
+        "hit": [
+          "bluebird"
+        ],
+        "miss": [],
+        "scanned": true
+      },
+      {
+        "package": "reactcss",
+        "range": "*",
+        "targets": [
+          "react"
+        ],
+        "metaOnly": false,
+        "version": "1.2.3",
+        "undeclared": [
+          "react"
+        ],
+        "hit": [
+          "react"
+        ],
+        "miss": [],
+        "scanned": true
+      },
+      {
+        "package": "useragent",
+        "range": "^2.0.0",
+        "targets": [
+          "request",
+          "yamlparser",
+          "semver"
+        ],
+        "metaOnly": false,
+        "version": "2.3.0",
+        "undeclared": [
+          "request",
+          "yamlparser",
+          "semver"
+        ],
+        "hit": [
+          "request",
+          "yamlparser"
+        ],
+        "miss": [
+          "semver"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "git-node-fs",
+        "range": "*",
+        "targets": [
+          "js-git"
+        ],
+        "metaOnly": false,
+        "version": "1.0.0",
+        "undeclared": [
+          "js-git"
+        ],
+        "hit": [],
+        "miss": [
+          "js-git"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "redux-persist",
+        "range": "*",
+        "targets": [
+          "react"
+        ],
+        "metaOnly": false,
+        "version": "6.0.0",
+        "undeclared": [
+          "react"
+        ],
+        "hit": [],
+        "miss": [
+          "react"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "eslint-module-utils",
+        "range": "*",
+        "targets": [
+          "eslint-import-resolver-node",
+          "eslint-import-resolver-typescript",
+          "eslint-import-resolver-webpack",
+          "@typescript-eslint/parser"
+        ],
+        "metaOnly": true,
+        "version": "2.14.0",
+        "undeclared": [
+          "eslint-import-resolver-node",
+          "eslint-import-resolver-typescript",
+          "eslint-import-resolver-webpack",
+          "@typescript-eslint/parser"
+        ],
+        "hit": [],
+        "miss": [
+          "eslint-import-resolver-node",
+          "eslint-import-resolver-typescript",
+          "eslint-import-resolver-webpack",
+          "@typescript-eslint/parser"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "eslint-plugin-import",
+        "range": "*",
+        "targets": [
+          "@typescript-eslint/parser"
+        ],
+        "metaOnly": true,
+        "version": "2.32.0",
+        "undeclared": [
+          "@typescript-eslint/parser"
+        ],
+        "hit": [],
+        "miss": [
+          "@typescript-eslint/parser"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "eslint-config-react-app",
+        "range": "*",
+        "targets": [
+          "typescript"
+        ],
+        "metaOnly": true,
+        "version": "7.0.1",
+        "undeclared": [
+          "typescript"
+        ],
+        "hit": [],
+        "miss": [
+          "typescript"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "react-dev-utils",
+        "range": "*",
+        "targets": [
+          "typescript",
+          "webpack"
+        ],
+        "metaOnly": false,
+        "version": "12.0.1",
+        "undeclared": [
+          "typescript",
+          "webpack"
+        ],
+        "hit": [],
+        "miss": [
+          "typescript",
+          "webpack"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "notistack",
+        "range": "^3.0.0",
+        "targets": [
+          "csstype"
+        ],
+        "metaOnly": false,
+        "version": "3.0.2",
+        "undeclared": [
+          "csstype"
+        ],
+        "hit": [],
+        "miss": [
+          "csstype"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "vite-plugin-vue-devtools",
+        "range": ">=7.4.3",
+        "targets": [
+          "vue"
+        ],
+        "metaOnly": false,
+        "version": "8.2.1",
+        "undeclared": [
+          "vue"
+        ],
+        "hit": [],
+        "miss": [
+          "vue"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "@parcel/resolver-default",
+        "range": ">=2",
+        "targets": [
+          "@parcel/core"
+        ],
+        "metaOnly": false,
+        "version": "2.16.4",
+        "undeclared": [
+          "@parcel/core"
+        ],
+        "hit": [],
+        "miss": [
+          "@parcel/core"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "@volar/typescript",
+        "range": "*",
+        "targets": [
+          "typescript"
+        ],
+        "metaOnly": false,
+        "version": "2.4.28",
+        "undeclared": [
+          "typescript"
+        ],
+        "hit": [
+          "typescript"
+        ],
+        "miss": [],
+        "scanned": true
+      },
+      {
+        "package": "volar-service-typescript",
+        "range": "*",
+        "targets": [
+          "typescript"
+        ],
+        "metaOnly": false,
+        "version": "0.0.71",
+        "undeclared": [
+          "typescript"
+        ],
+        "hit": [
+          "typescript"
+        ],
+        "miss": [],
+        "scanned": true
+      },
+      {
+        "package": "volar-service-typescript-twoslash-queries",
+        "range": "*",
+        "targets": [
+          "typescript"
+        ],
+        "metaOnly": false,
+        "version": "0.0.71",
+        "undeclared": [
+          "typescript"
+        ],
+        "hit": [],
+        "miss": [
+          "typescript"
+        ],
+        "scanned": true
+      }
+    ],
+    "missed": [
+      {
+        "package": "typescript-language-server",
+        "range": "*",
+        "targets": [
+          "vscode-jsonrpc",
+          "vscode-languageserver-protocol"
+        ],
+        "metaOnly": false,
+        "version": "6.0.0",
+        "undeclared": [
+          "vscode-jsonrpc",
+          "vscode-languageserver-protocol"
+        ],
+        "hit": [],
+        "miss": [
+          "vscode-jsonrpc",
+          "vscode-languageserver-protocol"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "postcss-syntax",
+        "range": "*",
+        "targets": [
+          "postcss-html",
+          "postcss-jsx",
+          "postcss-less",
+          "postcss-markdown",
+          "postcss-scss"
+        ],
+        "metaOnly": true,
+        "version": "0.36.2",
+        "undeclared": [
+          "postcss-html",
+          "postcss-jsx",
+          "postcss-less",
+          "postcss-markdown",
+          "postcss-scss"
+        ],
+        "hit": [],
+        "miss": [
+          "postcss-html",
+          "postcss-jsx",
+          "postcss-less",
+          "postcss-markdown",
+          "postcss-scss"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "git-node-fs",
+        "range": "*",
+        "targets": [
+          "js-git"
+        ],
+        "metaOnly": false,
+        "version": "1.0.0",
+        "undeclared": [
+          "js-git"
+        ],
+        "hit": [],
+        "miss": [
+          "js-git"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "redux-persist",
+        "range": "*",
+        "targets": [
+          "react"
+        ],
+        "metaOnly": false,
+        "version": "6.0.0",
+        "undeclared": [
+          "react"
+        ],
+        "hit": [],
+        "miss": [
+          "react"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "eslint-module-utils",
+        "range": "*",
+        "targets": [
+          "eslint-import-resolver-node",
+          "eslint-import-resolver-typescript",
+          "eslint-import-resolver-webpack",
+          "@typescript-eslint/parser"
+        ],
+        "metaOnly": true,
+        "version": "2.14.0",
+        "undeclared": [
+          "eslint-import-resolver-node",
+          "eslint-import-resolver-typescript",
+          "eslint-import-resolver-webpack",
+          "@typescript-eslint/parser"
+        ],
+        "hit": [],
+        "miss": [
+          "eslint-import-resolver-node",
+          "eslint-import-resolver-typescript",
+          "eslint-import-resolver-webpack",
+          "@typescript-eslint/parser"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "eslint-plugin-import",
+        "range": "*",
+        "targets": [
+          "@typescript-eslint/parser"
+        ],
+        "metaOnly": true,
+        "version": "2.32.0",
+        "undeclared": [
+          "@typescript-eslint/parser"
+        ],
+        "hit": [],
+        "miss": [
+          "@typescript-eslint/parser"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "eslint-config-react-app",
+        "range": "*",
+        "targets": [
+          "typescript"
+        ],
+        "metaOnly": true,
+        "version": "7.0.1",
+        "undeclared": [
+          "typescript"
+        ],
+        "hit": [],
+        "miss": [
+          "typescript"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "react-dev-utils",
+        "range": "*",
+        "targets": [
+          "typescript",
+          "webpack"
+        ],
+        "metaOnly": false,
+        "version": "12.0.1",
+        "undeclared": [
+          "typescript",
+          "webpack"
+        ],
+        "hit": [],
+        "miss": [
+          "typescript",
+          "webpack"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "notistack",
+        "range": "^3.0.0",
+        "targets": [
+          "csstype"
+        ],
+        "metaOnly": false,
+        "version": "3.0.2",
+        "undeclared": [
+          "csstype"
+        ],
+        "hit": [],
+        "miss": [
+          "csstype"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "vite-plugin-vue-devtools",
+        "range": ">=7.4.3",
+        "targets": [
+          "vue"
+        ],
+        "metaOnly": false,
+        "version": "8.2.1",
+        "undeclared": [
+          "vue"
+        ],
+        "hit": [],
+        "miss": [
+          "vue"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "@parcel/resolver-default",
+        "range": ">=2",
+        "targets": [
+          "@parcel/core"
+        ],
+        "metaOnly": false,
+        "version": "2.16.4",
+        "undeclared": [
+          "@parcel/core"
+        ],
+        "hit": [],
+        "miss": [
+          "@parcel/core"
+        ],
+        "scanned": true
+      },
+      {
+        "package": "volar-service-typescript-twoslash-queries",
+        "range": "*",
+        "targets": [
+          "typescript"
+        ],
+        "metaOnly": false,
+        "version": "0.0.71",
+        "undeclared": [
+          "typescript"
+        ],
+        "hit": [],
+        "miss": [
+          "typescript"
+        ],
+        "scanned": true
+      }
+    ],
+    "fixed": [
+      {
+        "package": "@samverschueren/stream-to-observable",
+        "range": "<0.3.1",
+        "targets": [
+          "rxjs",
+          "zenObservable"
+        ],
+        "metaOnly": true,
+        "version": "0.3.1",
+        "why": "latest 0.3.1 is outside <0.3.1"
+      },
+      {
+        "package": "any-observable",
+        "range": "<0.5.1",
+        "targets": [
+          "rxjs",
+          "zenObservable"
+        ],
+        "metaOnly": true,
+        "version": "0.6.0",
+        "why": "latest 0.6.0 is outside <0.5.1"
+      },
+      {
+        "package": "@pm2/agent",
+        "range": "<1.0.4",
+        "targets": [
+          "debug"
+        ],
+        "metaOnly": false,
+        "version": "2.1.1",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "debug",
+        "range": "<4.2.0",
+        "targets": [
+          "supports-color"
+        ],
+        "metaOnly": true,
+        "version": "4.4.3",
+        "why": "latest 4.4.3 is outside <4.2.0"
+      },
+      {
+        "package": "got",
+        "range": "<11",
+        "targets": [
+          "@types/responselike",
+          "@types/keyv"
+        ],
+        "metaOnly": false,
+        "version": "16.0.0",
+        "why": "latest 16.0.0 is outside <11"
+      },
+      {
+        "package": "cacheable-lookup",
+        "range": "<4.1.2",
+        "targets": [
+          "@types/keyv"
+        ],
+        "metaOnly": false,
+        "version": "7.0.0",
+        "why": "latest 7.0.0 is outside <4.1.2"
+      },
+      {
+        "package": "jss-plugin-rule-value-function",
+        "range": "<=10.1.1",
+        "targets": [
+          "tiny-warning"
+        ],
+        "metaOnly": false,
+        "version": "10.10.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "ink-select-input",
+        "range": "<4.1.0",
+        "targets": [
+          "react"
+        ],
+        "metaOnly": false,
+        "version": "6.2.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "license-webpack-plugin",
+        "range": "<2.3.18",
+        "targets": [
+          "webpack"
+        ],
+        "metaOnly": true,
+        "version": "4.0.2",
+        "why": "latest 4.0.2 is outside <2.3.18"
+      },
+      {
+        "package": "react-color",
+        "range": "<=2.19.0",
+        "targets": [
+          "react"
+        ],
+        "metaOnly": false,
+        "version": "2.19.3",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "@apollographql/apollo-tools",
+        "range": "<=0.5.2",
+        "targets": [
+          "graphql"
+        ],
+        "metaOnly": false,
+        "version": "0.5.4",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "@babel/parser",
+        "range": "*",
+        "targets": [
+          "@babel/types"
+        ],
+        "metaOnly": false,
+        "version": "8.0.4",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "fork-ts-checker-webpack-plugin",
+        "range": "<=6.3.4",
+        "targets": [
+          "eslint",
+          "typescript",
+          "webpack",
+          "vue-template-compiler"
+        ],
+        "metaOnly": false,
+        "version": "9.1.0",
+        "why": "latest 9.1.0 is outside <=6.3.4"
+      },
+      {
+        "package": "react-draggable",
+        "range": "<=4.4.3",
+        "targets": [
+          "react",
+          "react-dom"
+        ],
+        "metaOnly": false,
+        "version": "4.7.1",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "apollo-upload-client",
+        "range": "<14",
+        "targets": [
+          "graphql"
+        ],
+        "metaOnly": false,
+        "version": "20.0.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "ws",
+        "range": "<7.2.1",
+        "targets": [
+          "bufferutil",
+          "utf-8-validate"
+        ],
+        "metaOnly": false,
+        "version": "8.21.3",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "react-portal",
+        "range": "<4.2.2",
+        "targets": [
+          "react-dom"
+        ],
+        "metaOnly": false,
+        "version": "4.3.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "react-scripts",
+        "range": "<=4.0.1",
+        "targets": [
+          "react"
+        ],
+        "metaOnly": false,
+        "version": "5.0.1",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "@google-cloud/firestore",
+        "range": "<=4.9.3",
+        "targets": [
+          "protobufjs"
+        ],
+        "metaOnly": false,
+        "version": "9.0.1",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "@ant-design/react-slick",
+        "range": "<=0.28.3",
+        "targets": [
+          "react"
+        ],
+        "metaOnly": false,
+        "version": "2.0.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "mqtt",
+        "range": "<4.2.7",
+        "targets": [
+          "duplexify"
+        ],
+        "metaOnly": false,
+        "version": "5.15.2",
+        "why": "latest 5.15.2 is outside <4.2.7"
+      },
+      {
+        "package": "consolidate",
+        "range": "<0.16.0",
+        "targets": [
+          "mustache"
+        ],
+        "metaOnly": false,
+        "version": "1.0.4",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "consolidate",
+        "range": "<=0.16.0",
+        "targets": [
+          "velocityjs",
+          "tinyliquid",
+          "liquid-node",
+          "jade",
+          "then-jade",
+          "dust",
+          "dustjs-helpers",
+          "dustjs-linkedin",
+          "swig",
+          "swig-templates",
+          "razor-tmpl",
+          "atpl",
+          "liquor",
+          "twig",
+          "ejs",
+          "eco",
+          "jazz",
+          "jqtpl",
+          "hamljs",
+          "hamlet",
+          "whiskers",
+          "haml-coffee",
+          "hogan.js",
+          "templayed",
+          "handlebars",
+          "underscore",
+          "lodash",
+          "pug",
+          "then-pug",
+          "qejs",
+          "walrus",
+          "mustache",
+          "just",
+          "ect",
+          "mote",
+          "toffee",
+          "dot",
+          "bracket-template",
+          "ractive",
+          "nunjucks",
+          "htmling",
+          "babel-core",
+          "plates",
+          "react-dom",
+          "react",
+          "arc-templates",
+          "vash",
+          "slm",
+          "marko",
+          "teacup",
+          "coffee-script",
+          "squirrelly",
+          "twing"
+        ],
+        "metaOnly": false,
+        "version": "1.0.4",
+        "why": "latest 1.0.4 is outside <=0.16.0"
+      },
+      {
+        "package": "vue-loader",
+        "range": "<=16.3.3",
+        "targets": [
+          "@vue/compiler-sfc",
+          "webpack"
+        ],
+        "metaOnly": false,
+        "version": "17.4.2",
+        "why": "latest 17.4.2 is outside <=16.3.3"
+      },
+      {
+        "package": "vue-loader",
+        "range": "^16.7.0",
+        "targets": [
+          "@vue/compiler-sfc",
+          "vue"
+        ],
+        "metaOnly": false,
+        "version": "17.4.2",
+        "why": "latest 17.4.2 is outside ^16.7.0"
+      },
+      {
+        "package": "redux-thunk",
+        "range": "<=2.3.0",
+        "targets": [
+          "redux"
+        ],
+        "metaOnly": false,
+        "version": "3.1.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "@npmcli/metavuln-calculator",
+        "range": "<2.0.0",
+        "targets": [
+          "json-parse-even-better-errors"
+        ],
+        "metaOnly": false,
+        "version": "10.0.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "bin-links",
+        "range": "<2.3.0",
+        "targets": [
+          "mkdirp-infer-owner"
+        ],
+        "metaOnly": false,
+        "version": "7.0.0",
+        "why": "latest 7.0.0 is outside <2.3.0"
+      },
+      {
+        "package": "winston-transport",
+        "range": "<=4.4.0",
+        "targets": [
+          "logform"
+        ],
+        "metaOnly": false,
+        "version": "4.9.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "@playwright/test",
+        "range": "<=1.14.1",
+        "targets": [
+          "jest-matcher-utils"
+        ],
+        "metaOnly": false,
+        "version": "1.63.0",
+        "why": "latest 1.63.0 is outside <=1.14.1"
+      },
+      {
+        "package": "webpack",
+        "range": "<4.44.1",
+        "targets": [
+          "webpack-cli",
+          "webpack-command"
+        ],
+        "metaOnly": true,
+        "version": "5.110.3",
+        "why": "latest 5.110.3 is outside <4.44.1"
+      },
+      {
+        "package": "webpack",
+        "range": "<5.0.0-beta.23",
+        "targets": [
+          "webpack-cli"
+        ],
+        "metaOnly": true,
+        "version": "5.110.3",
+        "why": "latest 5.110.3 is outside <5.0.0-beta.23"
+      },
+      {
+        "package": "webpack-dev-server",
+        "range": "<3.10.2",
+        "targets": [
+          "webpack-cli"
+        ],
+        "metaOnly": true,
+        "version": "6.0.0",
+        "why": "latest 6.0.0 is outside <3.10.2"
+      },
+      {
+        "package": "terser",
+        "range": "<=5.10.0",
+        "targets": [
+          "acorn"
+        ],
+        "metaOnly": false,
+        "version": "5.51.2",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "babel-preset-react-app",
+        "range": "10.0.x <10.0.2",
+        "targets": [
+          "@babel/plugin-proposal-private-property-in-object"
+        ],
+        "metaOnly": false,
+        "version": "10.1.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "@parcel/transformer-image",
+        "range": "<2.5.0",
+        "targets": [
+          "@parcel/core"
+        ],
+        "metaOnly": false,
+        "version": "2.16.4",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "react-scripts",
+        "range": "*",
+        "targets": [
+          "eslint"
+        ],
+        "metaOnly": false,
+        "version": "5.0.1",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "focus-trap-react",
+        "range": "^8.0.0",
+        "targets": [
+          "tabbable"
+        ],
+        "metaOnly": false,
+        "version": "12.0.3",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "vue-i18n",
+        "range": "<9",
+        "targets": [
+          "vue"
+        ],
+        "metaOnly": false,
+        "version": "11.4.10",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "vue-router",
+        "range": "<4",
+        "targets": [
+          "vue"
+        ],
+        "metaOnly": false,
+        "version": "5.3.1",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "unified",
+        "range": "<10",
+        "targets": [
+          "@types/unist"
+        ],
+        "metaOnly": false,
+        "version": "11.0.5",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "fdir",
+        "range": "<=5.2.0",
+        "targets": [
+          "picomatch"
+        ],
+        "metaOnly": false,
+        "version": "6.5.0",
+        "why": "the package now declares every target"
+      },
+      {
+        "package": "babel-plugin-transform-typescript-metadata",
+        "range": "<=0.3.2",
+        "targets": [
+          "@babel/core",
+          "@babel/traverse"
+        ],
+        "metaOnly": false,
+        "version": "0.4.0",
+        "why": "latest 0.4.0 is outside <=0.3.2"
+      }
+    ],
+    "optionality": [
+      {
+        "package": "@vue/eslint-config-typescript",
+        "range": "<11.0.0",
+        "targets": [
+          "typescript"
+        ],
+        "metaOnly": true,
+        "version": "14.9.0"
+      }
+    ],
+    "unresolved": []
+  }
+}

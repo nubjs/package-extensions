@@ -26,9 +26,11 @@ on:
         required: false
         default: true
   schedule:
-    # Monthly. The ecosystem moves under the dataset — packages fix their
-    # manifests, and a stale entry is a no-op that should still be dropped.
-    - cron: '0 6 1 * *'
+    # Daily. The ecosystem moves under the dataset in both directions: packages
+    # fix their manifests and their entries should disappear, and new versions
+    # introduce undeclared imports that should appear. A day is also short
+    # enough that any single diff stays readable.
+    - cron: '0 6 * * *'
 
 permissions:
   contents: write
@@ -100,14 +102,35 @@ jobs:
         run: |
           node harness/build.mjs --scan "records/${{ steps.prov.outputs.run }}/scan.json"
           node harness/emit.mjs
+          node harness/pack.mjs
           node harness/verify.mjs
+
+      - name: Cross-check against Yarn's database
+        run: node harness/compare-yarn.mjs --scan "records/${{ steps.prov.outputs.run }}/scan.json"
+
+      - name: Drop records older than 30 days
+        if: ${{ inputs.commit != false }}
+        run: |
+          # A daily scan record is ~800 KB. Keeping every one grows the repo by
+          # ~300 MB a year for data whose only consumer is a spot-check of how a
+          # published entry was derived, and the last month covers that.
+          #
+          # Pruned by the DATE IN THE NAME, not by mtime: a fresh checkout stamps
+          # every directory with the checkout time, so an mtime rule silently
+          # never fires and the repo grows anyway.
+          # `sort -r` puts newest first; `tail -n +31` takes everything past the
+          # 30 to keep. Both forms are POSIX — `head -n -30` is GNU-only and
+          # fails outright on BSD, which is exactly the kind of thing that only
+          # shows up once the job has already committed.
+          ls -d records/20*/ 2>/dev/null | sort -r | tail -n +31 | while read -r d; do rm -rf "$d"; done
+          git add -A records
 
       - name: Commit
         if: ${{ inputs.commit != false }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package-extensions.json dist records inputs
+          git add package-extensions.json dist docs npm records inputs
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "rebuild: ${{ steps.prov.outputs.run }} against nub ${{ steps.prov.outputs.sha }}"
           git push

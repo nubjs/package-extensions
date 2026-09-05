@@ -46,12 +46,45 @@ check('every entry carries at least one field', () => {
   return 'no empty entries';
 });
 
-check('the findings ledger covers every emitted package', () => {
-  const emitted = new Set(Object.keys(exts).map(stripRange));
+const yarnKeys = new Set(doc.yarnKeys ?? []);
+
+check('the findings ledger covers every package this scan contributed', () => {
+  // Scoped to our own layer. Yarn's entries are carried verbatim and have no
+  // evidence row here by design — their provenance is `@yarnpkg/extensions`.
+  const emitted = new Set(Object.keys(exts).filter((k) => !yarnKeys.has(k)).map(stripRange));
   const recorded = new Set(doc.findings.map((f) => f.package));
   const missing = [...emitted].filter((p) => !recorded.has(p));
   if (missing.length) throw new Error(`${missing.length} packages have an extension but no evidence row, first: ${missing[0]}`);
-  return `${recorded.size} evidence rows`;
+  return `${recorded.size} evidence rows, ${yarnKeys.size} keys carried from Yarn`;
+});
+
+check('every Yarn rule survives into the output', () => {
+  // THE no-regression guarantee. pnpm applies `@yarnpkg/extensions` by default,
+  // so a dataset that replaces it and silently drops a rule breaks installs that
+  // work today. Two ways that happened before this check existed: our own scan
+  // owning the same selector, and Yarn's list being an ARRAY that repeats a
+  // selector, which keying by string collapses.
+  const targetsOf = (e) => [
+    ...new Set([
+      ...Object.keys(e.dependencies ?? {}),
+      ...Object.keys(e.optionalDependencies ?? {}),
+      ...Object.keys(e.peerDependencies ?? {}),
+      ...Object.keys(e.peerDependenciesMeta ?? {}),
+    ]),
+  ];
+  const yarnEntries = JSON.parse(readFileSync(resolve(ROOT, 'inputs/yarn-extensions.json'), 'utf8')).entries;
+  const lost = [];
+  for (const [selector, ext] of yarnEntries) {
+    const ours = exts[selector];
+    if (!ours) {
+      lost.push(`${selector} (entire entry)`);
+      continue;
+    }
+    const have = new Set(targetsOf(ours));
+    for (const t of targetsOf(ext)) if (!have.has(t)) lost.push(`${selector} -> ${t}`);
+  }
+  if (lost.length) throw new Error(`${lost.length} Yarn rule(s) dropped, first: ${lost[0]}`);
+  return `all ${yarnEntries.length} Yarn entries present`;
 });
 
 // -------------------------------------------------------- consumer grammar
@@ -76,7 +109,11 @@ check('every optional peer is declared as a peer too', () => {
   // package never declared there is nothing for it to mark, so both fields are
   // written together. A meta entry with no matching peer is a generator bug that
   // would silently do nothing in the consumer.
+  // Our own entries only. Yarn's meta-only entries mark an ALREADY-DECLARED peer
+  // optional, which is a different and valid shape — "correcting" one would
+  // change upstream data this dataset promises to carry verbatim.
   for (const [key, ext] of Object.entries(exts)) {
+    if (yarnKeys.has(key)) continue;
     for (const target of Object.keys(ext.peerDependenciesMeta ?? {})) {
       if (!ext.peerDependencies?.[target]) throw new Error(`${key}: ${target} is marked optional but never declared as a peer`);
     }
