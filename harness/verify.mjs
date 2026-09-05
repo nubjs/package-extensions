@@ -21,17 +21,31 @@ const ROOT = resolve(dirname(new URL(import.meta.url).pathname), '..');
 const failures = [];
 const checks = [];
 
+/**
+ * Thrown by a check that cannot apply to this run. Reported as `skip`, never as
+ * `ok`: a check that quietly passes when it did not run reads as coverage and is
+ * how a gate rots without anyone noticing.
+ */
+class NotApplicable extends Error {}
+
 function check(name, fn) {
   try {
     const detail = fn();
     checks.push(`  ok   ${name}${detail ? ` — ${detail}` : ''}`);
   } catch (err) {
+    if (err instanceof NotApplicable) {
+      checks.push(`  skip ${name} — ${err.message}`);
+      return;
+    }
     failures.push(`  FAIL ${name} — ${err.message}`);
   }
 }
 
 const doc = JSON.parse(readFileSync(resolve(ROOT, 'package-extensions.json'), 'utf8'));
 const exts = doc.packageExtensions;
+
+/** The corpus a published dataset is built from. A smaller run is a smoke test. */
+const FULL_CORPUS = 10000;
 
 // ---------------------------------------------------------------- substance
 
@@ -197,6 +211,12 @@ check('every extension key quoted in the README still exists', () => {
   // headline example until the package declared its twenty-two optional peers
   // upstream and vanished from the scan, leaving a documented entry that shipped
   // nowhere. An example nobody can find is worse than no example.
+  // The README describes the full corpus, so a reduced run legitimately lacks
+  // its examples. Coupling a documentation invariant to corpus size made the
+  // workflow's own `top=300` smoke test impossible to pass.
+  if (doc.corpus.size < FULL_CORPUS) {
+    throw new NotApplicable(`corpus is ${doc.corpus.size}, not a full run — the README documents the ${FULL_CORPUS}-package dataset`);
+  }
   const md = readFileSync(resolve(ROOT, 'README.md'), 'utf8');
   const quoted = [...new Set([...md.matchAll(/"([^"]+@\*)"/g)].map((m) => m[1]))];
   const missing = quoted.filter((k) => !exts[k]);
@@ -229,7 +249,8 @@ if (failures.length) {
   console.error(`\n${failures.length} check(s) failed`);
   process.exit(1);
 }
-console.log(`\nall ${checks.length} checks passed`);
+const skipped = checks.filter((c) => c.startsWith('  skip')).length;
+console.log(`\nall ${checks.length - skipped} checks passed${skipped ? `, ${skipped} not applicable to this run` : ''}`);
 
 // ----------------------------------------------------------------- helpers
 
