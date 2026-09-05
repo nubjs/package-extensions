@@ -3,7 +3,7 @@
 # NO NPM_TOKEN. npm mints a short-lived credential from this job's OIDC identity,
 # which is why `id-token: write` is the load-bearing permission — without it
 # `npm publish` falls back to looking for a token and fails. The trust
-# relationship is registered against THIS FILENAME (`publish.yml`), so renaming
+# relationship is registered against THIS FILENAME (`release.yml`), so renaming
 # or moving this file silently breaks publishing until the trust is re-created.
 #
 # Manual only, deliberately. The dataset rebuilds daily, but a rebuild is not a
