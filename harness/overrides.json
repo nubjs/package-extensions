@@ -1,0 +1,61 @@
+{
+  "_comment": "Reviewed per-entry decisions. Shape: { \"<package>\": { \"<target>\": { \"field\": \"dependency\" | \"peer\", \"why\": \"<what reading the code showed>\" } } }. A `dependency` promotion is added only after someone reads the published package and confirms the target is a library it genuinely needs its own copy of. A `peer` entry records a candidate that was reviewed and rejected, so nobody re-litigates it.",
+
+  "es-abstract": {
+    "for-each": { "field": "dependency", "why": "2025/EncodeForRegExpEscape.js:16 requires it at module scope; 54 other deps declared" }
+  },
+  "@firebase/database": {
+    "@firebase/app": { "field": "dependency", "why": "dist/index.cjs.js:5 requires it unconditionally; the sibling package the whole SDK is built on" }
+  },
+  "@datadog/sketches-js": {
+    "protobufjs": { "field": "dependency", "why": "dist/ddsketch/proto/compiled.js:3 requires protobufjs/minimal at module scope; the package declares nothing" }
+  },
+  "@webassemblyjs/wast-parser": {
+    "@webassemblyjs/helper-numbers": { "field": "dependency", "why": "lib/grammar.js:12 requires it and esm/index.js re-exports it; same-family sibling" }
+  },
+  "escodegen": {
+    "optionator": { "field": "dependency", "why": "bin/escodegen.js:33 and bin/esgenerate.js:32 require it at top level; both bins crash without it" }
+  },
+  "@nrwl/devkit": {
+    "tslib": { "field": "dependency", "why": "index.js:3 emits the TypeScript helper require; only 1 dep declared" }
+  },
+  "@nrwl/js": {
+    "tslib": { "field": "dependency", "why": "index.js:3 emits the TypeScript helper require" }
+  },
+  "@nrwl/workspace": {
+    "tslib": { "field": "dependency", "why": "generators.js:3 emits the TypeScript helper require" }
+  },
+  "@nx/linter": {
+    "tslib": { "field": "dependency", "why": "index.js:3 emits the TypeScript helper require" }
+  },
+  "@aws-sdk/service-error-classification": {
+    "tslib": { "field": "dependency", "why": "dist-cjs/index.js:3 emits the TypeScript helper require" }
+  },
+
+  "@vue/compiler-sfc": {
+    "coffee-script": { "field": "peer", "why": "an optional template preprocessor the consumer opts into, not something to install for everyone" },
+    "ect": { "field": "peer", "why": "optional template preprocessor" },
+    "just": { "field": "peer", "why": "optional template preprocessor" }
+  },
+  "@vue/component-compiler-utils": {
+    "less": { "field": "peer", "why": "optional style preprocessor the consumer chooses" },
+    "sass": { "field": "peer", "why": "optional style preprocessor the consumer chooses" },
+    "stylus": { "field": "peer", "why": "optional style preprocessor the consumer chooses" }
+  },
+  "@oclif/core": {
+    "ts-node": { "field": "peer", "why": "optional TypeScript support; a compiled CLI never loads it" }
+  },
+  "unzipper": {
+    "@aws-sdk/client-s3": { "field": "peer", "why": "an optional S3 integration; installing the AWS SDK for every consumer would be wrong" }
+  },
+  "requirejs": {
+    "lang": { "field": "peer", "why": "not a package — bin/r.js calls define('lang', ...) and requires the AMD id back. An unrelated package named lang is published, so the registry check cannot catch this" },
+    "env": { "field": "peer", "why": "internal AMD module id, not a package" },
+    "logger": { "field": "peer", "why": "internal AMD module id, not a package" },
+    "optimize": { "field": "peer", "why": "internal AMD module id, not a package" },
+    "parse": { "field": "peer", "why": "internal AMD module id, not a package" },
+    "pragma": { "field": "peer", "why": "internal AMD module id, not a package" },
+    "prim": { "field": "peer", "why": "internal AMD module id, not a package" },
+    "transform": { "field": "peer", "why": "internal AMD module id, not a package" }
+  }
+}

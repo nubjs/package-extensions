@@ -1,0 +1,113 @@
+name: rebuild
+
+# Rescan the corpus and regenerate the dataset.
+#
+# The scan pins an explicit nubjs/nub commit rather than a branch, so every
+# record names the detector that produced it and an old run stays reproducible.
+
+on:
+  workflow_dispatch:
+    inputs:
+      nub_ref:
+        description: A nubjs/nub commit SHA (or ref) to build the detector from
+        required: true
+        default: main
+      top:
+        description: How many of the most-downloaded packages to scan
+        required: false
+        default: '10000'
+      concurrency:
+        description: Parallel fetch/analyze workers
+        required: false
+        default: '8'
+      commit:
+        description: Commit the regenerated dataset to main
+        type: boolean
+        required: false
+        default: true
+  schedule:
+    # Monthly. The ecosystem moves under the dataset — packages fix their
+    # manifests, and a stale entry is a no-op that should still be dropped.
+    - cron: '0 6 1 * *'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: nubjs/nub
+          ref: ${{ inputs.nub_ref || 'main' }}
+          path: .nub
+
+      - name: Record the detector's provenance
+        id: prov
+        run: |
+          echo "sha=$(git -C .nub rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "run=$(date -u +%F)-top${{ inputs.top || '10000' }}" >> "$GITHUB_OUTPUT"
+
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: .nub/crates/nub-phantom
+
+      - name: Build the detector
+        run: cargo build --manifest-path .nub/crates/nub-phantom/Cargo.toml --release
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install --no-audit --no-fund
+
+      - name: Scan
+        run: |
+          mkdir -p "records/${{ steps.prov.outputs.run }}"
+          .nub/crates/nub-phantom/target/release/nub-phantom scan \
+            --top "${{ inputs.top || '10000' }}" \
+            --concurrency "${{ inputs.concurrency || '8' }}" \
+            --json \
+            > "records/${{ steps.prov.outputs.run }}/scan.json" \
+            2> "records/${{ steps.prov.outputs.run }}/progress.log"
+
+      - name: Record what produced this run
+        run: |
+          cat > "records/${{ steps.prov.outputs.run }}/meta.json" <<EOF
+          {
+            "run": "${{ steps.prov.outputs.run }}",
+            "date": "$(date -u +%FT%TZ)",
+            "detector": {
+              "repository": "nubjs/nub",
+              "commit": "${{ steps.prov.outputs.sha }}",
+              "path": "crates/nub-phantom"
+            },
+            "corpus": {
+              "ranking": "npm-high-impact topDownload",
+              "top": ${{ inputs.top || '10000' }}
+            },
+            "workflowRun": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          }
+          EOF
+          node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" \
+            "records/${{ steps.prov.outputs.run }}/meta.json"
+
+      - name: Build, emit and gate
+        run: |
+          node harness/build.mjs --scan "records/${{ steps.prov.outputs.run }}/scan.json"
+          node harness/emit.mjs
+          node harness/verify.mjs
+
+      - name: Commit
+        if: ${{ inputs.commit != false }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-extensions.json dist records inputs
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "rebuild: ${{ steps.prov.outputs.run }} against nub ${{ steps.prov.outputs.sha }}"
+          git push

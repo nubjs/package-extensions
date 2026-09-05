@@ -1,0 +1,12 @@
+{
+  "run": "2026-09-05-top10000",
+  "date": "2026-09-05T17:20:54Z",
+  "detector": {
+    "repository": "nubjs/nub",
+    "commit": "798180a7dae4ae351c83d44c6bd1ddeb979a0d0d",
+    "path": "crates/nub-phantom",
+    "pullRequest": "nubjs/nub#888"
+  },
+  "corpus": { "ranking": "npm-high-impact topDownload", "top": 10000 },
+  "host": "local"
+}
