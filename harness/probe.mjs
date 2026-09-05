@@ -224,12 +224,28 @@ console.log(JSON.stringify(out));`
     // deliberately provides nothing. Matching only `tried to access` conflates
     // them, which made `accessedButNotPredicted` read as a list of detector
     // misses when five of the six sampled were declared peers.
+    // THE ISSUER IS PART OF THE MESSAGE AND MUST BE CHECKED. Importing a package
+    // loads its whole graph, so a failure raised here is not necessarily ITS
+    // failure: probing `@swagger-api/apidom-reference` throws
+    //
+    //   @swaggerexpert/json-pointer tried to access @swagger-api/apidom-core ...
+    //
+    // and apidom-reference declares apidom-core perfectly well. Matching the
+    // accessed name alone credits a nested package's phantom to the package
+    // under test, which on the promotion path would write a `dependencies` entry
+    // onto the wrong package entirely.
     const accessed = new Set();
     const unprovidedPeers = new Set();
+    const byOtherIssuers = new Set();
     for (const r of parsed) {
       if (r.ok) continue;
-      for (const m of r.message.matchAll(/tried to access ([@\w./-]+)(\s*\(a peer dependency\))?/g)) {
-        (m[2] ? unprovidedPeers : accessed).add(m[1]);
+      for (const m of r.message.matchAll(/([@\w./-]+) tried to access ([@\w./-]+)(\s*\(a peer dependency\))?/g)) {
+        const [, issuer, target, isPeer] = m;
+        if (issuer !== finding.package) {
+          byOtherIssuers.add(`${issuer} -> ${target}`);
+          continue;
+        }
+        (isPeer ? unprovidedPeers : accessed).add(target);
       }
     }
     const confirmed = base.expected.filter((t) => accessed.has(t));
@@ -241,6 +257,9 @@ console.log(JSON.stringify(out));`
       // signal, now that declared-but-unprovided peers are counted separately.
       accessedButNotPredicted: [...accessed].filter((t) => !base.expected.includes(t)),
       unprovidedPeers: [...unprovidedPeers],
+      // Real phantoms raised by other packages in the graph. Not this package's
+      // finding, and worth keeping: an issuer here may be outside the corpus.
+      byOtherIssuers: [...byOtherIssuers],
       specifiersTried: specifiers.length,
     };
   } catch (err) {
