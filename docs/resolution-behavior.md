@@ -21,7 +21,7 @@ Packed with `npm pack` and consumed as a `file:` tarball dependency, so both pac
 | --- | --- |
 | Node | 26.7.0 |
 | Yarn Berry | 4.18.0, PnP linker |
-| pnpm | 11.25.0, and 10.15.1 for the config-location rows |
+| pnpm | 11.25.0, plus 9.15.9, 10.15.1 and 10.34.5 for the config-location rows |
 
 The real-package rows use `object.hasown@1.1.4`, whose `index.js` requires `call-bind` while its manifest declares only `define-properties`, `es-abstract` and `es-object-atoms`.
 
