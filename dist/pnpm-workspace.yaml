@@ -1,5 +1,5 @@
 # Generated 2026-09-05 from the 10000 most-downloaded npm packages.
-# 1040 packages, 1501 undeclared dependencies.
+# 1055 packages, 1492 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -21,6 +21,18 @@ packageExtensions:
       "@amplitude/rrweb-types": "*"
     peerDependenciesMeta:
       "@amplitude/rrweb-types":
+        optional: true
+  "@andersbakken/blessed@*":
+    peerDependencies:
+      blessed: "*"
+    peerDependenciesMeta:
+      blessed:
+        optional: true
+  "@angular-devkit/build-angular@*":
+    peerDependencies:
+      zone.js: "*"
+    peerDependenciesMeta:
+      zone.js:
         optional: true
   "@angular-eslint/bundled-angular-compiler@*":
     peerDependencies:
@@ -252,6 +264,12 @@ packageExtensions:
       "@codemirror/autocomplete": "*"
     peerDependenciesMeta:
       "@codemirror/autocomplete":
+        optional: true
+  "@dabh/diagnostics@*":
+    peerDependencies:
+      debug: "*"
+    peerDependenciesMeta:
+      debug:
         optional: true
   "@datadog/datadog-ci@*":
     peerDependencies:
@@ -625,6 +643,15 @@ packageExtensions:
     peerDependenciesMeta:
       "@opentelemetry/api":
         optional: true
+  "@google/gemini-cli@*":
+    peerDependencies:
+      bufferutil: "*"
+      utf-8-validate: "*"
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
   "@gorhom/bottom-sheet@*":
     peerDependencies:
       "@shopify/flash-list": "*"
@@ -851,6 +878,15 @@ packageExtensions:
     peerDependenciesMeta:
       react-dom:
         optional: true
+  "@mapbox/node-pre-gyp@*":
+    peerDependencies:
+      node-gyp: "*"
+      npm: "*"
+    peerDependenciesMeta:
+      node-gyp:
+        optional: true
+      npm:
+        optional: true
   "@mapbox/vector-tile@*":
     peerDependencies:
       geojson: "*"
@@ -1051,8 +1087,11 @@ packageExtensions:
         optional: true
   "@newrelic/security-agent@*":
     peerDependencies:
+      "@aws-sdk/client-lambda": "*"
       "@grpc/grpc-js": "*"
     peerDependenciesMeta:
+      "@aws-sdk/client-lambda":
+        optional: true
       "@grpc/grpc-js":
         optional: true
   "@next/bundle-analyzer@*":
@@ -1078,6 +1117,12 @@ packageExtensions:
       lodash: "*"
     peerDependenciesMeta:
       lodash:
+        optional: true
+  "@npmcli/config@*":
+    peerDependencies:
+      node-gyp: "*"
+    peerDependenciesMeta:
+      node-gyp:
         optional: true
   "@nrwl/devkit@*":
     dependencies:
@@ -1727,6 +1772,12 @@ packageExtensions:
     peerDependenciesMeta:
       "@modelcontextprotocol/sdk":
         optional: true
+  "@pm2/blessed@*":
+    peerDependencies:
+      blessed: "*"
+    peerDependenciesMeta:
+      blessed:
+        optional: true
   "@pnpm/npm-conf@*":
     peerDependencies:
       npm: "*"
@@ -1798,6 +1849,12 @@ packageExtensions:
       openai:
         optional: true
       papaparse:
+        optional: true
+  "@pulumi/pulumi@*":
+    peerDependencies:
+      "@microsoft/typescript-etw": "*"
+    peerDependenciesMeta:
+      "@microsoft/typescript-etw":
         optional: true
   "@react-email/tailwind@*":
     peerDependencies:
@@ -1897,6 +1954,15 @@ packageExtensions:
       "@react-native-community/cli-server-api":
         optional: true
       react-native:
+        optional: true
+  "@react-native/debugger-frontend@*":
+    peerDependencies:
+      debug: "*"
+      puppeteer: "*"
+    peerDependenciesMeta:
+      debug:
+        optional: true
+      puppeteer:
         optional: true
   "@react-native/debugger-shell@*":
     peerDependencies:
@@ -2095,13 +2161,17 @@ packageExtensions:
         optional: true
   "@sentry/react-native@*":
     peerDependencies:
+      "@expo/config": "*"
       "@expo/env": "*"
       "@react-navigation/native": "*"
       dotenv: "*"
       expo-router: "*"
       expo-updates: "*"
+      open: "*"
       promise: "*"
     peerDependenciesMeta:
+      "@expo/config":
+        optional: true
       "@expo/env":
         optional: true
       "@react-navigation/native":
@@ -2112,6 +2182,8 @@ packageExtensions:
         optional: true
       expo-updates:
         optional: true
+      open:
+        optional: true
       promise:
         optional: true
   "@sentry/vercel-edge@*":
@@ -2119,6 +2191,18 @@ packageExtensions:
       "@opentelemetry/sdk-trace-base": "*"
     peerDependenciesMeta:
       "@opentelemetry/sdk-trace-base":
+        optional: true
+  "@serverless/dashboard-plugin@*":
+    peerDependencies:
+      bufferutil: "*"
+      original-fs: "*"
+      utf-8-validate: "*"
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      original-fs:
+        optional: true
+      utf-8-validate:
         optional: true
   "@serverless/event-mocks@*":
     peerDependencies:
@@ -2587,6 +2671,12 @@ packageExtensions:
       source-map-support: "*"
     peerDependenciesMeta:
       source-map-support:
+        optional: true
+  "@turbo/gen@*":
+    peerDependencies:
+      kerberos: "*"
+    peerDependenciesMeta:
+      kerberos:
         optional: true
   "@turf/along@*":
     peerDependencies:
@@ -3920,6 +4010,12 @@ packageExtensions:
     peerDependenciesMeta:
       "@verdaccio/types":
         optional: true
+  "@videojs/http-streaming@*":
+    peerDependencies:
+      "@xmldom/xmldom": "*"
+    peerDependenciesMeta:
+      "@xmldom/xmldom":
+        optional: true
   "@vimeo/player@*":
     peerDependencies:
       timing-object: "*"
@@ -4519,8 +4615,11 @@ packageExtensions:
         optional: true
   dd-trace@*:
     peerDependencies:
+      "@vitest/runner": "*"
       typescript: "*"
     peerDependenciesMeta:
+      "@vitest/runner":
+        optional: true
       typescript:
         optional: true
   dependency-cruiser@*:
@@ -4906,8 +5005,11 @@ packageExtensions:
   expo-router@*:
     peerDependencies:
       expo-modules-core: "*"
+      react-native-tab-view: "*"
     peerDependenciesMeta:
       expo-modules-core:
+        optional: true
+      react-native-tab-view:
         optional: true
   expo-secure-store@*:
     peerDependencies:
@@ -5256,8 +5358,11 @@ packageExtensions:
         optional: true
   jest-expo@*:
     peerDependencies:
+      babel-preset-expo: "*"
       jest: "*"
     peerDependenciesMeta:
+      babel-preset-expo:
+        optional: true
       jest:
         optional: true
   jest-mock-extended@*:
@@ -5422,23 +5527,11 @@ packageExtensions:
     peerDependenciesMeta:
       "@livekit/throws-transformer":
         optional: true
-  livereload-js@*:
-    peerDependencies:
-      core-js: "*"
-    peerDependenciesMeta:
-      core-js:
-        optional: true
   loglevel-plugin-prefix@*:
     peerDependencies:
       loglevel: "*"
     peerDependenciesMeta:
       loglevel:
-        optional: true
-  lolex@*:
-    peerDependencies:
-      type-detect: "*"
-    peerDependenciesMeta:
-      type-detect:
         optional: true
   lovable-tagger@*:
     peerDependencies:
@@ -5701,8 +5794,11 @@ packageExtensions:
   nativewind@*:
     peerDependencies:
       react: "*"
+      typescript: "*"
     peerDependenciesMeta:
       react:
+        optional: true
+      typescript:
         optional: true
   natural@*:
     peerDependencies:
@@ -5720,11 +5816,17 @@ packageExtensions:
     peerDependencies:
       critters: "*"
       next-rspack: "*"
+      private-next-instrumentation-client: "*"
+      react-server-dom-turbopack: "*"
       react-server-dom-webpack: "*"
     peerDependenciesMeta:
       critters:
         optional: true
       next-rspack:
+        optional: true
+      private-next-instrumentation-client:
+        optional: true
+      react-server-dom-turbopack:
         optional: true
       react-server-dom-webpack:
         optional: true
@@ -5739,15 +5841,6 @@ packageExtensions:
       "@angular/compiler": "*"
     peerDependenciesMeta:
       "@angular/compiler":
-        optional: true
-  nise@*:
-    peerDependencies:
-      inherits: "*"
-      type-detect: "*"
-    peerDependenciesMeta:
-      inherits:
-        optional: true
-      type-detect:
         optional: true
   nitro@*:
     dependencies:
@@ -5835,6 +5928,18 @@ packageExtensions:
     peerDependenciesMeta:
       express:
         optional: true
+  node-pre-gyp@*:
+    peerDependencies:
+      node-gyp: "*"
+      npm: "*"
+      request: "*"
+    peerDependenciesMeta:
+      node-gyp:
+        optional: true
+      npm:
+        optional: true
+      request:
+        optional: true
   node-readfiles@*:
     peerDependencies:
       src: "*"
@@ -5897,12 +6002,15 @@ packageExtensions:
         optional: true
   openapi-sampler@*:
     peerDependencies:
-      foreach: "*"
       json-schema: "*"
     peerDependenciesMeta:
-      foreach:
-        optional: true
       json-schema:
+        optional: true
+  openclaw@*:
+    peerDependencies:
+      esbuild: "*"
+    peerDependenciesMeta:
+      esbuild:
         optional: true
   openid-client@*:
     peerDependencies:
@@ -5984,9 +6092,15 @@ packageExtensions:
         optional: true
   pm2@*:
     peerDependencies:
+      "@opentelemetry/auto-instrumentations-node": "*"
       "@opentelemetry/sdk-node": "*"
+      ts-node: "*"
     peerDependenciesMeta:
+      "@opentelemetry/auto-instrumentations-node":
+        optional: true
       "@opentelemetry/sdk-node":
+        optional: true
+      ts-node:
         optional: true
   postcss-import@*:
     peerDependencies:
@@ -6228,6 +6342,12 @@ packageExtensions:
     peerDependenciesMeta:
       "@babel/runtime":
         optional: true
+  react-native-worklets@*:
+    peerDependencies:
+      "@babel/plugin-transform-react-jsx": "*"
+    peerDependenciesMeta:
+      "@babel/plugin-transform-react-jsx":
+        optional: true
   react-phone-number-input@*:
     peerDependencies:
       react-hook-form: "*"
@@ -6249,6 +6369,12 @@ packageExtensions:
     peerDependenciesMeta:
       react:
         optional: true
+  recast@*:
+    peerDependencies:
+      babylon: "*"
+    peerDependenciesMeta:
+      babylon:
+        optional: true
   redlock@*:
     peerDependencies:
       ioredis: "*"
@@ -6259,11 +6385,14 @@ packageExtensions:
     peerDependencies:
       call-me-maybe: "*"
       fast-safe-stringify: "*"
+      "null": "*"
       yaml: "*"
     peerDependenciesMeta:
       call-me-maybe:
         optional: true
       fast-safe-stringify:
+        optional: true
+      "null":
         optional: true
       yaml:
         optional: true
@@ -6396,36 +6525,6 @@ packageExtensions:
     peerDependenciesMeta:
       zod:
         optional: true
-  requirejs@*:
-    peerDependencies:
-      env: "*"
-      lang: "*"
-      logger: "*"
-      optimize: "*"
-      parse: "*"
-      pragma: "*"
-      prim: "*"
-      source-map: "*"
-      transform: "*"
-    peerDependenciesMeta:
-      env:
-        optional: true
-      lang:
-        optional: true
-      logger:
-        optional: true
-      optimize:
-        optional: true
-      parse:
-        optional: true
-      pragma:
-        optional: true
-      prim:
-        optional: true
-      source-map:
-        optional: true
-      transform:
-        optional: true
   resend@*:
     peerDependencies:
       react: "*"
@@ -6474,6 +6573,21 @@ packageExtensions:
     peerDependenciesMeta:
       "@rrweb/types":
         optional: true
+  rss-parser@*:
+    peerDependencies:
+      xmlbuilder: "*"
+    peerDependenciesMeta:
+      xmlbuilder:
+        optional: true
+  rx@*:
+    peerDependencies:
+      rx-lite: "*"
+      rx-lite-compat: "*"
+    peerDependenciesMeta:
+      rx-lite:
+        optional: true
+      rx-lite-compat:
+        optional: true
   sass-embedded@*:
     peerDependencies:
       sass: "*"
@@ -6521,6 +6635,12 @@ packageExtensions:
       "@napi-rs/snappy-wasm32-wasi": "*"
     peerDependenciesMeta:
       "@napi-rs/snappy-wasm32-wasi":
+        optional: true
+  stacktrace-gps@*:
+    peerDependencies:
+      vertx: "*"
+    peerDependenciesMeta:
+      vertx:
         optional: true
   storybook@*:
     peerDependencies:
@@ -6617,114 +6737,6 @@ packageExtensions:
       macos-temperature-sensor:
         optional: true
       osx-temperature-sensor:
-        optional: true
-  tldjs@*:
-    peerDependencies:
-      available-typed-arrays: "*"
-      call-bind: "*"
-      call-bind-apply-helpers: "*"
-      call-bound: "*"
-      define-data-property: "*"
-      dunder-proto: "*"
-      es-define-property: "*"
-      es-errors: "*"
-      es-object-atoms: "*"
-      for-each: "*"
-      function-bind: "*"
-      get-intrinsic: "*"
-      get-proto: "*"
-      gopd: "*"
-      has-property-descriptors: "*"
-      has-symbols: "*"
-      has-tostringtag: "*"
-      hasown: "*"
-      inherits: "*"
-      is-arguments: "*"
-      is-callable: "*"
-      is-generator-function: "*"
-      is-regex: "*"
-      is-typed-array: "*"
-      math-intrinsics: "*"
-      object-inspect: "*"
-      possible-typed-array-names: "*"
-      qs: "*"
-      safe-regex-test: "*"
-      set-function-length: "*"
-      side-channel: "*"
-      side-channel-list: "*"
-      side-channel-map: "*"
-      side-channel-weakmap: "*"
-      which-typed-array: "*"
-    peerDependenciesMeta:
-      available-typed-arrays:
-        optional: true
-      call-bind:
-        optional: true
-      call-bind-apply-helpers:
-        optional: true
-      call-bound:
-        optional: true
-      define-data-property:
-        optional: true
-      dunder-proto:
-        optional: true
-      es-define-property:
-        optional: true
-      es-errors:
-        optional: true
-      es-object-atoms:
-        optional: true
-      for-each:
-        optional: true
-      function-bind:
-        optional: true
-      get-intrinsic:
-        optional: true
-      get-proto:
-        optional: true
-      gopd:
-        optional: true
-      has-property-descriptors:
-        optional: true
-      has-symbols:
-        optional: true
-      has-tostringtag:
-        optional: true
-      hasown:
-        optional: true
-      inherits:
-        optional: true
-      is-arguments:
-        optional: true
-      is-callable:
-        optional: true
-      is-generator-function:
-        optional: true
-      is-regex:
-        optional: true
-      is-typed-array:
-        optional: true
-      math-intrinsics:
-        optional: true
-      object-inspect:
-        optional: true
-      possible-typed-array-names:
-        optional: true
-      qs:
-        optional: true
-      safe-regex-test:
-        optional: true
-      set-function-length:
-        optional: true
-      side-channel:
-        optional: true
-      side-channel-list:
-        optional: true
-      side-channel-map:
-        optional: true
-      side-channel-weakmap:
-        optional: true
-      which-typed-array:
         optional: true
   tmcp@*:
     peerDependencies:
@@ -6860,6 +6872,12 @@ packageExtensions:
       "@aws-sdk/client-s3":
         optional: true
       readable-stream:
+        optional: true
+  urijs@*:
+    peerDependencies:
+      jquery: "*"
+    peerDependenciesMeta:
+      jquery:
         optional: true
   useragent@*:
     peerDependencies:

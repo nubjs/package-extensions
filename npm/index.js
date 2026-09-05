@@ -1,5 +1,5 @@
 // @nubjs/extensions 2026.9.5 — generated 2026-09-05, do not edit.
-// 1040 packages, 1501 undeclared dependencies found by scanning
+// 1055 packages, 1492 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -40,6 +40,32 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@amplitude/rrweb-types": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@andersbakken/blessed@*",
+  {
+   "peerDependencies": {
+    "blessed": "*"
+   },
+   "peerDependenciesMeta": {
+    "blessed": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@angular-devkit/build-angular@*",
+  {
+   "peerDependencies": {
+    "zone.js": "*"
+   },
+   "peerDependenciesMeta": {
+    "zone.js": {
      "optional": true
     }
    }
@@ -511,6 +537,19 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@codemirror/autocomplete": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@dabh/diagnostics@*",
+  {
+   "peerDependencies": {
+    "debug": "*"
+   },
+   "peerDependenciesMeta": {
+    "debug": {
      "optional": true
     }
    }
@@ -1289,6 +1328,23 @@ exports.packageExtensions = [
   }
  ],
  [
+  "@google/gemini-cli@*",
+  {
+   "peerDependencies": {
+    "bufferutil": "*",
+    "utf-8-validate": "*"
+   },
+   "peerDependenciesMeta": {
+    "bufferutil": {
+     "optional": true
+    },
+    "utf-8-validate": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@gorhom/bottom-sheet@*",
   {
    "peerDependencies": {
@@ -1731,6 +1787,23 @@ exports.packageExtensions = [
   }
  ],
  [
+  "@mapbox/node-pre-gyp@*",
+  {
+   "peerDependencies": {
+    "node-gyp": "*",
+    "npm": "*"
+   },
+   "peerDependenciesMeta": {
+    "node-gyp": {
+     "optional": true
+    },
+    "npm": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@mapbox/vector-tile@*",
   {
    "peerDependencies": {
@@ -2133,9 +2206,13 @@ exports.packageExtensions = [
   "@newrelic/security-agent@*",
   {
    "peerDependencies": {
+    "@aws-sdk/client-lambda": "*",
     "@grpc/grpc-js": "*"
    },
    "peerDependenciesMeta": {
+    "@aws-sdk/client-lambda": {
+     "optional": true
+    },
     "@grpc/grpc-js": {
      "optional": true
     }
@@ -2189,6 +2266,19 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "lodash": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@npmcli/config@*",
+  {
+   "peerDependencies": {
+    "node-gyp": "*"
+   },
+   "peerDependenciesMeta": {
+    "node-gyp": {
      "optional": true
     }
    }
@@ -3300,6 +3390,19 @@ exports.packageExtensions = [
   }
  ],
  [
+  "@pm2/blessed@*",
+  {
+   "peerDependencies": {
+    "blessed": "*"
+   },
+   "peerDependenciesMeta": {
+    "blessed": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@pnpm/npm-conf@*",
   {
    "peerDependencies": {
@@ -3425,6 +3528,19 @@ exports.packageExtensions = [
      "optional": true
     },
     "papaparse": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@pulumi/pulumi@*",
+  {
+   "peerDependencies": {
+    "@microsoft/typescript-etw": "*"
+   },
+   "peerDependenciesMeta": {
+    "@microsoft/typescript-etw": {
      "optional": true
     }
    }
@@ -3617,6 +3733,23 @@ exports.packageExtensions = [
      "optional": true
     },
     "react-native": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@react-native/debugger-frontend@*",
+  {
+   "peerDependencies": {
+    "debug": "*",
+    "puppeteer": "*"
+   },
+   "peerDependenciesMeta": {
+    "debug": {
+     "optional": true
+    },
+    "puppeteer": {
      "optional": true
     }
    }
@@ -4016,14 +4149,19 @@ exports.packageExtensions = [
   "@sentry/react-native@*",
   {
    "peerDependencies": {
+    "@expo/config": "*",
     "@expo/env": "*",
     "@react-navigation/native": "*",
     "dotenv": "*",
     "expo-router": "*",
     "expo-updates": "*",
+    "open": "*",
     "promise": "*"
    },
    "peerDependenciesMeta": {
+    "@expo/config": {
+     "optional": true
+    },
     "@expo/env": {
      "optional": true
     },
@@ -4037,6 +4175,9 @@ exports.packageExtensions = [
      "optional": true
     },
     "expo-updates": {
+     "optional": true
+    },
+    "open": {
      "optional": true
     },
     "promise": {
@@ -4053,6 +4194,27 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@opentelemetry/sdk-trace-base": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@serverless/dashboard-plugin@*",
+  {
+   "peerDependencies": {
+    "bufferutil": "*",
+    "original-fs": "*",
+    "utf-8-validate": "*"
+   },
+   "peerDependenciesMeta": {
+    "bufferutil": {
+     "optional": true
+    },
+    "original-fs": {
+     "optional": true
+    },
+    "utf-8-validate": {
      "optional": true
     }
    }
@@ -4957,6 +5119,19 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "source-map-support": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@turbo/gen@*",
+  {
+   "peerDependencies": {
+    "kerberos": "*"
+   },
+   "peerDependenciesMeta": {
+    "kerberos": {
      "optional": true
     }
    }
@@ -7729,6 +7904,19 @@ exports.packageExtensions = [
   }
  ],
  [
+  "@videojs/http-streaming@*",
+  {
+   "peerDependencies": {
+    "@xmldom/xmldom": "*"
+   },
+   "peerDependenciesMeta": {
+    "@xmldom/xmldom": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@vimeo/player@*",
   {
    "peerDependencies": {
@@ -8776,9 +8964,13 @@ exports.packageExtensions = [
   "dd-trace@*",
   {
    "peerDependencies": {
+    "@vitest/runner": "*",
     "typescript": "*"
    },
    "peerDependenciesMeta": {
+    "@vitest/runner": {
+     "optional": true
+    },
     "typescript": {
      "optional": true
     }
@@ -9557,10 +9749,14 @@ exports.packageExtensions = [
   "expo-router@*",
   {
    "peerDependencies": {
-    "expo-modules-core": "*"
+    "expo-modules-core": "*",
+    "react-native-tab-view": "*"
    },
    "peerDependenciesMeta": {
     "expo-modules-core": {
+     "optional": true
+    },
+    "react-native-tab-view": {
      "optional": true
     }
    }
@@ -10275,9 +10471,13 @@ exports.packageExtensions = [
   "jest-expo@*",
   {
    "peerDependencies": {
+    "babel-preset-expo": "*",
     "jest": "*"
    },
    "peerDependenciesMeta": {
+    "babel-preset-expo": {
+     "optional": true
+    },
     "jest": {
      "optional": true
     }
@@ -10606,19 +10806,6 @@ exports.packageExtensions = [
   }
  ],
  [
-  "livereload-js@*",
-  {
-   "peerDependencies": {
-    "core-js": "*"
-   },
-   "peerDependenciesMeta": {
-    "core-js": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "loglevel-plugin-prefix@*",
   {
    "peerDependencies": {
@@ -10626,19 +10813,6 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "loglevel": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "lolex@*",
-  {
-   "peerDependencies": {
-    "type-detect": "*"
-   },
-   "peerDependenciesMeta": {
-    "type-detect": {
      "optional": true
     }
    }
@@ -11157,10 +11331,14 @@ exports.packageExtensions = [
   "nativewind@*",
   {
    "peerDependencies": {
-    "react": "*"
+    "react": "*",
+    "typescript": "*"
    },
    "peerDependenciesMeta": {
     "react": {
+     "optional": true
+    },
+    "typescript": {
      "optional": true
     }
    }
@@ -11198,6 +11376,8 @@ exports.packageExtensions = [
    "peerDependencies": {
     "critters": "*",
     "next-rspack": "*",
+    "private-next-instrumentation-client": "*",
+    "react-server-dom-turbopack": "*",
     "react-server-dom-webpack": "*"
    },
    "peerDependenciesMeta": {
@@ -11205,6 +11385,12 @@ exports.packageExtensions = [
      "optional": true
     },
     "next-rspack": {
+     "optional": true
+    },
+    "private-next-instrumentation-client": {
+     "optional": true
+    },
+    "react-server-dom-turbopack": {
      "optional": true
     },
     "react-server-dom-webpack": {
@@ -11234,23 +11420,6 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@angular/compiler": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "nise@*",
-  {
-   "peerDependencies": {
-    "inherits": "*",
-    "type-detect": "*"
-   },
-   "peerDependenciesMeta": {
-    "inherits": {
-     "optional": true
-    },
-    "type-detect": {
      "optional": true
     }
    }
@@ -11416,6 +11585,27 @@ exports.packageExtensions = [
   }
  ],
  [
+  "node-pre-gyp@*",
+  {
+   "peerDependencies": {
+    "node-gyp": "*",
+    "npm": "*",
+    "request": "*"
+   },
+   "peerDependenciesMeta": {
+    "node-gyp": {
+     "optional": true
+    },
+    "npm": {
+     "optional": true
+    },
+    "request": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "node-readfiles@*",
   {
    "peerDependencies": {
@@ -11518,14 +11708,23 @@ exports.packageExtensions = [
   "openapi-sampler@*",
   {
    "peerDependencies": {
-    "foreach": "*",
     "json-schema": "*"
    },
    "peerDependenciesMeta": {
-    "foreach": {
-     "optional": true
-    },
     "json-schema": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "openclaw@*",
+  {
+   "peerDependencies": {
+    "esbuild": "*"
+   },
+   "peerDependenciesMeta": {
+    "esbuild": {
      "optional": true
     }
    }
@@ -11689,10 +11888,18 @@ exports.packageExtensions = [
   "pm2@*",
   {
    "peerDependencies": {
-    "@opentelemetry/sdk-node": "*"
+    "@opentelemetry/auto-instrumentations-node": "*",
+    "@opentelemetry/sdk-node": "*",
+    "ts-node": "*"
    },
    "peerDependenciesMeta": {
+    "@opentelemetry/auto-instrumentations-node": {
+     "optional": true
+    },
     "@opentelemetry/sdk-node": {
+     "optional": true
+    },
+    "ts-node": {
      "optional": true
     }
    }
@@ -12189,6 +12396,19 @@ exports.packageExtensions = [
   }
  ],
  [
+  "react-native-worklets@*",
+  {
+   "peerDependencies": {
+    "@babel/plugin-transform-react-jsx": "*"
+   },
+   "peerDependenciesMeta": {
+    "@babel/plugin-transform-react-jsx": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "react-phone-number-input@*",
   {
    "peerDependencies": {
@@ -12232,6 +12452,19 @@ exports.packageExtensions = [
   }
  ],
  [
+  "recast@*",
+  {
+   "peerDependencies": {
+    "babylon": "*"
+   },
+   "peerDependenciesMeta": {
+    "babylon": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "redlock@*",
   {
    "peerDependencies": {
@@ -12250,6 +12483,7 @@ exports.packageExtensions = [
    "peerDependencies": {
     "call-me-maybe": "*",
     "fast-safe-stringify": "*",
+    "null": "*",
     "yaml": "*"
    },
    "peerDependenciesMeta": {
@@ -12257,6 +12491,9 @@ exports.packageExtensions = [
      "optional": true
     },
     "fast-safe-stringify": {
+     "optional": true
+    },
+    "null": {
      "optional": true
     },
     "yaml": {
@@ -12538,51 +12775,6 @@ exports.packageExtensions = [
   }
  ],
  [
-  "requirejs@*",
-  {
-   "peerDependencies": {
-    "env": "*",
-    "lang": "*",
-    "logger": "*",
-    "optimize": "*",
-    "parse": "*",
-    "pragma": "*",
-    "prim": "*",
-    "source-map": "*",
-    "transform": "*"
-   },
-   "peerDependenciesMeta": {
-    "env": {
-     "optional": true
-    },
-    "lang": {
-     "optional": true
-    },
-    "logger": {
-     "optional": true
-    },
-    "optimize": {
-     "optional": true
-    },
-    "parse": {
-     "optional": true
-    },
-    "pragma": {
-     "optional": true
-    },
-    "prim": {
-     "optional": true
-    },
-    "source-map": {
-     "optional": true
-    },
-    "transform": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "resend@*",
   {
    "peerDependencies": {
@@ -12687,6 +12879,36 @@ exports.packageExtensions = [
   }
  ],
  [
+  "rss-parser@*",
+  {
+   "peerDependencies": {
+    "xmlbuilder": "*"
+   },
+   "peerDependenciesMeta": {
+    "xmlbuilder": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "rx@*",
+  {
+   "peerDependencies": {
+    "rx-lite": "*",
+    "rx-lite-compat": "*"
+   },
+   "peerDependenciesMeta": {
+    "rx-lite": {
+     "optional": true
+    },
+    "rx-lite-compat": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "sass-embedded@*",
   {
    "peerDependencies": {
@@ -12780,6 +13002,19 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@napi-rs/snappy-wasm32-wasi": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "stacktrace-gps@*",
+  {
+   "peerDependencies": {
+    "vertx": "*"
+   },
+   "peerDependenciesMeta": {
+    "vertx": {
      "optional": true
     }
    }
@@ -12967,155 +13202,6 @@ exports.packageExtensions = [
      "optional": true
     },
     "osx-temperature-sensor": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "tldjs@*",
-  {
-   "peerDependencies": {
-    "available-typed-arrays": "*",
-    "call-bind": "*",
-    "call-bind-apply-helpers": "*",
-    "call-bound": "*",
-    "define-data-property": "*",
-    "dunder-proto": "*",
-    "es-define-property": "*",
-    "es-errors": "*",
-    "es-object-atoms": "*",
-    "for-each": "*",
-    "function-bind": "*",
-    "get-intrinsic": "*",
-    "get-proto": "*",
-    "gopd": "*",
-    "has-property-descriptors": "*",
-    "has-symbols": "*",
-    "has-tostringtag": "*",
-    "hasown": "*",
-    "inherits": "*",
-    "is-arguments": "*",
-    "is-callable": "*",
-    "is-generator-function": "*",
-    "is-regex": "*",
-    "is-typed-array": "*",
-    "math-intrinsics": "*",
-    "object-inspect": "*",
-    "possible-typed-array-names": "*",
-    "qs": "*",
-    "safe-regex-test": "*",
-    "set-function-length": "*",
-    "side-channel": "*",
-    "side-channel-list": "*",
-    "side-channel-map": "*",
-    "side-channel-weakmap": "*",
-    "which-typed-array": "*"
-   },
-   "peerDependenciesMeta": {
-    "available-typed-arrays": {
-     "optional": true
-    },
-    "call-bind": {
-     "optional": true
-    },
-    "call-bind-apply-helpers": {
-     "optional": true
-    },
-    "call-bound": {
-     "optional": true
-    },
-    "define-data-property": {
-     "optional": true
-    },
-    "dunder-proto": {
-     "optional": true
-    },
-    "es-define-property": {
-     "optional": true
-    },
-    "es-errors": {
-     "optional": true
-    },
-    "es-object-atoms": {
-     "optional": true
-    },
-    "for-each": {
-     "optional": true
-    },
-    "function-bind": {
-     "optional": true
-    },
-    "get-intrinsic": {
-     "optional": true
-    },
-    "get-proto": {
-     "optional": true
-    },
-    "gopd": {
-     "optional": true
-    },
-    "has-property-descriptors": {
-     "optional": true
-    },
-    "has-symbols": {
-     "optional": true
-    },
-    "has-tostringtag": {
-     "optional": true
-    },
-    "hasown": {
-     "optional": true
-    },
-    "inherits": {
-     "optional": true
-    },
-    "is-arguments": {
-     "optional": true
-    },
-    "is-callable": {
-     "optional": true
-    },
-    "is-generator-function": {
-     "optional": true
-    },
-    "is-regex": {
-     "optional": true
-    },
-    "is-typed-array": {
-     "optional": true
-    },
-    "math-intrinsics": {
-     "optional": true
-    },
-    "object-inspect": {
-     "optional": true
-    },
-    "possible-typed-array-names": {
-     "optional": true
-    },
-    "qs": {
-     "optional": true
-    },
-    "safe-regex-test": {
-     "optional": true
-    },
-    "set-function-length": {
-     "optional": true
-    },
-    "side-channel": {
-     "optional": true
-    },
-    "side-channel-list": {
-     "optional": true
-    },
-    "side-channel-map": {
-     "optional": true
-    },
-    "side-channel-weakmap": {
-     "optional": true
-    },
-    "which-typed-array": {
      "optional": true
     }
    }
@@ -13399,6 +13485,19 @@ exports.packageExtensions = [
      "optional": true
     },
     "readable-stream": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "urijs@*",
+  {
+   "peerDependencies": {
+    "jquery": "*"
+   },
+   "peerDependenciesMeta": {
+    "jquery": {
      "optional": true
     }
    }

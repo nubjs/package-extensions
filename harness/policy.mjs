@@ -111,7 +111,14 @@ export function mustNotBeDependency(target) {
 }
 
 /**
- * The three finding classes, in the order a reader should think about them.
+ * The finding classes, in the order a reader should think about them.
+ *
+ * `deep-path` a hard phantom reached ONLY by seeding a published file that no
+ *            entry point references, which Node's legacy resolution does make
+ *            importable when a package ships no `exports` map. Speculative by
+ *            construction: it is how `redux-persist/integration/react` is found,
+ *            and also where bundler aliases and AMD ids live. Optional peer,
+ *            never a promotion candidate.
  *
  * `adapter`  a hard phantom reachable ONLY from a non-`.` exports subpath. The
  *            pick-your-backend shape: `<pkg>/<adapter>` imports a backend the
@@ -133,7 +140,7 @@ export function mustNotBeDependency(target) {
  *            unasked would be wrong. Optional peer, which is what lets a
  *            consumer who DOES have it get the feature under a strict layout.
  */
-export const CLASSES = ['runtime', 'adapter', 'types', 'guarded'];
+export const CLASSES = ['runtime', 'adapter', 'types', 'deep-path', 'guarded'];
 
 /**
  * Flatten one scan offender into per-target rows.
@@ -164,6 +171,21 @@ export function rowsForOffender(offender) {
  */
 function hardClass(finding, adapters) {
   if (finding.from_types === true && finding.from_main !== true && finding.from_subpath !== true) return 'types';
+  // Reached ONLY by seeding a published file no entry point references. The
+  // detector calls this speculative by construction, and it is: nothing in the
+  // manifest says a consumer imports that path. The recall is real —
+  // `redux-persist/integration/react` is a documented entry point — but so is
+  // the noise, because a file nothing references is also where bundler aliases
+  // and AMD ids live. Measured over the top 10,000: this seeding added 266 hard
+  // edges, and a sample carried `@docusaurus/core -> @generated/client-modules`
+  // (a webpack alias), `isomorphic-fetch -> fetch` and
+  // `react-zoom-pan-pinch -> components` — none of them packages.
+  //
+  // So the tier ships as an optional peer, where a wrong entry is inert, and
+  // never reaches the review queue: promoting one to a real dependency needs
+  // evidence a consumer actually imports that path, which the finding does not
+  // carry.
+  if (finding.from_deep_path === true && finding.from_main !== true && finding.from_subpath !== true) return 'deep-path';
   return adapters.has(finding.package) ? 'adapter' : 'runtime';
 }
 
@@ -206,6 +228,7 @@ function makeRow(offender, finding, klass) {
  */
 const REASONS = {
   adapter: 'adapter class — the consumer picked and installed the backend',
+  'deep-path': 'deep-path class — reached only by seeding an unreferenced published file, so the import is speculative',
   types: 'types class — no runtime edge, only a declaration-file reference',
   guarded: 'guarded class — the package handles absence, so nothing may be installed for it',
 };

@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1501,
-      "packages": 888
+      "entries": 1492,
+      "packages": 903
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -20,22 +20,2276 @@
     }
   },
   "totals": {
-    "packages": 1040,
-    "entries": 1501,
+    "packages": 1055,
+    "entries": 1492,
     "byClass": {
-      "runtime": 258,
+      "runtime": 217,
       "adapter": 130,
       "types": 840,
-      "guarded": 273
+      "deep-path": 0,
+      "guarded": 305
     },
     "byField": {
       "dependency": 29,
-      "peer": 1472
+      "peer": 1463
     },
-    "candidatesForReview": 141,
-    "droppedUnpublishedTargets": 232,
-    "droppedUnresolvedTargets": 0
+    "candidatesForReview": 107,
+    "droppedUnpublishedTargets": 233,
+    "droppedUnresolvedTargets": 0,
+    "withheldDeepPath": 258
   },
+  "withheldDeepPath": [
+    {
+      "package": "@andersbakken/blessed",
+      "target": "pty.js",
+      "specifiers": [
+        "pty.js"
+      ]
+    },
+    {
+      "package": "@andersbakken/blessed",
+      "target": "term.js",
+      "specifiers": [
+        "term.js"
+      ]
+    },
+    {
+      "package": "@angular-eslint/schematics",
+      "target": "@nx/devkit",
+      "specifiers": [
+        "@nx/devkit",
+        "@nx/devkit/ngcli-adapter"
+      ]
+    },
+    {
+      "package": "@ardatan/relay-compiler",
+      "target": "@babel/types",
+      "specifiers": [
+        "@babel/types"
+      ]
+    },
+    {
+      "package": "@ardatan/relay-compiler",
+      "target": "yargs",
+      "specifiers": [
+        "yargs"
+      ]
+    },
+    {
+      "package": "@azure/core-http",
+      "target": "react-native",
+      "specifiers": [
+        "react-native"
+      ]
+    },
+    {
+      "package": "@azure/functions",
+      "target": "iconv-lite",
+      "specifiers": [
+        "iconv-lite"
+      ]
+    },
+    {
+      "package": "@azure/functions",
+      "target": "uuid",
+      "specifiers": [
+        "uuid"
+      ]
+    },
+    {
+      "package": "@capacitor/core",
+      "target": "cordova",
+      "specifiers": [
+        "cordova",
+        "cordova/init"
+      ]
+    },
+    {
+      "package": "@clickhouse/client",
+      "target": "@clickhouse/datatype-parser",
+      "specifiers": [
+        "@clickhouse/datatype-parser"
+      ]
+    },
+    {
+      "package": "@date-io/core",
+      "target": "rollup-plugin-node-resolve",
+      "specifiers": [
+        "rollup-plugin-node-resolve"
+      ]
+    },
+    {
+      "package": "@date-io/core",
+      "target": "rollup-plugin-typescript",
+      "specifiers": [
+        "rollup-plugin-typescript"
+      ]
+    },
+    {
+      "package": "@docusaurus/core",
+      "target": "@generated/client-modules",
+      "specifiers": [
+        "@generated/client-modules"
+      ]
+    },
+    {
+      "package": "@docusaurus/core",
+      "target": "@generated/routes",
+      "specifiers": [
+        "@generated/routes"
+      ]
+    },
+    {
+      "package": "@docusaurus/core",
+      "target": "@generated/routesChunkNames",
+      "specifiers": [
+        "@generated/routesChunkNames"
+      ]
+    },
+    {
+      "package": "@docusaurus/plugin-debug",
+      "target": "@docusaurus/Head",
+      "specifiers": [
+        "@docusaurus/Head"
+      ]
+    },
+    {
+      "package": "@docusaurus/plugin-debug",
+      "target": "@docusaurus/Link",
+      "specifiers": [
+        "@docusaurus/Link"
+      ]
+    },
+    {
+      "package": "@docusaurus/plugin-debug",
+      "target": "@docusaurus/useDocusaurusContext",
+      "specifiers": [
+        "@docusaurus/useDocusaurusContext"
+      ]
+    },
+    {
+      "package": "@docusaurus/plugin-debug",
+      "target": "@docusaurus/useGlobalData",
+      "specifiers": [
+        "@docusaurus/useGlobalData"
+      ]
+    },
+    {
+      "package": "@docusaurus/plugin-debug",
+      "target": "@generated/registry",
+      "specifiers": [
+        "@generated/registry"
+      ]
+    },
+    {
+      "package": "@docusaurus/plugin-debug",
+      "target": "@generated/routes",
+      "specifiers": [
+        "@generated/routes"
+      ]
+    },
+    {
+      "package": "@docusaurus/plugin-debug",
+      "target": "@theme/DebugJsonView",
+      "specifiers": [
+        "@theme/DebugJsonView"
+      ]
+    },
+    {
+      "package": "@docusaurus/plugin-debug",
+      "target": "@theme/DebugLayout",
+      "specifiers": [
+        "@theme/DebugLayout"
+      ]
+    },
+    {
+      "package": "@electron-forge/template-base",
+      "target": "electron",
+      "specifiers": [
+        "electron"
+      ]
+    },
+    {
+      "package": "@electron-forge/template-base",
+      "target": "electron-squirrel-startup",
+      "specifiers": [
+        "electron-squirrel-startup"
+      ]
+    },
+    {
+      "package": "@electron-forge/template-webpack-typescript",
+      "target": "electron",
+      "specifiers": [
+        "electron"
+      ]
+    },
+    {
+      "package": "@electron-forge/template-webpack-typescript",
+      "target": "electron-squirrel-startup",
+      "specifiers": [
+        "electron-squirrel-startup"
+      ]
+    },
+    {
+      "package": "@esbuild/android-arm",
+      "target": "performance",
+      "specifiers": [
+        "performance"
+      ]
+    },
+    {
+      "package": "@esbuild/android-x64",
+      "target": "performance",
+      "specifiers": [
+        "performance"
+      ]
+    },
+    {
+      "package": "@esbuild/openharmony-arm64",
+      "target": "performance",
+      "specifiers": [
+        "performance"
+      ]
+    },
+    {
+      "package": "@expo/vector-icons",
+      "target": "glob",
+      "specifiers": [
+        "glob"
+      ]
+    },
+    {
+      "package": "@expo/vector-icons",
+      "target": "svg2ttf",
+      "specifiers": [
+        "svg2ttf"
+      ]
+    },
+    {
+      "package": "@expo/vector-icons",
+      "target": "svgicons2svgfont",
+      "specifiers": [
+        "svgicons2svgfont",
+        "svgicons2svgfont/src/iconsdir"
+      ]
+    },
+    {
+      "package": "@expo/vector-icons",
+      "target": "xml2js",
+      "specifiers": [
+        "xml2js"
+      ]
+    },
+    {
+      "package": "@expo/vector-icons",
+      "target": "yargs",
+      "specifiers": [
+        "yargs"
+      ]
+    },
+    {
+      "package": "@fastify/rate-limit",
+      "target": "pino",
+      "specifiers": [
+        "pino"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "@babel/runtime-corejs3",
+      "specifiers": [
+        "@babel/runtime-corejs3/helpers/extends"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "classnames",
+      "specifiers": [
+        "classnames"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "css.escape",
+      "specifiers": [
+        "css.escape"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "deep-extend",
+      "specifiers": [
+        "deep-extend"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "dompurify",
+      "specifiers": [
+        "dompurify"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "immutable",
+      "specifiers": [
+        "immutable"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "js-file-download",
+      "specifiers": [
+        "js-file-download"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "js-yaml",
+      "specifiers": [
+        "js-yaml"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "lodash",
+      "specifiers": [
+        "lodash/merge",
+        "lodash/camelCase",
+        "lodash/upperFirst",
+        "lodash/memoize",
+        "lodash/find",
+        "lodash/some",
+        "lodash/eq",
+        "lodash/isFunction",
+        "lodash/omit",
+        "lodash/reduce",
+        "lodash/get",
+        "lodash/isPlainObject",
+        "lodash/isEmpty",
+        "lodash/constant",
+        "lodash/isString",
+        "lodash/debounce",
+        "lodash/set",
+        "lodash/fp/assocPath",
+        "lodash/identity",
+        "lodash/zipObject",
+        "lodash/toString",
+        "lodash/toLower",
+        "lodash/escapeRegExp",
+        "lodash/has",
+        "lodash/fp/set"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "prop-types",
+      "specifiers": [
+        "prop-types"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "randexp",
+      "specifiers": [
+        "randexp"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "randombytes",
+      "specifiers": [
+        "randombytes"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "react",
+      "specifiers": [
+        "react"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "react-copy-to-clipboard",
+      "specifiers": [
+        "react-copy-to-clipboard"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "react-debounce-input",
+      "specifiers": [
+        "react-debounce-input"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "react-dom",
+      "specifiers": [
+        "react-dom"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "react-immutable-proptypes",
+      "specifiers": [
+        "react-immutable-proptypes"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "react-immutable-pure-component",
+      "specifiers": [
+        "react-immutable-pure-component"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "react-redux",
+      "specifiers": [
+        "react-redux"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "react-syntax-highlighter",
+      "specifiers": [
+        "react-syntax-highlighter/dist/esm/light",
+        "react-syntax-highlighter/dist/esm/languages/hljs/javascript",
+        "react-syntax-highlighter/dist/esm/languages/hljs/json",
+        "react-syntax-highlighter/dist/esm/languages/hljs/xml",
+        "react-syntax-highlighter/dist/esm/languages/hljs/bash",
+        "react-syntax-highlighter/dist/esm/languages/hljs/yaml",
+        "react-syntax-highlighter/dist/esm/languages/hljs/http",
+        "react-syntax-highlighter/dist/esm/languages/hljs/powershell",
+        "react-syntax-highlighter/dist/esm/styles/hljs/agate",
+        "react-syntax-highlighter/dist/esm/styles/hljs/arta",
+        "react-syntax-highlighter/dist/esm/styles/hljs/monokai",
+        "react-syntax-highlighter/dist/esm/styles/hljs/nord",
+        "react-syntax-highlighter/dist/esm/styles/hljs/obsidian",
+        "react-syntax-highlighter/dist/esm/styles/hljs/tomorrow-night",
+        "react-syntax-highlighter/dist/esm/styles/hljs/idea"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "redux",
+      "specifiers": [
+        "redux"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "redux-immutable",
+      "specifiers": [
+        "redux-immutable"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "remarkable",
+      "specifiers": [
+        "remarkable",
+        "remarkable/linkify"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "reselect",
+      "specifiers": [
+        "reselect"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "serialize-error",
+      "specifiers": [
+        "serialize-error"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "sha.js",
+      "specifiers": [
+        "sha.js"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "swagger-client",
+      "specifiers": [
+        "swagger-client/es/resolver/strategies/generic",
+        "swagger-client/es/resolver/strategies/openapi-2",
+        "swagger-client/es/resolver/strategies/openapi-3-0",
+        "swagger-client/es/resolver/strategies/openapi-3-1-apidom",
+        "swagger-client/es/resolver",
+        "swagger-client/es/execute",
+        "swagger-client/es/http",
+        "swagger-client/es/subtree-resolver",
+        "swagger-client/es/helpers"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "url-parse",
+      "specifiers": [
+        "url-parse"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "xml",
+      "specifiers": [
+        "xml"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "xml-but-prettier",
+      "specifiers": [
+        "xml-but-prettier"
+      ]
+    },
+    {
+      "package": "@fastify/swagger-ui",
+      "target": "zenscroll",
+      "specifiers": [
+        "zenscroll"
+      ]
+    },
+    {
+      "package": "@formatjs/cli",
+      "target": "svelte",
+      "specifiers": [
+        "svelte/compiler"
+      ]
+    },
+    {
+      "package": "@jsonjoy.com/json-pointer",
+      "target": "@jsonjoy.com/codegen",
+      "specifiers": [
+        "@jsonjoy.com/codegen"
+      ]
+    },
+    {
+      "package": "@material-ui/core",
+      "target": "chai",
+      "specifiers": [
+        "chai"
+      ]
+    },
+    {
+      "package": "@material-ui/core",
+      "target": "enzyme",
+      "specifiers": [
+        "enzyme"
+      ]
+    },
+    {
+      "package": "@material-ui/core",
+      "target": "react-test-renderer",
+      "specifiers": [
+        "react-test-renderer"
+      ]
+    },
+    {
+      "package": "@microsoft/dynamicproto-js",
+      "target": "magic-string",
+      "specifiers": [
+        "magic-string"
+      ]
+    },
+    {
+      "package": "@microsoft/signalr",
+      "target": "@types/tough-cookie",
+      "specifiers": [
+        "@types/tough-cookie"
+      ]
+    },
+    {
+      "package": "@mrleebo/prisma-ast",
+      "target": "@chevrotain/types",
+      "specifiers": [
+        "@chevrotain/types"
+      ]
+    },
+    {
+      "package": "@nestjs/schematics",
+      "target": "@babel/register",
+      "specifiers": [
+        "@babel/register"
+      ]
+    },
+    {
+      "package": "@nestjs/schematics",
+      "target": "@nestjs/common",
+      "specifiers": [
+        "@nestjs/common"
+      ]
+    },
+    {
+      "package": "@nestjs/schematics",
+      "target": "@nestjs/core",
+      "specifiers": [
+        "@nestjs/core"
+      ]
+    },
+    {
+      "package": "@nestjs/schematics",
+      "target": "@nestjs/testing",
+      "specifiers": [
+        "@nestjs/testing"
+      ]
+    },
+    {
+      "package": "@nestjs/schematics",
+      "target": "vite-tsconfig-paths",
+      "specifiers": [
+        "vite-tsconfig-paths"
+      ]
+    },
+    {
+      "package": "@pm2/blessed",
+      "target": "pty.js",
+      "specifiers": [
+        "pty.js"
+      ]
+    },
+    {
+      "package": "@pm2/blessed",
+      "target": "term.js",
+      "specifiers": [
+        "term.js"
+      ]
+    },
+    {
+      "package": "@react-native/debugger-frontend",
+      "target": "lighthouse",
+      "specifiers": [
+        "lighthouse"
+      ]
+    },
+    {
+      "package": "@redocly/cli",
+      "target": "@redocly/client-generator",
+      "specifiers": [
+        "@redocly/client-generator",
+        "@redocly/client-generator/runtime-sources",
+        "@redocly/client-generator/contracts/typescript",
+        "@redocly/client-generator/printers/go",
+        "@redocly/client-generator/printers/typescript",
+        "@redocly/client-generator/printers/php",
+        "@redocly/client-generator/printers/python"
+      ]
+    },
+    {
+      "package": "@redocly/cli",
+      "target": "@redocly/openapi-core",
+      "specifiers": [
+        "@redocly/openapi-core"
+      ]
+    },
+    {
+      "package": "@shopify/react-native-skia",
+      "target": "jest-environment-node",
+      "specifiers": [
+        "jest-environment-node"
+      ]
+    },
+    {
+      "package": "@stoplight/yaml-ast-parser",
+      "target": "esprima",
+      "specifiers": [
+        "esprima"
+      ]
+    },
+    {
+      "package": "@svgr/cli",
+      "target": "prettier",
+      "specifiers": [
+        "prettier"
+      ]
+    },
+    {
+      "package": "@tensorflow/tfjs-core",
+      "target": "@tensorflow/tfjs-backend-cpu",
+      "specifiers": [
+        "@tensorflow/tfjs-backend-cpu"
+      ]
+    },
+    {
+      "package": "@tensorflow/tfjs-core",
+      "target": "jasmine",
+      "specifiers": [
+        "jasmine"
+      ]
+    },
+    {
+      "package": "@tensorflow/tfjs-core",
+      "target": "jasmine-core",
+      "specifiers": [
+        "jasmine-core/lib/jasmine-core/jasmine.js"
+      ]
+    },
+    {
+      "package": "@vercel/hydrogen",
+      "target": "web-streams-polyfill",
+      "specifiers": [
+        "web-streams-polyfill/ponyfill"
+      ]
+    },
+    {
+      "package": "@vercel/next",
+      "target": "next-server",
+      "specifiers": [
+        "next-server"
+      ]
+    },
+    {
+      "package": "@vercel/remix-builder",
+      "target": "@remix-run/dev",
+      "specifiers": [
+        "@remix-run/dev/server-build"
+      ]
+    },
+    {
+      "package": "@vercel/remix-builder",
+      "target": "@remix-run/node",
+      "specifiers": [
+        "@remix-run/node"
+      ]
+    },
+    {
+      "package": "@vercel/remix-builder",
+      "target": "@remix-run/react",
+      "specifiers": [
+        "@remix-run/react"
+      ]
+    },
+    {
+      "package": "@vercel/remix-builder",
+      "target": "@remix-run/server-runtime",
+      "specifiers": [
+        "@remix-run/server-runtime"
+      ]
+    },
+    {
+      "package": "@vercel/remix-builder",
+      "target": "@vercel/remix",
+      "specifiers": [
+        "@vercel/remix"
+      ]
+    },
+    {
+      "package": "@vercel/remix-builder",
+      "target": "react",
+      "specifiers": [
+        "react"
+      ]
+    },
+    {
+      "package": "@vercel/remix-builder",
+      "target": "react-dom",
+      "specifiers": [
+        "react-dom/client"
+      ]
+    },
+    {
+      "package": "@vercel/remix-builder",
+      "target": "react-router",
+      "specifiers": [
+        "react-router"
+      ]
+    },
+    {
+      "package": "@xterm/xterm",
+      "target": "browser",
+      "specifiers": [
+        "browser/LocalizableStrings",
+        "browser/Types",
+        "browser/TimeBasedDebouncer",
+        "browser/services/Services",
+        "browser/Clipboard",
+        "browser/OscLinkProvider",
+        "browser/Viewport",
+        "browser/decorations/BufferDecorationRenderer",
+        "browser/decorations/OverviewRulerRenderer",
+        "browser/input/CompositionHelper",
+        "browser/renderer/dom/DomRenderer",
+        "browser/renderer/shared/Types",
+        "browser/services/CharSizeService",
+        "browser/services/CharacterJoinerService",
+        "browser/services/CoreBrowserService",
+        "browser/services/LinkProviderService",
+        "browser/services/MouseService",
+        "browser/services/RenderService",
+        "browser/services/SelectionService",
+        "browser/services/ThemeService",
+        "browser/shared/Constants",
+        "browser/decorations/ColorZoneStore",
+        "browser/CoreBrowserTerminal",
+        "browser/renderer/dom/DomRendererRowFactory",
+        "browser/renderer/dom/WidthCache",
+        "browser/renderer/shared/Constants",
+        "browser/renderer/shared/RendererUtils",
+        "browser/renderer/shared/SelectionRenderModel",
+        "browser/input/Mouse",
+        "browser/RenderDebouncer",
+        "browser/input/MoveToCell",
+        "browser/selection/SelectionModel",
+        "browser/selection/Types",
+        "browser/ColorContrastCache"
+      ]
+    },
+    {
+      "package": "@xterm/xterm",
+      "target": "common",
+      "specifiers": [
+        "common/buffer/Types",
+        "common/services/Services",
+        "common/Types",
+        "common/MultiKeyMap",
+        "common/Color",
+        "common/CoreTerminal",
+        "common/Platform",
+        "common/buffer/BufferLine",
+        "common/data/EscapeSequences",
+        "common/input/Keyboard",
+        "common/input/XParseColor",
+        "common/services/DecorationService",
+        "common/buffer/CellData",
+        "common/public/AddonManager",
+        "common/public/BufferNamespaceApi",
+        "common/public/ParserApi",
+        "common/public/UnicodeApi",
+        "common/buffer/Constants",
+        "common/buffer/AttributeData",
+        "common/TaskQueue",
+        "common/buffer/BufferRange",
+        "common/services/ServiceRegistry",
+        "common/services/InstantiationService",
+        "common/services/LogService",
+        "common/services/BufferService",
+        "common/services/OptionsService",
+        "common/services/CoreService",
+        "common/services/CoreMouseService",
+        "common/services/UnicodeService",
+        "common/services/CharsetService",
+        "common/WindowsMode",
+        "common/parser/Types",
+        "common/InputHandler",
+        "common/input/WriteBuffer",
+        "common/services/OscLinkService",
+        "common/data/Charsets",
+        "common/parser/EscapeSequenceParser",
+        "common/input/TextDecoder",
+        "common/parser/OscParser",
+        "common/parser/DcsParser",
+        "common/CircularList",
+        "common/buffer/BufferReflow",
+        "common/buffer/Marker",
+        "common/buffer/Buffer",
+        "common/parser/Params",
+        "common/parser/Constants",
+        "common/public/BufferLineApiView",
+        "common/public/BufferApiView",
+        "common/buffer/BufferSet",
+        "common/Clone",
+        "common/SortedList",
+        "common/input/UnicodeV6"
+      ]
+    },
+    {
+      "package": "@xterm/xterm",
+      "target": "vs",
+      "specifiers": [
+        "vs/base/common/lifecycle",
+        "vs/base/browser/dom",
+        "vs/base/common/event",
+        "vs/base/browser/ui/scrollbar/scrollableElement",
+        "vs/base/common/scrollable",
+        "vs/base/browser/window",
+        "vs/base/browser/browser",
+        "vs/base/common/platform",
+        "vs/base/browser/canIUse",
+        "vs/base/browser/keyboardEvent",
+        "vs/base/browser/mouseEvent",
+        "vs/base/common/async",
+        "vs/base/common/errors",
+        "vs/base/common/keyCodes",
+        "vs/base/common/hash",
+        "vs/base/common/numbers",
+        "vs/base/common/keybindings",
+        "vs/base/browser/iframe",
+        "vs/base/common/arrays",
+        "vs/base/common/decorators",
+        "vs/base/common/linkedList",
+        "vs/base/browser/fastDomNode",
+        "vs/base/browser/globalPointerMoveMonitor",
+        "vs/base/browser/ui/scrollbar/scrollbarArrow",
+        "vs/base/browser/ui/scrollbar/scrollbarState",
+        "vs/base/browser/ui/scrollbar/scrollbarVisibilityController",
+        "vs/base/browser/ui/widget",
+        "vs/base/browser/ui/scrollbar/abstractScrollbar",
+        "vs/base/browser/ui/scrollbar/scrollableElementOptions",
+        "vs/base/browser/ui/scrollbar/horizontalScrollbar",
+        "vs/base/browser/ui/scrollbar/verticalScrollbar",
+        "vs/base/browser/touch",
+        "vs/base/common/cancellation",
+        "vs/base/common/sequence",
+        "vs/base/common/lazy",
+        "vs/base/common/functional",
+        "vs/base/common/observable",
+        "vs/base/common/stopwatch",
+        "vs/base/common/symbols",
+        "vs/base/common/strings",
+        "vs/base/common/collections",
+        "vs/base/common/iterator",
+        "vs/base/common/observableInternal/base",
+        "vs/base/common/observableInternal/derived",
+        "vs/base/common/observableInternal/autorun",
+        "vs/base/common/observableInternal/utils",
+        "vs/base/common/observableInternal/promise",
+        "vs/base/common/observableInternal/api",
+        "vs/base/common/observableInternal/logging",
+        "vs/base/common/equals",
+        "vs/base/common/observableInternal/debugName",
+        "vs/base/common/observableInternal/lazyObservableValue",
+        "vs/base/common/assert",
+        "vs/nls",
+        "vs/base/common/charCode",
+        "vs/base/common/uint"
+      ]
+    },
+    {
+      "package": "@zxcvbn-ts/core",
+      "target": "rollup",
+      "specifiers": [
+        "rollup"
+      ]
+    },
+    {
+      "package": "amazon-cognito-identity-js",
+      "target": "react-native",
+      "specifiers": [
+        "react-native"
+      ]
+    },
+    {
+      "package": "aws-crt",
+      "target": "ws",
+      "specifiers": [
+        "ws"
+      ]
+    },
+    {
+      "package": "babel-preset-fbjs",
+      "target": "@babel/types",
+      "specifiers": [
+        "@babel/types"
+      ]
+    },
+    {
+      "package": "binary",
+      "target": "bufferlist",
+      "specifiers": [
+        "bufferlist/binary",
+        "bufferlist"
+      ]
+    },
+    {
+      "package": "binary",
+      "target": "hashish",
+      "specifiers": [
+        "hashish"
+      ]
+    },
+    {
+      "package": "blessed",
+      "target": "pty.js",
+      "specifiers": [
+        "pty.js"
+      ]
+    },
+    {
+      "package": "blessed",
+      "target": "term.js",
+      "specifiers": [
+        "term.js"
+      ]
+    },
+    {
+      "package": "browser-sync-ui",
+      "target": "html-select",
+      "specifiers": [
+        "html-select"
+      ]
+    },
+    {
+      "package": "browser-sync-ui",
+      "target": "html-tokenize",
+      "specifiers": [
+        "html-tokenize"
+      ]
+    },
+    {
+      "package": "browser-sync-ui",
+      "target": "through2",
+      "specifiers": [
+        "through2"
+      ]
+    },
+    {
+      "package": "browser-sync-ui",
+      "target": "vinyl",
+      "specifiers": [
+        "vinyl"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "browser-sync",
+      "specifiers": [
+        "browser-sync"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "compression",
+      "specifiers": [
+        "compression"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "connect-gzip-static",
+      "specifiers": [
+        "connect-gzip-static"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "connect-history-api-fallback",
+      "specifiers": [
+        "connect-history-api-fallback"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "connect-logger",
+      "specifiers": [
+        "connect-logger"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "less",
+      "specifiers": [
+        "less"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "preact",
+      "specifiers": [
+        "preact"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "react",
+      "specifiers": [
+        "react"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "react-dom",
+      "specifiers": [
+        "react-dom"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "strip-ansi",
+      "specifiers": [
+        "strip-ansi"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "webpack",
+      "specifiers": [
+        "webpack"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "webpack-dev-middleware",
+      "specifiers": [
+        "webpack-dev-middleware"
+      ]
+    },
+    {
+      "package": "bs-recipes",
+      "target": "webpack-hot-middleware",
+      "specifiers": [
+        "webpack-hot-middleware"
+      ]
+    },
+    {
+      "package": "cosmiconfig",
+      "target": "path-type",
+      "specifiers": [
+        "path-type"
+      ]
+    },
+    {
+      "package": "create-next-app",
+      "target": "@/styles",
+      "specifiers": [
+        "@/styles/globals.css",
+        "@/styles/Home.module.css"
+      ]
+    },
+    {
+      "package": "create-next-app",
+      "target": "next",
+      "specifiers": [
+        "next/font/google",
+        "next/image",
+        "next/server",
+        "next/document",
+        "next/head"
+      ]
+    },
+    {
+      "package": "dd-trace",
+      "target": "@vitest/browser",
+      "specifiers": [
+        "@vitest/browser/context"
+      ]
+    },
+    {
+      "package": "dd-trace",
+      "target": "electron",
+      "specifiers": [
+        "electron"
+      ]
+    },
+    {
+      "package": "dd-trace",
+      "target": "vitest",
+      "specifiers": [
+        "vitest",
+        "vitest/browser"
+      ]
+    },
+    {
+      "package": "errno",
+      "target": "request",
+      "specifiers": [
+        "request"
+      ]
+    },
+    {
+      "package": "esbuild-wasm",
+      "target": "performance",
+      "specifiers": [
+        "performance"
+      ]
+    },
+    {
+      "package": "expo-glass-effect",
+      "target": "expo-modules-core",
+      "specifiers": [
+        "expo-modules-core"
+      ]
+    },
+    {
+      "package": "expo-image",
+      "target": "@react-native/assets-registry",
+      "specifiers": [
+        "@react-native/assets-registry/registry"
+      ]
+    },
+    {
+      "package": "expo-linear-gradient",
+      "target": "expo-modules-core",
+      "specifiers": [
+        "expo-modules-core"
+      ]
+    },
+    {
+      "package": "expo-video",
+      "target": "@react-native/assets-registry",
+      "specifiers": [
+        "@react-native/assets-registry/registry"
+      ]
+    },
+    {
+      "package": "fast-json-patch",
+      "target": "glob",
+      "specifiers": [
+        "glob"
+      ]
+    },
+    {
+      "package": "firebase-tools",
+      "target": "@modelcontextprotocol/ext-apps",
+      "specifiers": [
+        "@modelcontextprotocol/ext-apps"
+      ]
+    },
+    {
+      "package": "firebase-tools",
+      "target": "chalk",
+      "specifiers": [
+        "chalk"
+      ]
+    },
+    {
+      "package": "firebase-tools",
+      "target": "shelljs",
+      "specifiers": [
+        "shelljs"
+      ]
+    },
+    {
+      "package": "firebase-tools",
+      "target": "user-home",
+      "specifiers": [
+        "user-home"
+      ]
+    },
+    {
+      "package": "fluent-ffmpeg",
+      "target": "taffydb",
+      "specifiers": [
+        "taffydb"
+      ]
+    },
+    {
+      "package": "git-node-fs",
+      "target": "js-git",
+      "specifiers": [
+        "js-git/mixins/fs-db"
+      ]
+    },
+    {
+      "package": "hooker",
+      "target": "nodeunit",
+      "specifiers": [
+        "nodeunit"
+      ]
+    },
+    {
+      "package": "html-tokenize",
+      "target": "buffers",
+      "specifiers": [
+        "buffers"
+      ]
+    },
+    {
+      "package": "html-tokenize",
+      "target": "sax",
+      "specifiers": [
+        "sax"
+      ]
+    },
+    {
+      "package": "html-tokenize",
+      "target": "through",
+      "specifiers": [
+        "through"
+      ]
+    },
+    {
+      "package": "isolated-vm",
+      "target": "ws",
+      "specifiers": [
+        "ws"
+      ]
+    },
+    {
+      "package": "isomorphic-fetch",
+      "target": "fetch",
+      "specifiers": [
+        "fetch"
+      ]
+    },
+    {
+      "package": "jest-expo",
+      "target": "chalk",
+      "specifiers": [
+        "chalk"
+      ]
+    },
+    {
+      "package": "jest-expo",
+      "target": "expo-modules-core",
+      "specifiers": [
+        "expo-modules-core/src/polyfill/dangerous-internal"
+      ]
+    },
+    {
+      "package": "jest-expo",
+      "target": "jest-snapshot-prettier",
+      "specifiers": [
+        "jest-snapshot-prettier"
+      ]
+    },
+    {
+      "package": "jest-styled-components",
+      "target": "vitest",
+      "specifiers": [
+        "vitest"
+      ]
+    },
+    {
+      "package": "jscodeshift",
+      "target": "@astrojs/starlight",
+      "specifiers": [
+        "@astrojs/starlight/schema"
+      ]
+    },
+    {
+      "package": "jszip",
+      "target": "madge",
+      "specifiers": [
+        "madge"
+      ]
+    },
+    {
+      "package": "launchdarkly-eventsource",
+      "target": "body-parser",
+      "specifiers": [
+        "body-parser"
+      ]
+    },
+    {
+      "package": "lighthouse",
+      "target": "escape-string-regexp",
+      "specifiers": [
+        "escape-string-regexp"
+      ]
+    },
+    {
+      "package": "lockfile",
+      "target": "async",
+      "specifiers": [
+        "async"
+      ]
+    },
+    {
+      "package": "memfs",
+      "target": "@jsonjoy.com/fs-fsa-to-node",
+      "specifiers": [
+        "@jsonjoy.com/fs-fsa-to-node"
+      ]
+    },
+    {
+      "package": "mixpanel-browser",
+      "target": "@mixpanel/rrweb-snapshot",
+      "specifiers": [
+        "@mixpanel/rrweb-snapshot"
+      ]
+    },
+    {
+      "package": "mixpanel-browser",
+      "target": "@openfeature/web-sdk",
+      "specifiers": [
+        "@openfeature/web-sdk"
+      ]
+    },
+    {
+      "package": "mjml-core",
+      "target": "@biomejs/wasm-nodejs",
+      "specifiers": [
+        "@biomejs/wasm-nodejs"
+      ]
+    },
+    {
+      "package": "mssql",
+      "target": "msnodesqlv8",
+      "specifiers": [
+        "msnodesqlv8"
+      ]
+    },
+    {
+      "package": "muggle-string",
+      "target": "@jridgewell/sourcemap-codec",
+      "specifiers": [
+        "@jridgewell/sourcemap-codec"
+      ]
+    },
+    {
+      "package": "muggle-string",
+      "target": "vscode-languageserver-textdocument",
+      "specifiers": [
+        "vscode-languageserver-textdocument"
+      ]
+    },
+    {
+      "package": "multicodec",
+      "target": "ipfs-utils",
+      "specifiers": [
+        "ipfs-utils/src/http"
+      ]
+    },
+    {
+      "package": "nativewind",
+      "target": "@nativewind/jsx-runtime",
+      "specifiers": [
+        "@nativewind/jsx-runtime"
+      ]
+    },
+    {
+      "package": "nativewind",
+      "target": "postcss",
+      "specifiers": [
+        "postcss"
+      ]
+    },
+    {
+      "package": "nativewind",
+      "target": "react-native",
+      "specifiers": [
+        "react-native"
+      ]
+    },
+    {
+      "package": "natural",
+      "target": "xml2js",
+      "specifiers": [
+        "xml2js"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "@vercel/turbopack-ecmascript-runtime",
+      "specifiers": [
+        "@vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "MODULE",
+      "specifiers": [
+        "MODULE"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "VAR_MODULE_APP",
+      "specifiers": [
+        "VAR_MODULE_APP"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "VAR_MODULE_DOCUMENT",
+      "specifiers": [
+        "VAR_MODULE_DOCUMENT"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "VAR_MODULE_GLOBAL_ERROR",
+      "specifiers": [
+        "VAR_MODULE_GLOBAL_ERROR"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "VAR_USERLAND",
+      "specifiers": [
+        "VAR_USERLAND"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "acorn-loose",
+      "specifiers": [
+        "acorn-loose"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "msw",
+      "specifiers": [
+        "msw"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "neo-async",
+      "specifiers": [
+        "neo-async"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "server-only",
+      "specifiers": [
+        "server-only"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "strict-event-emitter",
+      "specifiers": [
+        "strict-event-emitter"
+      ]
+    },
+    {
+      "package": "next",
+      "target": "webpack",
+      "specifiers": [
+        "webpack",
+        "webpack/lib/dependencies/ModuleDependency",
+        "webpack/lib/dependencies/NullDependency",
+        "webpack/lib/Template",
+        "webpack/lib/javascript/BasicEvaluatedExpression",
+        "webpack/lib/optimize/ConcatenatedModule",
+        "webpack/lib/util/identifier",
+        "webpack/lib/ModuleFilenameHelpers",
+        "webpack/lib/node/NodeTargetPlugin",
+        "webpack/lib/RuntimeGlobals",
+        "webpack/lib/SourceMapDevToolModuleOptionsPlugin",
+        "webpack/lib/util/StringXor",
+        "webpack/lib/NormalModule"
+      ]
+    },
+    {
+      "package": "omggif",
+      "target": "plask",
+      "specifiers": [
+        "plask"
+      ]
+    },
+    {
+      "package": "pdf-lib",
+      "target": "src",
+      "specifiers": [
+        "src/api/Embeddable",
+        "src/api/errors",
+        "src/api/PDFEmbeddedPage",
+        "src/api/PDFFont",
+        "src/api/PDFImage",
+        "src/api/PDFPage",
+        "src/api/form/PDFForm",
+        "src/api/sizes",
+        "src/api/StandardFonts",
+        "src/core",
+        "src/api/PDFDocumentOptions",
+        "src/core/objects/PDFObject",
+        "src/core/objects/PDFRef",
+        "src/types/fontkit",
+        "src/types/matrix",
+        "src/utils",
+        "src/core/embedders/FileEmbedder",
+        "src/api/PDFEmbeddedFile",
+        "src/api/PDFJavaScript",
+        "src/core/embedders/JavaScriptEmbedder",
+        "src/api/PDFDocument",
+        "src/api//Embeddable",
+        "src/api/colors",
+        "src/api/operations",
+        "src/api/operators",
+        "src/api/PDFPageOptions",
+        "src/api/rotations",
+        "src/api/image/alignment",
+        "src/api/form/appearances",
+        "src/api/form/PDFField",
+        "src/api/form/PDFButton",
+        "src/api/form/PDFCheckBox",
+        "src/api/form/PDFDropdown",
+        "src/api/form/PDFOptionList",
+        "src/api/form/PDFRadioGroup",
+        "src/api/form/PDFSignature",
+        "src/api/form/PDFTextField",
+        "src/api/text/alignment",
+        "src/api/text/layout",
+        "src/api/form",
+        "src/api/text",
+        "src/api/image",
+        "src/api/objects",
+        "src/api/svgPath",
+        "src/core/document/PDFHeader",
+        "src/core/errors",
+        "src/core/objects/PDFArray",
+        "src/core/objects/PDFBool",
+        "src/core/objects/PDFDict",
+        "src/core/objects/PDFHexString",
+        "src/core/objects/PDFName",
+        "src/core/objects/PDFNull",
+        "src/core/objects/PDFNumber",
+        "src/core/objects/PDFRawStream",
+        "src/core/objects/PDFStream",
+        "src/core/objects/PDFString",
+        "src/core/operators/PDFOperator",
+        "src/core/operators/PDFOperatorNames",
+        "src/core/structures/PDFContentStream",
+        "src/utils/rng",
+        "src/core/PDFContext",
+        "src/core/structures/PDFPageLeaf",
+        "src/core/acroform/PDFAcroTerminal",
+        "src/core/acroform/PDFAcroButton",
+        "src/core/acroform/flags",
+        "src/core/acroform/PDFAcroChoice",
+        "src/core/acroform/PDFAcroField",
+        "src/core/acroform/PDFAcroNonTerminal",
+        "src/core/acroform/utils",
+        "src/core/annotation/PDFWidgetAnnotation",
+        "src/core/acroform/PDFAcroCheckBox",
+        "src/core/acroform/PDFAcroComboBox",
+        "src/core/acroform/PDFAcroForm",
+        "src/core/acroform/PDFAcroListBox",
+        "src/core/acroform/PDFAcroPushButton",
+        "src/core/acroform/PDFAcroRadioButton",
+        "src/core/acroform/PDFAcroSignature",
+        "src/core/acroform/PDFAcroText",
+        "src/core/annotation/BorderStyle",
+        "src/core/annotation/PDFAnnotation",
+        "src/core/annotation/AppearanceCharacteristics",
+        "src/core/annotation/flags",
+        "src/core/syntax/CharCodes",
+        "src/utils/unicode",
+        "src/core/embedders/CMap",
+        "src/core/embedders/FontFlags",
+        "src/core/embedders/CustomFontEmbedder",
+        "src/core/streams/decode",
+        "src/utils/png",
+        "src/core/PDFObjectCopier",
+        "src/core/writers/PDFWriter",
+        "src/core/writers/PDFStreamWriter",
+        "src/core/document/PDFTrailer",
+        "src/core/document/PDFTrailerDict",
+        "src/core/document/PDFCrossRefSection",
+        "src/core/embedders/StandardFontEmbedder",
+        "src/core/embedders/CustomFontSubsetEmbedder",
+        "src/core/embedders/JpegEmbedder",
+        "src/core/embedders/PngEmbedder",
+        "src/core/embedders/PDFPageEmbedder",
+        "src/core/interactive/ViewerPreferences",
+        "src/core/objects/PDFInvalidObject",
+        "src/core/structures/PDFCatalog",
+        "src/core/structures/PDFCrossRefStream",
+        "src/core/structures/PDFObjectStream",
+        "src/core/structures/PDFPageTree",
+        "src/core/structures/PDFFlateStream",
+        "src/core/parser/PDFObjectParser",
+        "src/core/parser/PDFObjectStreamParser",
+        "src/core/parser/PDFParser",
+        "src/core/parser/PDFXRefStreamParser",
+        "src/core/annotation",
+        "src/core/acroform",
+        "src/core/syntax/Irregular",
+        "src/utils/index",
+        "src/core/parser/ByteStream",
+        "src/core/syntax/Numeric",
+        "src/core/syntax/Whitespace",
+        "src/core/parser/BaseParser",
+        "src/core/syntax/Delimiters",
+        "src/core/syntax/Keywords",
+        "src/core/streams/DecodeStream",
+        "src/core/streams/Stream",
+        "src/core/streams/Ascii85Stream",
+        "src/core/streams/AsciiHexStream",
+        "src/core/streams/FlateStream",
+        "src/core/streams/LZWStream",
+        "src/core/streams/RunLengthStream",
+        "src/api/index",
+        "src/core/index",
+        "src/types/index",
+        "src/utils/base64",
+        "src/utils/strings",
+        "src/utils/arrays",
+        "src/utils/async",
+        "src/utils/numbers",
+        "src/utils/errors",
+        "src/utils/objects",
+        "src/utils/validators",
+        "src/utils/pdfDocEncoding",
+        "src/utils/Cache"
+      ]
+    },
+    {
+      "package": "pm2",
+      "target": "@opentelemetry/api",
+      "specifiers": [
+        "@opentelemetry/api"
+      ]
+    },
+    {
+      "package": "pm2",
+      "target": "@opentelemetry/core",
+      "specifiers": [
+        "@opentelemetry/core"
+      ]
+    },
+    {
+      "package": "pm2",
+      "target": "@opentelemetry/semantic-conventions",
+      "specifiers": [
+        "@opentelemetry/semantic-conventions"
+      ]
+    },
+    {
+      "package": "pm2",
+      "target": "@pm2/io",
+      "specifiers": [
+        "@pm2/io"
+      ]
+    },
+    {
+      "package": "protobufjs-cli",
+      "target": "catharsis",
+      "specifiers": [
+        "catharsis"
+      ]
+    },
+    {
+      "package": "pusher-js",
+      "target": "core",
+      "specifiers": [
+        "core/utils/url_store",
+        "core/timeline/timeline_sender",
+        "core/utils/collections",
+        "core/util",
+        "core/auth/auth_transports",
+        "core/auth/options",
+        "core/errors",
+        "core/transports/transport_manager",
+        "core/strategies/strategy",
+        "core/strategies/sequential_strategy",
+        "core/strategies/best_connected_ever_strategy",
+        "core/strategies/websocket_prioritized_cached_strategy",
+        "core/strategies/delayed_strategy",
+        "core/strategies/if_strategy",
+        "core/strategies/first_connected_strategy",
+        "core/config",
+        "core/strategies/strategy_options",
+        "core/http/http_request",
+        "core/http/http_socket",
+        "core/http/socket_hooks",
+        "core/http/request_hooks",
+        "core/http/http_streaming_socket",
+        "core/http/http_polling_socket",
+        "core/http/http_factory",
+        "core/http/ajax",
+        "core/transports/transports_table",
+        "core/logger",
+        "core/timeline/timeline_transport",
+        "core/transports/url_schemes",
+        "core/transports/url_scheme",
+        "core/transports/transport",
+        "core/transports/transport_hooks",
+        "core/events/dispatcher",
+        "core/reachability",
+        "core/defaults"
+      ]
+    },
+    {
+      "package": "pusher-js",
+      "target": "express",
+      "specifiers": [
+        "express"
+      ]
+    },
+    {
+      "package": "pusher-js",
+      "target": "isomorphic",
+      "specifiers": [
+        "isomorphic/transports/transports",
+        "isomorphic/runtime",
+        "isomorphic/auth/xhr_auth",
+        "isomorphic/timeline/xhr_timeline",
+        "isomorphic/http/http"
+      ]
+    },
+    {
+      "package": "pusher-js",
+      "target": "pusher",
+      "specifiers": [
+        "pusher"
+      ]
+    },
+    {
+      "package": "pusher-js",
+      "target": "runtime",
+      "specifiers": [
+        "runtime"
+      ]
+    },
+    {
+      "package": "pusher-js",
+      "target": "runtimes",
+      "specifiers": [
+        "runtimes/interface"
+      ]
+    },
+    {
+      "package": "query-selector-shadow-dom",
+      "target": "playwright",
+      "specifiers": [
+        "playwright"
+      ]
+    },
+    {
+      "package": "re2",
+      "target": "lit",
+      "specifiers": [
+        "lit",
+        "lit/decorators.js"
+      ]
+    },
+    {
+      "package": "react-devtools-core",
+      "target": "bufferutil",
+      "specifiers": [
+        "bufferutil"
+      ]
+    },
+    {
+      "package": "react-devtools-core",
+      "target": "utf-8-validate",
+      "specifiers": [
+        "utf-8-validate"
+      ]
+    },
+    {
+      "package": "react-devtools-inline",
+      "target": "react-dom",
+      "specifiers": [
+        "react-dom"
+      ]
+    },
+    {
+      "package": "react-devtools-inline",
+      "target": "react-is",
+      "specifiers": [
+        "react-is"
+      ]
+    },
+    {
+      "package": "react-native-svg",
+      "target": "@react-native/assets-registry",
+      "specifiers": [
+        "@react-native/assets-registry/registry"
+      ]
+    },
+    {
+      "package": "react-zoom-pan-pinch",
+      "target": "components",
+      "specifiers": [
+        "components"
+      ]
+    },
+    {
+      "package": "react-zoom-pan-pinch",
+      "target": "core",
+      "specifiers": [
+        "core/bounds/bounds.utils",
+        "core/pan/panning.utils",
+        "core/instance.core"
+      ]
+    },
+    {
+      "package": "react-zoom-pan-pinch",
+      "target": "hooks",
+      "specifiers": [
+        "hooks"
+      ]
+    },
+    {
+      "package": "react-zoom-pan-pinch",
+      "target": "models",
+      "specifiers": [
+        "models"
+      ]
+    },
+    {
+      "package": "react-zoom-pan-pinch",
+      "target": "utils",
+      "specifiers": [
+        "utils/ref.utils",
+        "utils/effect.utils",
+        "utils"
+      ]
+    },
+    {
+      "package": "recast",
+      "target": "acorn",
+      "specifiers": [
+        "acorn"
+      ]
+    },
+    {
+      "package": "redux-persist",
+      "target": "react",
+      "specifiers": [
+        "react"
+      ]
+    },
+    {
+      "package": "spacetrim",
+      "target": "@anthropic-ai/sdk",
+      "specifiers": [
+        "@anthropic-ai/sdk"
+      ]
+    },
+    {
+      "package": "spacetrim",
+      "target": "spaceTrim",
+      "specifiers": [
+        "spaceTrim"
+      ]
+    },
+    {
+      "package": "styled-components",
+      "target": "enzyme",
+      "specifiers": [
+        "enzyme"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "@babel/runtime-corejs3",
+      "specifiers": [
+        "@babel/runtime-corejs3/helpers/extends"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "base64-js",
+      "specifiers": [
+        "base64-js"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "classnames",
+      "specifiers": [
+        "classnames"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "css.escape",
+      "specifiers": [
+        "css.escape"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "deep-extend",
+      "specifiers": [
+        "deep-extend"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "dompurify",
+      "specifiers": [
+        "dompurify"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "ieee754",
+      "specifiers": [
+        "ieee754"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "immutable",
+      "specifiers": [
+        "immutable"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "js-file-download",
+      "specifiers": [
+        "js-file-download"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "js-yaml",
+      "specifiers": [
+        "js-yaml"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "lodash",
+      "specifiers": [
+        "lodash/merge",
+        "lodash/camelCase",
+        "lodash/upperFirst",
+        "lodash/memoize",
+        "lodash/find",
+        "lodash/some",
+        "lodash/eq",
+        "lodash/isFunction",
+        "lodash/omit",
+        "lodash/reduce",
+        "lodash/get",
+        "lodash/isPlainObject",
+        "lodash/isEmpty",
+        "lodash/constant",
+        "lodash/isString",
+        "lodash/debounce",
+        "lodash/set",
+        "lodash/fp/assocPath",
+        "lodash/identity",
+        "lodash/zipObject",
+        "lodash/toString",
+        "lodash/toLower",
+        "lodash/escapeRegExp",
+        "lodash/has",
+        "lodash/fp/set"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "prop-types",
+      "specifiers": [
+        "prop-types"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "randexp",
+      "specifiers": [
+        "randexp"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "randombytes",
+      "specifiers": [
+        "randombytes"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "react",
+      "specifiers": [
+        "react"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "react-copy-to-clipboard",
+      "specifiers": [
+        "react-copy-to-clipboard"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "react-debounce-input",
+      "specifiers": [
+        "react-debounce-input"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "react-dom",
+      "specifiers": [
+        "react-dom"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "react-immutable-proptypes",
+      "specifiers": [
+        "react-immutable-proptypes"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "react-immutable-pure-component",
+      "specifiers": [
+        "react-immutable-pure-component"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "react-redux",
+      "specifiers": [
+        "react-redux"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "react-syntax-highlighter",
+      "specifiers": [
+        "react-syntax-highlighter/dist/esm/light",
+        "react-syntax-highlighter/dist/esm/languages/hljs/javascript",
+        "react-syntax-highlighter/dist/esm/languages/hljs/json",
+        "react-syntax-highlighter/dist/esm/languages/hljs/xml",
+        "react-syntax-highlighter/dist/esm/languages/hljs/bash",
+        "react-syntax-highlighter/dist/esm/languages/hljs/yaml",
+        "react-syntax-highlighter/dist/esm/languages/hljs/http",
+        "react-syntax-highlighter/dist/esm/languages/hljs/powershell",
+        "react-syntax-highlighter/dist/esm/styles/hljs/agate",
+        "react-syntax-highlighter/dist/esm/styles/hljs/arta",
+        "react-syntax-highlighter/dist/esm/styles/hljs/monokai",
+        "react-syntax-highlighter/dist/esm/styles/hljs/nord",
+        "react-syntax-highlighter/dist/esm/styles/hljs/obsidian",
+        "react-syntax-highlighter/dist/esm/styles/hljs/tomorrow-night",
+        "react-syntax-highlighter/dist/esm/styles/hljs/idea"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "redux",
+      "specifiers": [
+        "redux"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "remarkable",
+      "specifiers": [
+        "remarkable",
+        "remarkable/linkify"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "reselect",
+      "specifiers": [
+        "reselect"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "serialize-error",
+      "specifiers": [
+        "serialize-error"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "sha.js",
+      "specifiers": [
+        "sha.js"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "swagger-client",
+      "specifiers": [
+        "swagger-client/es/resolver/strategies/generic",
+        "swagger-client/es/resolver/strategies/openapi-2",
+        "swagger-client/es/resolver/strategies/openapi-3-0",
+        "swagger-client/es/resolver/strategies/openapi-3-1-apidom",
+        "swagger-client/es/resolver",
+        "swagger-client/es/execute",
+        "swagger-client/es/http",
+        "swagger-client/es/subtree-resolver",
+        "swagger-client/es/helpers"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "to-buffer",
+      "specifiers": [
+        "to-buffer"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "url-parse",
+      "specifiers": [
+        "url-parse"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "xml",
+      "specifiers": [
+        "xml"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "xml-but-prettier",
+      "specifiers": [
+        "xml-but-prettier"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "zenscroll",
+      "specifiers": [
+        "zenscroll"
+      ]
+    },
+    {
+      "package": "tedious",
+      "target": "lru-cache",
+      "specifiers": [
+        "lru-cache"
+      ]
+    },
+    {
+      "package": "tmp-promise",
+      "target": "bluebird",
+      "specifiers": [
+        "bluebird"
+      ]
+    },
+    {
+      "package": "troika-three-text",
+      "target": "@rollup/plugin-commonjs",
+      "specifiers": [
+        "@rollup/plugin-commonjs"
+      ]
+    },
+    {
+      "package": "troika-three-text",
+      "target": "rollup-plugin-buble",
+      "specifiers": [
+        "rollup-plugin-buble"
+      ]
+    },
+    {
+      "package": "troika-three-text",
+      "target": "rollup-plugin-node-resolve",
+      "specifiers": [
+        "rollup-plugin-node-resolve"
+      ]
+    },
+    {
+      "package": "troika-three-text",
+      "target": "rollup-plugin-terser",
+      "specifiers": [
+        "rollup-plugin-terser"
+      ]
+    },
+    {
+      "package": "walk",
+      "target": "futures",
+      "specifiers": [
+        "futures/forEachAsync"
+      ]
+    },
+    {
+      "package": "yaml-ast-parser",
+      "target": "esprima",
+      "specifiers": [
+        "esprima"
+      ]
+    }
+  ],
   "yarnKeys": [
     "@ant-design/react-slick@<=0.28.3",
     "@apollographql/apollo-tools@<=0.5.2",
@@ -224,6 +2478,26 @@
       },
       "peerDependenciesMeta": {
         "@amplitude/rrweb-types": {
+          "optional": true
+        }
+      }
+    },
+    "@andersbakken/blessed@*": {
+      "peerDependencies": {
+        "blessed": "*"
+      },
+      "peerDependenciesMeta": {
+        "blessed": {
+          "optional": true
+        }
+      }
+    },
+    "@angular-devkit/build-angular@*": {
+      "peerDependencies": {
+        "zone.js": "*"
+      },
+      "peerDependenciesMeta": {
+        "zone.js": {
           "optional": true
         }
       }
@@ -596,6 +2870,16 @@
       },
       "peerDependenciesMeta": {
         "@codemirror/autocomplete": {
+          "optional": true
+        }
+      }
+    },
+    "@dabh/diagnostics@*": {
+      "peerDependencies": {
+        "debug": "*"
+      },
+      "peerDependenciesMeta": {
+        "debug": {
           "optional": true
         }
       }
@@ -1204,6 +3488,20 @@
         }
       }
     },
+    "@google/gemini-cli@*": {
+      "peerDependencies": {
+        "bufferutil": "*",
+        "utf-8-validate": "*"
+      },
+      "peerDependenciesMeta": {
+        "bufferutil": {
+          "optional": true
+        },
+        "utf-8-validate": {
+          "optional": true
+        }
+      }
+    },
     "@gorhom/bottom-sheet@*": {
       "peerDependencies": {
         "@shopify/flash-list": "*"
@@ -1562,6 +3860,20 @@
         }
       }
     },
+    "@mapbox/node-pre-gyp@*": {
+      "peerDependencies": {
+        "node-gyp": "*",
+        "npm": "*"
+      },
+      "peerDependenciesMeta": {
+        "node-gyp": {
+          "optional": true
+        },
+        "npm": {
+          "optional": true
+        }
+      }
+    },
     "@mapbox/vector-tile@*": {
       "peerDependencies": {
         "geojson": "*"
@@ -1882,9 +4194,13 @@
     },
     "@newrelic/security-agent@*": {
       "peerDependencies": {
+        "@aws-sdk/client-lambda": "*",
         "@grpc/grpc-js": "*"
       },
       "peerDependenciesMeta": {
+        "@aws-sdk/client-lambda": {
+          "optional": true
+        },
         "@grpc/grpc-js": {
           "optional": true
         }
@@ -1926,6 +4242,16 @@
       },
       "peerDependenciesMeta": {
         "lodash": {
+          "optional": true
+        }
+      }
+    },
+    "@npmcli/config@*": {
+      "peerDependencies": {
+        "node-gyp": "*"
+      },
+      "peerDependenciesMeta": {
+        "node-gyp": {
           "optional": true
         }
       }
@@ -2888,6 +5214,16 @@
         }
       }
     },
+    "@pm2/blessed@*": {
+      "peerDependencies": {
+        "blessed": "*"
+      },
+      "peerDependenciesMeta": {
+        "blessed": {
+          "optional": true
+        }
+      }
+    },
     "@pnpm/npm-conf@*": {
       "peerDependencies": {
         "npm": "*"
@@ -2994,6 +5330,16 @@
           "optional": true
         },
         "papaparse": {
+          "optional": true
+        }
+      }
+    },
+    "@pulumi/pulumi@*": {
+      "peerDependencies": {
+        "@microsoft/typescript-etw": "*"
+      },
+      "peerDependenciesMeta": {
+        "@microsoft/typescript-etw": {
           "optional": true
         }
       }
@@ -3150,6 +5496,20 @@
           "optional": true
         },
         "react-native": {
+          "optional": true
+        }
+      }
+    },
+    "@react-native/debugger-frontend@*": {
+      "peerDependencies": {
+        "debug": "*",
+        "puppeteer": "*"
+      },
+      "peerDependenciesMeta": {
+        "debug": {
+          "optional": true
+        },
+        "puppeteer": {
           "optional": true
         }
       }
@@ -3468,14 +5828,19 @@
     },
     "@sentry/react-native@*": {
       "peerDependencies": {
+        "@expo/config": "*",
         "@expo/env": "*",
         "@react-navigation/native": "*",
         "dotenv": "*",
         "expo-router": "*",
         "expo-updates": "*",
+        "open": "*",
         "promise": "*"
       },
       "peerDependenciesMeta": {
+        "@expo/config": {
+          "optional": true
+        },
         "@expo/env": {
           "optional": true
         },
@@ -3491,6 +5856,9 @@
         "expo-updates": {
           "optional": true
         },
+        "open": {
+          "optional": true
+        },
         "promise": {
           "optional": true
         }
@@ -3502,6 +5870,24 @@
       },
       "peerDependenciesMeta": {
         "@opentelemetry/sdk-trace-base": {
+          "optional": true
+        }
+      }
+    },
+    "@serverless/dashboard-plugin@*": {
+      "peerDependencies": {
+        "bufferutil": "*",
+        "original-fs": "*",
+        "utf-8-validate": "*"
+      },
+      "peerDependenciesMeta": {
+        "bufferutil": {
+          "optional": true
+        },
+        "original-fs": {
+          "optional": true
+        },
+        "utf-8-validate": {
           "optional": true
         }
       }
@@ -4238,6 +6624,16 @@
       },
       "peerDependenciesMeta": {
         "source-map-support": {
+          "optional": true
+        }
+      }
+    },
+    "@turbo/gen@*": {
+      "peerDependencies": {
+        "kerberos": "*"
+      },
+      "peerDependenciesMeta": {
+        "kerberos": {
           "optional": true
         }
       }
@@ -6414,6 +8810,16 @@
         }
       }
     },
+    "@videojs/http-streaming@*": {
+      "peerDependencies": {
+        "@xmldom/xmldom": "*"
+      },
+      "peerDependenciesMeta": {
+        "@xmldom/xmldom": {
+          "optional": true
+        }
+      }
+    },
     "@vimeo/player@*": {
       "peerDependencies": {
         "timing-object": "*"
@@ -7310,9 +9716,13 @@
     },
     "dd-trace@*": {
       "peerDependencies": {
+        "@vitest/runner": "*",
         "typescript": "*"
       },
       "peerDependenciesMeta": {
+        "@vitest/runner": {
+          "optional": true
+        },
         "typescript": {
           "optional": true
         }
@@ -7929,10 +10339,14 @@
     },
     "expo-router@*": {
       "peerDependencies": {
-        "expo-modules-core": "*"
+        "expo-modules-core": "*",
+        "react-native-tab-view": "*"
       },
       "peerDependenciesMeta": {
         "expo-modules-core": {
+          "optional": true
+        },
+        "react-native-tab-view": {
           "optional": true
         }
       }
@@ -8497,9 +10911,13 @@
     },
     "jest-expo@*": {
       "peerDependencies": {
+        "babel-preset-expo": "*",
         "jest": "*"
       },
       "peerDependenciesMeta": {
+        "babel-preset-expo": {
+          "optional": true
+        },
         "jest": {
           "optional": true
         }
@@ -8763,32 +11181,12 @@
         }
       }
     },
-    "livereload-js@*": {
-      "peerDependencies": {
-        "core-js": "*"
-      },
-      "peerDependenciesMeta": {
-        "core-js": {
-          "optional": true
-        }
-      }
-    },
     "loglevel-plugin-prefix@*": {
       "peerDependencies": {
         "loglevel": "*"
       },
       "peerDependenciesMeta": {
         "loglevel": {
-          "optional": true
-        }
-      }
-    },
-    "lolex@*": {
-      "peerDependencies": {
-        "type-detect": "*"
-      },
-      "peerDependenciesMeta": {
-        "type-detect": {
           "optional": true
         }
       }
@@ -9205,10 +11603,14 @@
     },
     "nativewind@*": {
       "peerDependencies": {
-        "react": "*"
+        "react": "*",
+        "typescript": "*"
       },
       "peerDependenciesMeta": {
         "react": {
+          "optional": true
+        },
+        "typescript": {
           "optional": true
         }
       }
@@ -9237,6 +11639,8 @@
       "peerDependencies": {
         "critters": "*",
         "next-rspack": "*",
+        "private-next-instrumentation-client": "*",
+        "react-server-dom-turbopack": "*",
         "react-server-dom-webpack": "*"
       },
       "peerDependenciesMeta": {
@@ -9244,6 +11648,12 @@
           "optional": true
         },
         "next-rspack": {
+          "optional": true
+        },
+        "private-next-instrumentation-client": {
+          "optional": true
+        },
+        "react-server-dom-turbopack": {
           "optional": true
         },
         "react-server-dom-webpack": {
@@ -9267,20 +11677,6 @@
       },
       "peerDependenciesMeta": {
         "@angular/compiler": {
-          "optional": true
-        }
-      }
-    },
-    "nise@*": {
-      "peerDependencies": {
-        "inherits": "*",
-        "type-detect": "*"
-      },
-      "peerDependenciesMeta": {
-        "inherits": {
-          "optional": true
-        },
-        "type-detect": {
           "optional": true
         }
       }
@@ -9417,6 +11813,24 @@
         }
       }
     },
+    "node-pre-gyp@*": {
+      "peerDependencies": {
+        "node-gyp": "*",
+        "npm": "*",
+        "request": "*"
+      },
+      "peerDependenciesMeta": {
+        "node-gyp": {
+          "optional": true
+        },
+        "npm": {
+          "optional": true
+        },
+        "request": {
+          "optional": true
+        }
+      }
+    },
     "node-readfiles@*": {
       "peerDependencies": {
         "src": "*"
@@ -9506,14 +11920,20 @@
     },
     "openapi-sampler@*": {
       "peerDependencies": {
-        "foreach": "*",
         "json-schema": "*"
       },
       "peerDependenciesMeta": {
-        "foreach": {
-          "optional": true
-        },
         "json-schema": {
+          "optional": true
+        }
+      }
+    },
+    "openclaw@*": {
+      "peerDependencies": {
+        "esbuild": "*"
+      },
+      "peerDependenciesMeta": {
+        "esbuild": {
           "optional": true
         }
       }
@@ -9644,10 +12064,18 @@
     },
     "pm2@*": {
       "peerDependencies": {
-        "@opentelemetry/sdk-node": "*"
+        "@opentelemetry/auto-instrumentations-node": "*",
+        "@opentelemetry/sdk-node": "*",
+        "ts-node": "*"
       },
       "peerDependenciesMeta": {
+        "@opentelemetry/auto-instrumentations-node": {
+          "optional": true
+        },
         "@opentelemetry/sdk-node": {
+          "optional": true
+        },
+        "ts-node": {
           "optional": true
         }
       }
@@ -10040,6 +12468,16 @@
         }
       }
     },
+    "react-native-worklets@*": {
+      "peerDependencies": {
+        "@babel/plugin-transform-react-jsx": "*"
+      },
+      "peerDependenciesMeta": {
+        "@babel/plugin-transform-react-jsx": {
+          "optional": true
+        }
+      }
+    },
     "react-phone-number-input@*": {
       "peerDependencies": {
         "react-hook-form": "*",
@@ -10074,6 +12512,16 @@
         }
       }
     },
+    "recast@*": {
+      "peerDependencies": {
+        "babylon": "*"
+      },
+      "peerDependenciesMeta": {
+        "babylon": {
+          "optional": true
+        }
+      }
+    },
     "redlock@*": {
       "peerDependencies": {
         "ioredis": "*"
@@ -10088,6 +12536,7 @@
       "peerDependencies": {
         "call-me-maybe": "*",
         "fast-safe-stringify": "*",
+        "null": "*",
         "yaml": "*"
       },
       "peerDependenciesMeta": {
@@ -10095,6 +12544,9 @@
           "optional": true
         },
         "fast-safe-stringify": {
+          "optional": true
+        },
+        "null": {
           "optional": true
         },
         "yaml": {
@@ -10314,48 +12766,6 @@
         }
       }
     },
-    "requirejs@*": {
-      "peerDependencies": {
-        "env": "*",
-        "lang": "*",
-        "logger": "*",
-        "optimize": "*",
-        "parse": "*",
-        "pragma": "*",
-        "prim": "*",
-        "source-map": "*",
-        "transform": "*"
-      },
-      "peerDependenciesMeta": {
-        "env": {
-          "optional": true
-        },
-        "lang": {
-          "optional": true
-        },
-        "logger": {
-          "optional": true
-        },
-        "optimize": {
-          "optional": true
-        },
-        "parse": {
-          "optional": true
-        },
-        "pragma": {
-          "optional": true
-        },
-        "prim": {
-          "optional": true
-        },
-        "source-map": {
-          "optional": true
-        },
-        "transform": {
-          "optional": true
-        }
-      }
-    },
     "resend@*": {
       "peerDependencies": {
         "react": "*"
@@ -10436,6 +12846,30 @@
         }
       }
     },
+    "rss-parser@*": {
+      "peerDependencies": {
+        "xmlbuilder": "*"
+      },
+      "peerDependenciesMeta": {
+        "xmlbuilder": {
+          "optional": true
+        }
+      }
+    },
+    "rx@*": {
+      "peerDependencies": {
+        "rx-lite": "*",
+        "rx-lite-compat": "*"
+      },
+      "peerDependenciesMeta": {
+        "rx-lite": {
+          "optional": true
+        },
+        "rx-lite-compat": {
+          "optional": true
+        }
+      }
+    },
     "sass-embedded@*": {
       "peerDependencies": {
         "sass": "*",
@@ -10510,6 +12944,16 @@
       },
       "peerDependenciesMeta": {
         "@napi-rs/snappy-wasm32-wasi": {
+          "optional": true
+        }
+      }
+    },
+    "stacktrace-gps@*": {
+      "peerDependencies": {
+        "vertx": "*"
+      },
+      "peerDependenciesMeta": {
+        "vertx": {
           "optional": true
         }
       }
@@ -10661,152 +13105,6 @@
           "optional": true
         },
         "osx-temperature-sensor": {
-          "optional": true
-        }
-      }
-    },
-    "tldjs@*": {
-      "peerDependencies": {
-        "available-typed-arrays": "*",
-        "call-bind": "*",
-        "call-bind-apply-helpers": "*",
-        "call-bound": "*",
-        "define-data-property": "*",
-        "dunder-proto": "*",
-        "es-define-property": "*",
-        "es-errors": "*",
-        "es-object-atoms": "*",
-        "for-each": "*",
-        "function-bind": "*",
-        "get-intrinsic": "*",
-        "get-proto": "*",
-        "gopd": "*",
-        "has-property-descriptors": "*",
-        "has-symbols": "*",
-        "has-tostringtag": "*",
-        "hasown": "*",
-        "inherits": "*",
-        "is-arguments": "*",
-        "is-callable": "*",
-        "is-generator-function": "*",
-        "is-regex": "*",
-        "is-typed-array": "*",
-        "math-intrinsics": "*",
-        "object-inspect": "*",
-        "possible-typed-array-names": "*",
-        "qs": "*",
-        "safe-regex-test": "*",
-        "set-function-length": "*",
-        "side-channel": "*",
-        "side-channel-list": "*",
-        "side-channel-map": "*",
-        "side-channel-weakmap": "*",
-        "which-typed-array": "*"
-      },
-      "peerDependenciesMeta": {
-        "available-typed-arrays": {
-          "optional": true
-        },
-        "call-bind": {
-          "optional": true
-        },
-        "call-bind-apply-helpers": {
-          "optional": true
-        },
-        "call-bound": {
-          "optional": true
-        },
-        "define-data-property": {
-          "optional": true
-        },
-        "dunder-proto": {
-          "optional": true
-        },
-        "es-define-property": {
-          "optional": true
-        },
-        "es-errors": {
-          "optional": true
-        },
-        "es-object-atoms": {
-          "optional": true
-        },
-        "for-each": {
-          "optional": true
-        },
-        "function-bind": {
-          "optional": true
-        },
-        "get-intrinsic": {
-          "optional": true
-        },
-        "get-proto": {
-          "optional": true
-        },
-        "gopd": {
-          "optional": true
-        },
-        "has-property-descriptors": {
-          "optional": true
-        },
-        "has-symbols": {
-          "optional": true
-        },
-        "has-tostringtag": {
-          "optional": true
-        },
-        "hasown": {
-          "optional": true
-        },
-        "inherits": {
-          "optional": true
-        },
-        "is-arguments": {
-          "optional": true
-        },
-        "is-callable": {
-          "optional": true
-        },
-        "is-generator-function": {
-          "optional": true
-        },
-        "is-regex": {
-          "optional": true
-        },
-        "is-typed-array": {
-          "optional": true
-        },
-        "math-intrinsics": {
-          "optional": true
-        },
-        "object-inspect": {
-          "optional": true
-        },
-        "possible-typed-array-names": {
-          "optional": true
-        },
-        "qs": {
-          "optional": true
-        },
-        "safe-regex-test": {
-          "optional": true
-        },
-        "set-function-length": {
-          "optional": true
-        },
-        "side-channel": {
-          "optional": true
-        },
-        "side-channel-list": {
-          "optional": true
-        },
-        "side-channel-map": {
-          "optional": true
-        },
-        "side-channel-weakmap": {
-          "optional": true
-        },
-        "which-typed-array": {
           "optional": true
         }
       }
@@ -11027,6 +13325,16 @@
           "optional": true
         },
         "readable-stream": {
+          "optional": true
+        }
+      }
+    },
+    "urijs@*": {
+      "peerDependencies": {
+        "jquery": "*"
+      },
+      "peerDependenciesMeta": {
+        "jquery": {
           "optional": true
         }
       }
@@ -12637,6 +14945,39 @@
       ]
     },
     {
+      "package": "@andersbakken/blessed",
+      "measuredVersion": "0.1.82",
+      "targets": [
+        {
+          "target": "blessed",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "blessed/lib/colors"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "@angular-devkit/build-angular",
+      "measuredVersion": "22.1.7",
+      "targets": [
+        {
+          "target": "zone.js",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "zone.js",
+            "zone.js/node"
+          ]
+        }
+      ]
+    },
+    {
       "package": "@angular-eslint/bundled-angular-compiler",
       "measuredVersion": "22.2.0",
       "targets": [
@@ -13301,6 +15642,22 @@
           "reason": "types class — no runtime edge, only a declaration-file reference",
           "specifiers": [
             "@codemirror/autocomplete"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "@dabh/diagnostics",
+      "measuredVersion": "2.0.8",
+      "targets": [
+        {
+          "target": "debug",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "debug"
           ]
         }
       ]
@@ -14364,6 +16721,32 @@
       ]
     },
     {
+      "package": "@google/gemini-cli",
+      "measuredVersion": "0.58.0",
+      "targets": [
+        {
+          "target": "bufferutil",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "bufferutil"
+          ]
+        },
+        {
+          "target": "utf-8-validate",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "utf-8-validate"
+          ]
+        }
+      ]
+    },
+    {
       "package": "@gorhom/bottom-sheet",
       "measuredVersion": "5.2.14",
       "targets": [
@@ -15013,6 +17396,32 @@
       ]
     },
     {
+      "package": "@mapbox/node-pre-gyp",
+      "measuredVersion": "2.0.3",
+      "targets": [
+        {
+          "target": "node-gyp",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "node-gyp"
+          ]
+        },
+        {
+          "target": "npm",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "npm"
+          ]
+        }
+      ]
+    },
+    {
       "package": "@mapbox/vector-tile",
       "measuredVersion": "3.0.0",
       "targets": [
@@ -15571,6 +17980,16 @@
       "measuredVersion": "3.0.4",
       "targets": [
         {
+          "target": "@aws-sdk/client-lambda",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "@aws-sdk/client-lambda"
+          ]
+        },
+        {
           "target": "@grpc/grpc-js",
           "class": "runtime",
           "field": "peer",
@@ -15642,6 +18061,22 @@
           "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
             "lodash/uniqueId.js"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "@npmcli/config",
+      "measuredVersion": "11.0.1",
+      "targets": [
+        {
+          "target": "node-gyp",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "node-gyp/bin/node-gyp.js"
           ]
         }
       ]
@@ -17689,17 +20124,34 @@
       ]
     },
     {
-      "package": "@pnpm/npm-conf",
-      "measuredVersion": "3.0.3",
+      "package": "@pm2/blessed",
+      "measuredVersion": "0.1.81",
       "targets": [
         {
-          "target": "npm",
+          "target": "blessed",
           "class": "guarded",
           "field": "peer",
           "candidate": false,
           "reason": "guarded class — the package handles absence, so nothing may be installed for it",
           "specifiers": [
-            "npm"
+            "blessed/lib/colors"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "@pnpm/npm-conf",
+      "measuredVersion": "3.0.3",
+      "targets": [
+        {
+          "target": "npm",
+          "class": "runtime",
+          "field": "peer",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "specifiers": [
+            "npm",
+            "npm/lib/config/defaults"
           ]
         }
       ]
@@ -17902,6 +20354,22 @@
       ]
     },
     {
+      "package": "@pulumi/pulumi",
+      "measuredVersion": "3.261.0",
+      "targets": [
+        {
+          "target": "@microsoft/typescript-etw",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "@microsoft/typescript-etw"
+          ]
+        }
+      ]
+    },
+    {
       "package": "@react-email/tailwind",
       "measuredVersion": "2.0.7",
       "targets": [
@@ -18091,6 +20559,7 @@
           "reason": "target is a framework or tool a consumer installs itself",
           "specifiers": [
             "@babel/runtime/helpers/interopRequireDefault",
+            "@babel/runtime/helpers/toConsumableArray",
             "@babel/runtime/helpers/slicedToArray",
             "@babel/runtime/helpers/objectWithoutProperties"
           ]
@@ -18187,6 +20656,32 @@
           "reason": "target is a framework or tool a consumer installs itself",
           "specifiers": [
             "react-native/setup-env"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "@react-native/debugger-frontend",
+      "measuredVersion": "0.87.1",
+      "targets": [
+        {
+          "target": "debug",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "debug"
+          ]
+        },
+        {
+          "target": "puppeteer",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "puppeteer"
           ]
         }
       ]
@@ -18744,6 +21239,16 @@
       "measuredVersion": "8.25.0",
       "targets": [
         {
+          "target": "@expo/config",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "@expo/config"
+          ]
+        },
+        {
           "target": "@expo/env",
           "class": "guarded",
           "field": "peer",
@@ -18794,6 +21299,16 @@
           ]
         },
         {
+          "target": "open",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "open"
+          ]
+        },
+        {
           "target": "promise",
           "class": "runtime",
           "field": "peer",
@@ -18820,6 +21335,42 @@
           "reason": "types class — no runtime edge, only a declaration-file reference",
           "specifiers": [
             "@opentelemetry/sdk-trace-base"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "@serverless/dashboard-plugin",
+      "measuredVersion": "7.2.3",
+      "targets": [
+        {
+          "target": "bufferutil",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "bufferutil"
+          ]
+        },
+        {
+          "target": "original-fs",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "original-fs"
+          ]
+        },
+        {
+          "target": "utf-8-validate",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "utf-8-validate"
           ]
         }
       ]
@@ -20165,6 +22716,22 @@
           "reason": "guarded class — the package handles absence, so nothing may be installed for it",
           "specifiers": [
             "source-map-support"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "@turbo/gen",
+      "measuredVersion": "2.10.12",
+      "targets": [
+        {
+          "target": "kerberos",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "kerberos"
           ]
         }
       ]
@@ -24102,6 +26669,22 @@
       ]
     },
     {
+      "package": "@videojs/http-streaming",
+      "measuredVersion": "3.17.5",
+      "targets": [
+        {
+          "target": "@xmldom/xmldom",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "@xmldom/xmldom"
+          ]
+        }
+      ]
+    },
+    {
       "package": "@vimeo/player",
       "measuredVersion": "2.30.4",
       "targets": [
@@ -25918,6 +28501,16 @@
       "measuredVersion": "6.14.0",
       "targets": [
         {
+          "target": "@vitest/runner",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "@vitest/runner"
+          ]
+        },
+        {
           "target": "typescript",
           "class": "guarded",
           "field": "peer",
@@ -27089,6 +29682,16 @@
           "specifiers": [
             "expo-modules-core"
           ]
+        },
+        {
+          "target": "react-native-tab-view",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "react-native-tab-view"
+          ]
         }
       ]
     },
@@ -27321,7 +29924,13 @@
           "candidate": true,
           "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
-            "firebase-functions"
+            "firebase-functions",
+            "firebase-functions/v1",
+            "firebase-functions/dataconnect/graphql",
+            "firebase-functions/https",
+            "firebase-functions/logger",
+            "firebase-functions/v2/options",
+            "firebase-functions/params"
           ]
         }
       ]
@@ -28052,6 +30661,16 @@
       "measuredVersion": "57.0.5",
       "targets": [
         {
+          "target": "babel-preset-expo",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "babel-preset-expo"
+          ]
+        },
+        {
           "target": "jest",
           "class": "runtime",
           "field": "peer",
@@ -28528,40 +31147,6 @@
       ]
     },
     {
-      "package": "livereload-js",
-      "measuredVersion": "4.0.2",
-      "targets": [
-        {
-          "target": "core-js",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "core-js/modules/es6.symbol.js",
-            "core-js/modules/es6.number.constructor.js",
-            "core-js/modules/es6.string.iterator.js",
-            "core-js/modules/es6.object.to-string.js",
-            "core-js/modules/es6.array.iterator.js",
-            "core-js/modules/web.dom.iterable.js",
-            "core-js/modules/es6.regexp.match.js",
-            "core-js/modules/es6.array.from.js",
-            "core-js/modules/es6.array.slice.js",
-            "core-js/modules/es6.object.keys.js",
-            "core-js/modules/es6.regexp.split.js",
-            "core-js/modules/es6.regexp.replace.js",
-            "core-js/modules/es6.regexp.constructor.js",
-            "core-js/modules/es6.string.includes.js",
-            "core-js/modules/es7.array.includes.js",
-            "core-js/modules/es6.object.get-own-property-descriptor.js",
-            "core-js/modules/es7.object.get-own-property-descriptors.js",
-            "core-js/modules/es6.array.filter.js",
-            "core-js/modules/es6.array.map.js"
-          ]
-        }
-      ]
-    },
-    {
       "package": "loglevel-plugin-prefix",
       "measuredVersion": "0.8.4",
       "targets": [
@@ -28573,22 +31158,6 @@
           "reason": "types class — no runtime edge, only a declaration-file reference",
           "specifiers": [
             "loglevel"
-          ]
-        }
-      ]
-    },
-    {
-      "package": "lolex",
-      "measuredVersion": "6.0.0",
-      "targets": [
-        {
-          "target": "type-detect",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "type-detect"
           ]
         }
       ]
@@ -29333,7 +31902,18 @@
           "candidate": false,
           "reason": "target is a framework or tool a consumer installs itself",
           "specifiers": [
-            "react"
+            "react",
+            "react/jsx-runtime"
+          ]
+        },
+        {
+          "target": "typescript",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "typescript"
           ]
         }
       ]
@@ -29376,10 +31956,10 @@
       "targets": [
         {
           "target": "critters",
-          "class": "guarded",
+          "class": "runtime",
           "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
             "critters"
           ]
@@ -29395,13 +31975,38 @@
           ]
         },
         {
+          "target": "private-next-instrumentation-client",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "private-next-instrumentation-client"
+          ]
+        },
+        {
+          "target": "react-server-dom-turbopack",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "react-server-dom-turbopack/server",
+            "react-server-dom-turbopack/static",
+            "react-server-dom-turbopack/client"
+          ]
+        },
+        {
           "target": "react-server-dom-webpack",
           "class": "types",
           "field": "peer",
           "candidate": false,
           "reason": "types class — no runtime edge, only a declaration-file reference",
           "specifiers": [
-            "react-server-dom-webpack/server"
+            "react-server-dom-webpack/client",
+            "react-server-dom-webpack/server",
+            "react-server-dom-webpack/static",
+            "react-server-dom-webpack/server.node"
           ]
         }
       ]
@@ -29434,32 +32039,6 @@
           "reason": "guarded class — the package handles absence, so nothing may be installed for it",
           "specifiers": [
             "@angular/compiler/package.json"
-          ]
-        }
-      ]
-    },
-    {
-      "package": "nise",
-      "measuredVersion": "6.1.5",
-      "targets": [
-        {
-          "target": "inherits",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "inherits"
-          ]
-        },
-        {
-          "target": "type-detect",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "type-detect"
           ]
         }
       ]
@@ -29740,6 +32319,42 @@
       ]
     },
     {
+      "package": "node-pre-gyp",
+      "measuredVersion": "0.17.0",
+      "targets": [
+        {
+          "target": "node-gyp",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "node-gyp"
+          ]
+        },
+        {
+          "target": "npm",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "npm"
+          ]
+        },
+        {
+          "target": "request",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "request"
+          ]
+        }
+      ]
+    },
+    {
       "package": "node-readfiles",
       "measuredVersion": "0.4.0",
       "targets": [
@@ -29940,16 +32555,6 @@
       "measuredVersion": "1.7.5",
       "targets": [
         {
-          "target": "foreach",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "foreach"
-          ]
-        },
-        {
           "target": "json-schema",
           "class": "types",
           "field": "peer",
@@ -29957,6 +32562,22 @@
           "reason": "types class — no runtime edge, only a declaration-file reference",
           "specifiers": [
             "json-schema"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "openclaw",
+      "measuredVersion": "2026.9.2",
+      "targets": [
+        {
+          "target": "esbuild",
+          "class": "runtime",
+          "field": "peer",
+          "candidate": false,
+          "reason": "target is a framework or tool a consumer installs itself",
+          "specifiers": [
+            "esbuild"
           ]
         }
       ]
@@ -29993,13 +32614,13 @@
       "targets": [
         {
           "target": "@oxc-minify/binding-wasm32-wasi",
-          "class": "guarded",
+          "class": "runtime",
           "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
-            "@oxc-minify/binding-wasm32-wasi/package.json",
-            "@oxc-minify/binding-wasm32-wasi"
+            "@oxc-minify/binding-wasm32-wasi",
+            "@oxc-minify/binding-wasm32-wasi/package.json"
           ]
         }
       ]
@@ -30010,10 +32631,10 @@
       "targets": [
         {
           "target": "@oxc-parser/binding-wasm32-wasi",
-          "class": "guarded",
+          "class": "runtime",
           "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
             "@oxc-parser/binding-wasm32-wasi/package.json",
             "@oxc-parser/binding-wasm32-wasi"
@@ -30044,13 +32665,13 @@
       "targets": [
         {
           "target": "@oxc-transform/binding-wasm32-wasi",
-          "class": "guarded",
+          "class": "runtime",
           "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
-            "@oxc-transform/binding-wasm32-wasi/package.json",
-            "@oxc-transform/binding-wasm32-wasi"
+            "@oxc-transform/binding-wasm32-wasi",
+            "@oxc-transform/binding-wasm32-wasi/package.json"
           ]
         }
       ]
@@ -30192,6 +32813,16 @@
       "measuredVersion": "7.0.4",
       "targets": [
         {
+          "target": "@opentelemetry/auto-instrumentations-node",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "@opentelemetry/auto-instrumentations-node"
+          ]
+        },
+        {
           "target": "@opentelemetry/sdk-node",
           "class": "guarded",
           "field": "peer",
@@ -30199,6 +32830,16 @@
           "reason": "guarded class — the package handles absence, so nothing may be installed for it",
           "specifiers": [
             "@opentelemetry/sdk-node"
+          ]
+        },
+        {
+          "target": "ts-node",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "ts-node/register"
           ]
         }
       ]
@@ -30701,10 +33342,10 @@
       "targets": [
         {
           "target": "react-native-reanimated",
-          "class": "guarded",
+          "class": "runtime",
           "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
             "react-native-reanimated",
             "react-native-reanimated/src/createAnimatedComponent/NativeEventsManager"
@@ -30712,10 +33353,10 @@
         },
         {
           "target": "react-native-worklets",
-          "class": "guarded",
+          "class": "runtime",
           "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
             "react-native-worklets"
           ]
@@ -30865,7 +33506,33 @@
           "candidate": false,
           "reason": "target is a framework or tool a consumer installs itself",
           "specifiers": [
-            "@babel/runtime/helpers/interopRequireDefault"
+            "@babel/runtime/helpers/interopRequireDefault",
+            "@babel/runtime/helpers/asyncToGenerator",
+            "@babel/runtime/helpers/defineProperty",
+            "@babel/runtime/helpers/slicedToArray",
+            "@babel/runtime/helpers/objectWithoutProperties",
+            "@babel/runtime/helpers/toConsumableArray",
+            "@babel/runtime/helpers/createClass",
+            "@babel/runtime/helpers/classCallCheck",
+            "@babel/runtime/helpers/possibleConstructorReturn",
+            "@babel/runtime/helpers/getPrototypeOf",
+            "@babel/runtime/helpers/inherits"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "react-native-worklets",
+      "measuredVersion": "0.12.1",
+      "targets": [
+        {
+          "target": "@babel/plugin-transform-react-jsx",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "@babel/plugin-transform-react-jsx"
           ]
         }
       ]
@@ -30929,6 +33596,22 @@
       ]
     },
     {
+      "package": "recast",
+      "measuredVersion": "0.24.0",
+      "targets": [
+        {
+          "target": "babylon",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "babylon"
+          ]
+        }
+      ]
+    },
+    {
       "package": "redlock",
       "measuredVersion": "5.0.0-beta.2",
       "targets": [
@@ -30966,6 +33649,16 @@
           "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
             "fast-safe-stringify"
+          ]
+        },
+        {
+          "target": "null",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "null"
           ]
         },
         {
@@ -31332,102 +34025,6 @@
       ]
     },
     {
-      "package": "requirejs",
-      "measuredVersion": "2.3.8",
-      "targets": [
-        {
-          "target": "env",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "internal AMD module id, not a package",
-          "specifiers": [
-            "env"
-          ]
-        },
-        {
-          "target": "lang",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "not a package — bin/r.js calls define('lang', ...) and requires the AMD id back. An unrelated package named lang is published, so the registry check cannot catch this",
-          "specifiers": [
-            "lang"
-          ]
-        },
-        {
-          "target": "logger",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "internal AMD module id, not a package",
-          "specifiers": [
-            "logger"
-          ]
-        },
-        {
-          "target": "optimize",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "internal AMD module id, not a package",
-          "specifiers": [
-            "optimize"
-          ]
-        },
-        {
-          "target": "parse",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "internal AMD module id, not a package",
-          "specifiers": [
-            "parse"
-          ]
-        },
-        {
-          "target": "pragma",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "internal AMD module id, not a package",
-          "specifiers": [
-            "pragma"
-          ]
-        },
-        {
-          "target": "prim",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "internal AMD module id, not a package",
-          "specifiers": [
-            "prim"
-          ]
-        },
-        {
-          "target": "source-map",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "source-map"
-          ]
-        },
-        {
-          "target": "transform",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "internal AMD module id, not a package",
-          "specifiers": [
-            "transform"
-          ]
-        }
-      ]
-    },
-    {
       "package": "resend",
       "measuredVersion": "6.26.0",
       "targets": [
@@ -31551,6 +34148,48 @@
           "reason": "types class — no runtime edge, only a declaration-file reference",
           "specifiers": [
             "@rrweb/types"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "rss-parser",
+      "measuredVersion": "3.13.0",
+      "targets": [
+        {
+          "target": "xmlbuilder",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "xmlbuilder"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "rx",
+      "measuredVersion": "4.1.0",
+      "targets": [
+        {
+          "target": "rx-lite",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "rx-lite"
+          ]
+        },
+        {
+          "target": "rx-lite-compat",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "rx-lite-compat"
           ]
         }
       ]
@@ -31686,6 +34325,22 @@
           "specifiers": [
             "@napi-rs/snappy-wasm32-wasi",
             "@napi-rs/snappy-wasm32-wasi/package.json"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "stacktrace-gps",
+      "measuredVersion": "3.1.2",
+      "targets": [
+        {
+          "target": "vertx",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "vertx"
           ]
         }
       ]
@@ -31969,380 +34624,6 @@
           "reason": "guarded class — the package handles absence, so nothing may be installed for it",
           "specifiers": [
             "osx-temperature-sensor"
-          ]
-        }
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "targets": [
-        {
-          "target": "available-typed-arrays",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "available-typed-arrays"
-          ]
-        },
-        {
-          "target": "call-bind",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "call-bind"
-          ]
-        },
-        {
-          "target": "call-bind-apply-helpers",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "call-bind-apply-helpers",
-            "call-bind-apply-helpers/applyBind",
-            "call-bind-apply-helpers/functionApply",
-            "call-bind-apply-helpers/functionCall"
-          ]
-        },
-        {
-          "target": "call-bound",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "call-bound"
-          ]
-        },
-        {
-          "target": "define-data-property",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "define-data-property"
-          ]
-        },
-        {
-          "target": "dunder-proto",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "dunder-proto/get"
-          ]
-        },
-        {
-          "target": "es-define-property",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "es-define-property"
-          ]
-        },
-        {
-          "target": "es-errors",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "es-errors/type",
-            "es-errors/syntax",
-            "es-errors",
-            "es-errors/eval",
-            "es-errors/range",
-            "es-errors/ref",
-            "es-errors/uri"
-          ]
-        },
-        {
-          "target": "es-object-atoms",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "es-object-atoms"
-          ]
-        },
-        {
-          "target": "for-each",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "for-each"
-          ]
-        },
-        {
-          "target": "function-bind",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "function-bind"
-          ]
-        },
-        {
-          "target": "get-intrinsic",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "get-intrinsic"
-          ]
-        },
-        {
-          "target": "get-proto",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "get-proto",
-            "get-proto/Object.getPrototypeOf",
-            "get-proto/Reflect.getPrototypeOf"
-          ]
-        },
-        {
-          "target": "gopd",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "gopd"
-          ]
-        },
-        {
-          "target": "has-property-descriptors",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "has-property-descriptors"
-          ]
-        },
-        {
-          "target": "has-symbols",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "has-symbols",
-            "has-symbols/shams"
-          ]
-        },
-        {
-          "target": "has-tostringtag",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "has-tostringtag/shams"
-          ]
-        },
-        {
-          "target": "hasown",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "hasown"
-          ]
-        },
-        {
-          "target": "inherits",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "inherits"
-          ]
-        },
-        {
-          "target": "is-arguments",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "is-arguments"
-          ]
-        },
-        {
-          "target": "is-callable",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "is-callable"
-          ]
-        },
-        {
-          "target": "is-generator-function",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "is-generator-function"
-          ]
-        },
-        {
-          "target": "is-regex",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "is-regex"
-          ]
-        },
-        {
-          "target": "is-typed-array",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "is-typed-array"
-          ]
-        },
-        {
-          "target": "math-intrinsics",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "math-intrinsics/abs",
-            "math-intrinsics/floor",
-            "math-intrinsics/max",
-            "math-intrinsics/min",
-            "math-intrinsics/pow",
-            "math-intrinsics/round",
-            "math-intrinsics/sign"
-          ]
-        },
-        {
-          "target": "object-inspect",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "object-inspect"
-          ]
-        },
-        {
-          "target": "possible-typed-array-names",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "possible-typed-array-names"
-          ]
-        },
-        {
-          "target": "qs",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "qs"
-          ]
-        },
-        {
-          "target": "safe-regex-test",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "safe-regex-test"
-          ]
-        },
-        {
-          "target": "set-function-length",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "set-function-length"
-          ]
-        },
-        {
-          "target": "side-channel",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "side-channel"
-          ]
-        },
-        {
-          "target": "side-channel-list",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "side-channel-list"
-          ]
-        },
-        {
-          "target": "side-channel-map",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "side-channel-map"
-          ]
-        },
-        {
-          "target": "side-channel-weakmap",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "side-channel-weakmap"
-          ]
-        },
-        {
-          "target": "which-typed-array",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "which-typed-array"
           ]
         }
       ]
@@ -32719,6 +35000,22 @@
           "reason": "guarded class — the package handles absence, so nothing may be installed for it",
           "specifiers": [
             "readable-stream"
+          ]
+        }
+      ]
+    },
+    {
+      "package": "urijs",
+      "measuredVersion": "1.19.11",
+      "targets": [
+        {
+          "target": "jquery",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "jquery"
           ]
         }
       ]
@@ -33583,6 +35880,15 @@
       ]
     },
     {
+      "package": "@pnpm/npm-conf",
+      "measuredVersion": "3.0.3",
+      "target": "npm",
+      "specifiers": [
+        "npm",
+        "npm/lib/config/defaults"
+      ]
+    },
+    {
       "package": "@react-native-community/cli",
       "measuredVersion": "20.2.0",
       "target": "@react-native-community/cli-config-apple",
@@ -34041,7 +36347,13 @@
       "measuredVersion": "15.29.0",
       "target": "firebase-functions",
       "specifiers": [
-        "firebase-functions"
+        "firebase-functions",
+        "firebase-functions/v1",
+        "firebase-functions/dataconnect/graphql",
+        "firebase-functions/https",
+        "firebase-functions/logger",
+        "firebase-functions/v2/options",
+        "firebase-functions/params"
       ]
     },
     {
@@ -34077,53 +36389,11 @@
       ]
     },
     {
-      "package": "livereload-js",
-      "measuredVersion": "4.0.2",
-      "target": "core-js",
+      "package": "next",
+      "measuredVersion": "16.3.4",
+      "target": "critters",
       "specifiers": [
-        "core-js/modules/es6.symbol.js",
-        "core-js/modules/es6.number.constructor.js",
-        "core-js/modules/es6.string.iterator.js",
-        "core-js/modules/es6.object.to-string.js",
-        "core-js/modules/es6.array.iterator.js",
-        "core-js/modules/web.dom.iterable.js",
-        "core-js/modules/es6.regexp.match.js",
-        "core-js/modules/es6.array.from.js",
-        "core-js/modules/es6.array.slice.js",
-        "core-js/modules/es6.object.keys.js",
-        "core-js/modules/es6.regexp.split.js",
-        "core-js/modules/es6.regexp.replace.js",
-        "core-js/modules/es6.regexp.constructor.js",
-        "core-js/modules/es6.string.includes.js",
-        "core-js/modules/es7.array.includes.js",
-        "core-js/modules/es6.object.get-own-property-descriptor.js",
-        "core-js/modules/es7.object.get-own-property-descriptors.js",
-        "core-js/modules/es6.array.filter.js",
-        "core-js/modules/es6.array.map.js"
-      ]
-    },
-    {
-      "package": "lolex",
-      "measuredVersion": "6.0.0",
-      "target": "type-detect",
-      "specifiers": [
-        "type-detect"
-      ]
-    },
-    {
-      "package": "nise",
-      "measuredVersion": "6.1.5",
-      "target": "inherits",
-      "specifiers": [
-        "inherits"
-      ]
-    },
-    {
-      "package": "nise",
-      "measuredVersion": "6.1.5",
-      "target": "type-detect",
-      "specifiers": [
-        "type-detect"
+        "critters"
       ]
     },
     {
@@ -34191,11 +36461,30 @@
       ]
     },
     {
-      "package": "openapi-sampler",
-      "measuredVersion": "1.7.5",
-      "target": "foreach",
+      "package": "oxc-minify",
+      "measuredVersion": "0.148.0",
+      "target": "@oxc-minify/binding-wasm32-wasi",
       "specifiers": [
-        "foreach"
+        "@oxc-minify/binding-wasm32-wasi",
+        "@oxc-minify/binding-wasm32-wasi/package.json"
+      ]
+    },
+    {
+      "package": "oxc-parser",
+      "measuredVersion": "0.148.0",
+      "target": "@oxc-parser/binding-wasm32-wasi",
+      "specifiers": [
+        "@oxc-parser/binding-wasm32-wasi/package.json",
+        "@oxc-parser/binding-wasm32-wasi"
+      ]
+    },
+    {
+      "package": "oxc-transform",
+      "measuredVersion": "0.148.0",
+      "target": "@oxc-transform/binding-wasm32-wasi",
+      "specifiers": [
+        "@oxc-transform/binding-wasm32-wasi",
+        "@oxc-transform/binding-wasm32-wasi/package.json"
       ]
     },
     {
@@ -34229,6 +36518,23 @@
       "target": "@react-native-community/cli",
       "specifiers": [
         "@react-native-community/cli"
+      ]
+    },
+    {
+      "package": "react-native-gesture-handler",
+      "measuredVersion": "3.2.1",
+      "target": "react-native-reanimated",
+      "specifiers": [
+        "react-native-reanimated",
+        "react-native-reanimated/src/createAnimatedComponent/NativeEventsManager"
+      ]
+    },
+    {
+      "package": "react-native-gesture-handler",
+      "measuredVersion": "3.2.1",
+      "target": "react-native-worklets",
+      "specifiers": [
+        "react-native-worklets"
       ]
     },
     {
@@ -34273,14 +36579,6 @@
       ]
     },
     {
-      "package": "requirejs",
-      "measuredVersion": "2.3.8",
-      "target": "source-map",
-      "specifiers": [
-        "source-map"
-      ]
-    },
-    {
       "package": "snappy",
       "measuredVersion": "7.4.2",
       "target": "@napi-rs/snappy-wasm32-wasi",
@@ -34295,304 +36593,6 @@
       "target": "should",
       "specifiers": [
         "should/as-function"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "available-typed-arrays",
-      "specifiers": [
-        "available-typed-arrays"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "call-bind",
-      "specifiers": [
-        "call-bind"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "call-bind-apply-helpers",
-      "specifiers": [
-        "call-bind-apply-helpers",
-        "call-bind-apply-helpers/applyBind",
-        "call-bind-apply-helpers/functionApply",
-        "call-bind-apply-helpers/functionCall"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "call-bound",
-      "specifiers": [
-        "call-bound"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "define-data-property",
-      "specifiers": [
-        "define-data-property"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "dunder-proto",
-      "specifiers": [
-        "dunder-proto/get"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "es-define-property",
-      "specifiers": [
-        "es-define-property"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "es-errors",
-      "specifiers": [
-        "es-errors/type",
-        "es-errors/syntax",
-        "es-errors",
-        "es-errors/eval",
-        "es-errors/range",
-        "es-errors/ref",
-        "es-errors/uri"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "es-object-atoms",
-      "specifiers": [
-        "es-object-atoms"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "for-each",
-      "specifiers": [
-        "for-each"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "function-bind",
-      "specifiers": [
-        "function-bind"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "get-intrinsic",
-      "specifiers": [
-        "get-intrinsic"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "get-proto",
-      "specifiers": [
-        "get-proto",
-        "get-proto/Object.getPrototypeOf",
-        "get-proto/Reflect.getPrototypeOf"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "gopd",
-      "specifiers": [
-        "gopd"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "has-property-descriptors",
-      "specifiers": [
-        "has-property-descriptors"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "has-symbols",
-      "specifiers": [
-        "has-symbols",
-        "has-symbols/shams"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "has-tostringtag",
-      "specifiers": [
-        "has-tostringtag/shams"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "hasown",
-      "specifiers": [
-        "hasown"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "inherits",
-      "specifiers": [
-        "inherits"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "is-arguments",
-      "specifiers": [
-        "is-arguments"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "is-callable",
-      "specifiers": [
-        "is-callable"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "is-generator-function",
-      "specifiers": [
-        "is-generator-function"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "is-regex",
-      "specifiers": [
-        "is-regex"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "is-typed-array",
-      "specifiers": [
-        "is-typed-array"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "math-intrinsics",
-      "specifiers": [
-        "math-intrinsics/abs",
-        "math-intrinsics/floor",
-        "math-intrinsics/max",
-        "math-intrinsics/min",
-        "math-intrinsics/pow",
-        "math-intrinsics/round",
-        "math-intrinsics/sign"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "object-inspect",
-      "specifiers": [
-        "object-inspect"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "possible-typed-array-names",
-      "specifiers": [
-        "possible-typed-array-names"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "qs",
-      "specifiers": [
-        "qs"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "safe-regex-test",
-      "specifiers": [
-        "safe-regex-test"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "set-function-length",
-      "specifiers": [
-        "set-function-length"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "side-channel",
-      "specifiers": [
-        "side-channel"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "side-channel-list",
-      "specifiers": [
-        "side-channel-list"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "side-channel-map",
-      "specifiers": [
-        "side-channel-map"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "side-channel-weakmap",
-      "specifiers": [
-        "side-channel-weakmap"
-      ]
-    },
-    {
-      "package": "tldjs",
-      "measuredVersion": "2.3.2",
-      "target": "which-typed-array",
-      "specifiers": [
-        "which-typed-array"
       ]
     },
     {
@@ -34614,6 +36614,7 @@
   ],
   "dropped": {
     "unpublished": [
+      "@ant-design/cssinjs -> React",
       "@apm-js-collab/code-transformer -> estree",
       "@azure/functions -> @azure/functions-core",
       "@docusaurus/module-type-aliases -> @docusaurus/ErrorBoundary",
@@ -34806,12 +36807,12 @@
       "oxlint -> @oxlint/binding-openharmony-x64",
       "oxlint -> @oxlint/binding-wasm32-wasi",
       "oxlint -> @oxlint/binding-win32-x64-gnu",
+      "react-copy-to-clipboard -> React",
+      "react-debounce-input -> React",
       "recma-build-jsx -> estree",
       "recma-parse -> estree",
       "recma-stringify -> estree",
       "rehype-recma -> estree",
-      "requirejs -> commonJs",
-      "requirejs -> requirePatch",
       "retext -> nlcst",
       "retext-latin -> nlcst",
       "retext-smartypants -> nlcst",

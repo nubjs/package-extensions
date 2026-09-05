@@ -21,7 +21,7 @@ packageExtensions:
         optional: true
 ```
 
-**1,040 packages.** The scan covers 9,982 of the top 10,000 and finds 888 with an undeclared dependency across 1,501 edges. The remaining 152 come from Yarn's own database, carried verbatim.
+**1,055 packages.** The scan covers 9,982 of the top 10,000 and finds 903 with an undeclared dependency across 1,492 edges. The remaining 152 come from Yarn's own database, carried verbatim.
 
 ## Installing
 
@@ -99,8 +99,8 @@ Each finding is classed by where the import sits. The class decides which manife
 | Class | Count | Shape | Field |
 | --- | --- | --- | --- |
 | `types` | 840 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
-| `guarded` | 273 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
-| `runtime` | 258 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
+| `guarded` | 305 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
+| `runtime` | 217 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
 | `adapter` | 130 | A non-`.` exports subpath imports a backend the consumer chose. | optional peer |
 
 Two of these are easy to misread. A `types` finding breaks a type-check and nothing else, so it is never treated as a missing runtime dependency — it is also the largest class, and folding it into `runtime` would have put 840 declaration-file imports into the review queue. A `guarded` import misleads in the other direction: the package survives absence by design, but under a strict layout the guard swallows a resolution error that fires even when the consumer *has* the package, so the feature silently stays off.
@@ -140,7 +140,7 @@ Which of the two a finding needs is not decidable from the finding. Generating `
 
 The last one is the sharpest. RequireJS's published bundle calls `define('lang', …)` and requires the id back, so the specifier is indistinguishable from a package reference — and an unrelated package named `lang` really is published, so even a registry check passes it. Installing it would put a stranger's code into every consumer's tree.
 
-So every finding ships as an optional peer, which is inert when the consumer lacks the target but never wrong. A `dependencies` entry comes only from [`harness/overrides.json`](harness/overrides.json), where each one records the evidence behind it. The 141 findings the policy would otherwise promote are listed under `candidates`, which is the review queue. Read one with the source in front of you:
+So every finding ships as an optional peer, which is inert when the consumer lacks the target but never wrong. A `dependencies` entry comes only from [`harness/overrides.json`](harness/overrides.json), where each one records the evidence behind it. The 107 findings the policy would otherwise promote are listed under `candidates`, which is the review queue. Read one with the source in front of you:
 
 ```sh
 node harness/inspect.mjs @firebase/database @firebase/app
@@ -187,10 +187,16 @@ Placing all 159 entries of `@yarnpkg/extensions@2.0.7` against this scan:
 | **applicable** | **17** | the rule still applies to what was scanned |
 | optionality-only | 1 | marks an already-declared peer optional, so nothing is undeclared |
 
-Of the 17 applicable entries the detector matched 5 and missed 12, or **6 of 28 edges**. That gap is the honest headline, and [`docs/yarn-agreement.json`](docs/yarn-agreement.json) records every miss. The causes are known static-analysis limits rather than noise:
+Of the 17 applicable entries the detector fully matched 8, partially matched 1, and missed 8, or **8 of 23 edges**. That gap is the honest headline, and [`docs/yarn-agreement.json`](docs/yarn-agreement.json) records every miss.
 
-- **Dynamic specifiers.** `eslint-module-utils` loads its resolvers as `` tryRequire(`eslint-import-resolver-${name}`) ``, and `postcss-syntax` loads syntaxes the same way. Only a string literal is recorded, so an interpolated name is invisible.
-- **Legacy deep-path entry points.** `redux-persist` has no `exports` map, and `lib/index.js` never references `lib/integration/react.js` — so the walk from `main` never reaches the file where `require("react")` lives, even though consumers import `redux-persist/integration/react` directly.
+Five further edges sit outside that denominator, because the published source never names the target at all. Yarn's rules are hand-written and outlive the code that justified them: it carries `notistack@^3.0.0 → csstype`, and notistack 3.0.2 ships eleven files with zero `csstype` references. There is nothing there for a detector to find, so charging it for silence would measure the wrong thing. Nine other edges *are* charged, and are the dynamic-specifier case below — the reference is real, only the name is computed.
+
+A miss is a statement about the detector, not about the dataset. Every Yarn rule is carried verbatim and gated, so a rule the scan failed to rediscover still ships: `postcss-syntax@*` carries all five of its `postcss-*` targets in this dataset right now, having been copied rather than derived. What the gap measures is how much of Yarn's hand-curated work the scan reproduces on its own.
+
+The causes are known static-analysis limits rather than noise:
+
+- **Dynamic specifiers.** `eslint-module-utils` loads its resolvers as `` tryRequire(`eslint-import-resolver-${name}`) ``, and `postcss-syntax` loads syntaxes the same way. Only a string literal is recorded, so an interpolated name is invisible. This one stays unsolved on purpose: the static prefix is all that survives, and enumerating the registry for packages matching `postcss-` would admit thousands of unrelated names. Over-inclusion breaks installs, so curation is the only sound answer — which is what Yarn did, and what this dataset inherits by carrying those entries.
+- **Legacy deep-path entry points — fixed, and then withheld.** `redux-persist` has no `exports` map, and `lib/index.js` never references `lib/integration/react.js`, so the walk from `main` never reached the `require("react")` that consumers hit by importing `redux-persist/integration/react`. The detector now seeds every published file when a package ships no `exports` map, which found that case and 258 others. Those 258 are recorded under `withheldDeepPath` and **not emitted**, because the same seeding parses published source: a package built with a tsconfig `baseUrl` imports its own modules by bare-looking specifiers, so `pusher-js` appears to need `core` and `isomorphic`, which are directories inside it. Telling those apart needs the offender's own file list, which belongs in the detector rather than here.
 - **Type-only erasure.** Imports that erase before runtime are dropped by design, which is right for a runtime question and wrong for a type-check.
 
 Regenerate the comparison with `node harness/compare-yarn.mjs --scan records/<run>/scan.json`.

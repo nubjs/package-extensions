@@ -42,6 +42,27 @@ const overrides = existsSync(overridesPath) ? JSON.parse(readFileSync(overridesP
 let rows = scan.offenders.flatMap(rowsForOffender);
 if (!includeGuarded) rows = rows.filter((r) => r.class !== 'guarded');
 
+// WITHHELD, PENDING A DETECTOR FIX. Deep-path seeding finds real entry points —
+// `redux-persist/integration/react` is the reason it exists — but it also parses
+// published SOURCE, and a package built with a tsconfig `baseUrl` imports its own
+// modules by bare-looking specifiers: pusher-js reaches `core/utils/url_store`
+// and `isomorphic/runtime`, react-zoom-pan-pinch reaches `utils/ref.utils`. Those
+// name directories inside the package, not packages, so they are outside this
+// dataset's contract however Node treats them.
+//
+// They cannot be told apart HERE. `pusher-js -> core` via `core/utils/...` and
+// `swagger-ui-dist -> lodash` via `lodash/merge` are the same shape, and only the
+// offender's own file list separates them — which the scan does not carry. A
+// filter built on that shape suppresses the true positives and keeps the false
+// ones; that was measured before writing this, not assumed.
+//
+// So the tier is recorded as evidence and not emitted. Withholding costs users
+// nothing, because it has never shipped; emitting it would put `pusher-js ->
+// express` in a public dataset. Delete these three lines once the detector skips
+// a bare specifier that resolves inside the package's own tree.
+const withheld = rows.filter((r) => r.class === 'deep-path');
+rows = rows.filter((r) => r.class !== 'deep-path');
+
 const targets = [...new Set(rows.map((r) => r.target))].sort();
 console.error(`${rows.length} findings across ${new Set(rows.map((r) => r.package)).size} packages, ${targets.length} distinct targets`);
 
@@ -176,7 +197,7 @@ function mergeInto(into, from) {
   return changed;
 }
 
-const counts = { runtime: 0, adapter: 0, types: 0, guarded: 0 };
+const counts = { runtime: 0, adapter: 0, types: 0, 'deep-path': 0, guarded: 0 };
 const fieldCounts = { dependency: 0, peer: 0 };
 // The review queue: findings that would be a real `dependencies` entry if a
 // human confirmed the target is a package the offender genuinely needs its own
@@ -224,7 +245,12 @@ const doc = {
     candidatesForReview: candidates.length,
     droppedUnpublishedTargets: dropped.unpublished.length,
     droppedUnresolvedTargets: dropped.unresolved.length,
+    // Found, recorded, deliberately not emitted. See the withholding note above.
+    withheldDeepPath: withheld.length,
   },
+  withheldDeepPath: withheld
+    .map((r) => ({ package: r.package, target: r.target, specifiers: r.specifiers }))
+    .sort((a, b) => (`${a.package} ${a.target}` < `${b.package} ${b.target}` ? -1 : 1)),
   yarnKeys: yarn.entries.map(([selector]) => selector).sort(),
   packageExtensions,
   findings,

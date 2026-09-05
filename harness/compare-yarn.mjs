@@ -23,7 +23,7 @@
 //                 undeclared. Out of scope by construction.
 //   out-of-corpus the package is not in the top 10,000.
 
-import { readFileSync, existsSync, writeFileSync } from 'node:fs';
+import { readFileSync, existsSync, writeFileSync, readdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { mkdtempSync, rmSync } from 'node:fs';
@@ -177,14 +177,113 @@ for (const e of yarnEntries) {
   buckets.applicable.push({ ...e, version: m.version, undeclared, hit, miss, scanned: !scanFailed.has(e.package) });
 }
 
+// ------------------------------------------- what a miss is actually about
+//
+// A MISS IS ONLY A DETECTOR MISS IF THE REFERENCE IS THERE TO FIND. Yarn's
+// rules are hand-written and outlive the code that justified them: Yarn carries
+// `notistack@^3.0.0 -> csstype`, and notistack 3.0.2 ships eleven files with
+// zero `csstype` references anywhere. Counting that against the detector blames
+// it for being correctly silent, and three of twelve misses were this.
+//
+// A literal grep alone cannot settle it, because a dynamically-built specifier
+// leaves no literal either — `postcss-syntax` reaches `postcss-html` through
+// `require(id + "/...")`. Those are opposites: one is a stale rule, the other is
+// a real limitation. What separates them is the PREFIX. A dynamic call still
+// ships the static part of the name, so a long literal prefix of the target
+// means the reference is real and merely uncomputable.
+for (const e of buckets.applicable) {
+  if (e.miss.length === 0) continue;
+  const text = await publishedText(e.package);
+  if (text === null) continue; // fetch failed; leave the miss as-is rather than excusing it
+  e.missDetail = {};
+  for (const t of e.miss) {
+    if (quoted(text, t)) e.missDetail[t] = 'literal';
+    else if (longestPrefixPresent(text, t) >= 8) e.missDetail[t] = 'dynamic';
+    else e.missDetail[t] = 'absent';
+  }
+  e.notReferenced = e.miss.filter((t) => e.missDetail[t] === 'absent');
+}
+
+/** Concatenated source of every JS/TS file in the published tarball, or null. */
+async function publishedText(pkg) {
+  const dir = mkdtempSync(join(tmpdir(), 'ref-'));
+  try {
+    const meta = await (
+      await fetch(`https://registry.npmjs.org/${pkg.replace(/\//g, '%2f')}`, {
+        headers: { accept: 'application/vnd.npm.install-v1+json' },
+      })
+    ).json();
+    const tarball = meta.versions[meta['dist-tags'].latest].dist.tarball;
+    execFileSync('sh', ['-c', `curl -sL ${JSON.stringify(tarball)} | tar xz -C ${JSON.stringify(dir)}`]);
+    let out = '';
+    for (const f of walkFiles(join(dir, 'package'))) {
+      if (!/\.(m|c)?[jt]sx?$/.test(f)) continue;
+      try {
+        out += readFileSync(f, 'utf8');
+      } catch {
+        /* unreadable file contributes nothing */
+      }
+    }
+    return out;
+  } catch {
+    return null;
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+/**
+ * Whether `s` appears opened by any string delimiter.
+ *
+ * The BACKTICK is the one that matters and the one first missed here: a dynamic
+ * specifier is written `` `eslint-import-resolver-${name}` ``, so checking only
+ * `'` and `"` classed four of `eslint-module-utils`'s edges as never-referenced
+ * and dropped them from the denominator — improving the score by hiding real
+ * misses, which is the wrong direction to be wrong in.
+ */
+function quoted(text, s) {
+  return text.includes(`'${s}`) || text.includes(`"${s}`) || text.includes(`\`${s}`);
+}
+
+/** Length of the longest prefix of `target` appearing as a quoted literal. */
+function longestPrefixPresent(text, target) {
+  for (let n = target.length - 1; n >= 8; n--) {
+    if (quoted(text, target.slice(0, n))) return n;
+  }
+  return 0;
+}
+
+function* walkFiles(dir) {
+  let entries;
+  try {
+    entries = readdirSync(dir, { withFileTypes: true });
+  } catch {
+    return;
+  }
+  for (const d of entries) {
+    const p = join(dir, d.name);
+    if (d.isDirectory()) yield* walkFiles(p);
+    else yield p;
+  }
+}
+
 // ------------------------------------------------------------------ report
 
 const app = buckets.applicable;
-const fullHit = app.filter((e) => e.miss.length === 0);
-const partial = app.filter((e) => e.hit.length > 0 && e.miss.length > 0);
-const missed = app.filter((e) => e.hit.length === 0);
-const edgeTotal = app.reduce((n, e) => n + e.undeclared.length, 0);
+// An edge whose target the published source never names is not detectable, so
+// it is excluded from the denominator rather than charged to the detector.
+const unref = (e) => (e.notReferenced ?? []).length;
+const realMiss = (e) => e.miss.filter((t) => !(e.notReferenced ?? []).includes(t));
+const fullHit = app.filter((e) => realMiss(e).length === 0);
+const partial = app.filter((e) => e.hit.length > 0 && realMiss(e).length > 0);
+const missed = app.filter((e) => e.hit.length === 0 && realMiss(e).length > 0);
+const edgeTotal = app.reduce((n, e) => n + e.undeclared.length - unref(e), 0);
 const edgeHit = app.reduce((n, e) => n + e.hit.length, 0);
+const edgeNotReferenced = app.reduce((n, e) => n + unref(e), 0);
+const edgeDynamic = app.reduce(
+  (n, e) => n + Object.values(e.missDetail ?? {}).filter((v) => v === 'dynamic').length,
+  0
+);
 
 const out = {
   yarnDatabase: { package: '@yarnpkg/extensions', version: yarnVersion, entries: yarnEntries.length },
@@ -201,6 +300,13 @@ const out = {
     entriesPartiallyMatched: partial.length,
     entriesMissed: missed.length,
     edgeAgreement: edgeTotal ? `${edgeHit}/${edgeTotal}` : 'n/a',
+    // Excluded from the denominator above: the published source never names the
+    // target, so Yarn's rule outlived the code that justified it and there is
+    // nothing for a detector to find.
+    edgesNotReferenced: edgeNotReferenced,
+    // Counted AGAINST the detector, and correctly: the reference is real, only
+    // the specifier is computed at runtime.
+    edgesDynamicSpecifier: edgeDynamic,
   },
   detail: { applicable: app, missed, fixed: buckets.fixed, optionality: buckets.optionality, unresolved: buckets.unresolved },
 };

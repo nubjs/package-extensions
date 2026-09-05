@@ -16,10 +16,12 @@
     "unresolved": 0
   },
   "agreement": {
-    "entriesFullyMatched": 4,
+    "entriesFullyMatched": 8,
     "entriesPartiallyMatched": 1,
-    "entriesMissed": 12,
-    "edgeAgreement": "6/28"
+    "entriesMissed": 8,
+    "edgeAgreement": "8/23",
+    "edgesNotReferenced": 5,
+    "edgesDynamicSpecifier": 9
   },
   "detail": {
     "applicable": [
@@ -41,7 +43,15 @@
           "vscode-jsonrpc",
           "vscode-languageserver-protocol"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "vscode-jsonrpc": "absent",
+          "vscode-languageserver-protocol": "absent"
+        },
+        "notReferenced": [
+          "vscode-jsonrpc",
+          "vscode-languageserver-protocol"
+        ]
       },
       {
         "package": "postcss-syntax",
@@ -70,7 +80,15 @@
           "postcss-markdown",
           "postcss-scss"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "postcss-html": "dynamic",
+          "postcss-jsx": "dynamic",
+          "postcss-less": "dynamic",
+          "postcss-markdown": "dynamic",
+          "postcss-scss": "dynamic"
+        },
+        "notReferenced": []
       },
       {
         "package": "promise-inflight",
@@ -128,7 +146,11 @@
         "miss": [
           "semver"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "semver": "literal"
+        },
+        "notReferenced": []
       },
       {
         "package": "git-node-fs",
@@ -141,10 +163,10 @@
         "undeclared": [
           "js-git"
         ],
-        "hit": [],
-        "miss": [
+        "hit": [
           "js-git"
         ],
+        "miss": [],
         "scanned": true
       },
       {
@@ -158,10 +180,10 @@
         "undeclared": [
           "react"
         ],
-        "hit": [],
-        "miss": [
+        "hit": [
           "react"
         ],
+        "miss": [],
         "scanned": true
       },
       {
@@ -188,7 +210,16 @@
           "eslint-import-resolver-webpack",
           "@typescript-eslint/parser"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "eslint-import-resolver-node": "dynamic",
+          "eslint-import-resolver-typescript": "dynamic",
+          "eslint-import-resolver-webpack": "dynamic",
+          "@typescript-eslint/parser": "absent"
+        },
+        "notReferenced": [
+          "@typescript-eslint/parser"
+        ]
       },
       {
         "package": "eslint-plugin-import",
@@ -205,7 +236,11 @@
         "miss": [
           "@typescript-eslint/parser"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "@typescript-eslint/parser": "literal"
+        },
+        "notReferenced": []
       },
       {
         "package": "eslint-config-react-app",
@@ -222,7 +257,11 @@
         "miss": [
           "typescript"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "typescript": "literal"
+        },
+        "notReferenced": []
       },
       {
         "package": "react-dev-utils",
@@ -242,7 +281,14 @@
           "typescript",
           "webpack"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "typescript": "absent",
+          "webpack": "literal"
+        },
+        "notReferenced": [
+          "typescript"
+        ]
       },
       {
         "package": "notistack",
@@ -259,7 +305,13 @@
         "miss": [
           "csstype"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "csstype": "absent"
+        },
+        "notReferenced": [
+          "csstype"
+        ]
       },
       {
         "package": "vite-plugin-vue-devtools",
@@ -276,7 +328,11 @@
         "miss": [
           "vue"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "vue": "literal"
+        },
+        "notReferenced": []
       },
       {
         "package": "@parcel/resolver-default",
@@ -293,7 +349,11 @@
         "miss": [
           "@parcel/core"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "@parcel/core": "dynamic"
+        },
+        "notReferenced": []
       },
       {
         "package": "@volar/typescript",
@@ -344,30 +404,14 @@
         "miss": [
           "typescript"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "typescript": "literal"
+        },
+        "notReferenced": []
       }
     ],
     "missed": [
-      {
-        "package": "typescript-language-server",
-        "range": "*",
-        "targets": [
-          "vscode-jsonrpc",
-          "vscode-languageserver-protocol"
-        ],
-        "metaOnly": false,
-        "version": "6.0.0",
-        "undeclared": [
-          "vscode-jsonrpc",
-          "vscode-languageserver-protocol"
-        ],
-        "hit": [],
-        "miss": [
-          "vscode-jsonrpc",
-          "vscode-languageserver-protocol"
-        ],
-        "scanned": true
-      },
       {
         "package": "postcss-syntax",
         "range": "*",
@@ -395,41 +439,15 @@
           "postcss-markdown",
           "postcss-scss"
         ],
-        "scanned": true
-      },
-      {
-        "package": "git-node-fs",
-        "range": "*",
-        "targets": [
-          "js-git"
-        ],
-        "metaOnly": false,
-        "version": "1.0.0",
-        "undeclared": [
-          "js-git"
-        ],
-        "hit": [],
-        "miss": [
-          "js-git"
-        ],
-        "scanned": true
-      },
-      {
-        "package": "redux-persist",
-        "range": "*",
-        "targets": [
-          "react"
-        ],
-        "metaOnly": false,
-        "version": "6.0.0",
-        "undeclared": [
-          "react"
-        ],
-        "hit": [],
-        "miss": [
-          "react"
-        ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "postcss-html": "dynamic",
+          "postcss-jsx": "dynamic",
+          "postcss-less": "dynamic",
+          "postcss-markdown": "dynamic",
+          "postcss-scss": "dynamic"
+        },
+        "notReferenced": []
       },
       {
         "package": "eslint-module-utils",
@@ -455,7 +473,16 @@
           "eslint-import-resolver-webpack",
           "@typescript-eslint/parser"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "eslint-import-resolver-node": "dynamic",
+          "eslint-import-resolver-typescript": "dynamic",
+          "eslint-import-resolver-webpack": "dynamic",
+          "@typescript-eslint/parser": "absent"
+        },
+        "notReferenced": [
+          "@typescript-eslint/parser"
+        ]
       },
       {
         "package": "eslint-plugin-import",
@@ -472,7 +499,11 @@
         "miss": [
           "@typescript-eslint/parser"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "@typescript-eslint/parser": "literal"
+        },
+        "notReferenced": []
       },
       {
         "package": "eslint-config-react-app",
@@ -489,7 +520,11 @@
         "miss": [
           "typescript"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "typescript": "literal"
+        },
+        "notReferenced": []
       },
       {
         "package": "react-dev-utils",
@@ -509,24 +544,14 @@
           "typescript",
           "webpack"
         ],
-        "scanned": true
-      },
-      {
-        "package": "notistack",
-        "range": "^3.0.0",
-        "targets": [
-          "csstype"
-        ],
-        "metaOnly": false,
-        "version": "3.0.2",
-        "undeclared": [
-          "csstype"
-        ],
-        "hit": [],
-        "miss": [
-          "csstype"
-        ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "typescript": "absent",
+          "webpack": "literal"
+        },
+        "notReferenced": [
+          "typescript"
+        ]
       },
       {
         "package": "vite-plugin-vue-devtools",
@@ -543,7 +568,11 @@
         "miss": [
           "vue"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "vue": "literal"
+        },
+        "notReferenced": []
       },
       {
         "package": "@parcel/resolver-default",
@@ -560,7 +589,11 @@
         "miss": [
           "@parcel/core"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "@parcel/core": "dynamic"
+        },
+        "notReferenced": []
       },
       {
         "package": "volar-service-typescript-twoslash-queries",
@@ -577,7 +610,11 @@
         "miss": [
           "typescript"
         ],
-        "scanned": true
+        "scanned": true,
+        "missDetail": {
+          "typescript": "literal"
+        },
+        "notReferenced": []
       }
     ],
     "fixed": [
