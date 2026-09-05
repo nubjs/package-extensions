@@ -10,11 +10,14 @@ packageExtensions:
   "@nrwl/devkit@*":
     dependencies:
       tslib: "*"                    # index.js requires it and nothing declares it
-  "@hookform/resolvers@*":
+  "@formkit/auto-animate@*":
     peerDependencies:
-      zod: "*"                      # the consumer picked zod; only wire it up
+      react: "*"                    # the consumer picked a framework; only wire it up
+      vue: "*"
     peerDependenciesMeta:
-      zod:
+      react:
+        optional: true
+      vue:
         optional: true
 ```
 
@@ -97,7 +100,7 @@ Error: phantom-fixture tried to access is-odd (a peer dependency) but it isn't
 provided by your application; this makes the require call ambiguous and unsound.
 ```
 
-So the two fields fix different problems, and using either one everywhere gets a large part of the dataset wrong. A package that forgot a dependency needs a real `dependencies` entry, because nobody else is going to install `tslib` for `@nrwl/devkit`. A backend the consumer picked needs an optional peer, because emitting `dependencies` for `@hookform/resolvers` would install all twenty-two validation libraries it can adapt.
+So the two fields fix different problems, and using either one everywhere gets a large part of the dataset wrong. A package that forgot a dependency needs a real `dependencies` entry, because nobody else is going to install `tslib` for `@nrwl/devkit`. A backend the consumer picked needs an optional peer, because emitting `dependencies` for `@formkit/auto-animate` would install React, Vue, Preact, Solid and Angular into a project that uses one of them.
 
 Both peer fields are always written together. Marking a peer optional needs a peer to mark, and on a target the package never declared, `peerDependenciesMeta` alone has nothing to apply to.
 
@@ -155,7 +158,7 @@ node harness/verify.mjs                                  # gate
 
 The workflow in [`.github/workflows/rebuild.yml`](.github/workflows/rebuild.yml) runs all four against a pinned `nubjs/nub` commit, monthly and on demand. Each run keeps its raw detector output and a `meta.json` naming that commit under `records/`, so a published entry traces back to the scan that produced it.
 
-Regeneration is also what keeps the dataset from rotting. Packages fix their manifests: `@hookform/resolvers` declared twenty-two optional peers between version 5.4.0 and 5.9.1, and every one of its entries disappeared from the next scan.
+Regeneration is also what keeps the dataset from rotting. Packages fix their manifests, and `@hookform/resolvers` is the worked example: it declared twenty-two optional peers between version 5.4.0 and 5.9.1, so it appears in an earlier scan with fifteen entries and is absent from this one entirely.
 
 The gate is where a generated dataset is worth trusting or is not. Every check in `verify.mjs` either compares generator output against a real consumer parser or refuses a document that is structurally fine and empty — a well-formed file that says nothing is the failure mode a shape test passes forever.
 

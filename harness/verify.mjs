@@ -116,6 +116,18 @@ check('no dropped target leaked into an emitted entry', () => {
   return `${emitted.size} distinct targets, ${droppedTargets.size} dropped`;
 });
 
+check('every extension key quoted in the README still exists', () => {
+  // The dataset moves under the prose. `@hookform/resolvers` was the README's
+  // headline example until the package declared its twenty-two optional peers
+  // upstream and vanished from the scan, leaving a documented entry that shipped
+  // nowhere. An example nobody can find is worse than no example.
+  const md = readFileSync(resolve(ROOT, 'README.md'), 'utf8');
+  const quoted = [...new Set([...md.matchAll(/"([^"]+@\*)"/g)].map((m) => m[1]))];
+  const missing = quoted.filter((k) => !exts[k]);
+  if (missing.length) throw new Error(`README quotes ${missing.length} key(s) absent from the dataset: ${missing.join(', ')}`);
+  return `${quoted.length} quoted keys`;
+});
+
 // --------------------------------------------- generator against a consumer
 
 for (const rel of ['dist/yarnrc.yml', 'dist/pnpm-workspace.yaml']) {
