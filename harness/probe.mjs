@@ -68,8 +68,16 @@ if (arg('packages')) {
 }
 
 if (targets.length === 0) {
-  console.error('probe.mjs: nothing selected');
-  process.exit(2);
+  // An explicit selector that matches nothing is a mistake worth failing on. An
+  // empty review QUEUE is not: it is what a clean dataset looks like, and it is
+  // what a reduced-corpus run produces, so failing there broke the workflow's own
+  // top=300 smoke test at a step that had nothing to do.
+  if (arg('packages')) {
+    console.error(`probe.mjs: no findings match --packages ${arg('packages')}`);
+    process.exit(2);
+  }
+  console.error('probe.mjs: the review queue is empty, nothing to probe');
+  process.exit(0);
 }
 
 // A Yarn release is downloaded once and reused by every cell. Resolving it per
