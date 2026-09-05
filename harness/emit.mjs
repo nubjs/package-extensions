@@ -33,9 +33,20 @@ const comment = banner.map((l) => `# ${l}`).join('\n');
 mkdirSync(resolve(ROOT, 'dist'), { recursive: true });
 
 // Yarn Berry — merge into the project's `.yarnrc.yml`.
-write('dist/yarnrc.yml', `${comment}\n\n${yamlBody}`);
+//
+// The `logFilters` block is not decoration. Yarn reports YN0068 for every
+// extension whose package is absent from the tree, twice per entry, so a
+// general-purpose database of this size buries a real install log under
+// thousands of lines that carry no information — measured at 2,943 warnings in
+// a 2,957-line log for a project with two dependencies. Discarding that one
+// code brought the same install to 14 lines with the extensions still applied.
+// YN0069, which reports an extension a package has since made redundant, is
+// left on: that one is actionable, and it is how an entry gets retired.
+const logFilters = YAML.stringify({ logFilters: [{ code: 'YN0068', level: 'discard' }] }, { lineWidth: 0 });
+write('dist/yarnrc.yml', `${comment}\n\n${logFilters}\n${yamlBody}`);
 
-// pnpm 11+ — merge into `pnpm-workspace.yaml`.
+// pnpm 10 and 11 — merge into `pnpm-workspace.yaml`. No log filter: pnpm is
+// silent about an extension that matches nothing.
 write('dist/pnpm-workspace.yaml', `${comment}\n\n${yamlBody}`);
 
 // pnpm 10 and earlier — the `pnpm` block of the root `package.json`, which is

@@ -39,6 +39,15 @@ keys were ignored: "pnpm.packageExtensions".
 
 Both package managers merge an extension *under* the real manifest, so an entry for a package that has since declared the dependency itself loses to the manifest. A stale entry is a no-op in pnpm and a `YN0069` warning in Yarn, never an error.
 
+The Yarn file also carries a `logFilters` block, which is load-bearing at this size. Yarn reports `YN0068` for every entry whose package is absent from your tree, twice per entry, so a database covering 888 packages buries the install log:
+
+| Install of a two-dependency project | Log lines | `YN0068` |
+| --- | --- | --- |
+| dataset pasted as-is | 2,957 | 2,943 |
+| with the `logFilters` block | 14 | 0 |
+
+The extensions still apply either way. `YN0069` is deliberately left on — that one reports an entry a package has since made redundant, which is actionable, and is how an entry gets retired. pnpm needs no filter; it is silent about an extension that matches nothing.
+
 npm has no equivalent setting and needs none. Its flat layout is what makes these imports resolve in the first place.
 
 ### What it fixes, end to end

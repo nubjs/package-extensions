@@ -3,6 +3,10 @@
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
+logFilters:
+  - code: YN0068
+    level: discard
+
 packageExtensions:
   "@acemir/cssom@*":
     peerDependencies:
