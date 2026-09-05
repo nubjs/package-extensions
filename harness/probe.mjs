@@ -111,18 +111,41 @@ console.log(`\nwrote ${outPath}`);
 
 // A confirmed probe is stronger evidence than anything reading the source can
 // produce: the resolver itself refused, and named both sides. So `--promote`
-// writes those verdicts straight into the reviewed overrides, where they become
-// real `dependencies` entries. It only ever ADDS — an existing decision, human
-// or otherwise, is never overwritten by a later run.
+// writes those verdicts into the reviewed overrides, where they become real
+// `dependencies` entries. It only ever ADDS — an existing decision, human or
+// otherwise, is never overwritten by a later run.
+//
+// BUT A CONFIRMED PROBE ANSWERS ONLY HALF THE QUESTION. It proves the import is
+// real and unguarded; it says nothing about who should supply the target, and
+// promoting on the strength of it alone put `dependencies: {react: "*"}` on
+// `react-csv@*` — a true finding and a fix that would break every consumer with
+// a second React. So a promotion also requires the policy to have marked the row
+// a review CANDIDATE, which is what excludes frameworks and host-provided names.
+// Refusals are printed rather than dropped: a confirmed throw against a
+// consumer-supplied target is still worth knowing about.
 if (process.argv.includes('--promote')) {
   const path = resolve(ROOT, 'harness/overrides.json');
   const overrides = JSON.parse(readFileSync(path, 'utf8'));
+  const candidateTargets = new Set(doc.candidates.map((c) => `${c.package} ${c.target}`));
   let added = 0;
+  let settled = 0;
+  const refused = [];
   for (const r of results) {
     if (r.verdict !== 'confirmed') continue;
     for (const target of r.confirmed) {
+      // An existing override is a decision already made, not a refusal. Both
+      // reach this point as non-candidates, and reporting them together claims
+      // "the policy does not let this become a dependency" about entries that
+      // already ARE dependencies from an earlier run.
+      if (overrides[r.package]?.[target]) {
+        settled++;
+        continue;
+      }
+      if (!candidateTargets.has(`${r.package} ${target}`)) {
+        refused.push(`${r.package} -> ${target}`);
+        continue;
+      }
       overrides[r.package] ??= {};
-      if (overrides[r.package][target]) continue;
       overrides[r.package][target] = {
         field: 'dependency',
         why: `probe ${r.version}: importing the package under Yarn PnP with pnpFallbackMode none throws "tried to access ${target}"`,
@@ -132,6 +155,11 @@ if (process.argv.includes('--promote')) {
   }
   writeFileSync(path, `${JSON.stringify(overrides, null, 2)}\n`);
   console.log(`promoted ${added} confirmed finding(s) into harness/overrides.json`);
+  if (settled) console.log(`${settled} confirmed finding(s) already carry a decision and were left alone`);
+  if (refused.length) {
+    console.log(`refused ${refused.length} confirmed finding(s) the policy does not let become a dependency:`);
+    for (const r of refused) console.log(`  ${r}`);
+  }
 }
 
 /**
@@ -185,18 +213,34 @@ console.log(JSON.stringify(out));`
     }
 
     // Yarn's message names the accessed package, which is what makes this a
-    // measurement rather than an inference.
+    // measurement rather than an inference. It has TWO forms and they mean
+    // opposite things, so the parenthetical is part of the signal:
+    //
+    //   X tried to access Y, but it isn't declared in its dependencies
+    //   X tried to access Y (a peer dependency) but it isn't provided by ...
+    //
+    // The first is an undeclared import — a real finding. The second is a peer
+    // the package DID declare, behaving exactly as designed under a fixture that
+    // deliberately provides nothing. Matching only `tried to access` conflates
+    // them, which made `accessedButNotPredicted` read as a list of detector
+    // misses when five of the six sampled were declared peers.
     const accessed = new Set();
+    const unprovidedPeers = new Set();
     for (const r of parsed) {
       if (r.ok) continue;
-      for (const m of r.message.matchAll(/tried to access ([@\w./-]+)/g)) accessed.add(m[1]);
+      for (const m of r.message.matchAll(/tried to access ([@\w./-]+)(\s*\(a peer dependency\))?/g)) {
+        (m[2] ? unprovidedPeers : accessed).add(m[1]);
+      }
     }
     const confirmed = base.expected.filter((t) => accessed.has(t));
     return {
       ...base,
       verdict: confirmed.length ? 'confirmed' : 'notOnImport',
       confirmed,
+      // Undeclared imports the detector did not predict — a genuine false-negative
+      // signal, now that declared-but-unprovided peers are counted separately.
       accessedButNotPredicted: [...accessed].filter((t) => !base.expected.includes(t)),
+      unprovidedPeers: [...unprovidedPeers],
       specifiersTried: specifiers.length,
     };
   } catch (err) {

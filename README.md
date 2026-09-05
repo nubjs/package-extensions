@@ -132,12 +132,35 @@ Which of the two a finding needs is not decidable from the finding. Generating `
 
 The last one is the sharpest. RequireJS's published bundle calls `define('lang', …)` and requires the id back, so the specifier is indistinguishable from a package reference — and an unrelated package named `lang` really is published, so even a registry check passes it. Installing it would put a stranger's code into every consumer's tree.
 
-So every finding ships as an optional peer, which is inert when the consumer lacks the target but never wrong. A `dependencies` entry comes only from [`harness/overrides.json`](harness/overrides.json), where each one records what reading the package showed. The 160 candidates the policy would otherwise promote are listed under `candidates`, which is the review queue. Read one with the source in front of you:
+So every finding ships as an optional peer, which is inert when the consumer lacks the target but never wrong. A `dependencies` entry comes only from [`harness/overrides.json`](harness/overrides.json), where each one records the evidence behind it. The 141 findings the policy would otherwise promote are listed under `candidates`, which is the review queue. Read one with the source in front of you:
 
 ```sh
 node harness/inspect.mjs @firebase/database @firebase/app
 node harness/inspect.mjs --queue 20
 ```
+
+### How an entry earns a dependency
+
+Reading source produces a claim. [`harness/probe.mjs`](harness/probe.mjs) turns it into a reproduction: it installs the offending package *alone* under Yarn Plug'n'Play with `pnpFallbackMode: none`, imports every entry point, and reads the resolver's own verdict.
+
+```
+@nrwl/devkit tried to access tslib, but it isn't declared in its
+dependencies; this makes the require call ambiguous and unsound.
+```
+
+Yarn names both sides, so the result is a measurement rather than a judgement. It also refutes: a specifier that only looks like a package never throws, which is how the `requirejs` class rules itself out. Confirmed findings are promoted automatically and the run is committed, so the evidence is the error string the resolver produced.
+
+Two error forms come back and they mean opposite things. The one above is an undeclared import. The other — `tried to access X (a peer dependency) but it isn't provided by your application` — is a peer the package *did* declare, behaving correctly under a fixture that deliberately provides nothing, and it is counted separately.
+
+### The framework floor
+
+A confirmed throw proves the import is real. It says nothing about who should supply the target, and treating it as though it did is how `react-csv@*` shipped `dependencies: {react: "*"}` for one build.
+
+That entry was right about the import — react-csv requires react with only a devDependency declared, and the probe reproduced the failure. As a fix it was worse than the bug: a private React inside a component library gives the consumer two copies of the hook dispatcher and the context registry, so hooks throw and providers miss their consumers, at runtime instead of at resolve time.
+
+Targets a second copy of *breaks* can therefore never become a dependency, by any route — not a reviewed override, not a confirmed probe. Frameworks, plugin hosts that compare identity across the plugin boundary, and `graphql` are on that list; a gate refuses the build if one appears. This is narrower than the set of targets a project supplies for itself: `@babel/runtime` is stateless helpers, so a duplicate is merely wasteful, which is why Yarn's own database ships it as a dependency for thirty-odd Gatsby packages.
+
+Host-provided names are refused for a different reason. VS Code injects `require('vscode')` at runtime, and npm has a deprecated package squatting the name, so the registry check and the probe both pass it while no install can ever satisfy it.
 
 ### Version ranges
 

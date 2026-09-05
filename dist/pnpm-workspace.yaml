@@ -1355,15 +1355,17 @@ packageExtensions:
   "@nx/eslint-plugin@*":
     dependencies:
       "@eslint/js": "*"
-      angular-eslint: "*"
       eslint-plugin-import: "*"
     peerDependencies:
+      angular-eslint: "*"
       eslint-plugin-jsx-a11y: "*"
       eslint-plugin-react: "*"
       eslint-plugin-react-hooks: "*"
       typescript: "*"
       typescript-eslint: "*"
     peerDependenciesMeta:
+      angular-eslint:
+        optional: true
       eslint-plugin-jsx-a11y:
         optional: true
       eslint-plugin-react:
@@ -5748,21 +5750,20 @@ packageExtensions:
       type-detect:
         optional: true
   nitro@*:
-    peerDependencies:
+    dependencies:
       croner: "*"
+      scule: "*"
+      ufo: "*"
+      unctx: "*"
+    peerDependencies:
       defu: "*"
       destr: "*"
       get-port-please: "*"
       rendu: "*"
-      scule: "*"
       source-map: "*"
-      ufo: "*"
-      unctx: "*"
       youch: "*"
       youch-core: "*"
     peerDependenciesMeta:
-      croner:
-        optional: true
       defu:
         optional: true
       destr:
@@ -5771,13 +5772,7 @@ packageExtensions:
         optional: true
       rendu:
         optional: true
-      scule:
-        optional: true
       source-map:
-        optional: true
-      ufo:
-        optional: true
-      unctx:
         optional: true
       youch:
         optional: true
@@ -5892,11 +5887,8 @@ packageExtensions:
       typescript:
         optional: true
   object.hasown@*:
-    peerDependencies:
+    dependencies:
       call-bind: "*"
-    peerDependenciesMeta:
-      call-bind:
-        optional: true
   ofetch@*:
     peerDependencies:
       undici: "*"
@@ -6558,11 +6550,8 @@ packageExtensions:
       hast:
         optional: true
   string.prototype.codepointat@*:
-    peerDependencies:
+    dependencies:
       define-properties: "*"
-    peerDependenciesMeta:
-      define-properties:
-        optional: true
   supercluster@*:
     peerDependencies:
       geojson: "*"
@@ -6768,11 +6757,8 @@ packageExtensions:
       retry:
         optional: true
   typed-array-byte-length@*:
-    peerDependencies:
+    dependencies:
       available-typed-arrays: "*"
-    peerDependenciesMeta:
-      available-typed-arrays:
-        optional: true
   typed-array-byte-offset@*:
     peerDependencies:
       possible-typed-array-names: "*"
@@ -6801,11 +6787,8 @@ packageExtensions:
       vscode-jsonrpc: ^5.0.1
       vscode-languageserver-protocol: ^3.15.0
   uglify-to-browserify@*:
-    peerDependencies:
+    dependencies:
       uglify-js: "*"
-    peerDependenciesMeta:
-      uglify-js:
-        optional: true
   unfetch@*:
     peerDependencies:
       node-fetch: "*"
@@ -7098,11 +7081,8 @@ packageExtensions:
       eslint:
         optional: true
   yaml-language-server@*:
-    peerDependencies:
+    dependencies:
       vscode-languageserver-protocol: "*"
-    peerDependenciesMeta:
-      vscode-languageserver-protocol:
-        optional: true
   yeoman-environment@*:
     peerDependencies:
       yeoman-generator: "*"

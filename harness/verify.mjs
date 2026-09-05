@@ -9,11 +9,13 @@
 // against a real CONSUMER parser, or refuses a document that is structurally
 // fine and empty.
 
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 
 import YAML from 'yaml';
 import semver from 'semver';
+
+import { mustNotBeDependency } from './policy.mjs';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname), '..');
 const failures = [];
@@ -127,6 +129,43 @@ check('no target is emitted as both a dependency and a peer', () => {
     if (both.length) throw new Error(`${key}: ${both.join(', ')} in both dependencies and peerDependencies`);
   }
   return 'fields are disjoint';
+});
+
+check('the harness sources are text', () => {
+  // A stray NUL byte makes git call a source file binary, so its diff stops
+  // rendering and a review sees "Binary files differ" instead of the change.
+  // One reached `probe.mjs` inside a template literal, where it separated two
+  // interpolations consistently enough that every test still passed.
+  const bad = [];
+  for (const f of readdirSync(resolve(ROOT, 'harness'))) {
+    if (!f.endsWith('.mjs') && !f.endsWith('.json')) continue;
+    const buf = readFileSync(resolve(ROOT, 'harness', f));
+    const n = buf.reduce((acc, b) => acc + (b === 0 ? 1 : 0), 0);
+    if (n) bad.push(`${f} (${n})`);
+  }
+  if (bad.length) throw new Error(`NUL bytes in ${bad.join(', ')}`);
+  return 'no NUL bytes';
+});
+
+check('no framework or host-provided target is emitted as a dependency', () => {
+  // The most damaging entry this dataset can carry, and the one an install probe
+  // actively argues FOR. A component library that requires `react` without
+  // declaring it is a true finding, and `dependencies: {react: "*"}` is still the
+  // wrong fix: the consumer gets a second React, so hooks and context break at
+  // runtime rather than at resolve time. `react-csv@*` shipped exactly that for
+  // one build, promoted on a correct probe result.
+  // Our own entries only. Yarn's rules are carried verbatim by contract, so a
+  // gate that judged them would be asserting against the no-regression promise
+  // one check above it.
+  const bad = [];
+  for (const [key, ext] of Object.entries(exts)) {
+    if (yarnKeys.has(key)) continue;
+    for (const target of Object.keys(ext.dependencies ?? {})) {
+      if (mustNotBeDependency(target)) bad.push(`${key} -> ${target}`);
+    }
+  }
+  if (bad.length) throw new Error(`${bad.length} consumer-supplied target(s) emitted as dependencies: ${bad.join(', ')}`);
+  return 'frameworks and host modules ship as peers only';
 });
 
 check('only the four fields both package managers apply are used', () => {

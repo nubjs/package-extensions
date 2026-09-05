@@ -2628,10 +2628,10 @@ export const packageExtensions = [
   {
    "dependencies": {
     "@eslint/js": "*",
-    "angular-eslint": "*",
     "eslint-plugin-import": "*"
    },
    "peerDependencies": {
+    "angular-eslint": "*",
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
@@ -2639,6 +2639,9 @@ export const packageExtensions = [
     "typescript-eslint": "*"
    },
    "peerDependenciesMeta": {
+    "angular-eslint": {
+     "optional": true
+    },
     "eslint-plugin-jsx-a11y": {
      "optional": true
     },
@@ -11254,23 +11257,22 @@ export const packageExtensions = [
  [
   "nitro@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "croner": "*",
+    "scule": "*",
+    "ufo": "*",
+    "unctx": "*"
+   },
+   "peerDependencies": {
     "defu": "*",
     "destr": "*",
     "get-port-please": "*",
     "rendu": "*",
-    "scule": "*",
     "source-map": "*",
-    "ufo": "*",
-    "unctx": "*",
     "youch": "*",
     "youch-core": "*"
    },
    "peerDependenciesMeta": {
-    "croner": {
-     "optional": true
-    },
     "defu": {
      "optional": true
     },
@@ -11283,16 +11285,7 @@ export const packageExtensions = [
     "rendu": {
      "optional": true
     },
-    "scule": {
-     "optional": true
-    },
     "source-map": {
-     "optional": true
-    },
-    "ufo": {
-     "optional": true
-    },
-    "unctx": {
      "optional": true
     },
     "youch": {
@@ -11501,13 +11494,8 @@ export const packageExtensions = [
  [
   "object.hasown@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "call-bind": "*"
-   },
-   "peerDependenciesMeta": {
-    "call-bind": {
-     "optional": true
-    }
    }
   }
  ],
@@ -12849,13 +12837,8 @@ export const packageExtensions = [
  [
   "string.prototype.codepointat@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "define-properties": "*"
-   },
-   "peerDependenciesMeta": {
-    "define-properties": {
-     "optional": true
-    }
    }
   }
  ],
@@ -13204,13 +13187,8 @@ export const packageExtensions = [
  [
   "typed-array-byte-length@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "available-typed-arrays": "*"
-   },
-   "peerDependenciesMeta": {
-    "available-typed-arrays": {
-     "optional": true
-    }
    }
   }
  ],
@@ -13273,13 +13251,8 @@ export const packageExtensions = [
  [
   "uglify-to-browserify@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "uglify-js": "*"
-   },
-   "peerDependenciesMeta": {
-    "uglify-js": {
-     "optional": true
-    }
    }
   }
  ],
@@ -13869,13 +13842,8 @@ export const packageExtensions = [
  [
   "yaml-language-server@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "vscode-languageserver-protocol": "*"
-   },
-   "peerDependenciesMeta": {
-    "vscode-languageserver-protocol": {
-     "optional": true
-    }
    }
   }
  ],

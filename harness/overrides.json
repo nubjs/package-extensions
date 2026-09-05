@@ -170,8 +170,8 @@
       "why": "probe 23.2.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @eslint/js\""
     },
     "angular-eslint": {
-      "field": "dependency",
-      "why": "probe 23.2.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access angular-eslint\""
+      "field": "peer",
+      "why": "required only from dist/src/flat-configs/angular.js and angular-template.js, which a non-Angular consumer never loads. The consumer who needs it picked Angular and already has it."
     },
     "eslint-plugin-import": {
       "field": "dependency",
@@ -194,6 +194,66 @@
     "caniuse-lite": {
       "field": "dependency",
       "why": "probe 7.0.2: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access caniuse-lite\""
+    }
+  },
+  "nitro": {
+    "croner": {
+      "field": "dependency",
+      "why": "probe 3.0.260903-beta: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access croner\""
+    },
+    "scule": {
+      "field": "dependency",
+      "why": "probe 3.0.260903-beta: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access scule\""
+    },
+    "ufo": {
+      "field": "dependency",
+      "why": "probe 3.0.260903-beta: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access ufo\""
+    },
+    "unctx": {
+      "field": "dependency",
+      "why": "probe 3.0.260903-beta: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access unctx\""
+    }
+  },
+  "object.hasown": {
+    "call-bind": {
+      "field": "dependency",
+      "why": "probe 1.1.4: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access call-bind\""
+    }
+  },
+  "react-csv": {
+    "react": {
+      "field": "peer",
+      "why": "react-csv really does require react with only a devDependency declared, and the probe confirms the throw — but a dependency would give the consumer a second React copy and break hooks and context. A framework is supplied by the consumer however strong the evidence that the import is real."
+    }
+  },
+  "string.prototype.codepointat": {
+    "define-properties": {
+      "field": "dependency",
+      "why": "probe 1.0.1: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access define-properties\""
+    }
+  },
+  "typed-array-byte-length": {
+    "available-typed-arrays": {
+      "field": "dependency",
+      "why": "probe 1.0.3: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access available-typed-arrays\""
+    }
+  },
+  "uglify-to-browserify": {
+    "uglify-js": {
+      "field": "dependency",
+      "why": "probe 2.1.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access uglify-js\""
+    }
+  },
+  "vscode-languageclient": {
+    "vscode": {
+      "field": "peer",
+      "why": "require(\"vscode\") is injected by the VS Code extension host, never resolved from node_modules, so no install fixes it. The name is also taken on npm by a deprecated helper, so the registry check and the install probe both pass it."
+    }
+  },
+  "yaml-language-server": {
+    "vscode-languageserver-protocol": {
+      "field": "dependency",
+      "why": "probe 1.24.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access vscode-languageserver-protocol\""
     }
   }
 }

@@ -54,8 +54,60 @@ const CONSUMER_SUPPLIED = [
   'nx', 'storybook', '@storybook/', '@nx/', '@nrwl/',
 ];
 
+/**
+ * Targets supplied by a host process, which no installer can provide.
+ *
+ * `require('vscode')` is injected by the VS Code extension host at runtime; it
+ * is not resolved from `node_modules` and no install can satisfy it. The name is
+ * also taken on npm by a deprecated helper package, so both the registry check
+ * and the install probe pass it — the same trap as requirejs's `define('lang')`.
+ * Emitting a dependency here installs a stranger's code and still does not fix
+ * the import.
+ */
+const HOST_PROVIDED = ['vscode'];
+
 function isConsumerSupplied(target) {
   return CONSUMER_SUPPLIED.some((entry) => (entry.endsWith('/') ? target.startsWith(entry) : target === entry));
+}
+
+/**
+ * Targets a second copy of BREAKS, as opposed to merely wastes space on.
+ *
+ * This is the floor for `dependencies`, and it is deliberately much narrower
+ * than `CONSUMER_SUPPLIED`. The two lists answer different questions. Being
+ * consumer-supplied is about not bloating an install: `@babel/runtime` is
+ * something a project owns, but it is stateless helpers, so a duplicate is
+ * harmless — which is exactly why Yarn's own database ships
+ * `dependencies: {'@babel/runtime': …}` for thirty-odd Gatsby packages, and why
+ * a floor built on `CONSUMER_SUPPLIED` failed on Yarn's curated rules.
+ *
+ * The targets here are the ones where duplication is a RUNTIME FAULT: a second
+ * React means two copies of the hook dispatcher and the context registry, so
+ * hooks throw and providers silently miss their consumers. Same shape for the
+ * other frameworks, for the plugin hosts that compare constructor identity, and
+ * for `graphql`, which throws on cross-realm schema objects by name.
+ *
+ * Being a floor is the point: it outranks a reviewed override and the install
+ * probe alike. Both answer "is the import real?" — the probe answers it very
+ * well — and neither answers "who should supply the target?". Conflating them
+ * put `dependencies: {react: "*"}` on `react-csv@*` for one build, off a
+ * perfectly correct probe result.
+ */
+const DUPLICATION_BREAKS = [
+  // A second copy means a second hook dispatcher, context registry or scheduler.
+  'react', 'react-dom', 'react-native', 'vue', 'svelte', 'preact', 'solid-js', 'next', 'nuxt',
+  'expo', 'electron', '@angular/', '@vue/runtime-core', '@vue/runtime-dom',
+  // Plugin hosts that compare identity across the plugin boundary.
+  'eslint', 'typescript', 'webpack', 'vite', 'rollup', 'jest', 'vitest', 'nx',
+  // Throws by name on objects from another copy of itself.
+  'graphql',
+];
+
+export function mustNotBeDependency(target) {
+  return (
+    HOST_PROVIDED.includes(target) ||
+    DUPLICATION_BREAKS.some((entry) => (entry.endsWith('/') ? target.startsWith(entry) : target === entry))
+  );
 }
 
 /**
@@ -166,9 +218,20 @@ export function fieldFor(row, overrides = {}) {
     // someone made it belongs beside the decision.
     const field = typeof override === 'string' ? override : override.field;
     const why = typeof override === 'string' ? 'reviewed override' : override.why;
+    if (field === 'dependency' && mustNotBeDependency(row.target)) {
+      return {
+        field: 'peer',
+        candidate: false,
+        reason: `override asked for a dependency, refused: ${row.target} is supplied by the consumer or its host, so a private copy would break rather than fix it`,
+      };
+    }
     return { field, candidate: false, reason: why };
   }
   if (row.class !== 'runtime') return { field: 'peer', candidate: false, reason: REASONS[row.class] };
+  // The broad list, not the floor. Whether to put a target in front of a
+  // reviewer is a question about install bloat, so it covers everything a
+  // project supplies itself; whether a reviewer may then choose `dependencies`
+  // is a question about breakage, and only `mustNotBeDependency` answers that.
   if (isConsumerSupplied(row.target)) return { field: 'peer', candidate: false, reason: 'target is a framework or tool a consumer installs itself' };
   return {
     field: 'peer',

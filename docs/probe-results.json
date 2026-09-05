@@ -5,10 +5,10 @@
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
-    "confirmed": 9,
-    "notOnImport": 51,
-    "installFailed": 0,
-    "inconclusive": 0
+    "confirmed": 4,
+    "notOnImport": 74,
+    "installFailed": 1,
+    "inconclusive": 2
   },
   "results": [
     {
@@ -20,6 +20,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -30,35 +31,10 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "graphql"
       ],
-      "specifiersTried": 1
-    },
-    {
-      "package": "@aws-sdk/eventstream-serde-node",
-      "version": "3.374.0",
-      "expected": [
-        "@smithy/eventstream-serde-node"
-      ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "@smithy/eventstream-serde-node"
-      ],
-      "accessedButNotPredicted": [],
-      "specifiersTried": 1
-    },
-    {
-      "package": "@edge-runtime/ponyfill",
-      "version": "4.0.0",
-      "expected": [
-        "@edge-runtime/primitives"
-      ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "@edge-runtime/primitives"
-      ],
-      "accessedButNotPredicted": [],
       "specifiersTried": 1
     },
     {
@@ -70,6 +46,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -81,6 +58,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -92,19 +70,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
-      "specifiersTried": 1
-    },
-    {
-      "package": "@globalart/ddd",
-      "version": "4.2.0",
-      "expected": [
-        "date-fns"
-      ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "date-fns"
-      ],
-      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -115,23 +81,10 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "discord.js"
       ],
-      "specifiersTried": 1
-    },
-    {
-      "package": "@jscpd/html-reporter",
-      "version": "4.2.5",
-      "expected": [
-        "@jscpd/core",
-        "@jscpd/finder"
-      ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "@jscpd/finder"
-      ],
-      "accessedButNotPredicted": [],
       "specifiersTried": 1
     },
     {
@@ -146,6 +99,7 @@
         "ci-info"
       ],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -159,6 +113,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -177,7 +132,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "zod"
       ],
       "specifiersTried": 26
@@ -191,6 +147,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -201,7 +158,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "@angular/common"
       ],
       "specifiersTried": 1
@@ -214,7 +172,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "react"
       ],
       "specifiersTried": 1
@@ -229,7 +188,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "vue"
       ],
       "specifiersTried": 1
@@ -246,7 +206,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "nx"
       ],
       "specifiersTried": 9
@@ -270,7 +231,8 @@
         "angular-eslint",
         "eslint-plugin-import"
       ],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "nx"
       ],
       "specifiersTried": 7
@@ -284,7 +246,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "nx"
       ],
       "specifiersTried": 7
@@ -299,7 +262,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "nx"
       ],
       "specifiersTried": 8
@@ -316,6 +280,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -329,6 +294,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -342,6 +308,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -353,6 +320,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -365,6 +333,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -380,7 +349,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "react"
       ],
       "specifiersTried": 1
@@ -393,7 +363,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "storybook",
         "next",
         "react",
@@ -413,6 +384,7 @@
       "accessedButNotPredicted": [
         "@swagger-api/apidom-core"
       ],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -434,19 +406,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
-      "specifiersTried": 1
-    },
-    {
-      "package": "@whiskeysockets/baileys",
-      "version": "7.0.0-rc14",
-      "expected": [
-        "long"
-      ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "long"
-      ],
-      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -458,6 +418,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -479,32 +440,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
-      "specifiersTried": 1
-    },
-    {
-      "package": "echarts-for-react",
-      "version": "3.0.6",
-      "expected": [
-        "tslib"
-      ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "tslib"
-      ],
-      "accessedButNotPredicted": [],
-      "specifiersTried": 1
-    },
-    {
-      "package": "eslint-plugin-compat",
-      "version": "7.0.2",
-      "expected": [
-        "caniuse-lite"
-      ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "caniuse-lite"
-      ],
-      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -516,6 +452,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -527,7 +464,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "expo"
       ],
       "specifiersTried": 5
@@ -541,6 +479,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -552,6 +491,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -562,7 +502,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "expo"
       ],
       "specifiersTried": 1
@@ -576,6 +517,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -588,6 +530,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -599,6 +542,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -610,6 +554,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -621,6 +566,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -632,6 +578,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -643,6 +590,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -653,7 +601,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "expo"
       ],
       "specifiersTried": 5
@@ -667,7 +616,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "expo"
       ],
       "specifiersTried": 5
@@ -681,6 +631,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -694,6 +645,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -705,6 +657,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -716,6 +669,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -727,6 +681,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -738,6 +693,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -749,6 +705,7 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     },
     {
@@ -759,7 +716,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "expo"
       ],
       "specifiersTried": 1
@@ -772,7 +730,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "expo"
       ],
       "specifiersTried": 1
@@ -785,7 +744,8 @@
       ],
       "verdict": "notOnImport",
       "confirmed": [],
-      "accessedButNotPredicted": [
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
         "react"
       ],
       "specifiersTried": 1
@@ -799,6 +759,426 @@
       "verdict": "notOnImport",
       "confirmed": [],
       "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-sharing",
+      "version": "57.0.18",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-system-ui",
+      "version": "57.0.3",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-updates",
+      "version": "57.0.21",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-video",
+      "version": "57.0.3",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "expo-web-browser",
+      "version": "57.0.2",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "firebase-tools",
+      "version": "15.29.0",
+      "expected": [
+        "astro",
+        "firebase-functions"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "http-call",
+      "version": "5.3.0",
+      "expected": [
+        "chalk"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "jest",
+      "version": "30.5.1",
+      "expected": [
+        "jest-config"
+      ],
+      "verdict": "inconclusive",
+      "detail": "Command failed: node .yarn/releases/yarn.cjs node probe.cjs\n"
+    },
+    {
+      "package": "knex",
+      "version": "3.3.0",
+      "expected": [
+        "oracledb"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "lerna",
+      "version": "10.0.1",
+      "expected": [
+        "chalk"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "livereload-js",
+      "version": "4.0.2",
+      "expected": [
+        "core-js"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "lolex",
+      "version": "6.0.0",
+      "expected": [
+        "type-detect"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "nise",
+      "version": "6.1.5",
+      "expected": [
+        "inherits",
+        "type-detect"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "nitro",
+      "version": "3.0.260903-beta",
+      "expected": [
+        "croner",
+        "defu",
+        "destr",
+        "get-port-please",
+        "rendu",
+        "scule",
+        "source-map",
+        "ufo",
+        "unctx",
+        "youch",
+        "youch-core"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "croner",
+        "scule",
+        "ufo",
+        "unctx"
+      ],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 17
+    },
+    {
+      "package": "nx",
+      "version": "23.2.0",
+      "expected": [
+        "@angular-devkit/build-angular",
+        "@angular/build",
+        "@angular/cli",
+        "@nx/angular",
+        "@nx/conformance",
+        "@nx/js",
+        "@nx/key",
+        "@nx/powerpack-conformance",
+        "@nx/powerpack-license",
+        "nx-cloud",
+        "oxfmt",
+        "prettier",
+        "ts-node",
+        "typescript"
+      ],
+      "verdict": "inconclusive",
+      "detail": "fatal: not a git repository (or any of the parent directories): .git\n"
+    },
+    {
+      "package": "openapi-sampler",
+      "version": "1.7.5",
+      "expected": [
+        "foreach",
+        "json-schema"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "playwright-core",
+      "version": "1.63.0",
+      "expected": [
+        "bufferutil",
+        "chromium-bidi",
+        "electron",
+        "kerberos",
+        "utf-8-validate",
+        "zod"
+      ],
+      "verdict": "installFailed",
+      "detail": "➤ YN0000: · Yarn 4.18.0\n➤ YN0000: ┌ Resolution step\n➤ YN0016: │ playwright-core@npm:1.63.0: All versions satisfying \"1.63.0\" are quarantined\n➤ YN0000: └ Completed\n➤ YN0000: · Failed with errors in 0s 41ms\n"
+    },
+    {
+      "package": "prettier-plugin-organize-imports",
+      "version": "4.3.0",
+      "expected": [
+        "@volar/typescript",
+        "@vue/language-core"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "prettier"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "react-csv",
+      "version": "2.2.2",
+      "expected": [
+        "prop-types",
+        "react"
+      ],
+      "verdict": "confirmed",
+      "confirmed": [
+        "react"
+      ],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "react-native",
+      "version": "0.87.1",
+      "expected": [
+        "@react-native-community/cli"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 5
+    },
+    {
+      "package": "react-native-reanimated",
+      "version": "4.6.0",
+      "expected": [
+        "react-native-svg",
+        "react-native-web"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "react-qr-code",
+      "version": "2.2.0",
+      "expected": [
+        "react-native-svg"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "redoc",
+      "version": "2.5.3",
+      "expected": [
+        "call-me-maybe",
+        "fast-safe-stringify",
+        "yaml"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "specifiersTried": 1
+    },
+    {
+      "package": "requirejs",
+      "version": "2.3.8",
+      "expected": [
+        "env",
+        "lang",
+        "logger",
+        "optimize",
+        "parse",
+        "pragma",
+        "prim",
+        "source-map",
+        "transform"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "snappy",
+      "version": "7.4.2",
+      "expected": [
+        "@napi-rs/snappy-wasm32-wasi"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "swagger2openapi",
+      "version": "7.0.8",
+      "expected": [
+        "should"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "tldjs",
+      "version": "2.3.2",
+      "expected": [
+        "available-typed-arrays",
+        "call-bind",
+        "call-bind-apply-helpers",
+        "call-bound",
+        "define-data-property",
+        "dunder-proto",
+        "es-define-property",
+        "es-errors",
+        "es-object-atoms",
+        "for-each",
+        "function-bind",
+        "get-intrinsic",
+        "get-proto",
+        "gopd",
+        "has-property-descriptors",
+        "has-symbols",
+        "has-tostringtag",
+        "hasown",
+        "inherits",
+        "is-arguments",
+        "is-callable",
+        "is-generator-function",
+        "is-regex",
+        "is-typed-array",
+        "math-intrinsics",
+        "object-inspect",
+        "possible-typed-array-names",
+        "qs",
+        "safe-regex-test",
+        "set-function-length",
+        "side-channel",
+        "side-channel-list",
+        "side-channel-map",
+        "side-channel-weakmap",
+        "which-typed-array"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "specifiersTried": 1
+    },
+    {
+      "package": "useragent",
+      "version": "2.3.0",
+      "expected": [
+        "request",
+        "yamlparser"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
       "specifiersTried": 1
     }
   ]

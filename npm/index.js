@@ -2630,10 +2630,10 @@ exports.packageExtensions = [
   {
    "dependencies": {
     "@eslint/js": "*",
-    "angular-eslint": "*",
     "eslint-plugin-import": "*"
    },
    "peerDependencies": {
+    "angular-eslint": "*",
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
@@ -2641,6 +2641,9 @@ exports.packageExtensions = [
     "typescript-eslint": "*"
    },
    "peerDependenciesMeta": {
+    "angular-eslint": {
+     "optional": true
+    },
     "eslint-plugin-jsx-a11y": {
      "optional": true
     },
@@ -11256,23 +11259,22 @@ exports.packageExtensions = [
  [
   "nitro@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "croner": "*",
+    "scule": "*",
+    "ufo": "*",
+    "unctx": "*"
+   },
+   "peerDependencies": {
     "defu": "*",
     "destr": "*",
     "get-port-please": "*",
     "rendu": "*",
-    "scule": "*",
     "source-map": "*",
-    "ufo": "*",
-    "unctx": "*",
     "youch": "*",
     "youch-core": "*"
    },
    "peerDependenciesMeta": {
-    "croner": {
-     "optional": true
-    },
     "defu": {
      "optional": true
     },
@@ -11285,16 +11287,7 @@ exports.packageExtensions = [
     "rendu": {
      "optional": true
     },
-    "scule": {
-     "optional": true
-    },
     "source-map": {
-     "optional": true
-    },
-    "ufo": {
-     "optional": true
-    },
-    "unctx": {
      "optional": true
     },
     "youch": {
@@ -11503,13 +11496,8 @@ exports.packageExtensions = [
  [
   "object.hasown@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "call-bind": "*"
-   },
-   "peerDependenciesMeta": {
-    "call-bind": {
-     "optional": true
-    }
    }
   }
  ],
@@ -12851,13 +12839,8 @@ exports.packageExtensions = [
  [
   "string.prototype.codepointat@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "define-properties": "*"
-   },
-   "peerDependenciesMeta": {
-    "define-properties": {
-     "optional": true
-    }
    }
   }
  ],
@@ -13206,13 +13189,8 @@ exports.packageExtensions = [
  [
   "typed-array-byte-length@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "available-typed-arrays": "*"
-   },
-   "peerDependenciesMeta": {
-    "available-typed-arrays": {
-     "optional": true
-    }
    }
   }
  ],
@@ -13275,13 +13253,8 @@ exports.packageExtensions = [
  [
   "uglify-to-browserify@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "uglify-js": "*"
-   },
-   "peerDependenciesMeta": {
-    "uglify-js": {
-     "optional": true
-    }
    }
   }
  ],
@@ -13871,13 +13844,8 @@ exports.packageExtensions = [
  [
   "yaml-language-server@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "vscode-languageserver-protocol": "*"
-   },
-   "peerDependenciesMeta": {
-    "vscode-languageserver-protocol": {
-     "optional": true
-    }
    }
   }
  ],
