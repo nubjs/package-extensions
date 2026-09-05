@@ -242,7 +242,9 @@ console.log(JSON.stringify(out));`
       for (const m of r.message.matchAll(/([@\w./-]+) tried to access ([@\w./-]+)(\s*\(a peer dependency\))?/g)) {
         const [, issuer, target, isPeer] = m;
         if (issuer !== finding.package) {
-          byOtherIssuers.add(`${issuer} -> ${target}`);
+          // Keep the peer distinction here too. Without it this list reads as
+          // seven phantoms when six are framework peers behaving correctly.
+          byOtherIssuers.add(`${issuer} -> ${target}${isPeer ? ' (unprovided peer)' : ''}`);
           continue;
         }
         (isPeer ? unprovidedPeers : accessed).add(target);
