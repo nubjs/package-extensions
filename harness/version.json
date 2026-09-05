@@ -1,0 +1,4 @@
+{
+  "version": "1.0.0",
+  "policy": "Plain semver, matching @yarnpkg/extensions. Patch = a data refresh. Minor/major = a change in the exported shape, which is what a consumer pinning this package actually needs to know about. Bump this file in the release commit; the daily scan does NOT touch it."
+}

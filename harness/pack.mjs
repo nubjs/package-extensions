@@ -20,7 +20,9 @@ const ROOT = resolve(dirname(new URL(import.meta.url).pathname), '..');
 const OUT = resolve(ROOT, 'npm');
 
 const doc = JSON.parse(readFileSync(resolve(ROOT, 'package-extensions.json'), 'utf8'));
-const version = process.argv.includes('--version') ? process.argv[process.argv.indexOf('--version') + 1] : versionFromDate(doc.generated);
+const version = process.argv.includes('--version')
+  ? process.argv[process.argv.indexOf('--version') + 1]
+  : currentVersion();
 
 // Yarn's array-of-pairs, not an object: the selector is NOT unique in Yarn's own
 // database, and an object silently collapses the duplicates.
@@ -114,8 +116,27 @@ Method, per-entry evidence and the ready-to-paste config blocks: https://github.
 
 console.error(`wrote npm/ — @nubjs/extensions@${version}, ${pairs.length} entries`);
 
-/** Date-derived calendar version: the dataset is a snapshot, not an API. */
-function versionFromDate(generated) {
-  const [y, m, d] = generated.split('-');
-  return `${Number(y)}.${Number(m)}.${Number(d)}`;
+/**
+ * Plain semver, matching `@yarnpkg/extensions` — the package this one is a
+ * drop-in replacement for, so the version people read next to it should mean the
+ * same thing.
+ *
+ * Yarn patch-bumps for a data refresh and reserves minor/major for a change in
+ * the exported SHAPE: 2.0.1 through 2.0.7 span two years of list updates, and
+ * every `Array<[selector, data]>` consumer keeps working across all of them. We
+ * match that, so a caret range is safe for anyone tracking the data and a minor
+ * bump is a real signal.
+ *
+ * Deliberately NOT derived from the build date. Calendar versioning was the
+ * first choice here on the grounds that the dataset is a snapshot rather than an
+ * API — but the scan runs daily, and a date-stamped version implies every
+ * rebuild is worth publishing. It also cannot express "the data changed
+ * substantially" versus "the export shape changed", which is exactly the
+ * distinction a consumer pinning this package needs.
+ *
+ * The version lives in `harness/version.json` so a release is a reviewable
+ * one-line commit rather than a side effect of the clock.
+ */
+function currentVersion() {
+  return JSON.parse(readFileSync(resolve(ROOT, 'harness/version.json'), 'utf8')).version;
 }
