@@ -35,16 +35,26 @@ Of Yarn's 159 entries, 98 are outside the top-10,000 corpus, 43 no longer apply 
 | --- | --- | --- |
 | found | 8 | yes, and it did |
 | dynamic specifier | 10 | **no** |
-| literal reference, missed | 4 | in principle |
+| literal reference, missed | 4 | two of them, in principle |
 | target never referenced | 6 | nothing to find |
 
 The agreement figure is **8 of 22**: the six never-referenced edges are excluded from the denominator, because there is nothing in the source for any detector to find.
 
-Four is an upper bound on real misses, not a count. `useragent → semver` is genuine — `features/index.js:7` reads `, semver = require('semver')` against two declared dependencies. `vite-plugin-vue-devtools → vue` is not: its only hits are the string `"vue"` inside minified client bundles under `client/assets/`, which is a payload, not an import.
+The four-edge row is an upper bound, and checking each one halves it. Two are real misses:
+
+- `useragent → semver` — `features/index.js:7` reads `, semver = require('semver')` against two declared dependencies. Nothing in the published tree references that file, so it is reachable only as a legacy deep path.
+- `volar-service-typescript-twoslash-queries → typescript` — the package's entire declaration surface is `create(ts: typeof import('typescript'))`. A type-position `import()` is a distinct syntax from an import statement, and the detector did not read it.
+
+The other two are quoted strings that are not imports at all:
+
+- `vite-plugin-vue-devtools → vue` — the only hits are `"vue"` inside minified client bundles under `client/assets/`, which is payload.
+- `eslint-plugin-import → @typescript-eslint/parser` — the only hit is an object key in `config/typescript.js`, naming a parser for ESLint to resolve. The package requires it nowhere.
+
+Both survive a boundary-correct grep because a grep cannot tell a specifier from any other string. Separating them needs the parse, which is the limit noted at the end of this document.
 
 **Dynamic specifiers are the hard floor.** `eslint-module-utils` loads resolvers as `` tryRequire(`eslint-import-resolver-${name}`) ``; `postcss-syntax` reaches its five syntaxes through `require(id + "/template-parse")` with `id` computed. Only the static prefix survives parsing, and completing it by enumerating the registry is not sound — `postcss-` matches thousands of published names, and over-inclusion breaks installs rather than merely bloating them. Curation is the only correct answer here, which is what Yarn did.
 
-**Never-referenced entries are not a gap at all.** Five edges name a target the published source does not mention anywhere. A detector that stayed silent was right, so these are excluded from the agreement denominator rather than charged against it.
+**Never-referenced entries are not a gap at all.** Six edges name a target the published source does not mention anywhere. A detector that stayed silent was right, so these are excluded from the agreement denominator rather than charged against it.
 
 ## The instrument needed correcting more than the detector did
 
@@ -53,7 +63,7 @@ The first version of this comparison reported 6 of 28 edges. Four separate defec
 1. **It charged the detector for entries whose target the source never names.** Fixed by fetching the published tarball and checking. Six edges moved out of the denominator.
 2. **It matched only `'` and `"` when testing whether a name appears.** A dynamic specifier is written with backticks, so `` `eslint-import-resolver-${name}` `` scored as never-referenced — which *improved* the reported score by hiding four real misses.
 3. **It matched a name without a closing boundary.** `'typescript` also matches `'typescript-eslint'`, so any package whose name prefixes another scored as a literal reference: `eslint-config-react-app` and `react-dev-utils` both reported imports they do not have. Fixed by requiring a closing delimiter or a subpath slash, with the boundary cases unit-tested.
-4. **A quoted string is still not an import.** `vite-plugin-vue-devtools` reaches the literal row because minified bundles under `client/assets/` contain `"vue"` as payload. Unfixed, and the reason the four-edge row is an upper bound. Settling it needs the parse, not a grep.
+4. **A quoted string is still not an import.** `vite-plugin-vue-devtools` reaches the literal row because minified bundles under `client/assets/` contain `"vue"` as payload; `eslint-plugin-import` reaches it because an ESLint config names a parser as an object key. Unfixed, and the reason the four-edge row is an upper bound — half of it, as it turned out. Settling it needs the parse, not a grep.
 
 Three of these four moved the number in *our* favour, and the second and third did so by hiding real misses. That is the direction worth distrusting, and it is why each correction here was made before reporting the figure rather than after.
 
@@ -70,3 +80,4 @@ The bucket assignment for every entry, with per-target detail, is in [`yarn-agre
 ## Changelog
 
 - 2026-09-05 — Initial write-up.
+- 2026-09-05 — Checked all four edges in the "literal reference, missed" row: two are real misses (`useragent → semver`, a legacy deep path; `volar-service-typescript-twoslash-queries → typescript`, a type-position `import()`), two are quoted strings that are not imports.
