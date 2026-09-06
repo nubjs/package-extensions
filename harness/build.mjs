@@ -58,8 +58,20 @@ if (!includeGuarded) rows = rows.filter((r) => r.class !== 'guarded');
 //
 // So the tier is recorded as evidence and not emitted. Withholding costs users
 // nothing, because it has never shipped; emitting it would put `pusher-js ->
-// express` in a public dataset. Delete these three lines once the detector skips
-// a bare specifier that resolves inside the package's own tree.
+// express` in a public dataset.
+//
+// A NOTE ON LIFTING THIS, because the obvious next step is not enough. The self-
+// reference case above was fixed in the detector, and the tier is still not
+// publishable — self-reference was one class of several. Counted over the 246
+// edges of the 2026-09-06 scan: 10 targets are not npm names at all (`MODULE`,
+// `VAR_MODULE_APP` — webpack and turbopack build-time placeholders), 7 are
+// webpack alias namespaces that resolve through a framework's own config and
+// exist on no registry (`@generated/routes`), 64 come from two packages whose
+// tarball carries a bundled `dist` build so every target is already inlined,
+// and at least 21 of the remainder are real published packages referenced only
+// from test or build scaffolding that shipped in the tarball (`@material-ui/core
+// -> enzyme`, `troika-three-text -> rollup-plugin-terser`). The remaining ~144
+// are unaudited. Lifting this needs each class answered, not one fix.
 const withheld = rows.filter((r) => r.class === 'deep-path');
 rows = rows.filter((r) => r.class !== 'deep-path');
 
