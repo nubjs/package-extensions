@@ -21,7 +21,7 @@ packageExtensions:
         optional: true
 ```
 
-**1,055 packages.** The scan covers 9,982 of the top 10,000 and finds 903 with an undeclared dependency across 1,492 edges. The remaining 152 come from Yarn's own database, carried verbatim.
+**812 packages.** The scan covers 9,982 of the top 10,000 and finds 661 with an undeclared dependency across 1,190 edges. The remaining 151 come from Yarn's own database, carried verbatim.
 
 ## Installing
 
@@ -35,7 +35,9 @@ The package is a drop-in replacement for `@yarnpkg/extensions` — same export n
 import { packageExtensions } from '@nubjs/extensions';
 ```
 
-Matching that shape is deliberate. pnpm imports `@yarnpkg/extensions` in `createReadPackageHook` and merges it into **every install unless `ignoreCompatibilityDb` is set**, so its 159 rules already apply on any pnpm project. A replacement that dropped one would break installs that work today, which is why every Yarn rule is carried through and a gate fails the build if one goes missing.
+Matching that shape is deliberate. pnpm imports `@yarnpkg/extensions` in `createReadPackageHook` and merges it into **every install unless `ignoreCompatibilityDb` is set**, so its 159 rules already apply on any pnpm project. A replacement that dropped one would break installs that work today, which is why every Yarn rule is carried through and a gate fails the build if one is weakened.
+
+Carried through means field for field, not by name. 153 of Yarn's 159 entries are byte-identical here; the other six gained a target this scan found for a package Yarn already covers, and none of them changes a range, moves a target between fields, or relaxes a peer Yarn declared as required.
 
 Raw data, if you would rather read it than install it: [`package-extensions.json`](package-extensions.json) at the repo root carries the rules plus per-entry evidence, the review queue, and what was dropped and why.
 
@@ -98,12 +100,12 @@ Each finding is classed by where the import sits. The class decides which manife
 
 | Class | Count | Shape | Field |
 | --- | --- | --- | --- |
-| `types` | 840 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
-| `guarded` | 305 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
-| `runtime` | 217 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
+| `types` | 538 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
+| `guarded` | 303 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
+| `runtime` | 219 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
 | `adapter` | 130 | A non-`.` exports subpath imports a backend the consumer chose. | optional peer |
 
-Two of these are easy to misread. A `types` finding breaks a type-check and nothing else, so it is never treated as a missing runtime dependency — it is also the largest class, and folding it into `runtime` would have put 840 declaration-file imports into the review queue. A `guarded` import misleads in the other direction: the package survives absence by design, but under a strict layout the guard swallows a resolution error that fires even when the consumer *has* the package, so the feature silently stays off.
+Two of these are easy to misread. A `types` finding breaks a type-check and nothing else, so it is never treated as a missing runtime dependency — it is also the largest class, and folding it into `runtime` would have put 538 declaration-file imports into the review queue. A `guarded` import misleads in the other direction: the package survives absence by design, but under a strict layout the guard swallows a resolution error that fires even when the consumer *has* the package, so the feature silently stays off.
 
 ## Why the field differs, measured
 
@@ -187,7 +189,7 @@ Placing all 159 entries of `@yarnpkg/extensions@2.0.7` against this scan:
 | **applicable** | **17** | the rule still applies to what was scanned |
 | optionality-only | 1 | marks an already-declared peer optional, so nothing is undeclared |
 
-Of the 17 applicable entries the detector fully matched 9, partially matched 1, and missed 7, or **8 of 22 edges**. That gap is the honest headline, and [`docs/yarn-agreement.json`](docs/yarn-agreement.json) records every miss.
+Of the 17 applicable entries the detector fully matched 10, partially matched 1, and missed 6, or **9 of 22 edges**. That gap is the honest headline, and [`docs/yarn-agreement.json`](docs/yarn-agreement.json) records every miss.
 
 Six further edges sit outside that denominator, because the published source never names the target at all. Yarn's rules are hand-written and outlive the code that justified them: it carries `notistack@^3.0.0 → csstype`, and notistack 3.0.2 ships eleven files with zero `csstype` references. There is nothing there for a detector to find, so charging it for silence would measure the wrong thing. Ten other edges *are* charged, and are the dynamic-specifier case below — the reference is real, only the name is computed.
 
@@ -198,7 +200,7 @@ A miss is a statement about the detector, not about the dataset. Every Yarn rule
 The causes are known static-analysis limits rather than noise:
 
 - **Dynamic specifiers.** `eslint-module-utils` loads its resolvers as `` tryRequire(`eslint-import-resolver-${name}`) ``, and `postcss-syntax` loads syntaxes the same way. Only a string literal is recorded, so an interpolated name is invisible. This one stays unsolved on purpose: the static prefix is all that survives, and enumerating the registry for packages matching `postcss-` would admit thousands of unrelated names. Over-inclusion breaks installs, so curation is the only sound answer — which is what Yarn did, and what this dataset inherits by carrying those entries.
-- **Legacy deep-path entry points — fixed, and then withheld.** `redux-persist` has no `exports` map, and `lib/index.js` never references `lib/integration/react.js`, so the walk from `main` never reached the `require("react")` that consumers hit by importing `redux-persist/integration/react`. The detector now seeds every published file when a package ships no `exports` map, which found that case and 258 others. Those 258 are recorded under `withheldDeepPath` and **not emitted**, because the same seeding parses published source: a package built with a tsconfig `baseUrl` imports its own modules by bare-looking specifiers, so `pusher-js` appears to need `core` and `isomorphic`, which are directories inside it. Telling those apart needs the offender's own file list, which belongs in the detector rather than here.
+- **Legacy deep-path entry points — fixed, and then withheld.** `redux-persist` has no `exports` map, and `lib/index.js` never references `lib/integration/react.js`, so the walk from `main` never reached the `require("react")` that consumers hit by importing `redux-persist/integration/react`. The detector now seeds every published file when a package ships no `exports` map, which found that case and 245 others. Those 246 are recorded under `withheldDeepPath` and **not emitted**, because the same seeding parses published source: a package built with a tsconfig `baseUrl` imports its own modules by bare-looking specifiers, so `pusher-js` appears to need `core` and `isomorphic`, which are directories inside it. Telling those apart needs the offender's own file list, which belongs in the detector rather than here.
 - **Type-only erasure.** Imports that erase before runtime are dropped by design, which is right for a runtime question and wrong for a type-check.
 
 Regenerate the comparison with `node harness/compare-yarn.mjs --scan records/<run>/scan.json`.
@@ -213,9 +215,10 @@ Not counted, because each one resolves or is already declared:
 - A self-reference, a `#imports` subpath, or a bundled dependency.
 - Anything in `dependencies`, `optionalDependencies` or `peerDependencies`, including a peer already marked optional.
 - Type-only imports, which erase before runtime.
+- A name referenced only from the type surface whose DefinitelyTyped package the manifest already declares. `@turf/destination` declares `@types/geojson` and writes `import("geojson").Position`; TypeScript resolves that through the `@types` fallback, so nothing is missing and no install would help.
 - URLs, framework virtuals such as `$app/env`, and other runtimes' internals.
 
-The detector is [`nub-phantom`](https://github.com/nubjs/nub/tree/main/crates/nub-phantom), which parses each published tarball with the same oxc parser Nub transpiles with. Filtering matters more than finding: across the corpus a naive "is this specifier declared?" scan flags 2,478 edges where 1,287 are real, and the difference is 745 declared optional peers and 446 guarded loads.
+The detector is [`nub-phantom`](https://github.com/nubjs/nub/tree/main/crates/nub-phantom), which parses each published tarball with the same oxc parser Nub transpiles with. Filtering matters more than finding: across the corpus a naive "is this specifier declared?" scan flags 2,450 edges where 1,159 are real, and the difference is 812 declared optional peers and 479 guarded loads.
 
 **Every target is checked against the registry before it is emitted.** The detector reads specifiers out of source, so a typo, an unpublished name and a private-registry package all reach it looking like real dependencies. An extension naming a package that does not exist fails a Yarn install outright, which makes this the one gate whose failure is user-visible breakage. It also catches the largest single source of noise: N-API loaders probe for platform packages such as `@napi-rs/canvas-openharmony-arm` that were never published for that platform.
 
@@ -242,7 +245,7 @@ A daily cadence is what keeps the dataset from rotting, and it moves in both dir
 
 ### The gate
 
-A generated dataset is worth trusting or it is not, and `verify.mjs` is where that gets decided. Every check either compares generator output against a real consumer parser or refuses a document that is structurally fine and empty, because a well-formed file that says nothing is the failure a shape test passes forever. One check exists purely for the compatibility promise: the build fails if any rule from `@yarnpkg/extensions` is missing from the output.
+A generated dataset is worth trusting or it is not, and `verify.mjs` is where that gets decided. Every check either compares generator output against a real consumer parser or refuses a document that is structurally fine and empty, because a well-formed file that says nothing is the failure a shape test passes forever. One check exists purely for the compatibility promise, and it compares effect rather than presence: every Yarn range, every field a target sits in, and every optional marker must survive into the output unchanged. Checking the names alone was not enough — it passed a build that had quietly turned Yarn's required `react` peer on `reactcss` into an optional one.
 
 ## Limits
 

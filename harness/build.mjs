@@ -194,6 +194,24 @@ function mergeInto(into, from) {
       changed = true;
     }
   }
+  // Yarn's REQUIREDNESS wins on a peer it declares. Unioning the field names is
+  // not enough to preserve a Yarn rule's effect: our scan marks a peer optional
+  // by default, because it cannot know whether every consumer reaches the import,
+  // and that marker silently downgrades a peer Yarn deliberately made required.
+  // Measured on `reactcss@*` — Yarn curated `react` as a required peer, our scan
+  // found the same edge and added `optional: true`, and the merged entry stopped
+  // warning on a missing react. Yarn's hand-written call beats our default, so
+  // drop the marker for any peer Yarn declares and does not itself mark optional.
+  for (const name of Object.keys(from.peerDependencies ?? {})) {
+    if (from.peerDependenciesMeta?.[name]?.optional === true) continue;
+    if (into.peerDependenciesMeta?.[name]?.optional === undefined) continue;
+    delete into.peerDependenciesMeta[name].optional;
+    if (Object.keys(into.peerDependenciesMeta[name]).length === 0) {
+      delete into.peerDependenciesMeta[name];
+    }
+    if (Object.keys(into.peerDependenciesMeta).length === 0) delete into.peerDependenciesMeta;
+    changed = true;
+  }
   return changed;
 }
 

@@ -16,10 +16,10 @@
     "unresolved": 0
   },
   "agreement": {
-    "entriesFullyMatched": 9,
+    "entriesFullyMatched": 10,
     "entriesPartiallyMatched": 1,
-    "entriesMissed": 7,
-    "edgeAgreement": "8/22",
+    "entriesMissed": 6,
+    "edgeAgreement": "9/22",
     "edgesNotReferenced": 6,
     "edgesDynamicSpecifier": 10
   },
@@ -401,15 +401,11 @@
         "undeclared": [
           "typescript"
         ],
-        "hit": [],
-        "miss": [
+        "hit": [
           "typescript"
         ],
-        "scanned": true,
-        "missDetail": {
-          "typescript": "literal"
-        },
-        "notReferenced": []
+        "miss": [],
+        "scanned": true
       }
     ],
     "missed": [
@@ -566,27 +562,6 @@
         "scanned": true,
         "missDetail": {
           "@parcel/core": "dynamic"
-        },
-        "notReferenced": []
-      },
-      {
-        "package": "volar-service-typescript-twoslash-queries",
-        "range": "*",
-        "targets": [
-          "typescript"
-        ],
-        "metaOnly": false,
-        "version": "0.0.71",
-        "undeclared": [
-          "typescript"
-        ],
-        "hit": [],
-        "miss": [
-          "typescript"
-        ],
-        "scanned": true,
-        "missDetail": {
-          "typescript": "literal"
         },
         "notReferenced": []
       }

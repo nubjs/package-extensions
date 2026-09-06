@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.0 — generated 2026-09-05, do not edit.
-// 1055 packages, 1492 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.0 — generated 2026-09-06, do not edit.
+// 812 packages, 1190 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -193,13 +193,21 @@ export const packageExtensions = [
   }
  ],
  [
-  "@apidevtools/json-schema-ref-parser@*",
+  "@anthropic-ai/sdk@*",
   {
    "peerDependencies": {
-    "json-schema": "*"
+    "node-fetch": "*",
+    "undici": "*",
+    "undici-types": "*"
    },
    "peerDependenciesMeta": {
-    "json-schema": {
+    "node-fetch": {
+     "optional": true
+    },
+    "undici": {
+     "optional": true
+    },
+    "undici-types": {
      "optional": true
     }
    }
@@ -335,36 +343,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@asyncapi/parser@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*",
-    "urijs": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
-     "optional": true
-    },
-    "urijs": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@asyncapi/specs@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@auth/core@*",
   {
    "peerDependencies": {
@@ -398,6 +376,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@aws-sdk/types": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@aws-amplify/core@*",
+  {
+   "peerDependencies": {
+    "@smithy/types": "*"
+   },
+   "peerDependenciesMeta": {
+    "@smithy/types": {
      "optional": true
     }
    }
@@ -626,6 +617,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "@develar/schema-utils@*",
+  {
+   "peerDependencies": {
+    "json-schema": "*"
+   },
+   "peerDependenciesMeta": {
+    "json-schema": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@docusaurus/babel@*",
   {
    "peerDependencies": {
@@ -665,40 +669,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@docusaurus/module-type-aliases@*",
-  {
-   "peerDependencies": {
-    "react-router-config": "*",
-    "react-router-dom": "*"
-   },
-   "peerDependenciesMeta": {
-    "react-router-config": {
-     "optional": true
-    },
-    "react-router-dom": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@docusaurus/types@*",
-  {
-   "peerDependencies": {
-    "history": "*",
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "history": {
-     "optional": true
-    },
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@edge-runtime/node-utils@*",
   {
    "peerDependencies": {
@@ -716,19 +686,6 @@ export const packageExtensions = [
   {
    "dependencies": {
     "@edge-runtime/primitives": "*"
-   }
-  }
- ],
- [
-  "@egjs/hammerjs@*",
-  {
-   "peerDependencies": {
-    "hammerjs": "*"
-   },
-   "peerDependenciesMeta": {
-    "hammerjs": {
-     "optional": true
-    }
    }
   }
  ],
@@ -824,19 +781,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@eslint/core@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@eslint/eslintrc@*",
   {
    "peerDependencies": {
@@ -879,9 +823,13 @@ export const packageExtensions = [
   "@expo/image-utils@*",
   {
    "peerDependencies": {
+    "sharp": "*",
     "sharp-cli": "*"
    },
    "peerDependenciesMeta": {
+    "sharp": {
+     "optional": true
+    },
     "sharp-cli": {
      "optional": true
     }
@@ -1441,13 +1389,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "@hey-api/json-schema-ref-parser@*",
+  "@headlessui/react@*",
   {
    "peerDependencies": {
-    "json-schema": "*"
+    "@floating-ui/react-dom": "*"
    },
    "peerDependenciesMeta": {
-    "json-schema": {
+    "@floating-ui/react-dom": {
      "optional": true
     }
    }
@@ -1494,14 +1442,10 @@ export const packageExtensions = [
   "@jest/test-result@*",
   {
    "peerDependencies": {
-    "istanbul-lib-coverage": "*",
     "jest-haste-map": "*",
     "jest-resolve": "*"
    },
    "peerDependenciesMeta": {
-    "istanbul-lib-coverage": {
-     "optional": true
-    },
     "jest-haste-map": {
      "optional": true
     },
@@ -1519,27 +1463,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@jest/types": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@jest/types@*",
-  {
-   "peerDependencies": {
-    "istanbul-lib-coverage": "*",
-    "istanbul-reports": "*",
-    "yargs": "*"
-   },
-   "peerDependenciesMeta": {
-    "istanbul-lib-coverage": {
-     "optional": true
-    },
-    "istanbul-reports": {
-     "optional": true
-    },
-    "yargs": {
      "optional": true
     }
    }
@@ -1692,19 +1615,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@langchain/langgraph-sdk@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@lerna/create@*",
   {
    "dependencies": {
@@ -1715,6 +1625,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "libnpmaccess": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@lexical/react@*",
+  {
+   "peerDependencies": {
+    "@preact/signals-core": "*"
+   },
+   "peerDependenciesMeta": {
+    "@preact/signals-core": {
      "optional": true
     }
    }
@@ -1745,27 +1668,10 @@ export const packageExtensions = [
   "@lit/react@*",
   {
    "peerDependencies": {
-    "@lit/reactive-element": "*",
-    "react": "*"
+    "@lit/reactive-element": "*"
    },
    "peerDependenciesMeta": {
     "@lit/reactive-element": {
-     "optional": true
-    },
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@loaders.gl/schema@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
      "optional": true
     }
    }
@@ -1796,19 +1702,6 @@ export const packageExtensions = [
      "optional": true
     },
     "npm": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@mapbox/vector-tile@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
      "optional": true
     }
    }
@@ -1903,19 +1796,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@material-ui/types@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@mdx-js/loader@*",
   {
    "peerDependencies": {
@@ -1932,31 +1812,10 @@ export const packageExtensions = [
   "@mdx-js/mdx@*",
   {
    "peerDependencies": {
-    "estree-jsx": "*",
-    "mdast": "*",
-    "mdx": "*"
+    "mdast": "*"
    },
    "peerDependenciesMeta": {
-    "estree-jsx": {
-     "optional": true
-    },
     "mdast": {
-     "optional": true
-    },
-    "mdx": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@mdx-js/react@*",
-  {
-   "peerDependencies": {
-    "mdx": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdx": {
      "optional": true
     }
    }
@@ -2080,13 +1939,26 @@ export const packageExtensions = [
   }
  ],
  [
-  "@mui/types@*",
+  "@mui/material@*",
   {
    "peerDependencies": {
-    "react": "*"
+    "@mui/styled-engine": "*"
    },
    "peerDependenciesMeta": {
-    "react": {
+    "@mui/styled-engine": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@mux/mux-video@*",
+  {
+   "peerDependencies": {
+    "mux-embed": "*"
+   },
+   "peerDependenciesMeta": {
+    "mux-embed": {
      "optional": true
     }
    }
@@ -3173,19 +3045,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@octokit/oauth-app@*",
-  {
-   "peerDependencies": {
-    "aws-lambda": "*"
-   },
-   "peerDependenciesMeta": {
-    "aws-lambda": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@okta/okta-auth-js@*",
   {
    "peerDependencies": {
@@ -3252,58 +3111,6 @@ export const packageExtensions = [
      "optional": true
     },
     "aws-sdk": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@opentelemetry/instrumentation-aws-lambda@*",
-  {
-   "peerDependencies": {
-    "aws-lambda": "*"
-   },
-   "peerDependenciesMeta": {
-    "aws-lambda": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@opentelemetry/instrumentation-connect@*",
-  {
-   "peerDependencies": {
-    "connect": "*"
-   },
-   "peerDependenciesMeta": {
-    "connect": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@opentelemetry/instrumentation-memcached@*",
-  {
-   "peerDependencies": {
-    "memcached": "*"
-   },
-   "peerDependenciesMeta": {
-    "memcached": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@opentelemetry/instrumentation-pg@*",
-  {
-   "peerDependencies": {
-    "pg": "*"
-   },
-   "peerDependenciesMeta": {
-    "pg": {
      "optional": true
     }
    }
@@ -3579,6 +3386,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "@react-native-community/cli-clean@*",
+  {
+   "peerDependencies": {
+    "@react-native-community/cli-types": "*"
+   },
+   "peerDependenciesMeta": {
+    "@react-native-community/cli-types": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@react-native-community/cli-config@*",
   {
    "peerDependencies": {
@@ -3616,9 +3436,13 @@ export const packageExtensions = [
   "@react-native-community/cli-doctor@*",
   {
    "peerDependencies": {
+    "@react-native-community/cli-types": "*",
     "fs-extra": "*"
    },
    "peerDependenciesMeta": {
+    "@react-native-community/cli-types": {
+     "optional": true
+    },
     "fs-extra": {
      "optional": true
     }
@@ -3663,6 +3487,19 @@ export const packageExtensions = [
      "optional": true
     },
     "fs-extra": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@react-native-community/cli-platform-ios@*",
+  {
+   "peerDependencies": {
+    "@react-native-community/cli-types": "*"
+   },
+   "peerDependenciesMeta": {
+    "@react-native-community/cli-types": {
      "optional": true
     }
    }
@@ -3780,6 +3617,62 @@ export const packageExtensions = [
   }
  ],
  [
+  "@react-navigation/bottom-tabs@*",
+  {
+   "peerDependencies": {
+    "@react-navigation/core": "*"
+   },
+   "peerDependenciesMeta": {
+    "@react-navigation/core": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@react-navigation/native@*",
+  {
+   "peerDependencies": {
+    "@react-navigation/routers": "*"
+   },
+   "peerDependenciesMeta": {
+    "@react-navigation/routers": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@react-navigation/native-stack@*",
+  {
+   "peerDependencies": {
+    "@react-navigation/core": "*"
+   },
+   "peerDependenciesMeta": {
+    "@react-navigation/core": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@react-navigation/stack@*",
+  {
+   "peerDependencies": {
+    "@react-navigation/core": "*",
+    "@react-navigation/routers": "*"
+   },
+   "peerDependenciesMeta": {
+    "@react-navigation/core": {
+     "optional": true
+    },
+    "@react-navigation/routers": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@react-pdf/layout@*",
   {
    "peerDependencies": {
@@ -3851,19 +3744,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@reactflow/core@*",
-  {
-   "peerDependencies": {
-    "d3": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3": {
      "optional": true
     }
    }
@@ -4002,6 +3882,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "@rolldown/binding-wasm32-wasi@*",
+  {
+   "peerDependencies": {
+    "@oxc-project/types": "*"
+   },
+   "peerDependenciesMeta": {
+    "@oxc-project/types": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@rsbuild/core@*",
   {
    "peerDependencies": {
@@ -4066,19 +3959,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@sanity/types@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@scalar/openapi-upgrader@*",
   {
    "peerDependencies": {
@@ -4108,9 +3988,13 @@ export const packageExtensions = [
   "@secretlint/secretlint-rule-preset-recommend@*",
   {
    "peerDependencies": {
+    "@secretlint/secretlint-rule-aws": "*",
     "@secretlint/types": "*"
    },
    "peerDependenciesMeta": {
+    "@secretlint/secretlint-rule-aws": {
+     "optional": true
+    },
     "@secretlint/types": {
      "optional": true
     }
@@ -4185,6 +4069,23 @@ export const packageExtensions = [
   }
  ],
  [
+  "@sentry/tracing@*",
+  {
+   "peerDependencies": {
+    "@sentry/core": "*",
+    "@sentry/utils": "*"
+   },
+   "peerDependenciesMeta": {
+    "@sentry/core": {
+     "optional": true
+    },
+    "@sentry/utils": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@sentry/vercel-edge@*",
   {
    "peerDependencies": {
@@ -4232,46 +4133,7 @@ export const packageExtensions = [
   }
  ],
  [
-  "@shikijs/core@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@shikijs/primitive@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@shikijs/transformers@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@shikijs/types@*",
   {
    "peerDependencies": {
     "hast": "*"
@@ -4348,19 +4210,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@standard-community/standard-json@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@standard-schema/utils@*",
   {
    "peerDependencies": {
@@ -4384,7 +4233,6 @@ export const packageExtensions = [
     "jest-config": "*",
     "jest-environment-node": "*",
     "jest-runner": "*",
-    "puppeteer": "*",
     "yargs": "*"
    },
    "peerDependenciesMeta": {
@@ -4409,9 +4257,6 @@ export const packageExtensions = [
     "jest-runner": {
      "optional": true
     },
-    "puppeteer": {
-     "optional": true
-    },
     "yargs": {
      "optional": true
     }
@@ -4426,45 +4271,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "urijs": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@stoplight/spectral-core@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@stoplight/spectral-formats@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@stoplight/types@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
      "optional": true
     }
    }
@@ -4991,6 +4797,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "@tanstack/router-plugin@*",
+  {
+   "peerDependencies": {
+    "@tanstack/virtual-file-routes": "*"
+   },
+   "peerDependenciesMeta": {
+    "@tanstack/virtual-file-routes": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@tanstack/router-utils@*",
   {
    "peerDependencies": {
@@ -5064,6 +4883,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "@tiptap/extension-list@*",
+  {
+   "peerDependencies": {
+    "prosemirror-model": "*"
+   },
+   "peerDependenciesMeta": {
+    "prosemirror-model": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@tokenizer/inflate@*",
   {
    "peerDependencies": {
@@ -5081,9 +4913,7 @@ export const packageExtensions = [
   {
    "peerDependencies": {
     "@tanstack/intent": "*",
-    "aws-lambda": "*",
     "express": "*",
-    "fastify": "*",
     "next": "*",
     "ws": "*"
    },
@@ -5091,13 +4921,7 @@ export const packageExtensions = [
     "@tanstack/intent": {
      "optional": true
     },
-    "aws-lambda": {
-     "optional": true
-    },
     "express": {
-     "optional": true
-    },
-    "fastify": {
      "optional": true
     },
     "next": {
@@ -5136,1849 +4960,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@turf/along@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/area@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/bbox@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/bbox-clip@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/bbox-polygon@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/bezier-spline@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-clockwise@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-contains@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-crosses@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-disjoint@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-equal@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-intersects@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-overlap@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-parallel@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-point-in-polygon@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-point-on-line@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-valid@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/boolean-within@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/buffer@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/center@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/center-mean@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/center-median@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/center-of-mass@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/centroid@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/circle@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/clone@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/clusters@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/clusters-dbscan@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/clusters-kmeans@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/collect@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/combine@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/concave@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/convex@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/destination@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/difference@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/dissolve@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/distance-weight@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/ellipse@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/envelope@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/explode@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/flatten@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/great-circle@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/helpers@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/hex-grid@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/interpolate@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/intersect@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/invariant@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/isobands@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/isolines@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/kinks@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/length@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-arc@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-chunk@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-intersect@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-offset@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-overlap@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-segment@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-slice@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-slice-along@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-split@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/line-to-polygon@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/mask@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/meta@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/midpoint@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/moran-index@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/nearest-point@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/nearest-point-on-line@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/nearest-point-to-line@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/planepoint@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/point-grid@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/point-on-feature@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/point-to-line-distance@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/points-within-polygon@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/polygon-smooth@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/polygon-tangents@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/polygon-to-line@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/polygonize@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/projection@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/random@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/rectangle-grid@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/rewind@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/rhumb-destination@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/sample@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/sector@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/shortest-path@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/square@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/square-grid@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/standard-deviational-ellipse@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/tag@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/tesselate@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/tin@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/transform-rotate@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/transform-scale@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/transform-translate@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/triangle-grid@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/union@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/unkink-polygon@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@turf/voronoi@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/archiver@*",
-  {
-   "peerDependencies": {
-    "readdir-glob": "*"
-   },
-   "peerDependenciesMeta": {
-    "readdir-glob": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/async-retry@*",
-  {
-   "peerDependencies": {
-    "retry": "*"
-   },
-   "peerDependenciesMeta": {
-    "retry": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/babel__core@*",
-  {
-   "peerDependencies": {
-    "@babel/generator": "*",
-    "@babel/template": "*",
-    "@babel/traverse": "*"
-   },
-   "peerDependenciesMeta": {
-    "@babel/generator": {
-     "optional": true
-    },
-    "@babel/template": {
-     "optional": true
-    },
-    "@babel/traverse": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/body-parser@*",
-  {
-   "peerDependencies": {
-    "connect": "*"
-   },
-   "peerDependenciesMeta": {
-    "connect": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/connect-history-api-fallback@*",
-  {
-   "peerDependencies": {
-    "express-serve-static-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "express-serve-static-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3@*",
-  {
-   "peerDependencies": {
-    "d3-array": "*",
-    "d3-axis": "*",
-    "d3-brush": "*",
-    "d3-chord": "*",
-    "d3-color": "*",
-    "d3-contour": "*",
-    "d3-delaunay": "*",
-    "d3-dispatch": "*",
-    "d3-drag": "*",
-    "d3-dsv": "*",
-    "d3-ease": "*",
-    "d3-fetch": "*",
-    "d3-force": "*",
-    "d3-format": "*",
-    "d3-geo": "*",
-    "d3-hierarchy": "*",
-    "d3-interpolate": "*",
-    "d3-path": "*",
-    "d3-polygon": "*",
-    "d3-quadtree": "*",
-    "d3-random": "*",
-    "d3-scale": "*",
-    "d3-scale-chromatic": "*",
-    "d3-selection": "*",
-    "d3-shape": "*",
-    "d3-time": "*",
-    "d3-time-format": "*",
-    "d3-timer": "*",
-    "d3-transition": "*",
-    "d3-zoom": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-array": {
-     "optional": true
-    },
-    "d3-axis": {
-     "optional": true
-    },
-    "d3-brush": {
-     "optional": true
-    },
-    "d3-chord": {
-     "optional": true
-    },
-    "d3-color": {
-     "optional": true
-    },
-    "d3-contour": {
-     "optional": true
-    },
-    "d3-delaunay": {
-     "optional": true
-    },
-    "d3-dispatch": {
-     "optional": true
-    },
-    "d3-drag": {
-     "optional": true
-    },
-    "d3-dsv": {
-     "optional": true
-    },
-    "d3-ease": {
-     "optional": true
-    },
-    "d3-fetch": {
-     "optional": true
-    },
-    "d3-force": {
-     "optional": true
-    },
-    "d3-format": {
-     "optional": true
-    },
-    "d3-geo": {
-     "optional": true
-    },
-    "d3-hierarchy": {
-     "optional": true
-    },
-    "d3-interpolate": {
-     "optional": true
-    },
-    "d3-path": {
-     "optional": true
-    },
-    "d3-polygon": {
-     "optional": true
-    },
-    "d3-quadtree": {
-     "optional": true
-    },
-    "d3-random": {
-     "optional": true
-    },
-    "d3-scale": {
-     "optional": true
-    },
-    "d3-scale-chromatic": {
-     "optional": true
-    },
-    "d3-selection": {
-     "optional": true
-    },
-    "d3-shape": {
-     "optional": true
-    },
-    "d3-time": {
-     "optional": true
-    },
-    "d3-time-format": {
-     "optional": true
-    },
-    "d3-timer": {
-     "optional": true
-    },
-    "d3-transition": {
-     "optional": true
-    },
-    "d3-zoom": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-axis@*",
-  {
-   "peerDependencies": {
-    "d3-selection": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-selection": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-brush@*",
-  {
-   "peerDependencies": {
-    "d3-selection": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-selection": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-contour@*",
-  {
-   "peerDependencies": {
-    "d3-array": "*",
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-array": {
-     "optional": true
-    },
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-drag@*",
-  {
-   "peerDependencies": {
-    "d3-selection": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-selection": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-fetch@*",
-  {
-   "peerDependencies": {
-    "d3-dsv": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-dsv": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-geo@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-interpolate@*",
-  {
-   "peerDependencies": {
-    "d3-color": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-color": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-sankey@*",
-  {
-   "peerDependencies": {
-    "d3-shape": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-shape": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-scale@*",
-  {
-   "peerDependencies": {
-    "d3-time": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-time": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-shape@*",
-  {
-   "peerDependencies": {
-    "d3-path": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-path": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-transition@*",
-  {
-   "peerDependencies": {
-    "d3-selection": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-selection": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/d3-zoom@*",
-  {
-   "peerDependencies": {
-    "d3-interpolate": "*",
-    "d3-selection": "*"
-   },
-   "peerDependenciesMeta": {
-    "d3-interpolate": {
-     "optional": true
-    },
-    "d3-selection": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/docker-modem@*",
-  {
-   "peerDependencies": {
-    "ssh2": "*"
-   },
-   "peerDependenciesMeta": {
-    "ssh2": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/dockerode@*",
-  {
-   "peerDependencies": {
-    "ssh2": "*"
-   },
-   "peerDependenciesMeta": {
-    "ssh2": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/draft-js@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/eslint@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/express@*",
-  {
-   "peerDependencies": {
-    "express-serve-static-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "express-serve-static-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/express-serve-static-core@*",
-  {
-   "peerDependencies": {
-    "qs": "*",
-    "range-parser": "*",
-    "send": "*"
-   },
-   "peerDependenciesMeta": {
-    "qs": {
-     "optional": true
-    },
-    "range-parser": {
-     "optional": true
-    },
-    "send": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/fs-extra@*",
-  {
-   "peerDependencies": {
-    "jsonfile": "*"
-   },
-   "peerDependenciesMeta": {
-    "jsonfile": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/geojson-vt@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/hast@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/hoist-non-react-statics@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/inquirer@*",
-  {
-   "peerDependencies": {
-    "through": "*"
-   },
-   "peerDependenciesMeta": {
-    "through": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/istanbul-lib-report@*",
-  {
-   "peerDependencies": {
-    "istanbul-lib-coverage": "*"
-   },
-   "peerDependenciesMeta": {
-    "istanbul-lib-coverage": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/istanbul-reports@*",
-  {
-   "peerDependencies": {
-    "istanbul-lib-report": "*"
-   },
-   "peerDependenciesMeta": {
-    "istanbul-lib-report": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/jsdom@*",
-  {
-   "peerDependencies": {
-    "tough-cookie": "*"
-   },
-   "peerDependenciesMeta": {
-    "tough-cookie": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/jsonwebtoken@*",
-  {
-   "peerDependencies": {
-    "ms": "*"
-   },
-   "peerDependenciesMeta": {
-    "ms": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@types/k6@*",
   {
    "peerDependencies": {
@@ -6986,149 +4967,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "k6": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/leaflet@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/liftoff@*",
-  {
-   "peerDependencies": {
-    "fined": "*"
-   },
-   "peerDependenciesMeta": {
-    "fined": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/lodash-es@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/lodash.clonedeep@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/lodash.debounce@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/lodash.isequal@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/lodash.memoize@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/lodash.merge@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/lodash.mergewith@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/lodash.throttle@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/mdast@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
      "optional": true
     }
    }
@@ -7148,577 +4986,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "@types/mjml@*",
-  {
-   "peerDependencies": {
-    "mjml-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "mjml-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/multer@*",
-  {
-   "peerDependencies": {
-    "express": "*"
-   },
-   "peerDependenciesMeta": {
-    "express": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/nlcst@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/passport-google-oauth20@*",
-  {
-   "peerDependencies": {
-    "passport": "*"
-   },
-   "peerDependenciesMeta": {
-    "passport": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/passport-jwt@*",
-  {
-   "peerDependencies": {
-    "jsonwebtoken": "*",
-    "passport-strategy": "*"
-   },
-   "peerDependenciesMeta": {
-    "jsonwebtoken": {
-     "optional": true
-    },
-    "passport-strategy": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/passport-local@*",
-  {
-   "peerDependencies": {
-    "passport-strategy": "*"
-   },
-   "peerDependenciesMeta": {
-    "passport-strategy": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/passport-oauth2@*",
-  {
-   "peerDependencies": {
-    "express": "*",
-    "oauth": "*",
-    "passport": "*"
-   },
-   "peerDependenciesMeta": {
-    "express": {
-     "optional": true
-    },
-    "oauth": {
-     "optional": true
-    },
-    "passport": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/pg-pool@*",
-  {
-   "peerDependencies": {
-    "pg": "*"
-   },
-   "peerDependenciesMeta": {
-    "pg": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-beautiful-dnd@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-color@*",
-  {
-   "peerDependencies": {
-    "react": "*",
-    "reactcss": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    },
-    "reactcss": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-copy-to-clipboard@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-dom@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-google-recaptcha@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-helmet@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-highlight-words@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-is@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-modal@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-reconciler@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-redux@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-router@*",
-  {
-   "peerDependencies": {
-    "history": "*",
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "history": {
-     "optional": true
-    },
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-router-dom@*",
-  {
-   "peerDependencies": {
-    "history": "*",
-    "react": "*",
-    "react-router": "*"
-   },
-   "peerDependenciesMeta": {
-    "history": {
-     "optional": true
-    },
-    "react": {
-     "optional": true
-    },
-    "react-router": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-slick@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@types/react-syntax-highlighter@*",
   {
    "peerDependencies": {
-    "react": "*",
     "react-syntax-highlighter": "*"
    },
    "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    },
     "react-syntax-highlighter": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-table@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-test-renderer@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-transition-group@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/react-virtualized@*",
-  {
-   "peerDependencies": {
-    "prop-types": "*",
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "prop-types": {
-     "optional": true
-    },
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/reactcss@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/selenium-webdriver@*",
-  {
-   "peerDependencies": {
-    "ws": "*"
-   },
-   "peerDependenciesMeta": {
-    "ws": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/serve-index@*",
-  {
-   "peerDependencies": {
-    "express": "*"
-   },
-   "peerDependenciesMeta": {
-    "express": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/serve-static@*",
-  {
-   "peerDependencies": {
-    "http-errors": "*"
-   },
-   "peerDependenciesMeta": {
-    "http-errors": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/sinon@*",
-  {
-   "peerDependencies": {
-    "@sinonjs/fake-timers": "*"
-   },
-   "peerDependenciesMeta": {
-    "@sinonjs/fake-timers": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/sinon-chai@*",
-  {
-   "peerDependencies": {
-    "sinon": "*"
-   },
-   "peerDependenciesMeta": {
-    "sinon": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/ssh2-sftp-client@*",
-  {
-   "peerDependencies": {
-    "ssh2": "*"
-   },
-   "peerDependenciesMeta": {
-    "ssh2": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/styled-components@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/supercluster@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/supertest@*",
-  {
-   "peerDependencies": {
-    "superagent": "*"
-   },
-   "peerDependenciesMeta": {
-    "superagent": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/swagger-ui-express@*",
-  {
-   "peerDependencies": {
-    "express": "*",
-    "serve-static": "*"
-   },
-   "peerDependenciesMeta": {
-    "express": {
-     "optional": true
-    },
-    "serve-static": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/topojson-client@*",
-  {
-   "peerDependencies": {
-    "geojson": "*",
-    "topojson-specification": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    },
-    "topojson-specification": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/topojson-specification@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@types/yargs@*",
-  {
-   "peerDependencies": {
-    "yargs-parser": "*"
-   },
-   "peerDependenciesMeta": {
-    "yargs-parser": {
      "optional": true
     }
    }
@@ -8638,13 +5912,9 @@ export const packageExtensions = [
   "babel-plugin-jest-hoist@*",
   {
    "peerDependencies": {
-    "@babel/core": "*",
     "@babel/types": "*"
    },
    "peerDependenciesMeta": {
-    "@babel/core": {
-     "optional": true
-    },
     "@babel/types": {
      "optional": true
     }
@@ -8706,19 +5976,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "emitter": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "bippy@*",
-  {
-   "peerDependencies": {
-    "react-reconciler": "*"
-   },
-   "peerDependenciesMeta": {
-    "react-reconciler": {
      "optional": true
     }
    }
@@ -8897,6 +6154,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "cssnano-utils@*",
+  {
+   "peerDependencies": {
+    "postcss-value-parser": "*"
+   },
+   "peerDependenciesMeta": {
+    "postcss-value-parser": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "cypress@*",
   {
    "peerDependencies": {
@@ -9021,19 +6291,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "parserlib": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "dompurify@*",
-  {
-   "peerDependencies": {
-    "trusted-types": "*"
-   },
-   "peerDependenciesMeta": {
-    "trusted-types": {
      "optional": true
     }
    }
@@ -9283,12 +6540,41 @@ export const packageExtensions = [
   }
  ],
  [
+  "eslint-plugin-import-x@*",
+  {
+   "peerDependencies": {
+    "@typescript-eslint/scope-manager": "*"
+   },
+   "peerDependenciesMeta": {
+    "@typescript-eslint/scope-manager": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "eslint-plugin-jsdoc@*",
   {
    "peerDependencies": {
+    "@eslint/core": "*",
+    "@typescript-eslint/types": "*",
+    "jsdoc-type-pratt-parser": "*",
+    "json-schema": "*",
     "typescript": "*"
    },
    "peerDependenciesMeta": {
+    "@eslint/core": {
+     "optional": true
+    },
+    "@typescript-eslint/types": {
+     "optional": true
+    },
+    "jsdoc-type-pratt-parser": {
+     "optional": true
+    },
+    "json-schema": {
+     "optional": true
+    },
     "typescript": {
      "optional": true
     }
@@ -9419,6 +6705,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@babel/runtime": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "expect-webdriverio@*",
+  {
+   "peerDependencies": {
+    "@wdio/types": "*"
+   },
+   "peerDependenciesMeta": {
+    "@wdio/types": {
      "optional": true
     }
    }
@@ -9960,26 +7259,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "geojson-rbush@*",
+  "gaxios@*",
   {
    "peerDependencies": {
-    "geojson": "*"
+    "undici-types": "*"
    },
    "peerDependenciesMeta": {
-    "geojson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "geojson-vt@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
+    "undici-types": {
      "optional": true
     }
    }
@@ -10067,155 +7353,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "hast-util-from-dom@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-from-html@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "hast-util-from-parse5@*",
   {
    "peerDependencies": {
-    "hast": "*",
-    "parse5": "*",
-    "unist": "*"
+    "parse5": "*"
    },
    "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    },
     "parse5": {
-     "optional": true
-    },
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-is-body-ok-link@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-minify-whitespace@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-raw@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-sanitize@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-select@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-to-estree@*",
-  {
-   "peerDependencies": {
-    "estree-jsx": "*",
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "estree-jsx": {
-     "optional": true
-    },
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-to-html@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-to-jsx-runtime@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
      "optional": true
     }
    }
@@ -10225,40 +7369,10 @@ export const packageExtensions = [
   "hast-util-to-parse5@*",
   {
    "peerDependencies": {
-    "hast": "*",
     "parse5": "*"
    },
    "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    },
     "parse5": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hast-util-to-string@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "hastscript@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
      "optional": true
     }
    }
@@ -10408,19 +7522,6 @@ export const packageExtensions = [
      "optional": true
     },
     "ts-node": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "jayson@*",
-  {
-   "peerDependencies": {
-    "connect": "*"
-   },
-   "peerDependenciesMeta": {
-    "connect": {
      "optional": true
     }
    }
@@ -10650,19 +7751,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "jwks-rsa@*",
-  {
-   "peerDependencies": {
-    "jsonwebtoken": "*"
-   },
-   "peerDependenciesMeta": {
-    "jsonwebtoken": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "karma@*",
   {
    "peerDependencies": {
@@ -10765,6 +7853,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "less-loader@*",
+  {
+   "peerDependencies": {
+    "schema-utils": "*"
+   },
+   "peerDependenciesMeta": {
+    "schema-utils": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "lib0@*",
   {
    "peerDependencies": {
@@ -10778,13 +7879,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "lit-html@*",
+  "lighthouse@*",
   {
    "peerDependencies": {
-    "trusted-types": "*"
+    "puppeteer": "*"
    },
    "peerDependenciesMeta": {
-    "trusted-types": {
+    "puppeteer": {
      "optional": true
     }
    }
@@ -10830,19 +7931,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "lowlight@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "magic-regexp@*",
   {
    "peerDependencies": {
@@ -10869,45 +7957,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "mdast-util-directive@*",
-  {
-   "peerDependencies": {
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "mdast-util-find-and-replace@*",
-  {
-   "peerDependencies": {
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "mdast-util-from-markdown@*",
-  {
-   "peerDependencies": {
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "mdast-util-gfm-autolink-literal@*",
   {
    "peerDependencies": {
@@ -10919,120 +7968,6 @@ export const packageExtensions = [
      "optional": true
     },
     "mdast-util-to-markdown": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "mdast-util-math@*",
-  {
-   "peerDependencies": {
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "mdast-util-mdx-expression@*",
-  {
-   "peerDependencies": {
-    "estree-jsx": "*",
-    "hast": "*",
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "estree-jsx": {
-     "optional": true
-    },
-    "hast": {
-     "optional": true
-    },
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "mdast-util-mdx-jsx@*",
-  {
-   "peerDependencies": {
-    "estree-jsx": "*",
-    "hast": "*",
-    "mdast": "*",
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "estree-jsx": {
-     "optional": true
-    },
-    "hast": {
-     "optional": true
-    },
-    "mdast": {
-     "optional": true
-    },
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "mdast-util-mdxjs-esm@*",
-  {
-   "peerDependencies": {
-    "estree-jsx": "*",
-    "hast": "*",
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "estree-jsx": {
-     "optional": true
-    },
-    "hast": {
-     "optional": true
-    },
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "mdast-util-to-hast@*",
-  {
-   "peerDependencies": {
-    "hast": "*",
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    },
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "mdast-util-to-markdown@*",
-  {
-   "peerDependencies": {
-    "mdast": "*",
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    },
-    "unist": {
      "optional": true
     }
    }
@@ -11052,27 +7987,18 @@ export const packageExtensions = [
   }
  ],
  [
-  "merge-refs@*",
-  {
-   "peerDependencies": {
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "mermaid@*",
   {
    "peerDependencies": {
     "@iconify/types": "*",
+    "d3-selection": "*",
     "type-fest": "*"
    },
    "peerDependenciesMeta": {
     "@iconify/types": {
+     "optional": true
+    },
+    "d3-selection": {
      "optional": true
     },
     "type-fest": {
@@ -11376,7 +8302,8 @@ export const packageExtensions = [
     "next-rspack": "*",
     "private-next-instrumentation-client": "*",
     "react-server-dom-turbopack": "*",
-    "react-server-dom-webpack": "*"
+    "react-server-dom-webpack": "*",
+    "server-only": "*"
    },
    "peerDependenciesMeta": {
     "critters": {
@@ -11392,6 +8319,9 @@ export const packageExtensions = [
      "optional": true
     },
     "react-server-dom-webpack": {
+     "optional": true
+    },
+    "server-only": {
      "optional": true
     }
    }
@@ -11570,19 +8500,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "node-mocks-http@*",
-  {
-   "peerDependencies": {
-    "express": "*"
-   },
-   "peerDependenciesMeta": {
-    "express": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "node-pre-gyp@*",
   {
    "peerDependencies": {
@@ -11598,19 +8515,6 @@ export const packageExtensions = [
      "optional": true
     },
     "request": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "node-readfiles@*",
-  {
-   "peerDependencies": {
-    "src": "*"
-   },
-   "peerDependenciesMeta": {
-    "src": {
      "optional": true
     }
    }
@@ -11697,19 +8601,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "undici": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "openapi-sampler@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
      "optional": true
     }
    }
@@ -11805,19 +8696,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "type-fest": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "parse-entities@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
      "optional": true
     }
    }
@@ -11967,19 +8845,6 @@ export const packageExtensions = [
      "optional": true
     },
     "@vue/language-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "prism-react-renderer@*",
-  {
-   "peerDependencies": {
-    "prismjs": "*"
-   },
-   "peerDependenciesMeta": {
-    "prismjs": {
      "optional": true
     }
    }
@@ -12154,19 +9019,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "react-base16-styling@*",
-  {
-   "peerDependencies": {
-    "lodash": "*"
-   },
-   "peerDependenciesMeta": {
-    "lodash": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "react-content-loader@*",
   {
    "peerDependencies": {
@@ -12240,19 +9092,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "react-markdown@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "react-native@*",
   {
    "peerDependencies": {
@@ -12290,19 +9129,6 @@ export const packageExtensions = [
      "optional": true
     },
     "react-native-worklets": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "react-native-maps@*",
-  {
-   "peerDependencies": {
-    "geojson": "*"
-   },
-   "peerDependenciesMeta": {
-    "geojson": {
      "optional": true
     }
    }
@@ -12441,11 +9267,6 @@ export const packageExtensions = [
   {
    "peerDependencies": {
     "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
    }
   }
  ],
@@ -12457,6 +9278,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "babylon": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "recharts@*",
+  {
+   "peerDependencies": {
+    "redux": "*"
+   },
+   "peerDependenciesMeta": {
+    "redux": {
      "optional": true
     }
    }
@@ -12501,89 +9335,7 @@ export const packageExtensions = [
   }
  ],
  [
-  "refractor@*",
-  {
-   "peerDependencies": {
-    "hast": "*",
-    "prismjs": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    },
-    "prismjs": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "rehype@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "rehype-format@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "rehype-harden@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "rehype-highlight@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "rehype-katex@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "rehype-minify-whitespace@*",
   {
    "peerDependencies": {
     "hast": "*"
@@ -12599,40 +9351,27 @@ export const packageExtensions = [
   "rehype-parse@*",
   {
    "peerDependencies": {
-    "hast": "*"
+    "vfile": "*"
    },
    "peerDependenciesMeta": {
-    "hast": {
+    "vfile": {
      "optional": true
     }
    }
   }
  ],
  [
-  "rehype-recma@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "rehype-remark@*",
+  "rehype-prism-plus@*",
   {
    "peerDependencies": {
     "hast": "*",
-    "mdast": "*"
+    "unified": "*"
    },
    "peerDependenciesMeta": {
     "hast": {
      "optional": true
     },
-    "mdast": {
+    "unified": {
      "optional": true
     }
    }
@@ -12652,45 +9391,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "rehype-stringify@*",
-  {
-   "peerDependencies": {
-    "hast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "remark@*",
-  {
-   "peerDependencies": {
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "remark-emoji@*",
-  {
-   "peerDependencies": {
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "remark-mdx@*",
   {
    "peerDependencies": {
@@ -12704,43 +9404,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "remark-mdx-frontmatter@*",
-  {
-   "peerDependencies": {
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "remark-parse@*",
   {
    "peerDependencies": {
-    "mdast": "*"
+    "vfile": "*"
    },
    "peerDependenciesMeta": {
-    "mdast": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "remark-rehype@*",
-  {
-   "peerDependencies": {
-    "hast": "*",
-    "mdast": "*"
-   },
-   "peerDependenciesMeta": {
-    "hast": {
-     "optional": true
-    },
-    "mdast": {
+    "vfile": {
      "optional": true
     }
    }
@@ -12750,10 +9420,10 @@ export const packageExtensions = [
   "remark-stringify@*",
   {
    "peerDependencies": {
-    "mdast": "*"
+    "vfile": "*"
    },
    "peerDependenciesMeta": {
-    "mdast": {
+    "vfile": {
      "optional": true
     }
    }
@@ -12924,6 +9594,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "sass-loader@*",
+  {
+   "peerDependencies": {
+    "schema-utils": "*"
+   },
+   "peerDependenciesMeta": {
+    "schema-utils": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "satori@*",
   {
    "peerDependencies": {
@@ -12944,6 +9627,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "jquery": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "sequelize-cli@*",
+  {
+   "peerDependencies": {
+    "sequelize": "*"
+   },
+   "peerDependenciesMeta": {
+    "sequelize": {
      "optional": true
     }
    }
@@ -13022,11 +9718,15 @@ export const packageExtensions = [
   "storybook@*",
   {
    "peerDependencies": {
+    "@storybook/react": "*",
     "react": "*",
     "react-dom": "*",
     "valibot": "*"
    },
    "peerDependenciesMeta": {
+    "@storybook/react": {
+     "optional": true
+    },
     "react": {
      "optional": true
     },
@@ -13078,13 +9778,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "supercluster@*",
+  "stylus-loader@*",
   {
    "peerDependencies": {
-    "geojson": "*"
+    "schema-utils": "*"
    },
    "peerDependenciesMeta": {
-    "geojson": {
+    "schema-utils": {
      "optional": true
     }
    }
@@ -13382,45 +10082,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "unist-util-is@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "unist-util-visit@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "unist-util-visit-parents@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "unplugin@*",
   {
    "peerDependencies": {
@@ -13532,19 +10193,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "v8-to-istanbul@*",
-  {
-   "peerDependencies": {
-    "istanbul-lib-coverage": "*"
-   },
-   "peerDependenciesMeta": {
-    "istanbul-lib-coverage": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "verdaccio-htpasswd@*",
   {
    "peerDependencies": {
@@ -13552,45 +10200,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@verdaccio/types": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "vfile@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "vfile-location@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "vfile-message@*",
-  {
-   "peerDependencies": {
-    "unist": "*"
-   },
-   "peerDependenciesMeta": {
-    "unist": {
      "optional": true
     }
    }
@@ -13733,6 +10342,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "volar-service-typescript-twoslash-queries@*",
+  {
+   "peerDependencies": {
+    "typescript": "*"
+   },
+   "peerDependenciesMeta": {
+    "typescript": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "vscode-languageclient@*",
   {
    "peerDependencies": {
@@ -13815,26 +10437,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "webdriverio@*",
+  "webpack-dev-server@*",
   {
    "peerDependencies": {
-    "@sinonjs/fake-timers": "*"
+    "qs": "*"
    },
    "peerDependenciesMeta": {
-    "@sinonjs/fake-timers": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "webpack@*",
-  {
-   "peerDependencies": {
-    "json-schema": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema": {
+    "qs": {
      "optional": true
     }
    }
@@ -13973,13 +10582,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "yoga-layout-prebuilt@*",
+  "zx@*",
   {
    "peerDependencies": {
-    "yoga-layout": "*"
+    "fs-extra": "*"
    },
    "peerDependenciesMeta": {
-    "yoga-layout": {
+    "fs-extra": {
      "optional": true
     }
    }
@@ -15587,19 +12196,6 @@ export const packageExtensions = [
  ],
  [
   "@volar/language-service@*",
-  {
-   "peerDependencies": {
-    "typescript": "*"
-   },
-   "peerDependenciesMeta": {
-    "typescript": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "volar-service-typescript-twoslash-queries@*",
   {
    "peerDependencies": {
     "typescript": "*"

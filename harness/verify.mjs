@@ -10,7 +10,9 @@
 // fine and empty.
 
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { createRequire } from 'node:module';
 import { dirname, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 import YAML from 'yaml';
 import semver from 'semver';
@@ -80,14 +82,11 @@ check('every Yarn rule survives into the output', () => {
   // work today. Two ways that happened before this check existed: our own scan
   // owning the same selector, and Yarn's list being an ARRAY that repeats a
   // selector, which keying by string collapses.
-  const targetsOf = (e) => [
-    ...new Set([
-      ...Object.keys(e.dependencies ?? {}),
-      ...Object.keys(e.optionalDependencies ?? {}),
-      ...Object.keys(e.peerDependencies ?? {}),
-      ...Object.keys(e.peerDependenciesMeta ?? {}),
-    ]),
-  ];
+  // Checked at the level of EFFECT, not of presence. An earlier version compared
+  // only the target NAMES, which a rule can survive while its meaning does not:
+  // moving Yarn's `dependencies.got` to a peer, or widening its range, or marking
+  // a peer Yarn made required as optional, all keep the name and change what the
+  // consumer installs. The last of those was real — see `mergeInto`.
   const yarnEntries = JSON.parse(readFileSync(resolve(ROOT, 'inputs/yarn-extensions.json'), 'utf8')).entries;
   const lost = [];
   for (const [selector, ext] of yarnEntries) {
@@ -96,11 +95,28 @@ check('every Yarn rule survives into the output', () => {
       lost.push(`${selector} (entire entry)`);
       continue;
     }
-    const have = new Set(targetsOf(ours));
-    for (const t of targetsOf(ext)) if (!have.has(t)) lost.push(`${selector} -> ${t}`);
+    for (const field of ['dependencies', 'optionalDependencies', 'peerDependencies']) {
+      for (const [name, range] of Object.entries(ext[field] ?? {})) {
+        const got = ours[field]?.[name];
+        if (got !== range) lost.push(`${selector} -> ${field}.${name}: want ${range}, got ${got ?? 'nothing'}`);
+      }
+    }
+    for (const [name, meta] of Object.entries(ext.peerDependenciesMeta ?? {})) {
+      const got = ours.peerDependenciesMeta?.[name];
+      if (JSON.stringify(got) !== JSON.stringify(meta)) {
+        lost.push(`${selector} -> peerDependenciesMeta.${name}: want ${JSON.stringify(meta)}, got ${JSON.stringify(got)}`);
+      }
+    }
+    // A peer Yarn declares and does not mark optional must stay required.
+    for (const name of Object.keys(ext.peerDependencies ?? {})) {
+      if (ext.peerDependenciesMeta?.[name]?.optional === true) continue;
+      if (ours.peerDependenciesMeta?.[name]?.optional === true) {
+        lost.push(`${selector} -> ${name}: Yarn requires this peer, we mark it optional`);
+      }
+    }
   }
-  if (lost.length) throw new Error(`${lost.length} Yarn rule(s) dropped, first: ${lost[0]}`);
-  return `all ${yarnEntries.length} Yarn entries present`;
+  if (lost.length) throw new Error(`${lost.length} Yarn rule(s) weakened, first: ${lost[0]}`);
+  return `all ${yarnEntries.length} Yarn entries preserved field-for-field`;
 });
 
 // -------------------------------------------------------- consumer grammar
@@ -241,6 +257,38 @@ check('dist/pnpm-package.json round-trips', () => {
   assertDeepEqual(parsed.pnpm?.packageExtensions, exts, 'pnpm.packageExtensions');
   return `${Object.keys(parsed.pnpm.packageExtensions).length} packages`;
 });
+
+// ------------------------------------------------- the published artifact
+
+// `npm/` is what a consumer installs, and `pack.mjs` is not in the rebuild
+// chain — so between a data change and a release nothing else here would notice
+// it going stale. It shipped stale once, which is why this gate exists.
+const packed = await loadPacked();
+
+check('the published npm artifact carries the whole dataset', () => {
+  if (!packed) throw new NotApplicable('npm/ not built — run harness/pack.mjs');
+  // An ARRAY of pairs, matching `@yarnpkg/extensions`. The shape is load-bearing
+  // rather than cosmetic: Yarn's own database repeats a selector, so a consumer
+  // written against an object would collapse entries, and the drop-in claim
+  // rests on the container being the same one Yarn publishes.
+  if (!Array.isArray(packed.cjs)) throw new Error('packageExtensions is not an array');
+  if (JSON.stringify(packed.cjs) !== JSON.stringify(packed.esm)) {
+    throw new Error('index.js and index.mjs disagree');
+  }
+  const keys = packed.cjs.map(([selector]) => selector);
+  if (new Set(keys).size !== keys.length) throw new Error('a selector is repeated in the packed array');
+  assertDeepEqual(Object.fromEntries(packed.cjs), exts, 'npm/index.js');
+  return `${keys.length} entries, CJS and ESM identical`;
+});
+
+async function loadPacked() {
+  const entry = resolve(ROOT, 'npm/index.js');
+  if (!existsSync(entry)) return null;
+  return {
+    cjs: createRequire(import.meta.url)(entry).packageExtensions,
+    esm: (await import(pathToFileURL(resolve(ROOT, 'npm/index.mjs')).href)).packageExtensions,
+  };
+}
 
 // ------------------------------------------------------------------ report
 

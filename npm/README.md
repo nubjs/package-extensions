@@ -1,6 +1,6 @@
 # @nubjs/extensions
 
-A drop-in replacement for `@yarnpkg/extensions` carrying 1055 packages instead of 159.
+A drop-in replacement for `@yarnpkg/extensions` carrying 812 packages instead of 159.
 
 ```js
 import { packageExtensions } from '@nubjs/extensions';

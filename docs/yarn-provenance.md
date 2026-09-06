@@ -33,17 +33,17 @@ Of Yarn's 159 entries, 98 are outside the top-10,000 corpus, 43 no longer apply 
 
 | | Edges | Can a scan find it? |
 | --- | --- | --- |
-| found | 8 | yes, and it did |
+| found | 9 | yes, and it does |
 | dynamic specifier | 10 | **no** |
-| literal reference, missed | 4 | two of them, in principle |
+| literal reference, missed | 3 | one of them, in principle |
 | target never referenced | 6 | nothing to find |
 
-The agreement figure is **8 of 22**: the six never-referenced edges are excluded from the denominator, because there is nothing in the source for any detector to find.
+The agreement figure is **9 of 22**: the six never-referenced edges are excluded from the denominator, because there is nothing in the source for any detector to find.
 
-The four-edge row is an upper bound, and checking each one halves it. Two are real misses:
+Checking the missed-literal row is what moved it. It began at four edges, and only one of those is still outstanding:
 
-- `useragent → semver` — `features/index.js:7` reads `, semver = require('semver')` against two declared dependencies. Nothing in the published tree references that file, so it is reachable only as a legacy deep path.
-- `volar-service-typescript-twoslash-queries → typescript` — the package's entire declaration surface is `create(ts: typeof import('typescript'))`. A type-position `import()` is a distinct syntax from an import statement, and the detector did not read it.
+- `useragent → semver` — `features/index.js:7` reads `, semver = require('semver')` against two declared dependencies. Nothing in the published tree references that file, so it is reachable only as a legacy deep path. Still missed.
+- `volar-service-typescript-twoslash-queries → typescript` — the package's entire declaration surface is `create(ts: typeof import('typescript'))`. A type-position `import()` is a distinct syntax from an import statement, and the detector did not read it. It does now, and this edge is in the found row above. Yarn reached the same rule by hand in [#7232](https://github.com/yarnpkg/berry/pull/7232).
 
 The other two are quoted strings that are not imports at all:
 
@@ -63,7 +63,7 @@ The first version of this comparison reported 6 of 28 edges. Four separate defec
 1. **It charged the detector for entries whose target the source never names.** Fixed by fetching the published tarball and checking. Six edges moved out of the denominator.
 2. **It matched only `'` and `"` when testing whether a name appears.** A dynamic specifier is written with backticks, so `` `eslint-import-resolver-${name}` `` scored as never-referenced — which *improved* the reported score by hiding four real misses.
 3. **It matched a name without a closing boundary.** `'typescript` also matches `'typescript-eslint'`, so any package whose name prefixes another scored as a literal reference: `eslint-config-react-app` and `react-dev-utils` both reported imports they do not have. Fixed by requiring a closing delimiter or a subpath slash, with the boundary cases unit-tested.
-4. **A quoted string is still not an import.** `vite-plugin-vue-devtools` reaches the literal row because minified bundles under `client/assets/` contain `"vue"` as payload; `eslint-plugin-import` reaches it because an ESLint config names a parser as an object key. Unfixed, and the reason the four-edge row is an upper bound — half of it, as it turned out. Settling it needs the parse, not a grep.
+4. **A quoted string is still not an import.** `vite-plugin-vue-devtools` reaches the literal row because minified bundles under `client/assets/` contain `"vue"` as payload; `eslint-plugin-import` reaches it because an ESLint config names a parser as an object key. Unfixed, and the reason the missed-literal row was an upper bound rather than a count — half of the original four, as it turned out. Settling it needs the parse, not a grep.
 
 Three of these four moved the number in *our* favour, and the second and third did so by hiding real misses. That is the direction worth distrusting, and it is why each correction here was made before reporting the figure rather than after.
 
@@ -81,3 +81,4 @@ The bucket assignment for every entry, with per-target detail, is in [`yarn-agre
 
 - 2026-09-05 — Initial write-up.
 - 2026-09-05 — Checked all four edges in the "literal reference, missed" row: two are real misses (`useragent → semver`, a legacy deep path; `volar-service-typescript-twoslash-queries → typescript`, a type-position `import()`), two are quoted strings that are not imports.
+- 2026-09-05 — The detector now reads a type-position `import()` on the declaration surface, so `volar-service-typescript-twoslash-queries → typescript` is found rather than missed. Agreement moves from 8 of 22 to 9 of 22, and the missed-literal row from four edges to three.

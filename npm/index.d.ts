@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.0 — generated 2026-09-05, do not edit.
-// 1055 packages, 1492 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.0 — generated 2026-09-06, do not edit.
+// 812 packages, 1190 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
