@@ -4,9 +4,10 @@
   "type": "module",
   "description": "Undeclared dependencies across the most-downloaded npm packages, as a packageExtensions database",
   "scripts": {
-    "build": "node harness/build.mjs --scan $npm_config_scan && node harness/emit.mjs && node harness/verify.mjs",
+    "build": "node harness/build.mjs --scan $npm_config_scan && node harness/emit.mjs && node harness/pack.mjs && node harness/verify.mjs",
     "emit": "node harness/emit.mjs",
-    "verify": "node harness/verify.mjs"
+    "verify": "node harness/verify.mjs",
+    "pack": "node harness/pack.mjs"
   },
   "devDependencies": {
     "semver": "^7.6.3",
