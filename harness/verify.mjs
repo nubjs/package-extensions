@@ -240,6 +240,37 @@ check('every extension key quoted in the README still exists', () => {
   return `${quoted.length} quoted keys`;
 });
 
+check('every dataset total the README states matches the dataset', () => {
+  // The README quotes derived numbers in prose, and nothing was checking them.
+  // They drifted across three rebuilds — the headline said 1,055 packages while
+  // the dataset held 812, and the class table was a scan and a half out of date.
+  // The key-drift check above does not cover this: a stale COUNT names no key.
+  if (doc.corpus.size < FULL_CORPUS) {
+    throw new NotApplicable(`corpus is ${doc.corpus.size}, not a full run — the README documents the ${FULL_CORPUS}-package dataset`);
+  }
+  const md = readFileSync(resolve(ROOT, 'README.md'), 'utf8');
+  const num = (label, pattern, expected) => {
+    const m = md.match(pattern);
+    // A pattern that stops matching is reported, never skipped. Reword the prose
+    // and this fails, which is the prompt to confirm the number came with it.
+    if (!m) return `${label}: the README no longer states this — update ${pattern}`;
+    const got = Number(m[1].replace(/,/g, ''));
+    return got === expected ? null : `${label}: README says ${got}, dataset has ${expected}`;
+  };
+  const t = doc.totals;
+  const wrong = [
+    num('headline packages', /\*\*([\d,]+) packages\.\*\*/, t.packages),
+    num('scan-contributed packages', /finds ([\d,]+) with an undeclared dependency/, doc.sources.scan.packages),
+    num('total edges', /undeclared dependency across ([\d,]+) edges/, t.entries),
+    num('carried from Yarn', /remaining ([\d,]+) come from Yarn/, doc.sources.yarn.addedAsNewKeys),
+    ...Object.entries(t.byClass)
+      .filter(([, count]) => count > 0)
+      .map(([cls, count]) => num(`class ${cls}`, new RegExp(`\\| \`${cls}\` \\| ([\\d,]+) \\|`), count)),
+  ].filter(Boolean);
+  if (wrong.length) throw new Error(`${wrong.length} stale figure(s): ${wrong.join('; ')}`);
+  return `${4 + Object.values(t.byClass).filter((c) => c > 0).length} figures agree`;
+});
+
 // --------------------------------------------- generator against a consumer
 
 for (const rel of ['dist/yarnrc.yml', 'dist/pnpm-workspace.yaml']) {
