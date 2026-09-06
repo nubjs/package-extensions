@@ -42,7 +42,7 @@ The agreement figure is **9 of 22**: the six never-referenced edges are excluded
 
 Checking the missed-literal row is what moved it. It began at four edges, and only one of those is still outstanding:
 
-- `useragent → semver` — `features/index.js:7` reads `, semver = require('semver')` against two declared dependencies. Nothing in the published tree references that file, so it is reachable only as a legacy deep path. Still missed.
+- `useragent → semver` — `features/index.js:7` reads `, semver = require('semver')` against two declared dependencies. Still missed, and the reason turned out to be a deliberate rule rather than a gap in the walk: the file *is* reached and parsed, but `semver` sits in the package's own `devDependencies` and nothing on the published surface references `features/`, which is the shape of a build helper that shipped in the tarball. A speculative deep-path root is not allowed to override the author's own declaration, so the reference is set aside instead of reported. That rule is right far more often than it is wrong; `useragent` is a case where it is wrong, because `useragent/features` is a real entry point and the dev-time declaration is the author's mistake. Yarn found it the way it finds everything — somebody's install broke.
 - `volar-service-typescript-twoslash-queries → typescript` — the package's entire declaration surface is `create(ts: typeof import('typescript'))`. A type-position `import()` is a distinct syntax from an import statement, and the detector did not read it. It does now, and this edge is in the found row above. Yarn reached the same rule by hand in [#7232](https://github.com/yarnpkg/berry/pull/7232).
 
 The other two are quoted strings that are not imports at all:
