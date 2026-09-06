@@ -39,6 +39,8 @@ Matching that shape is deliberate. pnpm imports `@yarnpkg/extensions` in `create
 
 Carried through means field for field, not by name. 153 of Yarn's 159 entries are byte-identical here; the other six gained a target this scan found for a package Yarn already covers, and none of them changes a range, moves a target between fields, or relaxes a peer Yarn declared as required.
 
+Installing the package does not change what pnpm installs. pnpm bundles Yarn's database rather than resolving it from your `node_modules`, so the import above is for tooling that reads the data — a linter, a doctor command, your own resolver. To change an install, paste the config below.
+
 Raw data, if you would rather read it than install it: [`package-extensions.json`](package-extensions.json) at the repo root carries the rules plus per-entry evidence, the review queue, and what was dropped and why.
 
 ## Pasting it into a project
