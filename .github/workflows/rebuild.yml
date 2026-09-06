@@ -42,10 +42,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Resolve the detector ref to a full commit SHA
+        id: nubref
+        # `actions/checkout` only recognises a commit when the ref is the FULL
+        # 40-character SHA; anything shorter is fetched as a branch/tag pattern,
+        # which for an abbreviated SHA matches nothing and fails three retries
+        # deep with `git failed with exit code 1` and no mention of the ref. An
+        # abbreviation is exactly what `git log --oneline` hands you, so resolve
+        # it here instead of leaving the trap armed. A branch name resolves to
+        # its tip, which is what `main` already relied on.
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUB_REF: ${{ inputs.nub_ref || 'main' }}
+        run: |
+          set -euo pipefail
+          SHA=$(gh api "repos/nubjs/nub/commits/$NUB_REF" --jq .sha) || {
+            echo "::error::nub_ref '$NUB_REF' is not a commit, branch or tag in nubjs/nub"
+            exit 1
+          }
+          echo "resolved $NUB_REF -> $SHA"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+
       - uses: actions/checkout@v4
         with:
           repository: nubjs/nub
-          ref: ${{ inputs.nub_ref || 'main' }}
+          ref: ${{ steps.nubref.outputs.sha }}
           path: .nub
 
       - name: Record the detector's provenance
