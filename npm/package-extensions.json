@@ -27985,7 +27985,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260905.1",
+   "measuredVersion": "1.20260906.1",
    "targets": [
     {
      "target": "pnpapi",
