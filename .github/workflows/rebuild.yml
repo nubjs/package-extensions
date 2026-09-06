@@ -30,7 +30,17 @@ on:
     # fix their manifests and their entries should disappear, and new versions
     # introduce undeclared imports that should appear. A day is also short
     # enough that any single diff stays readable.
-    - cron: '0 6 * * *'
+    #
+    # 06:23Z, not 06:00Z. GitHub queues every repository's scheduled workflows
+    # together and warns that the event "can be delayed during periods of high
+    # loads", naming the start of every hour as exactly such a period — and a
+    # delayed schedule is not always merely late, it can be dropped. This
+    # workflow's first two on-the-hour ticks produced no run at all: at 09:31Z
+    # on 2026-09-06 the repo had seven `workflow_dispatch` runs and zero
+    # `schedule` runs, with the workflow active on the default branch since the
+    # previous afternoon. An odd minute away from the hour is the standard
+    # remedy.
+    - cron: '23 6 * * *'
 
 permissions:
   contents: write
