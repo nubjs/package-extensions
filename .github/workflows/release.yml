@@ -91,7 +91,18 @@ jobs:
       - name: Publish
         if: ${{ !inputs.dry_run }}
         working-directory: npm
-        run: npm publish --access public
+        # `--tag latest` is EXPLICIT, and it is not the redundant default it looks
+        # like. npm refuses to apply `latest` IMPLICITLY when the version being
+        # published is lower than one already on the registry:
+        #
+        #   Cannot implicitly apply the "latest" tag because previously published
+        #   version 2026.9.5 is higher than the new version 1.0.0.
+        #
+        # This package began on calendar versions and moved to semver, so the
+        # highest version on the registry is not the newest build and never will
+        # be again. For a dataset `latest` means the most recent scan, not the
+        # largest number, which is exactly what naming the tag says.
+        run: npm publish --access public --tag latest
 
       - name: Summary
         if: always()
