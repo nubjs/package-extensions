@@ -6,13 +6,27 @@
 # relationship is registered against THIS FILENAME (`release.yml`), so renaming
 # or moving this file silently breaks publishing until the trust is re-created.
 #
-# Manual only, deliberately. The dataset rebuilds daily, but a rebuild is not a
-# release: publishing every scan would burn a version per day for data that
-# usually has not moved. Bump `harness/version.json` in a reviewable commit, then
-# run this.
+# Runs on a schedule after the daily rebuild, and on demand.
+#
+# The scheduled run publishes only when the RULES changed. A rebuild rewrites
+# `generated` and any `measuredVersion` that ticked over, so comparing whole
+# files would publish a version a day for data that did not move; comparing the
+# `packageExtensions` map answers the only question a consumer cares about. When
+# it has moved, the patch version is bumped and committed here, because the
+# alternative is what this replaces: the repo's dataset advancing daily while npm
+# sits at whatever version someone last remembered to bump by hand.
+#
+# The publish stays in THIS FILE rather than being called from `rebuild.yml`.
+# npm's trusted publisher is registered against this workflow's FILENAME, and a
+# reusable-workflow call or a `workflow_dispatch` from another job changes which
+# identity npm sees — a `GITHUB_TOKEN`-triggered dispatch does not start a run at
+# all, by GitHub's recursion guard.
 name: Publish
 
 on:
+  schedule:
+    # An hour after the rebuild's 06:00Z, so the day's data has landed on main.
+    - cron: "0 7 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -26,14 +40,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      # `contents: write` so a scheduled run can commit the version bump it
+      # publishes. A manual run bumps nothing and only reads.
+      contents: write
       # npm publish authenticates via OIDC trusted publishing, which mints its
       # credential from this identity. Nothing else here needs a token.
       id-token: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:
@@ -62,19 +76,78 @@ jobs:
         # committed lockfile or not at all.
         run: npm ci --no-audit --no-fund
 
+      - name: Decide whether the rules moved, and bump if they did
+        id: gate
+        # Scheduled runs only. A manual run publishes whatever
+        # `harness/version.json` says, which is the reviewable path for a release
+        # that is not just a data refresh.
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/published && cd /tmp/published
+          if npm pack @nubjs/extensions@latest --silent > /dev/null 2>&1; then
+            tar xzf ./*.tgz
+            # ONLY the rules. `generated` moves every run, and a `measuredVersion`
+            # ticks over whenever a scanned package cuts a release, so a whole-file
+            # comparison would publish daily for data nobody would notice changing.
+            node -e '
+              const fs = require("fs");
+              const a = require("/tmp/published/package/package-extensions.json").packageExtensions;
+              const b = require(process.env.GITHUB_WORKSPACE + "/package-extensions.json").packageExtensions;
+              const same = JSON.stringify(a) === JSON.stringify(b);
+              console.log(same ? "rules unchanged" : `rules moved: ${Object.keys(a).length} -> ${Object.keys(b).length} entries`);
+              fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed=${same ? "false" : "true"}\n`);
+            '
+          else
+            echo "nothing published yet — treating as changed"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Bump the patch version
+        if: ${{ github.event_name == 'schedule' && steps.gate.outputs.changed == 'true' }}
+        # Patch, matching `@yarnpkg/extensions`, which reserves minor and major
+        # for a change in the exported SHAPE. A consumer tracking the data with a
+        # caret range keeps working across every one of these.
+        run: |
+          set -euo pipefail
+          NEXT=$(node -e '
+            const [maj, min, pat] = require("./harness/version.json").version.split(".").map(Number);
+            console.log(`${maj}.${min}.${pat + 1}`);
+          ')
+          node -e '
+            const fs = require("fs");
+            const f = "harness/version.json";
+            const v = JSON.parse(fs.readFileSync(f, "utf8"));
+            v.version = process.argv[1];
+            fs.writeFileSync(f, JSON.stringify(v, null, 2) + "\n");
+          ' "$NEXT"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "release: $NEXT" -- harness/version.json
+          # Same race as the rebuild's own push: main moves under a run that
+          # checked out at dispatch.
+          for attempt in 1 2 3; do
+            git push && break
+            git pull --rebase origin main
+          done
+          echo "bumped to $NEXT"
+
       - name: Build the publishable directory
+        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
         run: |
           set -euo pipefail
           node harness/pack.mjs
           node -e 'console.log("packing", require("./npm/package.json").name + "@" + require("./npm/package.json").version)'
 
       - name: Gate
+        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
         # The same suite that guards a dataset commit. A release must not be able
         # to ship something a normal build would have refused — above all the
         # no-regression contract that every `@yarnpkg/extensions` rule survives.
         run: node harness/verify.mjs
 
       - name: Refuse to republish an existing version
+        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
         # `npm publish` would fail on a duplicate anyway, but it fails AFTER
         # uploading, and the error reads like an auth problem. Checking first
         # makes a re-run of this workflow a clean no-op instead.
@@ -89,7 +162,7 @@ jobs:
           echo "$VERSION is unpublished (registry returned $CODE)"
 
       - name: Publish
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && (github.event_name != 'schedule' || steps.gate.outputs.changed == 'true') }}
         working-directory: npm
         # `--tag latest` is EXPLICIT, and it is not the redundant default it looks
         # like. npm refuses to apply `latest` IMPLICITLY when the version being
