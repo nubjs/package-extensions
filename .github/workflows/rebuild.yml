@@ -166,4 +166,16 @@ jobs:
           git add package-extensions.json dist docs npm records inputs harness/overrides.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "rebuild: ${{ steps.prov.outputs.run }} against nub ${{ steps.prov.outputs.sha }}"
-          git push
+          # A scan takes tens of minutes, so main routinely moves under a run that
+          # checked out at dispatch. A bare push is then rejected and the whole
+          # rebuild is thrown away at the last step, having already done all the
+          # expensive work. Rebase and retry instead. The commit only ever touches
+          # generated paths, so replaying it onto a newer main cannot conflict
+          # with hand-written changes to the harness or the docs.
+          for attempt in 1 2 3; do
+            git push && exit 0
+            echo "push rejected (attempt $attempt) — rebasing onto origin/main"
+            git pull --rebase origin main
+          done
+          echo "::error::could not push the rebuilt dataset after 3 attempts"
+          exit 1
