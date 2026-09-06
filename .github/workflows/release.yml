@@ -54,6 +54,14 @@ jobs:
             if (!ok) { console.error(`npm ${process.env.NPM_VERSION} is too old for trusted publishing (need >= 11.5.1)`); process.exit(1); }
           '
 
+      - name: Install the harness dependencies
+        # The gate below imports `yaml` and `semver`. `pack.mjs` needs neither,
+        # so a release without this step builds a package fine and then dies at
+        # the one check that protects it — which is how the first dry run of this
+        # workflow failed. `ci` rather than `install`: a release resolves from the
+        # committed lockfile or not at all.
+        run: npm ci --no-audit --no-fund
+
       - name: Build the publishable directory
         run: |
           set -euo pipefail
