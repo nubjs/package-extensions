@@ -35,6 +35,10 @@ on:
         description: "Pack and gate, but do not publish"
         type: boolean
         default: false
+      unpublish_version:
+        description: "TEMPORARY: unpublish this exact version instead of publishing"
+        type: string
+        default: ""
 
 permissions: {}
 
@@ -70,6 +74,26 @@ jobs:
             if (!ok) { console.error(`npm ${process.env.NPM_VERSION} is too old for trusted publishing (need >= 11.5.1)`); process.exit(1); }
           '
 
+      - name: Unpublish a version (temporary, one-off)
+        # Does npm's trusted-publishing OIDC credential carry unpublish rights,
+        # or only publish? Undocumented, and worth one run to find out: the
+        # calendar-versioned `2026.9.5` build predates three detector fixes and
+        # carries incorrect entries, npm's 72-hour deletion window closes
+        # 2026-09-08T23:24Z, and no npm token exists on any machine that can
+        # reach it — the local one 401s and this repo has no secrets.
+        #
+        # It lives in THIS file because npm registers the trust against the
+        # workflow FILENAME, so a separate workflow gets no OIDC identity at
+        # all. Remove this step and its input once the question is answered;
+        # an unpublish button sitting in a release pipeline is a footgun.
+        if: ${{ inputs.unpublish_version != '' }}
+        run: |
+          set -euo pipefail
+          echo "attempting: npm unpublish @nubjs/extensions@${{ inputs.unpublish_version }}"
+          npm unpublish "@nubjs/extensions@${{ inputs.unpublish_version }}"
+          echo "--- registry now reports ---"
+          npm view @nubjs/extensions versions --json
+
       - name: Install the harness dependencies
         # The gate below imports `yaml` and `semver`. `pack.mjs` needs neither,
         # so a release without this step builds a package fine and then dies at
@@ -83,7 +107,7 @@ jobs:
         # Scheduled runs only. A manual run publishes whatever
         # `harness/version.json` says, which is the reviewable path for a release
         # that is not just a data refresh.
-        if: ${{ github.event_name == 'schedule' }}
+        if: ${{ github.event_name == 'schedule' && inputs.unpublish_version == '' }}
         run: |
           set -euo pipefail
           mkdir -p /tmp/published && cd /tmp/published
@@ -106,7 +130,7 @@ jobs:
           fi
 
       - name: Bump the patch version
-        if: ${{ github.event_name == 'schedule' && steps.gate.outputs.changed == 'true' }}
+        if: ${{ github.event_name == 'schedule' && inputs.unpublish_version == '' && steps.gate.outputs.changed == 'true' }}
         # Patch, matching `@yarnpkg/extensions`, which reserves minor and major
         # for a change in the exported SHAPE. A consumer tracking the data with a
         # caret range keeps working across every one of these.
@@ -135,21 +159,21 @@ jobs:
           echo "bumped to $NEXT"
 
       - name: Build the publishable directory
-        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
+        if: ${{ inputs.unpublish_version == '' && (github.event_name != 'schedule' || steps.gate.outputs.changed == 'true') }}
         run: |
           set -euo pipefail
           node harness/pack.mjs
           node -e 'console.log("packing", require("./npm/package.json").name + "@" + require("./npm/package.json").version)'
 
       - name: Gate
-        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
+        if: ${{ inputs.unpublish_version == '' && (github.event_name != 'schedule' || steps.gate.outputs.changed == 'true') }}
         # The same suite that guards a dataset commit. A release must not be able
         # to ship something a normal build would have refused — above all the
         # no-regression contract that every `@yarnpkg/extensions` rule survives.
         run: node harness/verify.mjs
 
       - name: Refuse to republish an existing version
-        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
+        if: ${{ inputs.unpublish_version == '' && (github.event_name != 'schedule' || steps.gate.outputs.changed == 'true') }}
         # `npm publish` would fail on a duplicate anyway, but it fails AFTER
         # uploading, and the error reads like an auth problem. Checking first
         # makes a re-run of this workflow a clean no-op instead.
@@ -164,7 +188,7 @@ jobs:
           echo "$VERSION is unpublished (registry returned $CODE)"
 
       - name: Publish
-        if: ${{ !inputs.dry_run && (github.event_name != 'schedule' || steps.gate.outputs.changed == 'true') }}
+        if: ${{ !inputs.dry_run && inputs.unpublish_version == '' && (github.event_name != 'schedule' || steps.gate.outputs.changed == 'true') }}
         working-directory: npm
         # `--tag latest` is EXPLICIT, and it is not the redundant default it looks
         # like. npm refuses to apply `latest` IMPLICITLY when the version being
