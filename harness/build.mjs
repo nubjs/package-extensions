@@ -176,7 +176,11 @@ for (const pkg of [...byPackage.keys()].sort()) {
     targets: pkgRows
       .map((r) => {
         const { field, candidate, reason } = fieldFor(r, overrides);
-        return { target: r.target, class: r.class, field, candidate, reason, specifiers: r.specifiers };
+        // `files` is the citation: the published path a reader can open to
+        // check the rule themselves. Omitted rather than emitted empty when the
+        // scan predates it, so an absent field never reads as "no evidence".
+        const cite = r.files.length ? { files: r.files, fileCount: r.fileCount } : {};
+        return { target: r.target, class: r.class, field, candidate, reason, specifiers: r.specifiers, ...cite };
       })
       .sort((a, b) => (a.target < b.target ? -1 : 1)),
   });

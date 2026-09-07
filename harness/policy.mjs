@@ -199,6 +199,12 @@ function makeRow(offender, finding, klass) {
     fromSubpath: finding.from_subpath === true,
     fromTypes: finding.from_types === true,
     specifiers: finding.specifiers ?? [],
+    // Where the reference physically is, as opposed to which entry surface
+    // reaches it. Absent from a scan produced before nubjs/nub#910, so every
+    // consumer treats it as optional rather than assuming an empty list means
+    // no evidence.
+    files: finding.files ?? [],
+    fileCount: finding.file_count ?? 0,
   };
 }
 
