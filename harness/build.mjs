@@ -60,18 +60,41 @@ if (!includeGuarded) rows = rows.filter((r) => r.class !== 'guarded');
 // nothing, because it has never shipped; emitting it would put `pusher-js ->
 // express` in a public dataset.
 //
-// A NOTE ON LIFTING THIS, because the obvious next step is not enough. The self-
-// reference case above was fixed in the detector, and the tier is still not
-// publishable — self-reference was one class of several. Counted over the 246
-// edges of the 2026-09-06 scan: 10 targets are not npm names at all (`MODULE`,
-// `VAR_MODULE_APP` — webpack and turbopack build-time placeholders), 7 are
-// webpack alias namespaces that resolve through a framework's own config and
-// exist on no registry (`@generated/routes`), 64 come from two packages whose
-// tarball carries a bundled `dist` build so every target is already inlined,
-// and at least 21 of the remainder are real published packages referenced only
-// from test or build scaffolding that shipped in the tarball (`@material-ui/core
-// -> enzyme`, `troika-three-text -> rollup-plugin-terser`). The remaining ~144
-// are unaudited. Lifting this needs each class answered, not one fix.
+// A NOTE ON LIFTING THIS. Audited properly on 2026-09-07 by locating the FILE
+// behind each edge rather than reasoning about the package: 153 of the 246 edges
+// in the 2026-09-06 scan, being every edge of the 20 largest sources. Seven
+// classes, and only the first is publishable:
+//
+//   real library code      html-tokenize -> sax, from tokenize.js
+//   template payload       @nestjs/schematics -> @nestjs/common, from
+//                          dist/lib/application/files/js/src/app.module.js — a
+//                          file the generator COPIES into a user's project and
+//                          never requires itself
+//   browser asset          @fastify/swagger-ui -> react, from
+//                          static/swagger-ui.js — served over HTTP, never
+//                          resolved by Node
+//   framework-virtual      @docusaurus/plugin-debug -> @generated/routes —
+//                          resolves through a bundler alias, on no registry
+//   build-time placeholder next -> VAR_MODULE_APP, MODULE — not npm names
+//   build config           troika-three-text -> rollup-plugin-terser, from
+//                          rollup.config.build-typr.js
+//   test scaffolding       @material-ui/core -> enzyme, from
+//                          es/test-utils/createMount.js
+//
+// A FILENAME HEURISTIC CANNOT SEPARATE THEM, which is the finding. Scoring the
+// set with one (scaffolding directories plus `*.config.js`) called 146 of the
+// 153 publishable, because `defaults/server-node.mjs`,
+// `dist/lib/application/files/js/src/app.module.js` and
+// `lib/theme/DebugLayout/index.js` are indistinguishable from real modules by
+// their path — and three of the four largest classes look exactly like that.
+//
+// Corrects an earlier note here. It said the 64 swagger edges came from tarballs
+// carrying a bundled `dist` "so every target is already inlined"; that is true of
+// swagger-ui-bundle.js and false of the files actually flagged. swagger-ui.js
+// really does `require("dompurify")`, swagger-ui-dist@5.32.15 declares only
+// @scarf/scarf, and a clean install throws MODULE_NOT_FOUND on
+// `require("swagger-ui-dist/swagger-ui.js")`. The edges are real; they are
+// withheld because the file is a browser bundle, not because it is inlined.
 const withheld = rows.filter((r) => r.class === 'deep-path');
 rows = rows.filter((r) => r.class !== 'deep-path');
 
