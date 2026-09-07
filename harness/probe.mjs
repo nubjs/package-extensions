@@ -42,6 +42,7 @@
 // every consumer.
 
 import { execFileSync, execFile } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -112,7 +113,21 @@ for (const r of results) tally[r.verdict]++;
 mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(
   outPath,
-  `${JSON.stringify({ generated: new Date().toISOString().slice(0, 10), instrument: { yarn: YARN.version, mode: 'pnp, pnpFallbackMode: none' }, tally, results }, null, 2)}\n`
+  `${JSON.stringify(
+    {
+      generated: new Date().toISOString().slice(0, 10),
+      // WHICH dataset these verdicts describe. A date is too coarse — the
+      // rebuild gates once before the probe and again after, both on the same
+      // day, and the verifier has to tell the two apart to know whether the
+      // file on disk is this run's probe or the previous run's.
+      dataset: createHash('sha256').update(JSON.stringify(doc.packageExtensions)).digest('hex').slice(0, 16),
+      instrument: { yarn: YARN.version, mode: 'pnp, pnpFallbackMode: none' },
+      tally,
+      results,
+    },
+    null,
+    2
+  )}\n`
 );
 
 console.log(`\nconfirmed        ${tally.confirmed}   (the import really fails, and Yarn names the target)`);
@@ -194,7 +209,24 @@ async function probe(finding) {
     execFileSync('cp', [YARN.path, join(dir, '.yarn/releases/yarn.cjs')]);
     writeFileSync(
       join(dir, '.yarnrc.yml'),
-      ['yarnPath: .yarn/releases/yarn.cjs', 'enableGlobalCache: true', 'pnpFallbackMode: none', 'enableTelemetry: false'].join('\n')
+      [
+        'yarnPath: .yarn/releases/yarn.cjs',
+        'enableGlobalCache: true',
+        'pnpFallbackMode: none',
+        'enableTelemetry: false',
+        // Yarn turns `--immutable` ON by itself when CI=true, and every fixture
+        // here is generated fresh with no lockfile, so the install refuses with
+        //
+        //   YN0028: The lockfile would have been created by this install,
+        //           which is explicitly forbidden.
+        //
+        // The probe therefore reported `installFailed` for all 81 queued
+        // packages on every CI run it has ever made, while working perfectly on
+        // a developer machine where CI is unset. It published a results file
+        // that looked like evidence and contained none — and this is the file
+        // that decides whether a finding becomes a real `dependencies` entry.
+        'enableImmutableInstalls: false',
+      ].join('\n')
     );
 
     try {
@@ -353,6 +385,14 @@ async function ensureYarn() {
 }
 
 function readVersion(p) {
-  const m = readFileSync(p, 'utf8').slice(0, 4000).match(/(\d+\.\d+\.\d+)/);
-  return m ? m[1] : 'unknown';
+  // Ask the release itself. Scanning the bundle's first 4 KB for a version-shaped
+  // string matched something else in Yarn 4.18.0 and recorded `unknown`, which
+  // leaves a results file that cannot say which resolver produced it — the one
+  // fact a reproduction needs most.
+  try {
+    return execFileSync('node', [p, '--version'], { encoding: 'utf8', timeout: 60_000 }).trim();
+  } catch {
+    const m = readFileSync(p, 'utf8').slice(0, 4000).match(/(\d+\.\d+\.\d+)/);
+    return m ? m[1] : 'unknown';
+  }
 }

@@ -10,6 +10,7 @@
 // fine and empty.
 
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { dirname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -297,6 +298,45 @@ check('dist/pnpm-package.json round-trips', () => {
 // chain — so between a data change and a release nothing else here would notice
 // it going stale. It shipped stale once, which is why this gate exists.
 const packed = await loadPacked();
+
+check('the install probe actually installed something', () => {
+  // The probe is the only instrument that can turn a finding into a real
+  // `dependencies` entry, and it failed EVERY package on every CI run it ever
+  // made — Yarn enables `--immutable` when CI=true, each fixture is generated
+  // fresh with no lockfile, and the install refused with YN0028. It published a
+  // results file that looked like evidence and carried none, and nothing
+  // noticed, because `installFailed` is a legitimate per-package outcome and
+  // the file was well-formed.
+  //
+  // A universal failure is not a result, it is a broken instrument. An
+  // occasional one is ordinary — a package that cannot install under PnP at all
+  // — so this refuses only the degenerate case.
+  const path = resolve(ROOT, 'docs/probe-results.json');
+  if (!existsSync(path)) throw new NotApplicable('docs/probe-results.json not present — the probe has not run');
+  const probe = JSON.parse(readFileSync(path, 'utf8'));
+  // The rebuild gates TWICE — once after building, and again after the probe
+  // has run and promoted. Only the second pass can judge this run's probe; on
+  // the first, the file on disk describes the PREVIOUS run's rules, and failing
+  // there would refuse today's rebuild for yesterday's instrument. The date
+  // cannot separate them, since both passes happen on the same day.
+  const fingerprint = createHash('sha256').update(JSON.stringify(doc.packageExtensions)).digest('hex').slice(0, 16);
+  if (probe.dataset !== fingerprint) {
+    throw new NotApplicable(`probe results describe dataset ${probe.dataset ?? '(unstamped)'}, this one is ${fingerprint}`);
+  }
+  const total = probe.results?.length ?? 0;
+  if (total === 0) throw new NotApplicable('the probe ran with an empty queue');
+  const failed = probe.tally?.installFailed ?? 0;
+  if (failed === total) {
+    throw new Error(
+      `all ${total} probes failed to install — the instrument is broken, not the packages. ` +
+        `First detail: ${String(probe.results[0].detail ?? '').replace(/\s+/g, ' ').slice(0, 160)}`
+    );
+  }
+  if (!probe.instrument?.yarn || probe.instrument.yarn === 'unknown') {
+    throw new Error('the probe did not record which Yarn produced it — a result nobody can reproduce');
+  }
+  return `${total - failed} of ${total} installed under Yarn ${probe.instrument.yarn}`;
+});
 
 check('the published npm artifact carries the whole dataset', () => {
   if (!packed) throw new NotApplicable('npm/ not built — run harness/pack.mjs');
