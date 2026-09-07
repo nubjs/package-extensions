@@ -149,8 +149,25 @@ async function exists(name) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const dropped = { unpublished: [], unresolved: [] };
+// A bundler artifact that happens to be a real package name. webpack's UMD
+// wrapper writes each external's name into the header, and a misconfigured
+// external comes out as the literal `null`:
+//
+//   module.exports = t(require("null"))                 redoc.standalone.js
+//
+// npm has a package called `null`, so the published-target check above waves it
+// straight through and the rule ships. It shipped: `redoc@*` carried
+// `peerDependencies: { null: "*" }` in the 2026-09-07 dataset. Nothing depends
+// on these names deliberately, and one false positive costs more trust than the
+// rules it sits beside are worth.
+const BUNDLER_LITERALS = new Set(['null', 'undefined', 'true', 'false', 'NaN']);
+
+const dropped = { unpublished: [], unresolved: [], bundlerLiteral: [] };
 rows = rows.filter((r) => {
+  if (BUNDLER_LITERALS.has(r.target)) {
+    dropped.bundlerLiteral.push(`${r.package} -> ${r.target}`);
+    return false;
+  }
   if (cache[r.target] === true) return true;
   (cache[r.target] === false ? dropped.unpublished : dropped.unresolved).push(`${r.package} -> ${r.target}`);
   return false;
@@ -301,6 +318,7 @@ const doc = {
     byField: { dependency: fieldCounts.dependency, peer: fieldCounts.peer },
     candidatesForReview: candidates.length,
     droppedUnpublishedTargets: dropped.unpublished.length,
+    droppedBundlerLiterals: dropped.bundlerLiteral.length,
     droppedUnresolvedTargets: dropped.unresolved.length,
     // Found, recorded, deliberately not emitted. See the withholding note above.
     withheldDeepPath: withheld.length,
@@ -332,6 +350,7 @@ console.error(
     `(${counts.runtime} runtime, ${counts.adapter} adapter, ${counts.types} types, ${counts.guarded} guarded; ` +
     `${fieldCounts.dependency} dependency, ${fieldCounts.peer} peer), ` +
     `${dropped.unpublished.length} dropped as unpublished, ` +
+    `${dropped.bundlerLiteral.length} as bundler literals, ` +
     `${candidates.length} candidates for review; ` +
     `+${yarnAdded} from @yarnpkg/extensions@${yarn.version}`
 );

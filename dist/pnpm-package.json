@@ -7584,7 +7584,6 @@
         "peerDependencies": {
           "call-me-maybe": "*",
           "fast-safe-stringify": "*",
-          "null": "*",
           "yaml": "*"
         },
         "peerDependenciesMeta": {
@@ -7592,9 +7591,6 @@
             "optional": true
           },
           "fast-safe-stringify": {
-            "optional": true
-          },
-          "null": {
             "optional": true
           },
           "yaml": {

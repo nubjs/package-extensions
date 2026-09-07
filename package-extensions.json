@@ -8,7 +8,7 @@
   },
   "sources": {
     "scan": {
-      "entries": 1189,
+      "entries": 1188,
       "packages": 660
     },
     "yarn": {
@@ -21,20 +21,21 @@
   },
   "totals": {
     "packages": 811,
-    "entries": 1189,
+    "entries": 1188,
     "byClass": {
       "runtime": 219,
       "adapter": 130,
       "types": 537,
       "deep-path": 0,
-      "guarded": 303
+      "guarded": 302
     },
     "byField": {
       "dependency": 29,
-      "peer": 1160
+      "peer": 1159
     },
     "candidatesForReview": 107,
     "droppedUnpublishedTargets": 202,
+    "droppedBundlerLiterals": 1,
     "droppedUnresolvedTargets": 0,
     "withheldDeepPath": 246
   },
@@ -10551,7 +10552,6 @@
       "peerDependencies": {
         "call-me-maybe": "*",
         "fast-safe-stringify": "*",
-        "null": "*",
         "yaml": "*"
       },
       "peerDependenciesMeta": {
@@ -10559,9 +10559,6 @@
           "optional": true
         },
         "fast-safe-stringify": {
-          "optional": true
-        },
-        "null": {
           "optional": true
         },
         "yaml": {
@@ -32399,20 +32396,6 @@
           "fileCount": 2
         },
         {
-          "target": "null",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "null"
-          ],
-          "files": [
-            "bundles/redoc.standalone.js"
-          ],
-          "fileCount": 1
-        },
-        {
           "target": "yaml",
           "class": "runtime",
           "field": "peer",
@@ -35844,6 +35827,9 @@
       "wrangler -> @cloudflare/containers-shared",
       "wrangler -> @cloudflare/remote-bindings"
     ],
-    "unresolved": []
+    "unresolved": [],
+    "bundlerLiteral": [
+      "redoc -> null"
+    ]
   }
 }

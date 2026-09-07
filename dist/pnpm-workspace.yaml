@@ -1,5 +1,5 @@
 # Generated 2026-09-07 from the 10000 most-downloaded npm packages.
-# 811 packages, 1189 undeclared dependencies.
+# 811 packages, 1188 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -4849,14 +4849,11 @@ packageExtensions:
     peerDependencies:
       call-me-maybe: "*"
       fast-safe-stringify: "*"
-      "null": "*"
       yaml: "*"
     peerDependenciesMeta:
       call-me-maybe:
         optional: true
       fast-safe-stringify:
-        optional: true
-      "null":
         optional: true
       yaml:
         optional: true
