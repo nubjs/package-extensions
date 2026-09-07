@@ -4795,16 +4795,6 @@
           }
         }
       },
-      "ast-v8-to-istanbul@*": {
-        "peerDependencies": {
-          "istanbul-lib-coverage": "*"
-        },
-        "peerDependenciesMeta": {
-          "istanbul-lib-coverage": {
-            "optional": true
-          }
-        }
-      },
       "astring@*": {
         "peerDependencies": {
           "source-map": "*"

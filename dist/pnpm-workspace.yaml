@@ -1,5 +1,5 @@
-# Generated 2026-09-06 from the 10000 most-downloaded npm packages.
-# 812 packages, 1190 undeclared dependencies.
+# Generated 2026-09-07 from the 10000 most-downloaded npm packages.
+# 811 packages, 1189 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -3091,12 +3091,6 @@ packageExtensions:
       "@babel/types": "*"
     peerDependenciesMeta:
       "@babel/types":
-        optional: true
-  ast-v8-to-istanbul@*:
-    peerDependencies:
-      istanbul-lib-coverage: "*"
-    peerDependenciesMeta:
-      istanbul-lib-coverage:
         optional: true
   astring@*:
     peerDependencies:
