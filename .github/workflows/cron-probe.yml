@@ -1,0 +1,27 @@
+# Throwaway probe: does a scheduled event fire in this repository AT ALL?
+#
+# Neither rebuild.yml nor release.yml has ever produced a `schedule` run, across
+# two different cron times. Every repository-level explanation checks out — the
+# workflows are active, Actions is enabled, the repo is public, not a fork, not
+# archived, the cron is on the default branch — and scheduled workflows fire
+# normally in nubjs/nub, so the org and GitHub's scheduler are both fine.
+#
+# This isolates the variable. It is the minimal shape that works elsewhere:
+# schedule first, `workflow_dispatch: {}` with no inputs, no permissions block,
+# one step. If THIS fires and rebuild.yml does not, the difference is in
+# rebuild.yml's trigger block — most likely its `required: true` dispatch input.
+# If neither fires, the cause is repository-level and not the workflow at all.
+#
+# Delete this file once the question is answered.
+name: cron probe
+
+on:
+  schedule:
+    - cron: "37 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "fired by ${{ github.event_name }} at $(date -u)"
