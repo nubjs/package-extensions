@@ -305,8 +305,18 @@ const doc = {
     // Found, recorded, deliberately not emitted. See the withholding note above.
     withheldDeepPath: withheld.length,
   },
+  // Withheld, but recorded in full and with its citations: the whole reason this
+  // tier does not ship is that the file behind an edge decides whether the rule
+  // is a legacy entry point or a template a generator copies out, and a reader
+  // cannot check that claim from a package name alone. docs/deep-path-tier.md
+  // walks the seven classes.
   withheldDeepPath: withheld
-    .map((r) => ({ package: r.package, target: r.target, specifiers: r.specifiers }))
+    .map((r) => ({
+      package: r.package,
+      target: r.target,
+      specifiers: r.specifiers,
+      ...(r.files.length ? { files: r.files } : {}),
+    }))
     .sort((a, b) => (`${a.package} ${a.target}` < `${b.package} ${b.target}` ? -1 : 1)),
   yarnKeys: yarn.entries.map(([selector]) => selector).sort(),
   packageExtensions,
