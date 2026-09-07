@@ -1,15 +1,16 @@
 {
   "generated": "2026-09-07",
+  "dataset": "09311eb42b1ecd1c",
   "instrument": {
-    "yarn": "unknown",
+    "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
-    "confirmed": 0,
-    "confirmedViaPath": 0,
-    "notOnImport": 0,
-    "installFailed": 81,
-    "inconclusive": 0
+    "confirmed": 4,
+    "confirmedViaPath": 11,
+    "notOnImport": 59,
+    "installFailed": 3,
+    "inconclusive": 4
   },
   "results": [
     {
@@ -18,8 +19,14 @@
       "expected": [
         "@applitools/test-utils"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 53ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "@ardatan/relay-compiler",
@@ -27,8 +34,16 @@
       "expected": [
         "glob"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 42ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "graphql"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "@electric-sql/pglite",
@@ -36,8 +51,14 @@
       "expected": [
         "ws"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 32ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@electric-sql/pglite-tools",
@@ -45,8 +66,14 @@
       "expected": [
         "ws"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 30ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "@expo/dom-webview",
@@ -54,8 +81,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 32ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@globalart/nestcord",
@@ -63,8 +96,18 @@
       "expected": [
         "discord-api-types"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 60ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "discord-api-types"
+      ],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "discord.js"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "@lerna/create",
@@ -73,8 +116,16 @@
         "ci-info",
         "libnpmaccess"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 48ms\n"
+      "verdict": "confirmed",
+      "confirmed": [
+        "ci-info"
+      ],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@lhci/cli",
@@ -84,8 +135,14 @@
         "puppeteer",
         "puppeteer-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 60ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "@mastra/core",
@@ -101,8 +158,19 @@
         "undici",
         "vitest"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 29ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 11,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "zod"
+      ],
+      "byOtherIssuers": [
+        "@ai-sdk/provider-utils -> zod (unprovided peer)",
+        "@mastra/schema-compat -> zod (unprovided peer)"
+      ],
+      "specifiersTried": 37
     },
     {
       "package": "@newrelic/security-agent",
@@ -111,8 +179,14 @@
         "@aws-sdk/client-lambda",
         "@grpc/grpc-js"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 56ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@ngx-translate/http-loader",
@@ -120,8 +194,16 @@
       "expected": [
         "rxjs"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 56ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "@angular/common"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@nivo/line",
@@ -129,8 +211,16 @@
       "expected": [
         "lodash"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 31ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@nuxt/vite-builder",
@@ -140,8 +230,16 @@
         "@nuxt/schema",
         "unplugin"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 51ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@vitejs/plugin-vue -> vue (unprovided peer)"
+      ],
+      "specifiersTried": 3
     },
     {
       "package": "@nx/devkit",
@@ -153,8 +251,16 @@
         "rxjs",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 46ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 5,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "nx"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 14
     },
     {
       "package": "@nx/eslint-plugin",
@@ -169,8 +275,20 @@
         "typescript",
         "typescript-eslint"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 54ms\n"
+      "verdict": "confirmed",
+      "confirmed": [
+        "@eslint/js",
+        "angular-eslint",
+        "eslint-plugin-import"
+      ],
+      "confirmedViaPath": [],
+      "citedPathsTried": 13,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@nx/devkit -> nx (unprovided peer)"
+      ],
+      "specifiersTried": 20
     },
     {
       "package": "@nx/rollup",
@@ -179,8 +297,16 @@
         "@swc/core",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 45ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@nx/devkit -> nx (unprovided peer)"
+      ],
+      "specifiersTried": 9
     },
     {
       "package": "@nx/webpack",
@@ -190,8 +316,16 @@
         "swc-loader",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 32ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@nx/devkit -> nx (unprovided peer)"
+      ],
+      "specifiersTried": 11
     },
     {
       "package": "@oclif/config",
@@ -202,8 +336,14 @@
         "ts-node",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 51ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "@pnpm/npm-conf",
@@ -211,8 +351,16 @@
       "expected": [
         "npm"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 32ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [
+        "babylon"
+      ],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@react-native-community/cli",
@@ -222,8 +370,14 @@
         "@react-native-community/cli-platform-apple",
         "react-native"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 51ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "@react-native-community/cli-config-apple",
@@ -233,8 +387,14 @@
         "fs-extra",
         "ora"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 54ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "@react-native-community/cli-doctor",
@@ -243,8 +403,14 @@
         "@react-native-community/cli-types",
         "fs-extra"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 55ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "@react-native-community/cli-platform-apple",
@@ -253,8 +419,14 @@
         "@react-native-community/cli-types",
         "fs-extra"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 54ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "@sentry/react-native",
@@ -269,8 +441,8 @@
         "open",
         "promise"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 28ms\n"
+      "verdict": "inconclusive",
+      "detail": "[Sentry] Could not determine EAS build hook name. Pass one of: on-complete, on-error, on-success\n"
     },
     {
       "package": "@storybook/nextjs-vite",
@@ -278,8 +450,20 @@
       "expected": [
         "sb-original"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 57ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "storybook",
+        "next",
+        "react"
+      ],
+      "byOtherIssuers": [
+        "vite-tsconfig-paths -> vite (unprovided peer)"
+      ],
+      "specifiersTried": 12
     },
     {
       "package": "@swagger-api/apidom-reference",
@@ -288,8 +472,16 @@
         "@swagger-api/apidom-ns-asyncapi-3",
         "minim"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 56ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@swaggerexpert/json-pointer -> @swagger-api/apidom-core"
+      ],
+      "specifiersTried": 9
     },
     {
       "package": "@tanstack/query-devtools",
@@ -307,8 +499,14 @@
         "solid-transition-group",
         "superjson"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 66ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 10,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 11
     },
     {
       "package": "domino",
@@ -316,8 +514,14 @@
       "expected": [
         "parserlib"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 62ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "drizzle-kit",
@@ -335,8 +539,14 @@
         "postgres",
         "zod"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 60ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-application",
@@ -344,8 +554,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 58ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-asset",
@@ -354,8 +570,16 @@
         "@react-native/assets-registry",
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 56ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 7,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 12
     },
     {
       "package": "expo-auth-session",
@@ -363,8 +587,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 56ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 7,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 8
     },
     {
       "package": "expo-blur",
@@ -372,8 +602,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 39ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-camera",
@@ -381,8 +617,19 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 30ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo",
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-clipboard",
@@ -390,8 +637,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 57ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-constants",
@@ -400,8 +653,14 @@
         "expo-manifests",
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 32ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "expo-crypto",
@@ -409,8 +668,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 57ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-dev-menu",
@@ -418,8 +683,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 33ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "expo-device",
@@ -427,8 +698,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 32ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "expo-document-picker",
@@ -436,8 +713,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 25ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-eas-client",
@@ -445,8 +728,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 52ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "expo-file-system",
@@ -454,8 +743,16 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 32ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 13
     },
     {
       "package": "expo-font",
@@ -464,8 +761,16 @@
         "expo-asset",
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 32ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 7,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 12
     },
     {
       "package": "expo-haptics",
@@ -473,8 +778,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 44ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "expo-image",
@@ -484,8 +795,14 @@
         "expo-modules-core",
         "expo-observe"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 29ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "expo-image-manipulator",
@@ -493,8 +810,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 24ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 7,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 8
     },
     {
       "package": "expo-image-picker",
@@ -502,8 +825,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 37ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "expo-keep-awake",
@@ -511,8 +840,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 64ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "expo-linking",
@@ -520,8 +855,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 57ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-localization",
@@ -529,8 +870,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 43ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-location",
@@ -538,8 +885,18 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 42ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-notifications",
@@ -547,8 +904,18 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 38ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-router",
@@ -557,8 +924,18 @@
         "expo-modules-core",
         "react-native-tab-view"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 51ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-secure-store",
@@ -566,8 +943,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 45ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "expo-sharing",
@@ -575,8 +958,16 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 27ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "expo-system-ui",
@@ -584,8 +975,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 57ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "expo-updates",
@@ -593,8 +990,16 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 38ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-video",
@@ -602,8 +1007,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 50ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "expo-web-browser",
@@ -611,8 +1022,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 44ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "firebase-tools",
@@ -621,8 +1038,16 @@
         "astro",
         "firebase-functions"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 59ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "firebase-functions"
+      ],
+      "citedPathsTried": 9,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 10
     },
     {
       "package": "http-call",
@@ -630,8 +1055,14 @@
       "expected": [
         "chalk"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 56ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "jest",
@@ -639,8 +1070,8 @@
       "expected": [
         "jest-config"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 29ms\n"
+      "verdict": "inconclusive",
+      "detail": "Command failed: node .yarn/releases/yarn.cjs node probe.cjs\n"
     },
     {
       "package": "knex",
@@ -648,8 +1079,14 @@
       "expected": [
         "oracledb"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 29ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "lerna",
@@ -657,8 +1094,14 @@
       "expected": [
         "chalk"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 89ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "next",
@@ -671,8 +1114,19 @@
         "react-server-dom-webpack",
         "server-only"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 62ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "private-next-instrumentation-client",
+        "react-server-dom-webpack"
+      ],
+      "citedPathsTried": 20,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 21
     },
     {
       "package": "nitro",
@@ -690,8 +1144,19 @@
         "youch",
         "youch-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 57ms\n"
+      "verdict": "confirmed",
+      "confirmed": [
+        "croner",
+        "scule",
+        "ufo",
+        "unctx"
+      ],
+      "confirmedViaPath": [],
+      "citedPathsTried": 15,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 32
     },
     {
       "package": "nx",
@@ -712,8 +1177,8 @@
         "ts-node",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 48ms\n"
+      "verdict": "inconclusive",
+      "detail": "fatal: not a git repository (or any of the parent directories): .git\n"
     },
     {
       "package": "oxc-minify",
@@ -722,7 +1187,7 @@
         "@oxc-minify/binding-wasm32-wasi"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 41ms\n"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-minify\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.149.0\u001b[39m: All versions satisfying \"0.149.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-min"
     },
     {
       "package": "oxc-parser",
@@ -731,7 +1196,7 @@
         "@oxc-parser/binding-wasm32-wasi"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 44ms\n"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-parser\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.149.0\u001b[39m: All versions satisfying \"0.149.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-par"
     },
     {
       "package": "oxc-transform",
@@ -740,7 +1205,7 @@
         "@oxc-transform/binding-wasm32-wasi"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 85ms\n"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-transform\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.149.0\u001b[39m: All versions satisfying \"0.149.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-"
     },
     {
       "package": "playwright-core",
@@ -753,8 +1218,14 @@
         "utf-8-validate",
         "zod"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 54ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 8
     },
     {
       "package": "prettier-plugin-organize-imports",
@@ -763,8 +1234,17 @@
         "@volar/typescript",
         "@vue/language-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 43ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "prettier",
+        "typescript"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "react-csv",
@@ -773,8 +1253,16 @@
         "prop-types",
         "react"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 54ms\n"
+      "verdict": "confirmed",
+      "confirmed": [
+        "react"
+      ],
+      "confirmedViaPath": [],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "react-native",
@@ -782,8 +1270,14 @@
       "expected": [
         "@react-native-community/cli"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 53ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 6
     },
     {
       "package": "react-native-gesture-handler",
@@ -792,8 +1286,14 @@
         "react-native-reanimated",
         "react-native-worklets"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 56ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "react-native-reanimated",
@@ -802,8 +1302,14 @@
         "react-native-svg",
         "react-native-web"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 48ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "react-qr-code",
@@ -811,8 +1317,16 @@
       "expected": [
         "react-native-svg"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 33ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "redoc",
@@ -823,8 +1337,18 @@
         "null",
         "yaml"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 20ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "null"
+      ],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "snappy",
@@ -832,8 +1356,14 @@
       "expected": [
         "@napi-rs/snappy-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 22ms\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "swagger2openapi",
@@ -841,8 +1371,16 @@
       "expected": [
         "should"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 25ms\n"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "should"
+      ],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "useragent",
@@ -851,8 +1389,8 @@
         "request",
         "yamlparser"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[91m➤\u001b[39m YN0028: · The lockfile would have been created by this install, which is explicitly forbidden.\n\u001b[91m➤\u001b[39m YN0000: · Failed with errors in 0s 24ms\n"
+      "verdict": "inconclusive",
+      "detail": "(node:7275) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-YfK60J/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "run": "2026-09-07-top10000",
-  "date": "2026-09-07T16:11:51Z",
+  "date": "2026-09-07T16:18:25Z",
   "detector": {
     "repository": "nubjs/nub",
     "commit": "e1306d23ad4cd047048b62ca37a75f357211e4b7",
@@ -10,5 +10,5 @@
     "ranking": "npm-high-impact topDownload",
     "top": 10000
   },
-  "workflowRun": "https://github.com/nubjs/package-extensions/actions/runs/34141844495"
+  "workflowRun": "https://github.com/nubjs/package-extensions/actions/runs/34142463656"
 }
