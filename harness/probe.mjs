@@ -302,7 +302,14 @@ console.log(JSON.stringify(out));`
       citedPathsTried: cited.length,
       // Undeclared imports the detector did not predict — a genuine false-negative
       // signal, now that declared-but-unprovided peers are counted separately.
-      accessedButNotPredicted: [...accessed].filter((t) => !base.expected.includes(t)),
+      //
+      // BOTH routes, not just the entry surface. Requiring a cited file loads
+      // its own graph, so it can surface a target nothing predicted, and reading
+      // `accessed` alone would drop exactly the misses this list exists to
+      // catch. The tier split governs promotion, not detection.
+      accessedButNotPredicted: [...new Set([...accessed, ...viaCitedPath])].filter(
+        (t) => !base.expected.includes(t)
+      ),
       unprovidedPeers: [...unprovidedPeers],
       // Real phantoms raised by other packages in the graph. Not this package's
       // finding, and worth keeping: an issuer here may be outside the corpus.
