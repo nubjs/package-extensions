@@ -132,10 +132,19 @@ jobs:
             "records/${{ steps.prov.outputs.run }}/meta.json"
 
       - name: Build, emit and gate
+        # `sync-readme.mjs` runs BEFORE the gate, and that ordering is the point.
+        # The README states derived totals in prose and the gate refuses a stale
+        # one, which is right — they had drifted across three rebuilds. But
+        # nothing updated them, so the first scheduled rebuild that moved the
+        # dataset by a single package failed the gate and committed nothing:
+        # run 34141360882, 812 -> 811, four stale figures, everything after it
+        # skipped. A daily cadence cannot depend on someone hand-editing a
+        # number. Generate them, then let the gate verify the generation ran.
         run: |
           node harness/build.mjs --scan "records/${{ steps.prov.outputs.run }}/scan.json"
           node harness/emit.mjs
           node harness/pack.mjs
+          node harness/sync-readme.mjs
           node harness/verify.mjs
 
       - name: Cross-check against Yarn's database
@@ -183,7 +192,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package-extensions.json dist docs npm records inputs harness/overrides.json
+          # README.md belongs here because `sync-readme.mjs` rewrites its derived
+          # totals. Leave it out and the sync satisfies the gate in the runner's
+          # working tree, is discarded, and main keeps a README that contradicts
+          # the dataset committed beside it.
+          git add package-extensions.json README.md dist docs npm records inputs harness/overrides.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "rebuild: ${{ steps.prov.outputs.run }} against nub ${{ steps.prov.outputs.sha }}"
           # A scan takes tens of minutes, so main routinely moves under a run that

@@ -17,6 +17,8 @@ import { pathToFileURL } from 'node:url';
 import YAML from 'yaml';
 import semver from 'semver';
 
+import { readmeFigures } from './readme-figures.mjs';
+
 import { mustNotBeDependency } from './policy.mjs';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname), '..');
@@ -249,26 +251,26 @@ check('every dataset total the README states matches the dataset', () => {
     throw new NotApplicable(`corpus is ${doc.corpus.size}, not a full run — the README documents the ${FULL_CORPUS}-package dataset`);
   }
   const md = readFileSync(resolve(ROOT, 'README.md'), 'utf8');
-  const num = (label, pattern, expected) => {
-    const m = md.match(pattern);
-    // A pattern that stops matching is reported, never skipped. Reword the prose
-    // and this fails, which is the prompt to confirm the number came with it.
-    if (!m) return `${label}: the README no longer states this — update ${pattern}`;
-    const got = Number(m[1].replace(/,/g, ''));
-    return got === expected ? null : `${label}: README says ${got}, dataset has ${expected}`;
-  };
-  const t = doc.totals;
-  const wrong = [
-    num('headline packages', /\*\*([\d,]+) packages\.\*\*/, t.packages),
-    num('scan-contributed packages', /finds ([\d,]+) with an undeclared dependency/, doc.sources.scan.packages),
-    num('total edges', /undeclared dependency across ([\d,]+) edges/, t.entries),
-    num('carried from Yarn', /remaining ([\d,]+) come from Yarn/, doc.sources.yarn.addedAsNewKeys),
-    ...Object.entries(t.byClass)
-      .filter(([, count]) => count > 0)
-      .map(([cls, count]) => num(`class ${cls}`, new RegExp(`\\| \`${cls}\` \\| ([\\d,]+) \\|`), count)),
-  ].filter(Boolean);
-  if (wrong.length) throw new Error(`${wrong.length} stale figure(s): ${wrong.join('; ')}`);
-  return `${4 + Object.values(t.byClass).filter((c) => c > 0).length} figures agree`;
+  // The patterns live in readme-figures.mjs because `sync-readme.mjs` rewrites
+  // exactly this set. Two copies would drift, and a sync that updated a figure
+  // this gate does not check would edit prose nobody verified.
+  const wrong = readmeFigures(doc)
+    .map(({ label, pattern, expected }) => {
+      const m = md.match(pattern);
+      // A pattern that stops matching is reported, never skipped. Reword the
+      // prose and this fails, which is the prompt to confirm the number came
+      // with it — and the sync deliberately cannot repair this case.
+      if (!m) return `${label}: the README no longer states this — update ${pattern}`;
+      const got = Number(m[1].replace(/,/g, ''));
+      return got === expected ? null : `${label}: README says ${got}, dataset has ${expected}`;
+    })
+    .filter(Boolean);
+  // A stale figure here means `sync-readme.mjs` did not run, or could not reach
+  // this sentence. It is not something to fix by hand in the README.
+  if (wrong.length) {
+    throw new Error(`${wrong.length} stale figure(s) — run \`node harness/sync-readme.mjs\`: ${wrong.join('; ')}`);
+  }
+  return `${readmeFigures(doc).length} figures agree`;
 });
 
 // --------------------------------------------- generator against a consumer
