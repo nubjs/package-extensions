@@ -238,9 +238,9 @@ node harness/pack.mjs                                    # -> npm/
 node harness/verify.mjs                                  # gate
 ```
 
-The workflow in [`.github/workflows/rebuild.yml`](.github/workflows/rebuild.yml) runs all of it daily against a pinned `nubjs/nub` commit, and on demand. Each run keeps its raw detector output and a `meta.json` naming that commit under `records/`, so a published entry traces back to the scan that produced it. Records older than thirty days are pruned.
+The workflow in [`.github/workflows/rebuild.yml`](.github/workflows/rebuild.yml) runs all of it against a pinned `nubjs/nub` commit, on a daily schedule and on demand. Every published dataset records which scan produced it, so the date on an entry is the one to trust rather than the cadence. Each run keeps its raw detector output and a `meta.json` naming that commit under `records/`, so a published entry traces back to the scan that produced it. Records older than thirty days are pruned.
 
-A daily cadence is what keeps the dataset from rotting, and it moves in both directions:
+Re-scanning is what keeps the dataset from rotting, and it moves in both directions:
 
 - **Entries disappear** when a package fixes its manifest. Between 5.4.0 and 5.9.1 `@hookform/resolvers` declared twenty-two optional peers, so it appears in an earlier scan with fifteen entries and is absent from this one entirely.
 - **Entries appear** when a new version introduces an import it does not declare.
