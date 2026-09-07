@@ -33,13 +33,15 @@ on:
     #
     # 06:23Z, not 06:00Z. GitHub queues every repository's scheduled workflows
     # together and warns that the event "can be delayed during periods of high
-    # loads", naming the start of every hour as exactly such a period — and a
-    # delayed schedule is not always merely late, it can be dropped. This
-    # workflow's first two on-the-hour ticks produced no run at all: at 09:31Z
-    # on 2026-09-06 the repo had seven `workflow_dispatch` runs and zero
-    # `schedule` runs, with the workflow active on the default branch since the
-    # previous afternoon. An odd minute away from the hour is the standard
-    # remedy.
+    # loads", naming the start of every hour as exactly such a period. An odd
+    # minute away from the hour is the standard remedy.
+    #
+    # EXPECT IT LATE ANYWAY, and do not read lateness as a failure. This cron
+    # fired at 12:47Z, six hours and twenty-four minutes behind, on a repository
+    # two days old whose three earlier on-the-hour ticks produced no run at all.
+    # A missing run on any one day is normal; what matters is that the record
+    # written by a run names its own date, so a stale entry is visible from the
+    # data rather than inferred from the cadence.
     - cron: '23 6 * * *'
 
 permissions:
@@ -152,7 +154,14 @@ jobs:
           node harness/verify.mjs
 
       - name: Drop records older than 30 days
-        if: ${{ inputs.commit != false }}
+        # NOT `inputs.commit != false`. On a `schedule` event the `inputs`
+        # context is null and a workflow_dispatch default does not apply, so
+        # GitHub coerces both sides to 0, the comparison is EQUAL, and the step
+        # is skipped. Every scheduled run therefore scanned 10,000 packages for
+        # forty minutes and threw the result away — observed on run 34123809932,
+        # the first schedule that ever fired here, whose every step succeeded
+        # while `Commit` reported `skipped`.
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.commit }}
         run: |
           # A daily scan record is ~800 KB. Keeping every one grows the repo by
           # ~300 MB a year for data whose only consumer is a spot-check of how a
@@ -169,7 +178,8 @@ jobs:
           git add -A records
 
       - name: Commit
-        if: ${{ inputs.commit != false }}
+        # Same null-input trap as the step above.
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.commit }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
