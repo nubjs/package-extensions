@@ -15,4 +15,4 @@ jobs:
         with:
           node-version: 24
       - run: node site/build.mjs
-      - run: node --test site/data.test.mjs
+      - run: node --test site/*.test.mjs

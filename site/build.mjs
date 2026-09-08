@@ -1,49 +1,143 @@
-import { readFileSync, writeFileSync, mkdirSync, rmSync, copyFileSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { execFileSync } from 'node:child_process';
-import { buildDirectory, escapeHtml as e, packagePath } from './data.mjs';
+import {
+  readFileSync,
+  writeFileSync,
+  mkdirSync,
+  rmSync,
+  copyFileSync,
+} from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
+import { buildDirectory, escapeHtml as e, packagePath } from "./data.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const root = resolve(here, '..');
-const out = resolve(here, 'public');
-const read = name => JSON.parse(readFileSync(resolve(root, name), 'utf8'));
-const dataset = read('package-extensions.json');
-const corpus = read('inputs/corpus.json');
+const root = resolve(here, "..");
+const out = resolve(here, "public");
+const read = (name) => JSON.parse(readFileSync(resolve(root, name), "utf8"));
+const dataset = read("package-extensions.json");
+const corpus = read("inputs/corpus.json");
 const packages = buildDirectory(dataset, corpus);
-const repository = 'https://github.com/nubjs/package-extensions';
-const revision = process.env.VERCEL_GIT_COMMIT_SHA || execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
-if (!/^[a-f0-9]{40}$/.test(revision)) throw new Error('Expected a full git revision');
+const repository = "https://github.com/nubjs/package-extensions";
+const revision =
+  process.env.VERCEL_GIT_COMMIT_SHA ||
+  execFileSync("git", ["rev-parse", "HEAD"], {
+    cwd: root,
+    encoding: "utf8",
+  }).trim();
+if (!/^[a-f0-9]{40}$/.test(revision))
+  throw new Error("Expected a full git revision");
 const source = `${repository}/blob/${revision}`;
-const count = packages.length.toLocaleString('en-US');
+const count = packages.length.toLocaleString("en-US");
 const date = dataset.generated;
-const code = (text, label = 'package.json') => `<div class="code"><div class="code-label">${e(label)}</div><pre><code>${e(text)}</code></pre></div>`;
-const title = (label, heading, description) => `<div class="page-heading"><p class="eyebrow">${label}</p><h1>${heading}</h1><p class="lead">${description}</p></div>`;
+const code = (text, label = "package.json") =>
+  `<div class="code"><div class="code-label">${e(label)}</div><pre><code>${e(
+    text
+  )}</code></pre></div>`;
+const title = (label, heading, description) =>
+  `<div class="page-heading"><p class="eyebrow">${label}</p><h1>${heading}</h1><p class="lead">${description}</p></div>`;
 
 function page(path, name, description, body, script = false) {
-  const active = path.startsWith('/packages') ? 'packages' : path.startsWith('/guide') ? 'guide' : path.startsWith('/about') ? 'about' : '';
+  const active = path.startsWith("/packages")
+    ? "packages"
+    : path.startsWith("/guide")
+    ? "guide"
+    : path.startsWith("/about")
+    ? "about"
+    : "";
   return `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(name)} · dephantom</title><meta name="description" content="${e(description)}"><link rel="canonical" href="https://dephantom.dev${e(path)}"><meta property="og:title" content="${e(name)}"><meta property="og:description" content="${e(description)}"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">${script ? '<script src="/directory.js" defer></script>' : ''}</head>
-<body><a class="skip" href="#main">Skip to content</a><header><div class="header-inner"><a class="brand" href="/" aria-label="dephantom home"><span class="brand-mark" aria-hidden="true">d.</span>dephantom</a><nav aria-label="Main">${[['packages', 'Packages'], ['guide', 'Maintainer guide'], ['about', 'About']].map(([key, label]) => `<a href="/${key}/"${active === key ? ' aria-current="page"' : ''}>${label}</a>`).join('')}<a href="${repository}">GitHub <span aria-hidden="true">↗</span></a></nav></div></header><main id="main">${body}</main><footer><a class="brand" href="/">dephantom</a><p>Maintained by <a href="https://nubjs.dev">Nub</a>. Data from ${e(date)}.</p><div><a href="${repository}">Repository</a><a href="https://www.npmjs.com/package/@nubjs/extensions">npm package</a><a href="/about/#corrections">Report a correction</a></div></footer></body></html>`;
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(
+    name
+  )} · dephantom</title><meta name="description" content="${e(
+    description
+  )}"><link rel="canonical" href="https://dephantom.dev${e(
+    path
+  )}"><meta property="og:title" content="${e(
+    name
+  )}"><meta property="og:description" content="${e(
+    description
+  )}"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">${
+    script ? '<script src="/directory.js" defer></script>' : ""
+  }</head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="header-inner"><a class="brand" href="/" aria-label="dephantom home"><span class="brand-mark" aria-hidden="true">d.</span>dephantom</a><nav aria-label="Main">${[
+    ["packages", "Packages"],
+    ["guide", "Maintainer guide"],
+    ["about", "About"],
+  ]
+    .map(
+      ([key, label]) =>
+        `<a href="/${key}/"${
+          active === key ? ' aria-current="page"' : ""
+        }>${label}</a>`
+    )
+    .join(
+      ""
+    )}<a href="${repository}">GitHub <span aria-hidden="true">↗</span></a></nav></div></header><main id="main">${body}</main><footer><a class="brand" href="/">dephantom</a><p>Maintained by <a href="https://nubjs.dev">Nub</a>. Data from ${e(
+    date
+  )}.</p><div><a href="${repository}">Repository</a><a href="https://www.npmjs.com/package/@nubjs/extensions">npm package</a><a href="/about/#corrections">Report a correction</a></div></footer></body></html>`;
 }
 
 function write(path, html) {
-  const file = resolve(out, decodeURIComponent(path).replace(/^\//, ''), 'index.html');
+  const file = resolve(
+    out,
+    decodeURIComponent(path).replace(/^\//, ""),
+    "index.html"
+  );
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, html);
 }
 
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
-for (const asset of ['style.css', 'directory.js', 'favicon.svg']) copyFileSync(resolve(here, asset), resolve(out, asset));
+for (const asset of ["style.css", "directory.js", "favicon.svg"])
+  copyFileSync(resolve(here, asset), resolve(out, asset));
 
-const tableRows = packages.map(p => {
-  const targets = [...new Set(p.rules.flatMap(r => ['dependencies', 'peerDependencies', 'optionalDependencies', 'peerDependenciesMeta'].flatMap(field => Object.keys(r.extension[field] ?? {}))))];
-  return `<tr data-name="${e(p.name)}" data-rank="${p.rank ?? ''}" data-source="${p.finding ? 'scan' : 'curated'}"><td class="rank">${p.rank ? p.rank.toLocaleString('en-US') : '—'}</td><td><a class="package-name" href="${packagePath(p.name)}">${e(p.name)}</a><span class="package-meta">${p.finding ? `Scanned ${e(p.finding.measuredVersion)}` : 'Version-specific curated rules'}</span></td><td class="targets">${targets.slice(0, 3).map(t => `<code>${e(t)}</code>`).join(' ')}${targets.length > 3 ? `<span class="muted"> +${targets.length - 3}</span>` : ''}</td><td><span class="badge ${p.finding ? '' : 'quiet'}">${p.finding ? 'Scan findings' : 'Curated'}</span></td></tr>`;
-}).join('\n');
+const tableRows = packages
+  .map((p) => {
+    const targets = [
+      ...new Set(
+        p.rules.flatMap((r) =>
+          [
+            "dependencies",
+            "peerDependencies",
+            "optionalDependencies",
+            "peerDependenciesMeta",
+          ].flatMap((field) => Object.keys(r.extension[field] ?? {}))
+        )
+      ),
+    ];
+    return `<tr data-name="${e(p.name)}" data-rank="${
+      p.rank ?? ""
+    }" data-source="${p.finding ? "scan" : "curated"}"><td class="rank">${
+      p.rank ? p.rank.toLocaleString("en-US") : "—"
+    }</td><td><a class="package-name" href="${packagePath(p.name)}">${e(
+      p.name
+    )}</a><span class="package-meta">${
+      p.finding
+        ? `Scanned ${e(p.finding.measuredVersion)}`
+        : "Version-specific curated rules"
+    }</span></td><td class="targets">${targets
+      .slice(0, 3)
+      .map((t) => `<code>${e(t)}</code>`)
+      .join(" ")}${
+      targets.length > 3
+        ? `<span class="muted"> +${targets.length - 3}</span>`
+        : ""
+    }</td><td><span class="badge ${p.finding ? "" : "quiet"}">${
+      p.finding ? "Scan findings" : "Curated"
+    }</span></td></tr>`;
+  })
+  .join("\n");
 
-write('/', page('/', 'Undeclared dependencies across npm', 'A package directory and practical guidance for declaring npm dependencies.', `
-<section class="hero"><div><p class="eyebrow">Dependency compatibility</p><h1>Make dependencies<br>explicit.</h1><p class="lead">Find undeclared dependencies in npm packages and learn how to declare them.</p><div class="actions"><a class="button" href="/packages/">Browse packages <span aria-hidden="true">→</span></a><a class="text-link" href="/guide/">Fix a package</a></div><p class="hero-note">${count} packages in the database · Updated ${e(date)}</p></div><div class="manifest"><div class="manifest-heading"><span class="file-dot"></span> package.json <span class="muted">optional integration</span></div><pre><code>{
+write(
+  "/",
+  page(
+    "/",
+    "Undeclared dependencies across npm",
+    "A package directory and practical guidance for declaring npm dependencies.",
+    `
+<section class="hero"><div><p class="eyebrow">Dependency compatibility</p><h1>Make dependencies<br>explicit.</h1><p class="lead">Find undeclared dependencies in npm packages and learn how to declare them.</p><div class="actions"><a class="button" href="/packages/">Browse packages <span aria-hidden="true">→</span></a><a class="text-link" href="/guide/">Fix a package</a></div><p class="hero-note">${count} packages in the database · Updated ${e(
+      date
+    )}</p></div><div class="manifest"><div class="manifest-heading"><span class="file-dot"></span> package.json <span class="muted">optional integration</span></div><pre><code>{
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0"
   },
@@ -53,24 +147,199 @@ write('/', page('/', 'Undeclared dependencies across npm', 'A package directory 
 }</code></pre><p>Declare a consumer-supplied integration without requiring every user to install it.</p></div></section>
 <section class="intro-grid"><div><p class="eyebrow">The problem</p><h2>An import can work<br>without being declared.</h2></div><div><p>A flat <code>node_modules</code> tree can make a dependency installed by another package reachable. The same import can fail under an isolated layout or Yarn Plug’n’Play.</p><p>These undeclared imports are often called phantom dependencies. Some are required libraries; others are optional integrations or type references. The appropriate manifest declaration depends on how the package uses them.</p><a class="text-link" href="/guide/">Choosing a dependency field →</a></div></section>
 <section class="cards" aria-label="Resources"><a class="card" href="/packages/"><span class="eyebrow">Directory</span><h2>Package findings</h2><p>Browse by download rank, inspect the version scanned, and read the source references.</p><span class="card-link">Browse the directory →</span></a><a class="card" href="/guide/"><span class="eyebrow">For maintainers</span><h2>Manifest fixes</h2><p>Choose between a dependency, a peer, and an optional integration. Test the published package.</p><span class="card-link">Read the guide →</span></a><a class="card" href="/about/"><span class="eyebrow">Open data</span><h2>Package extensions</h2><p>The database combines static analysis with curated compatibility rules, including Yarn’s catalog.</p><span class="card-link">Method and contributions →</span></a></section>
-<section class="data-strip"><div><h2>Use the database</h2><p>Available on <a href="https://www.npmjs.com/package/@nubjs/extensions">npm</a> and <a href="${repository}">GitHub</a> for package managers and other tools.</p></div>${code("import { packageExtensions }\n  from '@nubjs/extensions';", 'JavaScript')}</section>`));
+<section class="data-strip"><div><h2>Use the database</h2><p>Available on <a href="https://www.npmjs.com/package/@nubjs/extensions">npm</a> and <a href="${repository}">GitHub</a> for package managers and other tools.</p></div>${code(
+      "import { packageExtensions }\n  from '@nubjs/extensions';",
+      "JavaScript"
+    )}</section>`
+  )
+);
 
-write('/packages/', page('/packages/', 'Package directory', 'Known dependency declarations and scan findings, ordered by recorded npm download rank.', `${title('Package directory', 'Packages with findings', 'Scan findings and curated compatibility rules, ordered by recorded npm download rank.')}<div class="directory-note"><p>The list covers <strong>${count} package names</strong>. A listing is not a security advisory or a claim that the latest version is broken. Open an entry for scanned versions and rule ranges.</p><a href="/about/#ranking">Ranking and scope →</a></div><form class="filters" role="search"><label>Package name<input type="search" id="search" name="q" placeholder="Search packages…" autocomplete="off"></label><label>Source<select id="source" name="source"><option value="all">All sources</option><option value="scan">Scan findings</option><option value="curated">Curated only</option></select></label><label>Sort by<select id="sort" name="sort"><option value="rank">Download rank</option><option value="name">Package name</option></select></label><button type="reset" class="reset">Reset</button></form><p id="result-count" class="result-count" role="status" aria-live="polite">${count} packages</p><div class="table-wrap"><table id="directory"><thead><tr><th scope="col">Rank</th><th scope="col">Package</th><th scope="col">Referenced packages</th><th scope="col">Source</th></tr></thead><tbody>${tableRows}</tbody></table></div><p id="empty" class="empty" hidden>No packages match these filters. Try a shorter name or reset the filters.</p><p class="small">Rank is the position in <a href="${source}/inputs/corpus.json">${e(corpus.source)}</a>’s download ranking, not a live download count. Unranked curated packages appear last. Scan date: ${e(date)}.</p>`, true));
+write(
+  "/packages/",
+  page(
+    "/packages/",
+    "Package directory",
+    "Known dependency declarations and scan findings, ordered by recorded npm download rank.",
+    `${title(
+      "Package directory",
+      "Packages with findings",
+      "Scan findings and curated compatibility rules, ordered by recorded npm download rank."
+    )}<div class="directory-note"><p>The list covers <strong>${count} package names</strong>. A listing is not a security advisory or a claim that the latest version is broken. Open an entry for scanned versions and rule ranges.</p><a href="/about/#ranking">Ranking and scope →</a></div><form class="filters" role="search"><label>Package name<input type="search" id="search" name="q" placeholder="Search packages…" autocomplete="off"></label><label>Source<select id="source" name="source"><option value="all">All sources</option><option value="scan">Scan findings</option><option value="curated">Curated only</option></select></label><label>Sort by<select id="sort" name="sort"><option value="rank">Download rank</option><option value="name">Package name</option></select></label><button type="reset" class="reset">Reset</button></form><p id="result-count" class="result-count" role="status" aria-live="polite">${count} packages</p><div class="table-wrap"><table id="directory"><thead><tr><th scope="col">Rank</th><th scope="col">Package</th><th scope="col">Referenced packages</th><th scope="col">Source</th></tr></thead><tbody>${tableRows}</tbody></table></div><p id="empty" class="empty" hidden>No packages match these filters. Try a shorter name or reset the filters.</p><p class="small">Rank is the position in <a href="${source}/inputs/corpus.json">${e(
+      corpus.source
+    )}</a>’s download ranking, not a live download count. Unranked curated packages appear last. Dataset date: ${e(
+      date
+    )}.</p>`,
+    true
+  )
+);
 
 for (const p of packages) {
   const finding = p.finding;
   const npm = `https://www.npmjs.com/package/${p.name}`;
-  const evidence = finding ? `<section><h2>Scan evidence</h2><p>References found in version <a href="${e(npm)}/v/${encodeURIComponent(finding.measuredVersion)}"><code>${e(finding.measuredVersion)}</code></a>. The classification comes from static analysis; it does not establish that every reference causes a runtime failure.</p>${finding.targets.map(t => `<details><summary><code>${e(t.target)}</code><span class="badge quiet">${e(t.class)}</span></summary><div class="evidence-body"><p>${e(t.reason)}</p><p><strong>Import specifiers</strong></p><ul>${t.specifiers.map(s => `<li><code>${e(s)}</code></li>`).join('')}</ul><p><strong>Published files</strong></p><ul>${t.files.map(f => `<li><a href="https://unpkg.com/${p.name}@${encodeURIComponent(finding.measuredVersion)}/${f.split('/').map(encodeURIComponent).join('/')}"><code>${e(f)}</code></a></li>`).join('')}</ul>${t.fileCount > t.files.length ? `<p class="small">Showing ${t.files.length} of ${t.fileCount} files recorded by the detector.</p>` : ''}${t.candidate ? '<p class="notice">The runtime dependency classification is awaiting review. The emitted extension remains a peer declaration.</p>' : ''}</div></details>`).join('')}</section>` : '<section><h2>Curated entry</h2><p>This package has a manually maintained compatibility rule. There is no matching scan finding in this snapshot. The rule may cover an older version, a computed import, or peer metadata that the detector does not infer.</p><p>Check the version ranges below before applying a rule to a current package.</p></section>';
-  write(packagePath(p.name), page(packagePath(p.name), p.name, `Dependency findings and compatibility rules for ${p.name}.`, `<div class="detail"><a class="back" href="/packages/">← Package directory</a>${title(finding ? 'Scan findings' : 'Curated compatibility', e(p.name), finding ? `Scanned version ${e(finding.measuredVersion)} · ${e(date)}` : `Curated rules · Dataset ${e(date)}`)}<div class="detail-links"><a href="${e(npm)}">npm package ↗</a><a href="${source}/package-extensions.json">Dataset source ↗</a><span>${p.rank ? `Download rank #${p.rank.toLocaleString('en-US')}` : 'Not in the ranked corpus'}</span></div>${evidence}<section><h2>Package extensions</h2><p>These rules supplement a consumer’s manifest metadata. They do not modify the published package. A <code>*</code> selector is a compatibility rule, not evidence that every version was scanned.</p>${p.rules.map(r => `<h3><code>${e(r.selector)}</code></h3><p class="small">${r.yarn ? 'Includes a rule from Yarn’s curated database.' : finding ? 'Generated from scan findings and reviewed decisions.' : 'Manually maintained compatibility rule.'}</p>${code(JSON.stringify({ packageExtensions: { [r.selector]: r.extension } }, null, 2), 'Extension data')}`).join('')}</section><section class="next-steps"><h2>Maintaining this package?</h2><p>Confirm the reference in the published version, choose the appropriate dependency field, and test without relying on hoisting.</p><div class="actions"><a class="button" href="/guide/">Read the maintainer guide</a><a href="${repository}/issues/new?title=${encodeURIComponent(`Correction: ${p.name}`)}">Report a correction</a></div></section></div>`));
+  const evidence = finding
+    ? `<section><h2>Scan evidence</h2><p>References found in version <a href="${e(
+        npm
+      )}/v/${encodeURIComponent(finding.measuredVersion)}"><code>${e(
+        finding.measuredVersion
+      )}</code></a>. The classification comes from static analysis; it does not establish that every reference causes a runtime failure.</p>${finding.targets
+        .map(
+          (t) =>
+            `<details><summary><code>${e(
+              t.target
+            )}</code><span class="badge quiet">${e(
+              t.class
+            )}</span></summary><div class="evidence-body"><p>${e(
+              t.reason
+            )}</p><p><strong>Import specifiers</strong></p><ul>${t.specifiers
+              .map((s) => `<li><code>${e(s)}</code></li>`)
+              .join(
+                ""
+              )}</ul><p><strong>Published files</strong></p><ul>${t.files
+              .map(
+                (f) =>
+                  `<li><a href="https://unpkg.com/${
+                    p.name
+                  }@${encodeURIComponent(finding.measuredVersion)}/${f
+                    .split("/")
+                    .map(encodeURIComponent)
+                    .join("/")}"><code>${e(f)}</code></a></li>`
+              )
+              .join("")}</ul>${
+              t.fileCount > t.files.length
+                ? `<p class="small">Showing ${t.files.length} of ${t.fileCount} files recorded by the detector.</p>`
+                : ""
+            }${
+              t.candidate
+                ? '<p class="notice">The runtime dependency classification is awaiting review. The emitted extension remains a peer declaration.</p>'
+                : ""
+            }</div></details>`
+        )
+        .join("")}</section>`
+    : "<section><h2>Curated entry</h2><p>This package has a manually maintained compatibility rule. There is no matching scan finding in this snapshot. The rule may cover an older version, a computed import, or peer metadata that the detector does not infer.</p><p>Check the version ranges below before applying a rule to a current package.</p></section>";
+  write(
+    packagePath(p.name),
+    page(
+      packagePath(p.name),
+      p.name,
+      `Dependency findings and compatibility rules for ${p.name}.`,
+      `<div class="detail"><a class="back" href="/packages/">← Package directory</a>${title(
+        finding ? "Scan findings" : "Curated compatibility",
+        e(p.name),
+        finding
+          ? `Scanned version ${e(finding.measuredVersion)} · Dataset ${e(date)}`
+          : `Curated rules · Dataset ${e(date)}`
+      )}<div class="detail-links"><a href="${e(
+        npm
+      )}">npm package ↗</a><a href="${source}/package-extensions.json">Dataset source ↗</a><span>${
+        p.rank
+          ? `Download rank #${p.rank.toLocaleString("en-US")}`
+          : "Not in the ranked corpus"
+      }</span></div>${evidence}<section><h2>Package extensions</h2><p>These rules supplement a consumer’s manifest metadata. They do not modify the published package. A <code>*</code> selector is a compatibility rule, not evidence that every version was scanned.</p>${p.rules
+        .map(
+          (r) =>
+            `<h3><code>${e(r.selector)}</code></h3><p class="small">${
+              r.yarn
+                ? "Includes a rule from Yarn’s curated database."
+                : finding
+                ? "Generated from scan findings and reviewed decisions."
+                : "Manually maintained compatibility rule."
+            }</p>${code(
+              JSON.stringify(
+                { packageExtensions: { [r.selector]: r.extension } },
+                null,
+                2
+              ),
+              "Extension data"
+            )}`
+        )
+        .join(
+          ""
+        )}</section><section class="next-steps"><h2>Maintaining this package?</h2><p>Confirm the reference in the published version, choose the appropriate dependency field, and test without relying on hoisting.</p><div class="actions"><a class="button" href="/guide/">Read the maintainer guide</a><a href="${repository}/issues/new?title=${encodeURIComponent(
+        `Correction: ${p.name}`
+      )}">Report a correction</a></div></section></div>`
+    )
+  );
 }
 
-const guide = `<div class="prose">${title('Maintainer guide', 'Declaring dependencies', 'Declare the packages that published code imports, including optional integrations and type references.')}<section><h2>Choosing the field</h2><div class="table-wrap"><table><thead><tr><th>Usage</th><th>Manifest field</th></tr></thead><tbody><tr><td>A library the package needs its own copy of</td><td><code>dependencies</code></td></tr><tr><td>A compatible host supplied by the application</td><td><code>peerDependencies</code></td></tr><tr><td>A consumer-selected, optional integration</td><td><code>peerDependencies</code> and <code>peerDependenciesMeta</code></td></tr><tr><td>A dependency whose failed or omitted installation the package handles</td><td><code>optionalDependencies</code></td></tr><tr><td>A tool used only to develop or build the package</td><td><code>devDependencies</code></td></tr></tbody></table></div><p>A dependency used by published runtime code does not belong only in <code>devDependencies</code>. Consumers do not install the dependency package’s development dependencies.</p></section><section id="optional-peers"><h2>Optional integrations</h2><p>An adapter may use React only when the consumer selects its React entry point. Declare that integration as an optional peer, using the versions actually supported:</p>${code(JSON.stringify({ peerDependencies: { react: '^18.0.0 || ^19.0.0' }, peerDependenciesMeta: { react: { optional: true } } }, null, 2))}<p>The peer declaration and the optional marker are both necessary. The marker does not make an unconditional import safe when React is absent.</p>${code("// Load the integration only when it is requested.\nexport async function loadReactAdapter() {\n  const React = await import('react');\n  return createAdapter(React);\n}", 'Illustrative adapter code')}<p>Keep optional integrations out of the default entry point’s eager import graph. When a consumer requests an unavailable integration, report the missing prerequisite rather than swallowing all errors from the integration.</p><p>See npm’s <a href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#peerdependenciesmeta">optional peer documentation</a>.</p></section><section><h2>Optional dependencies</h2><p>Use <code>optionalDependencies</code> when installation should be attempted, but the package can still function if the dependency is unavailable:</p>${code(JSON.stringify({ optionalDependencies: { sharp: '^0.34.0' } }, null, 2))}<p>This differs from an optional peer: npm attempts to install it unless optional dependencies are omitted. Runtime code must handle its absence. Choose a version range the package has tested.</p><p>See npm’s <a href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#optionaldependencies">optional dependency documentation</a>.</p></section><section><h2>Types and published files</h2><p>Published declaration files can reference packages that JavaScript never imports. Check the type surface as well as the runtime entry points.</p><ul><li>Include dependencies needed to resolve the published declarations.</li><li>For an optional integration, test the base package’s types without that integration installed.</li><li>Check the packed tarball, not just the repository. Bundled code, generated declarations and export maps can change which references consumers encounter.</li></ul></section><section><h2>Verifying a fix</h2><ol><li>Build and pack the package using its normal release process.</li><li>Install that tarball into a fresh consumer using Yarn Plug’n’Play without fallback, or pnpm with hoisting disabled.</li><li>Exercise every documented entry point, including command-line and type entry points.</li><li>For an optional integration, test with the peer installed and with it absent. The base entry point should work in both cases.</li><li>Publish the manifest fix and <a href="/about/#corrections">report the corrected version</a> so the database can be updated.</li></ol><p>A passing install is not sufficient: run the imports, type-checks and integrations that consumers use.</p></section></div>`;
-write('/guide/', page('/guide/', 'Maintainer guide', 'How to declare runtime dependencies, optional peers and optional dependencies in npm packages.', guide));
+const guide = `<div class="prose">${title(
+  "Maintainer guide",
+  "Declaring dependencies",
+  "Declare the packages that published code imports, including optional integrations and type references."
+)}<section><h2>Choosing the field</h2><div class="table-wrap"><table><thead><tr><th>Usage</th><th>Manifest field</th></tr></thead><tbody><tr><td>A library the package needs its own copy of</td><td><code>dependencies</code></td></tr><tr><td>A compatible host supplied by the application</td><td><code>peerDependencies</code></td></tr><tr><td>A consumer-selected, optional integration</td><td><code>peerDependencies</code> and <code>peerDependenciesMeta</code></td></tr><tr><td>A dependency whose failed or omitted installation the package handles</td><td><code>optionalDependencies</code></td></tr><tr><td>A tool used only to develop or build the package</td><td><code>devDependencies</code></td></tr></tbody></table></div><p>A dependency used by published runtime code does not belong only in <code>devDependencies</code>. Consumers do not install the dependency package’s development dependencies.</p></section><section id="optional-peers"><h2>Optional integrations</h2><p>An adapter may use React only when the consumer selects its React entry point. Declare that integration as an optional peer, using the versions actually supported:</p>${code(
+  JSON.stringify(
+    {
+      peerDependencies: { react: "^18.0.0 || ^19.0.0" },
+      peerDependenciesMeta: { react: { optional: true } },
+    },
+    null,
+    2
+  )
+)}<p>The peer declaration and the optional marker are both necessary. The marker does not make an unconditional import safe when React is absent.</p>${code(
+  "// Load the integration only when it is requested.\nexport async function loadReactAdapter() {\n  const React = await import('react');\n  return createAdapter(React);\n}",
+  "Illustrative adapter code"
+)}<p>Keep optional integrations out of the default entry point’s eager import graph. When a consumer requests an unavailable integration, report the missing prerequisite rather than swallowing all errors from the integration.</p><p>See npm’s <a href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#peerdependenciesmeta">optional peer documentation</a>.</p></section><section><h2>Optional dependencies</h2><p>Use <code>optionalDependencies</code> when installation should be attempted, but the package can still function if the dependency is unavailable:</p>${code(
+  JSON.stringify({ optionalDependencies: { sharp: "^0.34.0" } }, null, 2)
+)}<p>This differs from an optional peer: npm attempts to install it unless optional dependencies are omitted. Runtime code must handle its absence. Choose a version range the package has tested.</p><p>See npm’s <a href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#optionaldependencies">optional dependency documentation</a>.</p></section><section><h2>Types and published files</h2><p>Published declaration files can reference packages that JavaScript never imports. Check the type surface as well as the runtime entry points.</p><ul><li>Include dependencies needed to resolve the published declarations.</li><li>For an optional integration, test the base package’s types without that integration installed.</li><li>Check the packed tarball, not just the repository. Bundled code, generated declarations and export maps can change which references consumers encounter.</li></ul></section><section><h2>Verifying a fix</h2><ol><li>Build and pack the package using its normal release process.</li><li>Install that tarball into a fresh consumer using Yarn Plug’n’Play without fallback, or pnpm with hoisting disabled.</li><li>Exercise every documented entry point, including command-line and type entry points.</li><li>For an optional integration, test with the peer installed and with it absent. The base entry point should work in both cases.</li><li>Publish the manifest fix and <a href="/about/#corrections">report the corrected version</a> so the database can be updated.</li></ol><p>A passing install is not sufficient: run the imports, type-checks and integrations that consumers use.</p></section></div>`;
+write(
+  "/guide/",
+  page(
+    "/guide/",
+    "Maintainer guide",
+    "How to declare runtime dependencies, optional peers and optional dependencies in npm packages.",
+    guide
+  )
+);
 
-write('/about/', page('/about/', 'Method and contributions', 'Dataset sources, scan coverage, ranking and correction process.', `<div class="prose">${title('About the dataset', 'Method and contributions', 'The directory is built from the open package extensions database maintained by Nub.')}<section><h2>Sources</h2><p>The <a href="https://github.com/nubjs/nub/tree/main/crates/nub-phantom">phantom detector</a> parses published packages and compares identifiable imports with their declared dependencies. This snapshot scanned ${dataset.corpus.scannedOk.toLocaleString('en-US')} of ${dataset.corpus.size.toLocaleString('en-US')} selected packages; ${dataset.corpus.failed} could not be scanned.</p><ul><li><a href="${source}/package-extensions.json">Generated rules and per-entry evidence</a></li><li><a href="${repository}/tree/main/records">Scan records and detector revisions</a></li><li><a href="${repository}/tree/main/inputs">Pinned inputs, including Yarn’s curated database</a></li><li><a href="https://www.npmjs.com/package/@nubjs/extensions">Published npm package</a></li></ul><p>All Yarn extensions are retained, including rules that static analysis cannot rediscover. Manually maintained rules can cover computed imports and version-specific compatibility cases.</p></section><section id="ranking"><h2>Ranking and scope</h2><p>Packages are sorted by their position in the <a href="${source}/inputs/corpus.json">${e(corpus.source)} topDownload snapshot</a>. This is a recorded popularity ranking, not a live measurement. Curated packages outside the corpus appear after ranked packages, alphabetically.</p><p>Each name appears once in the directory. Its detail page may contain multiple rules with different version ranges. A scan finding names the version examined; a curated rule is not evidence that the latest release has an undeclared import.</p><ul><li>Findings include type references, optional adapters and guarded imports, as well as runtime imports.</li><li>Computed specifiers may be undetectable. Absence from this directory does not establish that a package has no phantom dependencies.</li><li>A listing is not a security advisory. Static classifications can require review, and a package may have been fixed since the recorded scan.</li></ul></section><section id="updates"><h2>Updates</h2><p>The repository has scheduled daily <a href="${repository}/actions/workflows/rebuild.yml">scan</a> and <a href="${repository}/actions/workflows/release.yml">publication</a> workflows. Scheduled jobs can be delayed or fail; the dataset date records the data displayed here, not a promise that a run completed today.</p><p>The site rebuilds from the checked-in dataset. npm publication follows its own workflow, so the site and the latest npm release can temporarily differ.</p></section><section id="corrections"><h2>Corrections and contributions</h2><p>Open an <a href="${repository}/issues/new">issue</a> or <a href="${repository}/pulls">pull request</a> with the package name, version, import path and a reproduction.</p><ul><li><strong>Missing entry:</strong> include the published file and the manifest declaration it needs.</li><li><strong>False positive:</strong> explain how the import resolves, or why the file is not part of the package’s supported API.</li><li><strong>Fixed package:</strong> name the release that added the declaration so the affected range can be updated.</li></ul><p>Curated rules are maintained alongside generated findings. See the <a href="${repository}#regenerating">repository instructions</a> before changing generated output; a direct edit to that output may be overwritten by the next scan.</p></section></div>`));
+write(
+  "/about/",
+  page(
+    "/about/",
+    "Method and contributions",
+    "Dataset sources, scan coverage, ranking and correction process.",
+    `<div class="prose">${title(
+      "About the dataset",
+      "Method and contributions",
+      "The directory is built from the open package extensions database maintained by Nub."
+    )}<section><h2>Sources</h2><p>The <a href="https://github.com/nubjs/nub/tree/main/crates/nub-phantom">phantom detector</a> parses published packages and compares identifiable imports with their declared dependencies. This snapshot scanned ${dataset.corpus.scannedOk.toLocaleString(
+      "en-US"
+    )} of ${dataset.corpus.size.toLocaleString("en-US")} selected packages; ${
+      dataset.corpus.failed
+    } could not be scanned.</p><ul><li><a href="${source}/package-extensions.json">Generated rules and per-entry evidence</a></li><li><a href="${repository}/tree/main/records">Scan records and detector revisions</a></li><li><a href="${repository}/tree/main/inputs">Pinned inputs, including Yarn’s curated database</a></li><li><a href="https://www.npmjs.com/package/@nubjs/extensions">Published npm package</a></li></ul><p>All Yarn extensions are retained, including rules that static analysis cannot rediscover. Manually maintained rules can cover computed imports and version-specific compatibility cases.</p></section><section id="ranking"><h2>Ranking and scope</h2><p>Packages are sorted by their position in the <a href="${source}/inputs/corpus.json">${e(
+      corpus.source
+    )} topDownload snapshot</a>. This is a recorded popularity ranking, not a live measurement. Curated packages outside the corpus appear after ranked packages, alphabetically.</p><p>Each name appears once in the directory. Its detail page may contain multiple rules with different version ranges. A scan finding names the version examined; a curated rule is not evidence that the latest release has an undeclared import.</p><ul><li>Findings include type references, optional adapters and guarded imports, as well as runtime imports.</li><li>Computed specifiers may be undetectable. Absence from this directory does not establish that a package has no phantom dependencies.</li><li>A listing is not a security advisory. Static classifications can require review, and a package may have been fixed since the recorded scan.</li></ul></section><section id="updates"><h2>Updates</h2><p>The repository has scheduled daily <a href="${repository}/actions/workflows/rebuild.yml">scan</a> and <a href="${repository}/actions/workflows/release.yml">publication</a> workflows. Scheduled jobs can be delayed or fail; the dataset date records the data displayed here, not a promise that a run completed today.</p><p>The site rebuilds from the checked-in dataset. npm publication follows its own workflow, so the site and the latest npm release can temporarily differ.</p></section><section id="corrections"><h2>Corrections and contributions</h2><p>Open an <a href="${repository}/issues/new">issue</a> or <a href="${repository}/pulls">pull request</a> with the package name, version, import path and a reproduction.</p><ul><li><strong>Missing entry:</strong> include the published file and the manifest declaration it needs.</li><li><strong>False positive:</strong> explain how the import resolves, or why the file is not part of the package’s supported API.</li><li><strong>Fixed package:</strong> name the release that added the declaration so the affected range can be updated.</li></ul><p>Curated rules are maintained alongside generated findings. See the <a href="${repository}#regenerating">repository instructions</a> before changing generated output; a direct edit to that output may be overwritten by the next scan.</p></section></div>`
+  )
+);
 
-writeFileSync(resolve(out, '404.html'), page('/404/', 'Page not found', 'This page does not exist.', `${title('404', 'Page not found', 'The package name or address may have changed.')}<a class="button" href="/packages/">Browse packages</a>`));
-const paths = ['/', '/packages/', '/guide/', '/about/', ...packages.map(p => packagePath(p.name))];
-writeFileSync(resolve(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map(path => `<url><loc>https://dephantom.dev${e(path)}</loc></url>`).join('')}</urlset>\n`);
-writeFileSync(resolve(out, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: https://dephantom.dev/sitemap.xml\n');
-console.log(`Built ${packages.length} package pages from ${date} (${revision})`);
+writeFileSync(
+  resolve(out, "404.html"),
+  page(
+    "/404/",
+    "Page not found",
+    "This page does not exist.",
+    `${title(
+      "404",
+      "Page not found",
+      "The package name or address may have changed."
+    )}<a class="button" href="/packages/">Browse packages</a>`
+  )
+);
+const paths = [
+  "/",
+  "/packages/",
+  "/guide/",
+  "/about/",
+  ...packages.map((p) => packagePath(p.name)),
+];
+writeFileSync(
+  resolve(out, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths
+    .map((path) => `<url><loc>https://dephantom.dev${e(path)}</loc></url>`)
+    .join("")}</urlset>\n`
+);
+writeFileSync(
+  resolve(out, "robots.txt"),
+  "User-agent: *\nAllow: /\nSitemap: https://dephantom.dev/sitemap.xml\n"
+);
+console.log(
+  `Built ${packages.length} package pages from ${date} (${revision})`
+);
