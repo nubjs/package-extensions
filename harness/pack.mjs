@@ -97,20 +97,35 @@ writeFileSync(
   )}\n`
 );
 
+// The README leads with the METHOD, not with a count. A headline of "N packages
+// instead of Yarn's M" invites the reader to price the dataset by its size, which
+// is the least interesting thing about it and moves on every rebuild. What makes
+// it worth installing is that the whole corpus was swept by one detector, and
+// that swapping it in cannot break an install.
 writeFileSync(
   resolve(OUT, 'README.md'),
   `# @nubjs/extensions
 
-A drop-in replacement for \`@yarnpkg/extensions\` carrying ${doc.totals.packages} packages instead of ${doc.sources.yarn.entries}.
+Undeclared dependencies across the ${doc.corpus.size.toLocaleString('en-US')} most-downloaded packages on npm, published as a \`packageExtensions\` database that pnpm and Yarn read directly. Nub's phantom detector parses every published tarball in that corpus and resolves what the code imports against what the manifest declares.
 
-\`\`\`js
-import { packageExtensions } from '@nubjs/extensions';
-// Array<[selector, { dependencies?, peerDependencies?, peerDependenciesMeta? }]>
+\`\`\`sh
+npm add -D @nubjs/extensions
 \`\`\`
 
-Every rule from \`${doc.sources.yarn.package}@${doc.sources.yarn.version}\` is included verbatim, so nothing that works today stops working. The rest comes from scanning the ${doc.corpus.size} most-downloaded packages on npm for imports their manifests never declare.
+## Drop-in for \`${doc.sources.yarn.package}\`
 
-Method, per-entry evidence and the ready-to-paste config blocks: https://github.com/nubjs/package-extensions
+Change the specifier and nothing else changes. Same export name, same \`Array<[selector, data]>\` shape, same CommonJS and ESM entry points, no dependencies.
+
+\`\`\`diff
+- import { packageExtensions } from '${doc.sources.yarn.package}';
++ import { packageExtensions } from '@nubjs/extensions';
+\`\`\`
+
+## A strict superset of Yarn's database
+
+Every rule in \`${doc.sources.yarn.package}@${doc.sources.yarn.version}\` is carried through field for field: the same range, the same manifest field, and a peer Yarn declared required is never relaxed to optional. Every pnpm install already merges that database unless \`ignoreCompatibilityDb\` is set, so a replacement that dropped a single rule would break installs that work today — a gate fails the build if any rule is weakened.
+
+Method, per-entry evidence and the ready-to-paste config blocks for pnpm and Yarn: https://github.com/nubjs/package-extensions
 `
 );
 
