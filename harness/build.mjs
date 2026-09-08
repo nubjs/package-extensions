@@ -11,6 +11,7 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
+import semver from 'semver';
 
 import { rowsForOffender, extensionFor, fieldFor, keyFor, sortKeys } from './policy.mjs';
 import { fetchYarnDatabase } from './yarn-db.mjs';
@@ -38,12 +39,7 @@ if (!scanPath) {
 const scan = JSON.parse(readFileSync(resolve(scanPath), 'utf8'));
 const overrides = existsSync(overridesPath) ? JSON.parse(readFileSync(overridesPath, 'utf8')) : {};
 const manual = JSON.parse(readFileSync(manualPath, 'utf8'));
-if (!Array.isArray(manual.entries)) throw new Error(`${manualPath}: expected an entries array`);
-for (const entry of manual.entries) {
-  if (!Array.isArray(entry) || entry.length !== 2 || typeof entry[0] !== 'string' || !entry[1] || typeof entry[1] !== 'object' || Array.isArray(entry[1])) {
-    throw new Error(`${manualPath}: invalid curated extension ${JSON.stringify(entry)}`);
-  }
-}
+validateManualEntries(manual, manualPath);
 
 // ---------------------------------------------------------------- flatten
 
@@ -235,7 +231,8 @@ for (const pkg of [...byPackage.keys()].sort()) {
 // for one package and apply whichever ranges match, so the two layers coexist
 // with no merge and Yarn's version precision survives intact.
 const yarn = await fetchYarnDatabase();
-const addCuratedEntries = (entries) => {
+const yarnSelectors = new Set();
+const addYarnEntries = (entries) => {
   let added = 0;
   let merged = 0;
   for (const entry of entries) {
@@ -253,60 +250,136 @@ const addCuratedEntries = (entries) => {
     // -next.1` appears twice with different fields — so keying it by string
     // collapses the duplicates. Both are real losses, both measured. Union the
     // fields instead of choosing.
-      if (mergeInto(packageExtensions[selector], ext)) merged++;
+      if (
+        mergeInto(packageExtensions[selector], ext, {
+          preferIncoming: !yarnSelectors.has(selector),
+          removeMissingPeerMeta: !yarnSelectors.has(selector),
+          conflictLabel: `Yarn seed ${selector}`,
+        })
+      ) merged++;
+      yarnSelectors.add(selector);
       continue;
     }
     packageExtensions[selector] = ext;
+    yarnSelectors.add(selector);
     added++;
   }
   return { added, merged };
 };
 
-const yarnResult = addCuratedEntries(yarn.entries);
-const manualResult = addCuratedEntries(manual.entries);
+const addManualEntries = (entries) => {
+  let added = 0;
+  let merged = 0;
+  for (const [selector, ext] of entries) {
+    if (!packageExtensions[selector]) {
+      packageExtensions[selector] = ext;
+      added++;
+      continue;
+    }
+    if (
+      mergeInto(packageExtensions[selector], ext, {
+        preferIncoming: !yarnSelectors.has(selector),
+        rejectConflicts: yarnSelectors.has(selector),
+        removeMissingPeerMeta: !yarnSelectors.has(selector),
+        conflictLabel: `manual extension ${selector} conflicts with the Yarn seed`,
+      })
+    ) merged++;
+  }
+  return { added, merged };
+};
+
+const yarnResult = addYarnEntries(yarn.entries);
+const manualResult = addManualEntries(manual.entries);
 const packageName = (selector) => selector.slice(0, selector.lastIndexOf('@'));
 const scanPackages = new Set(byPackage.keys());
 const yarnPackages = new Set(yarn.entries.map(([selector]) => packageName(selector)));
 const manualPackages = new Set(manual.entries.map(([selector]) => packageName(selector)));
 
-/** Union `from` into `into` without overwriting a range already there. Returns whether anything was added. */
-function mergeInto(into, from) {
+/** Merge a curated rule, applying the source-specific precedence declared by the caller. */
+function mergeInto(into, from, { preferIncoming = false, rejectConflicts = false, removeMissingPeerMeta = false, conflictLabel }) {
   let changed = false;
+  for (const name of Object.keys(from.dependencies ?? {})) {
+    if (!into.peerDependencies?.[name]) continue;
+    if (rejectConflicts) throw new Error(`${conflictLabel}: ${name} is a peer dependency, not a dependency`);
+    if (preferIncoming) {
+      delete into.peerDependencies[name];
+      delete into.peerDependenciesMeta?.[name];
+      changed = true;
+    }
+  }
+  for (const name of Object.keys(from.peerDependencies ?? {})) {
+    if (!into.dependencies?.[name]) continue;
+    if (rejectConflicts) throw new Error(`${conflictLabel}: ${name} is a dependency, not a peer dependency`);
+    if (preferIncoming) {
+      delete into.dependencies[name];
+      changed = true;
+    }
+  }
   for (const field of ['dependencies', 'optionalDependencies', 'peerDependencies']) {
     for (const [name, range] of Object.entries(from[field] ?? {})) {
       into[field] ??= {};
-      if (into[field][name] === undefined) {
+      if (into[field][name] === undefined || (preferIncoming && into[field][name] !== range)) {
         into[field][name] = range;
         changed = true;
+      } else if (rejectConflicts && into[field][name] !== range) {
+        throw new Error(`${conflictLabel}: ${field}.${name} is ${into[field][name]}, not ${range}`);
       }
     }
   }
   for (const [name, meta] of Object.entries(from.peerDependenciesMeta ?? {})) {
     into.peerDependenciesMeta ??= {};
-    if (into.peerDependenciesMeta[name] === undefined) {
+    if (into.peerDependenciesMeta[name] === undefined || (preferIncoming && JSON.stringify(into.peerDependenciesMeta[name]) !== JSON.stringify(meta))) {
       into.peerDependenciesMeta[name] = meta;
       changed = true;
+    } else if (rejectConflicts && JSON.stringify(into.peerDependenciesMeta[name]) !== JSON.stringify(meta)) {
+      throw new Error(`${conflictLabel}: peerDependenciesMeta.${name} differs`);
     }
   }
-  // Yarn's REQUIREDNESS wins on a peer it declares. Unioning the field names is
-  // not enough to preserve a Yarn rule's effect: our scan marks a peer optional
-  // by default, because it cannot know whether every consumer reaches the import,
-  // and that marker silently downgrades a peer Yarn deliberately made required.
-  // Measured on `reactcss@*` — Yarn curated `react` as a required peer, our scan
-  // found the same edge and added `optional: true`, and the merged entry stopped
-  // warning on a missing react. Yarn's hand-written call beats our default, so
-  // drop the marker for any peer Yarn declares and does not itself mark optional.
+  // A curated peer with no metadata is required. Removing a scanner-generated
+  // `optional: true` is therefore part of applying the curated rule, not an
+  // omission. This is disabled for a manual rule sharing a Yarn selector: that
+  // layer may add fields but may never weaken Yarn's required peers.
   for (const name of Object.keys(from.peerDependencies ?? {})) {
-    if (from.peerDependenciesMeta?.[name]?.optional === true) continue;
-    if (into.peerDependenciesMeta?.[name]?.optional === undefined) continue;
-    delete into.peerDependenciesMeta[name].optional;
-    if (Object.keys(into.peerDependenciesMeta[name]).length === 0) {
-      delete into.peerDependenciesMeta[name];
-    }
-    if (Object.keys(into.peerDependenciesMeta).length === 0) delete into.peerDependenciesMeta;
+    if (!removeMissingPeerMeta || Object.hasOwn(from.peerDependenciesMeta ?? {}, name) || !into.peerDependenciesMeta?.[name]) continue;
+    delete into.peerDependenciesMeta[name];
     changed = true;
   }
   return changed;
+}
+
+function validateManualEntries(manual, path) {
+  if (!Array.isArray(manual.entries)) throw new Error(`${path}: expected an entries array`);
+  const fields = new Set(['dependencies', 'optionalDependencies', 'peerDependencies', 'peerDependenciesMeta']);
+  for (const entry of manual.entries) {
+    if (!Array.isArray(entry) || entry.length !== 2 || typeof entry[0] !== 'string' || !entry[1] || typeof entry[1] !== 'object' || Array.isArray(entry[1])) {
+      throw new Error(`${path}: invalid curated extension ${JSON.stringify(entry)}`);
+    }
+    const [selector, extension] = entry;
+    if (Object.keys(extension).length === 0) throw new Error(`${path}: empty extension for ${selector}`);
+    const at = selector.lastIndexOf('@');
+    const packageName = selector.slice(0, at);
+    const range = selector.slice(at + 1);
+    if (at <= 0 || !isValidNpmName(packageName) || semver.validRange(range) === null) {
+      throw new Error(`${path}: invalid selector ${selector}`);
+    }
+    for (const [field, data] of Object.entries(extension)) {
+      if (!fields.has(field) || !data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${path}: invalid ${field} for ${selector}`);
+      for (const [target, value] of Object.entries(data)) {
+        if (!isValidNpmName(target)) throw new Error(`${path}: invalid target ${target} for ${selector}`);
+        if (field === 'peerDependenciesMeta') {
+          if (!value || typeof value !== 'object' || Array.isArray(value) || Object.keys(value).some((key) => key !== 'optional') || ('optional' in value && typeof value.optional !== 'boolean')) {
+            throw new Error(`${path}: invalid peerDependenciesMeta.${target} for ${selector}`);
+          }
+        } else if (typeof value !== 'string' || semver.validRange(value) === null) {
+          throw new Error(`${path}: invalid ${field}.${target} for ${selector}`);
+        }
+      }
+    }
+  }
+}
+
+function isValidNpmName(name) {
+  return /^(?:@[a-z0-9][\w.-]*\/)?[a-z0-9][\w.-]*$/i.test(name) && name.length <= 214;
 }
 
 const counts = { runtime: 0, adapter: 0, types: 0, 'deep-path': 0, guarded: 0 };

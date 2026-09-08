@@ -12,7 +12,6 @@ export function readmeFigures(doc) {
   const t = doc.totals;
   return [
     { label: 'headline package names', pattern: /\*\*([\d,]+) package names\.\*\*/, expected: t.packages },
-    { label: 'headline selectors', pattern: /span ([\d,]+) range selectors/, expected: t.selectors },
     { label: 'scan-contributed packages', pattern: /finds ([\d,]+) with an undeclared dependency/, expected: doc.sources.scan.packages },
     { label: 'total edges', pattern: /undeclared dependency across ([\d,]+) edges/, expected: t.entries },
     { label: 'Yarn package names', pattern: /Yarn seed contributes ([\d,]+) package names/, expected: doc.sources.yarn.packages },

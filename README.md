@@ -21,7 +21,7 @@ packageExtensions:
         optional: true
 ```
 
-**791 package names.** Their rules span 811 range selectors. The scan covers 9,982 of the top 10,000 and finds 660 with an undeclared dependency across 1,188 edges. The Yarn seed contributes 142 package names, including 131 not found by the scan.
+**791 package names.** The scan covers 9,982 of the top 10,000 and finds 660 with an undeclared dependency across 1,188 edges. The Yarn seed contributes 142 package names, including 131 not found by the scan.
 
 ## Installing
 
