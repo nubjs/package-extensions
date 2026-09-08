@@ -260,7 +260,7 @@ const addYarnEntries = (entries) => {
       yarnSelectors.add(selector);
       continue;
     }
-    packageExtensions[selector] = ext;
+    packageExtensions[selector] = structuredClone(ext);
     yarnSelectors.add(selector);
     added++;
   }
@@ -272,7 +272,7 @@ const addManualEntries = (entries) => {
   let merged = 0;
   for (const [selector, ext] of entries) {
     if (!packageExtensions[selector]) {
-      packageExtensions[selector] = ext;
+      packageExtensions[selector] = structuredClone(ext);
       added++;
       continue;
     }
@@ -330,7 +330,7 @@ function mergeInto(into, from, { preferIncoming = false, rejectConflicts = false
   for (const [name, meta] of Object.entries(from.peerDependenciesMeta ?? {})) {
     into.peerDependenciesMeta ??= {};
     if (into.peerDependenciesMeta[name] === undefined || (preferIncoming && JSON.stringify(into.peerDependenciesMeta[name]) !== JSON.stringify(meta))) {
-      into.peerDependenciesMeta[name] = meta;
+      into.peerDependenciesMeta[name] = structuredClone(meta);
       changed = true;
     } else if (rejectConflicts && JSON.stringify(into.peerDependenciesMeta[name]) !== JSON.stringify(meta)) {
       throw new Error(`${conflictLabel}: peerDependenciesMeta.${name} differs`);

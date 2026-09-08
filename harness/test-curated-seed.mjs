@@ -111,6 +111,14 @@ try {
   );
   expectFailure(() => build(scan, invalidManual, join(dir, 'invalid.json'), 'pipe'), 'invalid selector not a selector');
 
+  writeFileSync(conflictingManual, JSON.stringify({ entries: [['react-color@<=2.19.0', {
+    peerDependencies: { react: '*' }, peerDependenciesMeta: { react: { optional: true } },
+  }]] }));
+  expectFailure(
+    () => build(scan, conflictingManual, join(dir, 'unscanned-conflict.json'), 'pipe'),
+    'manual extensions weaken the Yarn seed: react-color@<=2.19.0 -> react was made optional'
+  );
+
   const yarnPackages = new Set(yarn.entries.map(([selector]) => selector.slice(0, selector.lastIndexOf('@'))));
   console.log(`curated seed: scanner/manual precedence, Yarn conflict rejection, and ${yarn.entries.length} Yarn entries across ${yarnPackages.size} package names`);
 } finally {
