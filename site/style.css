@@ -1,4 +1,5 @@
 :root {
+  --downloads-width: 160px;
   color-scheme: light;
   --ink: #25332e;
   --muted: #59665f;
@@ -220,7 +221,7 @@ button:hover {
   table-layout: fixed;
 }
 .downloads {
-  width: 160px;
+  width: var(--downloads-width);
   text-align: right;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -243,7 +244,7 @@ details[open] summary {
 .entry-body {
   font-size: 13px;
   padding-top: 18px;
-  width: calc(100% + 160px);
+  width: calc(100% + var(--downloads-width));
 }
 .entry-body pre {
   font-size: 11px;
@@ -282,6 +283,9 @@ footer p {
   display: none !important;
 }
 @media (max-width: 600px) {
+  :root {
+    --downloads-width: 112px;
+  }
   header,
   main,
   footer {
@@ -322,7 +326,6 @@ footer p {
     flex: 1;
   }
   .downloads {
-    width: 112px;
     font-size: 11px;
     padding-right: 0;
   }
@@ -331,9 +334,6 @@ footer p {
   }
   .package-name {
     font-size: 12px;
-  }
-  .entry-body {
-    width: calc(100% + 112px);
   }
   .fields {
     font-size: 12px;

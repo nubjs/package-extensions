@@ -48,6 +48,10 @@ function page(
     path === "/packages/" ? "packages" : "home"
   }.png`;
   const title = `${name} · dephantom`;
+  const imageAlt =
+    path === "/packages/"
+      ? "dephantom — Package directory. @nubjs/extensions dependency rules, version ranges and evidence, sorted by weekly npm downloads."
+      : "dephantom — @nubjs/extensions. An open database of npm package extensions.";
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -71,12 +75,16 @@ ${
   )}"><meta property="og:description" content="${e(
     description
   )}"><meta property="og:type" content="website"><meta property="og:site_name" content="dephantom"><meta property="og:locale" content="en_US"><meta property="og:url" content="${origin}${path}">
-<meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="dephantom — @nubjs/extensions. An open database of npm package extensions.">
+<meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="${e(
+    imageAlt
+  )}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(
     title
   )}"><meta name="twitter:description" content="${e(
     description
-  )}"><meta name="twitter:image" content="${image}"><meta name="twitter:image:alt" content="dephantom — @nubjs/extensions. An open database of npm package extensions.">
+  )}"><meta name="twitter:image" content="${image}"><meta name="twitter:image:alt" content="${e(
+    imageAlt
+  )}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/style.css">
 ${
   path === "/"

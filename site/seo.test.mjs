@@ -60,6 +60,9 @@ test("both canonical pages carry complete, distinct SEO and social metadata", ()
     assert.equal(bytes.readUInt32BE(20), 630);
     assert.ok(bytes.length < 5_000_000);
     assert.ok(html.includes(`name="twitter:image" content="${image}"`));
+    const alt = html.match(/property="og:image:alt" content="([^"]+)"/)[1];
+    assert.ok(alt.includes(route ? "Package directory" : "An open database"));
+    assert.ok(html.includes(`name="twitter:image:alt" content="${alt}"`));
   }
   assert.equal(titles.size, 2);
   assert.equal(descriptions.size, 2);
