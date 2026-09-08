@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07",
+  "generated": "2026-09-08",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -12835,7 +12835,7 @@
     },
     {
       "package": "@angular-eslint/bundled-angular-compiler",
-      "measuredVersion": "22.4.0",
+      "measuredVersion": "22.5.0",
       "targets": [
         {
           "target": "@angular/compiler",
@@ -12855,7 +12855,7 @@
     },
     {
       "package": "@angular-eslint/template-parser",
-      "measuredVersion": "22.4.0",
+      "measuredVersion": "22.5.0",
       "targets": [
         {
           "target": "@typescript-eslint/types",
@@ -19694,7 +19694,7 @@
     },
     {
       "package": "@promptbook/utils",
-      "measuredVersion": "0.114.0-29",
+      "measuredVersion": "0.114.0-30",
       "targets": [
         {
           "target": "openai",
@@ -20839,7 +20839,7 @@
     },
     {
       "package": "@rsbuild/core",
-      "measuredVersion": "2.2.3",
+      "measuredVersion": "2.2.4",
       "targets": [
         {
           "target": "tsx",
@@ -23338,7 +23338,7 @@
     },
     {
       "package": "@typescript-eslint/types",
-      "measuredVersion": "8.69.0",
+      "measuredVersion": "8.70.0",
       "targets": [
         {
           "target": "typescript",
@@ -24940,7 +24940,7 @@
     },
     {
       "package": "angular-eslint",
-      "measuredVersion": "22.4.0",
+      "measuredVersion": "22.5.0",
       "targets": [
         {
           "target": "@eslint/core",
@@ -26113,7 +26113,7 @@
     },
     {
       "package": "dd-trace",
-      "measuredVersion": "6.14.0",
+      "measuredVersion": "6.15.0",
       "targets": [
         {
           "target": "@vitest/runner",
@@ -28635,7 +28635,7 @@
     },
     {
       "package": "i18next-fs-backend",
-      "measuredVersion": "2.6.7",
+      "measuredVersion": "2.6.8",
       "targets": [
         {
           "target": "i18next",
@@ -32714,7 +32714,7 @@
     },
     {
       "package": "rrdom",
-      "measuredVersion": "2.1.1",
+      "measuredVersion": "2.1.2",
       "targets": [
         {
           "target": "@rrweb/types",
@@ -32734,7 +32734,7 @@
     },
     {
       "package": "rrweb-snapshot",
-      "measuredVersion": "2.1.1",
+      "measuredVersion": "2.1.2",
       "targets": [
         {
           "target": "@rrweb/types",
@@ -33416,7 +33416,7 @@
     },
     {
       "package": "systeminformation",
-      "measuredVersion": "5.33.8",
+      "measuredVersion": "5.33.9",
       "targets": [
         {
           "target": "macos-temperature-sensor",
@@ -34496,7 +34496,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20260907.1",
+      "measuredVersion": "1.20260908.1",
       "targets": [
         {
           "target": "pnpapi",

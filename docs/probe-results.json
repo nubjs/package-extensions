@@ -1,14 +1,14 @@
 {
-  "generated": "2026-09-07",
-  "dataset": "09311eb42b1ecd1c",
+  "generated": "2026-09-08",
+  "dataset": "7b94ef21030ea759",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 11,
-    "notOnImport": 59,
+    "confirmedViaPath": 10,
+    "notOnImport": 60,
     "installFailed": 3,
     "inconclusive": 4
   },
@@ -1334,21 +1334,18 @@
       "expected": [
         "call-me-maybe",
         "fast-safe-stringify",
-        "null",
         "yaml"
       ],
-      "verdict": "confirmedViaPath",
+      "verdict": "notOnImport",
       "confirmed": [],
-      "confirmedViaPath": [
-        "null"
-      ],
-      "citedPathsTried": 3,
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
       "accessedButNotPredicted": [],
       "unprovidedPeers": [
         "react"
       ],
       "byOtherIssuers": [],
-      "specifiersTried": 4
+      "specifiersTried": 3
     },
     {
       "package": "snappy",
@@ -1390,7 +1387,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7275) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-YfK60J/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7076) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-2VzKMx/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }
