@@ -32,7 +32,12 @@ export function buildDirectory(dataset, downloads) {
     if (!packages.has(name))
       packages.set(name, {
         name,
-        downloads: downloads.packages[name] ?? null,
+        downloads:
+          Object.hasOwn(downloads.packages, name) &&
+          Number.isSafeInteger(downloads.packages[name]) &&
+          downloads.packages[name] >= 0
+            ? downloads.packages[name]
+            : null,
         finding: findings.get(name) ?? null,
         rules: [],
       });
