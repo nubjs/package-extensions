@@ -5,6 +5,23 @@
   "outputDirectory": "site/public",
   "installCommand": "echo 'No dependencies required for the site build'",
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/guide/",
+      "destination": "/#maintainers",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/#contributing",
+      "permanent": true
+    },
+    {
+      "source": "/packages/:name+/",
+      "destination": "/packages/?q=:name",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

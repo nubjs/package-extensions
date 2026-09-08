@@ -12,10 +12,6 @@ export function splitSelector(selector) {
   return { name, range: selector.slice(at + 1) };
 }
 
-export function packagePath(name) {
-  return `/packages/${name.split("/").map(encodeURIComponent).join("/")}/`;
-}
-
 export function escapeHtml(value) {
   return String(value).replace(
     /[&<>"']/g,
@@ -26,12 +22,8 @@ export function escapeHtml(value) {
   );
 }
 
-export function buildDirectory(dataset, corpus) {
-  const ranks = new Map(
-    corpus.packages.map((name, index) => [name, index + 1])
-  );
+export function buildDirectory(dataset, downloads) {
   const findings = new Map(dataset.findings.map((f) => [f.package, f]));
-  const yarn = new Set(dataset.yarnKeys);
   const packages = new Map();
   for (const [selector, extension] of Object.entries(
     dataset.packageExtensions
@@ -40,17 +32,28 @@ export function buildDirectory(dataset, corpus) {
     if (!packages.has(name))
       packages.set(name, {
         name,
-        rank: ranks.get(name) ?? null,
+        downloads:
+          Object.hasOwn(downloads.packages, name) &&
+          Number.isSafeInteger(downloads.packages[name]) &&
+          downloads.packages[name] >= 0
+            ? downloads.packages[name]
+            : null,
         finding: findings.get(name) ?? null,
         rules: [],
       });
-    packages
-      .get(name)
-      .rules.push({ selector, range, extension, yarn: yarn.has(selector) });
+    packages.get(name).rules.push({ selector, range, extension });
   }
   return [...packages.values()].sort(
     (a, b) =>
-      (a.rank ?? Infinity) - (b.rank ?? Infinity) ||
-      a.name.localeCompare(b.name)
+      (b.downloads ?? -1) - (a.downloads ?? -1) || a.name.localeCompare(b.name)
   );
+}
+
+export function formatDownloads(value) {
+  return value === null
+    ? "Unavailable"
+    : new Intl.NumberFormat("en-US", {
+        notation: "compact",
+        maximumFractionDigits: 1,
+      }).format(value);
 }

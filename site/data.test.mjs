@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import {
   buildDirectory,
   splitSelector,
-  packagePath,
+  formatDownloads,
   escapeHtml,
 } from "./data.mjs";
 
@@ -14,7 +14,9 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dataset = JSON.parse(
   readFileSync(resolve(root, "package-extensions.json"))
 );
-const corpus = JSON.parse(readFileSync(resolve(root, "inputs/corpus.json")));
+const downloads = JSON.parse(
+  readFileSync(resolve(root, "inputs/downloads.json"))
+);
 
 test("version selectors collapse to one package and preserve scoped names", () => {
   const records = buildDirectory(
@@ -28,15 +30,18 @@ test("version selectors collapse to one package and preserve scoped names", () =
         "unknown@*": {},
       },
     },
-    { packages: ["@scope/pkg", "low"] }
+    { packages: { "@scope/pkg": 100, low: 0 } }
   );
   assert.deepEqual(
     records.map((p) => p.name),
     ["@scope/pkg", "low", "unknown"]
   );
   assert.equal(records[0].rules.length, 2);
-  assert.equal(records[2].rank, null);
-  assert.equal(packagePath("@scope/pkg"), "/packages/%40scope/pkg/");
+  assert.equal(records[2].downloads, null);
+  assert.equal(records[1].downloads, 0);
+  assert.equal(formatDownloads(152836339), "152.8M");
+  assert.equal(formatDownloads(0), "0");
+  assert.equal(formatDownloads(null), "Unavailable");
 });
 
 test("unsafe HTML is escaped and invalid package paths are rejected", () => {
@@ -52,38 +57,38 @@ test("unsafe HTML is escaped and invalid package paths are rejected", () => {
   }
 });
 
-test("every emitted name has a page, with ranked entries in source order", () => {
-  const rows = buildDirectory(dataset, corpus);
+test("every emitted name has an expandable entry, sorted by downloads", () => {
+  const rows = buildDirectory(dataset, downloads);
   assert.equal(
     rows.length,
     new Set(
       Object.keys(dataset.packageExtensions).map((s) => splitSelector(s).name)
     ).size
   );
-  const ranked = rows.filter((p) => p.rank !== null);
+  const ranked = rows.filter((p) => p.downloads !== null);
   assert.deepEqual(
-    ranked.map((p) => p.rank),
-    ranked.map((p) => p.rank).sort((a, b) => a - b)
+    ranked.map((p) => p.downloads),
+    ranked.map((p) => p.downloads).sort((a, b) => b - a)
+  );
+  const html = readFileSync(
+    resolve(root, "site/public/packages/index.html"),
+    "utf8"
   );
   for (const p of rows) {
-    const path = resolve(
-      root,
-      "site/public",
-      decodeURIComponent(packagePath(p.name)).slice(1),
-      "index.html"
-    );
-    assert.ok(existsSync(path), path);
-    const html = readFileSync(path, "utf8");
-    assert.ok(html.includes(escapeHtml(p.name)));
+    assert.ok(html.includes(`<details id="${escapeHtml(p.name)}">`));
     assert.ok(html.includes("Package extensions"));
     if (p.finding)
       assert.ok(html.includes(escapeHtml(p.finding.measuredVersion)));
-    else assert.ok(html.includes("There is no matching scan finding"));
+    else assert.ok(html.includes("No matching scan evidence"));
   }
+  assert.doesNotMatch(
+    html,
+    /data-rank|data-source|<th[^>]*>Source|id="source"|Curated/
+  );
 });
 
 test("public pages have metadata, source links and safe static scripts", () => {
-  for (const route of ["", "packages", "guide", "about"]) {
+  for (const route of ["", "packages"]) {
     const html = readFileSync(
       resolve(root, "site/public", route, "index.html"),
       "utf8"
@@ -92,7 +97,10 @@ test("public pages have metadata, source links and safe static scripts", () => {
     assert.match(html, /rel="canonical"/);
     assert.match(html, /github.com\/nubjs\/package-extensions/);
     assert.match(html, /npmjs.com\/package\/@nubjs\/extensions/);
-    assert.doesNotMatch(html, /<script(?![^>]* src=)/);
+    assert.doesNotMatch(
+      html,
+      /<script(?![^>]*(?:src=|type="application\/ld\+json"))/
+    );
   }
 });
 

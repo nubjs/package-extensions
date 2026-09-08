@@ -26,4 +26,5 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: node harness/test-curated-seed.mjs
       - run: node --test harness/registry.test.mjs
+      - run: node --test harness/downloads.test.mjs
       - run: node harness/verify.mjs
