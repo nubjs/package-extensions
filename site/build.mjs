@@ -35,9 +35,7 @@ const period = `${downloads.start}–${downloads.end}`;
 const code = (text, label = "package.json") =>
   `<div class="code"><div class="code-label">${e(
     label
-  )}</div><pre tabindex="0" role="region" aria-label="${e(
-    label
-  )} code"><code>${e(text)}</code></pre></div>`;
+  )}</div><pre tabindex="0"><code>${e(text)}</code></pre></div>`;
 
 function page(
   path,

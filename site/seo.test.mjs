@@ -12,6 +12,7 @@ test("both canonical pages carry complete, distinct SEO and social metadata", ()
   for (const route of ["", "packages/"]) {
     const html = read(`${route}index.html`);
     assert.equal([...html.matchAll(/<h1>/g)].length, 1);
+    assert.doesNotMatch(html, /<pre(?! tabindex="0")/);
     const title = html.match(/<title>(.*?)<\/title>/)[1];
     const description = html.match(/name="description" content="([^"]+)"/)[1];
     titles.add(title);
