@@ -117,7 +117,7 @@ for (const asset of [
 const home = `<div class="readme">
 <section class="project-intro"><h1>@nubjs/extensions</h1><p>An open database of package extensions for undeclared dependencies in npm packages.</p>
 <p class="project-links"><a href="${npm}">npm</a><a href="${repository}">Source code</a><a href="/packages/">${count} packages →</a></p>
-${code("import { packageExtensions } from '@nubjs/extensions';", "JavaScript")}
+${code("import { packageExtensions }\n  from '@nubjs/extensions';", "JavaScript")}
 <p>Package extensions add missing dependency declarations to a package’s manifest during resolution. They let package managers support packages that would otherwise fail under an isolated dependency layout.</p></section>
 <nav class="contents" aria-label="On this page"><a href="#usage">Usage</a><a href="#phantom-dependencies">Phantom dependencies</a><a href="#maintainers">Fixing a package</a><a href="#contributing">Contributing</a></nav>
 <section id="usage"><h2>Usage</h2><p>The npm package exports <code>packageExtensions</code> as an array of <code>[selector, extension]</code> pairs, using the same format as <code>@yarnpkg/extensions</code>.</p>
