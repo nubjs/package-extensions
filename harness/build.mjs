@@ -278,10 +278,13 @@ const addManualEntries = (entries) => {
     }
     if (
       mergeInto(packageExtensions[selector], ext, {
-        preferIncoming: !yarnSelectors.has(selector),
-        rejectConflicts: yarnSelectors.has(selector),
-        removeMissingPeerMeta: !yarnSelectors.has(selector),
-        conflictLabel: `manual extension ${selector} conflicts with the Yarn seed`,
+        // A selector can contain both a Yarn rule and a scan-only target. The
+        // manual layer may correct the latter, so precedence cannot be decided
+        // from the selector alone. Apply it, then compare every original Yarn
+        // field below; a change to an actual Yarn rule is rejected there.
+        preferIncoming: true,
+        removeMissingPeerMeta: true,
+        conflictLabel: `manual extension ${selector}`,
       })
     ) merged++;
   }
@@ -290,6 +293,7 @@ const addManualEntries = (entries) => {
 
 const yarnResult = addYarnEntries(yarn.entries);
 const manualResult = addManualEntries(manual.entries);
+assertYarnRulesPreserved(packageExtensions, yarn.entries);
 const packageName = (selector) => selector.slice(0, selector.lastIndexOf('@'));
 const scanPackages = new Set(byPackage.keys());
 const yarnPackages = new Set(yarn.entries.map(([selector]) => packageName(selector)));
@@ -298,24 +302,21 @@ const manualPackages = new Set(manual.entries.map(([selector]) => packageName(se
 /** Merge a curated rule, applying the source-specific precedence declared by the caller. */
 function mergeInto(into, from, { preferIncoming = false, rejectConflicts = false, removeMissingPeerMeta = false, conflictLabel }) {
   let changed = false;
-  for (const name of Object.keys(from.dependencies ?? {})) {
-    if (!into.peerDependencies?.[name]) continue;
-    if (rejectConflicts) throw new Error(`${conflictLabel}: ${name} is a peer dependency, not a dependency`);
-    if (preferIncoming) {
-      delete into.peerDependencies[name];
-      delete into.peerDependenciesMeta?.[name];
-      changed = true;
+  const providerFields = ['dependencies', 'optionalDependencies', 'peerDependencies'];
+  for (const field of providerFields) {
+    for (const name of Object.keys(from[field] ?? {})) {
+      for (const other of providerFields) {
+        if (other === field || into[other]?.[name] === undefined) continue;
+        if (rejectConflicts) throw new Error(`${conflictLabel}: ${name} is already in ${other}, not ${field}`);
+        if (preferIncoming) {
+          delete into[other][name];
+          if (other === 'peerDependencies') delete into.peerDependenciesMeta?.[name];
+          changed = true;
+        }
+      }
     }
   }
-  for (const name of Object.keys(from.peerDependencies ?? {})) {
-    if (!into.dependencies?.[name]) continue;
-    if (rejectConflicts) throw new Error(`${conflictLabel}: ${name} is a dependency, not a peer dependency`);
-    if (preferIncoming) {
-      delete into.dependencies[name];
-      changed = true;
-    }
-  }
-  for (const field of ['dependencies', 'optionalDependencies', 'peerDependencies']) {
+  for (const field of providerFields) {
     for (const [name, range] of Object.entries(from[field] ?? {})) {
       into[field] ??= {};
       if (into[field][name] === undefined || (preferIncoming && into[field][name] !== range)) {
@@ -345,6 +346,31 @@ function mergeInto(into, from, { preferIncoming = false, rejectConflicts = false
     changed = true;
   }
   return changed;
+}
+
+function assertYarnRulesPreserved(extensions, entries) {
+  const weakened = [];
+  for (const [selector, extension] of entries) {
+    const emitted = extensions[selector];
+    if (!emitted) {
+      weakened.push(`${selector} is missing`);
+      continue;
+    }
+    for (const field of ['dependencies', 'optionalDependencies', 'peerDependencies']) {
+      for (const [name, range] of Object.entries(extension[field] ?? {})) {
+        if (emitted[field]?.[name] !== range) weakened.push(`${selector} -> ${field}.${name}: want ${range}, got ${emitted[field]?.[name] ?? 'nothing'}`);
+      }
+    }
+    for (const [name, meta] of Object.entries(extension.peerDependenciesMeta ?? {})) {
+      if (JSON.stringify(emitted.peerDependenciesMeta?.[name]) !== JSON.stringify(meta)) weakened.push(`${selector} -> peerDependenciesMeta.${name} changed`);
+    }
+    for (const name of Object.keys(extension.peerDependencies ?? {})) {
+      if (extension.peerDependenciesMeta?.[name]?.optional !== true && emitted.peerDependenciesMeta?.[name]?.optional === true) {
+        weakened.push(`${selector} -> ${name} was made optional`);
+      }
+    }
+  }
+  if (weakened.length) throw new Error(`manual extensions weaken the Yarn seed: ${weakened[0]}`);
 }
 
 function validateManualEntries(manual, path) {
