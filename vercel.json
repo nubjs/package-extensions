@@ -7,17 +7,17 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/guide/:path*",
+      "source": "/guide/",
       "destination": "/#maintainers",
       "permanent": true
     },
     {
-      "source": "/about/:path*",
+      "source": "/about/",
       "destination": "/#contributing",
       "permanent": true
     },
     {
-      "source": "/packages/:name+",
+      "source": "/packages/:name+/",
       "destination": "/packages/?q=:name",
       "permanent": true
     }
