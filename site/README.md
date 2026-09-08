@@ -5,6 +5,7 @@ The site has two pages: a project homepage with usage, maintainer guidance and c
 ```sh
 nub --node site/build.mjs
 nub --node --test site/*.test.mjs
+nub --node site/smoke.mjs https://dephantom.vercel.app
 python3 -m http.server 3107 --bind 127.0.0.1 --directory site/public
 ```
 
