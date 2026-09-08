@@ -16,11 +16,19 @@
       "version": "2.0.7",
       "entries": 159,
       "addedAsNewKeys": 151,
-      "mergedIntoExistingKeys": 4
+      "mergedIntoExistingKeys": 4,
+      "packages": 142,
+      "packagesOutsideScan": 131
+    },
+    "manual": {
+      "entries": 0,
+      "packages": 0,
+      "addedAsNewKeys": 0,
+      "mergedIntoExistingKeys": 0
     }
   },
   "totals": {
-    "packages": 811,
+    "packages": 791,
     "entries": 1188,
     "byClass": {
       "runtime": 219,
@@ -37,7 +45,8 @@
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 1,
     "droppedUnresolvedTargets": 0,
-    "withheldDeepPath": 246
+    "withheldDeepPath": 246,
+    "selectors": 811
   },
   "withheldDeepPath": [
     {
@@ -35831,5 +35840,6 @@
     "bundlerLiteral": [
       "redoc -> null"
     ]
-  }
+  },
+  "manualKeys": []
 }

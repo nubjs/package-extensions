@@ -27,6 +27,7 @@ function arg(name, fallback) {
 const scanPath = arg('scan');
 const outPath = resolve(HERE, '..', arg('out', 'package-extensions.json'));
 const overridesPath = resolve(HERE, 'overrides.json');
+const manualPath = resolve(HERE, '..', arg('manual', 'inputs/manual-extensions.json'));
 const includeGuarded = !process.argv.includes('--no-guarded');
 
 if (!scanPath) {
@@ -36,6 +37,13 @@ if (!scanPath) {
 
 const scan = JSON.parse(readFileSync(resolve(scanPath), 'utf8'));
 const overrides = existsSync(overridesPath) ? JSON.parse(readFileSync(overridesPath, 'utf8')) : {};
+const manual = JSON.parse(readFileSync(manualPath, 'utf8'));
+if (!Array.isArray(manual.entries)) throw new Error(`${manualPath}: expected an entries array`);
+for (const entry of manual.entries) {
+  if (!Array.isArray(entry) || entry.length !== 2 || typeof entry[0] !== 'string' || !entry[1] || typeof entry[1] !== 'object' || Array.isArray(entry[1])) {
+    throw new Error(`${manualPath}: invalid curated extension ${JSON.stringify(entry)}`);
+  }
+}
 
 // ---------------------------------------------------------------- flatten
 
@@ -98,7 +106,15 @@ if (!includeGuarded) rows = rows.filter((r) => r.class !== 'guarded');
 const withheld = rows.filter((r) => r.class === 'deep-path');
 rows = rows.filter((r) => r.class !== 'deep-path');
 
-const targets = [...new Set(rows.map((r) => r.target))].sort();
+const manualTargets = new Set(
+  manual.entries.flatMap(([, extension]) => [
+    ...Object.keys(extension.dependencies ?? {}),
+    ...Object.keys(extension.optionalDependencies ?? {}),
+    ...Object.keys(extension.peerDependencies ?? {}),
+    ...Object.keys(extension.peerDependenciesMeta ?? {}),
+  ])
+);
+const targets = [...new Set([...rows.map((r) => r.target), ...manualTargets])].sort();
 console.error(`${rows.length} findings across ${new Set(rows.map((r) => r.package)).size} packages, ${targets.length} distinct targets`);
 
 // ------------------------------------------------------- registry existence
@@ -123,6 +139,11 @@ if (unknown.length) {
   );
   mkdirSync(dirname(CACHE), { recursive: true });
   writeFileSync(CACHE, `${JSON.stringify(sortKeys(cache), null, 2)}\n`);
+}
+
+const invalidManualTargets = [...manualTargets].filter((target) => cache[target] !== true);
+if (invalidManualTargets.length) {
+  throw new Error(`${manualPath}: target(s) are not published on npm: ${invalidManualTargets.join(', ')}`);
 }
 
 /** A published package, per the registry. `null` on a network fault, so a blip is never cached as "absent". */
@@ -214,22 +235,39 @@ for (const pkg of [...byPackage.keys()].sort()) {
 // for one package and apply whichever ranges match, so the two layers coexist
 // with no merge and Yarn's version precision survives intact.
 const yarn = await fetchYarnDatabase();
-let yarnAdded = 0;
-let yarnMerged = 0;
-for (const [selector, ext] of yarn.entries) {
-  if (packageExtensions[selector]) {
+const addCuratedEntries = (entries) => {
+  let added = 0;
+  let merged = 0;
+  for (const entry of entries) {
+    if (!Array.isArray(entry) || entry.length !== 2) {
+      throw new Error(`invalid curated extension: ${JSON.stringify(entry)}`);
+    }
+    const [selector, ext] = entry;
+    if (typeof selector !== 'string' || !ext || typeof ext !== 'object' || Array.isArray(ext)) {
+      throw new Error(`invalid curated extension: ${JSON.stringify(entry)}`);
+    }
+    if (packageExtensions[selector]) {
     // Two ways a key collides, and skipping either one drops a rule. Our scan
     // may already own the exact selector (`eslint-plugin-import@*`), and Yarn's
     // own list is an ARRAY that repeats a selector — `gatsby-core-utils@<2.14.0
     // -next.1` appears twice with different fields — so keying it by string
     // collapses the duplicates. Both are real losses, both measured. Union the
     // fields instead of choosing.
-    if (mergeInto(packageExtensions[selector], ext)) yarnMerged++;
-    continue;
+      if (mergeInto(packageExtensions[selector], ext)) merged++;
+      continue;
+    }
+    packageExtensions[selector] = ext;
+    added++;
   }
-  packageExtensions[selector] = ext;
-  yarnAdded++;
-}
+  return { added, merged };
+};
+
+const yarnResult = addCuratedEntries(yarn.entries);
+const manualResult = addCuratedEntries(manual.entries);
+const packageName = (selector) => selector.slice(0, selector.lastIndexOf('@'));
+const scanPackages = new Set(byPackage.keys());
+const yarnPackages = new Set(yarn.entries.map(([selector]) => packageName(selector)));
+const manualPackages = new Set(manual.entries.map(([selector]) => packageName(selector)));
 
 /** Union `from` into `into` without overwriting a range already there. Returns whether anything was added. */
 function mergeInto(into, from) {
@@ -307,12 +345,24 @@ const doc = {
       package: '@yarnpkg/extensions',
       version: yarn.version,
       entries: yarn.entries.length,
-      addedAsNewKeys: yarnAdded,
-      mergedIntoExistingKeys: yarnMerged,
+      packages: yarnPackages.size,
+      packagesOutsideScan: [...yarnPackages].filter((name) => !scanPackages.has(name)).length,
+      addedAsNewKeys: yarnResult.added,
+      mergedIntoExistingKeys: yarnResult.merged,
+    },
+    manual: {
+      entries: manual.entries.length,
+      packages: manualPackages.size,
+      addedAsNewKeys: manualResult.added,
+      mergedIntoExistingKeys: manualResult.merged,
     },
   },
   totals: {
-    packages: Object.keys(packageExtensions).length,
+    // A package name can have several range selectors. The headline count is
+    // package names; selectors are reported separately so a range split is not
+    // mistaken for another affected package.
+    packages: new Set(Object.keys(packageExtensions).map(packageName)).size,
+    selectors: Object.keys(packageExtensions).length,
     entries: rows.length,
     byClass: counts,
     byField: { dependency: fieldCounts.dependency, peer: fieldCounts.peer },
@@ -337,6 +387,7 @@ const doc = {
     }))
     .sort((a, b) => (`${a.package} ${a.target}` < `${b.package} ${b.target}` ? -1 : 1)),
   yarnKeys: yarn.entries.map(([selector]) => selector).sort(),
+  manualKeys: manual.entries.map(([selector]) => selector).sort(),
   packageExtensions,
   findings,
   candidates,
@@ -352,5 +403,6 @@ console.error(
     `${dropped.unpublished.length} dropped as unpublished, ` +
     `${dropped.bundlerLiteral.length} as bundler literals, ` +
     `${candidates.length} candidates for review; ` +
-    `+${yarnAdded} from @yarnpkg/extensions@${yarn.version}`
+    `+${yarnResult.added} from @yarnpkg/extensions@${yarn.version}, ` +
+    `+${manualResult.added} manually curated`
 );

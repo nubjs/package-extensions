@@ -11,10 +11,12 @@
 export function readmeFigures(doc) {
   const t = doc.totals;
   return [
-    { label: 'headline packages', pattern: /\*\*([\d,]+) packages\.\*\*/, expected: t.packages },
+    { label: 'headline package names', pattern: /\*\*([\d,]+) package names\.\*\*/, expected: t.packages },
+    { label: 'headline selectors', pattern: /span ([\d,]+) range selectors/, expected: t.selectors },
     { label: 'scan-contributed packages', pattern: /finds ([\d,]+) with an undeclared dependency/, expected: doc.sources.scan.packages },
     { label: 'total edges', pattern: /undeclared dependency across ([\d,]+) edges/, expected: t.entries },
-    { label: 'carried from Yarn', pattern: /remaining ([\d,]+) come from Yarn/, expected: doc.sources.yarn.addedAsNewKeys },
+    { label: 'Yarn package names', pattern: /Yarn seed contributes ([\d,]+) package names/, expected: doc.sources.yarn.packages },
+    { label: 'Yarn package names outside scan', pattern: /including ([\d,]+) not found by the scan/, expected: doc.sources.yarn.packagesOutsideScan },
     ...Object.entries(t.byClass)
       .filter(([, count]) => count > 0)
       .map(([cls, count]) => ({

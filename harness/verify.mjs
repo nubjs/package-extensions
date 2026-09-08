@@ -55,10 +55,12 @@ const FULL_CORPUS = 10000;
 // ---------------------------------------------------------------- substance
 
 check('the dataset is not empty', () => {
-  const n = Object.keys(exts).length;
-  if (n === 0) throw new Error('zero packages — a dataset with no entries is a generator failure, not a clean ecosystem');
-  if (n !== doc.totals.packages) throw new Error(`totals.packages says ${doc.totals.packages}, the map holds ${n}`);
-  return `${n} packages`;
+  const selectors = Object.keys(exts);
+  const packages = new Set(selectors.map(stripRange));
+  if (packages.size === 0) throw new Error('zero packages — a dataset with no entries is a generator failure, not a clean ecosystem');
+  if (packages.size !== doc.totals.packages) throw new Error(`totals.packages says ${doc.totals.packages}, the map holds ${packages.size} package names`);
+  if (selectors.length !== doc.totals.selectors) throw new Error(`totals.selectors says ${doc.totals.selectors}, the map holds ${selectors.length}`);
+  return `${packages.size} package names, ${selectors.length} selectors`;
 });
 
 check('every entry carries at least one field', () => {
@@ -68,15 +70,17 @@ check('every entry carries at least one field', () => {
 });
 
 const yarnKeys = new Set(doc.yarnKeys ?? []);
+const manualKeys = new Set(doc.manualKeys ?? []);
+const curatedKeys = new Set([...yarnKeys, ...manualKeys]);
 
 check('the findings ledger covers every package this scan contributed', () => {
   // Scoped to our own layer. Yarn's entries are carried verbatim and have no
   // evidence row here by design — their provenance is `@yarnpkg/extensions`.
-  const emitted = new Set(Object.keys(exts).filter((k) => !yarnKeys.has(k)).map(stripRange));
+  const emitted = new Set(Object.keys(exts).filter((k) => !curatedKeys.has(k)).map(stripRange));
   const recorded = new Set(doc.findings.map((f) => f.package));
   const missing = [...emitted].filter((p) => !recorded.has(p));
   if (missing.length) throw new Error(`${missing.length} packages have an extension but no evidence row, first: ${missing[0]}`);
-  return `${recorded.size} evidence rows, ${yarnKeys.size} keys carried from Yarn`;
+  return `${recorded.size} evidence rows, ${yarnKeys.size} Yarn keys and ${manualKeys.size} manually curated keys`;
 });
 
 check('every Yarn rule survives into the output', () => {
