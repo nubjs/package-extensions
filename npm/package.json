@@ -1,6 +1,6 @@
 {
   "name": "@nubjs/extensions",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Undeclared dependencies across the most-downloaded npm packages, as a packageExtensions database for pnpm and Yarn",
   "license": "MIT",
   "repository": {

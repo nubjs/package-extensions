@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Undeclared dependencies across the most-downloaded npm packages, as a packageExtensions database",
   "scripts": {
+    "test:curated-seed": "node harness/test-curated-seed.mjs",
     "build": "node harness/build.mjs --scan $npm_config_scan && node harness/emit.mjs && node harness/pack.mjs && node harness/verify.mjs",
     "emit": "node harness/emit.mjs",
     "verify": "node harness/verify.mjs",

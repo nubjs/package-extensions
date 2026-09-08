@@ -21,7 +21,7 @@ packageExtensions:
         optional: true
 ```
 
-**811 packages.** The scan covers 9,982 of the top 10,000 and finds 660 with an undeclared dependency across 1,188 edges. The remaining 151 come from Yarn's own database, carried verbatim.
+**791 package names.** The scan covers 9,982 of the top 10,000 and finds 660 with an undeclared dependency across 1,188 edges. The Yarn seed contributes 142 package names, including 131 not found by the scan.
 
 ## Installing
 
@@ -239,6 +239,12 @@ node harness/verify.mjs                                  # gate
 ```
 
 The workflow in [`.github/workflows/rebuild.yml`](.github/workflows/rebuild.yml) runs all of it against a pinned `nubjs/nub` commit, on a daily schedule and on demand. Every published dataset records which scan produced it, so the date on an entry is the one to trust rather than the cadence. Each run keeps its raw detector output and a `meta.json` naming that commit under `records/`, so a published entry traces back to the scan that produced it. Records older than thirty days are pruned.
+
+## Curated extensions
+
+The fixed [`inputs/yarn-extensions.json`](inputs/yarn-extensions.json) seed carries all 159 entries across 142 package names from `@yarnpkg/extensions` 2.0.7. It covers dynamic and historical cases the static phantom detector cannot infer, while preserving every published range, field, optional marker, and required peer.
+
+Manually reviewed additions belong in [`inputs/manual-extensions.json`](inputs/manual-extensions.json). Each entry is a `[selector, extension]` pair using the same shape as Yarn's database. A pull request can add one without a matching scan result; the rebuild merges it after scan output and the Yarn seed. Run the focused regression check with `node harness/test-curated-seed.mjs`.
 
 Re-scanning is what keeps the dataset from rotting, and it moves in both directions:
 

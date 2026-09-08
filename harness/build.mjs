@@ -11,13 +11,15 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
+import semver from 'semver';
+import { fileURLToPath } from 'node:url';
 
 import { rowsForOffender, extensionFor, fieldFor, keyFor, sortKeys } from './policy.mjs';
 import { fetchYarnDatabase } from './yarn-db.mjs';
+import { registryStatus, assertVerifiedTargets } from './registry.mjs';
 
-const HERE = dirname(new URL(import.meta.url).pathname);
+const HERE = dirname(fileURLToPath(import.meta.url));
 const CACHE = resolve(HERE, '../inputs/registry-cache.json');
-const REGISTRY = 'https://registry.npmjs.org';
 
 function arg(name, fallback) {
   const i = process.argv.indexOf(`--${name}`);
@@ -27,6 +29,7 @@ function arg(name, fallback) {
 const scanPath = arg('scan');
 const outPath = resolve(HERE, '..', arg('out', 'package-extensions.json'));
 const overridesPath = resolve(HERE, 'overrides.json');
+const manualPath = resolve(HERE, '..', arg('manual', 'inputs/manual-extensions.json'));
 const includeGuarded = !process.argv.includes('--no-guarded');
 
 if (!scanPath) {
@@ -36,6 +39,8 @@ if (!scanPath) {
 
 const scan = JSON.parse(readFileSync(resolve(scanPath), 'utf8'));
 const overrides = existsSync(overridesPath) ? JSON.parse(readFileSync(overridesPath, 'utf8')) : {};
+const manual = JSON.parse(readFileSync(manualPath, 'utf8'));
+validateManualEntries(manual, manualPath);
 
 // ---------------------------------------------------------------- flatten
 
@@ -98,13 +103,21 @@ if (!includeGuarded) rows = rows.filter((r) => r.class !== 'guarded');
 const withheld = rows.filter((r) => r.class === 'deep-path');
 rows = rows.filter((r) => r.class !== 'deep-path');
 
-const targets = [...new Set(rows.map((r) => r.target))].sort();
+const manualTargets = new Set(
+  manual.entries.flatMap(([, extension]) => [
+    ...Object.keys(extension.dependencies ?? {}),
+    ...Object.keys(extension.optionalDependencies ?? {}),
+    ...Object.keys(extension.peerDependencies ?? {}),
+    ...Object.keys(extension.peerDependenciesMeta ?? {}),
+  ])
+);
+const targets = [...new Set([...rows.map((r) => r.target), ...manualTargets])].sort();
 console.error(`${rows.length} findings across ${new Set(rows.map((r) => r.package)).size} packages, ${targets.length} distinct targets`);
 
 // ------------------------------------------------------- registry existence
 
 const cache = existsSync(CACHE) ? JSON.parse(readFileSync(CACHE, 'utf8')) : {};
-const unknown = targets.filter((t) => cache[t] === undefined);
+const unknown = targets.filter((t) => cache[t] == null);
 
 if (unknown.length) {
   console.error(`checking ${unknown.length} targets against the registry...`);
@@ -116,7 +129,7 @@ if (unknown.length) {
       for (;;) {
         const i = cursor++;
         if (i >= unknown.length) return;
-        cache[unknown[i]] = await exists(unknown[i]);
+        cache[unknown[i]] = await registryStatus(unknown[i]);
         if (++done % 50 === 0) console.error(`  ${done}/${unknown.length}`);
       }
     })
@@ -125,29 +138,7 @@ if (unknown.length) {
   writeFileSync(CACHE, `${JSON.stringify(sortKeys(cache), null, 2)}\n`);
 }
 
-/** A published package, per the registry. `null` on a network fault, so a blip is never cached as "absent". */
-async function exists(name) {
-  for (let attempt = 0; attempt < 4; attempt++) {
-    try {
-      const res = await fetch(`${REGISTRY}/${name.replace(/\//g, '%2f')}`, {
-        method: 'HEAD',
-        headers: { accept: 'application/vnd.npm.install-v1+json' },
-      });
-      if (res.status === 404) return false;
-      if (res.ok) return true;
-      if (res.status === 429 || res.status >= 500) {
-        await sleep(500 * 2 ** attempt);
-        continue;
-      }
-      return false;
-    } catch {
-      await sleep(500 * 2 ** attempt);
-    }
-  }
-  return null; // unresolved — excluded, and reported as such
-}
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+assertVerifiedTargets(manualTargets, cache, manualPath);
 
 // A bundler artifact that happens to be a real package name. webpack's UMD
 // wrapper writes each external's name into the header, and a misconfigured
@@ -214,61 +205,181 @@ for (const pkg of [...byPackage.keys()].sort()) {
 // for one package and apply whichever ranges match, so the two layers coexist
 // with no merge and Yarn's version precision survives intact.
 const yarn = await fetchYarnDatabase();
-let yarnAdded = 0;
-let yarnMerged = 0;
-for (const [selector, ext] of yarn.entries) {
-  if (packageExtensions[selector]) {
+const yarnSelectors = new Set();
+const addYarnEntries = (entries) => {
+  let added = 0;
+  let merged = 0;
+  for (const entry of entries) {
+    if (!Array.isArray(entry) || entry.length !== 2) {
+      throw new Error(`invalid curated extension: ${JSON.stringify(entry)}`);
+    }
+    const [selector, ext] = entry;
+    if (typeof selector !== 'string' || !ext || typeof ext !== 'object' || Array.isArray(ext)) {
+      throw new Error(`invalid curated extension: ${JSON.stringify(entry)}`);
+    }
+    if (packageExtensions[selector]) {
     // Two ways a key collides, and skipping either one drops a rule. Our scan
     // may already own the exact selector (`eslint-plugin-import@*`), and Yarn's
     // own list is an ARRAY that repeats a selector — `gatsby-core-utils@<2.14.0
     // -next.1` appears twice with different fields — so keying it by string
     // collapses the duplicates. Both are real losses, both measured. Union the
     // fields instead of choosing.
-    if (mergeInto(packageExtensions[selector], ext)) yarnMerged++;
-    continue;
+      if (
+        mergeInto(packageExtensions[selector], ext, {
+          preferIncoming: !yarnSelectors.has(selector),
+          removeMissingPeerMeta: !yarnSelectors.has(selector),
+          conflictLabel: `Yarn seed ${selector}`,
+        })
+      ) merged++;
+      yarnSelectors.add(selector);
+      continue;
+    }
+    packageExtensions[selector] = structuredClone(ext);
+    yarnSelectors.add(selector);
+    added++;
   }
-  packageExtensions[selector] = ext;
-  yarnAdded++;
-}
+  return { added, merged };
+};
 
-/** Union `from` into `into` without overwriting a range already there. Returns whether anything was added. */
-function mergeInto(into, from) {
+const addManualEntries = (entries) => {
+  let added = 0;
+  let merged = 0;
+  for (const [selector, ext] of entries) {
+    if (!packageExtensions[selector]) {
+      packageExtensions[selector] = structuredClone(ext);
+      added++;
+      continue;
+    }
+    if (
+      mergeInto(packageExtensions[selector], ext, {
+        // A selector can contain both a Yarn rule and a scan-only target. The
+        // manual layer may correct the latter, so precedence cannot be decided
+        // from the selector alone. Apply it, then compare every original Yarn
+        // field below; a change to an actual Yarn rule is rejected there.
+        preferIncoming: true,
+        removeMissingPeerMeta: true,
+        conflictLabel: `manual extension ${selector}`,
+      })
+    ) merged++;
+  }
+  return { added, merged };
+};
+
+const yarnResult = addYarnEntries(yarn.entries);
+const manualResult = addManualEntries(manual.entries);
+assertYarnRulesPreserved(packageExtensions, yarn.entries);
+const packageName = (selector) => selector.slice(0, selector.lastIndexOf('@'));
+const scanPackages = new Set(byPackage.keys());
+const yarnPackages = new Set(yarn.entries.map(([selector]) => packageName(selector)));
+const manualPackages = new Set(manual.entries.map(([selector]) => packageName(selector)));
+
+/** Merge a curated rule, applying the source-specific precedence declared by the caller. */
+function mergeInto(into, from, { preferIncoming = false, rejectConflicts = false, removeMissingPeerMeta = false, conflictLabel }) {
   let changed = false;
-  for (const field of ['dependencies', 'optionalDependencies', 'peerDependencies']) {
+  const providerFields = ['dependencies', 'optionalDependencies', 'peerDependencies'];
+  for (const field of providerFields) {
+    for (const name of Object.keys(from[field] ?? {})) {
+      for (const other of providerFields) {
+        if (other === field || into[other]?.[name] === undefined) continue;
+        if (rejectConflicts) throw new Error(`${conflictLabel}: ${name} is already in ${other}, not ${field}`);
+        if (preferIncoming) {
+          delete into[other][name];
+          if (other === 'peerDependencies') delete into.peerDependenciesMeta?.[name];
+          changed = true;
+        }
+      }
+    }
+  }
+  for (const field of providerFields) {
     for (const [name, range] of Object.entries(from[field] ?? {})) {
       into[field] ??= {};
-      if (into[field][name] === undefined) {
+      if (into[field][name] === undefined || (preferIncoming && into[field][name] !== range)) {
         into[field][name] = range;
         changed = true;
+      } else if (rejectConflicts && into[field][name] !== range) {
+        throw new Error(`${conflictLabel}: ${field}.${name} is ${into[field][name]}, not ${range}`);
       }
     }
   }
   for (const [name, meta] of Object.entries(from.peerDependenciesMeta ?? {})) {
     into.peerDependenciesMeta ??= {};
-    if (into.peerDependenciesMeta[name] === undefined) {
-      into.peerDependenciesMeta[name] = meta;
+    if (into.peerDependenciesMeta[name] === undefined || (preferIncoming && JSON.stringify(into.peerDependenciesMeta[name]) !== JSON.stringify(meta))) {
+      into.peerDependenciesMeta[name] = structuredClone(meta);
       changed = true;
+    } else if (rejectConflicts && JSON.stringify(into.peerDependenciesMeta[name]) !== JSON.stringify(meta)) {
+      throw new Error(`${conflictLabel}: peerDependenciesMeta.${name} differs`);
     }
   }
-  // Yarn's REQUIREDNESS wins on a peer it declares. Unioning the field names is
-  // not enough to preserve a Yarn rule's effect: our scan marks a peer optional
-  // by default, because it cannot know whether every consumer reaches the import,
-  // and that marker silently downgrades a peer Yarn deliberately made required.
-  // Measured on `reactcss@*` — Yarn curated `react` as a required peer, our scan
-  // found the same edge and added `optional: true`, and the merged entry stopped
-  // warning on a missing react. Yarn's hand-written call beats our default, so
-  // drop the marker for any peer Yarn declares and does not itself mark optional.
+  // A curated peer with no metadata is required. Removing a scanner-generated
+  // `optional: true` is therefore part of applying the curated rule, not an
+  // omission. This is disabled for a manual rule sharing a Yarn selector: that
+  // layer may add fields but may never weaken Yarn's required peers.
   for (const name of Object.keys(from.peerDependencies ?? {})) {
-    if (from.peerDependenciesMeta?.[name]?.optional === true) continue;
-    if (into.peerDependenciesMeta?.[name]?.optional === undefined) continue;
-    delete into.peerDependenciesMeta[name].optional;
-    if (Object.keys(into.peerDependenciesMeta[name]).length === 0) {
-      delete into.peerDependenciesMeta[name];
-    }
-    if (Object.keys(into.peerDependenciesMeta).length === 0) delete into.peerDependenciesMeta;
+    if (!removeMissingPeerMeta || Object.hasOwn(from.peerDependenciesMeta ?? {}, name) || !into.peerDependenciesMeta?.[name]) continue;
+    delete into.peerDependenciesMeta[name];
     changed = true;
   }
   return changed;
+}
+
+function assertYarnRulesPreserved(extensions, entries) {
+  const weakened = [];
+  for (const [selector, extension] of entries) {
+    const emitted = extensions[selector];
+    if (!emitted) {
+      weakened.push(`${selector} is missing`);
+      continue;
+    }
+    for (const field of ['dependencies', 'optionalDependencies', 'peerDependencies']) {
+      for (const [name, range] of Object.entries(extension[field] ?? {})) {
+        if (emitted[field]?.[name] !== range) weakened.push(`${selector} -> ${field}.${name}: want ${range}, got ${emitted[field]?.[name] ?? 'nothing'}`);
+      }
+    }
+    for (const [name, meta] of Object.entries(extension.peerDependenciesMeta ?? {})) {
+      if (JSON.stringify(emitted.peerDependenciesMeta?.[name]) !== JSON.stringify(meta)) weakened.push(`${selector} -> peerDependenciesMeta.${name} changed`);
+    }
+    for (const name of Object.keys(extension.peerDependencies ?? {})) {
+      if (extension.peerDependenciesMeta?.[name]?.optional !== true && emitted.peerDependenciesMeta?.[name]?.optional === true) {
+        weakened.push(`${selector} -> ${name} was made optional`);
+      }
+    }
+  }
+  if (weakened.length) throw new Error(`manual extensions weaken the Yarn seed: ${weakened[0]}`);
+}
+
+function validateManualEntries(manual, path) {
+  if (!Array.isArray(manual.entries)) throw new Error(`${path}: expected an entries array`);
+  const fields = new Set(['dependencies', 'optionalDependencies', 'peerDependencies', 'peerDependenciesMeta']);
+  for (const entry of manual.entries) {
+    if (!Array.isArray(entry) || entry.length !== 2 || typeof entry[0] !== 'string' || !entry[1] || typeof entry[1] !== 'object' || Array.isArray(entry[1])) {
+      throw new Error(`${path}: invalid curated extension ${JSON.stringify(entry)}`);
+    }
+    const [selector, extension] = entry;
+    if (Object.keys(extension).length === 0) throw new Error(`${path}: empty extension for ${selector}`);
+    const at = selector.lastIndexOf('@');
+    const packageName = selector.slice(0, at);
+    const range = selector.slice(at + 1);
+    if (at <= 0 || !isValidNpmName(packageName) || semver.validRange(range) === null) {
+      throw new Error(`${path}: invalid selector ${selector}`);
+    }
+    for (const [field, data] of Object.entries(extension)) {
+      if (!fields.has(field) || !data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${path}: invalid ${field} for ${selector}`);
+      for (const [target, value] of Object.entries(data)) {
+        if (!isValidNpmName(target)) throw new Error(`${path}: invalid target ${target} for ${selector}`);
+        if (field === 'peerDependenciesMeta') {
+          if (!value || typeof value !== 'object' || Array.isArray(value) || Object.keys(value).some((key) => key !== 'optional') || ('optional' in value && typeof value.optional !== 'boolean')) {
+            throw new Error(`${path}: invalid peerDependenciesMeta.${target} for ${selector}`);
+          }
+        } else if (typeof value !== 'string' || semver.validRange(value) === null) {
+          throw new Error(`${path}: invalid ${field}.${target} for ${selector}`);
+        }
+      }
+    }
+  }
+}
+
+function isValidNpmName(name) {
+  return /^(?:@[a-z0-9][\w.-]*\/)?[a-z0-9][\w.-]*$/i.test(name) && name.length <= 214;
 }
 
 const counts = { runtime: 0, adapter: 0, types: 0, 'deep-path': 0, guarded: 0 };
@@ -307,12 +418,24 @@ const doc = {
       package: '@yarnpkg/extensions',
       version: yarn.version,
       entries: yarn.entries.length,
-      addedAsNewKeys: yarnAdded,
-      mergedIntoExistingKeys: yarnMerged,
+      packages: yarnPackages.size,
+      packagesOutsideScan: [...yarnPackages].filter((name) => !scanPackages.has(name)).length,
+      addedAsNewKeys: yarnResult.added,
+      mergedIntoExistingKeys: yarnResult.merged,
+    },
+    manual: {
+      entries: manual.entries.length,
+      packages: manualPackages.size,
+      addedAsNewKeys: manualResult.added,
+      mergedIntoExistingKeys: manualResult.merged,
     },
   },
   totals: {
-    packages: Object.keys(packageExtensions).length,
+    // A package name can have several range selectors. The headline count is
+    // package names; selectors are reported separately so a range split is not
+    // mistaken for another affected package.
+    packages: new Set(Object.keys(packageExtensions).map(packageName)).size,
+    selectors: Object.keys(packageExtensions).length,
     entries: rows.length,
     byClass: counts,
     byField: { dependency: fieldCounts.dependency, peer: fieldCounts.peer },
@@ -337,6 +460,7 @@ const doc = {
     }))
     .sort((a, b) => (`${a.package} ${a.target}` < `${b.package} ${b.target}` ? -1 : 1)),
   yarnKeys: yarn.entries.map(([selector]) => selector).sort(),
+  manualKeys: manual.entries.map(([selector]) => selector).sort(),
   packageExtensions,
   findings,
   candidates,
@@ -352,5 +476,6 @@ console.error(
     `${dropped.unpublished.length} dropped as unpublished, ` +
     `${dropped.bundlerLiteral.length} as bundler literals, ` +
     `${candidates.length} candidates for review; ` +
-    `+${yarnAdded} from @yarnpkg/extensions@${yarn.version}`
+    `+${yarnResult.added} from @yarnpkg/extensions@${yarn.version}, ` +
+    `+${manualResult.added} manually curated`
 );
