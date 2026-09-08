@@ -12,13 +12,14 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import semver from 'semver';
+import { fileURLToPath } from 'node:url';
 
 import { rowsForOffender, extensionFor, fieldFor, keyFor, sortKeys } from './policy.mjs';
 import { fetchYarnDatabase } from './yarn-db.mjs';
+import { registryStatus, assertVerifiedTargets } from './registry.mjs';
 
-const HERE = dirname(new URL(import.meta.url).pathname);
+const HERE = dirname(fileURLToPath(import.meta.url));
 const CACHE = resolve(HERE, '../inputs/registry-cache.json');
-const REGISTRY = 'https://registry.npmjs.org';
 
 function arg(name, fallback) {
   const i = process.argv.indexOf(`--${name}`);
@@ -116,7 +117,7 @@ console.error(`${rows.length} findings across ${new Set(rows.map((r) => r.packag
 // ------------------------------------------------------- registry existence
 
 const cache = existsSync(CACHE) ? JSON.parse(readFileSync(CACHE, 'utf8')) : {};
-const unknown = targets.filter((t) => cache[t] === undefined);
+const unknown = targets.filter((t) => cache[t] == null);
 
 if (unknown.length) {
   console.error(`checking ${unknown.length} targets against the registry...`);
@@ -128,7 +129,7 @@ if (unknown.length) {
       for (;;) {
         const i = cursor++;
         if (i >= unknown.length) return;
-        cache[unknown[i]] = await exists(unknown[i]);
+        cache[unknown[i]] = await registryStatus(unknown[i]);
         if (++done % 50 === 0) console.error(`  ${done}/${unknown.length}`);
       }
     })
@@ -137,34 +138,7 @@ if (unknown.length) {
   writeFileSync(CACHE, `${JSON.stringify(sortKeys(cache), null, 2)}\n`);
 }
 
-const invalidManualTargets = [...manualTargets].filter((target) => cache[target] !== true);
-if (invalidManualTargets.length) {
-  throw new Error(`${manualPath}: target(s) are not published on npm: ${invalidManualTargets.join(', ')}`);
-}
-
-/** A published package, per the registry. `null` on a network fault, so a blip is never cached as "absent". */
-async function exists(name) {
-  for (let attempt = 0; attempt < 4; attempt++) {
-    try {
-      const res = await fetch(`${REGISTRY}/${name.replace(/\//g, '%2f')}`, {
-        method: 'HEAD',
-        headers: { accept: 'application/vnd.npm.install-v1+json' },
-      });
-      if (res.status === 404) return false;
-      if (res.ok) return true;
-      if (res.status === 429 || res.status >= 500) {
-        await sleep(500 * 2 ** attempt);
-        continue;
-      }
-      return false;
-    } catch {
-      await sleep(500 * 2 ** attempt);
-    }
-  }
-  return null; // unresolved — excluded, and reported as such
-}
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+assertVerifiedTargets(manualTargets, cache, manualPath);
 
 // A bundler artifact that happens to be a real package name. webpack's UMD
 // wrapper writes each external's name into the header, and a misconfigured

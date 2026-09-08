@@ -101,7 +101,9 @@ jobs:
       - run: npm install --no-audit --no-fund
 
       - name: Test curated seed behavior
-        run: node harness/test-curated-seed.mjs
+        run: |
+          node harness/test-curated-seed.mjs
+          node --test harness/registry.test.mjs
 
       - name: Scan
         run: |
