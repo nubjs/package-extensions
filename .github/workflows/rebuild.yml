@@ -15,11 +15,11 @@ on:
       top:
         description: How many of the most-downloaded packages to scan
         required: false
-        default: '10000'
+        default: "10000"
       concurrency:
         description: Parallel fetch/analyze workers
         required: false
-        default: '8'
+        default: "8"
       commit:
         description: Commit the regenerated dataset to main
         type: boolean
@@ -42,7 +42,7 @@ on:
     # A missing run on any one day is normal; what matters is that the record
     # written by a run names its own date, so a stale entry is visible from the
     # data rather than inferred from the cadence.
-    - cron: '23 6 * * *'
+    - cron: "23 6 * * *"
 
 permissions:
   contents: write
@@ -104,6 +104,7 @@ jobs:
         run: |
           node harness/test-curated-seed.mjs
           node --test harness/registry.test.mjs
+          node --test harness/downloads.test.mjs
 
       - name: Scan
         run: |
@@ -166,6 +167,12 @@ jobs:
           node harness/emit.mjs
           node harness/pack.mjs
           node harness/verify.mjs
+
+      - name: Refresh weekly download estimates
+        run: |
+          if ! node harness/downloads.mjs; then
+            echo "::warning::Download refresh failed; retaining the dated previous snapshot"
+          fi
 
       - name: Drop records older than 30 days
         # NOT `inputs.commit != false`. On a `schedule` event the `inputs`

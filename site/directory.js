@@ -1,15 +1,12 @@
 const form = document.querySelector(".filters");
 const search = document.querySelector("#search");
-const source = document.querySelector("#source");
 const sort = document.querySelector("#sort");
 const tbody = document.querySelector("#directory tbody");
 const rows = [...tbody.rows];
-let currentSort = "rank";
+let currentSort = "downloads";
 const params = new URLSearchParams(location.search);
 search.value = params.get("q") ?? "";
-if (["all", "scan", "curated"].includes(params.get("source")))
-  source.value = params.get("source");
-if (["rank", "name"].includes(params.get("sort")))
+if (["downloads", "name"].includes(params.get("sort")))
   sort.value = params.get("sort");
 
 function update() {
@@ -20,8 +17,9 @@ function update() {
       const names = a.dataset.name.localeCompare(b.dataset.name);
       return sort.value === "name"
         ? names
-        : (Number(a.dataset.rank) || Infinity) -
-            (Number(b.dataset.rank) || Infinity) || names;
+        : (b.dataset.downloads === "" ? -1 : Number(b.dataset.downloads)) -
+            (a.dataset.downloads === "" ? -1 : Number(a.dataset.downloads)) ||
+            names;
     });
     const fragment = document.createDocumentFragment();
     for (const row of rows) fragment.append(row);
@@ -29,9 +27,7 @@ function update() {
     currentSort = sort.value;
   }
   for (const row of rows) {
-    row.hidden =
-      !row.dataset.name.toLowerCase().includes(query) ||
-      (source.value !== "all" && row.dataset.source !== source.value);
+    row.hidden = !row.dataset.name.toLowerCase().includes(query);
     if (!row.hidden) visible++;
   }
   document.querySelector(
@@ -42,8 +38,7 @@ function update() {
   document.querySelector("#empty").hidden = visible !== 0;
   const next = new URLSearchParams();
   if (search.value) next.set("q", search.value);
-  if (source.value !== "all") next.set("source", source.value);
-  if (sort.value !== "rank") next.set("sort", sort.value);
+  if (sort.value !== "downloads") next.set("sort", sort.value);
   history.replaceState(
     null,
     "",
@@ -59,8 +54,7 @@ form.addEventListener("input", update);
 form.addEventListener("change", update);
 form.addEventListener("reset", () => {
   search.value = "";
-  source.value = "all";
-  sort.value = "rank";
+  sort.value = "downloads";
   queueMicrotask(update);
 });
 update();
