@@ -1,41 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "node site/build.mjs",
-  "outputDirectory": "site/public",
-  "installCommand": "echo 'No dependencies required for the site build'",
-  "trailingSlash": true,
+  "buildCommand": "echo 'Redirect-only deployment'",
+  "outputDirectory": "redirect",
+  "installCommand": "echo 'No dependencies required'",
   "redirects": [
     {
-      "source": "/guide/",
-      "destination": "/#maintainers",
-      "permanent": true
-    },
-    {
-      "source": "/about/",
-      "destination": "/#contributing",
-      "permanent": true
-    },
-    {
-      "source": "/packages/:name+/",
-      "destination": "/packages/?q=:name",
-      "permanent": true
-    }
-  ],
-  "headers": [
-    {
       "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"
-        }
-      ]
+      "destination": "https://nubjs.com/docs/install/extensions",
+      "permanent": true
     }
   ]
 }

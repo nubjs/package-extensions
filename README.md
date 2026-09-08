@@ -2,6 +2,8 @@
 
 Undeclared dependencies across the 10,000 most-downloaded packages on npm, published as a `packageExtensions` database that pnpm and Yarn read directly.
 
+[Documentation](https://nubjs.com/docs/install/extensions) · [npm package](https://www.npmjs.com/package/@nubjs/extensions)
+
 A package has an undeclared dependency when its published code imports a package its own manifest never lists. Under npm's flat `node_modules` the import finds a copy something else installed. Under Yarn Plug'n'Play, or pnpm with hoisting off, there is nothing to find and the import throws.
 
 ```yaml
