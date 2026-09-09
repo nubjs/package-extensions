@@ -1,0 +1,14 @@
+{
+  "run": "2026-09-09-top10000",
+  "date": "2026-09-09T11:37:58Z",
+  "detector": {
+    "repository": "nubjs/nub",
+    "commit": "0ede70a783636b6a22f329122cc334dd6e2cc096",
+    "path": "crates/nub-phantom"
+  },
+  "corpus": {
+    "ranking": "npm-high-impact topDownload",
+    "top": 10000
+  },
+  "workflowRun": "https://github.com/nubjs/package-extensions/actions/runs/34346335840"
+}

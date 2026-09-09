@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08",
+ "generated": "2026-09-09",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,17 +8,17 @@
  },
  "sources": {
   "scan": {
-   "entries": 1188,
-   "packages": 660
+   "entries": 1191,
+   "packages": 661
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
    "version": "2.0.7",
    "entries": 159,
-   "addedAsNewKeys": 151,
-   "mergedIntoExistingKeys": 4,
    "packages": 142,
-   "packagesOutsideScan": 131
+   "packagesOutsideScan": 131,
+   "addedAsNewKeys": 151,
+   "mergedIntoExistingKeys": 4
   },
   "manual": {
    "entries": 0,
@@ -28,10 +28,11 @@
   }
  },
  "totals": {
-  "packages": 791,
-  "entries": 1188,
+  "packages": 792,
+  "selectors": 812,
+  "entries": 1191,
   "byClass": {
-   "runtime": 219,
+   "runtime": 222,
    "adapter": 130,
    "types": 537,
    "deep-path": 0,
@@ -39,14 +40,13 @@
   },
   "byField": {
    "dependency": 29,
-   "peer": 1159
+   "peer": 1162
   },
-  "candidatesForReview": 107,
+  "candidatesForReview": 111,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
-  "withheldDeepPath": 246,
-  "selectors": 811
+  "withheldDeepPath": 244
  },
  "withheldDeepPath": [
   {
@@ -1797,16 +1797,6 @@
    ]
   },
   {
-   "package": "jszip",
-   "target": "madge",
-   "specifiers": [
-    "madge"
-   ],
-   "files": [
-    "deps.js"
-   ]
-  },
-  {
    "package": "launchdarkly-eventsource",
    "target": "body-parser",
    "specifiers": [
@@ -1854,16 +1844,6 @@
    ],
    "files": [
     "src/recorder/rrweb-entrypoint.js"
-   ]
-  },
-  {
-   "package": "mixpanel-browser",
-   "target": "@openfeature/web-sdk",
-   "specifiers": [
-    "@openfeature/web-sdk"
-   ],
-   "files": [
-    "packages/openfeature-web-provider/src/MixpanelProvider.ts"
    ]
   },
   {
@@ -2977,6 +2957,7 @@
   "ws@<7.2.1",
   "xo@*"
  ],
+ "manualKeys": [],
  "packageExtensions": {
   "@acemir/cssom@*": {
    "peerDependencies": {
@@ -4336,7 +4317,6 @@
   },
   "@mastra/core@*": {
    "peerDependencies": {
-    "@ast-grep/napi": "*",
     "@hono/standard-validator": "*",
     "@standard-community/standard-json": "*",
     "@standard-community/standard-openapi": "*",
@@ -4347,9 +4327,6 @@
     "vitest": "*"
    },
    "peerDependenciesMeta": {
-    "@ast-grep/napi": {
-     "optional": true
-    },
     "@hono/standard-validator": {
      "optional": true
     },
@@ -10525,7 +10502,8 @@
   "reactcss@*": {
    "peerDependencies": {
     "react": "*"
-   }
+   },
+   "peerDependenciesMeta": {}
   },
   "recast@*": {
    "peerDependencies": {
@@ -11246,6 +11224,28 @@
    },
    "peerDependenciesMeta": {
     "node": {
+     "optional": true
+    }
+   }
+  },
+  "vercel@*": {
+   "peerDependencies": {
+    "@vltpkg/graph": "*",
+    "@vltpkg/package-info": "*",
+    "@vltpkg/package-json": "*",
+    "path-scurry": "*"
+   },
+   "peerDependenciesMeta": {
+    "@vltpkg/graph": {
+     "optional": true
+    },
+    "@vltpkg/package-info": {
+     "optional": true
+    },
+    "@vltpkg/package-json": {
+     "optional": true
+    },
+    "path-scurry": {
      "optional": true
     }
    }
@@ -12898,7 +12898,7 @@
   },
   {
    "package": "@angular/cdk",
-   "measuredVersion": "22.1.5",
+   "measuredVersion": "22.1.6",
    "targets": [
     {
      "target": "@angular-devkit/core",
@@ -13299,7 +13299,7 @@
   },
   {
    "package": "@astrojs/markdown-remark",
-   "measuredVersion": "7.3.0",
+   "measuredVersion": "7.3.1",
    "targets": [
     {
      "target": "hast",
@@ -13641,7 +13641,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.54.5",
+   "measuredVersion": "1.54.6",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -15078,7 +15078,7 @@
   },
   {
    "package": "@google/gemini-cli",
-   "measuredVersion": "0.58.0",
+   "measuredVersion": "0.59.0",
    "targets": [
     {
      "target": "bufferutil",
@@ -15929,23 +15929,8 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.64.0",
+   "measuredVersion": "1.65.0",
    "targets": [
-    {
-     "target": "@ast-grep/napi",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "@ast-grep/napi"
-     ],
-     "files": [
-      "dist/workspace-smVhYwIC.js",
-      "dist/workspace-y7vhW7EC.cjs"
-     ],
-     "fileCount": 2
-    },
     {
      "target": "@hono/standard-validator",
      "class": "types",
@@ -16067,7 +16052,7 @@
   },
   {
    "package": "@mastra/schema-compat",
-   "measuredVersion": "1.3.8",
+   "measuredVersion": "1.3.9",
    "targets": [
     {
      "target": "ajv",
@@ -16168,7 +16153,7 @@
   },
   {
    "package": "@mendable/firecrawl-js",
-   "measuredVersion": "4.38.0",
+   "measuredVersion": "4.39.0",
    "targets": [
     {
      "target": "undici",
@@ -19703,7 +19688,7 @@
   },
   {
    "package": "@promptbook/utils",
-   "measuredVersion": "0.114.0-30",
+   "measuredVersion": "0.114.0-31",
    "targets": [
     {
      "target": "openai",
@@ -20828,7 +20813,7 @@
   },
   {
    "package": "@rolldown/binding-wasm32-wasi",
-   "measuredVersion": "1.2.7",
+   "measuredVersion": "1.2.8",
    "targets": [
     {
      "target": "@oxc-project/types",
@@ -20848,7 +20833,7 @@
   },
   {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.2.4",
+   "measuredVersion": "2.2.5",
    "targets": [
     {
      "target": "tsx",
@@ -21420,7 +21405,7 @@
   },
   {
    "package": "@solana/sysvars",
-   "measuredVersion": "8.2.0",
+   "measuredVersion": "8.3.0",
    "targets": [
     {
      "target": "@solana/addresses",
@@ -23450,7 +23435,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "10.0.1",
+   "measuredVersion": "10.1.0",
    "targets": [
     {
      "target": "encoding",
@@ -23527,7 +23512,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "9.0.1",
+   "measuredVersion": "9.0.2",
    "targets": [
     {
      "target": "encoding",
@@ -25283,7 +25268,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "9.0.17",
+   "measuredVersion": "9.0.18",
    "targets": [
     {
      "target": "@appium/types",
@@ -25399,7 +25384,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.3.1",
+   "measuredVersion": "7.3.2",
    "targets": [
     {
      "target": "typescript",
@@ -25551,7 +25536,7 @@
   },
   {
    "package": "babel-preset-expo",
-   "measuredVersion": "57.0.10",
+   "measuredVersion": "57.0.11",
    "targets": [
     {
      "target": "@babel/core",
@@ -27836,7 +27821,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -29243,7 +29228,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.34.0",
+   "measuredVersion": "6.35.1",
    "targets": [
     {
      "target": "vue",
@@ -29931,7 +29916,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20260907.0-alpha",
+   "measuredVersion": "5.20260908.0-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -31015,22 +31000,21 @@
   },
   {
    "package": "openclaw",
-   "measuredVersion": "2026.9.2",
+   "measuredVersion": "2026.9.3",
    "targets": [
     {
      "target": "esbuild",
-     "class": "runtime",
+     "class": "guarded",
      "field": "peer",
      "candidate": false,
-     "reason": "target is a framework or tool a consumer installs itself",
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
       "esbuild"
      ],
      "files": [
-      "dist/plugins-authoring-command-B5ijz98k.js",
-      "dist/plugins-feature-artifact-o3AzevFi.js"
+      "dist/plugins-authoring-command-c1_Sa7WA.mjs"
      ],
-     "fileCount": 2
+     "fileCount": 1
     }
    ]
   },
@@ -31380,7 +31364,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.51.7",
+   "measuredVersion": "5.51.8",
    "targets": [
     {
      "target": "express",
@@ -32202,7 +32186,7 @@
   },
   {
    "package": "react-native-worklets",
-   "measuredVersion": "0.12.1",
+   "measuredVersion": "0.12.2",
    "targets": [
     {
      "target": "@babel/plugin-transform-react-jsx",
@@ -32723,7 +32707,7 @@
   },
   {
    "package": "rrdom",
-   "measuredVersion": "2.1.2",
+   "measuredVersion": "2.1.4",
    "targets": [
     {
      "target": "@rrweb/types",
@@ -32743,7 +32727,7 @@
   },
   {
    "package": "rrweb-snapshot",
-   "measuredVersion": "2.1.2",
+   "measuredVersion": "2.1.4",
    "targets": [
     {
      "target": "@rrweb/types",
@@ -33018,7 +33002,7 @@
   },
   {
    "package": "snappy",
-   "measuredVersion": "7.4.2",
+   "measuredVersion": "7.4.3",
    "targets": [
     {
      "target": "@napi-rs/snappy-wasm32-wasi",
@@ -33425,7 +33409,7 @@
   },
   {
    "package": "systeminformation",
-   "measuredVersion": "5.33.9",
+   "measuredVersion": "5.33.10",
    "targets": [
     {
      "target": "macos-temperature-sensor",
@@ -33960,6 +33944,68 @@
    ]
   },
   {
+   "package": "vercel",
+   "measuredVersion": "59.13.1",
+   "targets": [
+    {
+     "target": "@vltpkg/graph",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "@vltpkg/graph"
+     ],
+     "files": [
+      "dist/chunks/vlt-builder-importer-USCFHWPL.js"
+     ],
+     "fileCount": 1
+    },
+    {
+     "target": "@vltpkg/package-info",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "@vltpkg/package-info"
+     ],
+     "files": [
+      "dist/chunks/vlt-builder-importer-USCFHWPL.js"
+     ],
+     "fileCount": 1
+    },
+    {
+     "target": "@vltpkg/package-json",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "@vltpkg/package-json"
+     ],
+     "files": [
+      "dist/chunks/vlt-builder-importer-USCFHWPL.js"
+     ],
+     "fileCount": 1
+    },
+    {
+     "target": "path-scurry",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "path-scurry"
+     ],
+     "files": [
+      "dist/chunks/vlt-builder-importer-USCFHWPL.js"
+     ],
+     "fileCount": 1
+    }
+   ]
+  },
+  {
    "package": "verdaccio-htpasswd",
    "measuredVersion": "13.1.3",
    "targets": [
@@ -34201,7 +34247,7 @@
   },
   {
    "package": "vm2",
-   "measuredVersion": "3.12.1",
+   "measuredVersion": "3.12.2",
    "targets": [
     {
      "target": "coffee-script",
@@ -34525,7 +34571,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.129.1",
+   "measuredVersion": "4.130.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -34788,7 +34834,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.64.0",
+   "measuredVersion": "1.65.0",
    "target": "undici",
    "specifiers": [
     "undici"
@@ -35299,7 +35345,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35599,7 +35645,7 @@
   },
   {
    "package": "snappy",
-   "measuredVersion": "7.4.2",
+   "measuredVersion": "7.4.3",
    "target": "@napi-rs/snappy-wasm32-wasi",
    "specifiers": [
     "@napi-rs/snappy-wasm32-wasi",
@@ -35628,6 +35674,38 @@
    "target": "yamlparser",
    "specifiers": [
     "yamlparser"
+   ]
+  },
+  {
+   "package": "vercel",
+   "measuredVersion": "59.13.1",
+   "target": "@vltpkg/graph",
+   "specifiers": [
+    "@vltpkg/graph"
+   ]
+  },
+  {
+   "package": "vercel",
+   "measuredVersion": "59.13.1",
+   "target": "@vltpkg/package-info",
+   "specifiers": [
+    "@vltpkg/package-info"
+   ]
+  },
+  {
+   "package": "vercel",
+   "measuredVersion": "59.13.1",
+   "target": "@vltpkg/package-json",
+   "specifiers": [
+    "@vltpkg/package-json"
+   ]
+  },
+  {
+   "package": "vercel",
+   "measuredVersion": "59.13.1",
+   "target": "path-scurry",
+   "specifiers": [
+    "path-scurry"
    ]
   }
  ],
@@ -35840,6 +35918,5 @@
   "bundlerLiteral": [
    "redoc -> null"
   ]
- },
- "manualKeys": []
+ }
 }

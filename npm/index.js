@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.2 — generated 2026-09-08, do not edit.
-// 791 packages, 1188 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.2 — generated 2026-09-09, do not edit.
+// 792 packages, 1191 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -1726,7 +1726,6 @@ exports.packageExtensions = [
   "@mastra/core@*",
   {
    "peerDependencies": {
-    "@ast-grep/napi": "*",
     "@hono/standard-validator": "*",
     "@standard-community/standard-json": "*",
     "@standard-community/standard-openapi": "*",
@@ -1737,9 +1736,6 @@ exports.packageExtensions = [
     "vitest": "*"
    },
    "peerDependenciesMeta": {
-    "@ast-grep/napi": {
-     "optional": true
-    },
     "@hono/standard-validator": {
      "optional": true
     },
@@ -9256,7 +9252,8 @@ exports.packageExtensions = [
   {
    "peerDependencies": {
     "react": "*"
-   }
+   },
+   "peerDependenciesMeta": {}
   }
  ],
  [
@@ -10172,6 +10169,31 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "node": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "vercel@*",
+  {
+   "peerDependencies": {
+    "@vltpkg/graph": "*",
+    "@vltpkg/package-info": "*",
+    "@vltpkg/package-json": "*",
+    "path-scurry": "*"
+   },
+   "peerDependenciesMeta": {
+    "@vltpkg/graph": {
+     "optional": true
+    },
+    "@vltpkg/package-info": {
+     "optional": true
+    },
+    "@vltpkg/package-json": {
+     "optional": true
+    },
+    "path-scurry": {
      "optional": true
     }
    }

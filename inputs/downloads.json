@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T22:53:13.226Z",
+  "generatedAt": "2026-09-09T11:39:19.808Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-08-31",
   "end": "2026-09-06",
@@ -757,6 +757,7 @@
     "urijs": 4432260,
     "useragent": 698321,
     "utif2": 2194449,
+    "vercel": 2646372,
     "verdaccio-htpasswd": 426099,
     "vite": 158616150,
     "vite-plugin-full-reload": 1985031,

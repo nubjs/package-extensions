@@ -1,5 +1,5 @@
-# Generated 2026-09-08 from the 10000 most-downloaded npm packages.
-# 791 packages, 1188 undeclared dependencies.
+# Generated 2026-09-09 from the 10000 most-downloaded npm packages.
+# 792 packages, 1191 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -851,7 +851,6 @@ packageExtensions:
         optional: true
   "@mastra/core@*":
     peerDependencies:
-      "@ast-grep/napi": "*"
       "@hono/standard-validator": "*"
       "@standard-community/standard-json": "*"
       "@standard-community/standard-openapi": "*"
@@ -861,8 +860,6 @@ packageExtensions:
       undici: "*"
       vitest: "*"
     peerDependenciesMeta:
-      "@ast-grep/napi":
-        optional: true
       "@hono/standard-validator":
         optional: true
       "@standard-community/standard-json":
@@ -4831,6 +4828,7 @@ packageExtensions:
   reactcss@*:
     peerDependencies:
       react: "*"
+    peerDependenciesMeta: {}
   recast@*:
     peerDependencies:
       babylon: "*"
@@ -5277,6 +5275,21 @@ packageExtensions:
       node: "*"
     peerDependenciesMeta:
       node:
+        optional: true
+  vercel@*:
+    peerDependencies:
+      "@vltpkg/graph": "*"
+      "@vltpkg/package-info": "*"
+      "@vltpkg/package-json": "*"
+      path-scurry: "*"
+    peerDependenciesMeta:
+      "@vltpkg/graph":
+        optional: true
+      "@vltpkg/package-info":
+        optional: true
+      "@vltpkg/package-json":
+        optional: true
+      path-scurry:
         optional: true
   verdaccio-htpasswd@*:
     peerDependencies:

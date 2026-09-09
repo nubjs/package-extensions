@@ -1,15 +1,15 @@
 {
-  "generated": "2026-09-08",
-  "dataset": "7b94ef21030ea759",
+  "generated": "2026-09-09",
+  "dataset": "d1db8a220a59b60e",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 10,
-    "notOnImport": 60,
-    "installFailed": 3,
+    "confirmedViaPath": 12,
+    "notOnImport": 58,
+    "installFailed": 4,
     "inconclusive": 4
   },
   "results": [
@@ -146,9 +146,8 @@
     },
     {
       "package": "@mastra/core",
-      "version": "1.64.0",
+      "version": "1.65.0",
       "expected": [
-        "@ast-grep/napi",
         "@hono/standard-validator",
         "@standard-community/standard-json",
         "@standard-community/standard-openapi",
@@ -158,19 +157,8 @@
         "undici",
         "vitest"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 11,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "zod"
-      ],
-      "byOtherIssuers": [
-        "@ai-sdk/provider-utils -> zod (unprovided peer)",
-        "@mastra/schema-compat -> zod (unprovided peer)"
-      ],
-      "specifiersTried": 37
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.65.0\u001b[39m: All versions satisfying \"1.65.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
     },
     {
       "package": "@newrelic/security-agent",
@@ -919,23 +907,13 @@
     },
     {
       "package": "expo-router",
-      "version": "57.0.19",
+      "version": "57.0.20",
       "expected": [
         "expo-modules-core",
         "react-native-tab-view"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "expo-modules-core"
-      ],
-      "citedPathsTried": 4,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "react"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 5
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-router\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.20\u001b[39m: All versions satisfying \"57.0.20\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-r"
     },
     {
       "package": "expo-secure-store",
@@ -1186,8 +1164,16 @@
       "expected": [
         "@oxc-minify/binding-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-minify\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.149.0\u001b[39m: All versions satisfying \"0.149.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-min"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "@oxc-minify/binding-wasm32-wasi"
+      ],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "oxc-parser",
@@ -1195,8 +1181,16 @@
       "expected": [
         "@oxc-parser/binding-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-parser\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.149.0\u001b[39m: All versions satisfying \"0.149.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-par"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "@oxc-parser/binding-wasm32-wasi"
+      ],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "oxc-transform",
@@ -1204,8 +1198,16 @@
       "expected": [
         "@oxc-transform/binding-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-transform\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.149.0\u001b[39m: All versions satisfying \"0.149.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "@oxc-transform/binding-wasm32-wasi"
+      ],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "playwright-core",
@@ -1349,18 +1351,12 @@
     },
     {
       "package": "snappy",
-      "version": "7.4.2",
+      "version": "7.4.3",
       "expected": [
         "@napi-rs/snappy-wasm32-wasi"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 3
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173msnappy\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.4.3\u001b[39m: All versions satisfying \"7.4.3\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173msnappy\u001b[39m\u001b[38"
     },
     {
       "package": "swagger2openapi",
@@ -1387,7 +1383,19 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7076) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-2VzKMx/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7226) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-BRnfGK/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+    },
+    {
+      "package": "vercel",
+      "version": "59.13.1",
+      "expected": [
+        "@vltpkg/graph",
+        "@vltpkg/package-info",
+        "@vltpkg/package-json",
+        "path-scurry"
+      ],
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:59.13.1\u001b[39m: All versions satisfying \"59.13.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m"
     }
   ]
 }
