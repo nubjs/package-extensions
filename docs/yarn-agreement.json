@@ -762,7 +762,7 @@
           "protobufjs"
         ],
         "metaOnly": false,
-        "version": "9.0.1",
+        "version": "9.1.0",
         "why": "the package now declares every target"
       },
       {

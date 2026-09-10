@@ -1,16 +1,16 @@
 {
-  "generated": "2026-09-09",
+  "generated": "2026-09-10",
   "dataset": "d1db8a220a59b60e",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
-    "confirmed": 4,
+    "confirmed": 3,
     "confirmedViaPath": 12,
-    "notOnImport": 58,
-    "installFailed": 4,
-    "inconclusive": 4
+    "notOnImport": 57,
+    "installFailed": 8,
+    "inconclusive": 2
   },
   "results": [
     {
@@ -157,8 +157,19 @@
         "undici",
         "vitest"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.65.0\u001b[39m: All versions satisfying \"1.65.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 9,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "zod"
+      ],
+      "byOtherIssuers": [
+        "@ai-sdk/provider-utils -> zod (unprovided peer)",
+        "@mastra/schema-compat -> zod (unprovided peer)"
+      ],
+      "specifiersTried": 35
     },
     {
       "package": "@newrelic/security-agent",
@@ -231,7 +242,7 @@
     },
     {
       "package": "@nx/devkit",
-      "version": "23.2.0",
+      "version": "23.2.1",
       "expected": [
         "@angular-devkit/architect",
         "@angular-devkit/schematics",
@@ -239,20 +250,12 @@
         "rxjs",
         "typescript"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 5,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "nx"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 14
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mdevkit\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:23.2.1\u001b[39m: All versions satisfying \"23.2.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38"
     },
     {
       "package": "@nx/eslint-plugin",
-      "version": "23.2.0",
+      "version": "23.2.1",
       "expected": [
         "@eslint/js",
         "angular-eslint",
@@ -263,57 +266,29 @@
         "typescript",
         "typescript-eslint"
       ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "@eslint/js",
-        "angular-eslint",
-        "eslint-plugin-import"
-      ],
-      "confirmedViaPath": [],
-      "citedPathsTried": 13,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [
-        "@nx/devkit -> nx (unprovided peer)"
-      ],
-      "specifiersTried": 20
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173meslint-plugin\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:23.2.1\u001b[39m: All versions satisfying \"23.2.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN001"
     },
     {
       "package": "@nx/rollup",
-      "version": "23.2.0",
+      "version": "23.2.1",
       "expected": [
         "@swc/core",
         "typescript"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [
-        "@nx/devkit -> nx (unprovided peer)"
-      ],
-      "specifiersTried": 9
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mrollup\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:23.2.1\u001b[39m: All versions satisfying \"23.2.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38"
     },
     {
       "package": "@nx/webpack",
-      "version": "23.2.0",
+      "version": "23.2.1",
       "expected": [
         "@swc/core",
         "swc-loader",
         "typescript"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 3,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [
-        "@nx/devkit -> nx (unprovided peer)"
-      ],
-      "specifiersTried": 11
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mwebpack\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:23.2.1\u001b[39m: All versions satisfying \"23.2.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[3"
     },
     {
       "package": "@oclif/config",
@@ -418,7 +393,7 @@
     },
     {
       "package": "@sentry/react-native",
-      "version": "8.25.0",
+      "version": "8.26.0",
       "expected": [
         "@expo/config",
         "@expo/env",
@@ -429,8 +404,8 @@
         "open",
         "promise"
       ],
-      "verdict": "inconclusive",
-      "detail": "[Sentry] Could not determine EAS build hook name. Pass one of: on-complete, on-error, on-success\n"
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@sentry/\u001b[39m\u001b[38;5;173mreact-native\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:8.26.0\u001b[39m: All versions satisfying \"8.26.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN"
     },
     {
       "package": "@storybook/nextjs-vite",
@@ -912,8 +887,18 @@
         "expo-modules-core",
         "react-native-tab-view"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-router\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.20\u001b[39m: All versions satisfying \"57.0.20\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-r"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-secure-store",
@@ -1011,21 +996,13 @@
     },
     {
       "package": "firebase-tools",
-      "version": "15.29.0",
+      "version": "15.30.0",
       "expected": [
         "astro",
         "firebase-functions"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "firebase-functions"
-      ],
-      "citedPathsTried": 9,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 10
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mfirebase-tools\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:15.30.0\u001b[39m: All versions satisfying \"15.30.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mfir"
     },
     {
       "package": "http-call",
@@ -1138,7 +1115,7 @@
     },
     {
       "package": "nx",
-      "version": "23.2.0",
+      "version": "23.2.1",
       "expected": [
         "@angular-devkit/build-angular",
         "@angular/build",
@@ -1155,8 +1132,8 @@
         "ts-node",
         "typescript"
       ],
-      "verdict": "inconclusive",
-      "detail": "fatal: not a git repository (or any of the parent directories): .git\n"
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mnx\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:23.2.1\u001b[39m: All versions satisfying \"23.2.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mnx\u001b[39m\u001b[38;5;37m"
     },
     {
       "package": "oxc-minify",
@@ -1355,8 +1332,14 @@
       "expected": [
         "@napi-rs/snappy-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173msnappy\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.4.3\u001b[39m: All versions satisfying \"7.4.3\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173msnappy\u001b[39m\u001b[38"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "swagger2openapi",
@@ -1383,11 +1366,11 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7226) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-BRnfGK/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7178) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-iKHLWK/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
-      "version": "59.13.1",
+      "version": "59.15.1",
       "expected": [
         "@vltpkg/graph",
         "@vltpkg/package-info",
@@ -1395,7 +1378,7 @@
         "path-scurry"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:59.13.1\u001b[39m: All versions satisfying \"59.13.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:59.15.1\u001b[39m: All versions satisfying \"59.15.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m"
     }
   ]
 }
