@@ -7017,16 +7017,6 @@
           }
         }
       },
-      "openclaw@*": {
-        "peerDependencies": {
-          "esbuild": "*"
-        },
-        "peerDependenciesMeta": {
-          "esbuild": {
-            "optional": true
-          }
-        }
-      },
       "openid-client@*": {
         "peerDependencies": {
           "express": "*",

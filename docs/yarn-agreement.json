@@ -5,7 +5,7 @@
     "entries": 159
   },
   "corpus": {
-    "scannedOk": 9982,
+    "scannedOk": 9981,
     "corpusKnown": true
   },
   "buckets": {
@@ -687,7 +687,7 @@
           "@babel/types"
         ],
         "metaOnly": false,
-        "version": "8.0.4",
+        "version": "8.0.5",
         "why": "the package now declares every target"
       },
       {

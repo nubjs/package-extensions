@@ -1,15 +1,15 @@
 {
-  "generated": "2026-09-10",
+  "generated": "2026-09-11",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
-    "scannedOk": 9982,
-    "failed": 18
+    "scannedOk": 9981,
+    "failed": 19
   },
   "sources": {
     "scan": {
-      "entries": 1191,
-      "packages": 661
+      "entries": 1190,
+      "packages": 660
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 792,
-    "selectors": 812,
-    "entries": 1191,
+    "packages": 791,
+    "selectors": 811,
+    "entries": 1190,
     "byClass": {
       "runtime": 222,
       "adapter": 130,
       "types": 537,
       "deep-path": 0,
-      "guarded": 302
+      "guarded": 301
     },
     "byField": {
       "dependency": 29,
-      "peer": 1162
+      "peer": 1161
     },
     "candidatesForReview": 111,
     "droppedUnpublishedTargets": 202,
@@ -9985,16 +9985,6 @@
         }
       }
     },
-    "openclaw@*": {
-      "peerDependencies": {
-        "esbuild": "*"
-      },
-      "peerDependenciesMeta": {
-        "esbuild": {
-          "optional": true
-        }
-      }
-    },
     "openid-client@*": {
       "peerDependencies": {
         "express": "*",
@@ -12832,7 +12822,7 @@
     },
     {
       "package": "@angular-devkit/build-angular",
-      "measuredVersion": "22.1.7",
+      "measuredVersion": "22.1.8",
       "targets": [
         {
           "target": "zone.js",
@@ -13017,7 +13007,7 @@
     },
     {
       "package": "@angular/cli",
-      "measuredVersion": "22.1.7",
+      "measuredVersion": "22.1.8",
       "targets": [
         {
           "target": "typescript",
@@ -13146,7 +13136,7 @@
     },
     {
       "package": "@anthropic-ai/sdk",
-      "measuredVersion": "0.124.0",
+      "measuredVersion": "0.125.0",
       "targets": [
         {
           "target": "node-fetch",
@@ -13609,7 +13599,7 @@
     },
     {
       "package": "@babel/node",
-      "measuredVersion": "8.0.1",
+      "measuredVersion": "8.0.5",
       "targets": [
         {
           "target": "kexec",
@@ -13651,7 +13641,7 @@
     },
     {
       "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.54.6",
+      "measuredVersion": "1.54.7",
       "targets": [
         {
           "target": "@cloudflare/workers-utils",
@@ -13765,7 +13755,7 @@
     },
     {
       "package": "@datadog/datadog-ci",
-      "measuredVersion": "5.23.0",
+      "measuredVersion": "5.24.0",
       "targets": [
         {
           "target": "@datadog/mobile-react-native",
@@ -13799,7 +13789,7 @@
     },
     {
       "package": "@datadog/datadog-ci-base",
-      "measuredVersion": "5.23.0",
+      "measuredVersion": "5.24.0",
       "targets": [
         {
           "target": "@datadog/mobile-react-native",
@@ -15939,7 +15929,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.65.0",
+      "measuredVersion": "1.66.0",
       "targets": [
         {
           "target": "@hono/standard-validator",
@@ -16391,7 +16381,7 @@
     },
     {
       "package": "@napi-rs/cli",
-      "measuredVersion": "3.9.0",
+      "measuredVersion": "3.9.1",
       "targets": [
         {
           "target": "@oxc-node/core",
@@ -16545,7 +16535,7 @@
     },
     {
       "package": "@netlify/serverless-functions-api",
-      "measuredVersion": "2.20.0",
+      "measuredVersion": "2.21.2",
       "targets": [
         {
           "target": "@netlify/cache",
@@ -19732,7 +19722,7 @@
     },
     {
       "package": "@pulumi/pulumi",
-      "measuredVersion": "3.261.0",
+      "measuredVersion": "3.262.0",
       "targets": [
         {
           "target": "@microsoft/typescript-etw",
@@ -20585,7 +20575,7 @@
     },
     {
       "package": "@redocly/openapi-core",
-      "measuredVersion": "2.51.2",
+      "measuredVersion": "2.52.0",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20608,7 +20598,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.51.2",
+      "measuredVersion": "2.52.0",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -22655,7 +22645,7 @@
     },
     {
       "package": "@tanstack/react-start-rsc",
-      "measuredVersion": "0.1.50",
+      "measuredVersion": "0.1.51",
       "targets": [
         {
           "target": "vite",
@@ -22742,7 +22732,7 @@
     },
     {
       "package": "@tanstack/start-server-core",
-      "measuredVersion": "1.169.33",
+      "measuredVersion": "1.169.34",
       "targets": [
         {
           "target": "@standard-schema/spec",
@@ -23445,7 +23435,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "10.1.1",
+      "measuredVersion": "11.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -23522,7 +23512,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "9.0.3",
+      "measuredVersion": "10.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -26855,7 +26845,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "64.3.8",
+      "measuredVersion": "64.3.9",
       "targets": [
         {
           "target": "@eslint/core",
@@ -29278,7 +29268,7 @@
     },
     {
       "package": "langsmith",
-      "measuredVersion": "0.10.2",
+      "measuredVersion": "0.10.3",
       "targets": [
         {
           "target": "@jest/globals",
@@ -29926,7 +29916,7 @@
     },
     {
       "package": "miniflare",
-      "measuredVersion": "5.20260908.0-alpha",
+      "measuredVersion": "5.20260910.0-alpha",
       "targets": [
         {
           "target": "@cloudflare/config",
@@ -31009,26 +30999,6 @@
       ]
     },
     {
-      "package": "openclaw",
-      "measuredVersion": "2026.9.3",
-      "targets": [
-        {
-          "target": "esbuild",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "esbuild"
-          ],
-          "files": [
-            "dist/plugins-authoring-command-c1_Sa7WA.mjs"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "openid-client",
       "measuredVersion": "6.8.8",
       "targets": [
@@ -31374,7 +31344,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.51.8",
+      "measuredVersion": "5.52.1",
       "targets": [
         {
           "target": "express",
@@ -31942,7 +31912,7 @@
     },
     {
       "package": "react-native-gesture-handler",
-      "measuredVersion": "3.2.1",
+      "measuredVersion": "3.3.0",
       "targets": [
         {
           "target": "react-native-reanimated",
@@ -32366,7 +32336,7 @@
     },
     {
       "package": "redoc",
-      "measuredVersion": "2.5.3",
+      "measuredVersion": "2.5.4",
       "targets": [
         {
           "target": "call-me-maybe",
@@ -33955,7 +33925,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.15.1",
+      "measuredVersion": "59.16.0",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -34561,7 +34531,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20260910.1",
+      "measuredVersion": "1.20260911.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -34581,7 +34551,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.130.0",
+      "measuredVersion": "4.131.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -34844,7 +34814,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.65.0",
+      "measuredVersion": "1.66.0",
       "target": "undici",
       "specifiers": [
         "undici"
@@ -35597,7 +35567,7 @@
     },
     {
       "package": "react-native-gesture-handler",
-      "measuredVersion": "3.2.1",
+      "measuredVersion": "3.3.0",
       "target": "react-native-reanimated",
       "specifiers": [
         "react-native-reanimated",
@@ -35606,7 +35576,7 @@
     },
     {
       "package": "react-native-gesture-handler",
-      "measuredVersion": "3.2.1",
+      "measuredVersion": "3.3.0",
       "target": "react-native-worklets",
       "specifiers": [
         "react-native-worklets"
@@ -35631,7 +35601,7 @@
     },
     {
       "package": "redoc",
-      "measuredVersion": "2.5.3",
+      "measuredVersion": "2.5.4",
       "target": "call-me-maybe",
       "specifiers": [
         "call-me-maybe"
@@ -35639,7 +35609,7 @@
     },
     {
       "package": "redoc",
-      "measuredVersion": "2.5.3",
+      "measuredVersion": "2.5.4",
       "target": "fast-safe-stringify",
       "specifiers": [
         "fast-safe-stringify"
@@ -35647,7 +35617,7 @@
     },
     {
       "package": "redoc",
-      "measuredVersion": "2.5.3",
+      "measuredVersion": "2.5.4",
       "target": "yaml",
       "specifiers": [
         "yaml"
@@ -35688,7 +35658,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.15.1",
+      "measuredVersion": "59.16.0",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -35696,7 +35666,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.15.1",
+      "measuredVersion": "59.16.0",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -35704,7 +35674,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.15.1",
+      "measuredVersion": "59.16.0",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -35712,7 +35682,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.15.1",
+      "measuredVersion": "59.16.0",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"

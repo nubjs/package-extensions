@@ -1,5 +1,5 @@
-# Generated 2026-09-10 from the 10000 most-downloaded npm packages.
-# 792 packages, 1191 undeclared dependencies.
+# Generated 2026-09-11 from the 10000 most-downloaded npm packages.
+# 791 packages, 1190 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -4497,12 +4497,6 @@ packageExtensions:
       undici: "*"
     peerDependenciesMeta:
       undici:
-        optional: true
-  openclaw@*:
-    peerDependencies:
-      esbuild: "*"
-    peerDependenciesMeta:
-      esbuild:
         optional: true
   openid-client@*:
     peerDependencies:
