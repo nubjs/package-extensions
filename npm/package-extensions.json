@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11",
+ "generated": "2026-09-12",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -13184,7 +13184,7 @@
   },
   {
    "package": "@apollo/client",
-   "measuredVersion": "4.2.12",
+   "measuredVersion": "4.3.0",
    "targets": [
     {
      "target": "relay-runtime",
@@ -13641,7 +13641,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.54.7",
+   "measuredVersion": "1.54.8",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13755,7 +13755,7 @@
   },
   {
    "package": "@datadog/datadog-ci",
-   "measuredVersion": "5.24.0",
+   "measuredVersion": "5.24.1",
    "targets": [
     {
      "target": "@datadog/mobile-react-native",
@@ -13789,7 +13789,7 @@
   },
   {
    "package": "@datadog/datadog-ci-base",
-   "measuredVersion": "5.24.0",
+   "measuredVersion": "5.24.1",
    "targets": [
     {
      "target": "@datadog/mobile-react-native",
@@ -16603,7 +16603,7 @@
   },
   {
    "package": "@next/bundle-analyzer",
-   "measuredVersion": "16.3.4",
+   "measuredVersion": "16.3.5",
    "targets": [
     {
      "target": "next",
@@ -16623,7 +16623,7 @@
   },
   {
    "package": "@next/eslint-plugin-next",
-   "measuredVersion": "16.3.4",
+   "measuredVersion": "16.3.5",
    "targets": [
     {
      "target": "eslint",
@@ -20575,7 +20575,7 @@
   },
   {
    "package": "@redocly/openapi-core",
-   "measuredVersion": "2.52.0",
+   "measuredVersion": "2.52.1",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20598,7 +20598,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.52.0",
+   "measuredVersion": "2.52.1",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -21501,7 +21501,7 @@
   },
   {
    "package": "@stencil/core",
-   "measuredVersion": "4.44.2",
+   "measuredVersion": "4.45.0",
    "targets": [
     {
      "target": "@jest/core",
@@ -25404,7 +25404,7 @@
   },
   {
    "package": "auth0",
-   "measuredVersion": "7.0.0",
+   "measuredVersion": "7.1.0",
    "targets": [
     {
      "target": "undici-types",
@@ -26107,7 +26107,7 @@
   },
   {
    "package": "dd-trace",
-   "measuredVersion": "6.15.0",
+   "measuredVersion": "6.16.0",
    "targets": [
     {
      "target": "@vitest/runner",
@@ -26708,7 +26708,7 @@
   },
   {
    "package": "eslint-config-next",
-   "measuredVersion": "16.3.4",
+   "measuredVersion": "16.3.5",
    "targets": [
     {
      "target": "next",
@@ -27194,7 +27194,7 @@
   },
   {
    "package": "expo-application",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27217,7 +27217,7 @@
   },
   {
    "package": "expo-asset",
-   "measuredVersion": "57.0.16",
+   "measuredVersion": "57.0.17",
    "targets": [
     {
      "target": "@react-native/assets-registry",
@@ -27257,7 +27257,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "57.0.11",
+   "measuredVersion": "57.0.12",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27283,7 +27283,7 @@
   },
   {
    "package": "expo-blur",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27333,7 +27333,7 @@
   },
   {
    "package": "expo-clipboard",
-   "measuredVersion": "57.0.1",
+   "measuredVersion": "57.0.2",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27360,7 +27360,7 @@
   },
   {
    "package": "expo-constants",
-   "measuredVersion": "57.0.17",
+   "measuredVersion": "57.0.18",
    "targets": [
     {
      "target": "expo-manifests",
@@ -27395,7 +27395,7 @@
   },
   {
    "package": "expo-crypto",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27443,7 +27443,7 @@
   },
   {
    "package": "expo-device",
-   "measuredVersion": "57.0.1",
+   "measuredVersion": "57.0.2",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27468,7 +27468,7 @@
   },
   {
    "package": "expo-document-picker",
-   "measuredVersion": "57.0.1",
+   "measuredVersion": "57.0.2",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27491,7 +27491,7 @@
   },
   {
    "package": "expo-eas-client",
-   "measuredVersion": "57.0.3",
+   "measuredVersion": "57.0.4",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27512,7 +27512,7 @@
   },
   {
    "package": "expo-file-system",
-   "measuredVersion": "57.0.6",
+   "measuredVersion": "57.0.7",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27539,7 +27539,7 @@
   },
   {
    "package": "expo-font",
-   "measuredVersion": "57.0.3",
+   "measuredVersion": "57.0.4",
    "targets": [
     {
      "target": "expo-asset",
@@ -27579,7 +27579,7 @@
   },
   {
    "package": "expo-haptics",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27599,7 +27599,7 @@
   },
   {
    "package": "expo-image",
-   "measuredVersion": "57.0.4",
+   "measuredVersion": "57.0.5",
    "targets": [
     {
      "target": "expo-app-metrics",
@@ -27651,7 +27651,7 @@
   },
   {
    "package": "expo-image-manipulator",
-   "measuredVersion": "57.0.16",
+   "measuredVersion": "57.0.17",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27678,7 +27678,7 @@
   },
   {
    "package": "expo-image-picker",
-   "measuredVersion": "57.0.16",
+   "measuredVersion": "57.0.17",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27699,7 +27699,7 @@
   },
   {
    "package": "expo-keep-awake",
-   "measuredVersion": "57.0.1",
+   "measuredVersion": "57.0.2",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27721,7 +27721,7 @@
   },
   {
    "package": "expo-linking",
-   "measuredVersion": "57.0.9",
+   "measuredVersion": "57.0.10",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27744,7 +27744,7 @@
   },
   {
    "package": "expo-localization",
-   "measuredVersion": "57.0.1",
+   "measuredVersion": "57.0.2",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27767,7 +27767,7 @@
   },
   {
    "package": "expo-location",
-   "measuredVersion": "57.0.16",
+   "measuredVersion": "57.0.17",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27794,7 +27794,7 @@
   },
   {
    "package": "expo-notifications",
-   "measuredVersion": "57.0.17",
+   "measuredVersion": "57.0.18",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27821,7 +27821,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "57.0.20",
+   "measuredVersion": "57.0.21",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27857,7 +27857,7 @@
   },
   {
    "package": "expo-secure-store",
-   "measuredVersion": "57.0.3",
+   "measuredVersion": "57.0.4",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27878,7 +27878,7 @@
   },
   {
    "package": "expo-sharing",
-   "measuredVersion": "57.0.18",
+   "measuredVersion": "57.0.19",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27903,7 +27903,7 @@
   },
   {
    "package": "expo-splash-screen",
-   "measuredVersion": "57.0.8",
+   "measuredVersion": "57.0.9",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27923,7 +27923,7 @@
   },
   {
    "package": "expo-system-ui",
-   "measuredVersion": "57.0.3",
+   "measuredVersion": "57.0.4",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27944,7 +27944,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "57.0.21",
+   "measuredVersion": "57.0.22",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27971,7 +27971,7 @@
   },
   {
    "package": "expo-video",
-   "measuredVersion": "57.0.3",
+   "measuredVersion": "57.0.4",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27996,7 +27996,7 @@
   },
   {
    "package": "expo-web-browser",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -29916,7 +29916,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20260910.0-alpha",
+   "measuredVersion": "5.20260911.0-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -30187,7 +30187,7 @@
   },
   {
    "package": "next",
-   "measuredVersion": "16.3.4",
+   "measuredVersion": "16.3.5",
    "targets": [
     {
      "target": "critters",
@@ -30304,7 +30304,7 @@
   },
   {
    "package": "next-intl",
-   "measuredVersion": "4.14.3",
+   "measuredVersion": "4.14.4",
    "targets": [
     {
      "target": "webpack",
@@ -32566,7 +32566,7 @@
   },
   {
    "package": "resend",
-   "measuredVersion": "6.27.0",
+   "measuredVersion": "6.28.0",
    "targets": [
     {
      "target": "react",
@@ -32784,7 +32784,7 @@
   },
   {
    "package": "sass-embedded",
-   "measuredVersion": "1.104.0",
+   "measuredVersion": "1.104.1",
    "targets": [
     {
      "target": "sass",
@@ -34551,7 +34551,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.131.0",
+   "measuredVersion": "4.131.1",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -35132,7 +35132,7 @@
   },
   {
    "package": "expo-application",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35140,7 +35140,7 @@
   },
   {
    "package": "expo-asset",
-   "measuredVersion": "57.0.16",
+   "measuredVersion": "57.0.17",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35148,7 +35148,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "57.0.11",
+   "measuredVersion": "57.0.12",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35156,7 +35156,7 @@
   },
   {
    "package": "expo-blur",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35172,7 +35172,7 @@
   },
   {
    "package": "expo-clipboard",
-   "measuredVersion": "57.0.1",
+   "measuredVersion": "57.0.2",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35180,7 +35180,7 @@
   },
   {
    "package": "expo-constants",
-   "measuredVersion": "57.0.17",
+   "measuredVersion": "57.0.18",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35188,7 +35188,7 @@
   },
   {
    "package": "expo-crypto",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35204,54 +35204,6 @@
   },
   {
    "package": "expo-device",
-   "measuredVersion": "57.0.1",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-document-picker",
-   "measuredVersion": "57.0.1",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-eas-client",
-   "measuredVersion": "57.0.3",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-file-system",
-   "measuredVersion": "57.0.6",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-font",
-   "measuredVersion": "57.0.3",
-   "target": "expo-asset",
-   "specifiers": [
-    "expo-asset"
-   ]
-  },
-  {
-   "package": "expo-font",
-   "measuredVersion": "57.0.3",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-haptics",
    "measuredVersion": "57.0.2",
    "target": "expo-modules-core",
    "specifiers": [
@@ -35259,7 +35211,15 @@
    ]
   },
   {
-   "package": "expo-image",
+   "package": "expo-document-picker",
+   "measuredVersion": "57.0.2",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-eas-client",
    "measuredVersion": "57.0.4",
    "target": "expo-modules-core",
    "specifiers": [
@@ -35267,8 +35227,48 @@
    ]
   },
   {
+   "package": "expo-file-system",
+   "measuredVersion": "57.0.7",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-font",
+   "measuredVersion": "57.0.4",
+   "target": "expo-asset",
+   "specifiers": [
+    "expo-asset"
+   ]
+  },
+  {
+   "package": "expo-font",
+   "measuredVersion": "57.0.4",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-haptics",
+   "measuredVersion": "57.0.3",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-image",
+   "measuredVersion": "57.0.5",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
    "package": "expo-image-manipulator",
-   "measuredVersion": "57.0.16",
+   "measuredVersion": "57.0.17",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core/types",
@@ -35277,46 +35277,6 @@
   },
   {
    "package": "expo-image-picker",
-   "measuredVersion": "57.0.16",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-keep-awake",
-   "measuredVersion": "57.0.1",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-linking",
-   "measuredVersion": "57.0.9",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-localization",
-   "measuredVersion": "57.0.1",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-location",
-   "measuredVersion": "57.0.16",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-notifications",
    "measuredVersion": "57.0.17",
    "target": "expo-modules-core",
    "specifiers": [
@@ -35324,23 +35284,39 @@
    ]
   },
   {
-   "package": "expo-router",
-   "measuredVersion": "57.0.20",
+   "package": "expo-keep-awake",
+   "measuredVersion": "57.0.2",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
    ]
   },
   {
-   "package": "expo-secure-store",
-   "measuredVersion": "57.0.3",
+   "package": "expo-linking",
+   "measuredVersion": "57.0.10",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
    ]
   },
   {
-   "package": "expo-sharing",
+   "package": "expo-localization",
+   "measuredVersion": "57.0.2",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-location",
+   "measuredVersion": "57.0.17",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-notifications",
    "measuredVersion": "57.0.18",
    "target": "expo-modules-core",
    "specifiers": [
@@ -35348,15 +35324,7 @@
    ]
   },
   {
-   "package": "expo-system-ui",
-   "measuredVersion": "57.0.3",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-updates",
+   "package": "expo-router",
    "measuredVersion": "57.0.21",
    "target": "expo-modules-core",
    "specifiers": [
@@ -35364,8 +35332,40 @@
    ]
   },
   {
+   "package": "expo-secure-store",
+   "measuredVersion": "57.0.4",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-sharing",
+   "measuredVersion": "57.0.19",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-system-ui",
+   "measuredVersion": "57.0.4",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
+   "package": "expo-updates",
+   "measuredVersion": "57.0.22",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
    "package": "expo-video",
-   "measuredVersion": "57.0.3",
+   "measuredVersion": "57.0.4",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35373,7 +35373,7 @@
   },
   {
    "package": "expo-web-browser",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -35435,7 +35435,7 @@
   },
   {
    "package": "next",
-   "measuredVersion": "16.3.4",
+   "measuredVersion": "16.3.5",
    "target": "critters",
    "specifiers": [
     "critters"
