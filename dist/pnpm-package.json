@@ -2714,13 +2714,17 @@
       "@promptbook/utils@*": {
         "peerDependencies": {
           "openai": "*",
-          "papaparse": "*"
+          "papaparse": "*",
+          "type-fest": "*"
         },
         "peerDependenciesMeta": {
           "openai": {
             "optional": true
           },
           "papaparse": {
+            "optional": true
+          },
+          "type-fest": {
             "optional": true
           }
         }
@@ -2925,16 +2929,6 @@
             "optional": true
           },
           "puppeteer": {
-            "optional": true
-          }
-        }
-      },
-      "@react-native/debugger-shell@*": {
-        "peerDependencies": {
-          "electron": "*"
-        },
-        "peerDependenciesMeta": {
-          "electron": {
             "optional": true
           }
         }
@@ -3265,16 +3259,6 @@
         },
         "peerDependenciesMeta": {
           "@babel/core": {
-            "optional": true
-          }
-        }
-      },
-      "@sentry/electron@*": {
-        "peerDependencies": {
-          "electron": "*"
-        },
-        "peerDependenciesMeta": {
-          "electron": {
             "optional": true
           }
         }
@@ -4241,16 +4225,6 @@
             "optional": true
           },
           "typescript": {
-            "optional": true
-          }
-        }
-      },
-      "@vscode/emmet-helper@*": {
-        "peerDependencies": {
-          "vscode": "*"
-        },
-        "peerDependenciesMeta": {
-          "vscode": {
             "optional": true
           }
         }
@@ -5228,26 +5202,6 @@
       "echarts-for-react@*": {
         "dependencies": {
           "tslib": "*"
-        }
-      },
-      "electron-log@*": {
-        "peerDependencies": {
-          "electron": "*"
-        },
-        "peerDependenciesMeta": {
-          "electron": {
-            "optional": true
-          }
-        }
-      },
-      "electron-updater@*": {
-        "peerDependencies": {
-          "electron": "*"
-        },
-        "peerDependenciesMeta": {
-          "electron": {
-            "optional": true
-          }
         }
       },
       "elkjs@*": {
@@ -6522,9 +6476,13 @@
       },
       "metro@*": {
         "peerDependencies": {
+          "@babel/runtime": "*",
           "metro-babel-register": "*"
         },
         "peerDependenciesMeta": {
+          "@babel/runtime": {
+            "optional": true
+          },
           "metro-babel-register": {
             "optional": true
           }
@@ -6912,16 +6870,6 @@
           }
         }
       },
-      "node-llama-cpp@*": {
-        "peerDependencies": {
-          "electron": "*"
-        },
-        "peerDependenciesMeta": {
-          "electron": {
-            "optional": true
-          }
-        }
-      },
       "node-pre-gyp@*": {
         "peerDependencies": {
           "node-gyp": "*",
@@ -7105,7 +7053,6 @@
         "peerDependencies": {
           "bufferutil": "*",
           "chromium-bidi": "*",
-          "electron": "*",
           "kerberos": "*",
           "utf-8-validate": "*",
           "zod": "*"
@@ -7115,9 +7062,6 @@
             "optional": true
           },
           "chromium-bidi": {
-            "optional": true
-          },
-          "electron": {
             "optional": true
           },
           "kerberos": {
@@ -8410,16 +8354,6 @@
         },
         "peerDependenciesMeta": {
           "typescript": {
-            "optional": true
-          }
-        }
-      },
-      "vscode-languageclient@*": {
-        "peerDependencies": {
-          "vscode": "*"
-        },
-        "peerDependenciesMeta": {
-          "vscode": {
             "optional": true
           }
         }

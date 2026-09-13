@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-12",
+ "generated": "2026-09-13",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1190,
-   "packages": 660
+   "entries": 1184,
+   "packages": 653
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,25 +28,25 @@
   }
  },
  "totals": {
-  "packages": 791,
-  "selectors": 811,
-  "entries": 1190,
+  "packages": 784,
+  "selectors": 804,
+  "entries": 1184,
   "byClass": {
-   "runtime": 222,
+   "runtime": 216,
    "adapter": 130,
-   "types": 537,
+   "types": 538,
    "deep-path": 0,
-   "guarded": 301
+   "guarded": 300
   },
   "byField": {
    "dependency": 29,
-   "peer": 1161
+   "peer": 1155
   },
   "candidatesForReview": 111,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
-  "withheldDeepPath": 245
+  "withheldDeepPath": 242
  },
  "withheldDeepPath": [
   {
@@ -296,32 +296,12 @@
   },
   {
    "package": "@electron-forge/template-base",
-   "target": "electron",
-   "specifiers": [
-    "electron"
-   ],
-   "files": [
-    "tmpl/index.js"
-   ]
-  },
-  {
-   "package": "@electron-forge/template-base",
    "target": "electron-squirrel-startup",
    "specifiers": [
     "electron-squirrel-startup"
    ],
    "files": [
     "tmpl/index.js"
-   ]
-  },
-  {
-   "package": "@electron-forge/template-webpack-typescript",
-   "target": "electron",
-   "specifiers": [
-    "electron"
-   ],
-   "files": [
-    "tmpl/index.ts"
    ]
   },
   {
@@ -1528,16 +1508,6 @@
    ],
    "files": [
     "ci/vitest-no-worker-init-runner-setup.mjs"
-   ]
-  },
-  {
-   "package": "dd-trace",
-   "target": "electron",
-   "specifiers": [
-    "electron"
-   ],
-   "files": [
-    "packages/datadog-instrumentations/src/electron/preload.js"
    ]
   },
   {
@@ -5682,13 +5652,17 @@
   "@promptbook/utils@*": {
    "peerDependencies": {
     "openai": "*",
-    "papaparse": "*"
+    "papaparse": "*",
+    "type-fest": "*"
    },
    "peerDependenciesMeta": {
     "openai": {
      "optional": true
     },
     "papaparse": {
+     "optional": true
+    },
+    "type-fest": {
      "optional": true
     }
    }
@@ -5893,16 +5867,6 @@
      "optional": true
     },
     "puppeteer": {
-     "optional": true
-    }
-   }
-  },
-  "@react-native/debugger-shell@*": {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
      "optional": true
     }
    }
@@ -6233,16 +6197,6 @@
    },
    "peerDependenciesMeta": {
     "@babel/core": {
-     "optional": true
-    }
-   }
-  },
-  "@sentry/electron@*": {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
      "optional": true
     }
    }
@@ -7209,16 +7163,6 @@
      "optional": true
     },
     "typescript": {
-     "optional": true
-    }
-   }
-  },
-  "@vscode/emmet-helper@*": {
-   "peerDependencies": {
-    "vscode": "*"
-   },
-   "peerDependenciesMeta": {
-    "vscode": {
      "optional": true
     }
    }
@@ -8196,26 +8140,6 @@
   "echarts-for-react@*": {
    "dependencies": {
     "tslib": "*"
-   }
-  },
-  "electron-log@*": {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
-     "optional": true
-    }
-   }
-  },
-  "electron-updater@*": {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
-     "optional": true
-    }
    }
   },
   "elkjs@*": {
@@ -9490,9 +9414,13 @@
   },
   "metro@*": {
    "peerDependencies": {
+    "@babel/runtime": "*",
     "metro-babel-register": "*"
    },
    "peerDependenciesMeta": {
+    "@babel/runtime": {
+     "optional": true
+    },
     "metro-babel-register": {
      "optional": true
     }
@@ -9880,16 +9808,6 @@
     }
    }
   },
-  "node-llama-cpp@*": {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
-     "optional": true
-    }
-   }
-  },
   "node-pre-gyp@*": {
    "peerDependencies": {
     "node-gyp": "*",
@@ -10073,7 +9991,6 @@
    "peerDependencies": {
     "bufferutil": "*",
     "chromium-bidi": "*",
-    "electron": "*",
     "kerberos": "*",
     "utf-8-validate": "*",
     "zod": "*"
@@ -10083,9 +10000,6 @@
      "optional": true
     },
     "chromium-bidi": {
-     "optional": true
-    },
-    "electron": {
      "optional": true
     },
     "kerberos": {
@@ -11378,16 +11292,6 @@
    },
    "peerDependenciesMeta": {
     "typescript": {
-     "optional": true
-    }
-   }
-  },
-  "vscode-languageclient@*": {
-   "peerDependencies": {
-    "vscode": "*"
-   },
-   "peerDependenciesMeta": {
-    "vscode": {
      "optional": true
     }
    }
@@ -15134,7 +15038,7 @@
   },
   {
    "package": "@graphql-codegen/client-preset",
-   "measuredVersion": "6.1.3",
+   "measuredVersion": "6.2.0",
    "targets": [
     {
      "target": "@babel/core",
@@ -19688,7 +19592,7 @@
   },
   {
    "package": "@promptbook/utils",
-   "measuredVersion": "0.114.0-33",
+   "measuredVersion": "0.114.0-35",
    "targets": [
     {
      "target": "openai",
@@ -19717,6 +19621,27 @@
       "esm/src/formats/csv/CsvSettings.d.ts"
      ],
      "fileCount": 1
+    },
+    {
+     "target": "type-fest",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "type-fest"
+     ],
+     "files": [
+      "esm/src/execution/Usage.d.ts",
+      "esm/src/execution/utils/forEachAsync.d.ts",
+      "esm/src/pipeline/PipelineJson/Expectations.d.ts",
+      "esm/src/types/ModelVariant.d.ts",
+      "esm/src/types/ScriptLanguage.d.ts",
+      "esm/src/types/SectionType.d.ts",
+      "esm/src/types/string_reserved_parameter_name_private.d.ts",
+      "esm/src/utils/normalization/orderJson.d.ts"
+     ],
+     "fileCount": 12
     }
    ]
   },
@@ -20238,31 +20163,6 @@
       "dist/third-party/front_end/third_party/puppeteer-replay/puppeteer-replay.js"
      ],
      "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "@react-native/debugger-shell",
-   "measuredVersion": "0.87.1",
-   "targets": [
-    {
-     "target": "electron",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": false,
-     "reason": "target is a framework or tool a consumer installs itself",
-     "specifiers": [
-      "electron"
-     ],
-     "files": [
-      "dist/electron/AppMenu.js",
-      "dist/electron/MainInstanceEntryPoint.js",
-      "dist/electron/SettingsStore.js",
-      "dist/electron/index.js",
-      "dist/electron/preload.js",
-      "dist/node/index.js"
-     ],
-     "fileCount": 6
     }
    ]
   },
@@ -21050,33 +20950,6 @@
       "dist/types/index.d.ts"
      ],
      "fileCount": 2
-    }
-   ]
-  },
-  {
-   "package": "@sentry/electron",
-   "measuredVersion": "7.18.0",
-   "targets": [
-    {
-     "target": "electron",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": false,
-     "reason": "target is a framework or tool a consumer installs itself",
-     "specifiers": [
-      "electron"
-     ],
-     "files": [
-      "esm/main/context.js",
-      "esm/main/electron-normalize.d.ts",
-      "esm/main/electron-normalize.js",
-      "esm/main/integrations/additional-context.js",
-      "esm/main/integrations/browser-window-session.js",
-      "esm/main/integrations/child-process.js",
-      "esm/main/integrations/electron-breadcrumbs.js",
-      "esm/main/integrations/electron-context.js"
-     ],
-     "fileCount": 68
     }
    ]
   },
@@ -23717,27 +23590,6 @@
       "lib/protocol/createSys.d.ts"
      ],
      "fileCount": 7
-    }
-   ]
-  },
-  {
-   "package": "@vscode/emmet-helper",
-   "measuredVersion": "2.11.0",
-   "targets": [
-    {
-     "target": "vscode",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "vscode"
-     ],
-     "files": [
-      "lib/cjs/emmetHelper.js",
-      "lib/esm/emmetHelper.js"
-     ],
-     "fileCount": 2
     }
    ]
   },
@@ -26538,54 +26390,6 @@
    ]
   },
   {
-   "package": "electron-log",
-   "measuredVersion": "5.4.4",
-   "targets": [
-    {
-     "target": "electron",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": false,
-     "reason": "target is a framework or tool a consumer installs itself",
-     "specifiers": [
-      "electron"
-     ],
-     "files": [
-      "src/main/index.js",
-      "src/renderer/electron-log-preload.js"
-     ],
-     "fileCount": 2
-    }
-   ]
-  },
-  {
-   "package": "electron-updater",
-   "measuredVersion": "6.8.9",
-   "targets": [
-    {
-     "target": "electron",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": false,
-     "reason": "target is a framework or tool a consumer installs itself",
-     "specifiers": [
-      "electron"
-     ],
-     "files": [
-      "out/AppUpdater.d.ts",
-      "out/AppUpdater.js",
-      "out/BaseUpdater.js",
-      "out/ElectronAppAdapter.js",
-      "out/MacUpdater.js",
-      "out/NsisUpdater.js",
-      "out/electronHttpExecutor.d.ts",
-      "out/electronHttpExecutor.js"
-     ],
-     "fileCount": 8
-    }
-   ]
-  },
-  {
    "package": "elkjs",
    "measuredVersion": "0.12.0",
    "targets": [
@@ -26845,7 +26649,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "64.3.9",
+   "measuredVersion": "64.3.10",
    "targets": [
     {
      "target": "@eslint/core",
@@ -29653,8 +29457,22 @@
   },
   {
    "package": "metro",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
+    {
+     "target": "@babel/runtime",
+     "class": "guarded",
+     "field": "peer",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+     "specifiers": [
+      "@babel/runtime/package.json"
+     ],
+     "files": [
+      "src/lib/metroSchemeResolver.js"
+     ],
+     "fileCount": 1
+    },
     {
      "target": "metro-babel-register",
      "class": "guarded",
@@ -29676,7 +29494,7 @@
   },
   {
    "package": "metro-babel-transformer",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
     {
      "target": "@babel/types",
@@ -29696,7 +29514,7 @@
   },
   {
    "package": "metro-config",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
     {
      "target": "metro-babel-register",
@@ -29758,7 +29576,7 @@
   },
   {
    "package": "metro-core",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
     {
      "target": "metro",
@@ -29792,7 +29610,7 @@
   },
   {
    "package": "metro-file-map",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
     {
      "target": "metro-config",
@@ -29812,7 +29630,7 @@
   },
   {
    "package": "metro-minify-terser",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
     {
      "target": "metro-transform-worker",
@@ -29832,7 +29650,7 @@
   },
   {
    "package": "metro-resolver",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
     {
      "target": "metro",
@@ -29852,7 +29670,7 @@
   },
   {
    "package": "metro-source-map",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
     {
      "target": "@babel/core",
@@ -29872,7 +29690,7 @@
   },
   {
    "package": "metro-transform-plugins",
-   "measuredVersion": "0.87.0",
+   "measuredVersion": "0.87.1",
    "targets": [
     {
      "target": "@babel/types",
@@ -30683,26 +30501,6 @@
    ]
   },
   {
-   "package": "node-llama-cpp",
-   "measuredVersion": "3.20.0",
-   "targets": [
-    {
-     "target": "electron",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "electron"
-     ],
-     "files": [
-      "dist/bindings/utils/testBindingBinary.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "node-pre-gyp",
    "measuredVersion": "0.17.0",
    "targets": [
@@ -31211,22 +31009,6 @@
       "lib/coreBundle.js"
      ],
      "fileCount": 1
-    },
-    {
-     "target": "electron",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": false,
-     "reason": "target is a framework or tool a consumer installs itself",
-     "specifiers": [
-      "electron/index.js",
-      "electron"
-     ],
-     "files": [
-      "lib/coreBundle.js",
-      "types/types.d.ts"
-     ],
-     "fileCount": 2
     },
     {
      "target": "kerberos",
@@ -32545,7 +32327,7 @@
   },
   {
    "package": "remotion",
-   "measuredVersion": "4.0.523",
+   "measuredVersion": "4.0.524",
    "targets": [
     {
      "target": "zod",
@@ -34298,33 +34080,6 @@
       "index.d.ts"
      ],
      "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "vscode-languageclient",
-   "measuredVersion": "10.1.1",
-   "targets": [
-    {
-     "target": "vscode",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": false,
-     "reason": "require(\"vscode\") is injected by the VS Code extension host, never resolved from node_modules, so no install fixes it. The name is also taken on npm by a deprecated helper, so the registry check and the install probe both pass it.",
-     "specifiers": [
-      "vscode"
-     ],
-     "files": [
-      "lib/common/callHierarchy.d.ts",
-      "lib/common/callHierarchy.js",
-      "lib/common/client.d.ts",
-      "lib/common/client.js",
-      "lib/common/codeAction.d.ts",
-      "lib/common/codeAction.js",
-      "lib/common/codeConverter.d.ts",
-      "lib/common/codeConverter.js"
-     ],
-     "fileCount": 91
     }
    ]
   },

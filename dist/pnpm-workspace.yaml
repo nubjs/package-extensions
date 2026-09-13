@@ -1,5 +1,5 @@
-# Generated 2026-09-12 from the 10000 most-downloaded npm packages.
-# 791 packages, 1190 undeclared dependencies.
+# Generated 2026-09-13 from the 10000 most-downloaded npm packages.
+# 784 packages, 1184 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -1746,10 +1746,13 @@ packageExtensions:
     peerDependencies:
       openai: "*"
       papaparse: "*"
+      type-fest: "*"
     peerDependenciesMeta:
       openai:
         optional: true
       papaparse:
+        optional: true
+      type-fest:
         optional: true
   "@pulumi/pulumi@*":
     peerDependencies:
@@ -1879,12 +1882,6 @@ packageExtensions:
       debug:
         optional: true
       puppeteer:
-        optional: true
-  "@react-native/debugger-shell@*":
-    peerDependencies:
-      electron: "*"
-    peerDependenciesMeta:
-      electron:
         optional: true
   "@react-native/metro-config@*":
     peerDependencies:
@@ -2092,12 +2089,6 @@ packageExtensions:
       "@babel/core": "*"
     peerDependenciesMeta:
       "@babel/core":
-        optional: true
-  "@sentry/electron@*":
-    peerDependencies:
-      electron: "*"
-    peerDependenciesMeta:
-      electron:
         optional: true
   "@sentry/react-native@*":
     peerDependencies:
@@ -2710,12 +2701,6 @@ packageExtensions:
       "@volar/language-service":
         optional: true
       typescript:
-        optional: true
-  "@vscode/emmet-helper@*":
-    peerDependencies:
-      vscode: "*"
-    peerDependenciesMeta:
-      vscode:
         optional: true
   "@vue-macros/common@*":
     peerDependencies:
@@ -3371,18 +3356,6 @@ packageExtensions:
   echarts-for-react@*:
     dependencies:
       tslib: "*"
-  electron-log@*:
-    peerDependencies:
-      electron: "*"
-    peerDependenciesMeta:
-      electron:
-        optional: true
-  electron-updater@*:
-    peerDependencies:
-      electron: "*"
-    peerDependenciesMeta:
-      electron:
-        optional: true
   elkjs@*:
     peerDependencies:
       web-worker: "*"
@@ -4173,8 +4146,11 @@ packageExtensions:
         optional: true
   metro@*:
     peerDependencies:
+      "@babel/runtime": "*"
       metro-babel-register: "*"
     peerDependenciesMeta:
+      "@babel/runtime":
+        optional: true
       metro-babel-register:
         optional: true
   metro-babel-transformer@*:
@@ -4422,12 +4398,6 @@ packageExtensions:
     peerDependenciesMeta:
       node-gyp:
         optional: true
-  node-llama-cpp@*:
-    peerDependencies:
-      electron: "*"
-    peerDependenciesMeta:
-      electron:
-        optional: true
   node-pre-gyp@*:
     peerDependencies:
       node-gyp: "*"
@@ -4549,7 +4519,6 @@ packageExtensions:
     peerDependencies:
       bufferutil: "*"
       chromium-bidi: "*"
-      electron: "*"
       kerberos: "*"
       utf-8-validate: "*"
       zod: "*"
@@ -4557,8 +4526,6 @@ packageExtensions:
       bufferutil:
         optional: true
       chromium-bidi:
-        optional: true
-      electron:
         optional: true
       kerberos:
         optional: true
@@ -5364,12 +5331,6 @@ packageExtensions:
       typescript: "*"
     peerDependenciesMeta:
       typescript:
-        optional: true
-  vscode-languageclient@*:
-    peerDependencies:
-      vscode: "*"
-    peerDependenciesMeta:
-      vscode:
         optional: true
   vue-bundle-renderer@*:
     peerDependencies:

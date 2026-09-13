@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.4 — generated 2026-09-12, do not edit.
-// 791 packages, 1190 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.4 — generated 2026-09-13, do not edit.
+// 784 packages, 1184 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -3322,13 +3322,17 @@ export const packageExtensions = [
   {
    "peerDependencies": {
     "openai": "*",
-    "papaparse": "*"
+    "papaparse": "*",
+    "type-fest": "*"
    },
    "peerDependenciesMeta": {
     "openai": {
      "optional": true
     },
     "papaparse": {
+     "optional": true
+    },
+    "type-fest": {
      "optional": true
     }
    }
@@ -3581,19 +3585,6 @@ export const packageExtensions = [
      "optional": true
     },
     "puppeteer": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@react-native/debugger-shell@*",
-  {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
      "optional": true
     }
    }
@@ -4005,19 +3996,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@babel/core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@sentry/electron@*",
-  {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
      "optional": true
     }
    }
@@ -5215,19 +5193,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@vscode/emmet-helper@*",
-  {
-   "peerDependencies": {
-    "vscode": "*"
-   },
-   "peerDependenciesMeta": {
-    "vscode": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@vue-macros/common@*",
   {
    "peerDependencies": {
@@ -6358,32 +6323,6 @@ export const packageExtensions = [
   {
    "dependencies": {
     "tslib": "*"
-   }
-  }
- ],
- [
-  "electron-log@*",
-  {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "electron-updater@*",
-  {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
-     "optional": true
-    }
    }
   }
  ],
@@ -7994,9 +7933,13 @@ export const packageExtensions = [
   "metro@*",
   {
    "peerDependencies": {
+    "@babel/runtime": "*",
     "metro-babel-register": "*"
    },
    "peerDependenciesMeta": {
+    "@babel/runtime": {
+     "optional": true
+    },
     "metro-babel-register": {
      "optional": true
     }
@@ -8470,19 +8413,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "node-llama-cpp@*",
-  {
-   "peerDependencies": {
-    "electron": "*"
-   },
-   "peerDependenciesMeta": {
-    "electron": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "node-pre-gyp@*",
   {
    "peerDependencies": {
@@ -8703,7 +8633,6 @@ export const packageExtensions = [
    "peerDependencies": {
     "bufferutil": "*",
     "chromium-bidi": "*",
-    "electron": "*",
     "kerberos": "*",
     "utf-8-validate": "*",
     "zod": "*"
@@ -8713,9 +8642,6 @@ export const packageExtensions = [
      "optional": true
     },
     "chromium-bidi": {
-     "optional": true
-    },
-    "electron": {
      "optional": true
     },
     "kerberos": {
@@ -10341,19 +10267,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "typescript": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "vscode-languageclient@*",
-  {
-   "peerDependencies": {
-    "vscode": "*"
-   },
-   "peerDependenciesMeta": {
-    "vscode": {
      "optional": true
     }
    }
