@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-13",
+ "generated": "2026-09-14",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -46,7 +46,7 @@
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
-  "withheldDeepPath": 242
+  "withheldDeepPath": 243
  },
  "withheldDeepPath": [
   {
@@ -2221,6 +2221,16 @@
    ],
    "files": [
     "dist/frontend.js"
+   ]
+  },
+  {
+   "package": "react-native-blob-util",
+   "target": "expo",
+   "specifiers": [
+    "expo/config-plugins"
+   ],
+   "files": [
+    "plugin/src/withCustomCACerts.js"
    ]
   },
   {
@@ -13523,7 +13533,7 @@
   },
   {
    "package": "@base44/vite-plugin",
-   "measuredVersion": "1.0.36",
+   "measuredVersion": "1.0.37",
    "targets": [
     {
      "target": "vite",
@@ -13545,7 +13555,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.54.8",
+   "measuredVersion": "1.54.9",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -16672,7 +16682,7 @@
   },
   {
    "package": "@nuxt/devtools",
-   "measuredVersion": "4.0.0-alpha.18",
+   "measuredVersion": "4.0.0-alpha.19",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16706,7 +16716,7 @@
   },
   {
    "package": "@nuxt/devtools-kit",
-   "measuredVersion": "4.0.0-alpha.18",
+   "measuredVersion": "4.0.0-alpha.19",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -20475,7 +20485,7 @@
   },
   {
    "package": "@redocly/openapi-core",
-   "measuredVersion": "2.52.1",
+   "measuredVersion": "2.53.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20498,7 +20508,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.52.1",
+   "measuredVersion": "2.53.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20733,7 +20743,7 @@
   },
   {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.2.5",
+   "measuredVersion": "2.2.6",
    "targets": [
     {
      "target": "tsx",
@@ -22518,7 +22528,7 @@
   },
   {
    "package": "@tanstack/react-start-rsc",
-   "measuredVersion": "0.1.51",
+   "measuredVersion": "0.1.53",
    "targets": [
     {
      "target": "vite",
@@ -22538,7 +22548,7 @@
   },
   {
    "package": "@tanstack/router-devtools-core",
-   "measuredVersion": "1.168.1",
+   "measuredVersion": "1.168.2",
    "targets": [
     {
      "target": "solid-js",
@@ -22559,7 +22569,7 @@
   },
   {
    "package": "@tanstack/router-plugin",
-   "measuredVersion": "1.168.37",
+   "measuredVersion": "1.168.38",
    "targets": [
     {
      "target": "@tanstack/virtual-file-routes",
@@ -22605,7 +22615,7 @@
   },
   {
    "package": "@tanstack/start-server-core",
-   "measuredVersion": "1.169.34",
+   "measuredVersion": "1.169.35",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -24622,7 +24632,7 @@
   },
   {
    "package": "@walletconnect/utils",
-   "measuredVersion": "2.24.0",
+   "measuredVersion": "2.25.0",
    "targets": [
     {
      "target": "@walletconnect/jsonrpc-types",
@@ -25509,7 +25519,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.4",
+   "measuredVersion": "6.3.6",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -25993,7 +26003,7 @@
   },
   {
    "package": "dependency-cruiser",
-   "measuredVersion": "18.2.0",
+   "measuredVersion": "18.3.0",
    "targets": [
     {
      "target": "typescript",
@@ -26649,7 +26659,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "64.3.10",
+   "measuredVersion": "64.4.0",
    "targets": [
     {
      "target": "@eslint/core",
@@ -29734,7 +29744,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20260911.0-alpha",
+   "measuredVersion": "5.20260911.1-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -30122,7 +30132,7 @@
   },
   {
    "package": "next-intl",
-   "measuredVersion": "4.14.4",
+   "measuredVersion": "4.14.5",
    "targets": [
     {
      "target": "webpack",
@@ -30832,7 +30842,7 @@
   },
   {
    "package": "oxc-minify",
-   "measuredVersion": "0.149.0",
+   "measuredVersion": "0.150.0",
    "targets": [
     {
      "target": "@oxc-minify/binding-wasm32-wasi",
@@ -30854,7 +30864,7 @@
   },
   {
    "package": "oxc-parser",
-   "measuredVersion": "0.149.0",
+   "measuredVersion": "0.150.0",
    "targets": [
     {
      "target": "@oxc-parser/binding-wasm32-wasi",
@@ -30897,7 +30907,7 @@
   },
   {
    "package": "oxc-transform",
-   "measuredVersion": "0.149.0",
+   "measuredVersion": "0.150.0",
    "targets": [
     {
      "target": "@oxc-transform/binding-wasm32-wasi",
@@ -31126,7 +31136,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.52.1",
+   "measuredVersion": "5.52.2",
    "targets": [
     {
      "target": "express",
@@ -31608,7 +31618,7 @@
   },
   {
    "package": "react-i18next",
-   "measuredVersion": "17.0.13",
+   "measuredVersion": "17.0.14",
    "targets": [
     {
      "target": "babel-plugin-macros",
@@ -34286,7 +34296,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260911.1",
+   "measuredVersion": "1.20260914.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -34306,7 +34316,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.131.1",
+   "measuredVersion": "4.131.2",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -35262,7 +35272,7 @@
   },
   {
    "package": "oxc-minify",
-   "measuredVersion": "0.149.0",
+   "measuredVersion": "0.150.0",
    "target": "@oxc-minify/binding-wasm32-wasi",
    "specifiers": [
     "@oxc-minify/binding-wasm32-wasi",
@@ -35271,7 +35281,7 @@
   },
   {
    "package": "oxc-parser",
-   "measuredVersion": "0.149.0",
+   "measuredVersion": "0.150.0",
    "target": "@oxc-parser/binding-wasm32-wasi",
    "specifiers": [
     "@oxc-parser/binding-wasm32-wasi/package.json",
@@ -35280,7 +35290,7 @@
   },
   {
    "package": "oxc-transform",
-   "measuredVersion": "0.149.0",
+   "measuredVersion": "0.150.0",
    "target": "@oxc-transform/binding-wasm32-wasi",
    "specifiers": [
     "@oxc-transform/binding-wasm32-wasi",

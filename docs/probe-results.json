@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13",
+  "generated": "2026-09-14",
   "dataset": "863691ddfb966d51",
   "instrument": {
     "yarn": "4.18.0",
@@ -7,9 +7,9 @@
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 14,
+    "confirmedViaPath": 11,
     "notOnImport": 60,
-    "installFailed": 0,
+    "installFailed": 3,
     "inconclusive": 4
   },
   "results": [
@@ -1181,54 +1181,30 @@
     },
     {
       "package": "oxc-minify",
-      "version": "0.149.0",
+      "version": "0.150.0",
       "expected": [
         "@oxc-minify/binding-wasm32-wasi"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "@oxc-minify/binding-wasm32-wasi"
-      ],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 3
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-minify\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.150.0\u001b[39m: All versions satisfying \"0.150.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-min"
     },
     {
       "package": "oxc-parser",
-      "version": "0.149.0",
+      "version": "0.150.0",
       "expected": [
         "@oxc-parser/binding-wasm32-wasi"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "@oxc-parser/binding-wasm32-wasi"
-      ],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 3
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-parser\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.150.0\u001b[39m: All versions satisfying \"0.150.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-par"
     },
     {
       "package": "oxc-transform",
-      "version": "0.149.0",
+      "version": "0.150.0",
       "expected": [
         "@oxc-transform/binding-wasm32-wasi"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "@oxc-transform/binding-wasm32-wasi"
-      ],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 3
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-transform\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.150.0\u001b[39m: All versions satisfying \"0.150.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-"
     },
     {
       "package": "playwright-core",
@@ -1409,7 +1385,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7328) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-49nuHQ/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7140) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-AB8g5k/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",

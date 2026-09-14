@@ -937,8 +937,8 @@
           "webpack-command"
         ],
         "metaOnly": true,
-        "version": "5.110.3",
-        "why": "latest 5.110.3 is outside <4.44.1"
+        "version": "5.111.0",
+        "why": "latest 5.111.0 is outside <4.44.1"
       },
       {
         "package": "webpack",
@@ -947,8 +947,8 @@
           "webpack-cli"
         ],
         "metaOnly": true,
-        "version": "5.110.3",
-        "why": "latest 5.110.3 is outside <5.0.0-beta.23"
+        "version": "5.111.0",
+        "why": "latest 5.111.0 is outside <5.0.0-beta.23"
       },
       {
         "package": "webpack-dev-server",
