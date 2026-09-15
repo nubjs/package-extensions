@@ -1,5 +1,5 @@
-# Generated 2026-09-14 from the 10000 most-downloaded npm packages.
-# 784 packages, 1184 undeclared dependencies.
+# Generated 2026-09-15 from the 10000 most-downloaded npm packages.
+# 784 packages, 1183 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -5305,12 +5305,9 @@ packageExtensions:
         optional: true
   vitest@*:
     peerDependencies:
-      "@vitest/expect": "*"
       bufferutil: "*"
       utf-8-validate: "*"
     peerDependenciesMeta:
-      "@vitest/expect":
-        optional: true
       bufferutil:
         optional: true
       utf-8-validate:

@@ -8308,14 +8308,10 @@
       },
       "vitest@*": {
         "peerDependencies": {
-          "@vitest/expect": "*",
           "bufferutil": "*",
           "utf-8-validate": "*"
         },
         "peerDependenciesMeta": {
-          "@vitest/expect": {
-            "optional": true
-          },
           "bufferutil": {
             "optional": true
           },

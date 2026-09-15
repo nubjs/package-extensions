@@ -1,14 +1,14 @@
 {
-  "generated": "2026-09-14",
-  "dataset": "863691ddfb966d51",
+  "generated": "2026-09-15",
+  "dataset": "00be97bd7c81d538",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 11,
-    "notOnImport": 60,
+    "confirmedViaPath": 12,
+    "notOnImport": 59,
     "installFailed": 3,
     "inconclusive": 4
   },
@@ -146,7 +146,7 @@
     },
     {
       "package": "@mastra/core",
-      "version": "1.66.0",
+      "version": "1.67.0",
       "expected": [
         "@hono/standard-validator",
         "@standard-community/standard-json",
@@ -157,19 +157,8 @@
         "undici",
         "vitest"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 9,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "zod"
-      ],
-      "byOtherIssuers": [
-        "@ai-sdk/provider-utils -> zod (unprovided peer)",
-        "@mastra/schema-compat -> zod (unprovided peer)"
-      ],
-      "specifiersTried": 35
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.67.0\u001b[39m: All versions satisfying \"1.67.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
     },
     {
       "package": "@newrelic/security-agent",
@@ -1032,21 +1021,13 @@
     },
     {
       "package": "firebase-tools",
-      "version": "15.30.0",
+      "version": "15.30.1",
       "expected": [
         "astro",
         "firebase-functions"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "firebase-functions"
-      ],
-      "citedPathsTried": 9,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 10
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mfirebase-tools\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:15.30.1\u001b[39m: All versions satisfying \"15.30.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mfir"
     },
     {
       "package": "http-call",
@@ -1185,8 +1166,16 @@
       "expected": [
         "@oxc-minify/binding-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-minify\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.150.0\u001b[39m: All versions satisfying \"0.150.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-min"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "@oxc-minify/binding-wasm32-wasi"
+      ],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "oxc-parser",
@@ -1194,8 +1183,16 @@
       "expected": [
         "@oxc-parser/binding-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-parser\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.150.0\u001b[39m: All versions satisfying \"0.150.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-par"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "@oxc-parser/binding-wasm32-wasi"
+      ],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "oxc-transform",
@@ -1203,8 +1200,16 @@
       "expected": [
         "@oxc-transform/binding-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173moxc-transform\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.150.0\u001b[39m: All versions satisfying \"0.150.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173moxc-"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "@oxc-transform/binding-wasm32-wasi"
+      ],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "playwright-core",
@@ -1385,27 +1390,19 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7140) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-AB8g5k/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7409) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-1UnBv0/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
-      "version": "59.16.0",
+      "version": "59.17.0",
       "expected": [
         "@vltpkg/graph",
         "@vltpkg/package-info",
         "@vltpkg/package-json",
         "path-scurry"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "@vltpkg/graph"
-      ],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:59.17.0\u001b[39m: All versions satisfying \"59.17.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m"
     }
   ]
 }
