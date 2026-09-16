@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15",
+  "generated": "2026-09-16",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1183,
-      "packages": 653
+      "entries": 1167,
+      "packages": 649
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,25 +28,25 @@
     }
   },
   "totals": {
-    "packages": 784,
-    "selectors": 804,
-    "entries": 1183,
+    "packages": 780,
+    "selectors": 800,
+    "entries": 1167,
     "byClass": {
-      "runtime": 216,
+      "runtime": 204,
       "adapter": 130,
-      "types": 537,
+      "types": 534,
       "deep-path": 0,
-      "guarded": 300
+      "guarded": 299
     },
     "byField": {
-      "dependency": 29,
-      "peer": 1154
+      "dependency": 28,
+      "peer": 1139
     },
-    "candidatesForReview": 111,
+    "candidatesForReview": 102,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 1,
     "droppedUnresolvedTargets": 0,
-    "withheldDeepPath": 243
+    "withheldDeepPath": 242
   },
   "withheldDeepPath": [
     {
@@ -109,26 +109,6 @@
       ],
       "files": [
         "dist-esm/src/policies/msRestUserAgentPolicy.native.js"
-      ]
-    },
-    {
-      "package": "@azure/functions",
-      "target": "iconv-lite",
-      "specifiers": [
-        "iconv-lite"
-      ],
-      "files": [
-        "dist/azure-functions.min.js"
-      ]
-    },
-    {
-      "package": "@azure/functions",
-      "target": "uuid",
-      "specifiers": [
-        "uuid"
-      ],
-      "files": [
-        "dist/azure-functions.min.js"
       ]
     },
     {
@@ -2301,6 +2281,17 @@
       "target": "@babel/runtime-corejs3",
       "specifiers": [
         "@babel/runtime-corejs3/helpers/extends"
+      ],
+      "files": [
+        "swagger-ui-es-bundle-core.js",
+        "swagger-ui.js"
+      ]
+    },
+    {
+      "package": "swagger-ui-dist",
+      "target": "@tanstack/react-virtual",
+      "specifiers": [
+        "@tanstack/react-virtual"
       ],
       "files": [
         "swagger-ui-es-bundle-core.js",
@@ -6775,56 +6766,6 @@
         }
       }
     },
-    "@tanstack/query-devtools@*": {
-      "peerDependencies": {
-        "@kobalte/core": "*",
-        "@solid-primitives/keyed": "*",
-        "@solid-primitives/resize-observer": "*",
-        "@solid-primitives/storage": "*",
-        "@tanstack/match-sorter-utils": "*",
-        "@tanstack/query-core": "*",
-        "clsx": "*",
-        "goober": "*",
-        "solid-js": "*",
-        "solid-transition-group": "*",
-        "superjson": "*"
-      },
-      "peerDependenciesMeta": {
-        "@kobalte/core": {
-          "optional": true
-        },
-        "@solid-primitives/keyed": {
-          "optional": true
-        },
-        "@solid-primitives/resize-observer": {
-          "optional": true
-        },
-        "@solid-primitives/storage": {
-          "optional": true
-        },
-        "@tanstack/match-sorter-utils": {
-          "optional": true
-        },
-        "@tanstack/query-core": {
-          "optional": true
-        },
-        "clsx": {
-          "optional": true
-        },
-        "goober": {
-          "optional": true
-        },
-        "solid-js": {
-          "optional": true
-        },
-        "solid-transition-group": {
-          "optional": true
-        },
-        "superjson": {
-          "optional": true
-        }
-      }
-    },
     "@tanstack/react-start-rsc@*": {
       "peerDependencies": {
         "vite": "*"
@@ -8269,8 +8210,7 @@
         "@eslint/core": "*",
         "@typescript-eslint/types": "*",
         "jsdoc-type-pratt-parser": "*",
-        "json-schema": "*",
-        "typescript": "*"
+        "json-schema": "*"
       },
       "peerDependenciesMeta": {
         "@eslint/core": {
@@ -8283,9 +8223,6 @@
           "optional": true
         },
         "json-schema": {
-          "optional": true
-        },
-        "typescript": {
           "optional": true
         }
       }
@@ -8334,16 +8271,6 @@
       },
       "peerDependenciesMeta": {
         "typescript": {
-          "optional": true
-        }
-      }
-    },
-    "eslint-plugin-tsdoc@*": {
-      "peerDependencies": {
-        "eslint": "*"
-      },
-      "peerDependenciesMeta": {
-        "eslint": {
           "optional": true
         }
       }
@@ -9898,11 +9825,6 @@
         }
       }
     },
-    "object.hasown@*": {
-      "dependencies": {
-        "call-bind": "*"
-      }
-    },
     "ofetch@*": {
       "peerDependencies": {
         "undici": "*"
@@ -10591,16 +10513,6 @@
         }
       }
     },
-    "rolldown-plugin-dts@*": {
-      "peerDependencies": {
-        "@vue/language-core": "*"
-      },
-      "peerDependenciesMeta": {
-        "@vue/language-core": {
-          "optional": true
-        }
-      }
-    },
     "rollup-plugin-copy@*": {
       "peerDependencies": {
         "rollup": "*"
@@ -11064,13 +10976,9 @@
     },
     "unplugin@*": {
       "peerDependencies": {
-        "@rsbuild/core": "*",
         "bun": "*"
       },
       "peerDependenciesMeta": {
-        "@rsbuild/core": {
-          "optional": true
-        },
         "bun": {
           "optional": true
         }
@@ -12808,7 +12716,7 @@
     },
     {
       "package": "@angular/cdk",
-      "measuredVersion": "22.1.6",
+      "measuredVersion": "22.1.7",
       "targets": [
         {
           "target": "@angular-devkit/core",
@@ -13046,7 +12954,7 @@
     },
     {
       "package": "@anthropic-ai/sdk",
-      "measuredVersion": "0.125.0",
+      "measuredVersion": "0.126.0",
       "targets": [
         {
           "target": "node-fetch",
@@ -13529,7 +13437,7 @@
     },
     {
       "package": "@base44/vite-plugin",
-      "measuredVersion": "1.0.37",
+      "measuredVersion": "1.0.40",
       "targets": [
         {
           "target": "vite",
@@ -13551,7 +13459,7 @@
     },
     {
       "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.54.9",
+      "measuredVersion": "1.54.10",
       "targets": [
         {
           "target": "@cloudflare/workers-utils",
@@ -14988,7 +14896,7 @@
     },
     {
       "package": "@google/gemini-cli",
-      "measuredVersion": "0.59.0",
+      "measuredVersion": "0.60.0",
       "targets": [
         {
           "target": "bufferutil",
@@ -16291,7 +16199,7 @@
     },
     {
       "package": "@napi-rs/cli",
-      "measuredVersion": "3.9.1",
+      "measuredVersion": "3.10.2",
       "targets": [
         {
           "target": "@oxc-node/core",
@@ -16445,7 +16353,7 @@
     },
     {
       "package": "@netlify/serverless-functions-api",
-      "measuredVersion": "2.21.2",
+      "measuredVersion": "2.22.0",
       "targets": [
         {
           "target": "@netlify/cache",
@@ -16678,7 +16586,7 @@
     },
     {
       "package": "@nuxt/devtools",
-      "measuredVersion": "4.0.0-alpha.20",
+      "measuredVersion": "4.0.0-beta.1",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16712,7 +16620,7 @@
     },
     {
       "package": "@nuxt/devtools-kit",
-      "measuredVersion": "4.0.0-alpha.20",
+      "measuredVersion": "4.0.0-beta.1",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -19598,7 +19506,7 @@
     },
     {
       "package": "@promptbook/utils",
-      "measuredVersion": "0.114.0-35",
+      "measuredVersion": "0.114.0-38",
       "targets": [
         {
           "target": "openai",
@@ -19653,7 +19561,7 @@
     },
     {
       "package": "@pulumi/pulumi",
-      "measuredVersion": "3.262.0",
+      "measuredVersion": "3.263.0",
       "targets": [
         {
           "target": "@microsoft/typescript-etw",
@@ -20377,7 +20285,7 @@
     },
     {
       "package": "@react-router/dev",
-      "measuredVersion": "8.3.1",
+      "measuredVersion": "8.4.0",
       "targets": [
         {
           "target": "react",
@@ -20481,7 +20389,7 @@
     },
     {
       "package": "@redocly/openapi-core",
-      "measuredVersion": "2.53.1",
+      "measuredVersion": "2.53.2",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20504,7 +20412,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.53.1",
+      "measuredVersion": "2.53.2",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20739,7 +20647,7 @@
     },
     {
       "package": "@rsbuild/core",
-      "measuredVersion": "2.2.6",
+      "measuredVersion": "2.2.7",
       "targets": [
         {
           "target": "tsx",
@@ -20863,7 +20771,7 @@
     },
     {
       "package": "@scalar/openapi-upgrader",
-      "measuredVersion": "0.2.15",
+      "measuredVersion": "0.2.16",
       "targets": [
         {
           "target": "@scalar/types",
@@ -20886,7 +20794,7 @@
     },
     {
       "package": "@scalar/types",
-      "measuredVersion": "0.19.0",
+      "measuredVersion": "0.20.0",
       "targets": [
         {
           "target": "har-format",
@@ -22346,179 +22254,6 @@
             "bin/intent.js"
           ],
           "fileCount": 1
-        }
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "targets": [
-        {
-          "target": "@kobalte/core",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "@kobalte/core"
-          ],
-          "files": [
-            "src/Devtools.tsx"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "@solid-primitives/keyed",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "@solid-primitives/keyed"
-          ],
-          "files": [
-            "src/Devtools.tsx",
-            "src/Explorer.tsx"
-          ],
-          "fileCount": 2
-        },
-        {
-          "target": "@solid-primitives/resize-observer",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "@solid-primitives/resize-observer"
-          ],
-          "files": [
-            "src/Devtools.tsx"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "@solid-primitives/storage",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "@solid-primitives/storage"
-          ],
-          "files": [
-            "src/DevtoolsComponent.tsx",
-            "src/DevtoolsPanelComponent.tsx"
-          ],
-          "fileCount": 2
-        },
-        {
-          "target": "@tanstack/match-sorter-utils",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "@tanstack/match-sorter-utils"
-          ],
-          "files": [
-            "src/Devtools.tsx"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "@tanstack/query-core",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@tanstack/query-core"
-          ],
-          "files": [
-            "build/index.d.ts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "clsx",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "clsx"
-          ],
-          "files": [
-            "src/Devtools.tsx",
-            "src/Explorer.tsx"
-          ],
-          "fileCount": 2
-        },
-        {
-          "target": "goober",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "goober"
-          ],
-          "files": [
-            "src/Devtools.tsx",
-            "src/Explorer.tsx"
-          ],
-          "fileCount": 2
-        },
-        {
-          "target": "solid-js",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "target is a framework or tool a consumer installs itself",
-          "specifiers": [
-            "solid-js",
-            "solid-js/web"
-          ],
-          "files": [
-            "src/Devtools.tsx",
-            "src/DevtoolsComponent.tsx",
-            "src/DevtoolsPanelComponent.tsx",
-            "src/Explorer.tsx",
-            "src/TanstackQueryDevtools.tsx",
-            "src/TanstackQueryDevtoolsPanel.tsx",
-            "src/contexts/PiPContext.tsx",
-            "src/contexts/QueryDevtoolsContext.ts"
-          ],
-          "fileCount": 11
-        },
-        {
-          "target": "solid-transition-group",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "solid-transition-group"
-          ],
-          "files": [
-            "src/Devtools.tsx"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "superjson",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "superjson"
-          ],
-          "files": [
-            "src/Explorer.tsx",
-            "src/utils.tsx"
-          ],
-          "fileCount": 2
         }
       ]
     },
@@ -24735,7 +24470,7 @@
     },
     {
       "package": "ag-grid-enterprise",
-      "measuredVersion": "36.1.0",
+      "measuredVersion": "36.2.0",
       "targets": [
         {
           "target": "ag-charts-types",
@@ -25394,7 +25129,7 @@
     },
     {
       "package": "babel-preset-expo",
-      "measuredVersion": "57.0.11",
+      "measuredVersion": "57.0.12",
       "targets": [
         {
           "target": "@babel/core",
@@ -25786,7 +25521,7 @@
     },
     {
       "package": "cypress",
-      "measuredVersion": "16.0.0",
+      "measuredVersion": "16.1.0",
       "targets": [
         {
           "target": "@angular/common",
@@ -26655,7 +26390,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "64.5.0",
+      "measuredVersion": "64.5.1",
       "targets": [
         {
           "target": "@eslint/core",
@@ -26710,20 +26445,6 @@
           ],
           "files": [
             "dist/jsdocUtils.d.ts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "typescript",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "src/rules/noUnnecessaryTypeAssertion.js"
           ],
           "fileCount": 1
         }
@@ -26839,26 +26560,6 @@
           ],
           "files": [
             "lib/utils/ts-utils/index.js"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
-      "package": "eslint-plugin-tsdoc",
-      "measuredVersion": "0.5.2",
-      "targets": [
-        {
-          "target": "eslint",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "eslint"
-          ],
-          "files": [
-            "lib/index.d.ts"
           ],
           "fileCount": 1
         }
@@ -27116,7 +26817,7 @@
     },
     {
       "package": "expo-camera",
-      "measuredVersion": "57.0.4",
+      "measuredVersion": "57.0.5",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -27461,7 +27162,7 @@
     },
     {
       "package": "expo-image-manipulator",
-      "measuredVersion": "57.0.17",
+      "measuredVersion": "57.0.18",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -27488,7 +27189,7 @@
     },
     {
       "package": "expo-image-picker",
-      "measuredVersion": "57.0.17",
+      "measuredVersion": "57.0.18",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -27577,7 +27278,7 @@
     },
     {
       "package": "expo-location",
-      "measuredVersion": "57.0.17",
+      "measuredVersion": "57.0.18",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -27604,7 +27305,7 @@
     },
     {
       "package": "expo-notifications",
-      "measuredVersion": "57.0.18",
+      "measuredVersion": "57.0.19",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -27688,7 +27389,7 @@
     },
     {
       "package": "expo-sharing",
-      "measuredVersion": "57.0.19",
+      "measuredVersion": "57.0.20",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -29740,7 +29441,7 @@
     },
     {
       "package": "miniflare",
-      "measuredVersion": "5.20260911.1-alpha",
+      "measuredVersion": "5.20260915.0-alpha",
       "targets": [
         {
           "target": "@cloudflare/config",
@@ -30761,26 +30462,6 @@
       ]
     },
     {
-      "package": "object.hasown",
-      "measuredVersion": "1.1.4",
-      "targets": [
-        {
-          "target": "call-bind",
-          "class": "runtime",
-          "field": "dependency",
-          "candidate": false,
-          "reason": "probe 1.1.4: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access call-bind\"",
-          "specifiers": [
-            "call-bind"
-          ],
-          "files": [
-            "index.js"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "ofetch",
       "measuredVersion": "1.5.1",
       "targets": [
@@ -31132,7 +30813,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.52.3",
+      "measuredVersion": "5.52.4",
       "targets": [
         {
           "target": "express",
@@ -32332,7 +32013,7 @@
     },
     {
       "package": "remotion",
-      "measuredVersion": "4.0.524",
+      "measuredVersion": "4.0.525",
       "targets": [
         {
           "target": "zod",
@@ -32353,7 +32034,7 @@
     },
     {
       "package": "resend",
-      "measuredVersion": "6.28.0",
+      "measuredVersion": "6.28.1",
       "targets": [
         {
           "target": "react",
@@ -32408,27 +32089,6 @@
             "index.d.ts"
           ],
           "fileCount": 1
-        }
-      ]
-    },
-    {
-      "package": "rolldown-plugin-dts",
-      "measuredVersion": "0.28.5",
-      "targets": [
-        {
-          "target": "@vue/language-core",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "target is a framework or tool a consumer installs itself",
-          "specifiers": [
-            "@vue/language-core"
-          ],
-          "files": [
-            "dist/index.d.mts",
-            "dist/index.mjs"
-          ],
-          "fileCount": 2
         }
       ]
     },
@@ -33494,22 +33154,8 @@
     },
     {
       "package": "unplugin",
-      "measuredVersion": "3.3.0",
+      "measuredVersion": "3.4.0",
       "targets": [
-        {
-          "target": "@rsbuild/core",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@rsbuild/core"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
         {
           "target": "bun",
           "class": "types",
@@ -33712,7 +33358,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.17.0",
+      "measuredVersion": "59.19.0",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -34277,7 +33923,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20260915.1",
+      "measuredVersion": "1.20260916.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -34297,7 +33943,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.131.2",
+      "measuredVersion": "4.132.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -34747,78 +34393,6 @@
       ]
     },
     {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "@kobalte/core",
-      "specifiers": [
-        "@kobalte/core"
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "@solid-primitives/keyed",
-      "specifiers": [
-        "@solid-primitives/keyed"
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "@solid-primitives/resize-observer",
-      "specifiers": [
-        "@solid-primitives/resize-observer"
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "@solid-primitives/storage",
-      "specifiers": [
-        "@solid-primitives/storage"
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "@tanstack/match-sorter-utils",
-      "specifiers": [
-        "@tanstack/match-sorter-utils"
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "clsx",
-      "specifiers": [
-        "clsx"
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "goober",
-      "specifiers": [
-        "goober"
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "solid-transition-group",
-      "specifiers": [
-        "solid-transition-group"
-      ]
-    },
-    {
-      "package": "@tanstack/query-devtools",
-      "measuredVersion": "5.102.8",
-      "target": "superjson",
-      "specifiers": [
-        "superjson"
-      ]
-    },
-    {
       "package": "domino",
       "measuredVersion": "2.1.8",
       "target": "parserlib",
@@ -34910,7 +34484,7 @@
     },
     {
       "package": "expo-camera",
-      "measuredVersion": "57.0.4",
+      "measuredVersion": "57.0.5",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -35014,7 +34588,7 @@
     },
     {
       "package": "expo-image-manipulator",
-      "measuredVersion": "57.0.17",
+      "measuredVersion": "57.0.18",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core/types",
@@ -35023,7 +34597,7 @@
     },
     {
       "package": "expo-image-picker",
-      "measuredVersion": "57.0.17",
+      "measuredVersion": "57.0.18",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -35055,7 +34629,7 @@
     },
     {
       "package": "expo-location",
-      "measuredVersion": "57.0.17",
+      "measuredVersion": "57.0.18",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -35063,7 +34637,7 @@
     },
     {
       "package": "expo-notifications",
-      "measuredVersion": "57.0.18",
+      "measuredVersion": "57.0.19",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -35087,7 +34661,7 @@
     },
     {
       "package": "expo-sharing",
-      "measuredVersion": "57.0.19",
+      "measuredVersion": "57.0.20",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -35404,7 +34978,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.17.0",
+      "measuredVersion": "59.19.0",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -35412,7 +34986,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.17.0",
+      "measuredVersion": "59.19.0",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -35420,7 +34994,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.17.0",
+      "measuredVersion": "59.19.0",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -35428,7 +35002,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.17.0",
+      "measuredVersion": "59.19.0",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"

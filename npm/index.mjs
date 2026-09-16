@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.5 — generated 2026-09-15, do not edit.
-// 784 packages, 1183 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.6 — generated 2026-09-16, do not edit.
+// 780 packages, 1167 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -4692,59 +4692,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@tanstack/query-devtools@*",
-  {
-   "peerDependencies": {
-    "@kobalte/core": "*",
-    "@solid-primitives/keyed": "*",
-    "@solid-primitives/resize-observer": "*",
-    "@solid-primitives/storage": "*",
-    "@tanstack/match-sorter-utils": "*",
-    "@tanstack/query-core": "*",
-    "clsx": "*",
-    "goober": "*",
-    "solid-js": "*",
-    "solid-transition-group": "*",
-    "superjson": "*"
-   },
-   "peerDependenciesMeta": {
-    "@kobalte/core": {
-     "optional": true
-    },
-    "@solid-primitives/keyed": {
-     "optional": true
-    },
-    "@solid-primitives/resize-observer": {
-     "optional": true
-    },
-    "@solid-primitives/storage": {
-     "optional": true
-    },
-    "@tanstack/match-sorter-utils": {
-     "optional": true
-    },
-    "@tanstack/query-core": {
-     "optional": true
-    },
-    "clsx": {
-     "optional": true
-    },
-    "goober": {
-     "optional": true
-    },
-    "solid-js": {
-     "optional": true
-    },
-    "solid-transition-group": {
-     "optional": true
-    },
-    "superjson": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@tanstack/react-start-rsc@*",
   {
    "peerDependencies": {
@@ -6481,8 +6428,7 @@ export const packageExtensions = [
     "@eslint/core": "*",
     "@typescript-eslint/types": "*",
     "jsdoc-type-pratt-parser": "*",
-    "json-schema": "*",
-    "typescript": "*"
+    "json-schema": "*"
    },
    "peerDependenciesMeta": {
     "@eslint/core": {
@@ -6495,9 +6441,6 @@ export const packageExtensions = [
      "optional": true
     },
     "json-schema": {
-     "optional": true
-    },
-    "typescript": {
      "optional": true
     }
    }
@@ -6558,19 +6501,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "typescript": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "eslint-plugin-tsdoc@*",
-  {
-   "peerDependencies": {
-    "eslint": "*"
-   },
-   "peerDependenciesMeta": {
-    "eslint": {
      "optional": true
     }
    }
@@ -8499,14 +8429,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "object.hasown@*",
-  {
-   "dependencies": {
-    "call-bind": "*"
-   }
-  }
- ],
- [
   "ofetch@*",
   {
    "peerDependencies": {
@@ -9375,19 +9297,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "rolldown-plugin-dts@*",
-  {
-   "peerDependencies": {
-    "@vue/language-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "@vue/language-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "rollup-plugin-copy@*",
   {
    "peerDependencies": {
@@ -9978,13 +9887,9 @@ export const packageExtensions = [
   "unplugin@*",
   {
    "peerDependencies": {
-    "@rsbuild/core": "*",
     "bun": "*"
    },
    "peerDependenciesMeta": {
-    "@rsbuild/core": {
-     "optional": true
-    },
     "bun": {
      "optional": true
     }

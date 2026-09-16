@@ -782,8 +782,8 @@
           "duplexify"
         ],
         "metaOnly": false,
-        "version": "5.15.2",
-        "why": "latest 5.15.2 is outside <4.2.7"
+        "version": "5.16.0",
+        "why": "latest 5.16.0 is outside <4.2.7"
       },
       {
         "package": "consolidate",

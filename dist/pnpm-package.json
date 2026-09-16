@@ -3827,56 +3827,6 @@
           }
         }
       },
-      "@tanstack/query-devtools@*": {
-        "peerDependencies": {
-          "@kobalte/core": "*",
-          "@solid-primitives/keyed": "*",
-          "@solid-primitives/resize-observer": "*",
-          "@solid-primitives/storage": "*",
-          "@tanstack/match-sorter-utils": "*",
-          "@tanstack/query-core": "*",
-          "clsx": "*",
-          "goober": "*",
-          "solid-js": "*",
-          "solid-transition-group": "*",
-          "superjson": "*"
-        },
-        "peerDependenciesMeta": {
-          "@kobalte/core": {
-            "optional": true
-          },
-          "@solid-primitives/keyed": {
-            "optional": true
-          },
-          "@solid-primitives/resize-observer": {
-            "optional": true
-          },
-          "@solid-primitives/storage": {
-            "optional": true
-          },
-          "@tanstack/match-sorter-utils": {
-            "optional": true
-          },
-          "@tanstack/query-core": {
-            "optional": true
-          },
-          "clsx": {
-            "optional": true
-          },
-          "goober": {
-            "optional": true
-          },
-          "solid-js": {
-            "optional": true
-          },
-          "solid-transition-group": {
-            "optional": true
-          },
-          "superjson": {
-            "optional": true
-          }
-        }
-      },
       "@tanstack/react-start-rsc@*": {
         "peerDependencies": {
           "vite": "*"
@@ -5321,8 +5271,7 @@
           "@eslint/core": "*",
           "@typescript-eslint/types": "*",
           "jsdoc-type-pratt-parser": "*",
-          "json-schema": "*",
-          "typescript": "*"
+          "json-schema": "*"
         },
         "peerDependenciesMeta": {
           "@eslint/core": {
@@ -5335,9 +5284,6 @@
             "optional": true
           },
           "json-schema": {
-            "optional": true
-          },
-          "typescript": {
             "optional": true
           }
         }
@@ -5386,16 +5332,6 @@
         },
         "peerDependenciesMeta": {
           "typescript": {
-            "optional": true
-          }
-        }
-      },
-      "eslint-plugin-tsdoc@*": {
-        "peerDependencies": {
-          "eslint": "*"
-        },
-        "peerDependenciesMeta": {
-          "eslint": {
             "optional": true
           }
         }
@@ -6950,11 +6886,6 @@
           }
         }
       },
-      "object.hasown@*": {
-        "dependencies": {
-          "call-bind": "*"
-        }
-      },
       "ofetch@*": {
         "peerDependencies": {
           "undici": "*"
@@ -7643,16 +7574,6 @@
           }
         }
       },
-      "rolldown-plugin-dts@*": {
-        "peerDependencies": {
-          "@vue/language-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "@vue/language-core": {
-            "optional": true
-          }
-        }
-      },
       "rollup-plugin-copy@*": {
         "peerDependencies": {
           "rollup": "*"
@@ -8116,13 +8037,9 @@
       },
       "unplugin@*": {
         "peerDependencies": {
-          "@rsbuild/core": "*",
           "bun": "*"
         },
         "peerDependenciesMeta": {
-          "@rsbuild/core": {
-            "optional": true
-          },
           "bun": {
             "optional": true
           }

@@ -1,5 +1,5 @@
-# Generated 2026-09-15 from the 10000 most-downloaded npm packages.
-# 784 packages, 1183 undeclared dependencies.
+# Generated 2026-09-16 from the 10000 most-downloaded npm packages.
+# 780 packages, 1167 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -2454,42 +2454,6 @@ packageExtensions:
     peerDependenciesMeta:
       "@tanstack/intent":
         optional: true
-  "@tanstack/query-devtools@*":
-    peerDependencies:
-      "@kobalte/core": "*"
-      "@solid-primitives/keyed": "*"
-      "@solid-primitives/resize-observer": "*"
-      "@solid-primitives/storage": "*"
-      "@tanstack/match-sorter-utils": "*"
-      "@tanstack/query-core": "*"
-      clsx: "*"
-      goober: "*"
-      solid-js: "*"
-      solid-transition-group: "*"
-      superjson: "*"
-    peerDependenciesMeta:
-      "@kobalte/core":
-        optional: true
-      "@solid-primitives/keyed":
-        optional: true
-      "@solid-primitives/resize-observer":
-        optional: true
-      "@solid-primitives/storage":
-        optional: true
-      "@tanstack/match-sorter-utils":
-        optional: true
-      "@tanstack/query-core":
-        optional: true
-      clsx:
-        optional: true
-      goober:
-        optional: true
-      solid-js:
-        optional: true
-      solid-transition-group:
-        optional: true
-      superjson:
-        optional: true
   "@tanstack/react-start-rsc@*":
     peerDependencies:
       vite: "*"
@@ -3434,7 +3398,6 @@ packageExtensions:
       "@typescript-eslint/types": "*"
       jsdoc-type-pratt-parser: "*"
       json-schema: "*"
-      typescript: "*"
     peerDependenciesMeta:
       "@eslint/core":
         optional: true
@@ -3443,8 +3406,6 @@ packageExtensions:
       jsdoc-type-pratt-parser:
         optional: true
       json-schema:
-        optional: true
-      typescript:
         optional: true
   eslint-plugin-only-warn@*:
     peerDependencies:
@@ -3475,12 +3436,6 @@ packageExtensions:
       typescript: "*"
     peerDependenciesMeta:
       typescript:
-        optional: true
-  eslint-plugin-tsdoc@*:
-    peerDependencies:
-      eslint: "*"
-    peerDependenciesMeta:
-      eslint:
         optional: true
   eslint-plugin-vue@*:
     peerDependencies:
@@ -4459,9 +4414,6 @@ packageExtensions:
         optional: true
       typescript:
         optional: true
-  object.hasown@*:
-    dependencies:
-      call-bind: "*"
   ofetch@*:
     peerDependencies:
       undici: "*"
@@ -4889,12 +4841,6 @@ packageExtensions:
     peerDependenciesMeta:
       request:
         optional: true
-  rolldown-plugin-dts@*:
-    peerDependencies:
-      "@vue/language-core": "*"
-    peerDependenciesMeta:
-      "@vue/language-core":
-        optional: true
   rollup-plugin-copy@*:
     peerDependencies:
       rollup: "*"
@@ -5182,11 +5128,8 @@ packageExtensions:
         optional: true
   unplugin@*:
     peerDependencies:
-      "@rsbuild/core": "*"
       bun: "*"
     peerDependenciesMeta:
-      "@rsbuild/core":
-        optional: true
       bun:
         optional: true
   unplugin-vue-router@*:
