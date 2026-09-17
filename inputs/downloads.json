@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T11:53:49.206Z",
+  "generatedAt": "2026-09-17T11:57:20.935Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-09-05",
   "end": "2026-09-11",
@@ -729,7 +729,6 @@
     "tsconfig-paths-webpack-plugin": 12455959,
     "tuf-js": 7719066,
     "typed-array-byte-length": 59858960,
-    "typed-array-byte-offset": 59898356,
     "typedoc-plugin-markdown": 2327323,
     "typescript-json-schema": 521076,
     "typescript-language-server": 994810,

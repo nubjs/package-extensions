@@ -1,5 +1,5 @@
-# Generated 2026-09-16 from the 10000 most-downloaded npm packages.
-# 780 packages, 1167 undeclared dependencies.
+# Generated 2026-09-17 from the 10000 most-downloaded npm packages.
+# 779 packages, 1166 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -5078,12 +5078,6 @@ packageExtensions:
   typed-array-byte-length@*:
     dependencies:
       available-typed-arrays: "*"
-  typed-array-byte-offset@*:
-    peerDependencies:
-      possible-typed-array-names: "*"
-    peerDependenciesMeta:
-      possible-typed-array-names:
-        optional: true
   typedoc-plugin-markdown@*:
     peerDependencies:
       prettier: "*"

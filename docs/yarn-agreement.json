@@ -711,7 +711,7 @@
           "react-dom"
         ],
         "metaOnly": false,
-        "version": "4.7.1",
+        "version": "4.7.2",
         "why": "the package now declares every target"
       },
       {
@@ -1017,7 +1017,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "11.4.10",
+        "version": "11.4.12",
         "why": "the package now declares every target"
       },
       {

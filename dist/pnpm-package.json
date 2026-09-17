@@ -7956,16 +7956,6 @@
           "available-typed-arrays": "*"
         }
       },
-      "typed-array-byte-offset@*": {
-        "peerDependencies": {
-          "possible-typed-array-names": "*"
-        },
-        "peerDependenciesMeta": {
-          "possible-typed-array-names": {
-            "optional": true
-          }
-        }
-      },
       "typedoc-plugin-markdown@*": {
         "peerDependencies": {
           "prettier": "*"

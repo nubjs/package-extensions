@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16",
+ "generated": "2026-09-17",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1167,
-   "packages": 649
+   "entries": 1166,
+   "packages": 648
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
   }
  },
  "totals": {
-  "packages": 780,
-  "selectors": 800,
-  "entries": 1167,
+  "packages": 779,
+  "selectors": 799,
+  "entries": 1166,
   "byClass": {
    "runtime": 204,
-   "adapter": 130,
-   "types": 534,
+   "adapter": 131,
+   "types": 532,
    "deep-path": 0,
    "guarded": 299
   },
   "byField": {
    "dependency": 28,
-   "peer": 1139
+   "peer": 1138
   },
   "candidatesForReview": 102,
   "droppedUnpublishedTargets": 202,
@@ -10895,16 +10895,6 @@
     "available-typed-arrays": "*"
    }
   },
-  "typed-array-byte-offset@*": {
-   "peerDependencies": {
-    "possible-typed-array-names": "*"
-   },
-   "peerDependenciesMeta": {
-    "possible-typed-array-names": {
-     "optional": true
-    }
-   }
-  },
   "typedoc-plugin-markdown@*": {
    "peerDependencies": {
     "prettier": "*"
@@ -12845,7 +12835,7 @@
   },
   {
    "package": "@angular/common",
-   "measuredVersion": "22.1.6",
+   "measuredVersion": "22.1.7",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -12866,7 +12856,7 @@
   },
   {
    "package": "@angular/language-service",
-   "measuredVersion": "22.1.6",
+   "measuredVersion": "22.1.7",
    "targets": [
     {
      "target": "@angular/compiler",
@@ -12933,7 +12923,7 @@
   },
   {
    "package": "@angular/router",
-   "measuredVersion": "22.1.6",
+   "measuredVersion": "22.1.7",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -13097,7 +13087,7 @@
   },
   {
    "package": "@astrojs/language-server",
-   "measuredVersion": "2.16.16",
+   "measuredVersion": "2.17.0",
    "targets": [
     {
      "target": "typescript",
@@ -13166,7 +13156,7 @@
   },
   {
    "package": "@astrojs/react",
-   "measuredVersion": "6.0.5",
+   "measuredVersion": "6.0.6",
    "targets": [
     {
      "target": "astro",
@@ -13459,7 +13449,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.54.10",
+   "measuredVersion": "1.54.11",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -14294,7 +14284,7 @@
   },
   {
    "package": "@fastify/static",
-   "measuredVersion": "10.1.3",
+   "measuredVersion": "10.1.4",
    "targets": [
     {
      "target": "fastify",
@@ -16199,7 +16189,7 @@
   },
   {
    "package": "@napi-rs/cli",
-   "measuredVersion": "3.10.2",
+   "measuredVersion": "3.10.3",
    "targets": [
     {
      "target": "@oxc-node/core",
@@ -16301,7 +16291,7 @@
   },
   {
    "package": "@nestjs/graphql",
-   "measuredVersion": "14.0.0",
+   "measuredVersion": "14.0.1",
    "targets": [
     {
      "target": "typescript",
@@ -16315,12 +16305,13 @@
      "files": [
       "dist/plugin/compiler-plugin.d.ts",
       "dist/plugin/utils/ast-utils.js",
+      "dist/plugin/utils/module-format.util.js",
       "dist/plugin/utils/plugin-utils.js",
       "dist/plugin/visitors/model-class.visitor.js",
       "dist/plugin/visitors/readonly.visitor.d.ts",
       "dist/plugin/visitors/readonly.visitor.js"
      ],
-     "fileCount": 6
+     "fileCount": 7
     }
    ]
   },
@@ -16353,7 +16344,7 @@
   },
   {
    "package": "@netlify/serverless-functions-api",
-   "measuredVersion": "2.22.0",
+   "measuredVersion": "2.23.0",
    "targets": [
     {
      "target": "@netlify/cache",
@@ -19506,7 +19497,7 @@
   },
   {
    "package": "@promptbook/utils",
-   "measuredVersion": "0.114.0-38",
+   "measuredVersion": "0.114.0-39",
    "targets": [
     {
      "target": "openai",
@@ -20389,7 +20380,7 @@
   },
   {
    "package": "@redocly/openapi-core",
-   "measuredVersion": "2.53.2",
+   "measuredVersion": "2.53.3",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20412,7 +20403,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.53.2",
+   "measuredVersion": "2.53.3",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20452,7 +20443,7 @@
   },
   {
    "package": "@reown/appkit",
-   "measuredVersion": "1.8.23",
+   "measuredVersion": "1.8.24",
    "targets": [
     {
      "target": "@reown/appkit-siwe",
@@ -20520,7 +20511,7 @@
   },
   {
    "package": "@reown/appkit-controllers",
-   "measuredVersion": "1.8.23",
+   "measuredVersion": "1.8.24",
    "targets": [
     {
      "target": "@walletconnect/types",
@@ -20605,7 +20596,7 @@
   },
   {
    "package": "@rjsf/utils",
-   "measuredVersion": "6.10.0",
+   "measuredVersion": "6.10.1",
    "targets": [
     {
      "target": "json-schema",
@@ -20627,7 +20618,7 @@
   },
   {
    "package": "@rolldown/binding-wasm32-wasi",
-   "measuredVersion": "1.2.8",
+   "measuredVersion": "1.2.9",
    "targets": [
     {
      "target": "@oxc-project/types",
@@ -20869,7 +20860,7 @@
   },
   {
    "package": "@sentry/react-native",
-   "measuredVersion": "8.26.0",
+   "measuredVersion": "8.27.0",
    "targets": [
     {
      "target": "@expo/config",
@@ -21024,7 +21015,7 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "10.74.0",
+   "measuredVersion": "10.75.0",
    "targets": [
     {
      "target": "@opentelemetry/sdk-trace-base",
@@ -22259,7 +22250,7 @@
   },
   {
    "package": "@tanstack/react-start-rsc",
-   "measuredVersion": "0.1.53",
+   "measuredVersion": "0.1.55",
    "targets": [
     {
      "target": "vite",
@@ -22300,7 +22291,7 @@
   },
   {
    "package": "@tanstack/router-plugin",
-   "measuredVersion": "1.168.38",
+   "measuredVersion": "1.168.40",
    "targets": [
     {
      "target": "@tanstack/virtual-file-routes",
@@ -22346,7 +22337,7 @@
   },
   {
    "package": "@tanstack/start-server-core",
-   "measuredVersion": "1.169.35",
+   "measuredVersion": "1.169.37",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -22499,7 +22490,7 @@
   },
   {
    "package": "@trpc/server",
-   "measuredVersion": "11.18.0",
+   "measuredVersion": "11.19.0",
    "targets": [
     {
      "target": "@tanstack/intent",
@@ -22531,19 +22522,21 @@
     },
     {
      "target": "next",
-     "class": "types",
+     "class": "adapter",
      "field": "peer",
      "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "reason": "adapter class — the consumer picked and installed the backend",
      "specifiers": [
       "next/navigation",
       "next"
      ],
      "files": [
+      "dist/adapters/next-app-dir.cjs",
       "dist/adapters/next-app-dir.d.mts",
+      "dist/adapters/next-app-dir.mjs",
       "dist/adapters/next.d.mts"
      ],
-     "fileCount": 2
+     "fileCount": 4
     },
     {
      "target": "ws",
@@ -23398,7 +23391,7 @@
   },
   {
    "package": "@vue/compiler-core",
-   "measuredVersion": "3.5.42",
+   "measuredVersion": "3.5.43",
    "targets": [
     {
      "target": "@babel/types",
@@ -23418,7 +23411,7 @@
   },
   {
    "package": "@vue/compiler-sfc",
-   "measuredVersion": "3.5.42",
+   "measuredVersion": "3.5.43",
    "targets": [
     {
      "target": "@babel/types",
@@ -24977,7 +24970,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.3.2",
+   "measuredVersion": "7.3.3",
    "targets": [
     {
      "target": "typescript",
@@ -24997,7 +24990,7 @@
   },
   {
    "package": "auth0",
-   "measuredVersion": "7.1.0",
+   "measuredVersion": "7.2.0",
    "targets": [
     {
      "target": "undici-types",
@@ -25018,7 +25011,7 @@
   },
   {
    "package": "aws-cdk",
-   "measuredVersion": "2.1141.0",
+   "measuredVersion": "2.1142.0",
    "targets": [
     {
      "target": "@aws-cdk/cloud-assembly-api",
@@ -25384,7 +25377,7 @@
   },
   {
    "package": "convex",
-   "measuredVersion": "1.45.0",
+   "measuredVersion": "1.46.0",
    "targets": [
     {
      "target": "fsevents",
@@ -25501,7 +25494,7 @@
   },
   {
    "package": "cssnano-utils",
-   "measuredVersion": "7.0.2",
+   "measuredVersion": "7.0.3",
    "targets": [
     {
      "target": "postcss-value-parser",
@@ -26390,7 +26383,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "64.5.1",
+   "measuredVersion": "64.5.2",
    "targets": [
     {
      "target": "@eslint/core",
@@ -27722,7 +27715,7 @@
   },
   {
    "package": "gaxios",
-   "measuredVersion": "8.0.0",
+   "measuredVersion": "8.1.0",
    "targets": [
     {
      "target": "undici-types",
@@ -27847,7 +27840,7 @@
   },
   {
    "package": "graphql-ws",
-   "measuredVersion": "6.2.1",
+   "measuredVersion": "6.2.2",
    "targets": [
     {
      "target": "bun",
@@ -28739,7 +28732,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.35.1",
+   "measuredVersion": "6.36.0",
    "targets": [
     {
      "target": "vue",
@@ -29441,7 +29434,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20260915.0-alpha",
+   "measuredVersion": "5.20260916.0-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -29592,7 +29585,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "13.3.0",
+   "measuredVersion": "13.4.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -30979,7 +30972,7 @@
   },
   {
    "package": "prosemirror-changeset",
-   "measuredVersion": "2.4.2",
+   "measuredVersion": "2.4.3",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -32134,7 +32127,7 @@
   },
   {
    "package": "rrdom",
-   "measuredVersion": "2.1.4",
+   "measuredVersion": "2.1.5",
    "targets": [
     {
      "target": "@rrweb/types",
@@ -32154,7 +32147,7 @@
   },
   {
    "package": "rrweb-snapshot",
-   "measuredVersion": "2.1.4",
+   "measuredVersion": "2.1.5",
    "targets": [
     {
      "target": "@rrweb/types",
@@ -32836,7 +32829,7 @@
   },
   {
    "package": "systeminformation",
-   "measuredVersion": "5.33.10",
+   "measuredVersion": "5.33.11",
    "targets": [
     {
      "target": "macos-temperature-sensor",
@@ -32985,26 +32978,6 @@
      ],
      "files": [
       "index.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "typed-array-byte-offset",
-   "measuredVersion": "1.0.4",
-   "targets": [
-    {
-     "target": "possible-typed-array-names",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "possible-typed-array-names"
-     ],
-     "files": [
-      "index.d.ts"
      ],
      "fileCount": 1
     }
@@ -33358,7 +33331,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.19.0",
+   "measuredVersion": "59.20.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -33923,7 +33896,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260916.1",
+   "measuredVersion": "1.20260917.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33943,7 +33916,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.132.0",
+   "measuredVersion": "4.133.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -34367,7 +34340,7 @@
   },
   {
    "package": "@sentry/react-native",
-   "measuredVersion": "8.26.0",
+   "measuredVersion": "8.27.0",
    "target": "promise",
    "specifiers": [
     "promise/setimmediate/done",
@@ -34978,7 +34951,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.19.0",
+   "measuredVersion": "59.20.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -34986,7 +34959,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.19.0",
+   "measuredVersion": "59.20.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -34994,7 +34967,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.19.0",
+   "measuredVersion": "59.20.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -35002,7 +34975,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.19.0",
+   "measuredVersion": "59.20.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"
