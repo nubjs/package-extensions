@@ -3170,10 +3170,14 @@
       "@rsbuild/core@*": {
         "peerDependencies": {
           "tsx": "*",
+          "ws": "*",
           "yaml": "*"
         },
         "peerDependenciesMeta": {
           "tsx": {
+            "optional": true
+          },
+          "ws": {
             "optional": true
           },
           "yaml": {

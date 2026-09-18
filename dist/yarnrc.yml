@@ -1,5 +1,5 @@
-# Generated 2026-09-17 from the 10000 most-downloaded npm packages.
-# 779 packages, 1166 undeclared dependencies.
+# Generated 2026-09-18 from the 10000 most-downloaded npm packages.
+# 779 packages, 1167 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -2037,9 +2037,12 @@ packageExtensions:
   "@rsbuild/core@*":
     peerDependencies:
       tsx: "*"
+      ws: "*"
       yaml: "*"
     peerDependenciesMeta:
       tsx:
+        optional: true
+      ws:
         optional: true
       yaml:
         optional: true
