@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18",
+  "generated": "2026-09-19",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,7 +8,7 @@
   },
   "sources": {
     "scan": {
-      "entries": 1167,
+      "entries": 1168,
       "packages": 648
     },
     "yarn": {
@@ -30,9 +30,9 @@
   "totals": {
     "packages": 779,
     "selectors": 799,
-    "entries": 1167,
+    "entries": 1168,
     "byClass": {
-      "runtime": 204,
+      "runtime": 205,
       "adapter": 131,
       "types": 533,
       "deep-path": 0,
@@ -40,9 +40,9 @@
     },
     "byField": {
       "dependency": 28,
-      "peer": 1139
+      "peer": 1140
     },
-    "candidatesForReview": 102,
+    "candidatesForReview": 103,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 1,
     "droppedUnresolvedTargets": 0,
@@ -5459,13 +5459,17 @@
     "@openrouter/ai-sdk-provider@*": {
       "peerDependencies": {
         "@ai-sdk/provider": "*",
-        "@ai-sdk/provider-utils": "*"
+        "@ai-sdk/provider-utils": "*",
+        "undici": "*"
       },
       "peerDependenciesMeta": {
         "@ai-sdk/provider": {
           "optional": true
         },
         "@ai-sdk/provider-utils": {
+          "optional": true
+        },
+        "undici": {
           "optional": true
         }
       }
@@ -12948,7 +12952,7 @@
     },
     {
       "package": "@anthropic-ai/sdk",
-      "measuredVersion": "0.126.0",
+      "measuredVersion": "0.127.0",
       "targets": [
         {
           "target": "node-fetch",
@@ -12996,7 +13000,7 @@
     },
     {
       "package": "@apollo/client",
-      "measuredVersion": "4.3.0",
+      "measuredVersion": "4.3.1",
       "targets": [
         {
           "target": "relay-runtime",
@@ -13411,7 +13415,7 @@
     },
     {
       "package": "@babel/node",
-      "measuredVersion": "8.0.5",
+      "measuredVersion": "8.0.6",
       "targets": [
         {
           "target": "kexec",
@@ -13453,7 +13457,7 @@
     },
     {
       "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.55.0",
+      "measuredVersion": "1.56.0",
       "targets": [
         {
           "target": "@cloudflare/workers-utils",
@@ -13942,7 +13946,7 @@
     },
     {
       "package": "@es-joy/jsdoccomment",
-      "measuredVersion": "0.97.0",
+      "measuredVersion": "0.98.0",
       "targets": [
         {
           "target": "eslint",
@@ -13962,7 +13966,7 @@
     },
     {
       "package": "@eslint-react/shared",
-      "measuredVersion": "5.19.1",
+      "measuredVersion": "5.20.0",
       "targets": [
         {
           "target": "react",
@@ -15247,7 +15251,7 @@
     },
     {
       "package": "@jest/test-result",
-      "measuredVersion": "30.5.1",
+      "measuredVersion": "30.5.2",
       "targets": [
         {
           "target": "jest-haste-map",
@@ -15281,7 +15285,7 @@
     },
     {
       "package": "@jest/test-sequencer",
-      "measuredVersion": "30.5.1",
+      "measuredVersion": "30.5.2",
       "targets": [
         {
           "target": "@jest/types",
@@ -19034,7 +19038,7 @@
     },
     {
       "package": "@openrouter/ai-sdk-provider",
-      "measuredVersion": "3.0.0",
+      "measuredVersion": "3.1.0",
       "targets": [
         {
           "target": "@ai-sdk/provider",
@@ -19064,6 +19068,21 @@
             "dist/index.d.ts"
           ],
           "fileCount": 1
+        },
+        {
+          "target": "undici",
+          "class": "runtime",
+          "field": "peer",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "specifiers": [
+            "undici"
+          ],
+          "files": [
+            "dist/index.js",
+            "dist/internal/index.js"
+          ],
+          "fileCount": 2
         }
       ]
     },
@@ -19206,7 +19225,7 @@
     },
     {
       "package": "@playwright/mcp",
-      "measuredVersion": "0.0.81",
+      "measuredVersion": "0.0.82",
       "targets": [
         {
           "target": "@modelcontextprotocol/sdk",
@@ -20780,7 +20799,7 @@
     },
     {
       "package": "@scalar/openapi-upgrader",
-      "measuredVersion": "0.2.16",
+      "measuredVersion": "0.2.17",
       "targets": [
         {
           "target": "@scalar/types",
@@ -22594,7 +22613,7 @@
     },
     {
       "package": "@turbo/gen",
-      "measuredVersion": "2.10.13",
+      "measuredVersion": "2.11.2",
       "targets": [
         {
           "target": "kerberos",
@@ -24872,7 +24891,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "9.0.18",
+      "measuredVersion": "9.0.20",
       "targets": [
         {
           "target": "@appium/types",
@@ -24907,7 +24926,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "10.0.0",
+      "measuredVersion": "10.0.1",
       "targets": [
         {
           "target": "@appium/types",
@@ -25260,7 +25279,7 @@
     },
     {
       "package": "bullmq",
-      "measuredVersion": "6.3.7",
+      "measuredVersion": "6.3.8",
       "targets": [
         {
           "target": "@valkey/valkey-glide",
@@ -26400,7 +26419,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "64.5.2",
+      "measuredVersion": "64.5.4",
       "targets": [
         {
           "target": "@eslint/core",
@@ -28264,7 +28283,7 @@
     },
     {
       "package": "jest",
-      "measuredVersion": "30.5.1",
+      "measuredVersion": "30.5.2",
       "targets": [
         {
           "target": "jest-config",
@@ -28305,7 +28324,7 @@
     },
     {
       "package": "jest-config",
-      "measuredVersion": "30.5.1",
+      "measuredVersion": "30.5.2",
       "targets": [
         {
           "target": "jest-jasmine2",
@@ -28434,7 +28453,7 @@
     },
     {
       "package": "jest-resolve-dependencies",
-      "measuredVersion": "30.5.1",
+      "measuredVersion": "30.5.2",
       "targets": [
         {
           "target": "jest-haste-map",
@@ -28468,7 +28487,7 @@
     },
     {
       "package": "jest-runner",
-      "measuredVersion": "30.5.1",
+      "measuredVersion": "30.5.2",
       "targets": [
         {
           "target": "jest-jasmine2",
@@ -28933,7 +28952,7 @@
     },
     {
       "package": "lighthouse",
-      "measuredVersion": "13.4.1",
+      "measuredVersion": "13.5.0",
       "targets": [
         {
           "target": "puppeteer",
@@ -29451,7 +29470,7 @@
     },
     {
       "package": "miniflare",
-      "measuredVersion": "5.20260917.0-alpha",
+      "measuredVersion": "5.20260918.0-alpha",
       "targets": [
         {
           "target": "@cloudflare/config",
@@ -31461,7 +31480,7 @@
     },
     {
       "package": "react-native-reanimated",
-      "measuredVersion": "4.6.0",
+      "measuredVersion": "4.7.0",
       "targets": [
         {
           "target": "react-native-svg",
@@ -32846,7 +32865,7 @@
     },
     {
       "package": "systeminformation",
-      "measuredVersion": "5.33.11",
+      "measuredVersion": "5.33.12",
       "targets": [
         {
           "target": "macos-temperature-sensor",
@@ -33002,7 +33021,7 @@
     },
     {
       "package": "typedoc-plugin-markdown",
-      "measuredVersion": "4.13.0",
+      "measuredVersion": "4.13.1",
       "targets": [
         {
           "target": "prettier",
@@ -33348,7 +33367,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.23.1",
+      "measuredVersion": "59.23.2",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -33913,7 +33932,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20260918.1",
+      "measuredVersion": "1.20260919.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -33933,7 +33952,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.134.0",
+      "measuredVersion": "4.135.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -34304,6 +34323,14 @@
       "target": "ts-node",
       "specifiers": [
         "ts-node"
+      ]
+    },
+    {
+      "package": "@openrouter/ai-sdk-provider",
+      "measuredVersion": "3.1.0",
+      "target": "undici",
+      "specifiers": [
+        "undici"
       ]
     },
     {
@@ -34721,7 +34748,7 @@
     },
     {
       "package": "jest",
-      "measuredVersion": "30.5.1",
+      "measuredVersion": "30.5.2",
       "target": "jest-config",
       "specifiers": [
         "jest-config"
@@ -34894,7 +34921,7 @@
     },
     {
       "package": "react-native-reanimated",
-      "measuredVersion": "4.6.0",
+      "measuredVersion": "4.7.0",
       "target": "react-native-web",
       "specifiers": [
         "react-native-web/dist/cjs/exports/StyleSheet/compiler/createReactDOMStyle.js",
@@ -34968,7 +34995,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.23.1",
+      "measuredVersion": "59.23.2",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -34976,7 +35003,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.23.1",
+      "measuredVersion": "59.23.2",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -34984,7 +35011,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.23.1",
+      "measuredVersion": "59.23.2",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -34992,7 +35019,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.23.1",
+      "measuredVersion": "59.23.2",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"

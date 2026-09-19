@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.8 — generated 2026-09-18, do not edit.
-// 779 packages, 1167 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.9 — generated 2026-09-19, do not edit.
+// 779 packages, 1168 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -3085,13 +3085,17 @@ exports.packageExtensions = [
   {
    "peerDependencies": {
     "@ai-sdk/provider": "*",
-    "@ai-sdk/provider-utils": "*"
+    "@ai-sdk/provider-utils": "*",
+    "undici": "*"
    },
    "peerDependenciesMeta": {
     "@ai-sdk/provider": {
      "optional": true
     },
     "@ai-sdk/provider-utils": {
+     "optional": true
+    },
+    "undici": {
      "optional": true
     }
    }

@@ -1,5 +1,5 @@
-# Generated 2026-09-18 from the 10000 most-downloaded npm packages.
-# 779 packages, 1167 undeclared dependencies.
+# Generated 2026-09-19 from the 10000 most-downloaded npm packages.
+# 779 packages, 1168 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -1623,10 +1623,13 @@ packageExtensions:
     peerDependencies:
       "@ai-sdk/provider": "*"
       "@ai-sdk/provider-utils": "*"
+      undici: "*"
     peerDependenciesMeta:
       "@ai-sdk/provider":
         optional: true
       "@ai-sdk/provider-utils":
+        optional: true
+      undici:
         optional: true
   "@opensearch-project/opensearch@*":
     peerDependencies:

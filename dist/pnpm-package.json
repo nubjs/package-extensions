@@ -2520,13 +2520,17 @@
       "@openrouter/ai-sdk-provider@*": {
         "peerDependencies": {
           "@ai-sdk/provider": "*",
-          "@ai-sdk/provider-utils": "*"
+          "@ai-sdk/provider-utils": "*",
+          "undici": "*"
         },
         "peerDependenciesMeta": {
           "@ai-sdk/provider": {
             "optional": true
           },
           "@ai-sdk/provider-utils": {
+            "optional": true
+          },
+          "undici": {
             "optional": true
           }
         }

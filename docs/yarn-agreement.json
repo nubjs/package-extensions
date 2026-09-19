@@ -687,7 +687,7 @@
           "@babel/types"
         ],
         "metaOnly": false,
-        "version": "8.0.5",
+        "version": "7.29.9",
         "why": "the package now declares every target"
       },
       {
