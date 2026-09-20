@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19",
+ "generated": "2026-09-20",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -13966,7 +13966,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.20.0",
+   "measuredVersion": "5.20.1",
    "targets": [
     {
      "target": "react",
@@ -15969,7 +15969,7 @@
   },
   {
    "package": "@mendable/firecrawl-js",
-   "measuredVersion": "4.40.0",
+   "measuredVersion": "4.41.0",
    "targets": [
     {
      "target": "undici",
@@ -24926,7 +24926,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "10.0.1",
+   "measuredVersion": "10.1.0",
    "targets": [
     {
      "target": "@appium/types",
@@ -25763,7 +25763,7 @@
   },
   {
    "package": "dependency-cruiser",
-   "measuredVersion": "18.3.1",
+   "measuredVersion": "18.4.0",
    "targets": [
     {
      "target": "typescript",
@@ -26542,7 +26542,7 @@
   },
   {
    "package": "eslint-plugin-regexp",
-   "measuredVersion": "3.3.0",
+   "measuredVersion": "3.3.1",
    "targets": [
     {
      "target": "json-schema",
@@ -32865,7 +32865,7 @@
   },
   {
    "package": "systeminformation",
-   "measuredVersion": "5.33.12",
+   "measuredVersion": "5.33.13",
    "targets": [
     {
      "target": "macos-temperature-sensor",
@@ -33932,7 +33932,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260919.1",
+   "measuredVersion": "1.20260920.1",
    "targets": [
     {
      "target": "pnpapi",

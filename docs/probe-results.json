@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19",
+  "generated": "2026-09-20",
   "dataset": "de71c4d16ab20454",
   "instrument": {
     "yarn": "4.18.0",
@@ -7,10 +7,10 @@
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 13,
-    "notOnImport": 58,
-    "installFailed": 4,
-    "inconclusive": 3
+    "confirmedViaPath": 14,
+    "notOnImport": 60,
+    "installFailed": 0,
+    "inconclusive": 4
   },
   "results": [
     {
@@ -352,8 +352,16 @@
         "@ai-sdk/provider-utils",
         "undici"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@openrouter/\u001b[39m\u001b[38;5;173mai-sdk-provider\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:3.1.0\u001b[39m: All versions satisfying \"3.1.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[3"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "zod"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 6
     },
     {
       "package": "@pnpm/npm-conf",
@@ -1055,8 +1063,8 @@
       "expected": [
         "jest-config"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mjest\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:30.5.2\u001b[39m: All versions satisfying \"30.5.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mjest\u001b[39m\u001b[38;5"
+      "verdict": "inconclusive",
+      "detail": "Command failed: node .yarn/releases/yarn.cjs node probe.cjs\n"
     },
     {
       "package": "knex",
@@ -1310,8 +1318,14 @@
         "react-native-svg",
         "react-native-web"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mreact-native-reanimated\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:4.7.0\u001b[39m: All versions satisfying \"4.7.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;17"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "react-qr-code",
@@ -1389,7 +1403,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7225) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-YhCG7M/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7525) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-5TmObp/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
@@ -1400,8 +1414,16 @@
         "@vltpkg/package-json",
         "path-scurry"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:59.23.2\u001b[39m: All versions satisfying \"59.23.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "@vltpkg/graph"
+      ],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     }
   ]
 }
