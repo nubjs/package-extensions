@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -46,7 +46,7 @@
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
-  "withheldDeepPath": 242
+  "withheldDeepPath": 244
  },
  "withheldDeepPath": [
   {
@@ -2223,6 +2223,26 @@
     "lib/commonjs/lib/resolveAssetUri.js",
     "lib/module/lib/resolveAssetUri.js",
     "src/lib/resolveAssetUri.ts"
+   ]
+  },
+  {
+   "package": "react-native-worklets",
+   "target": "@babel/plugin-syntax-jsx",
+   "specifiers": [
+    "@babel/plugin-syntax-jsx"
+   ],
+   "files": [
+    "plugin-oxc/babel.js"
+   ]
+  },
+  {
+   "package": "react-native-worklets",
+   "target": "@babel/plugin-syntax-typescript",
+   "specifiers": [
+    "@babel/plugin-syntax-typescript"
+   ],
+   "files": [
+    "plugin-oxc/babel.js"
    ]
   },
   {
@@ -13246,7 +13266,7 @@
   },
   {
    "package": "@aws-amplify/analytics",
-   "measuredVersion": "7.1.0",
+   "measuredVersion": "7.2.0",
    "targets": [
     {
      "target": "@aws-sdk/types",
@@ -13266,7 +13286,7 @@
   },
   {
    "package": "@aws-amplify/auth",
-   "measuredVersion": "6.20.0",
+   "measuredVersion": "6.21.1",
    "targets": [
     {
      "target": "@aws-sdk/types",
@@ -13286,7 +13306,7 @@
   },
   {
    "package": "@aws-amplify/core",
-   "measuredVersion": "6.18.0",
+   "measuredVersion": "6.19.1",
    "targets": [
     {
      "target": "@smithy/types",
@@ -13966,7 +13986,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.20.1",
+   "measuredVersion": "5.20.5",
    "targets": [
     {
      "target": "react",
@@ -15668,7 +15688,7 @@
   },
   {
    "package": "@mantine/hooks",
-   "measuredVersion": "9.6.1",
+   "measuredVersion": "9.6.2",
    "targets": [
     {
      "target": "react-dom",
@@ -16031,7 +16051,7 @@
   },
   {
    "package": "@module-federation/managers",
-   "measuredVersion": "2.9.0",
+   "measuredVersion": "2.9.1",
    "targets": [
     {
      "target": "webpack",
@@ -16052,7 +16072,7 @@
   },
   {
    "package": "@module-federation/manifest",
-   "measuredVersion": "2.9.0",
+   "measuredVersion": "2.9.1",
    "targets": [
     {
      "target": "webpack",
@@ -16074,7 +16094,7 @@
   },
   {
    "package": "@module-federation/sdk",
-   "measuredVersion": "2.9.0",
+   "measuredVersion": "2.9.1",
    "targets": [
     {
      "target": "webpack",
@@ -16095,7 +16115,7 @@
   },
   {
    "package": "@module-federation/webpack-bundler-runtime",
-   "measuredVersion": "2.9.0",
+   "measuredVersion": "2.9.1",
    "targets": [
     {
      "target": "@module-federation/runtime-core",
@@ -16279,7 +16299,7 @@
   },
   {
    "package": "@nestjs/core",
-   "measuredVersion": "12.0.3",
+   "measuredVersion": "12.0.4",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -25865,7 +25885,7 @@
   },
   {
    "package": "drizzle-kit",
-   "measuredVersion": "0.31.10",
+   "measuredVersion": "0.31.11",
    "targets": [
     {
      "target": "@electric-sql/pglite",
@@ -26081,7 +26101,7 @@
   },
   {
    "package": "drizzle-orm",
-   "measuredVersion": "0.45.2",
+   "measuredVersion": "0.45.3",
    "targets": [
     {
      "target": "@miniflare/d1",
@@ -30548,7 +30568,7 @@
   },
   {
    "package": "oxc-minify",
-   "measuredVersion": "0.150.0",
+   "measuredVersion": "0.151.0",
    "targets": [
     {
      "target": "@oxc-minify/binding-wasm32-wasi",
@@ -30570,7 +30590,7 @@
   },
   {
    "package": "oxc-parser",
-   "measuredVersion": "0.150.0",
+   "measuredVersion": "0.151.0",
    "targets": [
     {
      "target": "@oxc-parser/binding-wasm32-wasi",
@@ -30613,7 +30633,7 @@
   },
   {
    "package": "oxc-transform",
-   "measuredVersion": "0.150.0",
+   "measuredVersion": "0.151.0",
    "targets": [
     {
      "target": "@oxc-transform/binding-wasm32-wasi",
@@ -30842,7 +30862,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.52.4",
+   "measuredVersion": "5.52.5",
    "targets": [
     {
      "target": "express",
@@ -31663,7 +31683,7 @@
   },
   {
    "package": "react-native-worklets",
-   "measuredVersion": "0.12.2",
+   "measuredVersion": "0.13.0",
    "targets": [
     {
      "target": "@babel/plugin-transform-react-jsx",
@@ -33932,7 +33952,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260920.1",
+   "measuredVersion": "1.20260921.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -34419,7 +34439,7 @@
   },
   {
    "package": "drizzle-kit",
-   "measuredVersion": "0.31.10",
+   "measuredVersion": "0.31.11",
    "target": "@electric-sql/pglite",
    "specifiers": [
     "@electric-sql/pglite"
@@ -34427,7 +34447,7 @@
   },
   {
    "package": "drizzle-kit",
-   "measuredVersion": "0.31.10",
+   "measuredVersion": "0.31.11",
    "target": "drizzle-orm",
    "specifiers": [
     "drizzle-orm/libsql",
@@ -34844,7 +34864,7 @@
   },
   {
    "package": "oxc-minify",
-   "measuredVersion": "0.150.0",
+   "measuredVersion": "0.151.0",
    "target": "@oxc-minify/binding-wasm32-wasi",
    "specifiers": [
     "@oxc-minify/binding-wasm32-wasi",
@@ -34853,7 +34873,7 @@
   },
   {
    "package": "oxc-parser",
-   "measuredVersion": "0.150.0",
+   "measuredVersion": "0.151.0",
    "target": "@oxc-parser/binding-wasm32-wasi",
    "specifiers": [
     "@oxc-parser/binding-wasm32-wasi/package.json",
@@ -34862,7 +34882,7 @@
   },
   {
    "package": "oxc-transform",
-   "measuredVersion": "0.150.0",
+   "measuredVersion": "0.151.0",
    "target": "@oxc-transform/binding-wasm32-wasi",
    "specifiers": [
     "@oxc-transform/binding-wasm32-wasi",
