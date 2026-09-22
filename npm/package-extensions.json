@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-21",
+ "generated": "2026-09-22",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,7 +8,7 @@
  },
  "sources": {
   "scan": {
-   "entries": 1168,
+   "entries": 1163,
    "packages": 648
   },
   "yarn": {
@@ -30,17 +30,17 @@
  "totals": {
   "packages": 779,
   "selectors": 799,
-  "entries": 1168,
+  "entries": 1163,
   "byClass": {
    "runtime": 205,
    "adapter": 131,
-   "types": 533,
+   "types": 528,
    "deep-path": 0,
    "guarded": 299
   },
   "byField": {
    "dependency": 28,
-   "peer": 1140
+   "peer": 1135
   },
   "candidatesForReview": 103,
   "droppedUnpublishedTargets": 202,
@@ -4318,32 +4318,16 @@
   },
   "@mastra/core@*": {
    "peerDependencies": {
-    "@hono/standard-validator": "*",
-    "@standard-community/standard-json": "*",
-    "@standard-community/standard-openapi": "*",
     "@workflow/serde": "*",
     "msw": "*",
-    "openapi-types": "*",
     "undici": "*",
     "vitest": "*"
    },
    "peerDependenciesMeta": {
-    "@hono/standard-validator": {
-     "optional": true
-    },
-    "@standard-community/standard-json": {
-     "optional": true
-    },
-    "@standard-community/standard-openapi": {
-     "optional": true
-    },
     "@workflow/serde": {
      "optional": true
     },
     "msw": {
-     "optional": true
-    },
-    "openapi-types": {
      "optional": true
     },
     "undici": {
@@ -4356,13 +4340,9 @@
   },
   "@mastra/schema-compat@*": {
    "peerDependencies": {
-    "ajv": "*",
     "zod-to-json-schema": "*"
    },
    "peerDependenciesMeta": {
-    "ajv": {
-     "optional": true
-    },
     "zod-to-json-schema": {
      "optional": true
     }
@@ -12598,7 +12578,7 @@
   },
   {
    "package": "@algolia/autocomplete-core",
-   "measuredVersion": "1.19.10",
+   "measuredVersion": "1.19.11",
    "targets": [
     {
      "target": "@algolia/client-search",
@@ -13477,7 +13457,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.56.0",
+   "measuredVersion": "1.57.2",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13659,7 +13639,7 @@
   },
   {
    "package": "@datadog/flagging-core",
-   "measuredVersion": "3.0.0",
+   "measuredVersion": "3.0.1",
    "targets": [
     {
      "target": "@openfeature/core",
@@ -14333,7 +14313,7 @@
   },
   {
    "package": "@fastify/swagger",
-   "measuredVersion": "9.8.1",
+   "measuredVersion": "9.9.0",
    "targets": [
     {
      "target": "fastify",
@@ -14345,12 +14325,13 @@
       "fastify"
      ],
      "files": [
-      "index.d.ts",
-      "test-types/http2-types.tst.ts",
-      "test-types/imports.tst.ts",
-      "test-types/types.tst.ts"
+      "types/http2-types.tst.ts",
+      "types/imports.tst.ts",
+      "types/index.d.ts",
+      "types/openapi-info-extensions.tst.ts",
+      "types/types.tst.ts"
      ],
-     "fileCount": 4
+     "fileCount": 5
     }
    ]
   },
@@ -15765,50 +15746,8 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.67.0",
+   "measuredVersion": "1.68.0",
    "targets": [
-    {
-     "target": "@hono/standard-validator",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@hono/standard-validator"
-     ],
-     "files": [
-      "dist/_types/hono-openapi/dist/index.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "@standard-community/standard-json",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@standard-community/standard-json"
-     ],
-     "files": [
-      "dist/_types/hono-openapi/dist/index.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "@standard-community/standard-openapi",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@standard-community/standard-openapi"
-     ],
-     "files": [
-      "dist/_types/hono-openapi/dist/index.d.ts"
-     ],
-     "fileCount": 1
-    },
     {
      "target": "@workflow/serde",
      "class": "types",
@@ -15839,20 +15778,6 @@
      "fileCount": 1
     },
     {
-     "target": "openapi-types",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "openapi-types"
-     ],
-     "files": [
-      "dist/_types/hono-openapi/dist/index.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
      "target": "undici",
      "class": "runtime",
      "field": "peer",
@@ -15862,10 +15787,10 @@
       "undici"
      ],
      "files": [
-      "dist/dist-Bp60ptfZ.cjs",
-      "dist/dist-Ou20DOGE.js",
-      "dist/dist-pa8X6y1Z-BdXb6n3r.cjs",
-      "dist/dist-pa8X6y1Z-C96w-_ml.js"
+      "dist/dist-BZl6ZSyX.cjs",
+      "dist/dist-DY_3NEPZ.js",
+      "dist/dist-Smko-YXk-BU9t-Ke3.js",
+      "dist/dist-Smko-YXk-D83fXFEQ.cjs"
      ],
      "fileCount": 4
     },
@@ -15888,22 +15813,8 @@
   },
   {
    "package": "@mastra/schema-compat",
-   "measuredVersion": "1.3.10",
+   "measuredVersion": "1.3.11",
    "targets": [
-    {
-     "target": "ajv",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "ajv"
-     ],
-     "files": [
-      "dist/standard-schema/adapters/json-schema.d.ts"
-     ],
-     "fileCount": 1
-    },
     {
      "target": "zod-to-json-schema",
      "class": "types",
@@ -19540,7 +19451,7 @@
   },
   {
    "package": "@promptbook/utils",
-   "measuredVersion": "0.114.0-40",
+   "measuredVersion": "0.114.0-41",
    "targets": [
     {
      "target": "openai",
@@ -20423,7 +20334,7 @@
   },
   {
    "package": "@redocly/openapi-core",
-   "measuredVersion": "2.53.3",
+   "measuredVersion": "2.54.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20446,7 +20357,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.53.3",
+   "measuredVersion": "2.54.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20819,7 +20730,7 @@
   },
   {
    "package": "@scalar/openapi-upgrader",
-   "measuredVersion": "0.2.17",
+   "measuredVersion": "0.3.0",
    "targets": [
     {
      "target": "@scalar/types",
@@ -20842,7 +20753,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.20.0",
+   "measuredVersion": "0.21.0",
    "targets": [
     {
      "target": "har-format",
@@ -21072,7 +20983,7 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "10.75.0",
+   "measuredVersion": "10.75.2",
    "targets": [
     {
      "target": "@opentelemetry/sdk-trace-base",
@@ -22307,7 +22218,7 @@
   },
   {
    "package": "@tanstack/react-start-rsc",
-   "measuredVersion": "0.1.55",
+   "measuredVersion": "0.1.56",
    "targets": [
     {
      "target": "vite",
@@ -22996,7 +22907,7 @@
   },
   {
    "package": "@typescript-eslint/types",
-   "measuredVersion": "8.70.0",
+   "measuredVersion": "8.70.1",
    "targets": [
     {
      "target": "typescript",
@@ -26734,7 +26645,7 @@
   },
   {
    "package": "expect-webdriverio",
-   "measuredVersion": "6.0.10",
+   "measuredVersion": "6.1.0",
    "targets": [
     {
      "target": "@wdio/types",
@@ -28828,7 +28739,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.10.4",
+   "measuredVersion": "0.10.5",
    "targets": [
     {
      "target": "@jest/globals",
@@ -29060,7 +28971,7 @@
   },
   {
    "package": "magic-regexp",
-   "measuredVersion": "0.11.0",
+   "measuredVersion": "0.11.2",
    "targets": [
     {
      "target": "@nuxt/kit",
@@ -29490,7 +29401,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20260918.0-alpha",
+   "measuredVersion": "5.20260921.0-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -29878,7 +29789,7 @@
   },
   {
    "package": "next-intl",
-   "measuredVersion": "4.14.5",
+   "measuredVersion": "4.14.6",
    "targets": [
     {
      "target": "webpack",
@@ -31344,7 +31255,7 @@
   },
   {
    "package": "react-i18next",
-   "measuredVersion": "17.0.14",
+   "measuredVersion": "17.0.15",
    "targets": [
     {
      "target": "babel-plugin-macros",
@@ -32062,7 +31973,7 @@
   },
   {
    "package": "remotion",
-   "measuredVersion": "4.0.526",
+   "measuredVersion": "4.0.527",
    "targets": [
     {
      "target": "zod",
@@ -33387,7 +33298,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.23.2",
+   "measuredVersion": "59.25.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -33952,7 +33863,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260921.1",
+   "measuredVersion": "1.20260922.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33972,7 +33883,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.135.0",
+   "measuredVersion": "4.136.2",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -34106,7 +34017,7 @@
   },
   {
    "package": "yeoman-environment",
-   "measuredVersion": "7.0.0",
+   "measuredVersion": "7.2.0",
    "targets": [
     {
      "target": "yeoman-generator",
@@ -34235,7 +34146,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.67.0",
+   "measuredVersion": "1.68.0",
    "target": "undici",
    "specifiers": [
     "undici"
@@ -35015,7 +34926,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.23.2",
+   "measuredVersion": "59.25.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -35023,7 +34934,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.23.2",
+   "measuredVersion": "59.25.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -35031,7 +34942,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.23.2",
+   "measuredVersion": "59.25.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -35039,7 +34950,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.23.2",
+   "measuredVersion": "59.25.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"

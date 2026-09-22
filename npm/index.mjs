@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.10 — generated 2026-09-21, do not edit.
-// 779 packages, 1168 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.10 — generated 2026-09-22, do not edit.
+// 779 packages, 1163 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -1724,32 +1724,16 @@ export const packageExtensions = [
   "@mastra/core@*",
   {
    "peerDependencies": {
-    "@hono/standard-validator": "*",
-    "@standard-community/standard-json": "*",
-    "@standard-community/standard-openapi": "*",
     "@workflow/serde": "*",
     "msw": "*",
-    "openapi-types": "*",
     "undici": "*",
     "vitest": "*"
    },
    "peerDependenciesMeta": {
-    "@hono/standard-validator": {
-     "optional": true
-    },
-    "@standard-community/standard-json": {
-     "optional": true
-    },
-    "@standard-community/standard-openapi": {
-     "optional": true
-    },
     "@workflow/serde": {
      "optional": true
     },
     "msw": {
-     "optional": true
-    },
-    "openapi-types": {
      "optional": true
     },
     "undici": {
@@ -1765,13 +1749,9 @@ export const packageExtensions = [
   "@mastra/schema-compat@*",
   {
    "peerDependencies": {
-    "ajv": "*",
     "zod-to-json-schema": "*"
    },
    "peerDependenciesMeta": {
-    "ajv": {
-     "optional": true
-    },
     "zod-to-json-schema": {
      "optional": true
     }
