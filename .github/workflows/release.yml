@@ -101,6 +101,12 @@ jobs:
         # `latest`: a staged version is not served until a maintainer approves
         # it, so a registry comparison would see the old rules every day and
         # stage a fresh version per run until someone approved one.
+        #
+        # Two outputs. `changed` = the rules moved since that commit, so bump and
+        # stage. `stage` = stage even without a bump, because the committed
+        # version is not on the registry: a bump whose staging failed (the
+        # 2026-09-22 run: bumped to 1.0.11, then a 403) or one still awaiting
+        # approval. Re-staging an already-staged version is a tolerated no-op.
         if: ${{ github.event_name == 'schedule' }}
         run: |
           set -euo pipefail
@@ -108,7 +114,16 @@ jobs:
           if [ -z "$LAST_BUMP" ]; then
             echo "no bump commit yet — treating as changed"
             echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "stage=true" >> "$GITHUB_OUTPUT"
             exit 0
+          fi
+          COMMITTED=$(node -p 'require("./harness/version.json").version')
+          CODE=$(curl -s -o /dev/null -w '%{http_code}' "https://registry.npmjs.org/@nubjs%2fextensions/$COMMITTED")
+          if [ "$CODE" = "200" ]; then
+            echo "stage=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "$COMMITTED is committed but not served (registry returned $CODE) — staging it"
+            echo "stage=true" >> "$GITHUB_OUTPUT"
           fi
           git show "$LAST_BUMP:package-extensions.json" > /tmp/baseline.json
           # ONLY the rules. `generated` moves every run, and a `measuredVersion`
@@ -121,6 +136,7 @@ jobs:
             const same = JSON.stringify(a) === JSON.stringify(b);
             console.log(same ? "rules unchanged" : `rules moved: ${Object.keys(a).length} -> ${Object.keys(b).length} entries`);
             fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed=${same ? "false" : "true"}\n`);
+            if (!same) fs.appendFileSync(process.env.GITHUB_OUTPUT, "stage=true\n");
           '
 
       - name: Bump the patch version
@@ -153,21 +169,21 @@ jobs:
           echo "bumped to $NEXT"
 
       - name: Build the publishable directory
-        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
+        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.stage == 'true' }}
         run: |
           set -euo pipefail
           node harness/pack.mjs
           node -e 'console.log("packing", require("./npm/package.json").name + "@" + require("./npm/package.json").version)'
 
       - name: Gate
-        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
+        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.stage == 'true' }}
         # The same suite that guards a dataset commit. A release must not be able
         # to ship something a normal build would have refused — above all the
         # no-regression contract that every `@yarnpkg/extensions` rule survives.
         run: node harness/verify.mjs
 
       - name: Refuse to republish an existing version
-        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
+        if: ${{ github.event_name != 'schedule' || steps.gate.outputs.stage == 'true' }}
         # `npm stage publish` would fail on a duplicate anyway, but it fails AFTER
         # uploading, and the error reads like an auth problem. Checking first
         # makes a re-run of this workflow a clean no-op instead. A version that is
@@ -184,7 +200,7 @@ jobs:
           echo "$VERSION is unpublished (registry returned $CODE)"
 
       - name: Stage
-        if: ${{ !inputs.dry_run && (github.event_name != 'schedule' || steps.gate.outputs.changed == 'true') }}
+        if: ${{ !inputs.dry_run && (github.event_name != 'schedule' || steps.gate.outputs.stage == 'true') }}
         working-directory: npm
         # `--tag latest` is EXPLICIT, and it is not the redundant default it looks
         # like. npm refuses to apply `latest` IMPLICITLY when the version being
