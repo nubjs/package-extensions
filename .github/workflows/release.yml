@@ -1,8 +1,14 @@
-# Publish @nubjs/extensions to npm via trusted publishing (OIDC).
+# Stage @nubjs/extensions on npm via trusted publishing (OIDC).
+#
+# STAGE-ONLY (2026-09-22). The trusted publisher for this package allows only
+# `npm stage publish`: a scheduled run puts the version in npm's staged queue,
+# and a maintainer approves it with 2FA (`npm stage approve <id>`) before it is
+# installable. CI cannot publish, so a stolen push credential cannot either.
+# Nothing downstream needs the version live, so the run ends once it is staged.
 #
 # NO NPM_TOKEN. npm mints a short-lived credential from this job's OIDC identity,
 # which is why `id-token: write` is the load-bearing permission — without it
-# `npm publish` falls back to looking for a token and fails. The trust
+# `npm stage publish` falls back to looking for a token and fails. The trust
 # relationship is registered against THIS FILENAME (`release.yml`), so renaming
 # or moving this file silently breaks publishing until the trust is re-created.
 #
@@ -45,7 +51,7 @@ jobs:
       # `contents: write` so a scheduled run can commit the version bump it
       # publishes. A manual run bumps nothing and only reads.
       contents: write
-      # npm publish authenticates via OIDC trusted publishing, which mints its
+      # npm stage publish authenticates via OIDC trusted publishing, which mints its
       # credential from this identity. Nothing else here needs a token.
       id-token: write
     steps:
@@ -53,11 +59,18 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          # Trusted publishing requires npm >= 11.5.1 and Node >= 22.14.0. Node 24
-          # ships an npm new enough; the check below fails loudly rather than
-          # letting a too-old npm fall through to a confusing auth error.
+          # `npm stage publish` needs npm >= 11.15 and Node >= 22.14. The npm
+          # bundled with Node 24 lags it, so the next step installs one.
           node-version: 24
           registry-url: "https://registry.npmjs.org"
+
+      - name: Install an npm CLI that can stage
+        run: | # zizmor: ignore[adhoc-packages] the npm CLI itself, pinned to the major that carries `npm stage`
+          npm install -g npm@11
+          v="$(npm --version)"
+          [ "$(printf '%s\n11.15.0\n' "$v" | sort -V | head -1)" = "11.15.0" ] \
+            || { echo "::error::npm $v cannot stage (need >= 11.15)"; exit 1; }
+          echo "npm $v"
 
       - name: Check the toolchain can do OIDC
         run: |
@@ -83,27 +96,32 @@ jobs:
         # Scheduled runs only. A manual run publishes whatever
         # `harness/version.json` says, which is the reviewable path for a release
         # that is not just a data refresh.
+        #
+        # The baseline is the rules AT THE LAST BUMP COMMIT, not the registry's
+        # `latest`: a staged version is not served until a maintainer approves
+        # it, so a registry comparison would see the old rules every day and
+        # stage a fresh version per run until someone approved one.
         if: ${{ github.event_name == 'schedule' }}
         run: |
           set -euo pipefail
-          mkdir -p /tmp/published && cd /tmp/published
-          if npm pack @nubjs/extensions@latest --silent > /dev/null 2>&1; then
-            tar xzf ./*.tgz
-            # ONLY the rules. `generated` moves every run, and a `measuredVersion`
-            # ticks over whenever a scanned package cuts a release, so a whole-file
-            # comparison would publish daily for data nobody would notice changing.
-            node -e '
-              const fs = require("fs");
-              const a = require("/tmp/published/package/package-extensions.json").packageExtensions;
-              const b = require(process.env.GITHUB_WORKSPACE + "/package-extensions.json").packageExtensions;
-              const same = JSON.stringify(a) === JSON.stringify(b);
-              console.log(same ? "rules unchanged" : `rules moved: ${Object.keys(a).length} -> ${Object.keys(b).length} entries`);
-              fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed=${same ? "false" : "true"}\n`);
-            '
-          else
-            echo "nothing published yet — treating as changed"
+          LAST_BUMP=$(git log -1 --format=%H -- harness/version.json)
+          if [ -z "$LAST_BUMP" ]; then
+            echo "no bump commit yet — treating as changed"
             echo "changed=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          git show "$LAST_BUMP:package-extensions.json" > /tmp/baseline.json
+          # ONLY the rules. `generated` moves every run, and a `measuredVersion`
+          # ticks over whenever a scanned package cuts a release, so a whole-file
+          # comparison would publish daily for data nobody would notice changing.
+          node -e '
+            const fs = require("fs");
+            const a = require("/tmp/baseline.json").packageExtensions;
+            const b = require(process.env.GITHUB_WORKSPACE + "/package-extensions.json").packageExtensions;
+            const same = JSON.stringify(a) === JSON.stringify(b);
+            console.log(same ? "rules unchanged" : `rules moved: ${Object.keys(a).length} -> ${Object.keys(b).length} entries`);
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed=${same ? "false" : "true"}\n`);
+          '
 
       - name: Bump the patch version
         if: ${{ github.event_name == 'schedule' && steps.gate.outputs.changed == 'true' }}
@@ -150,9 +168,11 @@ jobs:
 
       - name: Refuse to republish an existing version
         if: ${{ github.event_name != 'schedule' || steps.gate.outputs.changed == 'true' }}
-        # `npm publish` would fail on a duplicate anyway, but it fails AFTER
+        # `npm stage publish` would fail on a duplicate anyway, but it fails AFTER
         # uploading, and the error reads like an auth problem. Checking first
-        # makes a re-run of this workflow a clean no-op instead.
+        # makes a re-run of this workflow a clean no-op instead. A version that is
+        # staged but unapproved is not served, so it passes here and the stage
+        # step below tolerates npm's refusal.
         run: |
           set -euo pipefail
           VERSION=$(node -p 'require("./npm/package.json").version')
@@ -163,7 +183,7 @@ jobs:
           fi
           echo "$VERSION is unpublished (registry returned $CODE)"
 
-      - name: Publish
+      - name: Stage
         if: ${{ !inputs.dry_run && (github.event_name != 'schedule' || steps.gate.outputs.changed == 'true') }}
         working-directory: npm
         # `--tag latest` is EXPLICIT, and it is not the redundant default it looks
@@ -177,7 +197,22 @@ jobs:
         # highest version on the registry is not the newest build and never will
         # be again. For a dataset `latest` means the most recent scan, not the
         # largest number, which is exactly what naming the tag says.
-        run: npm publish --access public --tag latest
+        #
+        # A version already in the staged queue makes `npm stage publish` refuse
+        # (npm reserves the number while it is staged); that refusal is a success
+        # here — the maintainer's approval decides the rest. Its exact wording is
+        # matched loosely because the first stage-only run is where it is observed.
+        run: |
+          set -euo pipefail
+          out="$(mktemp)"
+          if npm stage publish --access public --tag latest > "$out" 2>&1; then
+            cat "$out"; exit 0
+          fi
+          cat "$out"
+          if grep -qiE 'already (been )?staged|staged version|E409|EPUBLISHCONFLICT|previously published' "$out"; then
+            echo "already staged — awaiting the maintainer's approval"; exit 0
+          fi
+          echo "::error::staging failed"; exit 1
 
       - name: Summary
         if: always()
@@ -193,5 +228,11 @@ jobs:
               console.log(`- ${Object.keys(d.packageExtensions).length} packages, ${t.entries} entries`);
               console.log(`- classes: ${Object.entries(t.byClass).map(([k, v]) => `${k} ${v}`).join(", ")}`);
             '
-            if [ "${{ inputs.dry_run }}" = "true" ]; then echo "- dry run, nothing published"; fi
+            if [ "${{ inputs.dry_run }}" = "true" ]; then
+              echo "- dry run, nothing staged"
+            else
+              echo "- STAGED, not installable until approved with 2FA:"
+              echo
+              echo '  `npm stage list @nubjs/extensions` then `npm stage approve <stage-id>`'
+            fi
           } >> "$GITHUB_STEP_SUMMARY"
