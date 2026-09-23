@@ -1,5 +1,5 @@
-# Generated 2026-09-22 from the 10000 most-downloaded npm packages.
-# 779 packages, 1163 undeclared dependencies.
+# Generated 2026-09-23 from the 10000 most-downloaded npm packages.
+# 778 packages, 1160 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -984,17 +984,11 @@ packageExtensions:
     peerDependenciesMeta:
       "@standard-schema/spec":
         optional: true
-  "@nestjs/graphql@*":
+  "@nestjs/platform-fastify@*":
     peerDependencies:
-      typescript: "*"
+      rxjs: "*"
     peerDependenciesMeta:
-      typescript:
-        optional: true
-  "@nestjs/swagger@*":
-    peerDependencies:
-      typescript: "*"
-    peerDependenciesMeta:
-      typescript:
+      rxjs:
         optional: true
   "@netlify/serverless-functions-api@*":
     peerDependencies:
@@ -2025,12 +2019,9 @@ packageExtensions:
   "@rsbuild/core@*":
     peerDependencies:
       tsx: "*"
-      ws: "*"
       yaml: "*"
     peerDependenciesMeta:
       tsx:
-        optional: true
-      ws:
         optional: true
       yaml:
         optional: true
@@ -3406,11 +3397,8 @@ packageExtensions:
         optional: true
   eslint-plugin-perfectionist@*:
     peerDependencies:
-      "@typescript-eslint/types": "*"
       typescript: "*"
     peerDependenciesMeta:
-      "@typescript-eslint/types":
-        optional: true
       typescript:
         optional: true
   eslint-plugin-regexp@*:

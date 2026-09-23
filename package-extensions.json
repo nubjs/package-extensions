@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1163,
-      "packages": 648
+      "entries": 1160,
+      "packages": 647
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
     }
   },
   "totals": {
-    "packages": 779,
-    "selectors": 799,
-    "entries": 1163,
+    "packages": 778,
+    "selectors": 798,
+    "entries": 1160,
     "byClass": {
-      "runtime": 205,
-      "adapter": 131,
-      "types": 528,
+      "runtime": 206,
+      "adapter": 129,
+      "types": 526,
       "deep-path": 0,
       "guarded": 299
     },
     "byField": {
       "dependency": 28,
-      "peer": 1135
+      "peer": 1132
     },
-    "candidatesForReview": 103,
+    "candidatesForReview": 104,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 1,
     "droppedUnresolvedTargets": 0,
@@ -4538,22 +4538,12 @@
         }
       }
     },
-    "@nestjs/graphql@*": {
+    "@nestjs/platform-fastify@*": {
       "peerDependencies": {
-        "typescript": "*"
+        "rxjs": "*"
       },
       "peerDependenciesMeta": {
-        "typescript": {
-          "optional": true
-        }
-      }
-    },
-    "@nestjs/swagger@*": {
-      "peerDependencies": {
-        "typescript": "*"
-      },
-      "peerDependenciesMeta": {
-        "typescript": {
+        "rxjs": {
           "optional": true
         }
       }
@@ -6113,14 +6103,10 @@
     "@rsbuild/core@*": {
       "peerDependencies": {
         "tsx": "*",
-        "ws": "*",
         "yaml": "*"
       },
       "peerDependenciesMeta": {
         "tsx": {
-          "optional": true
-        },
-        "ws": {
           "optional": true
         },
         "yaml": {
@@ -8247,13 +8233,9 @@
     },
     "eslint-plugin-perfectionist@*": {
       "peerDependencies": {
-        "@typescript-eslint/types": "*",
         "typescript": "*"
       },
       "peerDependenciesMeta": {
-        "@typescript-eslint/types": {
-          "optional": true
-        },
         "typescript": {
           "optional": true
         }
@@ -12952,7 +12934,7 @@
     },
     {
       "package": "@anthropic-ai/sdk",
-      "measuredVersion": "0.127.0",
+      "measuredVersion": "0.128.0",
       "targets": [
         {
           "target": "node-fetch",
@@ -13095,7 +13077,7 @@
     },
     {
       "package": "@astrojs/language-server",
-      "measuredVersion": "2.17.0",
+      "measuredVersion": "2.17.1",
       "targets": [
         {
           "target": "typescript",
@@ -13164,7 +13146,7 @@
     },
     {
       "package": "@astrojs/react",
-      "measuredVersion": "6.0.6",
+      "measuredVersion": "7.0.0",
       "targets": [
         {
           "target": "astro",
@@ -13435,7 +13417,7 @@
     },
     {
       "package": "@base44/vite-plugin",
-      "measuredVersion": "1.0.41",
+      "measuredVersion": "1.0.42",
       "targets": [
         {
           "target": "vite",
@@ -13457,7 +13439,7 @@
     },
     {
       "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.57.2",
+      "measuredVersion": "1.57.3",
       "targets": [
         {
           "target": "@cloudflare/workers-utils",
@@ -14249,7 +14231,7 @@
     },
     {
       "package": "@fastify/multipart",
-      "measuredVersion": "10.1.1",
+      "measuredVersion": "10.1.2",
       "targets": [
         {
           "target": "fastify",
@@ -15746,7 +15728,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.68.0",
+      "measuredVersion": "1.69.0",
       "targets": [
         {
           "target": "@workflow/serde",
@@ -15788,9 +15770,9 @@
           ],
           "files": [
             "dist/dist-BZl6ZSyX.cjs",
-            "dist/dist-DY_3NEPZ.js",
-            "dist/dist-Smko-YXk-BU9t-Ke3.js",
-            "dist/dist-Smko-YXk-D83fXFEQ.cjs"
+            "dist/dist-By5NVHlu-DOB-Xr2v.js",
+            "dist/dist-By5NVHlu-GKhUicu3.cjs",
+            "dist/dist-DY_3NEPZ.js"
           ],
           "fileCount": 4
         },
@@ -16128,7 +16110,7 @@
     },
     {
       "package": "@napi-rs/cli",
-      "measuredVersion": "3.10.4",
+      "measuredVersion": "3.10.5",
       "targets": [
         {
           "target": "@oxc-node/core",
@@ -16210,7 +16192,7 @@
     },
     {
       "package": "@nestjs/core",
-      "measuredVersion": "12.0.4",
+      "measuredVersion": "12.1.0",
       "targets": [
         {
           "target": "@standard-schema/spec",
@@ -16229,55 +16211,22 @@
       ]
     },
     {
-      "package": "@nestjs/graphql",
-      "measuredVersion": "14.0.1",
+      "package": "@nestjs/platform-fastify",
+      "measuredVersion": "12.1.0",
       "targets": [
         {
-          "target": "typescript",
-          "class": "adapter",
+          "target": "rxjs",
+          "class": "runtime",
           "field": "peer",
-          "candidate": false,
-          "reason": "adapter class — the consumer picked and installed the backend",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
-            "typescript"
+            "rxjs"
           ],
           "files": [
-            "dist/plugin/compiler-plugin.d.ts",
-            "dist/plugin/utils/ast-utils.js",
-            "dist/plugin/utils/module-format.util.js",
-            "dist/plugin/utils/plugin-utils.js",
-            "dist/plugin/visitors/model-class.visitor.js",
-            "dist/plugin/visitors/readonly.visitor.d.ts",
-            "dist/plugin/visitors/readonly.visitor.js"
+            "multipart/multipart/multipart-interceptor.factory.js"
           ],
-          "fileCount": 7
-        }
-      ]
-    },
-    {
-      "package": "@nestjs/swagger",
-      "measuredVersion": "12.0.1",
-      "targets": [
-        {
-          "target": "typescript",
-          "class": "adapter",
-          "field": "peer",
-          "candidate": false,
-          "reason": "adapter class — the consumer picked and installed the backend",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "dist/plugin/compiler-plugin.d.ts",
-            "dist/plugin/index.d.ts",
-            "dist/plugin/utils/ast-utils.js",
-            "dist/plugin/utils/module-format.util.js",
-            "dist/plugin/utils/plugin-utils.js",
-            "dist/plugin/utils/type-reference-to-identifier.util.js",
-            "dist/plugin/visitors/abstract.visitor.js",
-            "dist/plugin/visitors/controller-class.visitor.js"
-          ],
-          "fileCount": 11
+          "fileCount": 1
         }
       ]
     },
@@ -16351,7 +16300,7 @@
     },
     {
       "package": "@next/bundle-analyzer",
-      "measuredVersion": "16.3.5",
+      "measuredVersion": "16.3.6",
       "targets": [
         {
           "target": "next",
@@ -16371,7 +16320,7 @@
     },
     {
       "package": "@next/eslint-plugin-next",
-      "measuredVersion": "16.3.5",
+      "measuredVersion": "16.3.6",
       "targets": [
         {
           "target": "eslint",
@@ -16433,7 +16382,7 @@
     },
     {
       "package": "@npmcli/config",
-      "measuredVersion": "11.0.1",
+      "measuredVersion": "11.1.0",
       "targets": [
         {
           "target": "node-gyp",
@@ -19506,7 +19455,7 @@
     },
     {
       "package": "@pulumi/pulumi",
-      "measuredVersion": "3.263.0",
+      "measuredVersion": "3.264.0",
       "targets": [
         {
           "target": "@microsoft/typescript-etw",
@@ -20287,7 +20236,7 @@
     },
     {
       "package": "@redocly/config",
-      "measuredVersion": "0.56.0",
+      "measuredVersion": "0.57.0",
       "targets": [
         {
           "target": "@markdoc/markdoc",
@@ -20334,7 +20283,7 @@
     },
     {
       "package": "@redocly/openapi-core",
-      "measuredVersion": "2.54.0",
+      "measuredVersion": "2.54.2",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20357,7 +20306,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.54.0",
+      "measuredVersion": "2.54.2",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20592,7 +20541,7 @@
     },
     {
       "package": "@rsbuild/core",
-      "measuredVersion": "2.2.8",
+      "measuredVersion": "2.2.9",
       "targets": [
         {
           "target": "tsx",
@@ -20604,21 +20553,7 @@
             "tsx/cjs/api"
           ],
           "files": [
-            "dist/626.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "ws",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "ws"
-          ],
-          "files": [
-            "dist/server/socketServer.d.ts"
+            "dist/m.js"
           ],
           "fileCount": 1
         },
@@ -20632,7 +20567,7 @@
             "yaml"
           ],
           "files": [
-            "dist/626.js"
+            "dist/m.js"
           ],
           "fileCount": 1
         }
@@ -21247,7 +21182,7 @@
     },
     {
       "package": "@stencil/core",
-      "measuredVersion": "4.45.0",
+      "measuredVersion": "4.45.1",
       "targets": [
         {
           "target": "@jest/core",
@@ -22178,7 +22113,7 @@
     },
     {
       "package": "@tanstack/devtools",
-      "measuredVersion": "0.14.2",
+      "measuredVersion": "0.15.0",
       "targets": [
         {
           "target": "@tanstack/intent",
@@ -22544,7 +22479,7 @@
     },
     {
       "package": "@turbo/gen",
-      "measuredVersion": "2.11.2",
+      "measuredVersion": "2.11.3",
       "targets": [
         {
           "target": "kerberos",
@@ -23010,7 +22945,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "11.0.1",
+      "measuredVersion": "11.0.2",
       "targets": [
         {
           "target": "encoding",
@@ -23087,7 +23022,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "10.0.1",
+      "measuredVersion": "10.0.2",
       "targets": [
         {
           "target": "encoding",
@@ -24822,7 +24757,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "9.0.20",
+      "measuredVersion": "9.0.21",
       "targets": [
         {
           "target": "@appium/types",
@@ -24857,7 +24792,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "10.1.0",
+      "measuredVersion": "10.1.1",
       "targets": [
         {
           "target": "@appium/types",
@@ -24937,7 +24872,7 @@
     },
     {
       "package": "astro",
-      "measuredVersion": "7.3.3",
+      "measuredVersion": "7.3.4",
       "targets": [
         {
           "target": "typescript",
@@ -26213,7 +26148,7 @@
     },
     {
       "package": "eslint-config-next",
-      "measuredVersion": "16.3.5",
+      "measuredVersion": "16.3.6",
       "targets": [
         {
           "target": "next",
@@ -26432,29 +26367,8 @@
     },
     {
       "package": "eslint-plugin-perfectionist",
-      "measuredVersion": "5.11.1",
+      "measuredVersion": "5.12.0",
       "targets": [
-        {
-          "target": "@typescript-eslint/types",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@typescript-eslint/types"
-          ],
-          "files": [
-            "dist/rules/sort-classes/types.d.ts",
-            "dist/rules/sort-decorators/types.d.ts",
-            "dist/rules/sort-enums/types.d.ts",
-            "dist/rules/sort-import-attributes/types.d.ts",
-            "dist/rules/sort-imports/types.d.ts",
-            "dist/rules/sort-modules/types.d.ts",
-            "dist/rules/sort-named-exports/types.d.ts",
-            "dist/rules/sort-named-imports/types.d.ts"
-          ],
-          "fileCount": 15
-        },
         {
           "target": "typescript",
           "class": "guarded",
@@ -28699,7 +28613,7 @@
     },
     {
       "package": "knip",
-      "measuredVersion": "6.37.0",
+      "measuredVersion": "6.38.0",
       "targets": [
         {
           "target": "vue",
@@ -29552,7 +29466,7 @@
     },
     {
       "package": "motion",
-      "measuredVersion": "13.4.0",
+      "measuredVersion": "13.4.1",
       "targets": [
         {
           "target": "motion-dom",
@@ -29672,7 +29586,7 @@
     },
     {
       "package": "next",
-      "measuredVersion": "16.3.5",
+      "measuredVersion": "16.3.6",
       "targets": [
         {
           "target": "critters",
@@ -29809,7 +29723,7 @@
     },
     {
       "package": "ng-packagr",
-      "measuredVersion": "22.1.1",
+      "measuredVersion": "22.2.0",
       "targets": [
         {
           "target": "@angular/compiler",
@@ -32191,7 +32105,7 @@
     },
     {
       "package": "sass-embedded",
-      "measuredVersion": "1.104.1",
+      "measuredVersion": "1.105.0",
       "targets": [
         {
           "target": "sass",
@@ -32245,7 +32159,7 @@
     },
     {
       "package": "satori",
-      "measuredVersion": "0.33.4",
+      "measuredVersion": "0.33.5",
       "targets": [
         {
           "target": "react",
@@ -33298,7 +33212,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.25.0",
+      "measuredVersion": "59.25.4",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -33310,7 +33224,7 @@
             "@vltpkg/graph"
           ],
           "files": [
-            "dist/chunks/vlt-builder-importer-YVCYYRVV.js"
+            "dist/chunks/vlt-builder-importer-6DGKK72W.js"
           ],
           "fileCount": 1
         },
@@ -33324,7 +33238,7 @@
             "@vltpkg/package-info"
           ],
           "files": [
-            "dist/chunks/vlt-builder-importer-YVCYYRVV.js"
+            "dist/chunks/vlt-builder-importer-6DGKK72W.js"
           ],
           "fileCount": 1
         },
@@ -33338,7 +33252,7 @@
             "@vltpkg/package-json"
           ],
           "files": [
-            "dist/chunks/vlt-builder-importer-YVCYYRVV.js"
+            "dist/chunks/vlt-builder-importer-6DGKK72W.js"
           ],
           "fileCount": 1
         },
@@ -33352,7 +33266,7 @@
             "path-scurry"
           ],
           "files": [
-            "dist/chunks/vlt-builder-importer-YVCYYRVV.js"
+            "dist/chunks/vlt-builder-importer-6DGKK72W.js"
           ],
           "fileCount": 1
         }
@@ -33863,7 +33777,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20260922.1",
+      "measuredVersion": "1.20260923.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -33883,7 +33797,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.136.2",
+      "measuredVersion": "4.136.3",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -34146,10 +34060,18 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.68.0",
+      "measuredVersion": "1.69.0",
       "target": "undici",
       "specifiers": [
         "undici"
+      ]
+    },
+    {
+      "package": "@nestjs/platform-fastify",
+      "measuredVersion": "12.1.0",
+      "target": "rxjs",
+      "specifiers": [
+        "rxjs"
       ]
     },
     {
@@ -34703,7 +34625,7 @@
     },
     {
       "package": "next",
-      "measuredVersion": "16.3.5",
+      "measuredVersion": "16.3.6",
       "target": "critters",
       "specifiers": [
         "critters"
@@ -34926,7 +34848,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.25.0",
+      "measuredVersion": "59.25.4",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -34934,7 +34856,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.25.0",
+      "measuredVersion": "59.25.4",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -34942,7 +34864,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.25.0",
+      "measuredVersion": "59.25.4",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -34950,7 +34872,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.25.0",
+      "measuredVersion": "59.25.4",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"

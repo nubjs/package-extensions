@@ -1579,22 +1579,12 @@
           }
         }
       },
-      "@nestjs/graphql@*": {
+      "@nestjs/platform-fastify@*": {
         "peerDependencies": {
-          "typescript": "*"
+          "rxjs": "*"
         },
         "peerDependenciesMeta": {
-          "typescript": {
-            "optional": true
-          }
-        }
-      },
-      "@nestjs/swagger@*": {
-        "peerDependencies": {
-          "typescript": "*"
-        },
-        "peerDependenciesMeta": {
-          "typescript": {
+          "rxjs": {
             "optional": true
           }
         }
@@ -3154,14 +3144,10 @@
       "@rsbuild/core@*": {
         "peerDependencies": {
           "tsx": "*",
-          "ws": "*",
           "yaml": "*"
         },
         "peerDependenciesMeta": {
           "tsx": {
-            "optional": true
-          },
-          "ws": {
             "optional": true
           },
           "yaml": {
@@ -5288,13 +5274,9 @@
       },
       "eslint-plugin-perfectionist@*": {
         "peerDependencies": {
-          "@typescript-eslint/types": "*",
           "typescript": "*"
         },
         "peerDependenciesMeta": {
-          "@typescript-eslint/types": {
-            "optional": true
-          },
           "typescript": {
             "optional": true
           }

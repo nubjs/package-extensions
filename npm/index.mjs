@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.10 — generated 2026-09-22, do not edit.
-// 779 packages, 1163 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.11 — generated 2026-09-23, do not edit.
+// 778 packages, 1160 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -2006,26 +2006,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "@nestjs/graphql@*",
+  "@nestjs/platform-fastify@*",
   {
    "peerDependencies": {
-    "typescript": "*"
+    "rxjs": "*"
    },
    "peerDependenciesMeta": {
-    "typescript": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@nestjs/swagger@*",
-  {
-   "peerDependencies": {
-    "typescript": "*"
-   },
-   "peerDependenciesMeta": {
-    "typescript": {
+    "rxjs": {
      "optional": true
     }
    }
@@ -3870,14 +3857,10 @@ export const packageExtensions = [
   {
    "peerDependencies": {
     "tsx": "*",
-    "ws": "*",
     "yaml": "*"
    },
    "peerDependenciesMeta": {
     "tsx": {
-     "optional": true
-    },
-    "ws": {
      "optional": true
     },
     "yaml": {
@@ -6451,13 +6434,9 @@ export const packageExtensions = [
   "eslint-plugin-perfectionist@*",
   {
    "peerDependencies": {
-    "@typescript-eslint/types": "*",
     "typescript": "*"
    },
    "peerDependenciesMeta": {
-    "@typescript-eslint/types": {
-     "optional": true
-    },
     "typescript": {
      "optional": true
     }
