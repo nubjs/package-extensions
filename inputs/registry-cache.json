@@ -357,6 +357,7 @@
   "@secretlint/types": true,
   "@sentry-internal/replay-worker": false,
   "@sentry/core": true,
+  "@sentry/opentelemetry": true,
   "@sentry/utils": true,
   "@shopify/flash-list": true,
   "@sigstore/rekor-types": true,

@@ -3237,44 +3237,6 @@
           }
         }
       },
-      "@sentry/react-native@*": {
-        "peerDependencies": {
-          "@expo/config": "*",
-          "@expo/env": "*",
-          "@react-navigation/native": "*",
-          "dotenv": "*",
-          "expo-router": "*",
-          "expo-updates": "*",
-          "open": "*",
-          "promise": "*"
-        },
-        "peerDependenciesMeta": {
-          "@expo/config": {
-            "optional": true
-          },
-          "@expo/env": {
-            "optional": true
-          },
-          "@react-navigation/native": {
-            "optional": true
-          },
-          "dotenv": {
-            "optional": true
-          },
-          "expo-router": {
-            "optional": true
-          },
-          "expo-updates": {
-            "optional": true
-          },
-          "open": {
-            "optional": true
-          },
-          "promise": {
-            "optional": true
-          }
-        }
-      },
       "@sentry/tracing@*": {
         "peerDependencies": {
           "@sentry/core": "*",
@@ -3291,10 +3253,10 @@
       },
       "@sentry/vercel-edge@*": {
         "peerDependencies": {
-          "@opentelemetry/sdk-trace-base": "*"
+          "@sentry/opentelemetry": "*"
         },
         "peerDependenciesMeta": {
-          "@opentelemetry/sdk-trace-base": {
+          "@sentry/opentelemetry": {
             "optional": true
           }
         }

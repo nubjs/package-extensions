@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T11:55:46.965Z",
+  "generatedAt": "2026-09-24T12:02:39.984Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-09-15",
   "end": "2026-09-21",
@@ -266,7 +266,6 @@
     "@scalar/types": 2899565,
     "@secretlint/secretlint-rule-preset-recommend": 997528,
     "@sentry/babel-plugin-component-annotate": 12627947,
-    "@sentry/react-native": 2395039,
     "@sentry/tracing": 1256998,
     "@sentry/vercel-edge": 7247146,
     "@serverless/dashboard-plugin": 488773,

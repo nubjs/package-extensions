@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.11 — generated 2026-09-23, do not edit.
-// 778 packages, 1160 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.12 — generated 2026-09-24, do not edit.
+// 777 packages, 1152 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -3973,47 +3973,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@sentry/react-native@*",
-  {
-   "peerDependencies": {
-    "@expo/config": "*",
-    "@expo/env": "*",
-    "@react-navigation/native": "*",
-    "dotenv": "*",
-    "expo-router": "*",
-    "expo-updates": "*",
-    "open": "*",
-    "promise": "*"
-   },
-   "peerDependenciesMeta": {
-    "@expo/config": {
-     "optional": true
-    },
-    "@expo/env": {
-     "optional": true
-    },
-    "@react-navigation/native": {
-     "optional": true
-    },
-    "dotenv": {
-     "optional": true
-    },
-    "expo-router": {
-     "optional": true
-    },
-    "expo-updates": {
-     "optional": true
-    },
-    "open": {
-     "optional": true
-    },
-    "promise": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@sentry/tracing@*",
   {
    "peerDependencies": {
@@ -4034,10 +3993,10 @@ export const packageExtensions = [
   "@sentry/vercel-edge@*",
   {
    "peerDependencies": {
-    "@opentelemetry/sdk-trace-base": "*"
+    "@sentry/opentelemetry": "*"
    },
    "peerDependenciesMeta": {
-    "@opentelemetry/sdk-trace-base": {
+    "@sentry/opentelemetry": {
      "optional": true
     }
    }

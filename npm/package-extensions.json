@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23",
+ "generated": "2026-09-24",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1160,
-   "packages": 647
+   "entries": 1152,
+   "packages": 646
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
   }
  },
  "totals": {
-  "packages": 778,
-  "selectors": 798,
-  "entries": 1160,
+  "packages": 777,
+  "selectors": 797,
+  "entries": 1152,
   "byClass": {
-   "runtime": 206,
+   "runtime": 205,
    "adapter": 129,
    "types": 526,
    "deep-path": 0,
-   "guarded": 299
+   "guarded": 292
   },
   "byField": {
    "dependency": 28,
-   "peer": 1132
+   "peer": 1124
   },
-  "candidatesForReview": 104,
+  "candidatesForReview": 103,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
@@ -6196,44 +6196,6 @@
     }
    }
   },
-  "@sentry/react-native@*": {
-   "peerDependencies": {
-    "@expo/config": "*",
-    "@expo/env": "*",
-    "@react-navigation/native": "*",
-    "dotenv": "*",
-    "expo-router": "*",
-    "expo-updates": "*",
-    "open": "*",
-    "promise": "*"
-   },
-   "peerDependenciesMeta": {
-    "@expo/config": {
-     "optional": true
-    },
-    "@expo/env": {
-     "optional": true
-    },
-    "@react-navigation/native": {
-     "optional": true
-    },
-    "dotenv": {
-     "optional": true
-    },
-    "expo-router": {
-     "optional": true
-    },
-    "expo-updates": {
-     "optional": true
-    },
-    "open": {
-     "optional": true
-    },
-    "promise": {
-     "optional": true
-    }
-   }
-  },
   "@sentry/tracing@*": {
    "peerDependencies": {
     "@sentry/core": "*",
@@ -6250,10 +6212,10 @@
   },
   "@sentry/vercel-edge@*": {
    "peerDependencies": {
-    "@opentelemetry/sdk-trace-base": "*"
+    "@sentry/opentelemetry": "*"
    },
    "peerDependenciesMeta": {
-    "@opentelemetry/sdk-trace-base": {
+    "@sentry/opentelemetry": {
      "optional": true
     }
    }
@@ -12620,7 +12582,7 @@
   },
   {
    "package": "@angular-devkit/build-angular",
-   "measuredVersion": "22.1.8",
+   "measuredVersion": "22.2.0",
    "targets": [
     {
      "target": "zone.js",
@@ -12696,7 +12658,7 @@
   },
   {
    "package": "@angular/cdk",
-   "measuredVersion": "22.1.7",
+   "measuredVersion": "22.2.0",
    "targets": [
     {
      "target": "@angular-devkit/core",
@@ -12805,7 +12767,7 @@
   },
   {
    "package": "@angular/cli",
-   "measuredVersion": "22.1.8",
+   "measuredVersion": "22.2.0",
    "targets": [
     {
      "target": "typescript",
@@ -12825,7 +12787,7 @@
   },
   {
    "package": "@angular/common",
-   "measuredVersion": "22.1.7",
+   "measuredVersion": "22.2.0",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -12846,7 +12808,7 @@
   },
   {
    "package": "@angular/language-service",
-   "measuredVersion": "22.1.7",
+   "measuredVersion": "22.2.0",
    "targets": [
     {
      "target": "@angular/compiler",
@@ -12913,7 +12875,7 @@
   },
   {
    "package": "@angular/router",
-   "measuredVersion": "22.1.7",
+   "measuredVersion": "22.2.0",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -13439,7 +13401,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.57.3",
+   "measuredVersion": "1.59.0",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13621,7 +13583,7 @@
   },
   {
    "package": "@datadog/flagging-core",
-   "measuredVersion": "3.0.1",
+   "measuredVersion": "3.1.0",
    "targets": [
     {
      "target": "@openfeature/core",
@@ -13948,7 +13910,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.20.5",
+   "measuredVersion": "5.20.8",
    "targets": [
     {
      "target": "react",
@@ -14877,7 +14839,7 @@
   },
   {
    "package": "@google/gemini-cli",
-   "measuredVersion": "0.60.0",
+   "measuredVersion": "0.61.0",
    "targets": [
     {
      "target": "bufferutil",
@@ -18726,7 +18688,7 @@
   },
   {
    "package": "@oclif/core",
-   "measuredVersion": "5.0.0",
+   "measuredVersion": "5.0.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -18968,7 +18930,7 @@
   },
   {
    "package": "@opensearch-project/opensearch",
-   "measuredVersion": "3.6.0",
+   "measuredVersion": "3.9.0",
    "targets": [
     {
      "target": "@aws-sdk/credential-provider-node",
@@ -20521,7 +20483,7 @@
   },
   {
    "package": "@rolldown/binding-wasm32-wasi",
-   "measuredVersion": "1.2.9",
+   "measuredVersion": "1.2.10",
    "targets": [
     {
      "target": "@oxc-project/types",
@@ -20665,7 +20627,7 @@
   },
   {
    "package": "@scalar/openapi-upgrader",
-   "measuredVersion": "0.3.0",
+   "measuredVersion": "0.3.1",
    "targets": [
     {
      "target": "@scalar/types",
@@ -20688,7 +20650,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.21.0",
+   "measuredVersion": "0.22.0",
    "targets": [
     {
      "target": "har-format",
@@ -20762,127 +20724,6 @@
    ]
   },
   {
-   "package": "@sentry/react-native",
-   "measuredVersion": "8.27.0",
-   "targets": [
-    {
-     "target": "@expo/config",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "@expo/config"
-     ],
-     "files": [
-      "dist/js/tools/utils.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "@expo/env",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "@expo/env"
-     ],
-     "files": [
-      "scripts/eas-build-hook.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "@react-navigation/native",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "@react-navigation/native"
-     ],
-     "files": [
-      "dist/js/reactNavigationImport.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "dotenv",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "dotenv"
-     ],
-     "files": [
-      "scripts/eas-build-hook.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "expo-router",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "expo-router/build/global-state/router-store"
-     ],
-     "files": [
-      "dist/js/tracing/expoRouterStore.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "expo-updates",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "expo-updates"
-     ],
-     "files": [
-      "dist/js/integrations/expoupdateslistener.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "open",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "open"
-     ],
-     "files": [
-      "dist/js/metro/openUrlMiddleware.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "promise",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "promise/setimmediate/done",
-      "promise/setimmediate/finally",
-      "promise/setimmediate/es6-extensions",
-      "promise/setimmediate/rejection-tracking"
-     ],
-     "files": [
-      "dist/js/integrations/reactnativeerrorhandlersutils.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "@sentry/tracing",
    "measuredVersion": "7.120.4",
    "targets": [
@@ -20918,16 +20759,16 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "10.75.2",
+   "measuredVersion": "11.0.0",
    "targets": [
     {
-     "target": "@opentelemetry/sdk-trace-base",
+     "target": "@sentry/opentelemetry",
      "class": "types",
      "field": "peer",
      "candidate": false,
      "reason": "types class — no runtime edge, only a declaration-file reference",
      "specifiers": [
-      "@opentelemetry/sdk-trace-base"
+      "@sentry/opentelemetry"
      ],
      "files": [
       "build/types/client.d.ts"
@@ -22153,7 +21994,7 @@
   },
   {
    "package": "@tanstack/react-start-rsc",
-   "measuredVersion": "0.1.56",
+   "measuredVersion": "0.1.57",
    "targets": [
     {
      "target": "vite",
@@ -22945,7 +22786,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "11.0.2",
+   "measuredVersion": "12.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -23022,7 +22863,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "10.0.2",
+   "measuredVersion": "11.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -24345,7 +24186,7 @@
   },
   {
    "package": "ably",
-   "measuredVersion": "2.28.0",
+   "measuredVersion": "2.29.0",
    "targets": [
     {
      "target": "react-native",
@@ -24872,7 +24713,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.3.4",
+   "measuredVersion": "7.3.5",
    "targets": [
     {
      "target": "typescript",
@@ -24913,7 +24754,7 @@
   },
   {
    "package": "aws-cdk",
-   "measuredVersion": "2.1142.0",
+   "measuredVersion": "2.1143.0",
    "targets": [
     {
      "target": "@aws-cdk/cloud-assembly-api",
@@ -25024,7 +24865,7 @@
   },
   {
    "package": "babel-preset-expo",
-   "measuredVersion": "57.0.12",
+   "measuredVersion": "57.0.13",
    "targets": [
     {
      "target": "@babel/core",
@@ -26367,7 +26208,7 @@
   },
   {
    "package": "eslint-plugin-perfectionist",
-   "measuredVersion": "5.12.0",
+   "measuredVersion": "5.12.1",
    "targets": [
     {
      "target": "typescript",
@@ -26441,7 +26282,7 @@
   },
   {
    "package": "eslint-plugin-vue",
-   "measuredVersion": "10.11.0",
+   "measuredVersion": "10.11.1",
    "targets": [
     {
      "target": "eslint-scope",
@@ -26642,7 +26483,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "57.0.12",
+   "measuredVersion": "57.0.13",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27036,7 +26877,7 @@
   },
   {
    "package": "expo-image-manipulator",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27063,7 +26904,7 @@
   },
   {
    "package": "expo-image-picker",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27106,7 +26947,7 @@
   },
   {
    "package": "expo-linking",
-   "measuredVersion": "57.0.10",
+   "measuredVersion": "57.0.11",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27152,7 +26993,7 @@
   },
   {
    "package": "expo-location",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27179,7 +27020,7 @@
   },
   {
    "package": "expo-notifications",
-   "measuredVersion": "57.0.20",
+   "measuredVersion": "57.0.21",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27206,7 +27047,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "57.0.22",
+   "measuredVersion": "57.0.23",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27263,7 +27104,7 @@
   },
   {
    "package": "expo-sharing",
-   "measuredVersion": "57.0.21",
+   "measuredVersion": "57.0.22",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27356,7 +27197,7 @@
   },
   {
    "package": "expo-video",
-   "measuredVersion": "57.0.4",
+   "measuredVersion": "57.0.5",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27529,7 +27370,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.30.2",
+   "measuredVersion": "15.31.0",
    "targets": [
     {
      "target": "astro",
@@ -28864,7 +28705,7 @@
   },
   {
    "package": "lovable-tagger",
-   "measuredVersion": "1.3.3",
+   "measuredVersion": "1.3.4",
    "targets": [
     {
      "target": "@tailwindcss/node",
@@ -29315,7 +29156,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20260921.0-alpha",
+   "measuredVersion": "5.20260921.1-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -29466,7 +29307,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "13.4.1",
+   "measuredVersion": "13.4.3",
    "targets": [
     {
      "target": "motion-dom",
@@ -29703,7 +29544,7 @@
   },
   {
    "package": "next-intl",
-   "measuredVersion": "4.14.6",
+   "measuredVersion": "4.14.7",
    "targets": [
     {
      "target": "webpack",
@@ -29723,7 +29564,7 @@
   },
   {
    "package": "ng-packagr",
-   "measuredVersion": "22.2.0",
+   "measuredVersion": "22.2.1",
    "targets": [
     {
      "target": "@angular/compiler",
@@ -30687,7 +30528,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.52.5",
+   "measuredVersion": "5.53.0",
    "targets": [
     {
      "target": "express",
@@ -31887,7 +31728,7 @@
   },
   {
    "package": "remotion",
-   "measuredVersion": "4.0.527",
+   "measuredVersion": "4.0.528",
    "targets": [
     {
      "target": "zod",
@@ -33212,7 +33053,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.25.4",
+   "measuredVersion": "59.26.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -33658,7 +33499,7 @@
   },
   {
    "package": "vuetify",
-   "measuredVersion": "4.2.1",
+   "measuredVersion": "4.2.2",
    "targets": [
     {
      "target": "@vue/reactivity",
@@ -33777,7 +33618,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260923.1",
+   "measuredVersion": "1.20260924.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33797,7 +33638,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.136.3",
+   "measuredVersion": "4.138.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -33951,7 +33792,7 @@
   },
   {
    "package": "yjs",
-   "measuredVersion": "13.6.32",
+   "measuredVersion": "13.6.33",
    "targets": [
     {
      "target": "y-protocols",
@@ -34236,17 +34077,6 @@
    ]
   },
   {
-   "package": "@sentry/react-native",
-   "measuredVersion": "8.27.0",
-   "target": "promise",
-   "specifiers": [
-    "promise/setimmediate/done",
-    "promise/setimmediate/finally",
-    "promise/setimmediate/es6-extensions",
-    "promise/setimmediate/rejection-tracking"
-   ]
-  },
-  {
    "package": "@storybook/nextjs-vite",
    "measuredVersion": "10.6.0",
    "target": "sb-original",
@@ -34338,7 +34168,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "57.0.12",
+   "measuredVersion": "57.0.13",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34458,7 +34288,7 @@
   },
   {
    "package": "expo-image-manipulator",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core/types",
@@ -34467,7 +34297,7 @@
   },
   {
    "package": "expo-image-picker",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34483,7 +34313,7 @@
   },
   {
    "package": "expo-linking",
-   "measuredVersion": "57.0.10",
+   "measuredVersion": "57.0.11",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34499,14 +34329,6 @@
   },
   {
    "package": "expo-location",
-   "measuredVersion": "57.0.19",
-   "target": "expo-modules-core",
-   "specifiers": [
-    "expo-modules-core"
-   ]
-  },
-  {
-   "package": "expo-notifications",
    "measuredVersion": "57.0.20",
    "target": "expo-modules-core",
    "specifiers": [
@@ -34514,8 +34336,16 @@
    ]
   },
   {
+   "package": "expo-notifications",
+   "measuredVersion": "57.0.21",
+   "target": "expo-modules-core",
+   "specifiers": [
+    "expo-modules-core"
+   ]
+  },
+  {
    "package": "expo-router",
-   "measuredVersion": "57.0.22",
+   "measuredVersion": "57.0.23",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34531,7 +34361,7 @@
   },
   {
    "package": "expo-sharing",
-   "measuredVersion": "57.0.21",
+   "measuredVersion": "57.0.22",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34555,7 +34385,7 @@
   },
   {
    "package": "expo-video",
-   "measuredVersion": "57.0.4",
+   "measuredVersion": "57.0.5",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34571,7 +34401,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.30.2",
+   "measuredVersion": "15.31.0",
    "target": "astro",
    "specifiers": [
     "astro/package.json"
@@ -34579,7 +34409,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.30.2",
+   "measuredVersion": "15.31.0",
    "target": "firebase-functions",
    "specifiers": [
     "firebase-functions",
@@ -34848,7 +34678,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.25.4",
+   "measuredVersion": "59.26.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -34856,7 +34686,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.25.4",
+   "measuredVersion": "59.26.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -34864,7 +34694,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.25.4",
+   "measuredVersion": "59.26.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -34872,7 +34702,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "59.25.4",
+   "measuredVersion": "59.26.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"
