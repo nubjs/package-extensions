@@ -1,5 +1,5 @@
-# Generated 2026-09-24 from the 10000 most-downloaded npm packages.
-# 777 packages, 1152 undeclared dependencies.
+# Generated 2026-09-25 from the 10000 most-downloaded npm packages.
+# 777 packages, 1151 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -850,15 +850,12 @@ packageExtensions:
       "@workflow/serde": "*"
       msw: "*"
       undici: "*"
-      vitest: "*"
     peerDependenciesMeta:
       "@workflow/serde":
         optional: true
       msw:
         optional: true
       undici:
-        optional: true
-      vitest:
         optional: true
   "@mastra/schema-compat@*":
     peerDependencies:

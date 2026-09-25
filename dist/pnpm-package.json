@@ -1361,8 +1361,7 @@
         "peerDependencies": {
           "@workflow/serde": "*",
           "msw": "*",
-          "undici": "*",
-          "vitest": "*"
+          "undici": "*"
         },
         "peerDependenciesMeta": {
           "@workflow/serde": {
@@ -1372,9 +1371,6 @@
             "optional": true
           },
           "undici": {
-            "optional": true
-          },
-          "vitest": {
             "optional": true
           }
         }

@@ -1,15 +1,15 @@
 {
-  "generated": "2026-09-24",
-  "dataset": "8769aa0f3c34ccf6",
+  "generated": "2026-09-25",
+  "dataset": "8a01f0d40fb40d7e",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 8,
-    "notOnImport": 56,
-    "installFailed": 11,
+    "confirmedViaPath": 13,
+    "notOnImport": 60,
+    "installFailed": 2,
     "inconclusive": 3
   },
   "results": [
@@ -146,26 +146,14 @@
     },
     {
       "package": "@mastra/core",
-      "version": "1.69.0",
+      "version": "1.71.0",
       "expected": [
         "@workflow/serde",
         "msw",
-        "undici",
-        "vitest"
+        "undici"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 8,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "zod"
-      ],
-      "byOtherIssuers": [
-        "@ai-sdk/provider-utils -> zod (unprovided peer)",
-        "@mastra/schema-compat -> zod (unprovided peer)"
-      ],
-      "specifiersTried": 34
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.71.0\u001b[39m: All versions satisfying \"1.71.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
     },
     {
       "package": "@nestjs/platform-fastify",
@@ -577,8 +565,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-auth-session\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.13\u001b[39m: All versions satisfying \"57.0.13\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 7,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 8
     },
     {
       "package": "expo-blur",
@@ -794,8 +788,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-image-manipulator\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.20\u001b[39m: All versions satisfying \"57.0.20\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 7,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 8
     },
     {
       "package": "expo-image-picker",
@@ -803,8 +803,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-image-picker\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.20\u001b[39m: All versions satisfying \"57.0.20\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "expo-keep-awake",
@@ -827,8 +833,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-linking\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.11\u001b[39m: All versions satisfying \"57.0.11\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-localization",
@@ -851,8 +863,18 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-location\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.20\u001b[39m: All versions satisfying \"57.0.20\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-notifications",
@@ -860,8 +882,18 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-notifications\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.21\u001b[39m: All versions satisfying \"57.0.21\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-router",
@@ -870,8 +902,18 @@
         "expo-modules-core",
         "react-native-tab-view"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-router\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.23\u001b[39m: All versions satisfying \"57.0.23\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-r"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-secure-store",
@@ -894,8 +936,16 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-sharing\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.22\u001b[39m: All versions satisfying \"57.0.22\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "expo-system-ui",
@@ -935,8 +985,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-video\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.5\u001b[39m: All versions satisfying \"57.0.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-vide"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "expo-web-browser",
@@ -960,8 +1016,16 @@
         "astro",
         "firebase-functions"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mfirebase-tools\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:15.31.0\u001b[39m: All versions satisfying \"15.31.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mfir"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "firebase-functions"
+      ],
+      "citedPathsTried": 9,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 10
     },
     {
       "package": "http-call",
@@ -1324,11 +1388,11 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7066) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-qPW8sA/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7502) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-Wcgxam/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
-      "version": "59.26.0",
+      "version": "60.0.1",
       "expected": [
         "@vltpkg/graph",
         "@vltpkg/package-info",
@@ -1336,7 +1400,7 @@
         "path-scurry"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:59.26.0\u001b[39m: All versions satisfying \"59.26.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:60.0.1\u001b[39m: All versions satisfying \"60.0.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
     }
   ]
 }

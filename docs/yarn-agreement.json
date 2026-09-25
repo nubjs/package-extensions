@@ -5,7 +5,7 @@
     "entries": 159
   },
   "corpus": {
-    "scannedOk": 9981,
+    "scannedOk": 9982,
     "corpusKnown": true
   },
   "buckets": {
@@ -33,7 +33,7 @@
           "vscode-languageserver-protocol"
         ],
         "metaOnly": false,
-        "version": "6.0.0",
+        "version": "6.0.1",
         "undeclared": [
           "vscode-jsonrpc",
           "vscode-languageserver-protocol"

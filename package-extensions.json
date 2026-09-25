@@ -1,14 +1,14 @@
 {
-  "generated": "2026-09-24",
+  "generated": "2026-09-25",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
-    "scannedOk": 9981,
-    "failed": 19
+    "scannedOk": 9982,
+    "failed": 18
   },
   "sources": {
     "scan": {
-      "entries": 1152,
+      "entries": 1151,
       "packages": 646
     },
     "yarn": {
@@ -30,17 +30,17 @@
   "totals": {
     "packages": 777,
     "selectors": 797,
-    "entries": 1152,
+    "entries": 1151,
     "byClass": {
       "runtime": 205,
-      "adapter": 129,
+      "adapter": 128,
       "types": 526,
       "deep-path": 0,
       "guarded": 292
     },
     "byField": {
       "dependency": 28,
-      "peer": 1124
+      "peer": 1123
     },
     "candidatesForReview": 103,
     "droppedUnpublishedTargets": 202,
@@ -4320,8 +4320,7 @@
       "peerDependencies": {
         "@workflow/serde": "*",
         "msw": "*",
-        "undici": "*",
-        "vitest": "*"
+        "undici": "*"
       },
       "peerDependenciesMeta": {
         "@workflow/serde": {
@@ -4331,9 +4330,6 @@
           "optional": true
         },
         "undici": {
-          "optional": true
-        },
-        "vitest": {
           "optional": true
         }
       }
@@ -12965,7 +12961,7 @@
     },
     {
       "package": "@appium/types",
-      "measuredVersion": "1.7.0",
+      "measuredVersion": "1.7.1",
       "targets": [
         {
           "target": "express",
@@ -13401,7 +13397,7 @@
     },
     {
       "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.59.0",
+      "measuredVersion": "1.60.1",
       "targets": [
         {
           "target": "@cloudflare/workers-utils",
@@ -13630,7 +13626,7 @@
     },
     {
       "package": "@dataform/core",
-      "measuredVersion": "3.0.70",
+      "measuredVersion": "3.0.71",
       "targets": [
         {
           "target": "long",
@@ -15690,7 +15686,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.69.0",
+      "measuredVersion": "1.71.0",
       "targets": [
         {
           "target": "@workflow/serde",
@@ -15731,27 +15727,14 @@
             "undici"
           ],
           "files": [
-            "dist/dist-BZl6ZSyX.cjs",
-            "dist/dist-By5NVHlu-DOB-Xr2v.js",
-            "dist/dist-By5NVHlu-GKhUicu3.cjs",
-            "dist/dist-DY_3NEPZ.js"
+            "dist/dist-BKksSoz6.js",
+            "dist/dist-BPzNPEhG.js",
+            "dist/dist-CWofJnzt-BN40ItZT.cjs",
+            "dist/dist-CWofJnzt-CYIIKerc.js",
+            "dist/dist-IIVWR1y9.cjs",
+            "dist/dist-RoOZpG-L.cjs"
           ],
-          "fileCount": 4
-        },
-        {
-          "target": "vitest",
-          "class": "adapter",
-          "field": "peer",
-          "candidate": false,
-          "reason": "adapter class — the consumer picked and installed the backend",
-          "specifiers": [
-            "vitest"
-          ],
-          "files": [
-            "dist/test-utils/llm-mock.cjs",
-            "dist/test-utils/llm-mock.js"
-          ],
-          "fileCount": 2
+          "fileCount": 6
         }
       ]
     },
@@ -16427,7 +16410,7 @@
     },
     {
       "package": "@nuxt/devtools",
-      "measuredVersion": "4.0.0-beta.1",
+      "measuredVersion": "4.0.0-beta.2",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16461,7 +16444,7 @@
     },
     {
       "package": "@nuxt/devtools-kit",
-      "measuredVersion": "4.0.0-beta.1",
+      "measuredVersion": "4.0.0-beta.2",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16474,7 +16457,7 @@
           ],
           "files": [
             "dist/index.d.mts",
-            "dist/shared/devtools-kit.DnliFg83.d.mts",
+            "dist/shared/devtools-kit.Dq3CVYot.d.mts",
             "dist/types.d.mts"
           ],
           "fileCount": 3
@@ -16491,7 +16474,7 @@
           ],
           "files": [
             "dist/index.d.mts",
-            "dist/shared/devtools-kit.DnliFg83.d.mts",
+            "dist/shared/devtools-kit.Dq3CVYot.d.mts",
             "dist/types.d.mts"
           ],
           "fileCount": 3
@@ -16507,7 +16490,7 @@
           ],
           "files": [
             "dist/index.d.mts",
-            "dist/shared/devtools-kit.DnliFg83.d.mts",
+            "dist/shared/devtools-kit.Dq3CVYot.d.mts",
             "dist/types.d.mts"
           ],
           "fileCount": 3
@@ -16552,7 +16535,7 @@
           ],
           "files": [
             "dist/index.d.mts",
-            "dist/shared/devtools-kit.DnliFg83.d.mts",
+            "dist/shared/devtools-kit.Dq3CVYot.d.mts",
             "dist/types.d.mts"
           ],
           "fileCount": 3
@@ -16596,7 +16579,7 @@
           ],
           "files": [
             "dist/index.d.mts",
-            "dist/shared/devtools-kit.DnliFg83.d.mts",
+            "dist/shared/devtools-kit.Dq3CVYot.d.mts",
             "dist/types.d.mts"
           ],
           "fileCount": 3
@@ -16612,7 +16595,7 @@
           ],
           "files": [
             "dist/index.d.mts",
-            "dist/shared/devtools-kit.DnliFg83.d.mts",
+            "dist/shared/devtools-kit.Dq3CVYot.d.mts",
             "dist/types.d.mts"
           ],
           "fileCount": 3
@@ -16630,7 +16613,7 @@
             "dist/index.d.mts",
             "dist/runtime/host-client.mjs",
             "dist/runtime/iframe-client.mjs",
-            "dist/shared/devtools-kit.DnliFg83.d.mts",
+            "dist/shared/devtools-kit.Dq3CVYot.d.mts",
             "dist/types.d.mts"
           ],
           "fileCount": 5
@@ -16646,7 +16629,7 @@
           ],
           "files": [
             "dist/index.d.mts",
-            "dist/shared/devtools-kit.DnliFg83.d.mts",
+            "dist/shared/devtools-kit.Dq3CVYot.d.mts",
             "dist/types.d.mts"
           ],
           "fileCount": 3
@@ -18688,7 +18671,7 @@
     },
     {
       "package": "@oclif/core",
-      "measuredVersion": "5.0.1",
+      "measuredVersion": "5.1.0",
       "targets": [
         {
           "target": "pnpapi",
@@ -20245,7 +20228,7 @@
     },
     {
       "package": "@redocly/openapi-core",
-      "measuredVersion": "2.54.2",
+      "measuredVersion": "2.54.3",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20268,7 +20251,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.54.2",
+      "measuredVersion": "2.54.3",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20483,7 +20466,7 @@
     },
     {
       "package": "@rolldown/binding-wasm32-wasi",
-      "measuredVersion": "1.2.10",
+      "measuredVersion": "1.2.11",
       "targets": [
         {
           "target": "@oxc-project/types",
@@ -20627,7 +20610,7 @@
     },
     {
       "package": "@scalar/openapi-upgrader",
-      "measuredVersion": "0.3.1",
+      "measuredVersion": "0.4.0",
       "targets": [
         {
           "target": "@scalar/types",
@@ -20650,7 +20633,7 @@
     },
     {
       "package": "@scalar/types",
-      "measuredVersion": "0.22.0",
+      "measuredVersion": "0.22.1",
       "targets": [
         {
           "target": "har-format",
@@ -22320,7 +22303,7 @@
     },
     {
       "package": "@turbo/gen",
-      "measuredVersion": "2.11.3",
+      "measuredVersion": "2.11.4",
       "targets": [
         {
           "target": "kerberos",
@@ -22724,7 +22707,7 @@
     },
     {
       "package": "@uiw/codemirror-themes",
-      "measuredVersion": "4.25.11",
+      "measuredVersion": "4.25.12",
       "targets": [
         {
           "target": "style-mod",
@@ -22786,7 +22769,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "12.0.0",
+      "measuredVersion": "13.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -22863,7 +22846,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "11.0.0",
+      "measuredVersion": "12.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -24633,7 +24616,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "10.1.1",
+      "measuredVersion": "10.2.0",
       "targets": [
         {
           "target": "@appium/types",
@@ -25436,7 +25419,7 @@
     },
     {
       "package": "dd-trace",
-      "measuredVersion": "6.16.0",
+      "measuredVersion": "6.17.0",
       "targets": [
         {
           "target": "@vitest/runner",
@@ -27562,7 +27545,7 @@
     },
     {
       "package": "graphql-ws",
-      "measuredVersion": "6.2.2",
+      "measuredVersion": "6.3.0",
       "targets": [
         {
           "target": "bun",
@@ -28705,7 +28688,7 @@
     },
     {
       "package": "lovable-tagger",
-      "measuredVersion": "1.3.4",
+      "measuredVersion": "1.3.5",
       "targets": [
         {
           "target": "@tailwindcss/node",
@@ -29156,7 +29139,7 @@
     },
     {
       "package": "miniflare",
-      "measuredVersion": "5.20260921.1-alpha",
+      "measuredVersion": "5.20260923.0-alpha",
       "targets": [
         {
           "target": "@cloudflare/config",
@@ -29307,7 +29290,7 @@
     },
     {
       "package": "motion",
-      "measuredVersion": "13.4.3",
+      "measuredVersion": "13.4.4",
       "targets": [
         {
           "target": "motion-dom",
@@ -31728,7 +31711,7 @@
     },
     {
       "package": "remotion",
-      "measuredVersion": "4.0.528",
+      "measuredVersion": "4.0.529",
       "targets": [
         {
           "target": "zod",
@@ -31749,7 +31732,7 @@
     },
     {
       "package": "resend",
-      "measuredVersion": "6.28.1",
+      "measuredVersion": "6.29.0",
       "targets": [
         {
           "target": "react",
@@ -32748,7 +32731,7 @@
     },
     {
       "package": "typescript-language-server",
-      "measuredVersion": "6.0.0",
+      "measuredVersion": "6.0.1",
       "targets": [
         {
           "target": "typescript",
@@ -33053,7 +33036,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.26.0",
+      "measuredVersion": "60.0.1",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -33135,7 +33118,7 @@
     },
     {
       "package": "vite",
-      "measuredVersion": "8.3.0",
+      "measuredVersion": "8.3.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -33307,7 +33290,7 @@
     },
     {
       "package": "vitest",
-      "measuredVersion": "5.0.1",
+      "measuredVersion": "5.0.2",
       "targets": [
         {
           "target": "bufferutil",
@@ -33319,7 +33302,7 @@
             "bufferutil"
           ],
           "files": [
-            "dist/chunks/index.DzobfTyw.js"
+            "dist/chunks/index.C-uw7tH9.js"
           ],
           "fileCount": 1
         },
@@ -33333,7 +33316,7 @@
             "utf-8-validate"
           ],
           "files": [
-            "dist/chunks/index.DzobfTyw.js"
+            "dist/chunks/index.C-uw7tH9.js"
           ],
           "fileCount": 1
         }
@@ -33618,7 +33601,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20260924.1",
+      "measuredVersion": "1.20260925.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -33638,7 +33621,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.138.0",
+      "measuredVersion": "4.140.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -33901,7 +33884,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.69.0",
+      "measuredVersion": "1.71.0",
       "target": "undici",
       "specifiers": [
         "undici"
@@ -34678,7 +34661,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.26.0",
+      "measuredVersion": "60.0.1",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -34686,7 +34669,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.26.0",
+      "measuredVersion": "60.0.1",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -34694,7 +34677,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.26.0",
+      "measuredVersion": "60.0.1",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -34702,7 +34685,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "59.26.0",
+      "measuredVersion": "60.0.1",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"
