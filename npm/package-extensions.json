@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25",
+ "generated": "2026-09-26",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,7 +8,7 @@
  },
  "sources": {
   "scan": {
-   "entries": 1151,
+   "entries": 1152,
    "packages": 646
   },
   "yarn": {
@@ -30,9 +30,9 @@
  "totals": {
   "packages": 777,
   "selectors": 797,
-  "entries": 1151,
+  "entries": 1152,
   "byClass": {
-   "runtime": 205,
+   "runtime": 206,
    "adapter": 128,
    "types": 526,
    "deep-path": 0,
@@ -40,9 +40,9 @@
   },
   "byField": {
    "dependency": 28,
-   "peer": 1123
+   "peer": 1124
   },
-  "candidatesForReview": 103,
+  "candidatesForReview": 104,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
@@ -8983,10 +8983,14 @@
   },
   "jest-preset-angular@*": {
    "peerDependencies": {
-    "@jest/transform": "*"
+    "@jest/transform": "*",
+    "tslib": "*"
    },
    "peerDependenciesMeta": {
     "@jest/transform": {
+     "optional": true
+    },
+    "tslib": {
      "optional": true
     }
    }
@@ -13397,7 +13401,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.60.1",
+   "measuredVersion": "1.60.2",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13579,7 +13583,7 @@
   },
   {
    "package": "@datadog/flagging-core",
-   "measuredVersion": "3.1.0",
+   "measuredVersion": "3.1.1",
    "targets": [
     {
      "target": "@openfeature/core",
@@ -14232,7 +14236,7 @@
   },
   {
    "package": "@fastify/static",
-   "measuredVersion": "10.1.4",
+   "measuredVersion": "10.1.5",
    "targets": [
     {
      "target": "fastify",
@@ -15609,7 +15613,7 @@
   },
   {
    "package": "@mantine/hooks",
-   "measuredVersion": "9.6.2",
+   "measuredVersion": "9.6.3",
    "targets": [
     {
      "target": "react-dom",
@@ -18671,7 +18675,7 @@
   },
   {
    "package": "@oclif/core",
-   "measuredVersion": "5.1.0",
+   "measuredVersion": "5.1.2",
    "targets": [
     {
      "target": "pnpapi",
@@ -19400,7 +19404,7 @@
   },
   {
    "package": "@pulumi/pulumi",
-   "measuredVersion": "3.264.0",
+   "measuredVersion": "3.265.0",
    "targets": [
     {
      "target": "@microsoft/typescript-etw",
@@ -20181,7 +20185,7 @@
   },
   {
    "package": "@redocly/config",
-   "measuredVersion": "0.57.0",
+   "measuredVersion": "0.58.0",
    "targets": [
     {
      "target": "@markdoc/markdoc",
@@ -20653,7 +20657,7 @@
   },
   {
    "package": "@secretlint/secretlint-rule-preset-recommend",
-   "measuredVersion": "13.0.5",
+   "measuredVersion": "13.0.6",
    "targets": [
     {
      "target": "@secretlint/secretlint-rule-aws",
@@ -22769,7 +22773,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "13.0.0",
+   "measuredVersion": "14.0.1",
    "targets": [
     {
      "target": "encoding",
@@ -22846,7 +22850,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "12.0.0",
+   "measuredVersion": "13.0.1",
    "targets": [
     {
      "target": "encoding",
@@ -24969,7 +24973,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.8",
+   "measuredVersion": "6.3.9",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -28102,7 +28106,7 @@
   },
   {
    "package": "jest-preset-angular",
-   "measuredVersion": "17.0.0",
+   "measuredVersion": "17.0.1",
    "targets": [
     {
      "target": "@jest/transform",
@@ -28117,6 +28121,23 @@
       "build/ng-jest-transformer.d.ts"
      ],
      "fileCount": 1
+    },
+    {
+     "target": "tslib",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "tslib"
+     ],
+     "files": [
+      "build/compiler/ng-jest-compiler.js",
+      "build/environments/jest-jsdom-env.js",
+      "build/presets/utils.js",
+      "build/transformers/replace-resources.js"
+     ],
+     "fileCount": 4
     }
    ]
   },
@@ -28601,7 +28622,7 @@
   },
   {
    "package": "lib0",
-   "measuredVersion": "0.2.117",
+   "measuredVersion": "0.2.118",
    "targets": [
     {
      "target": "isomorphic-webcrypto",
@@ -29139,7 +29160,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20260923.0-alpha",
+   "measuredVersion": "5.20260925.0-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -30511,7 +30532,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.53.0",
+   "measuredVersion": "5.54.1",
    "targets": [
     {
      "target": "express",
@@ -30677,7 +30698,7 @@
   },
   {
    "package": "prosemirror-changeset",
-   "measuredVersion": "2.4.3",
+   "measuredVersion": "2.4.4",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -31732,7 +31753,7 @@
   },
   {
    "package": "resend",
-   "measuredVersion": "6.29.0",
+   "measuredVersion": "6.30.0",
    "targets": [
     {
      "target": "react",
@@ -33036,7 +33057,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.0.1",
+   "measuredVersion": "60.1.3",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -33048,7 +33069,7 @@
       "@vltpkg/graph"
      ],
      "files": [
-      "dist/chunks/vlt-builder-importer-6DGKK72W.js"
+      "dist/chunks/vlt-builder-importer-QEWS6M2P.js"
      ],
      "fileCount": 1
     },
@@ -33062,7 +33083,7 @@
       "@vltpkg/package-info"
      ],
      "files": [
-      "dist/chunks/vlt-builder-importer-6DGKK72W.js"
+      "dist/chunks/vlt-builder-importer-QEWS6M2P.js"
      ],
      "fileCount": 1
     },
@@ -33076,7 +33097,7 @@
       "@vltpkg/package-json"
      ],
      "files": [
-      "dist/chunks/vlt-builder-importer-6DGKK72W.js"
+      "dist/chunks/vlt-builder-importer-QEWS6M2P.js"
      ],
      "fileCount": 1
     },
@@ -33090,7 +33111,7 @@
       "path-scurry"
      ],
      "files": [
-      "dist/chunks/vlt-builder-importer-6DGKK72W.js"
+      "dist/chunks/vlt-builder-importer-QEWS6M2P.js"
      ],
      "fileCount": 1
     }
@@ -33601,7 +33622,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260925.1",
+   "measuredVersion": "1.20260926.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33621,7 +33642,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.140.0",
+   "measuredVersion": "4.141.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -34421,6 +34442,14 @@
    ]
   },
   {
+   "package": "jest-preset-angular",
+   "measuredVersion": "17.0.1",
+   "target": "tslib",
+   "specifiers": [
+    "tslib"
+   ]
+  },
+  {
    "package": "knex",
    "measuredVersion": "3.3.0",
    "target": "oracledb",
@@ -34661,7 +34690,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.0.1",
+   "measuredVersion": "60.1.3",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -34669,7 +34698,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.0.1",
+   "measuredVersion": "60.1.3",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -34677,7 +34706,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.0.1",
+   "measuredVersion": "60.1.3",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -34685,7 +34714,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.0.1",
+   "measuredVersion": "60.1.3",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"

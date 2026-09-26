@@ -6024,10 +6024,14 @@
       },
       "jest-preset-angular@*": {
         "peerDependencies": {
-          "@jest/transform": "*"
+          "@jest/transform": "*",
+          "tslib": "*"
         },
         "peerDependenciesMeta": {
           "@jest/transform": {
+            "optional": true
+          },
+          "tslib": {
             "optional": true
           }
         }
