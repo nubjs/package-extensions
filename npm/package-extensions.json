@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26",
+ "generated": "2026-09-27",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -13830,7 +13830,7 @@
   },
   {
    "package": "@electron/asar",
-   "measuredVersion": "4.3.0",
+   "measuredVersion": "4.3.1",
    "targets": [
     {
      "target": "original-fs",
@@ -15893,7 +15893,7 @@
   },
   {
    "package": "@module-federation/managers",
-   "measuredVersion": "2.9.1",
+   "measuredVersion": "2.9.2",
    "targets": [
     {
      "target": "webpack",
@@ -15914,7 +15914,7 @@
   },
   {
    "package": "@module-federation/manifest",
-   "measuredVersion": "2.9.1",
+   "measuredVersion": "2.9.2",
    "targets": [
     {
      "target": "webpack",
@@ -15936,7 +15936,7 @@
   },
   {
    "package": "@module-federation/sdk",
-   "measuredVersion": "2.9.1",
+   "measuredVersion": "2.9.2",
    "targets": [
     {
      "target": "webpack",
@@ -15957,7 +15957,7 @@
   },
   {
    "package": "@module-federation/webpack-bundler-runtime",
-   "measuredVersion": "2.9.1",
+   "measuredVersion": "2.9.2",
    "targets": [
     {
      "target": "@module-federation/runtime-core",
@@ -20490,7 +20490,7 @@
   },
   {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.2.9",
+   "measuredVersion": "2.2.10",
    "targets": [
     {
      "target": "tsx",
@@ -33622,7 +33622,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260926.1",
+   "measuredVersion": "1.20260927.1",
    "targets": [
     {
      "target": "pnpapi",

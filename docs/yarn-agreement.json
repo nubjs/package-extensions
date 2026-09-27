@@ -732,7 +732,7 @@
           "utf-8-validate"
         ],
         "metaOnly": false,
-        "version": "8.21.3",
+        "version": "8.22.0",
         "why": "the package now declares every target"
       },
       {
