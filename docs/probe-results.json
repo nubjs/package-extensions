@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-27",
-  "dataset": "9e81671498847ef5",
+  "generated": "2026-09-28",
+  "dataset": "31b00a83db4f9b8f",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,25 +8,19 @@
   "tally": {
     "confirmed": 4,
     "confirmedViaPath": 15,
-    "notOnImport": 61,
-    "installFailed": 0,
+    "notOnImport": 59,
+    "installFailed": 3,
     "inconclusive": 3
   },
   "results": [
     {
       "package": "@applitools/spec-driver-webdriver",
-      "version": "1.6.10",
+      "version": "1.6.11",
       "expected": [
         "@applitools/test-utils"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@applitools/\u001b[39m\u001b[38;5;173mspec-driver-webdriver\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.6.11\u001b[39m: All versions satisfying \"1.6.11\" are quarantined\n::endgroup::\n\u001b"
     },
     {
       "package": "@ardatan/relay-compiler",
@@ -168,20 +162,12 @@
     },
     {
       "package": "@nestjs/platform-fastify",
-      "version": "12.1.0",
+      "version": "12.1.1",
       "expected": [
         "rxjs"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "@nestjs/common"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nestjs/\u001b[39m\u001b[38;5;173mplatform-fastify\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:12.1.1\u001b[39m: All versions satisfying \"12.1.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39"
     },
     {
       "package": "@newrelic/security-agent",
@@ -1260,6 +1246,15 @@
       "specifiersTried": 8
     },
     {
+      "package": "postcss-merge-longhand",
+      "version": "9.1.0",
+      "expected": [
+        "@csstools/css-tokenizer"
+      ],
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mpostcss-merge-longhand\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:9.1.0\u001b[39m: All versions satisfying \"9.1.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173"
+    },
+    {
       "package": "prettier-plugin-organize-imports",
       "version": "4.3.0",
       "expected": [
@@ -1419,7 +1414,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7538) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-lk7u0e/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7463) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-OIMSWw/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",

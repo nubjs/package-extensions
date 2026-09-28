@@ -4891,16 +4891,6 @@
           }
         }
       },
-      "cssnano-utils@*": {
-        "peerDependencies": {
-          "postcss-value-parser": "*"
-        },
-        "peerDependenciesMeta": {
-          "postcss-value-parser": {
-            "optional": true
-          }
-        }
-      },
       "cypress@*": {
         "peerDependencies": {
           "@angular/common": "*",
@@ -6962,6 +6952,16 @@
         },
         "peerDependenciesMeta": {
           "sugarss": {
+            "optional": true
+          }
+        }
+      },
+      "postcss-merge-longhand@*": {
+        "peerDependencies": {
+          "@csstools/css-tokenizer": "*"
+        },
+        "peerDependenciesMeta": {
+          "@csstools/css-tokenizer": {
             "optional": true
           }
         }

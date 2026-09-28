@@ -71,6 +71,7 @@
   "@codemirror/autocomplete": true,
   "@codemirror/lint": true,
   "@codemirror/view": true,
+  "@csstools/css-tokenizer": true,
   "@datadog/mobile-react-native": true,
   "@docusaurus/ErrorBoundary": false,
   "@docusaurus/Head": false,

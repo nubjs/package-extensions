@@ -1,4 +1,4 @@
-// @nubjs/extensions 1.0.15 — generated 2026-09-27, do not edit.
+// @nubjs/extensions 1.0.15 — generated 2026-09-28, do not edit.
 // 777 packages, 1152 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
@@ -5977,19 +5977,6 @@ exports.packageExtensions = [
   }
  ],
  [
-  "cssnano-utils@*",
-  {
-   "peerDependencies": {
-    "postcss-value-parser": "*"
-   },
-   "peerDependenciesMeta": {
-    "postcss-value-parser": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "cypress@*",
   {
    "peerDependencies": {
@@ -8535,6 +8522,19 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "sugarss": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "postcss-merge-longhand@*",
+  {
+   "peerDependencies": {
+    "@csstools/css-tokenizer": "*"
+   },
+   "peerDependenciesMeta": {
+    "@csstools/css-tokenizer": {
      "optional": true
     }
    }

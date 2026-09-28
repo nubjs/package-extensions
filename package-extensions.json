@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27",
+  "generated": "2026-09-28",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -32,9 +32,9 @@
     "selectors": 797,
     "entries": 1152,
     "byClass": {
-      "runtime": 206,
+      "runtime": 207,
       "adapter": 128,
-      "types": 526,
+      "types": 525,
       "deep-path": 0,
       "guarded": 292
     },
@@ -42,7 +42,7 @@
       "dependency": 28,
       "peer": 1124
     },
-    "candidatesForReview": 104,
+    "candidatesForReview": 105,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 1,
     "droppedUnresolvedTargets": 0,
@@ -7850,16 +7850,6 @@
         }
       }
     },
-    "cssnano-utils@*": {
-      "peerDependencies": {
-        "postcss-value-parser": "*"
-      },
-      "peerDependenciesMeta": {
-        "postcss-value-parser": {
-          "optional": true
-        }
-      }
-    },
     "cypress@*": {
       "peerDependencies": {
         "@angular/common": "*",
@@ -9921,6 +9911,16 @@
       },
       "peerDependenciesMeta": {
         "sugarss": {
+          "optional": true
+        }
+      }
+    },
+    "postcss-merge-longhand@*": {
+      "peerDependencies": {
+        "@csstools/css-tokenizer": "*"
+      },
+      "peerDependenciesMeta": {
+        "@csstools/css-tokenizer": {
           "optional": true
         }
       }
@@ -12522,7 +12522,7 @@
     },
     {
       "package": "@algolia/autocomplete-core",
-      "measuredVersion": "1.19.11",
+      "measuredVersion": "1.19.12",
       "targets": [
         {
           "target": "@algolia/client-search",
@@ -12999,7 +12999,7 @@
     },
     {
       "package": "@applitools/spec-driver-webdriver",
-      "measuredVersion": "1.6.10",
+      "measuredVersion": "1.6.11",
       "targets": [
         {
           "target": "@applitools/test-utils",
@@ -13379,7 +13379,7 @@
     },
     {
       "package": "@base44/vite-plugin",
-      "measuredVersion": "1.0.42",
+      "measuredVersion": "1.0.44",
       "targets": [
         {
           "target": "vite",
@@ -13401,7 +13401,7 @@
     },
     {
       "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.60.2",
+      "measuredVersion": "1.61.0",
       "targets": [
         {
           "target": "@cloudflare/workers-utils",
@@ -13910,7 +13910,7 @@
     },
     {
       "package": "@eslint-react/shared",
-      "measuredVersion": "5.20.8",
+      "measuredVersion": "5.21.1",
       "targets": [
         {
           "target": "react",
@@ -14915,7 +14915,7 @@
     },
     {
       "package": "@graphql-codegen/plugin-helpers",
-      "measuredVersion": "7.3.0",
+      "measuredVersion": "7.4.0",
       "targets": [
         {
           "target": "@graphql-tools/apollo-engine-loader",
@@ -15831,7 +15831,7 @@
     },
     {
       "package": "@mendable/firecrawl-js",
-      "measuredVersion": "4.41.0",
+      "measuredVersion": "4.42.0",
       "targets": [
         {
           "target": "undici",
@@ -16141,7 +16141,7 @@
     },
     {
       "package": "@nestjs/core",
-      "measuredVersion": "12.1.0",
+      "measuredVersion": "12.1.1",
       "targets": [
         {
           "target": "@standard-schema/spec",
@@ -16161,7 +16161,7 @@
     },
     {
       "package": "@nestjs/platform-fastify",
-      "measuredVersion": "12.1.0",
+      "measuredVersion": "12.1.1",
       "targets": [
         {
           "target": "rxjs",
@@ -20914,7 +20914,7 @@
     },
     {
       "package": "@solana/sysvars",
-      "measuredVersion": "8.3.0",
+      "measuredVersion": "8.4.0",
       "targets": [
         {
           "target": "@solana/addresses",
@@ -21981,7 +21981,7 @@
     },
     {
       "package": "@tanstack/react-start-rsc",
-      "measuredVersion": "0.1.57",
+      "measuredVersion": "0.1.58",
       "targets": [
         {
           "target": "vite",
@@ -22022,7 +22022,7 @@
     },
     {
       "package": "@tanstack/router-plugin",
-      "measuredVersion": "1.168.40",
+      "measuredVersion": "1.168.41",
       "targets": [
         {
           "target": "@tanstack/virtual-file-routes",
@@ -22068,7 +22068,7 @@
     },
     {
       "package": "@tanstack/start-server-core",
-      "measuredVersion": "1.169.37",
+      "measuredVersion": "1.169.38",
       "targets": [
         {
           "target": "@standard-schema/spec",
@@ -22307,7 +22307,7 @@
     },
     {
       "package": "@turbo/gen",
-      "measuredVersion": "2.11.4",
+      "measuredVersion": "2.11.5",
       "targets": [
         {
           "target": "kerberos",
@@ -25223,26 +25223,6 @@
       ]
     },
     {
-      "package": "cssnano-utils",
-      "measuredVersion": "7.0.3",
-      "targets": [
-        {
-          "target": "postcss-value-parser",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "postcss-value-parser"
-          ],
-          "files": [
-            "types/getArguments.d.ts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "cypress",
       "measuredVersion": "16.1.0",
       "targets": [
@@ -26387,7 +26367,7 @@
     },
     {
       "package": "expect-webdriverio",
-      "measuredVersion": "6.1.0",
+      "measuredVersion": "7.0.0",
       "targets": [
         {
           "target": "@wdio/types",
@@ -29160,7 +29140,7 @@
     },
     {
       "package": "miniflare",
-      "measuredVersion": "5.20260925.0-alpha",
+      "measuredVersion": "5.20260926.0-alpha",
       "targets": [
         {
           "target": "@cloudflare/config",
@@ -29568,7 +29548,7 @@
     },
     {
       "package": "ng-packagr",
-      "measuredVersion": "22.2.1",
+      "measuredVersion": "22.2.2",
       "targets": [
         {
           "target": "@angular/compiler",
@@ -30525,6 +30505,26 @@
           ],
           "files": [
             "lib/process-content.js"
+          ],
+          "fileCount": 1
+        }
+      ]
+    },
+    {
+      "package": "postcss-merge-longhand",
+      "measuredVersion": "9.1.0",
+      "targets": [
+        {
+          "target": "@csstools/css-tokenizer",
+          "class": "runtime",
+          "field": "peer",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "specifiers": [
+            "@csstools/css-tokenizer"
+          ],
+          "files": [
+            "src/lib/unresolved.js"
           ],
           "fileCount": 1
         }
@@ -32068,7 +32068,7 @@
     },
     {
       "package": "sharp",
-      "measuredVersion": "0.35.4",
+      "measuredVersion": "0.35.5",
       "targets": [
         {
           "target": "@img/sharp-libvips-dev",
@@ -33622,7 +33622,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20260927.1",
+      "measuredVersion": "1.20260928.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -33642,7 +33642,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.141.0",
+      "measuredVersion": "4.142.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -33839,7 +33839,7 @@
   "candidates": [
     {
       "package": "@applitools/spec-driver-webdriver",
-      "measuredVersion": "1.6.10",
+      "measuredVersion": "1.6.11",
       "target": "@applitools/test-utils",
       "specifiers": [
         "@applitools/test-utils/src/parse-env"
@@ -33913,7 +33913,7 @@
     },
     {
       "package": "@nestjs/platform-fastify",
-      "measuredVersion": "12.1.0",
+      "measuredVersion": "12.1.1",
       "target": "rxjs",
       "specifiers": [
         "rxjs"
@@ -34571,6 +34571,14 @@
       "specifiers": [
         "chromium-bidi/lib/cjs/bidiMapper/BidiMapper",
         "chromium-bidi/lib/cjs/cdp/CdpConnection"
+      ]
+    },
+    {
+      "package": "postcss-merge-longhand",
+      "measuredVersion": "9.1.0",
+      "target": "@csstools/css-tokenizer",
+      "specifiers": [
+        "@csstools/css-tokenizer"
       ]
     },
     {

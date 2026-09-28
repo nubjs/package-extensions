@@ -1,4 +1,4 @@
-# Generated 2026-09-27 from the 10000 most-downloaded npm packages.
+# Generated 2026-09-28 from the 10000 most-downloaded npm packages.
 # 777 packages, 1152 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
@@ -3144,12 +3144,6 @@ packageExtensions:
         optional: true
       bun:
         optional: true
-  cssnano-utils@*:
-    peerDependencies:
-      postcss-value-parser: "*"
-    peerDependenciesMeta:
-      postcss-value-parser:
-        optional: true
   cypress@*:
     peerDependencies:
       "@angular/common": "*"
@@ -4458,6 +4452,12 @@ packageExtensions:
       sugarss: "*"
     peerDependenciesMeta:
       sugarss:
+        optional: true
+  postcss-merge-longhand@*:
+    peerDependencies:
+      "@csstools/css-tokenizer": "*"
+    peerDependenciesMeta:
+      "@csstools/css-tokenizer":
         optional: true
   posthog-node@*:
     peerDependencies:
