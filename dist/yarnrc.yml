@@ -1,5 +1,5 @@
-# Generated 2026-09-28 from the 10000 most-downloaded npm packages.
-# 777 packages, 1152 undeclared dependencies.
+# Generated 2026-09-29 from the 10000 most-downloaded npm packages.
+# 777 packages, 1155 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -4378,14 +4378,20 @@ packageExtensions:
   oxc-minify@*:
     peerDependencies:
       "@oxc-minify/binding-wasm32-wasi": "*"
+      "@oxc-minify/binding-wasm32-wasip1": "*"
     peerDependenciesMeta:
       "@oxc-minify/binding-wasm32-wasi":
+        optional: true
+      "@oxc-minify/binding-wasm32-wasip1":
         optional: true
   oxc-parser@*:
     peerDependencies:
       "@oxc-parser/binding-wasm32-wasi": "*"
+      "@oxc-parser/binding-wasm32-wasip1": "*"
     peerDependenciesMeta:
       "@oxc-parser/binding-wasm32-wasi":
+        optional: true
+      "@oxc-parser/binding-wasm32-wasip1":
         optional: true
   oxc-resolver@*:
     peerDependencies:
@@ -4396,8 +4402,11 @@ packageExtensions:
   oxc-transform@*:
     peerDependencies:
       "@oxc-transform/binding-wasm32-wasi": "*"
+      "@oxc-transform/binding-wasm32-wasip1": "*"
     peerDependenciesMeta:
       "@oxc-transform/binding-wasm32-wasi":
+        optional: true
+      "@oxc-transform/binding-wasm32-wasip1":
         optional: true
   package-json@*:
     peerDependencies:
@@ -4454,11 +4463,8 @@ packageExtensions:
       sugarss:
         optional: true
   postcss-merge-longhand@*:
-    peerDependencies:
+    dependencies:
       "@csstools/css-tokenizer": "*"
-    peerDependenciesMeta:
-      "@csstools/css-tokenizer":
-        optional: true
   posthog-node@*:
     peerDependencies:
       express: "*"

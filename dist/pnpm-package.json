@@ -6834,20 +6834,28 @@
       },
       "oxc-minify@*": {
         "peerDependencies": {
-          "@oxc-minify/binding-wasm32-wasi": "*"
+          "@oxc-minify/binding-wasm32-wasi": "*",
+          "@oxc-minify/binding-wasm32-wasip1": "*"
         },
         "peerDependenciesMeta": {
           "@oxc-minify/binding-wasm32-wasi": {
+            "optional": true
+          },
+          "@oxc-minify/binding-wasm32-wasip1": {
             "optional": true
           }
         }
       },
       "oxc-parser@*": {
         "peerDependencies": {
-          "@oxc-parser/binding-wasm32-wasi": "*"
+          "@oxc-parser/binding-wasm32-wasi": "*",
+          "@oxc-parser/binding-wasm32-wasip1": "*"
         },
         "peerDependenciesMeta": {
           "@oxc-parser/binding-wasm32-wasi": {
+            "optional": true
+          },
+          "@oxc-parser/binding-wasm32-wasip1": {
             "optional": true
           }
         }
@@ -6864,10 +6872,14 @@
       },
       "oxc-transform@*": {
         "peerDependencies": {
-          "@oxc-transform/binding-wasm32-wasi": "*"
+          "@oxc-transform/binding-wasm32-wasi": "*",
+          "@oxc-transform/binding-wasm32-wasip1": "*"
         },
         "peerDependenciesMeta": {
           "@oxc-transform/binding-wasm32-wasi": {
+            "optional": true
+          },
+          "@oxc-transform/binding-wasm32-wasip1": {
             "optional": true
           }
         }
@@ -6957,13 +6969,8 @@
         }
       },
       "postcss-merge-longhand@*": {
-        "peerDependencies": {
+        "dependencies": {
           "@csstools/css-tokenizer": "*"
-        },
-        "peerDependenciesMeta": {
-          "@csstools/css-tokenizer": {
-            "optional": true
-          }
         }
       },
       "posthog-node@*": {

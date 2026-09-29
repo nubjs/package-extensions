@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-28",
+ "generated": "2026-09-29",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,7 +8,7 @@
  },
  "sources": {
   "scan": {
-   "entries": 1152,
+   "entries": 1155,
    "packages": 646
   },
   "yarn": {
@@ -30,19 +30,19 @@
  "totals": {
   "packages": 777,
   "selectors": 797,
-  "entries": 1152,
+  "entries": 1155,
   "byClass": {
    "runtime": 207,
    "adapter": 128,
    "types": 525,
    "deep-path": 0,
-   "guarded": 292
+   "guarded": 295
   },
   "byField": {
-   "dependency": 28,
-   "peer": 1124
+   "dependency": 29,
+   "peer": 1126
   },
-  "candidatesForReview": 105,
+  "candidatesForReview": 104,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
@@ -9793,20 +9793,28 @@
   },
   "oxc-minify@*": {
    "peerDependencies": {
-    "@oxc-minify/binding-wasm32-wasi": "*"
+    "@oxc-minify/binding-wasm32-wasi": "*",
+    "@oxc-minify/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-minify/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-minify/binding-wasm32-wasip1": {
      "optional": true
     }
    }
   },
   "oxc-parser@*": {
    "peerDependencies": {
-    "@oxc-parser/binding-wasm32-wasi": "*"
+    "@oxc-parser/binding-wasm32-wasi": "*",
+    "@oxc-parser/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-parser/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-parser/binding-wasm32-wasip1": {
      "optional": true
     }
    }
@@ -9823,10 +9831,14 @@
   },
   "oxc-transform@*": {
    "peerDependencies": {
-    "@oxc-transform/binding-wasm32-wasi": "*"
+    "@oxc-transform/binding-wasm32-wasi": "*",
+    "@oxc-transform/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-transform/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-transform/binding-wasm32-wasip1": {
      "optional": true
     }
    }
@@ -9916,13 +9928,8 @@
    }
   },
   "postcss-merge-longhand@*": {
-   "peerDependencies": {
+   "dependencies": {
     "@csstools/css-tokenizer": "*"
-   },
-   "peerDependenciesMeta": {
-    "@csstools/css-tokenizer": {
-     "optional": true
-    }
    }
   },
   "posthog-node@*": {
@@ -12896,7 +12903,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "0.128.0",
+   "measuredVersion": "0.129.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -13230,7 +13237,7 @@
   },
   {
    "package": "@aws-amplify/core",
-   "measuredVersion": "6.19.1",
+   "measuredVersion": "6.19.2",
    "targets": [
     {
      "target": "@smithy/types",
@@ -13401,7 +13408,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.61.0",
+   "measuredVersion": "1.62.0",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13910,7 +13917,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.21.1",
+   "measuredVersion": "5.22.1",
    "targets": [
     {
      "target": "react",
@@ -15523,7 +15530,7 @@
   },
   {
    "package": "@lexical/react",
-   "measuredVersion": "0.51.0",
+   "measuredVersion": "0.52.0",
    "targets": [
     {
      "target": "@preact/signals-core",
@@ -16249,7 +16256,7 @@
   },
   {
    "package": "@next/bundle-analyzer",
-   "measuredVersion": "16.3.6",
+   "measuredVersion": "16.3.7",
    "targets": [
     {
      "target": "next",
@@ -16269,7 +16276,7 @@
   },
   {
    "package": "@next/eslint-plugin-next",
-   "measuredVersion": "16.3.6",
+   "measuredVersion": "16.3.7",
    "targets": [
     {
      "target": "eslint",
@@ -18843,7 +18850,7 @@
   },
   {
    "package": "@opennextjs/cloudflare",
-   "measuredVersion": "1.20.6",
+   "measuredVersion": "1.20.7",
    "targets": [
     {
      "target": "esbuild",
@@ -19054,7 +19061,7 @@
   },
   {
    "package": "@playwright/mcp",
-   "measuredVersion": "0.0.82",
+   "measuredVersion": "0.0.83",
    "targets": [
     {
      "target": "@modelcontextprotocol/sdk",
@@ -20232,7 +20239,7 @@
   },
   {
    "package": "@redocly/openapi-core",
-   "measuredVersion": "2.54.3",
+   "measuredVersion": "2.55.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20255,7 +20262,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.54.3",
+   "measuredVersion": "2.55.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20448,7 +20455,7 @@
   },
   {
    "package": "@rjsf/utils",
-   "measuredVersion": "6.10.1",
+   "measuredVersion": "6.11.0",
    "targets": [
     {
      "target": "json-schema",
@@ -20490,7 +20497,7 @@
   },
   {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.2.10",
+   "measuredVersion": "2.2.11",
    "targets": [
     {
      "target": "tsx",
@@ -20614,7 +20621,7 @@
   },
   {
    "package": "@scalar/openapi-upgrader",
-   "measuredVersion": "0.4.0",
+   "measuredVersion": "0.4.1",
    "targets": [
     {
      "target": "@scalar/types",
@@ -20637,7 +20644,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.22.1",
+   "measuredVersion": "0.22.2",
    "targets": [
     {
      "target": "har-format",
@@ -20746,7 +20753,7 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "11.0.0",
+   "measuredVersion": "11.1.0",
    "targets": [
     {
      "target": "@sentry/opentelemetry",
@@ -21823,7 +21830,7 @@
   },
   {
    "package": "@swc/core",
-   "measuredVersion": "1.16.2",
+   "measuredVersion": "1.16.12",
    "targets": [
     {
      "target": "@swc/core-android-arm-eabi",
@@ -22327,7 +22334,7 @@
   },
   {
    "package": "@types/k6",
-   "measuredVersion": "2.2.1",
+   "measuredVersion": "2.3.0",
    "targets": [
     {
      "target": "k6",
@@ -22670,7 +22677,7 @@
   },
   {
    "package": "@typescript-eslint/types",
-   "measuredVersion": "8.70.1",
+   "measuredVersion": "8.71.0",
    "targets": [
     {
      "target": "typescript",
@@ -22773,7 +22780,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "14.0.1",
+   "measuredVersion": "14.0.2",
    "targets": [
     {
      "target": "encoding",
@@ -22850,7 +22857,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "13.0.1",
+   "measuredVersion": "13.0.2",
    "targets": [
     {
      "target": "encoding",
@@ -24620,7 +24627,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "10.2.0",
+   "measuredVersion": "10.3.0",
    "targets": [
     {
      "target": "@appium/types",
@@ -24973,7 +24980,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.9",
+   "measuredVersion": "6.3.10",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -25956,7 +25963,7 @@
   },
   {
    "package": "eslint-config-next",
-   "measuredVersion": "16.3.6",
+   "measuredVersion": "16.3.7",
    "targets": [
     {
      "target": "next",
@@ -26093,7 +26100,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "64.5.4",
+   "measuredVersion": "65.0.0",
    "targets": [
     {
      "target": "@eslint/core",
@@ -26499,7 +26506,7 @@
   },
   {
    "package": "expo-camera",
-   "measuredVersion": "57.0.5",
+   "measuredVersion": "57.0.6",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26553,7 +26560,7 @@
   },
   {
    "package": "expo-constants",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "targets": [
     {
      "target": "expo-manifests",
@@ -26661,7 +26668,7 @@
   },
   {
    "package": "expo-document-picker",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27014,7 +27021,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "57.0.23",
+   "measuredVersion": "57.0.24",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27137,7 +27144,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "57.0.23",
+   "measuredVersion": "57.0.24",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27337,7 +27344,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.31.0",
+   "measuredVersion": "15.32.0",
    "targets": [
     {
      "target": "astro",
@@ -27665,7 +27672,7 @@
   },
   {
    "package": "html-element-map",
-   "measuredVersion": "1.4.0",
+   "measuredVersion": "1.4.1",
    "targets": [
     {
      "target": "for-each",
@@ -28602,7 +28609,7 @@
   },
   {
    "package": "lib0",
-   "measuredVersion": "0.2.118",
+   "measuredVersion": "0.2.119",
    "targets": [
     {
      "target": "isomorphic-webcrypto",
@@ -28785,7 +28792,7 @@
   },
   {
    "package": "media-chrome",
-   "measuredVersion": "4.19.2",
+   "measuredVersion": "4.19.3",
    "targets": [
     {
      "target": "react",
@@ -29291,7 +29298,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "13.4.4",
+   "measuredVersion": "13.4.6",
    "targets": [
     {
      "target": "motion-dom",
@@ -29411,7 +29418,7 @@
   },
   {
    "package": "next",
-   "measuredVersion": "16.3.6",
+   "measuredVersion": "16.3.7",
    "targets": [
     {
      "target": "critters",
@@ -29528,7 +29535,7 @@
   },
   {
    "package": "next-intl",
-   "measuredVersion": "4.14.7",
+   "measuredVersion": "4.14.8",
    "targets": [
     {
      "target": "webpack",
@@ -30218,45 +30225,81 @@
   },
   {
    "package": "oxc-minify",
-   "measuredVersion": "0.151.0",
+   "measuredVersion": "0.152.0",
    "targets": [
     {
      "target": "@oxc-minify/binding-wasm32-wasi",
+     "class": "guarded",
+     "field": "peer",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+     "specifiers": [
+      "@oxc-minify/binding-wasm32-wasi/package.json",
+      "@oxc-minify/binding-wasm32-wasi"
+     ],
+     "files": [
+      "index.js"
+     ],
+     "fileCount": 1
+    },
+    {
+     "target": "@oxc-minify/binding-wasm32-wasip1",
      "class": "runtime",
      "field": "peer",
      "candidate": true,
      "reason": "unguarded on the main entry graph — a dependency once reviewed",
      "specifiers": [
-      "@oxc-minify/binding-wasm32-wasi",
-      "@oxc-minify/binding-wasm32-wasi/package.json"
+      "@oxc-minify/binding-wasm32-wasip1",
+      "@oxc-minify/binding-wasm32-wasip1/package.json",
+      "@oxc-minify/binding-wasm32-wasip1/workerd"
      ],
      "files": [
       "browser.js",
-      "index.js"
+      "index.js",
+      "minify.wasm32-wasip1.workerd.d.mts",
+      "minify.wasm32-wasip1.workerd.mjs"
      ],
-     "fileCount": 2
+     "fileCount": 4
     }
    ]
   },
   {
    "package": "oxc-parser",
-   "measuredVersion": "0.151.0",
+   "measuredVersion": "0.152.0",
    "targets": [
     {
      "target": "@oxc-parser/binding-wasm32-wasi",
-     "class": "runtime",
+     "class": "guarded",
      "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
       "@oxc-parser/binding-wasm32-wasi/package.json",
       "@oxc-parser/binding-wasm32-wasi"
      ],
      "files": [
+      "src-js/bindings.js"
+     ],
+     "fileCount": 1
+    },
+    {
+     "target": "@oxc-parser/binding-wasm32-wasip1",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "@oxc-parser/binding-wasm32-wasip1/workerd",
+      "@oxc-parser/binding-wasm32-wasip1/package.json",
+      "@oxc-parser/binding-wasm32-wasip1"
+     ],
+     "files": [
+      "parser.wasm32-wasip1.workerd.d.mts",
+      "parser.wasm32-wasip1.workerd.mjs",
       "src-js/bindings.js",
       "src-js/wasm.js"
      ],
-     "fileCount": 2
+     "fileCount": 4
     }
    ]
   },
@@ -30283,23 +30326,41 @@
   },
   {
    "package": "oxc-transform",
-   "measuredVersion": "0.151.0",
+   "measuredVersion": "0.152.0",
    "targets": [
     {
      "target": "@oxc-transform/binding-wasm32-wasi",
+     "class": "guarded",
+     "field": "peer",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+     "specifiers": [
+      "@oxc-transform/binding-wasm32-wasi/package.json",
+      "@oxc-transform/binding-wasm32-wasi"
+     ],
+     "files": [
+      "index.js"
+     ],
+     "fileCount": 1
+    },
+    {
+     "target": "@oxc-transform/binding-wasm32-wasip1",
      "class": "runtime",
      "field": "peer",
      "candidate": true,
      "reason": "unguarded on the main entry graph — a dependency once reviewed",
      "specifiers": [
-      "@oxc-transform/binding-wasm32-wasi",
-      "@oxc-transform/binding-wasm32-wasi/package.json"
+      "@oxc-transform/binding-wasm32-wasip1",
+      "@oxc-transform/binding-wasm32-wasip1/package.json",
+      "@oxc-transform/binding-wasm32-wasip1/workerd"
      ],
      "files": [
       "browser.js",
-      "index.js"
+      "index.js",
+      "transform.wasm32-wasip1.workerd.d.mts",
+      "transform.wasm32-wasip1.workerd.mjs"
      ],
-     "fileCount": 2
+     "fileCount": 4
     }
    ]
   },
@@ -30517,9 +30578,9 @@
     {
      "target": "@csstools/css-tokenizer",
      "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "field": "dependency",
+     "candidate": false,
+     "reason": "probe 9.1.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @csstools/css-tokenizer\"",
      "specifiers": [
       "@csstools/css-tokenizer"
      ],
@@ -31732,7 +31793,7 @@
   },
   {
    "package": "remotion",
-   "measuredVersion": "4.0.529",
+   "measuredVersion": "4.0.530",
    "targets": [
     {
      "target": "zod",
@@ -32499,7 +32560,7 @@
   },
   {
    "package": "swiper",
-   "measuredVersion": "14.2.0",
+   "measuredVersion": "14.3.0",
    "targets": [
     {
      "target": "react",
@@ -32555,7 +32616,7 @@
   },
   {
    "package": "systeminformation",
-   "measuredVersion": "5.33.13",
+   "measuredVersion": "5.33.14",
    "targets": [
     {
      "target": "macos-temperature-sensor",
@@ -33057,7 +33118,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.1.3",
+   "measuredVersion": "61.0.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -33069,7 +33130,7 @@
       "@vltpkg/graph"
      ],
      "files": [
-      "dist/chunks/vlt-builder-importer-QEWS6M2P.js"
+      "dist/chunks/vlt-builder-importer-W63QEXYX.js"
      ],
      "fileCount": 1
     },
@@ -33083,7 +33144,7 @@
       "@vltpkg/package-info"
      ],
      "files": [
-      "dist/chunks/vlt-builder-importer-QEWS6M2P.js"
+      "dist/chunks/vlt-builder-importer-W63QEXYX.js"
      ],
      "fileCount": 1
     },
@@ -33097,7 +33158,7 @@
       "@vltpkg/package-json"
      ],
      "files": [
-      "dist/chunks/vlt-builder-importer-QEWS6M2P.js"
+      "dist/chunks/vlt-builder-importer-W63QEXYX.js"
      ],
      "fileCount": 1
     },
@@ -33111,7 +33172,7 @@
       "path-scurry"
      ],
      "files": [
-      "dist/chunks/vlt-builder-importer-QEWS6M2P.js"
+      "dist/chunks/vlt-builder-importer-W63QEXYX.js"
      ],
      "fileCount": 1
     }
@@ -33622,7 +33683,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20260928.1",
+   "measuredVersion": "1.20260929.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33642,7 +33703,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.142.0",
+   "measuredVersion": "4.143.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -34188,7 +34249,7 @@
   },
   {
    "package": "expo-camera",
-   "measuredVersion": "57.0.5",
+   "measuredVersion": "57.0.6",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34204,7 +34265,7 @@
   },
   {
    "package": "expo-constants",
-   "measuredVersion": "57.0.19",
+   "measuredVersion": "57.0.20",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34236,7 +34297,7 @@
   },
   {
    "package": "expo-document-picker",
-   "measuredVersion": "57.0.2",
+   "measuredVersion": "57.0.3",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34349,7 +34410,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "57.0.23",
+   "measuredVersion": "57.0.24",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34381,7 +34442,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "57.0.23",
+   "measuredVersion": "57.0.24",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -34405,7 +34466,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.31.0",
+   "measuredVersion": "15.32.0",
    "target": "astro",
    "specifiers": [
     "astro/package.json"
@@ -34413,7 +34474,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.31.0",
+   "measuredVersion": "15.32.0",
    "target": "firebase-functions",
    "specifiers": [
     "firebase-functions",
@@ -34467,7 +34528,7 @@
   },
   {
    "package": "next",
-   "measuredVersion": "16.3.6",
+   "measuredVersion": "16.3.7",
    "target": "critters",
    "specifiers": [
     "critters"
@@ -34539,29 +34600,32 @@
   },
   {
    "package": "oxc-minify",
-   "measuredVersion": "0.151.0",
-   "target": "@oxc-minify/binding-wasm32-wasi",
+   "measuredVersion": "0.152.0",
+   "target": "@oxc-minify/binding-wasm32-wasip1",
    "specifiers": [
-    "@oxc-minify/binding-wasm32-wasi",
-    "@oxc-minify/binding-wasm32-wasi/package.json"
+    "@oxc-minify/binding-wasm32-wasip1",
+    "@oxc-minify/binding-wasm32-wasip1/package.json",
+    "@oxc-minify/binding-wasm32-wasip1/workerd"
    ]
   },
   {
    "package": "oxc-parser",
-   "measuredVersion": "0.151.0",
-   "target": "@oxc-parser/binding-wasm32-wasi",
+   "measuredVersion": "0.152.0",
+   "target": "@oxc-parser/binding-wasm32-wasip1",
    "specifiers": [
-    "@oxc-parser/binding-wasm32-wasi/package.json",
-    "@oxc-parser/binding-wasm32-wasi"
+    "@oxc-parser/binding-wasm32-wasip1/workerd",
+    "@oxc-parser/binding-wasm32-wasip1/package.json",
+    "@oxc-parser/binding-wasm32-wasip1"
    ]
   },
   {
    "package": "oxc-transform",
-   "measuredVersion": "0.151.0",
-   "target": "@oxc-transform/binding-wasm32-wasi",
+   "measuredVersion": "0.152.0",
+   "target": "@oxc-transform/binding-wasm32-wasip1",
    "specifiers": [
-    "@oxc-transform/binding-wasm32-wasi",
-    "@oxc-transform/binding-wasm32-wasi/package.json"
+    "@oxc-transform/binding-wasm32-wasip1",
+    "@oxc-transform/binding-wasm32-wasip1/package.json",
+    "@oxc-transform/binding-wasm32-wasip1/workerd"
    ]
   },
   {
@@ -34571,14 +34635,6 @@
    "specifiers": [
     "chromium-bidi/lib/cjs/bidiMapper/BidiMapper",
     "chromium-bidi/lib/cjs/cdp/CdpConnection"
-   ]
-  },
-  {
-   "package": "postcss-merge-longhand",
-   "measuredVersion": "9.1.0",
-   "target": "@csstools/css-tokenizer",
-   "specifiers": [
-    "@csstools/css-tokenizer"
    ]
   },
   {
@@ -34698,7 +34754,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.1.3",
+   "measuredVersion": "61.0.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -34706,7 +34762,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.1.3",
+   "measuredVersion": "61.0.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -34714,7 +34770,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.1.3",
+   "measuredVersion": "61.0.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -34722,7 +34778,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "60.1.3",
+   "measuredVersion": "61.0.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"

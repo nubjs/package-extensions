@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.15 — generated 2026-09-28, do not edit.
-// 777 packages, 1152 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.16 — generated 2026-09-29, do not edit.
+// 777 packages, 1155 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -8375,10 +8375,14 @@ export const packageExtensions = [
   "oxc-minify@*",
   {
    "peerDependencies": {
-    "@oxc-minify/binding-wasm32-wasi": "*"
+    "@oxc-minify/binding-wasm32-wasi": "*",
+    "@oxc-minify/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-minify/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-minify/binding-wasm32-wasip1": {
      "optional": true
     }
    }
@@ -8388,10 +8392,14 @@ export const packageExtensions = [
   "oxc-parser@*",
   {
    "peerDependencies": {
-    "@oxc-parser/binding-wasm32-wasi": "*"
+    "@oxc-parser/binding-wasm32-wasi": "*",
+    "@oxc-parser/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-parser/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-parser/binding-wasm32-wasip1": {
      "optional": true
     }
    }
@@ -8414,10 +8422,14 @@ export const packageExtensions = [
   "oxc-transform@*",
   {
    "peerDependencies": {
-    "@oxc-transform/binding-wasm32-wasi": "*"
+    "@oxc-transform/binding-wasm32-wasi": "*",
+    "@oxc-transform/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-transform/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-transform/binding-wasm32-wasip1": {
      "optional": true
     }
    }
@@ -8528,13 +8540,8 @@ export const packageExtensions = [
  [
   "postcss-merge-longhand@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "@csstools/css-tokenizer": "*"
-   },
-   "peerDependenciesMeta": {
-    "@csstools/css-tokenizer": {
-     "optional": true
-    }
    }
   }
  ],

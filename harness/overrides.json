@@ -255,5 +255,11 @@
       "field": "dependency",
       "why": "probe 1.24.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access vscode-languageserver-protocol\""
     }
+  },
+  "postcss-merge-longhand": {
+    "@csstools/css-tokenizer": {
+      "field": "dependency",
+      "why": "probe 9.1.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @csstools/css-tokenizer\""
+    }
   }
 }
