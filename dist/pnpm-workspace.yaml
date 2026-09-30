@@ -1,5 +1,5 @@
-# Generated 2026-09-29 from the 10000 most-downloaded npm packages.
-# 777 packages, 1155 undeclared dependencies.
+# Generated 2026-09-30 from the 10000 most-downloaded npm packages.
+# 776 packages, 1154 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -348,6 +348,12 @@ packageExtensions:
       ws: "*"
     peerDependenciesMeta:
       ws:
+        optional: true
+  "@electron-forge/core@*":
+    peerDependencies:
+      "@malept/cross-spawn-promise": "*"
+    peerDependenciesMeta:
+      "@malept/cross-spawn-promise":
         optional: true
   "@electron/asar@*":
     peerDependencies:
@@ -1944,12 +1950,6 @@ packageExtensions:
       react:
         optional: true
   "@redocly/openapi-core@*":
-    peerDependencies:
-      json-schema-to-ts: "*"
-    peerDependenciesMeta:
-      json-schema-to-ts:
-        optional: true
-  "@redocly/respect-core@*":
     peerDependencies:
       json-schema-to-ts: "*"
     peerDependenciesMeta:
@@ -3934,12 +3934,6 @@ packageExtensions:
     peerDependenciesMeta:
       oracledb:
         optional: true
-  knip@*:
-    peerDependencies:
-      vue: "*"
-    peerDependenciesMeta:
-      vue:
-        optional: true
   langium@*:
     peerDependencies:
       "@chevrotain/types": "*"
@@ -4372,22 +4366,20 @@ packageExtensions:
       passport:
         optional: true
   oxc-minify@*:
+    dependencies:
+      "@oxc-minify/binding-wasm32-wasip1": "*"
     peerDependencies:
       "@oxc-minify/binding-wasm32-wasi": "*"
-      "@oxc-minify/binding-wasm32-wasip1": "*"
     peerDependenciesMeta:
       "@oxc-minify/binding-wasm32-wasi":
         optional: true
-      "@oxc-minify/binding-wasm32-wasip1":
-        optional: true
   oxc-parser@*:
+    dependencies:
+      "@oxc-parser/binding-wasm32-wasip1": "*"
     peerDependencies:
       "@oxc-parser/binding-wasm32-wasi": "*"
-      "@oxc-parser/binding-wasm32-wasip1": "*"
     peerDependenciesMeta:
       "@oxc-parser/binding-wasm32-wasi":
-        optional: true
-      "@oxc-parser/binding-wasm32-wasip1":
         optional: true
   oxc-resolver@*:
     peerDependencies:
@@ -4396,13 +4388,12 @@ packageExtensions:
       "@oxc-resolver/binding-win32-ia32-msvc":
         optional: true
   oxc-transform@*:
+    dependencies:
+      "@oxc-transform/binding-wasm32-wasip1": "*"
     peerDependencies:
       "@oxc-transform/binding-wasm32-wasi": "*"
-      "@oxc-transform/binding-wasm32-wasip1": "*"
     peerDependenciesMeta:
       "@oxc-transform/binding-wasm32-wasi":
-        optional: true
-      "@oxc-transform/binding-wasm32-wasip1":
         optional: true
   package-json@*:
     peerDependencies:

@@ -134,6 +134,7 @@
   "@libsql/client": true,
   "@lit/reactive-element": true,
   "@livekit/throws-transformer": true,
+  "@malept/cross-spawn-promise": true,
   "@markdoc/markdoc": true,
   "@material-ui/types": true,
   "@microsoft/typescript-etw": true,

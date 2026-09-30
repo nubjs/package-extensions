@@ -261,5 +261,23 @@
       "field": "dependency",
       "why": "probe 9.1.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @csstools/css-tokenizer\""
     }
+  },
+  "oxc-minify": {
+    "@oxc-minify/binding-wasm32-wasip1": {
+      "field": "dependency",
+      "why": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-minify/binding-wasm32-wasip1\""
+    }
+  },
+  "oxc-parser": {
+    "@oxc-parser/binding-wasm32-wasip1": {
+      "field": "dependency",
+      "why": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-parser/binding-wasm32-wasip1\""
+    }
+  },
+  "oxc-transform": {
+    "@oxc-transform/binding-wasm32-wasip1": {
+      "field": "dependency",
+      "why": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-transform/binding-wasm32-wasip1\""
+    }
   }
 }

@@ -5,7 +5,7 @@
     "entries": 159
   },
   "corpus": {
-    "scannedOk": 9982,
+    "scannedOk": 9979,
     "corpusKnown": true
   },
   "buckets": {
@@ -762,7 +762,7 @@
           "protobufjs"
         ],
         "metaOnly": false,
-        "version": "9.2.0",
+        "version": "9.3.0",
         "why": "the package now declares every target"
       },
       {
