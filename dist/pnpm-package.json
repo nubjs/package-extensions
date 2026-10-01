@@ -3053,6 +3053,16 @@
           }
         }
       },
+      "@redocly/respect-core@*": {
+        "peerDependencies": {
+          "json-schema-to-ts": "*"
+        },
+        "peerDependenciesMeta": {
+          "json-schema-to-ts": {
+            "optional": true
+          }
+        }
+      },
       "@redux-saga/is@*": {
         "peerDependencies": {
           "redux": "*"
@@ -5244,6 +5254,16 @@
           }
         }
       },
+      "eslint-plugin-security@*": {
+        "peerDependencies": {
+          "eslint": "*"
+        },
+        "peerDependenciesMeta": {
+          "eslint": {
+            "optional": true
+          }
+        }
+      },
       "eslint-plugin-svelte@*": {
         "peerDependencies": {
           "typescript": "*"
@@ -6150,6 +6170,16 @@
         },
         "peerDependenciesMeta": {
           "oracledb": {
+            "optional": true
+          }
+        }
+      },
+      "knip@*": {
+        "peerDependencies": {
+          "vue": "*"
+        },
+        "peerDependenciesMeta": {
+          "vue": {
             "optional": true
           }
         }

@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.17 — generated 2026-09-30, do not edit.
-// 776 packages, 1154 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.18 — generated 2026-10-01, do not edit.
+// 779 packages, 1157 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -3749,6 +3749,19 @@ exports.packageExtensions = [
   }
  ],
  [
+  "@redocly/respect-core@*",
+  {
+   "peerDependencies": {
+    "json-schema-to-ts": "*"
+   },
+   "peerDependenciesMeta": {
+    "json-schema-to-ts": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@redux-saga/is@*",
   {
    "peerDependencies": {
@@ -6405,6 +6418,19 @@ exports.packageExtensions = [
   }
  ],
  [
+  "eslint-plugin-security@*",
+  {
+   "peerDependencies": {
+    "eslint": "*"
+   },
+   "peerDependenciesMeta": {
+    "eslint": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "eslint-plugin-svelte@*",
   {
    "peerDependencies": {
@@ -7546,6 +7572,19 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "oracledb": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "knip@*",
+  {
+   "peerDependencies": {
+    "vue": "*"
+   },
+   "peerDependenciesMeta": {
+    "vue": {
      "optional": true
     }
    }

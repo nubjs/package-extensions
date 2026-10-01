@@ -1,5 +1,5 @@
-# Generated 2026-09-30 from the 10000 most-downloaded npm packages.
-# 776 packages, 1154 undeclared dependencies.
+# Generated 2026-10-01 from the 10000 most-downloaded npm packages.
+# 779 packages, 1157 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -1959,6 +1959,12 @@ packageExtensions:
     peerDependenciesMeta:
       json-schema-to-ts:
         optional: true
+  "@redocly/respect-core@*":
+    peerDependencies:
+      json-schema-to-ts: "*"
+    peerDependenciesMeta:
+      json-schema-to-ts:
+        optional: true
   "@redux-saga/is@*":
     peerDependencies:
       redux: "*"
@@ -3374,6 +3380,12 @@ packageExtensions:
         optional: true
       typescript:
         optional: true
+  eslint-plugin-security@*:
+    peerDependencies:
+      eslint: "*"
+    peerDependenciesMeta:
+      eslint:
+        optional: true
   eslint-plugin-svelte@*:
     peerDependencies:
       typescript: "*"
@@ -3937,6 +3949,12 @@ packageExtensions:
       oracledb: "*"
     peerDependenciesMeta:
       oracledb:
+        optional: true
+  knip@*:
+    peerDependencies:
+      vue: "*"
+    peerDependenciesMeta:
+      vue:
         optional: true
   langium@*:
     peerDependencies:
