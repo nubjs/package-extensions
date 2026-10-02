@@ -762,7 +762,7 @@
           "protobufjs"
         ],
         "metaOnly": false,
-        "version": "9.3.0",
+        "version": "9.3.1",
         "why": "the package now declares every target"
       },
       {
@@ -1017,7 +1017,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "11.4.12",
+        "version": "11.4.13",
         "why": "the package now declares every target"
       },
       {

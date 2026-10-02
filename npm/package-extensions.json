@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01",
+ "generated": "2026-10-02",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1157,
-   "packages": 648
+   "entries": 1158,
+   "packages": 649
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
   }
  },
  "totals": {
-  "packages": 779,
-  "selectors": 799,
-  "entries": 1157,
+  "packages": 780,
+  "selectors": 800,
+  "entries": 1158,
   "byClass": {
    "runtime": 207,
    "adapter": 128,
-   "types": 527,
+   "types": 528,
    "deep-path": 0,
    "guarded": 295
   },
   "byField": {
    "dependency": 32,
-   "peer": 1125
+   "peer": 1126
   },
   "candidatesForReview": 101,
   "droppedUnpublishedTargets": 202,
@@ -9939,6 +9939,16 @@
     "@csstools/css-tokenizer": "*"
    }
   },
+  "postcss-normalize-positions@*": {
+   "peerDependencies": {
+    "@csstools/css-tokenizer": "*"
+   },
+   "peerDependenciesMeta": {
+    "@csstools/css-tokenizer": {
+     "optional": true
+    }
+   }
+  },
   "posthog-node@*": {
    "peerDependencies": {
     "express": "*"
@@ -13415,7 +13425,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.62.3",
+   "measuredVersion": "1.62.5",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -15724,7 +15734,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.73.0",
+   "measuredVersion": "1.74.0",
    "targets": [
     {
      "target": "@workflow/serde",
@@ -15766,12 +15776,12 @@
       "undici"
      ],
      "files": [
-      "dist/dist-B1vWS-5E.cjs",
-      "dist/dist-Bc1VYIKb.cjs",
-      "dist/dist-BwtTgF8a.js",
-      "dist/dist-CM5SoUT8--UKRmfac.js",
-      "dist/dist-CM5SoUT8-ChoP4m4X.cjs",
-      "dist/dist-MhY1WMIU.js"
+      "dist/dist-DQ-nyzcq.cjs",
+      "dist/dist-DTh6HwH_.cjs",
+      "dist/dist-OXSDWcNK.js",
+      "dist/dist-qIvJMqQG.js",
+      "dist/dist-t-eoX9xC-B26TWrHr.cjs",
+      "dist/dist-t-eoX9xC-B3I25jac.js"
      ],
      "fileCount": 6
     }
@@ -16094,7 +16104,7 @@
   },
   {
    "package": "@napi-rs/cli",
-   "measuredVersion": "3.10.5",
+   "measuredVersion": "3.10.6",
    "targets": [
     {
      "target": "@oxc-node/core",
@@ -16449,7 +16459,7 @@
   },
   {
    "package": "@nuxt/devtools",
-   "measuredVersion": "4.0.0-beta.2",
+   "measuredVersion": "4.0.0-beta.3",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16483,7 +16493,7 @@
   },
   {
    "package": "@nuxt/devtools-kit",
-   "measuredVersion": "4.0.0-beta.2",
+   "measuredVersion": "4.0.0-beta.3",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -20673,7 +20683,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.22.3",
+   "measuredVersion": "0.22.4",
    "targets": [
     {
      "target": "har-format",
@@ -24060,7 +24070,7 @@
   },
   {
    "package": "@vue/language-core",
-   "measuredVersion": "3.3.11",
+   "measuredVersion": "3.3.12",
    "targets": [
     {
      "target": "@vue/compiler-sfc",
@@ -24093,11 +24103,11 @@
       "lib/languagePlugin.d.ts",
       "lib/parsers/scriptRanges.d.ts",
       "lib/parsers/scriptSetupRanges.d.ts",
+      "lib/parsers/utils.d.ts",
       "lib/plugins/vue-tsx.d.ts",
-      "lib/types.d.ts",
-      "lib/utils/collectBindings.d.ts"
+      "lib/types.d.ts"
      ],
-     "fileCount": 10
+     "fileCount": 11
     }
    ]
   },
@@ -24253,7 +24263,7 @@
   },
   {
    "package": "algoliasearch-helper",
-   "measuredVersion": "3.29.4",
+   "measuredVersion": "3.30.0",
    "targets": [
     {
      "target": "@algolia/client-search",
@@ -24656,7 +24666,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "10.4.0",
+   "measuredVersion": "10.4.2",
    "targets": [
     {
      "target": "@appium/types",
@@ -24777,7 +24787,7 @@
   },
   {
    "package": "aws-cdk",
-   "measuredVersion": "2.1143.0",
+   "measuredVersion": "2.1144.0",
    "targets": [
     {
      "target": "@aws-cdk/cloud-assembly-api",
@@ -28534,7 +28544,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.10.6",
+   "measuredVersion": "0.10.7",
    "targets": [
     {
      "target": "@jest/globals",
@@ -28864,7 +28874,7 @@
   },
   {
    "package": "mermaid",
-   "measuredVersion": "12.0.0",
+   "measuredVersion": "12.1.0",
    "targets": [
     {
      "target": "@iconify/types",
@@ -29196,7 +29206,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20260930.0-alpha",
+   "measuredVersion": "5.20261001.0-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -29347,7 +29357,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "13.5.0",
+   "measuredVersion": "13.5.1",
    "targets": [
     {
      "target": "motion-dom",
@@ -29584,7 +29594,7 @@
   },
   {
    "package": "next-intl",
-   "measuredVersion": "4.14.8",
+   "measuredVersion": "4.14.9",
    "targets": [
     {
      "target": "webpack",
@@ -30622,7 +30632,7 @@
   },
   {
    "package": "postcss-merge-longhand",
-   "measuredVersion": "9.1.1",
+   "measuredVersion": "9.2.0",
    "targets": [
     {
      "target": "@csstools/css-tokenizer",
@@ -30635,6 +30645,26 @@
      ],
      "files": [
       "src/lib/unresolved.js"
+     ],
+     "fileCount": 1
+    }
+   ]
+  },
+  {
+   "package": "postcss-normalize-positions",
+   "measuredVersion": "9.0.6",
+   "targets": [
+    {
+     "target": "@csstools/css-tokenizer",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "@csstools/css-tokenizer"
+     ],
+     "files": [
+      "types/index.d.ts"
      ],
      "fileCount": 1
     }
@@ -30962,7 +30992,7 @@
   },
   {
    "package": "publint",
-   "measuredVersion": "0.3.24",
+   "measuredVersion": "0.3.25",
    "targets": [
     {
      "target": "pnpapi",
@@ -31863,7 +31893,7 @@
   },
   {
    "package": "resend",
-   "measuredVersion": "6.31.0",
+   "measuredVersion": "6.32.0",
    "targets": [
     {
      "target": "react",
@@ -32114,7 +32144,7 @@
   },
   {
    "package": "satori",
-   "measuredVersion": "0.33.5",
+   "measuredVersion": "0.35.0",
    "targets": [
     {
      "target": "react",
@@ -32126,10 +32156,12 @@
       "react"
      ],
      "files": [
+      "dist/experimental.d.ts",
       "dist/index.d.ts",
+      "dist/satori-dd73c891.d.ts",
       "dist/standalone.d.ts"
      ],
-     "fileCount": 2
+     "fileCount": 4
     }
    ]
   },
@@ -33732,7 +33764,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261001.1",
+   "measuredVersion": "1.20261002.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33752,7 +33784,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.145.0",
+   "measuredVersion": "4.147.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -34015,7 +34047,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.73.0",
+   "measuredVersion": "1.74.0",
    "target": "undici",
    "specifiers": [
     "undici"

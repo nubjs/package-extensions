@@ -1,5 +1,5 @@
-# Generated 2026-10-01 from the 10000 most-downloaded npm packages.
-# 779 packages, 1157 undeclared dependencies.
+# Generated 2026-10-02 from the 10000 most-downloaded npm packages.
+# 780 packages, 1158 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -4474,6 +4474,12 @@ packageExtensions:
   postcss-merge-longhand@*:
     dependencies:
       "@csstools/css-tokenizer": "*"
+  postcss-normalize-positions@*:
+    peerDependencies:
+      "@csstools/css-tokenizer": "*"
+    peerDependenciesMeta:
+      "@csstools/css-tokenizer":
+        optional: true
   posthog-node@*:
     peerDependencies:
       express: "*"

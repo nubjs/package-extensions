@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.18 — generated 2026-10-01, do not edit.
-// 779 packages, 1157 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.19 — generated 2026-10-02, do not edit.
+// 780 packages, 1158 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -8567,6 +8567,19 @@ exports.packageExtensions = [
   {
    "dependencies": {
     "@csstools/css-tokenizer": "*"
+   }
+  }
+ ],
+ [
+  "postcss-normalize-positions@*",
+  {
+   "peerDependencies": {
+    "@csstools/css-tokenizer": "*"
+   },
+   "peerDependenciesMeta": {
+    "@csstools/css-tokenizer": {
+     "optional": true
+    }
    }
   }
  ],

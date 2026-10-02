@@ -6990,6 +6990,16 @@
           "@csstools/css-tokenizer": "*"
         }
       },
+      "postcss-normalize-positions@*": {
+        "peerDependencies": {
+          "@csstools/css-tokenizer": "*"
+        },
+        "peerDependenciesMeta": {
+          "@csstools/css-tokenizer": {
+            "optional": true
+          }
+        }
+      },
       "posthog-node@*": {
         "peerDependencies": {
           "express": "*"
