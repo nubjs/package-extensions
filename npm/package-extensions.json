@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02",
+ "generated": "2026-10-03",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -13954,7 +13954,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.23.3",
+   "measuredVersion": "5.23.5",
    "targets": [
     {
      "target": "react",
@@ -15876,7 +15876,7 @@
   },
   {
    "package": "@mendable/firecrawl-js",
-   "measuredVersion": "4.42.1",
+   "measuredVersion": "4.42.4",
    "targets": [
     {
      "target": "undici",
@@ -16226,7 +16226,7 @@
   },
   {
    "package": "@netlify/serverless-functions-api",
-   "measuredVersion": "2.23.0",
+   "measuredVersion": "2.24.0",
    "targets": [
     {
      "target": "@netlify/cache",
@@ -18888,7 +18888,7 @@
   },
   {
    "package": "@opennextjs/cloudflare",
-   "measuredVersion": "1.20.7",
+   "measuredVersion": "1.20.8",
    "targets": [
     {
      "target": "esbuild",
@@ -19394,7 +19394,7 @@
   },
   {
    "package": "@promptbook/utils",
-   "measuredVersion": "0.114.0-41",
+   "measuredVersion": "0.114.0-48",
    "targets": [
     {
      "target": "openai",
@@ -20230,7 +20230,7 @@
   },
   {
    "package": "@redocly/config",
-   "measuredVersion": "0.61.0",
+   "measuredVersion": "0.61.1",
    "targets": [
     {
      "target": "@markdoc/markdoc",
@@ -20640,7 +20640,7 @@
   },
   {
    "package": "@salesforce/sf-plugins-core",
-   "measuredVersion": "13.0.4",
+   "measuredVersion": "13.0.5",
    "targets": [
     {
      "target": "sinon",
@@ -20703,7 +20703,7 @@
   },
   {
    "package": "@secretlint/secretlint-rule-preset-recommend",
-   "measuredVersion": "13.0.6",
+   "measuredVersion": "13.0.7",
    "targets": [
     {
      "target": "@secretlint/secretlint-rule-aws",
@@ -20792,7 +20792,7 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "11.2.0",
+   "measuredVersion": "11.4.0",
    "targets": [
     {
      "target": "@sentry/opentelemetry",
@@ -22353,7 +22353,7 @@
   },
   {
    "package": "@turbo/gen",
-   "measuredVersion": "2.11.6",
+   "measuredVersion": "2.11.7",
    "targets": [
     {
      "target": "kerberos",
@@ -22819,7 +22819,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "15.0.0",
+   "measuredVersion": "18.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -22896,7 +22896,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "14.0.0",
+   "measuredVersion": "17.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -22916,7 +22916,7 @@
   },
   {
    "package": "@verdaccio/config",
-   "measuredVersion": "8.3.0",
+   "measuredVersion": "8.3.1",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -22943,7 +22943,7 @@
   },
   {
    "package": "@verdaccio/core",
-   "measuredVersion": "8.3.0",
+   "measuredVersion": "8.3.1",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -24631,7 +24631,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "9.0.22",
+   "measuredVersion": "9.1.0",
    "targets": [
     {
      "target": "@appium/types",
@@ -24666,7 +24666,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "10.4.2",
+   "measuredVersion": "10.7.0",
    "targets": [
     {
      "target": "@appium/types",
@@ -26139,7 +26139,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.0.1",
+   "measuredVersion": "65.0.2",
    "targets": [
     {
      "target": "@eslint/core",
@@ -28544,7 +28544,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.10.7",
+   "measuredVersion": "0.10.8",
    "targets": [
     {
      "target": "@jest/globals",
@@ -29357,7 +29357,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "13.5.1",
+   "measuredVersion": "14.0.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -31310,7 +31310,7 @@
   },
   {
    "package": "react-native-reanimated",
-   "measuredVersion": "4.7.0",
+   "measuredVersion": "4.7.1",
    "targets": [
     {
      "target": "react-native-svg",
@@ -31993,7 +31993,7 @@
   },
   {
    "package": "rrdom",
-   "measuredVersion": "2.1.6",
+   "measuredVersion": "2.1.7",
    "targets": [
     {
      "target": "@rrweb/types",
@@ -32013,7 +32013,7 @@
   },
   {
    "package": "rrweb-snapshot",
-   "measuredVersion": "2.1.6",
+   "measuredVersion": "2.1.7",
    "targets": [
     {
      "target": "@rrweb/types",
@@ -33199,7 +33199,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "62.1.0",
+   "measuredVersion": "62.2.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -33261,7 +33261,7 @@
   },
   {
    "package": "verdaccio-htpasswd",
-   "measuredVersion": "13.1.3",
+   "measuredVersion": "13.1.4",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -34731,7 +34731,7 @@
   },
   {
    "package": "react-native-reanimated",
-   "measuredVersion": "4.7.0",
+   "measuredVersion": "4.7.1",
    "target": "react-native-web",
    "specifiers": [
     "react-native-web/dist/cjs/exports/StyleSheet/compiler/createReactDOMStyle.js",
@@ -34805,7 +34805,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "62.1.0",
+   "measuredVersion": "62.2.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -34813,7 +34813,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "62.1.0",
+   "measuredVersion": "62.2.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -34821,7 +34821,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "62.1.0",
+   "measuredVersion": "62.2.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -34829,7 +34829,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "62.1.0",
+   "measuredVersion": "62.2.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"
