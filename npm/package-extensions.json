@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03",
+ "generated": "2026-10-04",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -13954,7 +13954,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.23.5",
+   "measuredVersion": "5.24.2",
    "targets": [
     {
      "target": "react",
@@ -22916,7 +22916,7 @@
   },
   {
    "package": "@verdaccio/config",
-   "measuredVersion": "8.3.1",
+   "measuredVersion": "8.3.2",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -22943,7 +22943,7 @@
   },
   {
    "package": "@verdaccio/core",
-   "measuredVersion": "8.3.1",
+   "measuredVersion": "8.3.2",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -26139,7 +26139,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.0.2",
+   "measuredVersion": "65.1.0",
    "targets": [
     {
      "target": "@eslint/core",
@@ -33261,7 +33261,7 @@
   },
   {
    "package": "verdaccio-htpasswd",
-   "measuredVersion": "13.1.4",
+   "measuredVersion": "13.1.5",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -33323,7 +33323,7 @@
   },
   {
    "package": "vite-plugin-pwa",
-   "measuredVersion": "1.3.0",
+   "measuredVersion": "2.0.0",
    "targets": [
     {
      "target": "preact",
@@ -33764,7 +33764,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261002.1",
+   "measuredVersion": "1.20261004.1",
    "targets": [
     {
      "target": "pnpapi",
