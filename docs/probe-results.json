@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04",
+  "generated": "2026-10-05",
   "dataset": "8386507aa292358b",
   "instrument": {
     "yarn": "4.18.0",
@@ -7,9 +7,9 @@
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 12,
+    "confirmedViaPath": 11,
     "notOnImport": 61,
-    "installFailed": 0,
+    "installFailed": 1,
     "inconclusive": 3
   },
   "results": [
@@ -1064,23 +1064,13 @@
     },
     {
       "package": "jest-preset-angular",
-      "version": "17.0.1",
+      "version": "17.0.2",
       "expected": [
         "@jest/transform",
         "tslib"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "tslib"
-      ],
-      "citedPathsTried": 5,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [
-        "ts-jest -> typescript (unprovided peer)"
-      ],
-      "specifiersTried": 6
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mjest-preset-angular\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:17.0.2\u001b[39m: All versions satisfying \"17.0.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
     },
     {
       "package": "knex",
@@ -1368,7 +1358,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7490) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-kK0jp4/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7457) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-IaCN1H/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
