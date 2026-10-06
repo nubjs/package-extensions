@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.20 — generated 2026-10-05, do not edit.
-// 780 packages, 1158 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.20 — generated 2026-10-06, do not edit.
+// 778 packages, 1145 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -2227,35 +2227,6 @@ exports.packageExtensions = [
   }
  ],
  [
-  "@nuxt/kit@*",
-  {
-   "peerDependencies": {
-    "@nuxt/schema": "*",
-    "nitropack": "*",
-    "unimport": "*",
-    "vite": "*",
-    "webpack": "*"
-   },
-   "peerDependenciesMeta": {
-    "@nuxt/schema": {
-     "optional": true
-    },
-    "nitropack": {
-     "optional": true
-    },
-    "unimport": {
-     "optional": true
-    },
-    "vite": {
-     "optional": true
-    },
-    "webpack": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@nuxt/nitro-server@*",
   {
    "peerDependencies": {
@@ -2279,7 +2250,6 @@ exports.packageExtensions = [
     "@vue/compiler-sfc": "*",
     "@vue/language-core": "*",
     "autoprefixer": "*",
-    "c12": "*",
     "chokidar": "*",
     "compatx": "*",
     "css-minimizer-webpack-plugin": "*",
@@ -2287,22 +2257,16 @@ exports.packageExtensions = [
     "esbuild": "*",
     "esbuild-loader": "*",
     "h3": "*",
-    "hookable": "*",
-    "ignore": "*",
     "mini-css-extract-plugin": "*",
-    "nitropack": "*",
-    "ofetch": "*",
     "oxc-transform": "*",
     "postcss": "*",
     "pug": "*",
     "rollup-plugin-visualizer": "*",
-    "scule": "*",
     "unctx": "*",
     "unimport": "*",
     "untyped": "*",
     "vite": "*",
     "vue": "*",
-    "vue-bundle-renderer": "*",
     "vue-loader": "*",
     "vue-router": "*",
     "webpack": "*",
@@ -2332,9 +2296,6 @@ exports.packageExtensions = [
     "autoprefixer": {
      "optional": true
     },
-    "c12": {
-     "optional": true
-    },
     "chokidar": {
      "optional": true
     },
@@ -2356,19 +2317,7 @@ exports.packageExtensions = [
     "h3": {
      "optional": true
     },
-    "hookable": {
-     "optional": true
-    },
-    "ignore": {
-     "optional": true
-    },
     "mini-css-extract-plugin": {
-     "optional": true
-    },
-    "nitropack": {
-     "optional": true
-    },
-    "ofetch": {
      "optional": true
     },
     "oxc-transform": {
@@ -2381,9 +2330,6 @@ exports.packageExtensions = [
      "optional": true
     },
     "rollup-plugin-visualizer": {
-     "optional": true
-    },
-    "scule": {
      "optional": true
     },
     "unctx": {
@@ -2399,9 +2345,6 @@ exports.packageExtensions = [
      "optional": true
     },
     "vue": {
-     "optional": true
-    },
-    "vue-bundle-renderer": {
      "optional": true
     },
     "vue-loader": {
@@ -8559,14 +8502,6 @@ exports.packageExtensions = [
     "sugarss": {
      "optional": true
     }
-   }
-  }
- ],
- [
-  "postcss-merge-longhand@*",
-  {
-   "dependencies": {
-    "@csstools/css-tokenizer": "*"
    }
   }
  ],

@@ -1,5 +1,5 @@
-# Generated 2026-10-05 from the 10000 most-downloaded npm packages.
-# 780 packages, 1158 undeclared dependencies.
+# Generated 2026-10-06 from the 10000 most-downloaded npm packages.
+# 778 packages, 1145 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -1098,24 +1098,6 @@ packageExtensions:
         optional: true
       vue-router:
         optional: true
-  "@nuxt/kit@*":
-    peerDependencies:
-      "@nuxt/schema": "*"
-      nitropack: "*"
-      unimport: "*"
-      vite: "*"
-      webpack: "*"
-    peerDependenciesMeta:
-      "@nuxt/schema":
-        optional: true
-      nitropack:
-        optional: true
-      unimport:
-        optional: true
-      vite:
-        optional: true
-      webpack:
-        optional: true
   "@nuxt/nitro-server@*":
     peerDependencies:
       "@nuxt/schema": "*"
@@ -1131,7 +1113,6 @@ packageExtensions:
       "@vue/compiler-sfc": "*"
       "@vue/language-core": "*"
       autoprefixer: "*"
-      c12: "*"
       chokidar: "*"
       compatx: "*"
       css-minimizer-webpack-plugin: "*"
@@ -1139,22 +1120,16 @@ packageExtensions:
       esbuild: "*"
       esbuild-loader: "*"
       h3: "*"
-      hookable: "*"
-      ignore: "*"
       mini-css-extract-plugin: "*"
-      nitropack: "*"
-      ofetch: "*"
       oxc-transform: "*"
       postcss: "*"
       pug: "*"
       rollup-plugin-visualizer: "*"
-      scule: "*"
       unctx: "*"
       unimport: "*"
       untyped: "*"
       vite: "*"
       vue: "*"
-      vue-bundle-renderer: "*"
       vue-loader: "*"
       vue-router: "*"
       webpack: "*"
@@ -1176,8 +1151,6 @@ packageExtensions:
         optional: true
       autoprefixer:
         optional: true
-      c12:
-        optional: true
       chokidar:
         optional: true
       compatx:
@@ -1192,15 +1165,7 @@ packageExtensions:
         optional: true
       h3:
         optional: true
-      hookable:
-        optional: true
-      ignore:
-        optional: true
       mini-css-extract-plugin:
-        optional: true
-      nitropack:
-        optional: true
-      ofetch:
         optional: true
       oxc-transform:
         optional: true
@@ -1209,8 +1174,6 @@ packageExtensions:
       pug:
         optional: true
       rollup-plugin-visualizer:
-        optional: true
-      scule:
         optional: true
       unctx:
         optional: true
@@ -1221,8 +1184,6 @@ packageExtensions:
       vite:
         optional: true
       vue:
-        optional: true
-      vue-bundle-renderer:
         optional: true
       vue-loader:
         optional: true
@@ -4471,9 +4432,6 @@ packageExtensions:
     peerDependenciesMeta:
       sugarss:
         optional: true
-  postcss-merge-longhand@*:
-    dependencies:
-      "@csstools/css-tokenizer": "*"
   postcss-normalize-positions@*:
     peerDependencies:
       "@csstools/css-tokenizer": "*"

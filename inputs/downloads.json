@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T15:04:09.991Z",
+  "generatedAt": "2026-10-06T13:30:49.887Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-09-28",
   "end": "2026-10-04",
@@ -169,7 +169,6 @@
     "@nrwl/workspace": 888050,
     "@nuxt/devtools": 2665141,
     "@nuxt/devtools-kit": 4564811,
-    "@nuxt/kit": 10008606,
     "@nuxt/nitro-server": 2231827,
     "@nuxt/schema": 3449913,
     "@nuxt/telemetry": 2676217,
@@ -621,7 +620,6 @@
     "playwright-core": 143875987,
     "pm2": 4070456,
     "postcss-import": 50952075,
-    "postcss-merge-longhand": 21753632,
     "postcss-normalize-positions": 21062635,
     "postcss-syntax": 1105455,
     "posthog-node": 15243417,

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-05",
-  "dataset": "8386507aa292358b",
+  "generated": "2026-10-06",
+  "dataset": "d12008e4144f8115",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,8 +8,8 @@
   "tally": {
     "confirmed": 4,
     "confirmedViaPath": 11,
-    "notOnImport": 61,
-    "installFailed": 1,
+    "notOnImport": 60,
+    "installFailed": 2,
     "inconclusive": 3
   },
   "results": [
@@ -235,22 +235,14 @@
     },
     {
       "package": "@nuxt/vite-builder",
-      "version": "4.5.2",
+      "version": "4.6.0",
       "expected": [
         "@babel/core",
         "@nuxt/schema",
         "unplugin"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [
-        "@vitejs/plugin-vue -> vue (unprovided peer)"
-      ],
-      "specifiersTried": 3
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nuxt/\u001b[39m\u001b[38;5;173mvite-builder\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:4.6.0\u001b[39m: All versions satisfying \"4.6.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016"
     },
     {
       "package": "@nx/devkit",
@@ -1069,8 +1061,18 @@
         "@jest/transform",
         "tslib"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mjest-preset-angular\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:17.0.2\u001b[39m: All versions satisfying \"17.0.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "tslib"
+      ],
+      "citedPathsTried": 5,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "ts-jest -> typescript (unprovided peer)"
+      ],
+      "specifiersTried": 6
     },
     {
       "package": "knex",
@@ -1358,27 +1360,19 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7457) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-IaCN1H/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7403) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-baIIRn/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
-      "version": "62.2.0",
+      "version": "62.4.0",
       "expected": [
         "@vltpkg/graph",
         "@vltpkg/package-info",
         "@vltpkg/package-json",
         "path-scurry"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "@vltpkg/graph"
-      ],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:62.4.0\u001b[39m: All versions satisfying \"62.4.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
     }
   ]
 }

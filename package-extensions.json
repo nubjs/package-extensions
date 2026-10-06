@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05",
+  "generated": "2026-10-06",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1158,
-      "packages": 649
+      "entries": 1145,
+      "packages": 647
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 780,
-    "selectors": 800,
-    "entries": 1158,
+    "packages": 778,
+    "selectors": 798,
+    "entries": 1145,
     "byClass": {
-      "runtime": 207,
+      "runtime": 206,
       "adapter": 128,
-      "types": 528,
+      "types": 516,
       "deep-path": 0,
       "guarded": 295
     },
     "byField": {
-      "dependency": 32,
-      "peer": 1126
+      "dependency": 31,
+      "peer": 1114
     },
     "candidatesForReview": 101,
     "droppedUnpublishedTargets": 202,
@@ -4705,32 +4705,6 @@
         }
       }
     },
-    "@nuxt/kit@*": {
-      "peerDependencies": {
-        "@nuxt/schema": "*",
-        "nitropack": "*",
-        "unimport": "*",
-        "vite": "*",
-        "webpack": "*"
-      },
-      "peerDependenciesMeta": {
-        "@nuxt/schema": {
-          "optional": true
-        },
-        "nitropack": {
-          "optional": true
-        },
-        "unimport": {
-          "optional": true
-        },
-        "vite": {
-          "optional": true
-        },
-        "webpack": {
-          "optional": true
-        }
-      }
-    },
     "@nuxt/nitro-server@*": {
       "peerDependencies": {
         "@nuxt/schema": "*"
@@ -4750,7 +4724,6 @@
         "@vue/compiler-sfc": "*",
         "@vue/language-core": "*",
         "autoprefixer": "*",
-        "c12": "*",
         "chokidar": "*",
         "compatx": "*",
         "css-minimizer-webpack-plugin": "*",
@@ -4758,22 +4731,16 @@
         "esbuild": "*",
         "esbuild-loader": "*",
         "h3": "*",
-        "hookable": "*",
-        "ignore": "*",
         "mini-css-extract-plugin": "*",
-        "nitropack": "*",
-        "ofetch": "*",
         "oxc-transform": "*",
         "postcss": "*",
         "pug": "*",
         "rollup-plugin-visualizer": "*",
-        "scule": "*",
         "unctx": "*",
         "unimport": "*",
         "untyped": "*",
         "vite": "*",
         "vue": "*",
-        "vue-bundle-renderer": "*",
         "vue-loader": "*",
         "vue-router": "*",
         "webpack": "*",
@@ -4803,9 +4770,6 @@
         "autoprefixer": {
           "optional": true
         },
-        "c12": {
-          "optional": true
-        },
         "chokidar": {
           "optional": true
         },
@@ -4827,19 +4791,7 @@
         "h3": {
           "optional": true
         },
-        "hookable": {
-          "optional": true
-        },
-        "ignore": {
-          "optional": true
-        },
         "mini-css-extract-plugin": {
-          "optional": true
-        },
-        "nitropack": {
-          "optional": true
-        },
-        "ofetch": {
           "optional": true
         },
         "oxc-transform": {
@@ -4852,9 +4804,6 @@
           "optional": true
         },
         "rollup-plugin-visualizer": {
-          "optional": true
-        },
-        "scule": {
           "optional": true
         },
         "unctx": {
@@ -4870,9 +4819,6 @@
           "optional": true
         },
         "vue": {
-          "optional": true
-        },
-        "vue-bundle-renderer": {
           "optional": true
         },
         "vue-loader": {
@@ -9934,11 +9880,6 @@
         }
       }
     },
-    "postcss-merge-longhand@*": {
-      "dependencies": {
-        "@csstools/css-tokenizer": "*"
-      }
-    },
     "postcss-normalize-positions@*": {
       "peerDependencies": {
         "@csstools/css-tokenizer": "*"
@@ -12968,7 +12909,7 @@
     },
     {
       "package": "@apollo/client",
-      "measuredVersion": "4.3.1",
+      "measuredVersion": "4.3.2",
       "targets": [
         {
           "target": "relay-runtime",
@@ -13083,7 +13024,7 @@
     },
     {
       "package": "@astrojs/markdown-remark",
-      "measuredVersion": "7.3.1",
+      "measuredVersion": "7.3.2",
       "targets": [
         {
           "target": "hast",
@@ -13132,7 +13073,7 @@
     },
     {
       "package": "@astrojs/react",
-      "measuredVersion": "7.0.0",
+      "measuredVersion": "7.0.1",
       "targets": [
         {
           "target": "astro",
@@ -13954,7 +13895,7 @@
     },
     {
       "package": "@eslint-react/shared",
-      "measuredVersion": "5.24.4",
+      "measuredVersion": "5.24.6",
       "targets": [
         {
           "target": "react",
@@ -15657,7 +15598,7 @@
     },
     {
       "package": "@mantine/hooks",
-      "measuredVersion": "9.7.0",
+      "measuredVersion": "9.7.1",
       "targets": [
         {
           "target": "react-dom",
@@ -16083,7 +16024,7 @@
     },
     {
       "package": "@mux/mux-video",
-      "measuredVersion": "0.31.4",
+      "measuredVersion": "0.31.5",
       "targets": [
         {
           "target": "mux-embed",
@@ -16104,7 +16045,7 @@
     },
     {
       "package": "@napi-rs/cli",
-      "measuredVersion": "3.10.7",
+      "measuredVersion": "3.10.8",
       "targets": [
         {
           "target": "@oxc-node/core",
@@ -16459,7 +16400,7 @@
     },
     {
       "package": "@nuxt/devtools",
-      "measuredVersion": "4.0.0-beta.3",
+      "measuredVersion": "4.0.0-beta.4",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16493,7 +16434,7 @@
     },
     {
       "package": "@nuxt/devtools-kit",
-      "measuredVersion": "4.0.0-beta.3",
+      "measuredVersion": "4.0.0-beta.4",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16686,84 +16627,8 @@
       ]
     },
     {
-      "package": "@nuxt/kit",
-      "measuredVersion": "4.5.2",
-      "targets": [
-        {
-          "target": "@nuxt/schema",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@nuxt/schema"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "nitropack",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "nitropack/types"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "unimport",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "unimport"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "vite",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "vite"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "webpack",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "webpack"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "@nuxt/nitro-server",
-      "measuredVersion": "4.5.2",
+      "measuredVersion": "4.6.0",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16783,7 +16648,7 @@
     },
     {
       "package": "@nuxt/schema",
-      "measuredVersion": "4.5.2",
+      "measuredVersion": "4.6.0",
       "targets": [
         {
           "target": "@unhead/vue",
@@ -16793,12 +16658,10 @@
           "reason": "types class — no runtime edge, only a declaration-file reference",
           "specifiers": [
             "@unhead/vue/types",
-            "@unhead/vue/vite",
-            "@unhead/vue",
-            "@unhead/vue/server"
+            "@unhead/vue/vite"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16812,7 +16675,7 @@
             "@vitejs/plugin-vue"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16826,7 +16689,7 @@
             "@vitejs/plugin-vue-jsx"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16840,7 +16703,7 @@
             "@vue/compiler-core"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16854,7 +16717,7 @@
             "@vue/compiler-sfc"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16868,7 +16731,7 @@
             "@vue/language-core"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16882,21 +16745,7 @@
             "autoprefixer"
           ],
           "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "c12",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "c12"
-          ],
-          "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16910,7 +16759,7 @@
             "chokidar"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16924,7 +16773,7 @@
             "compatx"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16938,7 +16787,7 @@
             "css-minimizer-webpack-plugin"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16952,7 +16801,7 @@
             "cssnano"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16966,7 +16815,7 @@
             "esbuild"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16980,7 +16829,7 @@
             "esbuild-loader"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -16994,35 +16843,7 @@
             "h3"
           ],
           "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "hookable",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "hookable"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "ignore",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "ignore"
-          ],
-          "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17036,35 +16857,7 @@
             "mini-css-extract-plugin"
           ],
           "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "nitropack",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "nitropack/types"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "ofetch",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "ofetch"
-          ],
-          "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17078,7 +16871,7 @@
             "oxc-transform"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17092,7 +16885,7 @@
             "postcss"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17106,7 +16899,7 @@
             "pug"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17120,21 +16913,7 @@
             "rollup-plugin-visualizer"
           ],
           "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "scule",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "scule"
-          ],
-          "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17148,7 +16927,7 @@
             "unctx/transform"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17162,7 +16941,7 @@
             "unimport"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17176,9 +16955,10 @@
             "untyped"
           ],
           "files": [
+            "dist/components-D8Oys4sc.d.mts",
             "dist/index.d.mts"
           ],
-          "fileCount": 1
+          "fileCount": 2
         },
         {
           "target": "vite",
@@ -17190,7 +16970,7 @@
             "vite"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17204,22 +16984,7 @@
             "vue"
           ],
           "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "vue-bundle-renderer",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "vue-bundle-renderer/runtime",
-            "vue-bundle-renderer"
-          ],
-          "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17233,7 +16998,7 @@
             "vue-loader"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17247,7 +17012,7 @@
             "vue-router"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17261,7 +17026,7 @@
             "webpack"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17275,7 +17040,7 @@
             "webpack-bundle-analyzer"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17289,7 +17054,7 @@
             "webpack-dev-middleware"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         },
@@ -17303,7 +17068,7 @@
             "webpack-hot-middleware"
           ],
           "files": [
-            "dist/index.d.mts"
+            "dist/components-D8Oys4sc.d.mts"
           ],
           "fileCount": 1
         }
@@ -17345,7 +17110,7 @@
     },
     {
       "package": "@nuxt/vite-builder",
-      "measuredVersion": "4.5.2",
+      "measuredVersion": "4.6.0",
       "targets": [
         {
           "target": "@babel/core",
@@ -20230,7 +19995,7 @@
     },
     {
       "package": "@redocly/config",
-      "measuredVersion": "0.61.1",
+      "measuredVersion": "0.62.0",
       "targets": [
         {
           "target": "@markdoc/markdoc",
@@ -20278,7 +20043,7 @@
     },
     {
       "package": "@redocly/openapi-core",
-      "measuredVersion": "2.58.0",
+      "measuredVersion": "2.58.2",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20301,7 +20066,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.58.0",
+      "measuredVersion": "2.58.2",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20536,7 +20301,7 @@
     },
     {
       "package": "@rsbuild/core",
-      "measuredVersion": "2.2.11",
+      "measuredVersion": "2.2.12",
       "targets": [
         {
           "target": "tsx",
@@ -20606,7 +20371,7 @@
     },
     {
       "package": "@rushstack/rush-sdk",
-      "measuredVersion": "5.180.0",
+      "measuredVersion": "5.181.0",
       "targets": [
         {
           "target": "@rushstack/stream-collator",
@@ -22716,7 +22481,7 @@
     },
     {
       "package": "@typescript-eslint/types",
-      "measuredVersion": "8.71.0",
+      "measuredVersion": "8.71.1",
       "targets": [
         {
           "target": "typescript",
@@ -22819,7 +22584,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "18.0.0",
+      "measuredVersion": "19.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -22896,7 +22661,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "17.0.0",
+      "measuredVersion": "18.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -24631,7 +24396,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "9.1.0",
+      "measuredVersion": "9.1.1",
       "targets": [
         {
           "target": "@appium/types",
@@ -24666,7 +24431,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "10.7.0",
+      "measuredVersion": "10.7.1",
       "targets": [
         {
           "target": "@appium/types",
@@ -24746,7 +24511,7 @@
     },
     {
       "package": "astro",
-      "measuredVersion": "7.3.5",
+      "measuredVersion": "7.3.6",
       "targets": [
         {
           "target": "typescript",
@@ -25236,7 +25001,7 @@
     },
     {
       "package": "crossws",
-      "measuredVersion": "0.4.12",
+      "measuredVersion": "0.4.14",
       "targets": [
         {
           "target": "@cloudflare/workers-types",
@@ -29323,7 +29088,7 @@
     },
     {
       "package": "monocart-coverage-reports",
-      "measuredVersion": "2.13.0",
+      "measuredVersion": "2.13.1",
       "targets": [
         {
           "target": "bufferutil",
@@ -30631,26 +30396,6 @@
       ]
     },
     {
-      "package": "postcss-merge-longhand",
-      "measuredVersion": "9.2.0",
-      "targets": [
-        {
-          "target": "@csstools/css-tokenizer",
-          "class": "runtime",
-          "field": "dependency",
-          "candidate": false,
-          "reason": "probe 9.1.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @csstools/css-tokenizer\"",
-          "specifiers": [
-            "@csstools/css-tokenizer"
-          ],
-          "files": [
-            "src/lib/unresolved.js"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "postcss-normalize-positions",
       "measuredVersion": "9.0.6",
       "targets": [
@@ -31154,7 +30899,7 @@
     },
     {
       "package": "react-i18next",
-      "measuredVersion": "17.0.15",
+      "measuredVersion": "17.0.16",
       "targets": [
         {
           "target": "babel-plugin-macros",
@@ -33199,7 +32944,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.2.0",
+      "measuredVersion": "62.4.0",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -33281,7 +33026,7 @@
     },
     {
       "package": "vite",
-      "measuredVersion": "8.3.2",
+      "measuredVersion": "8.3.3",
       "targets": [
         {
           "target": "pnpapi",
@@ -33645,7 +33390,7 @@
     },
     {
       "package": "vuetify",
-      "measuredVersion": "4.2.3",
+      "measuredVersion": "4.2.4",
       "targets": [
         {
           "target": "@vue/reactivity",
@@ -33764,7 +33509,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261005.1",
+      "measuredVersion": "1.20261006.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -34087,7 +33832,7 @@
     },
     {
       "package": "@nuxt/vite-builder",
-      "measuredVersion": "4.5.2",
+      "measuredVersion": "4.6.0",
       "target": "unplugin",
       "specifiers": [
         "unplugin"
@@ -34805,7 +34550,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.2.0",
+      "measuredVersion": "62.4.0",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -34813,7 +34558,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.2.0",
+      "measuredVersion": "62.4.0",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -34821,7 +34566,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.2.0",
+      "measuredVersion": "62.4.0",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -34829,7 +34574,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.2.0",
+      "measuredVersion": "62.4.0",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"

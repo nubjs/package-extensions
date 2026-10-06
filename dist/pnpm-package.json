@@ -1756,32 +1756,6 @@
           }
         }
       },
-      "@nuxt/kit@*": {
-        "peerDependencies": {
-          "@nuxt/schema": "*",
-          "nitropack": "*",
-          "unimport": "*",
-          "vite": "*",
-          "webpack": "*"
-        },
-        "peerDependenciesMeta": {
-          "@nuxt/schema": {
-            "optional": true
-          },
-          "nitropack": {
-            "optional": true
-          },
-          "unimport": {
-            "optional": true
-          },
-          "vite": {
-            "optional": true
-          },
-          "webpack": {
-            "optional": true
-          }
-        }
-      },
       "@nuxt/nitro-server@*": {
         "peerDependencies": {
           "@nuxt/schema": "*"
@@ -1801,7 +1775,6 @@
           "@vue/compiler-sfc": "*",
           "@vue/language-core": "*",
           "autoprefixer": "*",
-          "c12": "*",
           "chokidar": "*",
           "compatx": "*",
           "css-minimizer-webpack-plugin": "*",
@@ -1809,22 +1782,16 @@
           "esbuild": "*",
           "esbuild-loader": "*",
           "h3": "*",
-          "hookable": "*",
-          "ignore": "*",
           "mini-css-extract-plugin": "*",
-          "nitropack": "*",
-          "ofetch": "*",
           "oxc-transform": "*",
           "postcss": "*",
           "pug": "*",
           "rollup-plugin-visualizer": "*",
-          "scule": "*",
           "unctx": "*",
           "unimport": "*",
           "untyped": "*",
           "vite": "*",
           "vue": "*",
-          "vue-bundle-renderer": "*",
           "vue-loader": "*",
           "vue-router": "*",
           "webpack": "*",
@@ -1854,9 +1821,6 @@
           "autoprefixer": {
             "optional": true
           },
-          "c12": {
-            "optional": true
-          },
           "chokidar": {
             "optional": true
           },
@@ -1878,19 +1842,7 @@
           "h3": {
             "optional": true
           },
-          "hookable": {
-            "optional": true
-          },
-          "ignore": {
-            "optional": true
-          },
           "mini-css-extract-plugin": {
-            "optional": true
-          },
-          "nitropack": {
-            "optional": true
-          },
-          "ofetch": {
             "optional": true
           },
           "oxc-transform": {
@@ -1903,9 +1855,6 @@
             "optional": true
           },
           "rollup-plugin-visualizer": {
-            "optional": true
-          },
-          "scule": {
             "optional": true
           },
           "unctx": {
@@ -1921,9 +1870,6 @@
             "optional": true
           },
           "vue": {
-            "optional": true
-          },
-          "vue-bundle-renderer": {
             "optional": true
           },
           "vue-loader": {
@@ -6983,11 +6929,6 @@
           "sugarss": {
             "optional": true
           }
-        }
-      },
-      "postcss-merge-longhand@*": {
-        "dependencies": {
-          "@csstools/css-tokenizer": "*"
         }
       },
       "postcss-normalize-positions@*": {
