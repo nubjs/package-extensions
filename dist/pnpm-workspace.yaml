@@ -1,5 +1,5 @@
-# Generated 2026-10-06 from the 10000 most-downloaded npm packages.
-# 778 packages, 1145 undeclared dependencies.
+# Generated 2026-10-07 from the 10000 most-downloaded npm packages.
+# 777 packages, 1144 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -3098,15 +3098,6 @@ packageExtensions:
     peerDependenciesMeta:
       react:
         optional: true
-  crossws@*:
-    peerDependencies:
-      "@cloudflare/workers-types": "*"
-      bun: "*"
-    peerDependenciesMeta:
-      "@cloudflare/workers-types":
-        optional: true
-      bun:
-        optional: true
   cypress@*:
     peerDependencies:
       "@angular/common": "*"
@@ -3149,9 +3140,12 @@ packageExtensions:
   dd-trace@*:
     peerDependencies:
       "@vitest/runner": "*"
+      pnpapi: "*"
       typescript: "*"
     peerDependenciesMeta:
       "@vitest/runner":
+        optional: true
+      pnpapi:
         optional: true
       typescript:
         optional: true

@@ -4833,20 +4833,6 @@
           }
         }
       },
-      "crossws@*": {
-        "peerDependencies": {
-          "@cloudflare/workers-types": "*",
-          "bun": "*"
-        },
-        "peerDependenciesMeta": {
-          "@cloudflare/workers-types": {
-            "optional": true
-          },
-          "bun": {
-            "optional": true
-          }
-        }
-      },
       "cypress@*": {
         "peerDependencies": {
           "@angular/common": "*",
@@ -4906,10 +4892,14 @@
       "dd-trace@*": {
         "peerDependencies": {
           "@vitest/runner": "*",
+          "pnpapi": "*",
           "typescript": "*"
         },
         "peerDependenciesMeta": {
           "@vitest/runner": {
+            "optional": true
+          },
+          "pnpapi": {
             "optional": true
           },
           "typescript": {

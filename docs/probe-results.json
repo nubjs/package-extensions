@@ -1,15 +1,15 @@
 {
-  "generated": "2026-10-06",
-  "dataset": "d12008e4144f8115",
+  "generated": "2026-10-07",
+  "dataset": "c529b7d0df9b62ce",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 11,
+    "confirmedViaPath": 10,
     "notOnImport": 60,
-    "installFailed": 2,
+    "installFailed": 3,
     "inconclusive": 3
   },
   "results": [
@@ -146,25 +146,14 @@
     },
     {
       "package": "@mastra/core",
-      "version": "1.74.0",
+      "version": "1.75.0",
       "expected": [
         "@workflow/serde",
         "msw",
         "undici"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 9,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "zod"
-      ],
-      "byOtherIssuers": [
-        "@mastra/schema-compat -> zod (unprovided peer)",
-        "@ai-sdk/provider-utils -> zod (unprovided peer)"
-      ],
-      "specifiersTried": 35
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.75.0\u001b[39m: All versions satisfying \"1.75.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
     },
     {
       "package": "@nestjs/platform-fastify",
@@ -241,8 +230,16 @@
         "@nuxt/schema",
         "unplugin"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nuxt/\u001b[39m\u001b[38;5;173mvite-builder\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:4.6.0\u001b[39m: All versions satisfying \"4.6.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@vitejs/plugin-vue -> vue (unprovided peer)"
+      ],
+      "specifiersTried": 3
     },
     {
       "package": "@nx/devkit",
@@ -546,7 +543,7 @@
     },
     {
       "package": "expo-asset",
-      "version": "57.0.18",
+      "version": "57.0.19",
       "expected": [
         "@react-native/assets-registry",
         "expo-modules-core"
@@ -564,7 +561,7 @@
     },
     {
       "package": "expo-auth-session",
-      "version": "57.0.13",
+      "version": "57.0.14",
       "expected": [
         "expo-modules-core"
       ],
@@ -629,7 +626,7 @@
     },
     {
       "package": "expo-constants",
-      "version": "57.0.20",
+      "version": "57.0.21",
       "expected": [
         "expo-manifests",
         "expo-modules-core"
@@ -660,7 +657,7 @@
     },
     {
       "package": "expo-dev-menu",
-      "version": "57.0.18",
+      "version": "57.0.19",
       "expected": [
         "expo-modules-core"
       ],
@@ -705,7 +702,7 @@
     },
     {
       "package": "expo-eas-client",
-      "version": "57.0.4",
+      "version": "57.0.5",
       "expected": [
         "expo-modules-core"
       ],
@@ -787,7 +784,7 @@
     },
     {
       "package": "expo-image-manipulator",
-      "version": "57.0.20",
+      "version": "57.0.21",
       "expected": [
         "expo-modules-core"
       ],
@@ -832,7 +829,7 @@
     },
     {
       "package": "expo-linking",
-      "version": "57.0.11",
+      "version": "57.0.12",
       "expected": [
         "expo-modules-core"
       ],
@@ -881,7 +878,7 @@
     },
     {
       "package": "expo-notifications",
-      "version": "57.0.21",
+      "version": "57.0.22",
       "expected": [
         "expo-modules-core"
       ],
@@ -900,7 +897,7 @@
     },
     {
       "package": "expo-router",
-      "version": "57.0.24",
+      "version": "57.0.25",
       "expected": [
         "expo-modules-core",
         "react-native-tab-view"
@@ -967,7 +964,7 @@
     },
     {
       "package": "expo-updates",
-      "version": "57.0.24",
+      "version": "57.0.25",
       "expected": [
         "expo-modules-core"
       ],
@@ -1106,7 +1103,7 @@
     },
     {
       "package": "next",
-      "version": "16.3.8",
+      "version": "16.4.0",
       "expected": [
         "critters",
         "next-rspack",
@@ -1115,19 +1112,8 @@
         "react-server-dom-webpack",
         "server-only"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "private-next-instrumentation-client",
-        "react-server-dom-webpack"
-      ],
-      "citedPathsTried": 20,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "react"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 21
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mnext\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:16.4.0\u001b[39m: All versions satisfying \"16.4.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mnext\u001b[39m\u001b[38;5"
     },
     {
       "package": "nitro",
@@ -1360,11 +1346,11 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7403) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-baIIRn/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7429) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-OdUVwh/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
-      "version": "62.4.0",
+      "version": "62.7.0",
       "expected": [
         "@vltpkg/graph",
         "@vltpkg/package-info",
@@ -1372,7 +1358,7 @@
         "path-scurry"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:62.4.0\u001b[39m: All versions satisfying \"62.4.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:62.7.0\u001b[39m: All versions satisfying \"62.7.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
     }
   ]
 }

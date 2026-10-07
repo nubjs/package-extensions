@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06",
+  "generated": "2026-10-07",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1145,
-      "packages": 647
+      "entries": 1144,
+      "packages": 646
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 778,
-    "selectors": 798,
-    "entries": 1145,
+    "packages": 777,
+    "selectors": 797,
+    "entries": 1144,
     "byClass": {
       "runtime": 206,
       "adapter": 128,
-      "types": 516,
+      "types": 514,
       "deep-path": 0,
-      "guarded": 295
+      "guarded": 296
     },
     "byField": {
       "dependency": 31,
-      "peer": 1114
+      "peer": 1113
     },
     "candidatesForReview": 101,
     "droppedUnpublishedTargets": 202,
@@ -7782,20 +7782,6 @@
         }
       }
     },
-    "crossws@*": {
-      "peerDependencies": {
-        "@cloudflare/workers-types": "*",
-        "bun": "*"
-      },
-      "peerDependenciesMeta": {
-        "@cloudflare/workers-types": {
-          "optional": true
-        },
-        "bun": {
-          "optional": true
-        }
-      }
-    },
     "cypress@*": {
       "peerDependencies": {
         "@angular/common": "*",
@@ -7855,10 +7841,14 @@
     "dd-trace@*": {
       "peerDependencies": {
         "@vitest/runner": "*",
+        "pnpapi": "*",
         "typescript": "*"
       },
       "peerDependenciesMeta": {
         "@vitest/runner": {
+          "optional": true
+        },
+        "pnpapi": {
           "optional": true
         },
         "typescript": {
@@ -12547,7 +12537,7 @@
     },
     {
       "package": "@angular-devkit/build-angular",
-      "measuredVersion": "22.2.1",
+      "measuredVersion": "22.2.2",
       "targets": [
         {
           "target": "zone.js",
@@ -12732,7 +12722,7 @@
     },
     {
       "package": "@angular/cli",
-      "measuredVersion": "22.2.1",
+      "measuredVersion": "22.2.2",
       "targets": [
         {
           "target": "typescript",
@@ -13217,7 +13207,7 @@
     },
     {
       "package": "@aws-lambda-powertools/logger",
-      "measuredVersion": "2.35.0",
+      "measuredVersion": "2.36.0",
       "targets": [
         {
           "target": "aws-lambda",
@@ -13366,7 +13356,7 @@
     },
     {
       "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.62.5",
+      "measuredVersion": "1.63.0",
       "targets": [
         {
           "target": "@cloudflare/workers-utils",
@@ -13480,7 +13470,7 @@
     },
     {
       "package": "@datadog/datadog-ci",
-      "measuredVersion": "5.24.1",
+      "measuredVersion": "5.25.0",
       "targets": [
         {
           "target": "@datadog/mobile-react-native",
@@ -13514,7 +13504,7 @@
     },
     {
       "package": "@datadog/datadog-ci-base",
-      "measuredVersion": "5.24.1",
+      "measuredVersion": "5.25.0",
       "targets": [
         {
           "target": "@datadog/mobile-react-native",
@@ -13895,7 +13885,7 @@
     },
     {
       "package": "@eslint-react/shared",
-      "measuredVersion": "5.24.6",
+      "measuredVersion": "5.24.8",
       "targets": [
         {
           "target": "react",
@@ -13978,7 +13968,7 @@
     },
     {
       "package": "@expo/image-utils",
-      "measuredVersion": "0.11.5",
+      "measuredVersion": "0.11.6",
       "targets": [
         {
           "target": "sharp",
@@ -14032,7 +14022,7 @@
     },
     {
       "package": "@expo/metro-config",
-      "measuredVersion": "57.0.12",
+      "measuredVersion": "57.0.13",
       "targets": [
         {
           "target": "babel-preset-expo",
@@ -14824,7 +14814,7 @@
     },
     {
       "package": "@google/gemini-cli",
-      "measuredVersion": "0.62.0",
+      "measuredVersion": "0.63.0",
       "targets": [
         {
           "target": "bufferutil",
@@ -14880,7 +14870,7 @@
     },
     {
       "package": "@graphql-codegen/client-preset",
-      "measuredVersion": "6.2.1",
+      "measuredVersion": "6.2.2",
       "targets": [
         {
           "target": "@babel/core",
@@ -14900,7 +14890,7 @@
     },
     {
       "package": "@graphql-codegen/plugin-helpers",
-      "measuredVersion": "7.4.1",
+      "measuredVersion": "7.4.2",
       "targets": [
         {
           "target": "@graphql-tools/apollo-engine-loader",
@@ -15675,7 +15665,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.74.0",
+      "measuredVersion": "1.75.0",
       "targets": [
         {
           "target": "@workflow/serde",
@@ -15717,12 +15707,12 @@
             "undici"
           ],
           "files": [
-            "dist/dist-DQ-nyzcq.cjs",
-            "dist/dist-DTh6HwH_.cjs",
-            "dist/dist-OXSDWcNK.js",
-            "dist/dist-qIvJMqQG.js",
-            "dist/dist-t-eoX9xC-B26TWrHr.cjs",
-            "dist/dist-t-eoX9xC-B3I25jac.js"
+            "dist/dist-BELWxv--.js",
+            "dist/dist-BgUIUei9-BstmucK2.cjs",
+            "dist/dist-BgUIUei9-Cf3ZzunV.js",
+            "dist/dist-CSedSB65.cjs",
+            "dist/dist-M24ypl2W.cjs",
+            "dist/dist-kwhHAw-p.js"
           ],
           "fileCount": 6
         }
@@ -15817,7 +15807,7 @@
     },
     {
       "package": "@mendable/firecrawl-js",
-      "measuredVersion": "4.42.4",
+      "measuredVersion": "4.44.1",
       "targets": [
         {
           "target": "undici",
@@ -16235,7 +16225,7 @@
     },
     {
       "package": "@next/bundle-analyzer",
-      "measuredVersion": "16.3.8",
+      "measuredVersion": "16.4.0",
       "targets": [
         {
           "target": "next",
@@ -16255,7 +16245,7 @@
     },
     {
       "package": "@next/eslint-plugin-next",
-      "measuredVersion": "16.3.8",
+      "measuredVersion": "16.4.0",
       "targets": [
         {
           "target": "eslint",
@@ -18653,7 +18643,7 @@
     },
     {
       "package": "@opennextjs/cloudflare",
-      "measuredVersion": "1.20.8",
+      "measuredVersion": "1.20.9",
       "targets": [
         {
           "target": "esbuild",
@@ -18762,7 +18752,7 @@
     },
     {
       "package": "@opentelemetry/instrumentation-winston",
-      "measuredVersion": "0.66.0",
+      "measuredVersion": "0.67.0",
       "targets": [
         {
           "target": "@opentelemetry/winston-transport",
@@ -19159,7 +19149,7 @@
     },
     {
       "package": "@promptbook/utils",
-      "measuredVersion": "0.114.0-49",
+      "measuredVersion": "0.114.0-50",
       "targets": [
         {
           "target": "openai",
@@ -19214,7 +19204,7 @@
     },
     {
       "package": "@pulumi/pulumi",
-      "measuredVersion": "3.267.0",
+      "measuredVersion": "3.268.0",
       "targets": [
         {
           "target": "@microsoft/typescript-etw",
@@ -19995,7 +19985,7 @@
     },
     {
       "package": "@redocly/config",
-      "measuredVersion": "0.62.0",
+      "measuredVersion": "0.64.0",
       "targets": [
         {
           "target": "@markdoc/markdoc",
@@ -20043,7 +20033,7 @@
     },
     {
       "package": "@redocly/openapi-core",
-      "measuredVersion": "2.58.2",
+      "measuredVersion": "2.59.0",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20066,7 +20056,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.58.2",
+      "measuredVersion": "2.59.0",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20557,7 +20547,7 @@
     },
     {
       "package": "@sentry/vercel-edge",
-      "measuredVersion": "11.4.0",
+      "measuredVersion": "11.5.0",
       "targets": [
         {
           "target": "@sentry/opentelemetry",
@@ -22584,7 +22574,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "19.0.0",
+      "measuredVersion": "20.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -22661,7 +22651,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "18.0.0",
+      "measuredVersion": "19.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -24451,7 +24441,7 @@
     },
     {
       "package": "applicationinsights",
-      "measuredVersion": "3.16.0",
+      "measuredVersion": "3.17.0",
       "targets": [
         {
           "target": "@opentelemetry/instrumentation",
@@ -24663,7 +24653,7 @@
     },
     {
       "package": "babel-preset-expo",
-      "measuredVersion": "57.0.13",
+      "measuredVersion": "57.0.14",
       "targets": [
         {
           "target": "@babel/core",
@@ -25000,40 +24990,6 @@
       ]
     },
     {
-      "package": "crossws",
-      "measuredVersion": "0.4.14",
-      "targets": [
-        {
-          "target": "@cloudflare/workers-types",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@cloudflare/workers-types"
-          ],
-          "files": [
-            "dist/_chunks/cloudflare.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "bun",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "bun"
-          ],
-          "files": [
-            "dist/_chunks/bun.d.mts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "cypress",
       "measuredVersion": "16.1.1",
       "targets": [
@@ -25214,7 +25170,7 @@
     },
     {
       "package": "dd-trace",
-      "measuredVersion": "6.19.0",
+      "measuredVersion": "6.20.0",
       "targets": [
         {
           "target": "@vitest/runner",
@@ -25227,6 +25183,20 @@
           ],
           "files": [
             "ci/vitest-no-worker-init-runner-setup.mjs"
+          ],
+          "fileCount": 1
+        },
+        {
+          "target": "pnpapi",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "pnpapi"
+          ],
+          "files": [
+            "packages/dd-trace/src/openfeature/writers/flag-evaluations.js"
           ],
           "fileCount": 1
         },
@@ -25767,7 +25737,7 @@
     },
     {
       "package": "eslint-config-next",
-      "measuredVersion": "16.3.8",
+      "measuredVersion": "16.4.0",
       "targets": [
         {
           "target": "next",
@@ -25904,7 +25874,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.1.0",
+      "measuredVersion": "65.2.0",
       "targets": [
         {
           "target": "@eslint/core",
@@ -26241,7 +26211,7 @@
     },
     {
       "package": "expo-asset",
-      "measuredVersion": "57.0.18",
+      "measuredVersion": "57.0.19",
       "targets": [
         {
           "target": "@react-native/assets-registry",
@@ -26281,7 +26251,7 @@
     },
     {
       "package": "expo-auth-session",
-      "measuredVersion": "57.0.13",
+      "measuredVersion": "57.0.14",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26384,7 +26354,7 @@
     },
     {
       "package": "expo-constants",
-      "measuredVersion": "57.0.20",
+      "measuredVersion": "57.0.21",
       "targets": [
         {
           "target": "expo-manifests",
@@ -26446,7 +26416,7 @@
     },
     {
       "package": "expo-dev-menu",
-      "measuredVersion": "57.0.18",
+      "measuredVersion": "57.0.19",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26515,7 +26485,7 @@
     },
     {
       "package": "expo-eas-client",
-      "measuredVersion": "57.0.4",
+      "measuredVersion": "57.0.5",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26675,7 +26645,7 @@
     },
     {
       "package": "expo-image-manipulator",
-      "measuredVersion": "57.0.20",
+      "measuredVersion": "57.0.21",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26745,7 +26715,7 @@
     },
     {
       "package": "expo-linking",
-      "measuredVersion": "57.0.11",
+      "measuredVersion": "57.0.12",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26818,7 +26788,7 @@
     },
     {
       "package": "expo-notifications",
-      "measuredVersion": "57.0.21",
+      "measuredVersion": "57.0.22",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26845,7 +26815,7 @@
     },
     {
       "package": "expo-router",
-      "measuredVersion": "57.0.24",
+      "measuredVersion": "57.0.25",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26968,7 +26938,7 @@
     },
     {
       "package": "expo-updates",
-      "measuredVersion": "57.0.24",
+      "measuredVersion": "57.0.25",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -28269,7 +28239,7 @@
     },
     {
       "package": "knip",
-      "measuredVersion": "6.39.0",
+      "measuredVersion": "6.40.0",
       "targets": [
         {
           "target": "vue",
@@ -28561,7 +28531,7 @@
     },
     {
       "package": "mailgun.js",
-      "measuredVersion": "14.0.1",
+      "measuredVersion": "14.0.2",
       "targets": [
         {
           "target": "form-data",
@@ -28971,7 +28941,7 @@
     },
     {
       "package": "miniflare",
-      "measuredVersion": "5.20261001.0-alpha",
+      "measuredVersion": "5.20261006.0-alpha",
       "targets": [
         {
           "target": "@cloudflare/config",
@@ -29088,7 +29058,7 @@
     },
     {
       "package": "monocart-coverage-reports",
-      "measuredVersion": "2.13.1",
+      "measuredVersion": "2.13.2",
       "targets": [
         {
           "target": "bufferutil",
@@ -29242,7 +29212,7 @@
     },
     {
       "package": "next",
-      "measuredVersion": "16.3.8",
+      "measuredVersion": "16.4.0",
       "targets": [
         {
           "target": "critters",
@@ -29347,13 +29317,16 @@
             "server-only"
           ],
           "files": [
+            "dist/esm/lib/metadata/metadata-resolution-primitives.js",
+            "dist/esm/lib/metadata/resolve-metadata-parallel.js",
             "dist/esm/lib/metadata/resolve-metadata.js",
             "dist/esm/server/app-render/encryption.js",
-            "dist/lib/metadata/resolve-metadata.d.ts",
-            "dist/lib/metadata/resolve-metadata.js",
-            "dist/server/app-render/encryption.js"
+            "dist/lib/metadata/metadata-resolution-primitives.d.ts",
+            "dist/lib/metadata/metadata-resolution-primitives.js",
+            "dist/lib/metadata/resolve-metadata-parallel.js",
+            "dist/lib/metadata/resolve-metadata.d.ts"
           ],
-          "fileCount": 5
+          "fileCount": 10
         }
       ]
     },
@@ -31617,7 +31590,7 @@
     },
     {
       "package": "remotion",
-      "measuredVersion": "4.0.533",
+      "measuredVersion": "4.0.534",
       "targets": [
         {
           "target": "zod",
@@ -31638,7 +31611,7 @@
     },
     {
       "package": "resend",
-      "measuredVersion": "6.32.0",
+      "measuredVersion": "6.32.1",
       "targets": [
         {
           "target": "react",
@@ -31678,7 +31651,7 @@
     },
     {
       "package": "retry-request",
-      "measuredVersion": "9.0.1",
+      "measuredVersion": "9.0.2",
       "targets": [
         {
           "target": "request",
@@ -31889,7 +31862,7 @@
     },
     {
       "package": "satori",
-      "measuredVersion": "0.35.0",
+      "measuredVersion": "0.35.1",
       "targets": [
         {
           "target": "react",
@@ -32944,7 +32917,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.4.0",
+      "measuredVersion": "62.7.0",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -32956,7 +32929,7 @@
             "@vltpkg/graph"
           ],
           "files": [
-            "dist/chunks/vlt-builder-importer-W63QEXYX.js"
+            "dist/chunks/vlt-builder-importer-2ITR3DMQ.js"
           ],
           "fileCount": 1
         },
@@ -32970,7 +32943,7 @@
             "@vltpkg/package-info"
           ],
           "files": [
-            "dist/chunks/vlt-builder-importer-W63QEXYX.js"
+            "dist/chunks/vlt-builder-importer-2ITR3DMQ.js"
           ],
           "fileCount": 1
         },
@@ -32984,7 +32957,7 @@
             "@vltpkg/package-json"
           ],
           "files": [
-            "dist/chunks/vlt-builder-importer-W63QEXYX.js"
+            "dist/chunks/vlt-builder-importer-2ITR3DMQ.js"
           ],
           "fileCount": 1
         },
@@ -32998,7 +32971,7 @@
             "path-scurry"
           ],
           "files": [
-            "dist/chunks/vlt-builder-importer-W63QEXYX.js"
+            "dist/chunks/vlt-builder-importer-2ITR3DMQ.js"
           ],
           "fileCount": 1
         }
@@ -33509,7 +33482,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261006.1",
+      "measuredVersion": "1.20261007.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -33529,7 +33502,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.147.0",
+      "measuredVersion": "4.148.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -33792,7 +33765,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.74.0",
+      "measuredVersion": "1.75.0",
       "target": "undici",
       "specifiers": [
         "undici"
@@ -34051,7 +34024,7 @@
     },
     {
       "package": "expo-asset",
-      "measuredVersion": "57.0.18",
+      "measuredVersion": "57.0.19",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34059,7 +34032,7 @@
     },
     {
       "package": "expo-auth-session",
-      "measuredVersion": "57.0.13",
+      "measuredVersion": "57.0.14",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34091,7 +34064,7 @@
     },
     {
       "package": "expo-constants",
-      "measuredVersion": "57.0.20",
+      "measuredVersion": "57.0.21",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34107,7 +34080,7 @@
     },
     {
       "package": "expo-dev-menu",
-      "measuredVersion": "57.0.18",
+      "measuredVersion": "57.0.19",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34131,7 +34104,7 @@
     },
     {
       "package": "expo-eas-client",
-      "measuredVersion": "57.0.4",
+      "measuredVersion": "57.0.5",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34179,7 +34152,7 @@
     },
     {
       "package": "expo-image-manipulator",
-      "measuredVersion": "57.0.20",
+      "measuredVersion": "57.0.21",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core/types",
@@ -34204,7 +34177,7 @@
     },
     {
       "package": "expo-linking",
-      "measuredVersion": "57.0.11",
+      "measuredVersion": "57.0.12",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34228,7 +34201,7 @@
     },
     {
       "package": "expo-notifications",
-      "measuredVersion": "57.0.21",
+      "measuredVersion": "57.0.22",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34236,7 +34209,7 @@
     },
     {
       "package": "expo-router",
-      "measuredVersion": "57.0.24",
+      "measuredVersion": "57.0.25",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34268,7 +34241,7 @@
     },
     {
       "package": "expo-updates",
-      "measuredVersion": "57.0.24",
+      "measuredVersion": "57.0.25",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34354,7 +34327,7 @@
     },
     {
       "package": "next",
-      "measuredVersion": "16.3.8",
+      "measuredVersion": "16.4.0",
       "target": "critters",
       "specifiers": [
         "critters"
@@ -34550,7 +34523,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.4.0",
+      "measuredVersion": "62.7.0",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -34558,7 +34531,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.4.0",
+      "measuredVersion": "62.7.0",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -34566,7 +34539,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.4.0",
+      "measuredVersion": "62.7.0",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -34574,7 +34547,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "62.4.0",
+      "measuredVersion": "62.7.0",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"
