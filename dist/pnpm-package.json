@@ -2975,20 +2975,6 @@
           }
         }
       },
-      "@redocly/config@*": {
-        "peerDependencies": {
-          "@markdoc/markdoc": "*",
-          "react": "*"
-        },
-        "peerDependenciesMeta": {
-          "@markdoc/markdoc": {
-            "optional": true
-          },
-          "react": {
-            "optional": true
-          }
-        }
-      },
       "@redocly/openapi-core@*": {
         "peerDependencies": {
           "json-schema-to-ts": "*"
@@ -7780,6 +7766,16 @@
         },
         "peerDependenciesMeta": {
           "lapack": {
+            "optional": true
+          }
+        }
+      },
+      "synckit@*": {
+        "peerDependencies": {
+          "pnpapi": "*"
+        },
+        "peerDependenciesMeta": {
+          "pnpapi": {
             "optional": true
           }
         }

@@ -1,5 +1,5 @@
-# Generated 2026-10-07 from the 10000 most-downloaded npm packages.
-# 777 packages, 1144 undeclared dependencies.
+# Generated 2026-10-08 from the 10000 most-downloaded npm packages.
+# 777 packages, 1143 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -1903,15 +1903,6 @@ packageExtensions:
     peerDependencies:
       react: "*"
     peerDependenciesMeta:
-      react:
-        optional: true
-  "@redocly/config@*":
-    peerDependencies:
-      "@markdoc/markdoc": "*"
-      react: "*"
-    peerDependenciesMeta:
-      "@markdoc/markdoc":
-        optional: true
       react:
         optional: true
   "@redocly/openapi-core@*":
@@ -4960,6 +4951,12 @@ packageExtensions:
       lapack: "*"
     peerDependenciesMeta:
       lapack:
+        optional: true
+  synckit@*:
+    peerDependencies:
+      pnpapi: "*"
+    peerDependenciesMeta:
+      pnpapi:
         optional: true
   systeminformation@*:
     peerDependencies:

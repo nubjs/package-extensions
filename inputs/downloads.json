@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T13:41:54.104Z",
+  "generatedAt": "2026-10-08T13:48:55.910Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-09-28",
   "end": "2026-10-04",
@@ -248,7 +248,6 @@
     "@react-router/dev": 2984877,
     "@react-spring/types": 7293678,
     "@rebass/forms": 5470,
-    "@redocly/config": 11999283,
     "@redocly/openapi-core": 12327606,
     "@redocly/respect-core": 963150,
     "@redux-saga/is": 1541397,
@@ -717,6 +716,7 @@
     "swc-loader": 8688665,
     "swiper": 5015672,
     "sylvester": 1728618,
+    "synckit": 65755398,
     "systeminformation": 21347293,
     "terser": 99320780,
     "testcafe": 194400,

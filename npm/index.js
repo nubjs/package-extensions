@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.21 — generated 2026-10-07, do not edit.
-// 777 packages, 1144 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.22 — generated 2026-10-08, do not edit.
+// 777 packages, 1143 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -3655,23 +3655,6 @@ exports.packageExtensions = [
     "react": "*"
    },
    "peerDependenciesMeta": {
-    "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@redocly/config@*",
-  {
-   "peerDependencies": {
-    "@markdoc/markdoc": "*",
-    "react": "*"
-   },
-   "peerDependenciesMeta": {
-    "@markdoc/markdoc": {
-     "optional": true
-    },
     "react": {
      "optional": true
     }
@@ -9578,6 +9561,19 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "lapack": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "synckit@*",
+  {
+   "peerDependencies": {
+    "pnpapi": "*"
+   },
+   "peerDependenciesMeta": {
+    "pnpapi": {
      "optional": true
     }
    }

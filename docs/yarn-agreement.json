@@ -926,8 +926,8 @@
           "jest-matcher-utils"
         ],
         "metaOnly": false,
-        "version": "1.63.0",
-        "why": "latest 1.63.0 is outside <=1.14.1"
+        "version": "1.64.0",
+        "why": "latest 1.64.0 is outside <=1.14.1"
       },
       {
         "package": "webpack",
@@ -1027,7 +1027,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "5.3.1",
+        "version": "5.4.0",
         "why": "the package now declares every target"
       },
       {
