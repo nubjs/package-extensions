@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08",
+ "generated": "2026-10-09",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1143,
-   "packages": 646
+   "entries": 1140,
+   "packages": 644
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
   }
  },
  "totals": {
-  "packages": 777,
-  "selectors": 797,
-  "entries": 1143,
+  "packages": 775,
+  "selectors": 795,
+  "entries": 1140,
   "byClass": {
-   "runtime": 206,
-   "adapter": 128,
-   "types": 512,
+   "runtime": 207,
+   "adapter": 126,
+   "types": 510,
    "deep-path": 0,
    "guarded": 297
   },
   "byField": {
    "dependency": 31,
-   "peer": 1112
+   "peer": 1109
   },
-  "candidatesForReview": 101,
+  "candidatesForReview": 102,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
@@ -4464,16 +4464,6 @@
     }
    }
   },
-  "@mui/material@*": {
-   "peerDependencies": {
-    "@mui/styled-engine": "*"
-   },
-   "peerDependenciesMeta": {
-    "@mui/styled-engine": {
-     "optional": true
-    }
-   }
-  },
   "@mux/mux-video@*": {
    "peerDependencies": {
     "mux-embed": "*"
@@ -5920,16 +5910,6 @@
    },
    "peerDependenciesMeta": {
     "react": {
-     "optional": true
-    }
-   }
-  },
-  "@redocly/openapi-core@*": {
-   "peerDependencies": {
-    "json-schema-to-ts": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema-to-ts": {
      "optional": true
     }
    }
@@ -7550,9 +7530,13 @@
   },
   "astro@*": {
    "peerDependencies": {
+    "@astrojs/cloudflare": "*",
     "typescript": "*"
    },
    "peerDependenciesMeta": {
+    "@astrojs/cloudflare": {
+     "optional": true
+    },
     "typescript": {
      "optional": true
     }
@@ -9068,22 +9052,14 @@
   "langsmith@*": {
    "peerDependencies": {
     "@jest/globals": "*",
-    "@jest/reporters": "*",
     "@langchain/core": "*",
-    "@opentelemetry/context-async-hooks": "*",
     "vitest": "*"
    },
    "peerDependenciesMeta": {
     "@jest/globals": {
      "optional": true
     },
-    "@jest/reporters": {
-     "optional": true
-    },
     "@langchain/core": {
-     "optional": true
-    },
-    "@opentelemetry/context-async-hooks": {
      "optional": true
     },
     "vitest": {
@@ -12738,7 +12714,7 @@
   },
   {
    "package": "@angular/common",
-   "measuredVersion": "22.2.1",
+   "measuredVersion": "22.2.2",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -12759,7 +12735,7 @@
   },
   {
    "package": "@angular/language-service",
-   "measuredVersion": "22.2.1",
+   "measuredVersion": "22.2.2",
    "targets": [
     {
      "target": "@angular/compiler",
@@ -12826,7 +12802,7 @@
   },
   {
    "package": "@angular/router",
-   "measuredVersion": "22.2.1",
+   "measuredVersion": "22.2.2",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -13352,7 +13328,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.63.0",
+   "measuredVersion": "1.63.1",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13881,7 +13857,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.24.9",
+   "measuredVersion": "5.24.10",
    "targets": [
     {
      "target": "react",
@@ -14080,7 +14056,7 @@
   },
   {
    "package": "@fastify/cookie",
-   "measuredVersion": "11.1.2",
+   "measuredVersion": "11.1.3",
    "targets": [
     {
      "target": "fastify",
@@ -14122,7 +14098,7 @@
   },
   {
    "package": "@fastify/formbody",
-   "measuredVersion": "9.0.0",
+   "measuredVersion": "9.0.1",
    "targets": [
     {
      "target": "fastify",
@@ -14143,7 +14119,7 @@
   },
   {
    "package": "@fastify/helmet",
-   "measuredVersion": "13.1.1",
+   "measuredVersion": "13.1.2",
    "targets": [
     {
      "target": "fastify",
@@ -14164,7 +14140,7 @@
   },
   {
    "package": "@fastify/multipart",
-   "measuredVersion": "10.1.2",
+   "measuredVersion": "10.1.3",
    "targets": [
     {
      "target": "fastify",
@@ -14186,7 +14162,7 @@
   },
   {
    "package": "@fastify/rate-limit",
-   "measuredVersion": "11.2.0",
+   "measuredVersion": "11.2.1",
    "targets": [
     {
      "target": "fastify",
@@ -14866,7 +14842,7 @@
   },
   {
    "package": "@graphql-codegen/client-preset",
-   "measuredVersion": "6.2.2",
+   "measuredVersion": "6.2.3",
    "targets": [
     {
      "target": "@babel/core",
@@ -15803,7 +15779,7 @@
   },
   {
    "package": "@mendable/firecrawl-js",
-   "measuredVersion": "4.45.0",
+   "measuredVersion": "4.46.0",
    "targets": [
     {
      "target": "undici",
@@ -15983,26 +15959,6 @@
      ],
      "files": [
       "lib/index.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "@mui/material",
-   "measuredVersion": "9.4.0",
-   "targets": [
-    {
-     "target": "@mui/styled-engine",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@mui/styled-engine"
-     ],
-     "files": [
-      "utils/memoTheme.d.ts"
      ],
      "fileCount": 1
     }
@@ -18471,7 +18427,7 @@
   },
   {
    "package": "@oclif/core",
-   "measuredVersion": "5.1.2",
+   "measuredVersion": "5.1.6",
    "targets": [
     {
      "target": "pnpapi",
@@ -18639,7 +18595,7 @@
   },
   {
    "package": "@opennextjs/cloudflare",
-   "measuredVersion": "1.20.9",
+   "measuredVersion": "1.20.10",
    "targets": [
     {
      "target": "esbuild",
@@ -19980,31 +19936,8 @@
    ]
   },
   {
-   "package": "@redocly/openapi-core",
-   "measuredVersion": "2.60.0",
-   "targets": [
-    {
-     "target": "json-schema-to-ts",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "json-schema-to-ts"
-     ],
-     "files": [
-      "lib/config/types.d.ts",
-      "lib/lint-entity.d.ts",
-      "lib/types/entity.d.ts",
-      "lib/types/redocly-yaml.d.ts"
-     ],
-     "fileCount": 4
-    }
-   ]
-  },
-  {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.60.0",
+   "measuredVersion": "2.62.1",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20343,7 +20276,7 @@
   },
   {
    "package": "@salesforce/sf-plugins-core",
-   "measuredVersion": "13.0.5",
+   "measuredVersion": "13.0.7",
    "targets": [
     {
      "target": "sinon",
@@ -20495,7 +20428,7 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "11.5.0",
+   "measuredVersion": "11.6.0",
    "targets": [
     {
      "target": "@sentry/opentelemetry",
@@ -22619,7 +22552,7 @@
   },
   {
    "package": "@verdaccio/config",
-   "measuredVersion": "8.3.2",
+   "measuredVersion": "8.3.3",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -22646,7 +22579,7 @@
   },
   {
    "package": "@verdaccio/core",
-   "measuredVersion": "8.3.2",
+   "measuredVersion": "8.3.3",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -24449,8 +24382,22 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.3.7",
+   "measuredVersion": "7.3.8",
    "targets": [
+    {
+     "target": "@astrojs/cloudflare",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "@astrojs/cloudflare/info"
+     ],
+     "files": [
+      "dist/cli/add/cloudflare.js"
+     ],
+     "fileCount": 1
+    },
     {
      "target": "typescript",
      "class": "types",
@@ -24722,7 +24669,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.11",
+   "measuredVersion": "6.3.12",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -25822,7 +25769,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.2.0",
+   "measuredVersion": "65.2.1",
    "targets": [
     {
      "target": "@eslint/core",
@@ -25978,7 +25925,7 @@
   },
   {
    "package": "eslint-plugin-svelte",
-   "measuredVersion": "3.23.0",
+   "measuredVersion": "3.23.1",
    "targets": [
     {
      "target": "typescript",
@@ -27780,7 +27727,7 @@
   },
   {
    "package": "jest-mock-extended",
-   "measuredVersion": "4.0.1",
+   "measuredVersion": "4.0.2",
    "targets": [
     {
      "target": "jest-mock",
@@ -28187,7 +28134,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.40.0",
+   "measuredVersion": "6.41.0",
    "targets": [
     {
      "target": "vue",
@@ -28227,7 +28174,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.10.8",
+   "measuredVersion": "0.10.10",
    "targets": [
     {
      "target": "@jest/globals",
@@ -28239,23 +28186,8 @@
       "@jest/globals"
      ],
      "files": [
-      "dist/jest/index.cjs",
-      "dist/jest/index.js"
-     ],
-     "fileCount": 2
-    },
-    {
-     "target": "@jest/reporters",
-     "class": "adapter",
-     "field": "peer",
-     "candidate": false,
-     "reason": "adapter class — the consumer picked and installed the backend",
-     "specifiers": [
-      "@jest/reporters"
-     ],
-     "files": [
-      "dist/jest/reporter.cjs",
-      "dist/jest/reporter.js"
+      "lib/jest/index.js",
+      "lib/jest/index.mjs"
      ],
      "fileCount": 2
     },
@@ -28271,23 +28203,8 @@
       "@langchain/core/runnables"
      ],
      "files": [
-      "dist/langchain.cjs",
-      "dist/langchain.js"
-     ],
-     "fileCount": 2
-    },
-    {
-     "target": "@opentelemetry/context-async-hooks",
-     "class": "adapter",
-     "field": "peer",
-     "candidate": false,
-     "reason": "adapter class — the consumer picked and installed the backend",
-     "specifiers": [
-      "@opentelemetry/context-async-hooks"
-     ],
-     "files": [
-      "dist/experimental/otel/setup.cjs",
-      "dist/experimental/otel/setup.js"
+      "lib/langchain.js",
+      "lib/langchain.mjs"
      ],
      "fileCount": 2
     },
@@ -28298,14 +28215,12 @@
      "candidate": false,
      "reason": "adapter class — the consumer picked and installed the backend",
      "specifiers": [
-      "vitest",
-      "vitest/reporters"
+      "vitest"
      ],
      "files": [
-      "dist/vitest/index.cjs",
-      "dist/vitest/reporter.cjs"
+      "lib/vitest/index.mjs"
      ],
-     "fileCount": 2
+     "fileCount": 1
     }
    ]
   },
@@ -28391,7 +28306,7 @@
   },
   {
    "package": "livekit-client",
-   "measuredVersion": "2.22.3",
+   "measuredVersion": "2.22.4",
    "targets": [
     {
      "target": "@livekit/throws-transformer",
@@ -28889,7 +28804,7 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20261006.0-alpha",
+   "measuredVersion": "5.20261006.1-alpha",
    "targets": [
     {
      "target": "@cloudflare/config",
@@ -30318,7 +30233,7 @@
   },
   {
    "package": "postcss-normalize-positions",
-   "measuredVersion": "9.0.6",
+   "measuredVersion": "9.0.7",
    "targets": [
     {
      "target": "@csstools/css-tokenizer",
@@ -30338,7 +30253,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.55.0",
+   "measuredVersion": "5.55.1",
    "targets": [
     {
      "target": "express",
@@ -31810,7 +31725,7 @@
   },
   {
    "package": "satori",
-   "measuredVersion": "0.41.0",
+   "measuredVersion": "0.44.3",
    "targets": [
     {
      "target": "react",
@@ -31825,7 +31740,7 @@
       "dist/experimental.d.ts",
       "dist/index.d.ts",
       "dist/standalone.d.ts",
-      "dist/wasm-912fcfdb.d.ts"
+      "dist/wasm-9062e2b3.d.ts"
      ],
      "fileCount": 4
     }
@@ -32201,7 +32116,7 @@
   },
   {
    "package": "svelte-eslint-parser",
-   "measuredVersion": "1.8.1",
+   "measuredVersion": "1.9.0",
    "targets": [
     {
      "target": "@typescript-eslint/parser",
@@ -32947,7 +32862,7 @@
   },
   {
    "package": "verdaccio-htpasswd",
-   "measuredVersion": "13.1.5",
+   "measuredVersion": "13.1.6",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -33450,7 +33365,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261008.1",
+   "measuredVersion": "1.20261009.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33470,7 +33385,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.148.0",
+   "measuredVersion": "4.149.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -33604,7 +33519,7 @@
   },
   {
    "package": "yeoman-environment",
-   "measuredVersion": "8.0.0",
+   "measuredVersion": "8.2.0",
    "targets": [
     {
      "target": "yeoman-generator",
@@ -33922,6 +33837,14 @@
    "target": "@swagger-api/apidom-ns-asyncapi-3",
    "specifiers": [
     "@swagger-api/apidom-ns-asyncapi-3"
+   ]
+  },
+  {
+   "package": "astro",
+   "measuredVersion": "7.3.8",
+   "target": "@astrojs/cloudflare",
+   "specifiers": [
+    "@astrojs/cloudflare/info"
    ]
   },
   {

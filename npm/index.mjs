@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.22 — generated 2026-10-08, do not edit.
-// 777 packages, 1143 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.23 — generated 2026-10-09, do not edit.
+// 775 packages, 1140 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -1924,19 +1924,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@mui/material@*",
-  {
-   "peerDependencies": {
-    "@mui/styled-engine": "*"
-   },
-   "peerDependenciesMeta": {
-    "@mui/styled-engine": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@mux/mux-video@*",
   {
    "peerDependencies": {
@@ -3654,19 +3641,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "react": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@redocly/openapi-core@*",
-  {
-   "peerDependencies": {
-    "json-schema-to-ts": "*"
-   },
-   "peerDependenciesMeta": {
-    "json-schema-to-ts": {
      "optional": true
     }
    }
@@ -5620,9 +5594,13 @@ export const packageExtensions = [
   "astro@*",
   {
    "peerDependencies": {
+    "@astrojs/cloudflare": "*",
     "typescript": "*"
    },
    "peerDependenciesMeta": {
+    "@astrojs/cloudflare": {
+     "optional": true
+    },
     "typescript": {
      "optional": true
     }
@@ -7519,22 +7497,14 @@ export const packageExtensions = [
   {
    "peerDependencies": {
     "@jest/globals": "*",
-    "@jest/reporters": "*",
     "@langchain/core": "*",
-    "@opentelemetry/context-async-hooks": "*",
     "vitest": "*"
    },
    "peerDependenciesMeta": {
     "@jest/globals": {
      "optional": true
     },
-    "@jest/reporters": {
-     "optional": true
-    },
     "@langchain/core": {
-     "optional": true
-    },
-    "@opentelemetry/context-async-hooks": {
      "optional": true
     },
     "vitest": {

@@ -1,5 +1,5 @@
-# Generated 2026-10-08 from the 10000 most-downloaded npm packages.
-# 777 packages, 1143 undeclared dependencies.
+# Generated 2026-10-09 from the 10000 most-downloaded npm packages.
+# 775 packages, 1140 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -940,12 +940,6 @@ packageExtensions:
       set-cookie-parser: "*"
     peerDependenciesMeta:
       set-cookie-parser:
-        optional: true
-  "@mui/material@*":
-    peerDependencies:
-      "@mui/styled-engine": "*"
-    peerDependenciesMeta:
-      "@mui/styled-engine":
         optional: true
   "@mux/mux-video@*":
     peerDependencies:
@@ -1900,12 +1894,6 @@ packageExtensions:
       react: "*"
     peerDependenciesMeta:
       react:
-        optional: true
-  "@redocly/openapi-core@*":
-    peerDependencies:
-      json-schema-to-ts: "*"
-    peerDependenciesMeta:
-      json-schema-to-ts:
         optional: true
   "@redocly/respect-core@*":
     peerDependencies:
@@ -2956,8 +2944,11 @@ packageExtensions:
         optional: true
   astro@*:
     peerDependencies:
+      "@astrojs/cloudflare": "*"
       typescript: "*"
     peerDependenciesMeta:
+      "@astrojs/cloudflare":
+        optional: true
       typescript:
         optional: true
   auth0@*:
@@ -3907,18 +3898,12 @@ packageExtensions:
   langsmith@*:
     peerDependencies:
       "@jest/globals": "*"
-      "@jest/reporters": "*"
       "@langchain/core": "*"
-      "@opentelemetry/context-async-hooks": "*"
       vitest: "*"
     peerDependenciesMeta:
       "@jest/globals":
         optional: true
-      "@jest/reporters":
-        optional: true
       "@langchain/core":
-        optional: true
-      "@opentelemetry/context-async-hooks":
         optional: true
       vitest:
         optional: true

@@ -22,6 +22,7 @@
   "@appium/types": true,
   "@applitools/test-utils": true,
   "@ast-grep/napi": true,
+  "@astrojs/cloudflare": true,
   "@astrojs/compiler": true,
   "@astrojs/starlight": true,
   "@aws-cdk/cloud-assembly-api": true,
