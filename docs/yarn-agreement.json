@@ -33,7 +33,7 @@
           "vscode-languageserver-protocol"
         ],
         "metaOnly": false,
-        "version": "6.0.1",
+        "version": "6.0.2",
         "undeclared": [
           "vscode-jsonrpc",
           "vscode-languageserver-protocol"
@@ -1017,7 +1017,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "11.4.13",
+        "version": "11.4.14",
         "why": "the package now declares every target"
       },
       {

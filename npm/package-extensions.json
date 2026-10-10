@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09",
+ "generated": "2026-10-10",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1140,
-   "packages": 644
+   "entries": 1139,
+   "packages": 643
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,11 +28,11 @@
   }
  },
  "totals": {
-  "packages": 775,
-  "selectors": 795,
-  "entries": 1140,
+  "packages": 774,
+  "selectors": 794,
+  "entries": 1139,
   "byClass": {
-   "runtime": 207,
+   "runtime": 206,
    "adapter": 126,
    "types": 510,
    "deep-path": 0,
@@ -40,9 +40,9 @@
   },
   "byField": {
    "dependency": 31,
-   "peer": 1109
+   "peer": 1108
   },
-  "candidatesForReview": 102,
+  "candidatesForReview": 101,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 1,
   "droppedUnresolvedTargets": 0,
@@ -9067,16 +9067,6 @@
     }
    }
   },
-  "lerna@*": {
-   "peerDependencies": {
-    "chalk": "*"
-   },
-   "peerDependenciesMeta": {
-    "chalk": {
-     "optional": true
-    }
-   }
-  },
   "less-loader@*": {
    "peerDependencies": {
     "schema-utils": "*"
@@ -12823,7 +12813,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "0.132.1",
+   "measuredVersion": "0.133.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -13510,7 +13500,7 @@
   },
   {
    "package": "@datadog/flagging-core",
-   "measuredVersion": "3.1.1",
+   "measuredVersion": "3.2.0",
    "targets": [
     {
      "target": "@openfeature/core",
@@ -14183,7 +14173,7 @@
   },
   {
    "package": "@fastify/static",
-   "measuredVersion": "10.1.5",
+   "measuredVersion": "10.1.6",
    "targets": [
     {
      "target": "fastify",
@@ -14204,7 +14194,7 @@
   },
   {
    "package": "@fastify/swagger",
-   "measuredVersion": "9.9.1",
+   "measuredVersion": "9.9.2",
    "targets": [
     {
      "target": "fastify",
@@ -14228,7 +14218,7 @@
   },
   {
    "package": "@fastify/swagger-ui",
-   "measuredVersion": "6.1.1",
+   "measuredVersion": "6.1.2",
    "targets": [
     {
      "target": "fastify",
@@ -16570,7 +16560,7 @@
   },
   {
    "package": "@nuxt/nitro-server",
-   "measuredVersion": "4.6.0",
+   "measuredVersion": "4.6.1",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16590,7 +16580,7 @@
   },
   {
    "package": "@nuxt/schema",
-   "measuredVersion": "4.6.0",
+   "measuredVersion": "4.6.1",
    "targets": [
     {
      "target": "@unhead/vue",
@@ -16603,7 +16593,7 @@
       "@unhead/vue/vite"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16617,7 +16607,7 @@
       "@vitejs/plugin-vue"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16631,7 +16621,7 @@
       "@vitejs/plugin-vue-jsx"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16645,7 +16635,7 @@
       "@vue/compiler-core"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16659,7 +16649,7 @@
       "@vue/compiler-sfc"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16673,7 +16663,7 @@
       "@vue/language-core"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16687,7 +16677,7 @@
       "autoprefixer"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16701,7 +16691,7 @@
       "chokidar"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16715,7 +16705,7 @@
       "compatx"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16729,7 +16719,7 @@
       "css-minimizer-webpack-plugin"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16743,7 +16733,7 @@
       "cssnano"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16757,7 +16747,7 @@
       "esbuild"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16771,7 +16761,7 @@
       "esbuild-loader"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16785,7 +16775,7 @@
       "h3"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16799,7 +16789,7 @@
       "mini-css-extract-plugin"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16813,7 +16803,7 @@
       "oxc-transform"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16827,7 +16817,7 @@
       "postcss"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16841,7 +16831,7 @@
       "pug"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16855,7 +16845,7 @@
       "rollup-plugin-visualizer"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16869,7 +16859,7 @@
       "unctx/transform"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16883,7 +16873,7 @@
       "unimport"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16897,7 +16887,7 @@
       "untyped"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts",
+      "dist/compatibility-rjF4KmoY.d.mts",
       "dist/index.d.mts"
      ],
      "fileCount": 2
@@ -16912,7 +16902,7 @@
       "vite"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16926,7 +16916,7 @@
       "vue"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16940,7 +16930,7 @@
       "vue-loader"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16954,7 +16944,7 @@
       "vue-router"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16968,7 +16958,7 @@
       "webpack"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16982,7 +16972,7 @@
       "webpack-bundle-analyzer"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -16996,7 +16986,7 @@
       "webpack-dev-middleware"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     },
@@ -17010,7 +17000,7 @@
       "webpack-hot-middleware"
      ],
      "files": [
-      "dist/components-D8Oys4sc.d.mts"
+      "dist/compatibility-rjF4KmoY.d.mts"
      ],
      "fileCount": 1
     }
@@ -17052,7 +17042,7 @@
   },
   {
    "package": "@nuxt/vite-builder",
-   "measuredVersion": "4.6.0",
+   "measuredVersion": "4.6.1",
    "targets": [
     {
      "target": "@babel/core",
@@ -18427,7 +18417,7 @@
   },
   {
    "package": "@oclif/core",
-   "measuredVersion": "5.1.6",
+   "measuredVersion": "5.1.7",
    "targets": [
     {
      "target": "pnpapi",
@@ -21663,7 +21653,7 @@
   },
   {
    "package": "@tanstack/react-start-rsc",
-   "measuredVersion": "0.1.59",
+   "measuredVersion": "0.1.60",
    "targets": [
     {
      "target": "vite",
@@ -21704,7 +21694,7 @@
   },
   {
    "package": "@tanstack/router-plugin",
-   "measuredVersion": "1.168.42",
+   "measuredVersion": "1.168.43",
    "targets": [
     {
      "target": "@tanstack/virtual-file-routes",
@@ -21750,7 +21740,7 @@
   },
   {
    "package": "@tanstack/start-server-core",
-   "measuredVersion": "1.169.39",
+   "measuredVersion": "1.169.40",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -22455,7 +22445,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "21.0.0",
+   "measuredVersion": "21.0.1",
    "targets": [
     {
      "target": "encoding",
@@ -22532,7 +22522,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "20.0.0",
+   "measuredVersion": "20.0.1",
    "targets": [
     {
      "target": "encoding",
@@ -24416,7 +24406,7 @@
   },
   {
    "package": "auth0",
-   "measuredVersion": "7.3.0",
+   "measuredVersion": "7.4.0",
    "targets": [
     {
      "target": "undici-types",
@@ -25769,7 +25759,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.2.1",
+   "measuredVersion": "65.2.4",
    "targets": [
     {
      "target": "@eslint/core",
@@ -26990,7 +26980,7 @@
   },
   {
    "package": "fastify-plugin",
-   "measuredVersion": "6.0.0",
+   "measuredVersion": "6.0.1",
    "targets": [
     {
      "target": "fastify",
@@ -28174,7 +28164,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.10.10",
+   "measuredVersion": "0.10.11",
    "targets": [
     {
      "target": "@jest/globals",
@@ -28219,26 +28209,6 @@
      ],
      "files": [
       "lib/vitest/index.mjs"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "lerna",
-   "measuredVersion": "10.0.1",
-   "targets": [
-    {
-     "target": "chalk",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "chalk"
-     ],
-     "files": [
-      "dist/chunk-BE2FWPTC.js"
      ],
      "fileCount": 1
     }
@@ -28955,7 +28925,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "14.0.0",
+   "measuredVersion": "14.1.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -31725,7 +31695,7 @@
   },
   {
    "package": "satori",
-   "measuredVersion": "0.44.3",
+   "measuredVersion": "0.47.1",
    "targets": [
     {
      "target": "react",
@@ -32495,7 +32465,7 @@
   },
   {
    "package": "typescript-language-server",
-   "measuredVersion": "6.0.1",
+   "measuredVersion": "6.0.2",
    "targets": [
     {
      "target": "typescript",
@@ -32800,7 +32770,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.0",
+   "measuredVersion": "63.1.2",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -33365,7 +33335,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261009.1",
+   "measuredVersion": "1.20261010.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33496,7 +33466,7 @@
   },
   {
    "package": "yaml-language-server",
-   "measuredVersion": "1.24.0",
+   "measuredVersion": "1.25.0",
    "targets": [
     {
      "target": "vscode-languageserver-protocol",
@@ -33688,7 +33658,7 @@
   },
   {
    "package": "@nuxt/vite-builder",
-   "measuredVersion": "4.6.0",
+   "measuredVersion": "4.6.1",
    "target": "unplugin",
    "specifiers": [
     "unplugin"
@@ -34209,14 +34179,6 @@
    ]
   },
   {
-   "package": "lerna",
-   "measuredVersion": "10.0.1",
-   "target": "chalk",
-   "specifiers": [
-    "chalk"
-   ]
-  },
-  {
    "package": "next",
    "measuredVersion": "16.4.0",
    "target": "critters",
@@ -34414,7 +34376,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.0",
+   "measuredVersion": "63.1.2",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -34422,7 +34384,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.0",
+   "measuredVersion": "63.1.2",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -34430,7 +34392,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.0",
+   "measuredVersion": "63.1.2",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -34438,7 +34400,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.0",
+   "measuredVersion": "63.1.2",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"

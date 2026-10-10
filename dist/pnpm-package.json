@@ -6118,16 +6118,6 @@
           }
         }
       },
-      "lerna@*": {
-        "peerDependencies": {
-          "chalk": "*"
-        },
-        "peerDependenciesMeta": {
-          "chalk": {
-            "optional": true
-          }
-        }
-      },
       "less-loader@*": {
         "peerDependencies": {
           "schema-utils": "*"

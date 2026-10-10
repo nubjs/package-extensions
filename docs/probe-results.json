@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-09",
-  "dataset": "4e8ca777ed351b5a",
+  "generated": "2026-10-10",
+  "dataset": "f195a7e7d9e6d11a",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,8 +8,8 @@
   "tally": {
     "confirmed": 4,
     "confirmedViaPath": 11,
-    "notOnImport": 62,
-    "installFailed": 1,
+    "notOnImport": 60,
+    "installFailed": 2,
     "inconclusive": 3
   },
   "results": [
@@ -235,22 +235,14 @@
     },
     {
       "package": "@nuxt/vite-builder",
-      "version": "4.6.0",
+      "version": "4.6.1",
       "expected": [
         "@babel/core",
         "@nuxt/schema",
         "unplugin"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [
-        "@vitejs/plugin-vue -> vue (unprovided peer)"
-      ],
-      "specifiersTried": 3
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nuxt/\u001b[39m\u001b[38;5;173mvite-builder\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:4.6.1\u001b[39m: All versions satisfying \"4.6.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016"
     },
     {
       "package": "@nx/devkit",
@@ -504,8 +496,14 @@
         "@astrojs/cloudflare",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mastro\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.3.8\u001b[39m: All versions satisfying \"7.3.8\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mastro\u001b[39m\u001b[38;5"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 28
     },
     {
       "package": "domino",
@@ -1108,21 +1106,6 @@
       "specifiersTried": 3
     },
     {
-      "package": "lerna",
-      "version": "10.0.1",
-      "expected": [
-        "chalk"
-      ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
-    },
-    {
       "package": "next",
       "version": "16.4.0",
       "expected": [
@@ -1378,25 +1361,19 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7224) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-Kcl2l6/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7340) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-lyjLzi/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
-      "version": "63.1.0",
+      "version": "63.1.2",
       "expected": [
         "@vltpkg/graph",
         "@vltpkg/package-info",
         "@vltpkg/package-json",
         "path-scurry"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:63.1.2\u001b[39m: All versions satisfying \"63.1.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
     }
   ]
 }

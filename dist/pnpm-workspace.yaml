@@ -1,5 +1,5 @@
-# Generated 2026-10-09 from the 10000 most-downloaded npm packages.
-# 775 packages, 1140 undeclared dependencies.
+# Generated 2026-10-10 from the 10000 most-downloaded npm packages.
+# 774 packages, 1139 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -3906,12 +3906,6 @@ packageExtensions:
       "@langchain/core":
         optional: true
       vitest:
-        optional: true
-  lerna@*:
-    peerDependencies:
-      chalk: "*"
-    peerDependenciesMeta:
-      chalk:
         optional: true
   less-loader@*:
     peerDependencies:
