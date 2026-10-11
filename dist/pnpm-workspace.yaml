@@ -1,5 +1,5 @@
-# Generated 2026-10-10 from the 10000 most-downloaded npm packages.
-# 774 packages, 1139 undeclared dependencies.
+# Generated 2026-10-11 from the 10000 most-downloaded npm packages.
+# 773 packages, 1138 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -3351,12 +3351,6 @@ packageExtensions:
       "@babel/runtime": "*"
     peerDependenciesMeta:
       "@babel/runtime":
-        optional: true
-  expect-webdriverio@*:
-    peerDependencies:
-      "@wdio/types": "*"
-    peerDependenciesMeta:
-      "@wdio/types":
         optional: true
   expo-application@*:
     peerDependencies:

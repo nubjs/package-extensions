@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.24 — generated 2026-10-10, do not edit.
-// 774 packages, 1139 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.25 — generated 2026-10-11, do not edit.
+// 773 packages, 1138 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -6383,19 +6383,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@babel/runtime": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expect-webdriverio@*",
-  {
-   "peerDependencies": {
-    "@wdio/types": "*"
-   },
-   "peerDependenciesMeta": {
-    "@wdio/types": {
      "optional": true
     }
    }

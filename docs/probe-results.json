@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-10",
-  "dataset": "f195a7e7d9e6d11a",
+  "generated": "2026-10-11",
+  "dataset": "83527ff390445374",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,8 +8,8 @@
   "tally": {
     "confirmed": 4,
     "confirmedViaPath": 11,
-    "notOnImport": 60,
-    "installFailed": 2,
+    "notOnImport": 62,
+    "installFailed": 0,
     "inconclusive": 3
   },
   "results": [
@@ -241,8 +241,16 @@
         "@nuxt/schema",
         "unplugin"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nuxt/\u001b[39m\u001b[38;5;173mvite-builder\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:4.6.1\u001b[39m: All versions satisfying \"4.6.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@vitejs/plugin-vue -> vue (unprovided peer)"
+      ],
+      "specifiersTried": 3
     },
     {
       "package": "@nx/devkit",
@@ -1361,7 +1369,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7340) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-lyjLzi/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7507) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-hk0qgf/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
@@ -1372,8 +1380,14 @@
         "@vltpkg/package-json",
         "path-scurry"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:63.1.2\u001b[39m: All versions satisfying \"63.1.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     }
   ]
 }

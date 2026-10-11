@@ -5224,16 +5224,6 @@
           }
         }
       },
-      "expect-webdriverio@*": {
-        "peerDependencies": {
-          "@wdio/types": "*"
-        },
-        "peerDependenciesMeta": {
-          "@wdio/types": {
-            "optional": true
-          }
-        }
-      },
       "expo-application@*": {
         "peerDependencies": {
           "expo-modules-core": "*"

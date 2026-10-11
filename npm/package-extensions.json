@@ -1,15 +1,15 @@
 {
- "generated": "2026-10-10",
+ "generated": "2026-10-11",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
-  "scannedOk": 9982,
-  "failed": 18
+  "scannedOk": 9983,
+  "failed": 17
  },
  "sources": {
   "scan": {
-   "entries": 1139,
-   "packages": 643
+   "entries": 1138,
+   "packages": 642
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
   }
  },
  "totals": {
-  "packages": 774,
-  "selectors": 794,
-  "entries": 1139,
+  "packages": 773,
+  "selectors": 793,
+  "entries": 1138,
   "byClass": {
    "runtime": 206,
    "adapter": 126,
-   "types": 510,
+   "types": 509,
    "deep-path": 0,
    "guarded": 297
   },
   "byField": {
    "dependency": 31,
-   "peer": 1108
+   "peer": 1107
   },
   "candidatesForReview": 101,
   "droppedUnpublishedTargets": 202,
@@ -8173,16 +8173,6 @@
     }
    }
   },
-  "expect-webdriverio@*": {
-   "peerDependencies": {
-    "@wdio/types": "*"
-   },
-   "peerDependenciesMeta": {
-    "@wdio/types": {
-     "optional": true
-    }
-   }
-  },
   "expo-application@*": {
    "peerDependencies": {
     "expo-modules-core": "*"
@@ -12412,7 +12402,7 @@
  "findings": [
   {
    "package": "@acemir/cssom",
-   "measuredVersion": "0.9.31",
+   "measuredVersion": "0.9.32",
    "targets": [
     {
      "target": "cssstyle",
@@ -12521,7 +12511,7 @@
   },
   {
    "package": "@angular-eslint/bundled-angular-compiler",
-   "measuredVersion": "22.5.0",
+   "measuredVersion": "22.6.0",
    "targets": [
     {
      "target": "@angular/compiler",
@@ -12541,7 +12531,7 @@
   },
   {
    "package": "@angular-eslint/template-parser",
-   "measuredVersion": "22.5.0",
+   "measuredVersion": "22.6.0",
    "targets": [
     {
      "target": "@typescript-eslint/types",
@@ -13847,7 +13837,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.24.10",
+   "measuredVersion": "5.26.0",
    "targets": [
     {
      "target": "react",
@@ -15550,7 +15540,7 @@
   },
   {
    "package": "@mantine/hooks",
-   "measuredVersion": "9.7.1",
+   "measuredVersion": "9.7.2",
    "targets": [
     {
      "target": "react-dom",
@@ -21495,7 +21485,7 @@
   },
   {
    "package": "@swc/core",
-   "measuredVersion": "1.16.13",
+   "measuredVersion": "1.16.18",
    "targets": [
     {
      "target": "@swc/core-android-arm-eabi",
@@ -23696,7 +23686,7 @@
   },
   {
    "package": "@vue/language-core",
-   "measuredVersion": "3.3.12",
+   "measuredVersion": "3.3.13",
    "targets": [
     {
      "target": "@vue/compiler-sfc",
@@ -23923,7 +23913,7 @@
   },
   {
    "package": "angular-eslint",
-   "measuredVersion": "22.5.0",
+   "measuredVersion": "22.6.0",
    "targets": [
     {
      "target": "@eslint/core",
@@ -25759,7 +25749,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.2.4",
+   "measuredVersion": "65.3.0",
    "targets": [
     {
      "target": "@eslint/core",
@@ -26048,26 +26038,6 @@
       "es5.mjs"
      ],
      "fileCount": 2
-    }
-   ]
-  },
-  {
-   "package": "expect-webdriverio",
-   "measuredVersion": "7.0.1",
-   "targets": [
-    {
-     "target": "@wdio/types",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@wdio/types"
-     ],
-     "files": [
-      "types/expect-webdriverio.d.ts"
-     ],
-     "fileCount": 1
     }
    ]
   },
@@ -30203,7 +30173,7 @@
   },
   {
    "package": "postcss-normalize-positions",
-   "measuredVersion": "9.0.7",
+   "measuredVersion": "9.0.8",
    "targets": [
     {
      "target": "@csstools/css-tokenizer",
@@ -32248,7 +32218,7 @@
   },
   {
    "package": "synckit",
-   "measuredVersion": "0.12.1",
+   "measuredVersion": "0.12.3",
    "targets": [
     {
      "target": "pnpapi",
@@ -33335,7 +33305,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261010.1",
+   "measuredVersion": "1.20261011.1",
    "targets": [
     {
      "target": "pnpapi",
