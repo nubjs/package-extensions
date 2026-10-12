@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11",
+  "generated": "2026-10-12",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -46,7 +46,7 @@
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 1,
     "droppedUnresolvedTargets": 0,
-    "withheldDeepPath": 243
+    "withheldDeepPath": 242
   },
   "withheldDeepPath": [
     {
@@ -880,16 +880,6 @@
         "dist/lib/application/files/ts-esm/src/app.controller.__specFileSuffix__.ts",
         "dist/lib/application/files/ts/src/app.controller.__specFileSuffix__.ts",
         "dist/lib/sub-app/files/js/src/app.controller.__specFileSuffix__.js"
-      ]
-    },
-    {
-      "package": "@nestjs/schematics",
-      "target": "vite-tsconfig-paths",
-      "specifiers": [
-        "vite-tsconfig-paths"
-      ],
-      "files": [
-        "dist/lib/application/files/ts-esm/vitest.config.e2e.ts"
       ]
     },
     {
@@ -13694,7 +13684,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.8",
+      "measuredVersion": "0.5.9",
       "targets": [
         {
           "target": "ws",
@@ -13715,7 +13705,7 @@
     },
     {
       "package": "@electric-sql/pglite-tools",
-      "measuredVersion": "0.4.8",
+      "measuredVersion": "0.4.9",
       "targets": [
         {
           "target": "ws",
@@ -13727,7 +13717,7 @@
             "ws"
           ],
           "files": [
-            "dist/chunk-RKAX3U4S.js",
+            "dist/chunk-U6BVQWCT.js",
             "dist/index.cjs",
             "dist/pg_dump.cjs"
           ],
@@ -13837,7 +13827,7 @@
     },
     {
       "package": "@eslint-react/shared",
-      "measuredVersion": "5.26.0",
+      "measuredVersion": "5.26.2",
       "targets": [
         {
           "target": "react",
@@ -14862,7 +14852,7 @@
     },
     {
       "package": "@graphql-tools/graphql-tag-pluck",
-      "measuredVersion": "8.3.39",
+      "measuredVersion": "8.3.40",
       "targets": [
         {
           "target": "@astrojs/compiler",
@@ -15617,7 +15607,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.75.0",
+      "measuredVersion": "1.76.0",
       "targets": [
         {
           "target": "@workflow/serde",
@@ -15659,11 +15649,11 @@
             "undici"
           ],
           "files": [
-            "dist/dist-BELWxv--.js",
             "dist/dist-BgUIUei9-BstmucK2.cjs",
             "dist/dist-BgUIUei9-Cf3ZzunV.js",
             "dist/dist-CSedSB65.cjs",
-            "dist/dist-M24ypl2W.cjs",
+            "dist/dist-D9mSes7O.js",
+            "dist/dist-DJN8dMMl.cjs",
             "dist/dist-kwhHAw-p.js"
           ],
           "fileCount": 6
@@ -16049,7 +16039,7 @@
     },
     {
       "package": "@nestjs/core",
-      "measuredVersion": "12.1.2",
+      "measuredVersion": "12.1.3",
       "targets": [
         {
           "target": "@standard-schema/spec",
@@ -16069,7 +16059,7 @@
     },
     {
       "package": "@nestjs/platform-fastify",
-      "measuredVersion": "12.1.2",
+      "measuredVersion": "12.1.3",
       "targets": [
         {
           "target": "rxjs",
@@ -20408,7 +20398,7 @@
     },
     {
       "package": "@sentry/vercel-edge",
-      "measuredVersion": "11.6.0",
+      "measuredVersion": "11.7.0",
       "targets": [
         {
           "target": "@sentry/opentelemetry",
@@ -24282,7 +24272,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "10.7.1",
+      "measuredVersion": "10.8.0",
       "targets": [
         {
           "target": "@appium/types",
@@ -24528,7 +24518,7 @@
     },
     {
       "package": "babel-preset-expo",
-      "measuredVersion": "57.0.14",
+      "measuredVersion": "57.0.15",
       "targets": [
         {
           "target": "@babel/core",
@@ -24649,7 +24639,7 @@
     },
     {
       "package": "bullmq",
-      "measuredVersion": "6.3.12",
+      "measuredVersion": "6.3.13",
       "targets": [
         {
           "target": "@valkey/valkey-glide",
@@ -25093,7 +25083,7 @@
     },
     {
       "package": "dependency-cruiser",
-      "measuredVersion": "18.5.0",
+      "measuredVersion": "18.6.0",
       "targets": [
         {
           "target": "typescript",
@@ -25749,7 +25739,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.3.0",
+      "measuredVersion": "65.3.1",
       "targets": [
         {
           "target": "@eslint/core",
@@ -26106,7 +26096,7 @@
     },
     {
       "package": "expo-auth-session",
-      "measuredVersion": "57.0.14",
+      "measuredVersion": "57.0.15",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26244,7 +26234,7 @@
     },
     {
       "package": "expo-crypto",
-      "measuredVersion": "57.0.3",
+      "measuredVersion": "57.0.4",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26271,7 +26261,7 @@
     },
     {
       "package": "expo-dev-menu",
-      "measuredVersion": "57.0.19",
+      "measuredVersion": "57.0.20",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26616,7 +26606,7 @@
     },
     {
       "package": "expo-location",
-      "measuredVersion": "57.0.20",
+      "measuredVersion": "57.0.21",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26670,7 +26660,7 @@
     },
     {
       "package": "expo-router",
-      "measuredVersion": "57.0.25",
+      "measuredVersion": "57.0.26",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26727,7 +26717,7 @@
     },
     {
       "package": "expo-sharing",
-      "measuredVersion": "57.0.22",
+      "measuredVersion": "57.0.23",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26752,7 +26742,7 @@
     },
     {
       "package": "expo-splash-screen",
-      "measuredVersion": "57.0.9",
+      "measuredVersion": "57.0.10",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26793,7 +26783,7 @@
     },
     {
       "package": "expo-updates",
-      "measuredVersion": "57.0.25",
+      "measuredVersion": "57.0.26",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -27653,7 +27643,7 @@
     },
     {
       "package": "jest-expo",
-      "measuredVersion": "57.0.5",
+      "measuredVersion": "57.0.6",
       "targets": [
         {
           "target": "babel-preset-expo",
@@ -30193,7 +30183,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.55.1",
+      "measuredVersion": "5.55.2",
       "targets": [
         {
           "target": "express",
@@ -31393,7 +31383,7 @@
     },
     {
       "package": "remotion",
-      "measuredVersion": "4.0.534",
+      "measuredVersion": "4.0.535",
       "targets": [
         {
           "target": "zod",
@@ -31665,7 +31655,7 @@
     },
     {
       "package": "satori",
-      "measuredVersion": "0.47.1",
+      "measuredVersion": "0.51.0",
       "targets": [
         {
           "target": "react",
@@ -32994,7 +32984,7 @@
     },
     {
       "package": "vitest",
-      "measuredVersion": "5.0.3",
+      "measuredVersion": "5.0.4",
       "targets": [
         {
           "target": "bufferutil",
@@ -33006,7 +32996,7 @@
             "bufferutil"
           ],
           "files": [
-            "dist/chunks/index.DpLw24bj.js"
+            "dist/chunks/cli-api.Bx28WXzL.js"
           ],
           "fileCount": 1
         },
@@ -33020,7 +33010,7 @@
             "utf-8-validate"
           ],
           "files": [
-            "dist/chunks/index.DpLw24bj.js"
+            "dist/chunks/cli-api.Bx28WXzL.js"
           ],
           "fileCount": 1
         }
@@ -33305,7 +33295,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261011.1",
+      "measuredVersion": "1.20261012.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -33538,7 +33528,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.8",
+      "measuredVersion": "0.5.9",
       "target": "ws",
       "specifiers": [
         "ws"
@@ -33546,7 +33536,7 @@
     },
     {
       "package": "@electric-sql/pglite-tools",
-      "measuredVersion": "0.4.8",
+      "measuredVersion": "0.4.9",
       "target": "ws",
       "specifiers": [
         "ws"
@@ -33588,7 +33578,7 @@
     },
     {
       "package": "@mastra/core",
-      "measuredVersion": "1.75.0",
+      "measuredVersion": "1.76.0",
       "target": "undici",
       "specifiers": [
         "undici"
@@ -33596,7 +33586,7 @@
     },
     {
       "package": "@nestjs/platform-fastify",
-      "measuredVersion": "12.1.2",
+      "measuredVersion": "12.1.3",
       "target": "rxjs",
       "specifiers": [
         "rxjs"
@@ -33863,7 +33853,7 @@
     },
     {
       "package": "expo-auth-session",
-      "measuredVersion": "57.0.14",
+      "measuredVersion": "57.0.15",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -33903,7 +33893,7 @@
     },
     {
       "package": "expo-crypto",
-      "measuredVersion": "57.0.3",
+      "measuredVersion": "57.0.4",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -33911,7 +33901,7 @@
     },
     {
       "package": "expo-dev-menu",
-      "measuredVersion": "57.0.19",
+      "measuredVersion": "57.0.20",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34024,7 +34014,7 @@
     },
     {
       "package": "expo-location",
-      "measuredVersion": "57.0.20",
+      "measuredVersion": "57.0.21",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34040,7 +34030,7 @@
     },
     {
       "package": "expo-router",
-      "measuredVersion": "57.0.25",
+      "measuredVersion": "57.0.26",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34056,7 +34046,7 @@
     },
     {
       "package": "expo-sharing",
-      "measuredVersion": "57.0.22",
+      "measuredVersion": "57.0.23",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -34072,7 +34062,7 @@
     },
     {
       "package": "expo-updates",
-      "measuredVersion": "57.0.25",
+      "measuredVersion": "57.0.26",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
