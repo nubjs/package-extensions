@@ -617,8 +617,8 @@
           "@types/keyv"
         ],
         "metaOnly": false,
-        "version": "16.0.0",
-        "why": "latest 16.0.0 is outside <11"
+        "version": "16.1.0",
+        "why": "latest 16.1.0 is outside <11"
       },
       {
         "package": "cacheable-lookup",

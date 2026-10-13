@@ -1,5 +1,5 @@
-# Generated 2026-10-12 from the 10000 most-downloaded npm packages.
-# 773 packages, 1138 undeclared dependencies.
+# Generated 2026-10-13 from the 10000 most-downloaded npm packages.
+# 772 packages, 1134 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -2376,15 +2376,6 @@ packageExtensions:
     peerDependenciesMeta:
       vite:
         optional: true
-  "@tanstack/start-server-core@*":
-    peerDependencies:
-      "@standard-schema/spec": "*"
-      cookie-es: "*"
-    peerDependenciesMeta:
-      "@standard-schema/spec":
-        optional: true
-      cookie-es:
-        optional: true
   "@temporalio/client@*":
     peerDependencies:
       protobufjs: "*"
@@ -4057,16 +4048,10 @@ packageExtensions:
         optional: true
   miniflare@*:
     peerDependencies:
-      "@cloudflare/config": "*"
-      "@cloudflare/workers-shared": "*"
       "@cloudflare/workers-types": "*"
       "@puppeteer/browsers": "*"
       zod: "*"
     peerDependenciesMeta:
-      "@cloudflare/config":
-        optional: true
-      "@cloudflare/workers-shared":
-        optional: true
       "@cloudflare/workers-types":
         optional: true
       "@puppeteer/browsers":

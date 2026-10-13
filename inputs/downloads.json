@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T15:50:42.436Z",
+  "generatedAt": "2026-10-13T14:29:10.988Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-10-05",
   "end": "2026-10-11",
@@ -310,7 +310,6 @@
     "@tanstack/router-devtools-core": 4117937,
     "@tanstack/router-plugin": 16323282,
     "@tanstack/router-utils": 17773543,
-    "@tanstack/start-server-core": 11583383,
     "@temporalio/client": 4452680,
     "@temporalio/workflow": 4100666,
     "@testing-library/jest-dom": 59895258,

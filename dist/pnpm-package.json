@@ -3721,20 +3721,6 @@
           }
         }
       },
-      "@tanstack/start-server-core@*": {
-        "peerDependencies": {
-          "@standard-schema/spec": "*",
-          "cookie-es": "*"
-        },
-        "peerDependenciesMeta": {
-          "@standard-schema/spec": {
-            "optional": true
-          },
-          "cookie-es": {
-            "optional": true
-          }
-        }
-      },
       "@temporalio/client@*": {
         "peerDependencies": {
           "protobufjs": "*"
@@ -6352,19 +6338,11 @@
       },
       "miniflare@*": {
         "peerDependencies": {
-          "@cloudflare/config": "*",
-          "@cloudflare/workers-shared": "*",
           "@cloudflare/workers-types": "*",
           "@puppeteer/browsers": "*",
           "zod": "*"
         },
         "peerDependenciesMeta": {
-          "@cloudflare/config": {
-            "optional": true
-          },
-          "@cloudflare/workers-shared": {
-            "optional": true
-          },
           "@cloudflare/workers-types": {
             "optional": true
           },

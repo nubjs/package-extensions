@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12",
+ "generated": "2026-10-13",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1138,
-   "packages": 642
+   "entries": 1134,
+   "packages": 641
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
   }
  },
  "totals": {
-  "packages": 773,
-  "selectors": 793,
-  "entries": 1138,
+  "packages": 772,
+  "selectors": 792,
+  "entries": 1134,
   "byClass": {
    "runtime": 206,
    "adapter": 126,
-   "types": 509,
+   "types": 505,
    "deep-path": 0,
    "guarded": 297
   },
   "byField": {
    "dependency": 31,
-   "peer": 1107
+   "peer": 1103
   },
   "candidatesForReview": 101,
   "droppedUnpublishedTargets": 202,
@@ -6660,20 +6660,6 @@
     }
    }
   },
-  "@tanstack/start-server-core@*": {
-   "peerDependencies": {
-    "@standard-schema/spec": "*",
-    "cookie-es": "*"
-   },
-   "peerDependenciesMeta": {
-    "@standard-schema/spec": {
-     "optional": true
-    },
-    "cookie-es": {
-     "optional": true
-    }
-   }
-  },
   "@temporalio/client@*": {
    "peerDependencies": {
     "protobufjs": "*"
@@ -9291,19 +9277,11 @@
   },
   "miniflare@*": {
    "peerDependencies": {
-    "@cloudflare/config": "*",
-    "@cloudflare/workers-shared": "*",
     "@cloudflare/workers-types": "*",
     "@puppeteer/browsers": "*",
     "zod": "*"
    },
    "peerDependenciesMeta": {
-    "@cloudflare/config": {
-     "optional": true
-    },
-    "@cloudflare/workers-shared": {
-     "optional": true
-    },
     "@cloudflare/workers-types": {
      "optional": true
     },
@@ -12896,7 +12874,7 @@
   },
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.11",
+   "measuredVersion": "1.6.12",
    "targets": [
     {
      "target": "@applitools/test-utils",
@@ -13276,7 +13254,7 @@
   },
   {
    "package": "@base44/vite-plugin",
-   "measuredVersion": "1.0.44",
+   "measuredVersion": "1.0.45",
    "targets": [
     {
      "target": "vite",
@@ -13298,7 +13276,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.63.1",
+   "measuredVersion": "1.63.2",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13807,7 +13785,7 @@
   },
   {
    "package": "@es-joy/jsdoccomment",
-   "measuredVersion": "0.98.0",
+   "measuredVersion": "0.99.0",
    "targets": [
     {
      "target": "eslint",
@@ -13827,7 +13805,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.26.2",
+   "measuredVersion": "5.26.5",
    "targets": [
     {
      "target": "react",
@@ -16312,7 +16290,7 @@
   },
   {
    "package": "@nuxt/devtools",
-   "measuredVersion": "4.0.0-beta.4",
+   "measuredVersion": "4.0.0-beta.5",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16346,7 +16324,7 @@
   },
   {
    "package": "@nuxt/devtools-kit",
-   "measuredVersion": "4.0.0-beta.4",
+   "measuredVersion": "4.0.0-beta.5",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16359,7 +16337,7 @@
      ],
      "files": [
       "dist/index.d.mts",
-      "dist/shared/devtools-kit.Dq3CVYot.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
       "dist/types.d.mts"
      ],
      "fileCount": 3
@@ -16376,7 +16354,7 @@
      ],
      "files": [
       "dist/index.d.mts",
-      "dist/shared/devtools-kit.Dq3CVYot.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
       "dist/types.d.mts"
      ],
      "fileCount": 3
@@ -16392,7 +16370,7 @@
      ],
      "files": [
       "dist/index.d.mts",
-      "dist/shared/devtools-kit.Dq3CVYot.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
       "dist/types.d.mts"
      ],
      "fileCount": 3
@@ -16437,7 +16415,7 @@
      ],
      "files": [
       "dist/index.d.mts",
-      "dist/shared/devtools-kit.Dq3CVYot.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
       "dist/types.d.mts"
      ],
      "fileCount": 3
@@ -16481,7 +16459,7 @@
      ],
      "files": [
       "dist/index.d.mts",
-      "dist/shared/devtools-kit.Dq3CVYot.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
       "dist/types.d.mts"
      ],
      "fileCount": 3
@@ -16497,7 +16475,7 @@
      ],
      "files": [
       "dist/index.d.mts",
-      "dist/shared/devtools-kit.Dq3CVYot.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
       "dist/types.d.mts"
      ],
      "fileCount": 3
@@ -16515,7 +16493,7 @@
       "dist/index.d.mts",
       "dist/runtime/host-client.mjs",
       "dist/runtime/iframe-client.mjs",
-      "dist/shared/devtools-kit.Dq3CVYot.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
       "dist/types.d.mts"
      ],
      "fileCount": 5
@@ -16531,7 +16509,7 @@
      ],
      "files": [
       "dist/index.d.mts",
-      "dist/shared/devtools-kit.Dq3CVYot.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
       "dist/types.d.mts"
      ],
      "fileCount": 3
@@ -19907,7 +19885,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.62.1",
+   "measuredVersion": "2.63.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20142,7 +20120,7 @@
   },
   {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.2.12",
+   "measuredVersion": "2.2.13",
    "targets": [
     {
      "target": "tsx",
@@ -20266,7 +20244,7 @@
   },
   {
    "package": "@scalar/openapi-upgrader",
-   "measuredVersion": "0.4.3",
+   "measuredVersion": "0.4.4",
    "targets": [
     {
      "target": "@scalar/types",
@@ -20289,7 +20267,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.23.1",
+   "measuredVersion": "0.23.2",
    "targets": [
     {
      "target": "har-format",
@@ -20566,7 +20544,7 @@
   },
   {
    "package": "@solana/sysvars",
-   "measuredVersion": "8.4.0",
+   "measuredVersion": "8.5.0",
    "targets": [
     {
      "target": "@solana/addresses",
@@ -20801,7 +20779,7 @@
   },
   {
    "package": "@storybook/addon-a11y",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20903,7 +20881,7 @@
   },
   {
    "package": "@storybook/addon-onboarding",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20956,7 +20934,7 @@
   },
   {
    "package": "@storybook/addon-themes",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20991,7 +20969,7 @@
   },
   {
    "package": "@storybook/addon-vitest",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "react",
@@ -21011,7 +20989,7 @@
   },
   {
    "package": "@storybook/builder-webpack5",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "@storybook/global",
@@ -21097,7 +21075,7 @@
   },
   {
    "package": "@storybook/nextjs",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "sb-original",
@@ -21119,7 +21097,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "sb-original",
@@ -21633,7 +21611,7 @@
   },
   {
    "package": "@tanstack/react-start-rsc",
-   "measuredVersion": "0.1.60",
+   "measuredVersion": "0.1.62",
    "targets": [
     {
      "target": "vite",
@@ -21674,7 +21652,7 @@
   },
   {
    "package": "@tanstack/router-plugin",
-   "measuredVersion": "1.168.43",
+   "measuredVersion": "1.168.45",
    "targets": [
     {
      "target": "@tanstack/virtual-file-routes",
@@ -21713,41 +21691,6 @@
      "files": [
       "dist/cjs/copy-files-plugin.d.cts",
       "dist/esm/copy-files-plugin.d.ts"
-     ],
-     "fileCount": 2
-    }
-   ]
-  },
-  {
-   "package": "@tanstack/start-server-core",
-   "measuredVersion": "1.169.40",
-   "targets": [
-    {
-     "target": "@standard-schema/spec",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@standard-schema/spec"
-     ],
-     "files": [
-      "dist/esm/request-response.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "cookie-es",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "cookie-es"
-     ],
-     "files": [
-      "dist/esm/request-response.d.ts",
-      "dist/esm/session.d.ts"
      ],
      "fileCount": 2
     }
@@ -21831,7 +21774,7 @@
   },
   {
    "package": "@tiptap/extension-list",
-   "measuredVersion": "3.31.4",
+   "measuredVersion": "3.32.0",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -21851,7 +21794,7 @@
   },
   {
    "package": "@tokenizer/inflate",
-   "measuredVersion": "0.4.1",
+   "measuredVersion": "0.5.0",
    "targets": [
     {
      "target": "strtok3",
@@ -22322,7 +22265,7 @@
   },
   {
    "package": "@typescript-eslint/types",
-   "measuredVersion": "8.71.1",
+   "measuredVersion": "8.71.2",
    "targets": [
     {
      "target": "typescript",
@@ -22384,7 +22327,7 @@
   },
   {
    "package": "@unhead/schema",
-   "measuredVersion": "3.4.2",
+   "measuredVersion": "3.4.3",
    "targets": [
     {
      "target": "unhead",
@@ -22774,7 +22717,7 @@
   },
   {
    "package": "@vue/compiler-core",
-   "measuredVersion": "3.5.43",
+   "measuredVersion": "3.5.44",
    "targets": [
     {
      "target": "@babel/types",
@@ -22794,7 +22737,7 @@
   },
   {
    "package": "@vue/compiler-sfc",
-   "measuredVersion": "3.5.43",
+   "measuredVersion": "3.5.44",
    "targets": [
     {
      "target": "@babel/types",
@@ -24639,7 +24582,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.13",
+   "measuredVersion": "6.3.14",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -25739,7 +25682,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.3.1",
+   "measuredVersion": "65.3.2",
    "targets": [
     {
      "target": "@eslint/core",
@@ -27050,7 +26993,7 @@
   },
   {
    "package": "gaxios",
-   "measuredVersion": "8.2.0",
+   "measuredVersion": "8.3.0",
    "targets": [
     {
      "target": "undici-types",
@@ -28124,7 +28067,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.10.11",
+   "measuredVersion": "0.10.13",
    "targets": [
     {
      "target": "@jest/globals",
@@ -28402,7 +28345,7 @@
   },
   {
    "package": "mermaid",
-   "measuredVersion": "12.1.0",
+   "measuredVersion": "12.2.0",
    "targets": [
     {
      "target": "@iconify/types",
@@ -28734,36 +28677,8 @@
   },
   {
    "package": "miniflare",
-   "measuredVersion": "5.20261006.1-alpha",
+   "measuredVersion": "4.20260730.0",
    "targets": [
-    {
-     "target": "@cloudflare/config",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@cloudflare/config"
-     ],
-     "files": [
-      "dist/src/index.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "@cloudflare/workers-shared",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@cloudflare/workers-shared"
-     ],
-     "files": [
-      "dist/src/index.d.ts"
-     ],
-     "fileCount": 1
-    },
     {
      "target": "@cloudflare/workers-types",
      "class": "types",
@@ -28885,7 +28800,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "14.1.0",
+   "measuredVersion": "14.2.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -29815,7 +29730,7 @@
   },
   {
    "package": "oxc-minify",
-   "measuredVersion": "0.153.0",
+   "measuredVersion": "0.154.0",
    "targets": [
     {
      "target": "@oxc-minify/binding-wasm32-wasi",
@@ -29855,7 +29770,7 @@
   },
   {
    "package": "oxc-parser",
-   "measuredVersion": "0.153.0",
+   "measuredVersion": "0.154.0",
    "targets": [
     {
      "target": "@oxc-parser/binding-wasm32-wasi",
@@ -29916,7 +29831,7 @@
   },
   {
    "package": "oxc-transform",
-   "measuredVersion": "0.153.0",
+   "measuredVersion": "0.154.0",
    "targets": [
     {
      "target": "@oxc-transform/binding-wasm32-wasi",
@@ -30183,7 +30098,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.55.2",
+   "measuredVersion": "5.55.3",
    "targets": [
     {
      "target": "express",
@@ -31444,7 +31359,7 @@
   },
   {
    "package": "retry-request",
-   "measuredVersion": "9.0.2",
+   "measuredVersion": "9.1.0",
    "targets": [
     {
      "target": "request",
@@ -31655,7 +31570,7 @@
   },
   {
    "package": "satori",
-   "measuredVersion": "0.51.0",
+   "measuredVersion": "0.55.1",
    "targets": [
     {
      "target": "react",
@@ -31843,7 +31758,7 @@
   },
   {
    "package": "storybook",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "@storybook/react",
@@ -31855,11 +31770,10 @@
       "@storybook/react"
      ],
      "files": [
-      "dist/chunk-BqJXeo8A.d.ts",
       "dist/chunk-D4lKaBz7.d.ts",
-      "dist/docs-tools/index.d.ts"
+      "dist/chunk-DY6-qCWl.d.ts"
      ],
-     "fileCount": 3
+     "fileCount": 2
     },
     {
      "target": "react",
@@ -31876,10 +31790,10 @@
       "dist/_browser-chunks/chunk-J3E3FSHW.js",
       "dist/_browser-chunks/chunk-W22LQPXL.js",
       "dist/_browser-chunks/syntaxhighlighter-4REYKNEV.js",
-      "dist/chunk-BqJXeo8A.d.ts",
       "dist/chunk-BxCdsGId.d.ts",
       "dist/chunk-CSYKg21N.d.ts",
-      "dist/chunk-DdLFxT9J.d.ts"
+      "dist/chunk-CdMoRv3z.d.ts",
+      "dist/chunk-DY6-qCWl.d.ts"
      ],
      "fileCount": 15
     },
@@ -31917,7 +31831,7 @@
   },
   {
    "package": "storybook-addon-pseudo-states",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -33176,7 +33090,7 @@
   },
   {
    "package": "vuetify",
-   "measuredVersion": "4.2.4",
+   "measuredVersion": "4.2.5",
    "targets": [
     {
      "target": "@vue/reactivity",
@@ -33295,7 +33209,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261012.1",
+   "measuredVersion": "1.20261013.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33315,7 +33229,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.149.0",
+   "measuredVersion": "4.150.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -33512,7 +33426,7 @@
  "candidates": [
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.11",
+   "measuredVersion": "1.6.12",
    "target": "@applitools/test-utils",
    "specifiers": [
     "@applitools/test-utils/src/parse-env"
@@ -33755,7 +33669,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.1",
+   "measuredVersion": "10.6.2",
    "target": "sb-original",
    "specifiers": [
     "sb-original/image-context"

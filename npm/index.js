@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.26 — generated 2026-10-12, do not edit.
-// 773 packages, 1138 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.26 — generated 2026-10-13, do not edit.
+// 772 packages, 1134 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -4585,23 +4585,6 @@ exports.packageExtensions = [
   }
  ],
  [
-  "@tanstack/start-server-core@*",
-  {
-   "peerDependencies": {
-    "@standard-schema/spec": "*",
-    "cookie-es": "*"
-   },
-   "peerDependenciesMeta": {
-    "@standard-schema/spec": {
-     "optional": true
-    },
-    "cookie-es": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@temporalio/client@*",
   {
    "peerDependencies": {
@@ -7811,19 +7794,11 @@ exports.packageExtensions = [
   "miniflare@*",
   {
    "peerDependencies": {
-    "@cloudflare/config": "*",
-    "@cloudflare/workers-shared": "*",
     "@cloudflare/workers-types": "*",
     "@puppeteer/browsers": "*",
     "zod": "*"
    },
    "peerDependenciesMeta": {
-    "@cloudflare/config": {
-     "optional": true
-    },
-    "@cloudflare/workers-shared": {
-     "optional": true
-    },
     "@cloudflare/workers-types": {
      "optional": true
     },
