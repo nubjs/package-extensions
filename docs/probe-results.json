@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-13",
-  "dataset": "0e1b8231973cbc96",
+  "generated": "2026-10-14",
+  "dataset": "a79152bd2edc9b73",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,19 +8,19 @@
   "tally": {
     "confirmed": 4,
     "confirmedViaPath": 10,
-    "notOnImport": 60,
-    "installFailed": 3,
+    "notOnImport": 57,
+    "installFailed": 5,
     "inconclusive": 3
   },
   "results": [
     {
       "package": "@applitools/spec-driver-webdriver",
-      "version": "1.6.12",
+      "version": "1.6.13",
       "expected": [
         "@applitools/test-utils"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@applitools/\u001b[39m\u001b[38;5;173mspec-driver-webdriver\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.6.12\u001b[39m: All versions satisfying \"1.6.12\" are quarantined\n::endgroup::\n\u001b"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@applitools/\u001b[39m\u001b[38;5;173mspec-driver-webdriver\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.6.13\u001b[39m: All versions satisfying \"1.6.13\" are quarantined\n::endgroup::\n\u001b"
     },
     {
       "package": "@ardatan/relay-compiler",
@@ -140,25 +140,14 @@
     },
     {
       "package": "@mastra/core",
-      "version": "1.76.0",
+      "version": "1.77.0",
       "expected": [
         "@workflow/serde",
         "msw",
         "undici"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 9,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "zod"
-      ],
-      "byOtherIssuers": [
-        "@mastra/schema-compat -> zod (unprovided peer)",
-        "@ai-sdk/provider-utils -> zod (unprovided peer)"
-      ],
-      "specifiersTried": 35
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.77.0\u001b[39m: All versions satisfying \"1.77.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
     },
     {
       "package": "@nestjs/platform-fastify",
@@ -458,8 +447,20 @@
       "expected": [
         "sb-original"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@storybook/\u001b[39m\u001b[38;5;173mnextjs-vite\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:10.6.2\u001b[39m: All versions satisfying \"10.6.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m "
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "storybook",
+        "next",
+        "react"
+      ],
+      "byOtherIssuers": [
+        "vite-tsconfig-paths -> vite (unprovided peer)"
+      ],
+      "specifiersTried": 12
     },
     {
       "package": "@swagger-api/apidom-reference",
@@ -911,8 +912,18 @@
         "expo-modules-core",
         "react-native-tab-view"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-router\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:57.0.26\u001b[39m: All versions satisfying \"57.0.26\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-r"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "expo-modules-core"
+      ],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "expo-secure-store",
@@ -1052,23 +1063,13 @@
     },
     {
       "package": "jest-preset-angular",
-      "version": "17.0.2",
+      "version": "17.0.3",
       "expected": [
         "@jest/transform",
         "tslib"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "tslib"
-      ],
-      "citedPathsTried": 5,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [
-        "ts-jest -> typescript (unprovided peer)"
-      ],
-      "specifiersTried": 6
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mjest-preset-angular\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:17.0.3\u001b[39m: All versions satisfying \"17.0.3\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
     },
     {
       "package": "knex",
@@ -1164,7 +1165,7 @@
     },
     {
       "package": "playwright-core",
-      "version": "1.64.0",
+      "version": "1.64.1",
       "expected": [
         "bufferutil",
         "chromium-bidi",
@@ -1172,14 +1173,8 @@
         "utf-8-validate",
         "zod"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 3,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 8
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mplaywright-core\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.64.1\u001b[39m: All versions satisfying \"1.64.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mplay"
     },
     {
       "package": "prettier-plugin-organize-imports",
@@ -1283,25 +1278,6 @@
       "specifiersTried": 2
     },
     {
-      "package": "redoc",
-      "version": "2.5.4",
-      "expected": [
-        "call-me-maybe",
-        "fast-safe-stringify",
-        "yaml"
-      ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "react"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 3
-    },
-    {
       "package": "snappy",
       "version": "7.4.3",
       "expected": [
@@ -1341,25 +1317,19 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:7968) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-LhuKfB/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:7221) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-SSG2gF/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
-      "version": "63.1.2",
+      "version": "64.0.2",
       "expected": [
         "@vltpkg/graph",
         "@vltpkg/package-info",
         "@vltpkg/package-json",
         "path-scurry"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:64.0.2\u001b[39m: All versions satisfying \"64.0.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
     }
   ]
 }

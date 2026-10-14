@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13",
+ "generated": "2026-10-14",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1134,
-   "packages": 641
+   "entries": 1130,
+   "packages": 639
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,23 +28,23 @@
   }
  },
  "totals": {
-  "packages": 772,
-  "selectors": 792,
-  "entries": 1134,
+  "packages": 770,
+  "selectors": 790,
+  "entries": 1130,
   "byClass": {
-   "runtime": 206,
+   "runtime": 202,
    "adapter": 126,
    "types": 505,
    "deep-path": 0,
    "guarded": 297
   },
   "byField": {
-   "dependency": 31,
-   "peer": 1103
+   "dependency": 30,
+   "peer": 1100
   },
-  "candidatesForReview": 101,
+  "candidatesForReview": 98,
   "droppedUnpublishedTargets": 202,
-  "droppedBundlerLiterals": 1,
+  "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
   "withheldDeepPath": 242
  },
@@ -4634,10 +4634,10 @@
   "@nuxt/devtools-kit@*": {
    "peerDependencies": {
     "@nuxt/schema": "*",
-    "@vitejs/devtools-kit": "*",
     "birpc": "*",
     "error-stack-parser-es": "*",
     "hookable": "*",
+    "nitropack": "*",
     "nuxt": "*",
     "ofetch": "*",
     "shiki": "*",
@@ -4650,9 +4650,6 @@
     "@nuxt/schema": {
      "optional": true
     },
-    "@vitejs/devtools-kit": {
-     "optional": true
-    },
     "birpc": {
      "optional": true
     },
@@ -4660,6 +4657,9 @@
      "optional": true
     },
     "hookable": {
+     "optional": true
+    },
+    "nitropack": {
      "optional": true
     },
     "nuxt": {
@@ -10198,24 +10198,6 @@
     }
    }
   },
-  "redoc@*": {
-   "peerDependencies": {
-    "call-me-maybe": "*",
-    "fast-safe-stringify": "*",
-    "yaml": "*"
-   },
-   "peerDependenciesMeta": {
-    "call-me-maybe": {
-     "optional": true
-    },
-    "fast-safe-stringify": {
-     "optional": true
-    },
-    "yaml": {
-     "optional": true
-    }
-   }
-  },
   "rehype-harden@*": {
    "peerDependencies": {
     "hast": "*"
@@ -10546,11 +10528,6 @@
     "hast": {
      "optional": true
     }
-   }
-  },
-  "string.prototype.codepointat@*": {
-   "dependencies": {
-    "define-properties": "*"
    }
   },
   "stylus-loader@*": {
@@ -12874,7 +12851,7 @@
   },
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.12",
+   "measuredVersion": "1.6.13",
    "targets": [
     {
      "target": "@applitools/test-utils",
@@ -13085,7 +13062,7 @@
   },
   {
    "package": "@aws-amplify/auth",
-   "measuredVersion": "6.21.1",
+   "measuredVersion": "6.21.2",
    "targets": [
     {
      "target": "@aws-sdk/types",
@@ -13105,7 +13082,7 @@
   },
   {
    "package": "@aws-amplify/core",
-   "measuredVersion": "6.19.2",
+   "measuredVersion": "6.19.3",
    "targets": [
     {
      "target": "@smithy/types",
@@ -13276,7 +13253,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.63.2",
+   "measuredVersion": "1.64.0",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -14067,7 +14044,7 @@
   },
   {
    "package": "@fastify/helmet",
-   "measuredVersion": "13.1.2",
+   "measuredVersion": "13.2.0",
    "targets": [
     {
      "target": "fastify",
@@ -14734,7 +14711,7 @@
   },
   {
    "package": "@google/gemini-cli",
-   "measuredVersion": "0.63.0",
+   "measuredVersion": "0.64.0",
    "targets": [
     {
      "target": "bufferutil",
@@ -15585,7 +15562,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.76.0",
+   "measuredVersion": "1.77.0",
    "targets": [
     {
      "target": "@workflow/serde",
@@ -15627,11 +15604,11 @@
       "undici"
      ],
      "files": [
+      "dist/dist-B6iLgIBH.js",
       "dist/dist-BgUIUei9-BstmucK2.cjs",
       "dist/dist-BgUIUei9-Cf3ZzunV.js",
       "dist/dist-CSedSB65.cjs",
-      "dist/dist-D9mSes7O.js",
-      "dist/dist-DJN8dMMl.cjs",
+      "dist/dist-aAKQluOu.cjs",
       "dist/dist-kwhHAw-p.js"
      ],
      "fileCount": 6
@@ -15640,7 +15617,7 @@
   },
   {
    "package": "@mastra/schema-compat",
-   "measuredVersion": "1.3.13",
+   "measuredVersion": "1.3.14",
    "targets": [
     {
      "target": "zod-to-json-schema",
@@ -16290,7 +16267,7 @@
   },
   {
    "package": "@nuxt/devtools",
-   "measuredVersion": "4.0.0-beta.5",
+   "measuredVersion": "3.4.3",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16316,15 +16293,16 @@
       "vue"
      ],
      "files": [
+      "dist/webcomponents/index.d.mts",
       "dist/webcomponents/index.mjs"
      ],
-     "fileCount": 1
+     "fileCount": 2
     }
    ]
   },
   {
    "package": "@nuxt/devtools-kit",
-   "measuredVersion": "4.0.0-beta.5",
+   "measuredVersion": "3.4.3",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16336,26 +16314,9 @@
       "@nuxt/schema"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
-      "dist/types.d.mts"
-     ],
-     "fileCount": 3
-    },
-    {
-     "target": "@vitejs/devtools-kit",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@vitejs/devtools-kit",
-      "@vitejs/devtools-kit/client"
-     ],
-     "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.D39hg9bG.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16369,9 +16330,9 @@
       "birpc"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.D39hg9bG.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16385,7 +16346,7 @@
       "error-stack-parser-es"
      ],
      "files": [
-      "dist/types.d.mts"
+      "dist/types.d.ts"
      ],
      "fileCount": 1
     },
@@ -16399,9 +16360,25 @@
       "hookable"
      ],
      "files": [
-      "dist/types.d.mts"
+      "dist/types.d.ts"
      ],
      "fileCount": 1
+    },
+    {
+     "target": "nitropack",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "nitropack"
+     ],
+     "files": [
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.D39hg9bG.d.ts",
+      "dist/types.d.ts"
+     ],
+     "fileCount": 3
     },
     {
      "target": "nuxt",
@@ -16414,9 +16391,9 @@
       "nuxt/app"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.D39hg9bG.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16430,7 +16407,7 @@
       "ofetch"
      ],
      "files": [
-      "dist/types.d.mts"
+      "dist/types.d.ts"
      ],
      "fileCount": 1
     },
@@ -16444,7 +16421,7 @@
       "shiki"
      ],
      "files": [
-      "dist/types.d.mts"
+      "dist/types.d.ts"
      ],
      "fileCount": 1
     },
@@ -16458,9 +16435,9 @@
       "unimport"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.D39hg9bG.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16474,9 +16451,9 @@
       "unstorage"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.D39hg9bG.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16490,13 +16467,15 @@
       "vue"
      ],
      "files": [
-      "dist/index.d.mts",
+      "dist/index.d.ts",
+      "dist/runtime/host-client.d.ts",
       "dist/runtime/host-client.mjs",
+      "dist/runtime/iframe-client.d.ts",
       "dist/runtime/iframe-client.mjs",
-      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
-      "dist/types.d.mts"
+      "dist/shared/devtools-kit.D39hg9bG.d.ts",
+      "dist/types.d.ts"
      ],
-     "fileCount": 5
+     "fileCount": 7
     },
     {
      "target": "vue-router",
@@ -16508,9 +16487,9 @@
       "vue-router"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.D39hg9bG.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     }
@@ -18375,7 +18354,7 @@
   },
   {
    "package": "@oclif/core",
-   "measuredVersion": "5.1.7",
+   "measuredVersion": "5.1.8",
    "targets": [
     {
      "target": "pnpapi",
@@ -18543,7 +18522,7 @@
   },
   {
    "package": "@opennextjs/cloudflare",
-   "measuredVersion": "1.20.10",
+   "measuredVersion": "1.20.11",
    "targets": [
     {
      "target": "esbuild",
@@ -18733,7 +18712,7 @@
   },
   {
    "package": "@pinia/testing",
-   "measuredVersion": "2.0.1",
+   "measuredVersion": "2.0.2",
    "targets": [
     {
      "target": "vue",
@@ -19645,7 +19624,7 @@
   },
   {
    "package": "@react-navigation/bottom-tabs",
-   "measuredVersion": "7.20.0",
+   "measuredVersion": "7.21.0",
    "targets": [
     {
      "target": "@react-navigation/core",
@@ -19666,7 +19645,7 @@
   },
   {
    "package": "@react-navigation/native",
-   "measuredVersion": "7.5.0",
+   "measuredVersion": "7.5.1",
    "targets": [
     {
      "target": "@react-navigation/routers",
@@ -19686,7 +19665,7 @@
   },
   {
    "package": "@react-navigation/native-stack",
-   "measuredVersion": "7.20.0",
+   "measuredVersion": "7.21.0",
    "targets": [
     {
      "target": "@react-navigation/core",
@@ -19706,7 +19685,7 @@
   },
   {
    "package": "@react-navigation/stack",
-   "measuredVersion": "7.12.0",
+   "measuredVersion": "7.12.1",
    "targets": [
     {
      "target": "@react-navigation/core",
@@ -20100,7 +20079,7 @@
   },
   {
    "package": "@rolldown/binding-wasm32-wasi",
-   "measuredVersion": "1.2.13",
+   "measuredVersion": "1.2.14",
    "targets": [
     {
      "target": "@oxc-project/types",
@@ -21794,7 +21773,7 @@
   },
   {
    "package": "@tokenizer/inflate",
-   "measuredVersion": "0.5.0",
+   "measuredVersion": "0.5.1",
    "targets": [
     {
      "target": "strtok3",
@@ -21902,7 +21881,7 @@
   },
   {
    "package": "@turbo/gen",
-   "measuredVersion": "2.11.7",
+   "measuredVersion": "2.11.8",
    "targets": [
     {
      "target": "kerberos",
@@ -22368,7 +22347,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "21.0.1",
+   "measuredVersion": "22.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -22445,7 +22424,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "20.0.1",
+   "measuredVersion": "21.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -24329,7 +24308,7 @@
   },
   {
    "package": "auth0",
-   "measuredVersion": "7.4.0",
+   "measuredVersion": "7.5.0",
    "targets": [
     {
      "target": "undici-types",
@@ -24582,7 +24561,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.14",
+   "measuredVersion": "6.3.15",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -25682,7 +25661,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.3.2",
+   "measuredVersion": "65.3.4",
    "targets": [
     {
      "target": "@eslint/core",
@@ -27118,7 +27097,7 @@
   },
   {
    "package": "graphql-ws",
-   "measuredVersion": "6.3.0",
+   "measuredVersion": "6.4.0",
    "targets": [
     {
      "target": "bun",
@@ -27675,7 +27654,7 @@
   },
   {
    "package": "jest-preset-angular",
-   "measuredVersion": "17.0.2",
+   "measuredVersion": "17.0.3",
    "targets": [
     {
      "target": "@jest/transform",
@@ -29931,7 +29910,7 @@
   },
   {
    "package": "playwright-core",
-   "measuredVersion": "1.64.0",
+   "measuredVersion": "1.64.1",
    "targets": [
     {
      "target": "bufferutil",
@@ -30058,7 +30037,7 @@
   },
   {
    "package": "postcss-import",
-   "measuredVersion": "17.0.0",
+   "measuredVersion": "17.0.1",
    "targets": [
     {
      "target": "sugarss",
@@ -30098,7 +30077,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.55.3",
+   "measuredVersion": "5.56.0",
    "targets": [
     {
      "target": "express",
@@ -31088,57 +31067,6 @@
    ]
   },
   {
-   "package": "redoc",
-   "measuredVersion": "2.5.4",
-   "targets": [
-    {
-     "target": "call-me-maybe",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "call-me-maybe"
-     ],
-     "files": [
-      "bundles/redoc.browser.lib.js",
-      "bundles/redoc.lib.js"
-     ],
-     "fileCount": 2
-    },
-    {
-     "target": "fast-safe-stringify",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "fast-safe-stringify"
-     ],
-     "files": [
-      "bundles/redoc.browser.lib.js",
-      "bundles/redoc.lib.js"
-     ],
-     "fileCount": 2
-    },
-    {
-     "target": "yaml",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "yaml"
-     ],
-     "files": [
-      "bundles/redoc.browser.lib.js",
-      "bundles/redoc.lib.js"
-     ],
-     "fileCount": 2
-    }
-   ]
-  },
-  {
    "package": "rehype-harden",
    "measuredVersion": "1.1.8",
    "targets": [
@@ -31570,7 +31498,7 @@
   },
   {
    "package": "satori",
-   "measuredVersion": "0.55.1",
+   "measuredVersion": "0.56.1",
    "targets": [
     {
      "target": "react",
@@ -31880,27 +31808,6 @@
       "dist/index.d.ts"
      ],
      "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "string.prototype.codepointat",
-   "measuredVersion": "1.0.1",
-   "targets": [
-    {
-     "target": "define-properties",
-     "class": "runtime",
-     "field": "dependency",
-     "candidate": false,
-     "reason": "probe 1.0.1: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access define-properties\"",
-     "specifiers": [
-      "define-properties"
-     ],
-     "files": [
-      "index.js",
-      "shim.js"
-     ],
-     "fileCount": 2
     }
    ]
   },
@@ -32298,7 +32205,7 @@
   },
   {
    "package": "typedoc-plugin-markdown",
-   "measuredVersion": "4.13.1",
+   "measuredVersion": "4.14.0",
    "targets": [
     {
      "target": "prettier",
@@ -32644,7 +32551,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.2",
+   "measuredVersion": "64.0.2",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -33209,7 +33116,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261013.1",
+   "measuredVersion": "1.20261014.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -33229,7 +33136,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.150.0",
+   "measuredVersion": "4.151.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -33426,7 +33333,7 @@
  "candidates": [
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.12",
+   "measuredVersion": "1.6.13",
    "target": "@applitools/test-utils",
    "specifiers": [
     "@applitools/test-utils/src/parse-env"
@@ -33492,7 +33399,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.76.0",
+   "measuredVersion": "1.77.0",
    "target": "undici",
    "specifiers": [
     "undici"
@@ -34038,7 +33945,7 @@
   },
   {
    "package": "jest-preset-angular",
-   "measuredVersion": "17.0.2",
+   "measuredVersion": "17.0.3",
    "target": "tslib",
    "specifiers": [
     "tslib"
@@ -34126,7 +34033,7 @@
   },
   {
    "package": "playwright-core",
-   "measuredVersion": "1.64.0",
+   "measuredVersion": "1.64.1",
    "target": "chromium-bidi",
    "specifiers": [
     "chromium-bidi/lib/cjs/bidiMapper/BidiMapper",
@@ -34192,30 +34099,6 @@
    ]
   },
   {
-   "package": "redoc",
-   "measuredVersion": "2.5.4",
-   "target": "call-me-maybe",
-   "specifiers": [
-    "call-me-maybe"
-   ]
-  },
-  {
-   "package": "redoc",
-   "measuredVersion": "2.5.4",
-   "target": "fast-safe-stringify",
-   "specifiers": [
-    "fast-safe-stringify"
-   ]
-  },
-  {
-   "package": "redoc",
-   "measuredVersion": "2.5.4",
-   "target": "yaml",
-   "specifiers": [
-    "yaml"
-   ]
-  },
-  {
    "package": "snappy",
    "measuredVersion": "7.4.3",
    "target": "@napi-rs/snappy-wasm32-wasi",
@@ -34250,7 +34133,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.2",
+   "measuredVersion": "64.0.2",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -34258,7 +34141,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.2",
+   "measuredVersion": "64.0.2",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -34266,7 +34149,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.2",
+   "measuredVersion": "64.0.2",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -34274,7 +34157,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "63.1.2",
+   "measuredVersion": "64.0.2",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"
@@ -34487,8 +34370,6 @@
    "wrangler -> @cloudflare/remote-bindings"
   ],
   "unresolved": [],
-  "bundlerLiteral": [
-   "redoc -> null"
-  ]
+  "bundlerLiteral": []
  }
 }

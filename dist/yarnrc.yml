@@ -1,5 +1,5 @@
-# Generated 2026-10-13 from the 10000 most-downloaded npm packages.
-# 772 packages, 1134 undeclared dependencies.
+# Generated 2026-10-14 from the 10000 most-downloaded npm packages.
+# 770 packages, 1130 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -1056,10 +1056,10 @@ packageExtensions:
   "@nuxt/devtools-kit@*":
     peerDependencies:
       "@nuxt/schema": "*"
-      "@vitejs/devtools-kit": "*"
       birpc: "*"
       error-stack-parser-es: "*"
       hookable: "*"
+      nitropack: "*"
       nuxt: "*"
       ofetch: "*"
       shiki: "*"
@@ -1070,13 +1070,13 @@ packageExtensions:
     peerDependenciesMeta:
       "@nuxt/schema":
         optional: true
-      "@vitejs/devtools-kit":
-        optional: true
       birpc:
         optional: true
       error-stack-parser-es:
         optional: true
       hookable:
+        optional: true
+      nitropack:
         optional: true
       nuxt:
         optional: true
@@ -4634,18 +4634,6 @@ packageExtensions:
     peerDependenciesMeta:
       ioredis:
         optional: true
-  redoc@*:
-    peerDependencies:
-      call-me-maybe: "*"
-      fast-safe-stringify: "*"
-      yaml: "*"
-    peerDependenciesMeta:
-      call-me-maybe:
-        optional: true
-      fast-safe-stringify:
-        optional: true
-      yaml:
-        optional: true
   rehype-harden@*:
     peerDependencies:
       hast: "*"
@@ -4850,9 +4838,6 @@ packageExtensions:
     peerDependenciesMeta:
       hast:
         optional: true
-  string.prototype.codepointat@*:
-    dependencies:
-      define-properties: "*"
   stylus-loader@*:
     peerDependencies:
       schema-utils: "*"

@@ -926,8 +926,8 @@
           "jest-matcher-utils"
         ],
         "metaOnly": false,
-        "version": "1.64.0",
-        "why": "latest 1.64.0 is outside <=1.14.1"
+        "version": "1.64.1",
+        "why": "latest 1.64.1 is outside <=1.14.1"
       },
       {
         "package": "webpack",

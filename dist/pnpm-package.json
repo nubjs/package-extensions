@@ -1695,10 +1695,10 @@
       "@nuxt/devtools-kit@*": {
         "peerDependencies": {
           "@nuxt/schema": "*",
-          "@vitejs/devtools-kit": "*",
           "birpc": "*",
           "error-stack-parser-es": "*",
           "hookable": "*",
+          "nitropack": "*",
           "nuxt": "*",
           "ofetch": "*",
           "shiki": "*",
@@ -1711,9 +1711,6 @@
           "@nuxt/schema": {
             "optional": true
           },
-          "@vitejs/devtools-kit": {
-            "optional": true
-          },
           "birpc": {
             "optional": true
           },
@@ -1721,6 +1718,9 @@
             "optional": true
           },
           "hookable": {
+            "optional": true
+          },
+          "nitropack": {
             "optional": true
           },
           "nuxt": {
@@ -7259,24 +7259,6 @@
           }
         }
       },
-      "redoc@*": {
-        "peerDependencies": {
-          "call-me-maybe": "*",
-          "fast-safe-stringify": "*",
-          "yaml": "*"
-        },
-        "peerDependenciesMeta": {
-          "call-me-maybe": {
-            "optional": true
-          },
-          "fast-safe-stringify": {
-            "optional": true
-          },
-          "yaml": {
-            "optional": true
-          }
-        }
-      },
       "rehype-harden@*": {
         "peerDependencies": {
           "hast": "*"
@@ -7607,11 +7589,6 @@
           "hast": {
             "optional": true
           }
-        }
-      },
-      "string.prototype.codepointat@*": {
-        "dependencies": {
-          "define-properties": "*"
         }
       },
       "stylus-loader@*": {

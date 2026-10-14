@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.26 — generated 2026-10-13, do not edit.
-// 772 packages, 1134 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.27 — generated 2026-10-14, do not edit.
+// 770 packages, 1130 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -2161,10 +2161,10 @@ exports.packageExtensions = [
   {
    "peerDependencies": {
     "@nuxt/schema": "*",
-    "@vitejs/devtools-kit": "*",
     "birpc": "*",
     "error-stack-parser-es": "*",
     "hookable": "*",
+    "nitropack": "*",
     "nuxt": "*",
     "ofetch": "*",
     "shiki": "*",
@@ -2177,9 +2177,6 @@ exports.packageExtensions = [
     "@nuxt/schema": {
      "optional": true
     },
-    "@vitejs/devtools-kit": {
-     "optional": true
-    },
     "birpc": {
      "optional": true
     },
@@ -2187,6 +2184,9 @@ exports.packageExtensions = [
      "optional": true
     },
     "hookable": {
+     "optional": true
+    },
+    "nitropack": {
      "optional": true
     },
     "nuxt": {
@@ -8924,27 +8924,6 @@ exports.packageExtensions = [
   }
  ],
  [
-  "redoc@*",
-  {
-   "peerDependencies": {
-    "call-me-maybe": "*",
-    "fast-safe-stringify": "*",
-    "yaml": "*"
-   },
-   "peerDependenciesMeta": {
-    "call-me-maybe": {
-     "optional": true
-    },
-    "fast-safe-stringify": {
-     "optional": true
-    },
-    "yaml": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "rehype-harden@*",
   {
    "peerDependencies": {
@@ -9363,14 +9342,6 @@ exports.packageExtensions = [
     "hast": {
      "optional": true
     }
-   }
-  }
- ],
- [
-  "string.prototype.codepointat@*",
-  {
-   "dependencies": {
-    "define-properties": "*"
    }
   }
  ],
