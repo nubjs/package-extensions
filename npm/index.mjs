@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.27 — generated 2026-10-14, do not edit.
-// 770 packages, 1130 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.28 — generated 2026-10-15, do not edit.
+// 770 packages, 1129 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -691,19 +691,6 @@ export const packageExtensions = [
  ],
  [
   "@electric-sql/pglite@*",
-  {
-   "peerDependencies": {
-    "ws": "*"
-   },
-   "peerDependenciesMeta": {
-    "ws": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@electric-sql/pglite-tools@*",
   {
    "peerDependencies": {
     "ws": "*"
@@ -3470,13 +3457,9 @@ export const packageExtensions = [
   "@react-native/community-cli-plugin@*",
   {
    "peerDependencies": {
-    "@react-native-community/cli-server-api": "*",
     "react-native": "*"
    },
    "peerDependenciesMeta": {
-    "@react-native-community/cli-server-api": {
-     "optional": true
-    },
     "react-native": {
      "optional": true
     }
@@ -7582,6 +7565,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "form-data": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "markdownlint@*",
+  {
+   "peerDependencies": {
+    "markdown-it": "*"
+   },
+   "peerDependenciesMeta": {
+    "markdown-it": {
      "optional": true
     }
    }

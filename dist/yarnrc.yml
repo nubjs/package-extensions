@@ -1,5 +1,5 @@
-# Generated 2026-10-14 from the 10000 most-downloaded npm packages.
-# 770 packages, 1130 undeclared dependencies.
+# Generated 2026-10-15 from the 10000 most-downloaded npm packages.
+# 770 packages, 1129 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -342,12 +342,6 @@ packageExtensions:
     dependencies:
       "@edge-runtime/primitives": "*"
   "@electric-sql/pglite@*":
-    peerDependencies:
-      ws: "*"
-    peerDependenciesMeta:
-      ws:
-        optional: true
-  "@electric-sql/pglite-tools@*":
     peerDependencies:
       ws: "*"
     peerDependenciesMeta:
@@ -1811,11 +1805,8 @@ packageExtensions:
         optional: true
   "@react-native/community-cli-plugin@*":
     peerDependencies:
-      "@react-native-community/cli-server-api": "*"
       react-native: "*"
     peerDependenciesMeta:
-      "@react-native-community/cli-server-api":
-        optional: true
       react-native:
         optional: true
   "@react-native/debugger-frontend@*":
@@ -3943,6 +3934,12 @@ packageExtensions:
       form-data: "*"
     peerDependenciesMeta:
       form-data:
+        optional: true
+  markdownlint@*:
+    peerDependencies:
+      markdown-it: "*"
+    peerDependenciesMeta:
+      markdown-it:
         optional: true
   mdast-util-gfm-autolink-literal@*:
     peerDependencies:

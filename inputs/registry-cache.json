@@ -802,6 +802,7 @@
   "madge": true,
   "magic-string": true,
   "make-fetch-happen": true,
+  "markdown-it": true,
   "marko": true,
   "math-intrinsics": true,
   "mdast": true,

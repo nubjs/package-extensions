@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T12:12:12.578Z",
+  "generatedAt": "2026-10-15T11:48:47.933Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-10-06",
   "end": "2026-10-12",
@@ -60,7 +60,6 @@
     "@edge-runtime/node-utils": 4806281,
     "@edge-runtime/ponyfill": 4789134,
     "@electric-sql/pglite": 24387108,
-    "@electric-sql/pglite-tools": 10620372,
     "@electron-forge/core": 1186794,
     "@electron/asar": 7534542,
     "@emnapi/core": 75527013,
@@ -563,6 +562,7 @@
     "lovable-tagger": 4407614,
     "magic-regexp": 2401166,
     "mailgun.js": 1056136,
+    "markdownlint": 3197147,
     "material-table": 37936,
     "mdast-util-gfm-autolink-literal": 47109688,
     "media-chrome": 4220960,
