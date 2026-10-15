@@ -1,3 +1,94 @@
 {
-  "entries": []
+  "entries": [
+    [
+      "@backstage/cli-module-test-jest@*",
+      {
+        "dependencies": {
+          "jest-cli": "^30.0.0",
+          "jest-environment-node": "^30.0.0",
+          "jest-runtime": "^30.0.0"
+        }
+      }
+    ],
+    [
+      "@backstage/core-compat-api@*",
+      {
+        "dependencies": {
+          "prop-types": "^15.7.2"
+        }
+      }
+    ],
+    [
+      "@backstage/frontend-test-utils@*",
+      {
+        "dependencies": {
+          "lodash": "^4.17.21",
+          "prop-types": "^15.7.2"
+        }
+      }
+    ],
+    [
+      "@backstage/plugin-app@*",
+      {
+        "dependencies": {
+          "@backstage/config": "^1.0.0",
+          "@backstage/core-app-api": "^1.0.0",
+          "i18next": "^22.4.15",
+          "lodash": "^4.17.21",
+          "prop-types": "^15.7.2",
+          "use-sync-external-store": "^1.4.0"
+        }
+      }
+    ],
+    [
+      "@dweber019/backstage-plugin-tips@*",
+      {
+        "peerDependencies": {
+          "@backstage/frontend-plugin-api": "*"
+        },
+        "peerDependenciesMeta": {
+          "@backstage/frontend-plugin-api": {
+            "optional": true
+          }
+        }
+      }
+    ],
+    [
+      "@swaggerexpert/json-pointer@^2.0.0",
+      {
+        "peerDependencies": {
+          "@swagger-api/apidom-core": "*"
+        },
+        "peerDependenciesMeta": {
+          "@swagger-api/apidom-core": {
+            "optional": true
+          }
+        }
+      }
+    ],
+    [
+      "react-relative-time@*",
+      {
+        "dependencies": {
+          "prop-types": "^15.5.0"
+        }
+      }
+    ],
+    [
+      "swagger-ui-react@*",
+      {
+        "dependencies": {
+          "to-buffer": "^1.2.0"
+        }
+      }
+    ],
+    [
+      "swagger-ui@*",
+      {
+        "dependencies": {
+          "to-buffer": "^1.2.0"
+        }
+      }
+    ]
+  ]
 }
