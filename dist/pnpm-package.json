@@ -629,6 +629,24 @@
           }
         }
       },
+      "@expo/cli@*": {
+        "peerDependencies": {
+          "@expo/fingerprint": "*",
+          "expo-atlas": "*",
+          "expo-constants": "*"
+        },
+        "peerDependenciesMeta": {
+          "@expo/fingerprint": {
+            "optional": true
+          },
+          "expo-atlas": {
+            "optional": true
+          },
+          "expo-constants": {
+            "optional": true
+          }
+        }
+      },
       "@expo/dom-webview@*": {
         "peerDependencies": {
           "expo-modules-core": "*"
@@ -655,9 +673,13 @@
       },
       "@expo/log-box@*": {
         "peerDependencies": {
+          "expo-modules-core": "*",
           "react-dom": "*"
         },
         "peerDependenciesMeta": {
+          "expo-modules-core": {
+            "optional": true
+          },
           "react-dom": {
             "optional": true
           }
@@ -665,10 +687,14 @@
       },
       "@expo/metro-config@*": {
         "peerDependencies": {
-          "babel-preset-expo": "*"
+          "babel-preset-expo": "*",
+          "expo-widgets": "*"
         },
         "peerDependenciesMeta": {
           "babel-preset-expo": {
+            "optional": true
+          },
+          "expo-widgets": {
             "optional": true
           }
         }
@@ -2447,16 +2473,6 @@
             "optional": true
           },
           "aws-sdk": {
-            "optional": true
-          }
-        }
-      },
-      "@opentelemetry/instrumentation-winston@*": {
-        "peerDependencies": {
-          "@opentelemetry/winston-transport": "*"
-        },
-        "peerDependenciesMeta": {
-          "@opentelemetry/winston-transport": {
             "optional": true
           }
         }
@@ -5196,41 +5212,17 @@
           }
         }
       },
-      "expo-application@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
       "expo-asset@*": {
         "peerDependencies": {
-          "@react-native/assets-registry": "*",
           "expo-modules-core": "*"
         },
         "peerDependenciesMeta": {
-          "@react-native/assets-registry": {
-            "optional": true
-          },
           "expo-modules-core": {
             "optional": true
           }
         }
       },
       "expo-auth-session@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-blur@*": {
         "peerDependencies": {
           "expo-modules-core": "*"
         },
@@ -5262,56 +5254,15 @@
       },
       "expo-constants@*": {
         "peerDependencies": {
-          "expo-manifests": "*",
-          "expo-modules-core": "*"
+          "expo-manifests": "*"
         },
         "peerDependenciesMeta": {
           "expo-manifests": {
             "optional": true
-          },
-          "expo-modules-core": {
-            "optional": true
           }
-        }
-      },
-      "expo-crypto@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
         },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-dev-menu@*": {
-        "peerDependencies": {
+        "dependencies": {
           "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-device@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-document-picker@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
         }
       },
       "expo-eas-client@*": {
@@ -5348,27 +5299,13 @@
           }
         }
       },
-      "expo-haptics@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
       "expo-image@*": {
         "peerDependencies": {
           "expo-app-metrics": "*",
-          "expo-modules-core": "*",
           "expo-observe": "*"
         },
         "peerDependenciesMeta": {
           "expo-app-metrics": {
-            "optional": true
-          },
-          "expo-modules-core": {
             "optional": true
           },
           "expo-observe": {
@@ -5377,16 +5314,6 @@
         }
       },
       "expo-image-manipulator@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-image-picker@*": {
         "peerDependencies": {
           "expo-modules-core": "*"
         },
@@ -5407,23 +5334,8 @@
         }
       },
       "expo-linking@*": {
-        "peerDependencies": {
+        "dependencies": {
           "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-localization@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
         }
       },
       "expo-location@*": {
@@ -5432,6 +5344,16 @@
         },
         "peerDependenciesMeta": {
           "expo-modules-core": {
+            "optional": true
+          }
+        }
+      },
+      "expo-modules-autolinking@*": {
+        "peerDependencies": {
+          "expo-modules-macros": "*"
+        },
+        "peerDependenciesMeta": {
+          "expo-modules-macros": {
             "optional": true
           }
         }
@@ -5448,49 +5370,15 @@
       },
       "expo-router@*": {
         "peerDependencies": {
-          "expo-modules-core": "*",
           "react-native-tab-view": "*"
         },
         "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          },
           "react-native-tab-view": {
             "optional": true
           }
         }
       },
-      "expo-secure-store@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-sharing@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
       "expo-splash-screen@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-system-ui@*": {
         "peerDependencies": {
           "expo-modules-core": "*"
         },
@@ -5511,16 +5399,6 @@
         }
       },
       "expo-video@*": {
-        "peerDependencies": {
-          "expo-modules-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "expo-modules-core": {
-            "optional": true
-          }
-        }
-      },
-      "expo-web-browser@*": {
         "peerDependencies": {
           "expo-modules-core": "*"
         },
@@ -5864,14 +5742,10 @@
       },
       "jest-expo@*": {
         "peerDependencies": {
-          "babel-preset-expo": "*",
-          "jest": "*"
+          "babel-preset-expo": "*"
         },
         "peerDependenciesMeta": {
           "babel-preset-expo": {
-            "optional": true
-          },
-          "jest": {
             "optional": true
           }
         }

@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.28 — generated 2026-10-15, do not edit.
-// 770 packages, 1129 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.29 — generated 2026-10-16, do not edit.
+// 758 packages, 1117 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -807,6 +807,27 @@ export const packageExtensions = [
   }
  ],
  [
+  "@expo/cli@*",
+  {
+   "peerDependencies": {
+    "@expo/fingerprint": "*",
+    "expo-atlas": "*",
+    "expo-constants": "*"
+   },
+   "peerDependenciesMeta": {
+    "@expo/fingerprint": {
+     "optional": true
+    },
+    "expo-atlas": {
+     "optional": true
+    },
+    "expo-constants": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@expo/dom-webview@*",
   {
    "peerDependencies": {
@@ -840,9 +861,13 @@ export const packageExtensions = [
   "@expo/log-box@*",
   {
    "peerDependencies": {
+    "expo-modules-core": "*",
     "react-dom": "*"
    },
    "peerDependenciesMeta": {
+    "expo-modules-core": {
+     "optional": true
+    },
     "react-dom": {
      "optional": true
     }
@@ -853,10 +878,14 @@ export const packageExtensions = [
   "@expo/metro-config@*",
   {
    "peerDependencies": {
-    "babel-preset-expo": "*"
+    "babel-preset-expo": "*",
+    "expo-widgets": "*"
    },
    "peerDependenciesMeta": {
     "babel-preset-expo": {
+     "optional": true
+    },
+    "expo-widgets": {
      "optional": true
     }
    }
@@ -3004,19 +3033,6 @@ export const packageExtensions = [
      "optional": true
     },
     "aws-sdk": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@opentelemetry/instrumentation-winston@*",
-  {
-   "peerDependencies": {
-    "@opentelemetry/winston-transport": "*"
-   },
-   "peerDependenciesMeta": {
-    "@opentelemetry/winston-transport": {
      "optional": true
     }
    }
@@ -6355,29 +6371,12 @@ export const packageExtensions = [
   }
  ],
  [
-  "expo-application@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "expo-asset@*",
   {
    "peerDependencies": {
-    "@react-native/assets-registry": "*",
     "expo-modules-core": "*"
    },
    "peerDependenciesMeta": {
-    "@react-native/assets-registry": {
-     "optional": true
-    },
     "expo-modules-core": {
      "optional": true
     }
@@ -6386,19 +6385,6 @@ export const packageExtensions = [
  ],
  [
   "expo-auth-session@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-blur@*",
   {
    "peerDependencies": {
     "expo-modules-core": "*"
@@ -6440,68 +6426,15 @@ export const packageExtensions = [
   "expo-constants@*",
   {
    "peerDependencies": {
-    "expo-manifests": "*",
-    "expo-modules-core": "*"
+    "expo-manifests": "*"
    },
    "peerDependenciesMeta": {
     "expo-manifests": {
      "optional": true
-    },
-    "expo-modules-core": {
-     "optional": true
     }
-   }
-  }
- ],
- [
-  "expo-crypto@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
    },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-dev-menu@*",
-  {
-   "peerDependencies": {
+   "dependencies": {
     "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-device@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-document-picker@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
    }
   }
  ],
@@ -6549,31 +6482,14 @@ export const packageExtensions = [
   }
  ],
  [
-  "expo-haptics@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "expo-image@*",
   {
    "peerDependencies": {
     "expo-app-metrics": "*",
-    "expo-modules-core": "*",
     "expo-observe": "*"
    },
    "peerDependenciesMeta": {
     "expo-app-metrics": {
-     "optional": true
-    },
-    "expo-modules-core": {
      "optional": true
     },
     "expo-observe": {
@@ -6584,19 +6500,6 @@ export const packageExtensions = [
  ],
  [
   "expo-image-manipulator@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-image-picker@*",
   {
    "peerDependencies": {
     "expo-modules-core": "*"
@@ -6624,26 +6527,8 @@ export const packageExtensions = [
  [
   "expo-linking@*",
   {
-   "peerDependencies": {
+   "dependencies": {
     "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-localization@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
    }
   }
  ],
@@ -6655,6 +6540,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "expo-modules-core": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "expo-modules-autolinking@*",
+  {
+   "peerDependencies": {
+    "expo-modules-macros": "*"
+   },
+   "peerDependenciesMeta": {
+    "expo-modules-macros": {
      "optional": true
     }
    }
@@ -6677,13 +6575,9 @@ export const packageExtensions = [
   "expo-router@*",
   {
    "peerDependencies": {
-    "expo-modules-core": "*",
     "react-native-tab-view": "*"
    },
    "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    },
     "react-native-tab-view": {
      "optional": true
     }
@@ -6691,46 +6585,7 @@ export const packageExtensions = [
   }
  ],
  [
-  "expo-secure-store@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-sharing@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "expo-splash-screen@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-system-ui@*",
   {
    "peerDependencies": {
     "expo-modules-core": "*"
@@ -6757,19 +6612,6 @@ export const packageExtensions = [
  ],
  [
   "expo-video@*",
-  {
-   "peerDependencies": {
-    "expo-modules-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "expo-modules-core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "expo-web-browser@*",
   {
    "peerDependencies": {
     "expo-modules-core": "*"
@@ -7201,14 +7043,10 @@ export const packageExtensions = [
   "jest-expo@*",
   {
    "peerDependencies": {
-    "babel-preset-expo": "*",
-    "jest": "*"
+    "babel-preset-expo": "*"
    },
    "peerDependenciesMeta": {
     "babel-preset-expo": {
-     "optional": true
-    },
-    "jest": {
      "optional": true
     }
    }

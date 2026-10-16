@@ -279,5 +279,17 @@
       "field": "dependency",
       "why": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-transform/binding-wasm32-wasip1\""
     }
+  },
+  "expo-constants": {
+    "expo-modules-core": {
+      "field": "dependency",
+      "why": "probe 58.0.12: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access expo-modules-core\""
+    }
+  },
+  "expo-linking": {
+    "expo-modules-core": {
+      "field": "dependency",
+      "why": "probe 58.0.13: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access expo-modules-core\""
+    }
   }
 }
