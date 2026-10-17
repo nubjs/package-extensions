@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.29 — generated 2026-10-16, do not edit.
-// 758 packages, 1117 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.30 — generated 2026-10-17, do not edit.
+// 759 packages, 1116 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -2393,17 +2393,13 @@ exports.packageExtensions = [
   {
    "peerDependencies": {
     "@babel/core": "*",
-    "@nuxt/schema": "*",
-    "unplugin": "*"
+    "@nuxt/schema": "*"
    },
    "peerDependenciesMeta": {
     "@babel/core": {
      "optional": true
     },
     "@nuxt/schema": {
-     "optional": true
-    },
-    "unplugin": {
      "optional": true
     }
    }
@@ -3035,6 +3031,19 @@ exports.packageExtensions = [
      "optional": true
     },
     "aws-sdk": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@opentelemetry/instrumentation-winston@*",
+  {
+   "peerDependencies": {
+    "@opentelemetry/winston-transport": "*"
+   },
+   "peerDependenciesMeta": {
+    "@opentelemetry/winston-transport": {
      "optional": true
     }
    }
@@ -9196,14 +9205,10 @@ exports.packageExtensions = [
   "svelte-check@*",
   {
    "peerDependencies": {
-    "picomatch": "*",
-    "prettier-plugin-svelte": "*"
+    "picomatch": "*"
    },
    "peerDependenciesMeta": {
     "picomatch": {
-     "optional": true
-    },
-    "prettier-plugin-svelte": {
      "optional": true
     }
    }

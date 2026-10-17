@@ -1915,17 +1915,13 @@
       "@nuxt/vite-builder@*": {
         "peerDependencies": {
           "@babel/core": "*",
-          "@nuxt/schema": "*",
-          "unplugin": "*"
+          "@nuxt/schema": "*"
         },
         "peerDependenciesMeta": {
           "@babel/core": {
             "optional": true
           },
           "@nuxt/schema": {
-            "optional": true
-          },
-          "unplugin": {
             "optional": true
           }
         }
@@ -2473,6 +2469,16 @@
             "optional": true
           },
           "aws-sdk": {
+            "optional": true
+          }
+        }
+      },
+      "@opentelemetry/instrumentation-winston@*": {
+        "peerDependencies": {
+          "@opentelemetry/winston-transport": "*"
+        },
+        "peerDependenciesMeta": {
+          "@opentelemetry/winston-transport": {
             "optional": true
           }
         }
@@ -7473,14 +7479,10 @@
       },
       "svelte-check@*": {
         "peerDependencies": {
-          "picomatch": "*",
-          "prettier-plugin-svelte": "*"
+          "picomatch": "*"
         },
         "peerDependenciesMeta": {
           "picomatch": {
-            "optional": true
-          },
-          "prettier-plugin-svelte": {
             "optional": true
           }
         }

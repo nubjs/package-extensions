@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16",
+  "generated": "2026-10-17",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1117,
-      "packages": 627
+      "entries": 1116,
+      "packages": 628
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,11 +28,11 @@
     }
   },
   "totals": {
-    "packages": 758,
-    "selectors": 778,
-    "entries": 1117,
+    "packages": 759,
+    "selectors": 779,
+    "entries": 1116,
     "byClass": {
-      "runtime": 180,
+      "runtime": 179,
       "adapter": 128,
       "types": 509,
       "deep-path": 0,
@@ -40,9 +40,9 @@
     },
     "byField": {
       "dependency": 32,
-      "peer": 1085
+      "peer": 1084
     },
-    "candidatesForReview": 76,
+    "candidatesForReview": 75,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 0,
     "droppedUnresolvedTargets": 0,
@@ -4793,17 +4793,13 @@
     "@nuxt/vite-builder@*": {
       "peerDependencies": {
         "@babel/core": "*",
-        "@nuxt/schema": "*",
-        "unplugin": "*"
+        "@nuxt/schema": "*"
       },
       "peerDependenciesMeta": {
         "@babel/core": {
           "optional": true
         },
         "@nuxt/schema": {
-          "optional": true
-        },
-        "unplugin": {
           "optional": true
         }
       }
@@ -5351,6 +5347,16 @@
           "optional": true
         },
         "aws-sdk": {
+          "optional": true
+        }
+      }
+    },
+    "@opentelemetry/instrumentation-winston@*": {
+      "peerDependencies": {
+        "@opentelemetry/winston-transport": "*"
+      },
+      "peerDependenciesMeta": {
+        "@opentelemetry/winston-transport": {
           "optional": true
         }
       }
@@ -10351,14 +10357,10 @@
     },
     "svelte-check@*": {
       "peerDependencies": {
-        "picomatch": "*",
-        "prettier-plugin-svelte": "*"
+        "picomatch": "*"
       },
       "peerDependenciesMeta": {
         "picomatch": {
-          "optional": true
-        },
-        "prettier-plugin-svelte": {
           "optional": true
         }
       }
@@ -12605,7 +12607,7 @@
     },
     {
       "package": "@apollo/client",
-      "measuredVersion": "4.3.3",
+      "measuredVersion": "4.3.4",
       "targets": [
         {
           "target": "relay-runtime",
@@ -13633,7 +13635,7 @@
     },
     {
       "package": "@expo/cli",
-      "measuredVersion": "58.1.10",
+      "measuredVersion": "58.1.11",
       "targets": [
         {
           "target": "@expo/fingerprint",
@@ -16365,7 +16367,7 @@
     },
     {
       "package": "@nuxt/nitro-server",
-      "measuredVersion": "4.6.1",
+      "measuredVersion": "4.6.2",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16385,7 +16387,7 @@
     },
     {
       "package": "@nuxt/schema",
-      "measuredVersion": "4.6.1",
+      "measuredVersion": "4.6.2",
       "targets": [
         {
           "target": "@unhead/vue",
@@ -16398,7 +16400,7 @@
             "@unhead/vue/vite"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16412,7 +16414,7 @@
             "@vitejs/plugin-vue"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16426,7 +16428,7 @@
             "@vitejs/plugin-vue-jsx"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16440,7 +16442,7 @@
             "@vue/compiler-core"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16454,7 +16456,7 @@
             "@vue/compiler-sfc"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16468,7 +16470,7 @@
             "@vue/language-core"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16482,7 +16484,7 @@
             "autoprefixer"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16496,7 +16498,7 @@
             "chokidar"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16510,7 +16512,7 @@
             "compatx"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16524,7 +16526,7 @@
             "css-minimizer-webpack-plugin"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16538,7 +16540,7 @@
             "cssnano"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16552,7 +16554,7 @@
             "esbuild"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16566,7 +16568,7 @@
             "esbuild-loader"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16580,7 +16582,7 @@
             "h3"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16594,7 +16596,7 @@
             "mini-css-extract-plugin"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16608,7 +16610,7 @@
             "oxc-transform"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16622,7 +16624,7 @@
             "postcss"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16636,7 +16638,7 @@
             "pug"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16650,7 +16652,7 @@
             "rollup-plugin-visualizer"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16664,7 +16666,7 @@
             "unctx/transform"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16678,7 +16680,7 @@
             "unimport"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16692,7 +16694,7 @@
             "untyped"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts",
+            "dist/compatibility-DIbKObPB.d.mts",
             "dist/index.d.mts"
           ],
           "fileCount": 2
@@ -16707,7 +16709,7 @@
             "vite"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16721,7 +16723,7 @@
             "vue"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16735,7 +16737,7 @@
             "vue-loader"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16749,7 +16751,7 @@
             "vue-router"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16763,7 +16765,7 @@
             "webpack"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16777,7 +16779,7 @@
             "webpack-bundle-analyzer"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16791,7 +16793,7 @@
             "webpack-dev-middleware"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16805,7 +16807,7 @@
             "webpack-hot-middleware"
           ],
           "files": [
-            "dist/compatibility-rjF4KmoY.d.mts"
+            "dist/compatibility-DIbKObPB.d.mts"
           ],
           "fileCount": 1
         }
@@ -16847,7 +16849,7 @@
     },
     {
       "package": "@nuxt/vite-builder",
-      "measuredVersion": "4.6.1",
+      "measuredVersion": "4.6.2",
       "targets": [
         {
           "target": "@babel/core",
@@ -16874,20 +16876,6 @@
           ],
           "files": [
             "dist/index.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "unplugin",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "unplugin"
-          ],
-          "files": [
-            "dist/index.mjs"
           ],
           "fileCount": 1
         }
@@ -18498,6 +18486,26 @@
       ]
     },
     {
+      "package": "@opentelemetry/instrumentation-winston",
+      "measuredVersion": "0.68.1",
+      "targets": [
+        {
+          "target": "@opentelemetry/winston-transport",
+          "class": "guarded",
+          "field": "peer",
+          "candidate": false,
+          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "specifiers": [
+            "@opentelemetry/winston-transport"
+          ],
+          "files": [
+            "build/src/instrumentation.js"
+          ],
+          "fileCount": 1
+        }
+      ]
+    },
+    {
       "package": "@parcel/cache",
       "measuredVersion": "2.16.4",
       "targets": [
@@ -18931,7 +18939,7 @@
     },
     {
       "package": "@pulumi/pulumi",
-      "measuredVersion": "3.268.0",
+      "measuredVersion": "3.270.0",
       "targets": [
         {
           "target": "@microsoft/typescript-etw",
@@ -20061,7 +20069,7 @@
     },
     {
       "package": "@scalar/openapi-upgrader",
-      "measuredVersion": "0.4.4",
+      "measuredVersion": "0.4.5",
       "targets": [
         {
           "target": "@scalar/types",
@@ -20084,7 +20092,7 @@
     },
     {
       "package": "@scalar/types",
-      "measuredVersion": "0.23.2",
+      "measuredVersion": "0.24.0",
       "targets": [
         {
           "target": "har-format",
@@ -21428,7 +21436,7 @@
     },
     {
       "package": "@tanstack/react-start-rsc",
-      "measuredVersion": "0.1.63",
+      "measuredVersion": "0.1.64",
       "targets": [
         {
           "target": "vite",
@@ -21469,7 +21477,7 @@
     },
     {
       "package": "@tanstack/router-plugin",
-      "measuredVersion": "1.168.46",
+      "measuredVersion": "1.168.47",
       "targets": [
         {
           "target": "@tanstack/virtual-file-routes",
@@ -21719,7 +21727,7 @@
     },
     {
       "package": "@turbo/gen",
-      "measuredVersion": "2.11.8",
+      "measuredVersion": "2.11.9",
       "targets": [
         {
           "target": "kerberos",
@@ -22185,7 +22193,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "22.0.2",
+      "measuredVersion": "22.0.3",
       "targets": [
         {
           "target": "encoding",
@@ -22262,7 +22270,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "21.0.2",
+      "measuredVersion": "21.0.3",
       "targets": [
         {
           "target": "encoding",
@@ -24278,7 +24286,7 @@
     },
     {
       "package": "babel-preset-expo",
-      "measuredVersion": "58.0.16",
+      "measuredVersion": "58.0.17",
       "targets": [
         {
           "target": "@babel/core",
@@ -24399,7 +24407,7 @@
     },
     {
       "package": "bullmq",
-      "measuredVersion": "6.3.15",
+      "measuredVersion": "6.3.16",
       "targets": [
         {
           "target": "@valkey/valkey-glide",
@@ -25499,7 +25507,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.3.6",
+      "measuredVersion": "65.3.8",
       "targets": [
         {
           "target": "@eslint/core",
@@ -25820,7 +25828,7 @@
     },
     {
       "package": "expo-auth-session",
-      "measuredVersion": "58.0.12",
+      "measuredVersion": "58.0.13",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26125,7 +26133,7 @@
     },
     {
       "package": "expo-location",
-      "measuredVersion": "58.0.16",
+      "measuredVersion": "58.0.17",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26168,7 +26176,7 @@
     },
     {
       "package": "expo-notifications",
-      "measuredVersion": "58.1.4",
+      "measuredVersion": "58.1.5",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26191,7 +26199,7 @@
     },
     {
       "package": "expo-router",
-      "measuredVersion": "58.0.21",
+      "measuredVersion": "58.0.23",
       "targets": [
         {
           "target": "react-native-tab-view",
@@ -26212,7 +26220,7 @@
     },
     {
       "package": "expo-splash-screen",
-      "measuredVersion": "58.0.9",
+      "measuredVersion": "58.0.10",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -29582,7 +29590,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.56.1",
+      "measuredVersion": "5.56.2",
       "targets": [
         {
           "target": "express",
@@ -30064,7 +30072,7 @@
     },
     {
       "package": "react-i18next",
-      "measuredVersion": "17.0.19",
+      "measuredVersion": "17.0.20",
       "targets": [
         {
           "target": "babel-plugin-macros",
@@ -30150,7 +30158,7 @@
     },
     {
       "package": "react-native-gesture-handler",
-      "measuredVersion": "3.3.0",
+      "measuredVersion": "3.4.0",
       "targets": [
         {
           "target": "react-native-reanimated",
@@ -30160,6 +30168,7 @@
           "reason": "unguarded on the main entry graph — a dependency once reviewed",
           "specifiers": [
             "react-native-reanimated",
+            "react-native-reanimated/src/createAnimatedComponent/AnimatedComponent",
             "react-native-reanimated/src/createAnimatedComponent/NativeEventsManager"
           ],
           "files": [
@@ -30197,7 +30206,7 @@
     },
     {
       "package": "react-native-permissions",
-      "measuredVersion": "5.6.2",
+      "measuredVersion": "5.6.3",
       "targets": [
         {
           "target": "@expo/config-plugins",
@@ -30752,7 +30761,7 @@
     },
     {
       "package": "resend",
-      "measuredVersion": "6.33.0",
+      "measuredVersion": "6.34.1",
       "targets": [
         {
           "target": "react",
@@ -31338,7 +31347,7 @@
     },
     {
       "package": "svelte-check",
-      "measuredVersion": "4.7.6",
+      "measuredVersion": "4.7.7",
       "targets": [
         {
           "target": "picomatch",
@@ -31348,20 +31357,6 @@
           "reason": "guarded class — the package handles absence, so nothing may be installed for it",
           "specifiers": [
             "picomatch"
-          ],
-          "files": [
-            "dist/src/index.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "prettier-plugin-svelte",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "prettier-plugin-svelte"
           ],
           "files": [
             "dist/src/index.js"
@@ -32056,7 +32051,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "64.3.1",
+      "measuredVersion": "64.5.0",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -32933,14 +32928,6 @@
       ]
     },
     {
-      "package": "@nuxt/vite-builder",
-      "measuredVersion": "4.6.1",
-      "target": "unplugin",
-      "specifiers": [
-        "unplugin"
-      ]
-    },
-    {
       "package": "@nx/devkit",
       "measuredVersion": "23.3.0",
       "target": "@angular-devkit/architect",
@@ -33161,7 +33148,7 @@
     },
     {
       "package": "expo-auth-session",
-      "measuredVersion": "58.0.12",
+      "measuredVersion": "58.0.13",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -33392,16 +33379,17 @@
     },
     {
       "package": "react-native-gesture-handler",
-      "measuredVersion": "3.3.0",
+      "measuredVersion": "3.4.0",
       "target": "react-native-reanimated",
       "specifiers": [
         "react-native-reanimated",
+        "react-native-reanimated/src/createAnimatedComponent/AnimatedComponent",
         "react-native-reanimated/src/createAnimatedComponent/NativeEventsManager"
       ]
     },
     {
       "package": "react-native-gesture-handler",
-      "measuredVersion": "3.3.0",
+      "measuredVersion": "3.4.0",
       "target": "react-native-worklets",
       "specifiers": [
         "react-native-worklets"
@@ -33459,7 +33447,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "64.3.1",
+      "measuredVersion": "64.5.0",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -33467,7 +33455,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "64.3.1",
+      "measuredVersion": "64.5.0",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -33475,7 +33463,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "64.3.1",
+      "measuredVersion": "64.5.0",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -33483,7 +33471,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "64.3.1",
+      "measuredVersion": "64.5.0",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"

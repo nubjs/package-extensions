@@ -1,5 +1,5 @@
-# Generated 2026-10-16 from the 10000 most-downloaded npm packages.
-# 758 packages, 1117 undeclared dependencies.
+# Generated 2026-10-17 from the 10000 most-downloaded npm packages.
+# 759 packages, 1116 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -1212,13 +1212,10 @@ packageExtensions:
     peerDependencies:
       "@babel/core": "*"
       "@nuxt/schema": "*"
-      unplugin: "*"
     peerDependenciesMeta:
       "@babel/core":
         optional: true
       "@nuxt/schema":
-        optional: true
-      unplugin:
         optional: true
   "@nx/angular@*":
     peerDependencies:
@@ -1588,6 +1585,12 @@ packageExtensions:
       "@aws-sdk/credential-provider-node":
         optional: true
       aws-sdk:
+        optional: true
+  "@opentelemetry/instrumentation-winston@*":
+    peerDependencies:
+      "@opentelemetry/winston-transport": "*"
+    peerDependenciesMeta:
+      "@opentelemetry/winston-transport":
         optional: true
   "@parcel/cache@*":
     peerDependencies:
@@ -4764,11 +4767,8 @@ packageExtensions:
   svelte-check@*:
     peerDependencies:
       picomatch: "*"
-      prettier-plugin-svelte: "*"
     peerDependenciesMeta:
       picomatch:
-        optional: true
-      prettier-plugin-svelte:
         optional: true
   svelte-eslint-parser@*:
     peerDependencies:
