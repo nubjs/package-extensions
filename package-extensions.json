@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17",
+  "generated": "2026-10-18",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1116,
-      "packages": 628
+      "entries": 1114,
+      "packages": 627
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 759,
-    "selectors": 779,
-    "entries": 1116,
+    "packages": 758,
+    "selectors": 778,
+    "entries": 1114,
     "byClass": {
       "runtime": 179,
       "adapter": 128,
       "types": 509,
       "deep-path": 0,
-      "guarded": 300
+      "guarded": 298
     },
     "byField": {
       "dependency": 32,
-      "peer": 1084
+      "peer": 1082
     },
     "candidatesForReview": 75,
     "droppedUnpublishedTargets": 202,
@@ -9128,20 +9128,6 @@
         }
       }
     },
-    "monocart-coverage-reports@*": {
-      "peerDependencies": {
-        "bufferutil": "*",
-        "utf-8-validate": "*"
-      },
-      "peerDependenciesMeta": {
-        "bufferutil": {
-          "optional": true
-        },
-        "utf-8-validate": {
-          "optional": true
-        }
-      }
-    },
     "motion@*": {
       "peerDependencies": {
         "motion-dom": "*"
@@ -13573,7 +13559,7 @@
     },
     {
       "package": "@eslint-react/shared",
-      "measuredVersion": "5.28.0",
+      "measuredVersion": "5.28.1",
       "targets": [
         {
           "target": "react",
@@ -15355,7 +15341,7 @@
     },
     {
       "package": "@mantine/hooks",
-      "measuredVersion": "9.7.2",
+      "measuredVersion": "9.7.3",
       "targets": [
         {
           "target": "react-dom",
@@ -24005,7 +23991,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "9.1.1",
+      "measuredVersion": "9.1.4",
       "targets": [
         {
           "target": "@appium/types",
@@ -25507,7 +25493,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.3.8",
+      "measuredVersion": "65.3.11",
       "targets": [
         {
           "target": "@eslint/core",
@@ -26919,7 +26905,7 @@
     },
     {
       "package": "i18next-http-backend",
-      "measuredVersion": "4.0.3",
+      "measuredVersion": "4.0.4",
       "targets": [
         {
           "target": "i18next",
@@ -26963,7 +26949,7 @@
     },
     {
       "package": "jake",
-      "measuredVersion": "13.0.1",
+      "measuredVersion": "13.0.3",
       "targets": [
         {
           "target": "coffeescript",
@@ -28251,40 +28237,6 @@
           ],
           "files": [
             "lib/moment-duration-format.js"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
-      "package": "monocart-coverage-reports",
-      "measuredVersion": "2.13.2",
-      "targets": [
-        {
-          "target": "bufferutil",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "bufferutil"
-          ],
-          "files": [
-            "lib/packages/monocart-coverage-vendor.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "utf-8-validate",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "utf-8-validate"
-          ],
-          "files": [
-            "lib/packages/monocart-coverage-vendor.js"
           ],
           "fileCount": 1
         }
@@ -30072,7 +30024,7 @@
     },
     {
       "package": "react-i18next",
-      "measuredVersion": "17.0.20",
+      "measuredVersion": "17.1.0",
       "targets": [
         {
           "target": "babel-plugin-macros",
@@ -32616,7 +32568,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261016.1",
+      "measuredVersion": "1.20261018.1",
       "targets": [
         {
           "target": "pnpapi",

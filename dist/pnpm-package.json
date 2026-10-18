@@ -6250,20 +6250,6 @@
           }
         }
       },
-      "monocart-coverage-reports@*": {
-        "peerDependencies": {
-          "bufferutil": "*",
-          "utf-8-validate": "*"
-        },
-        "peerDependenciesMeta": {
-          "bufferutil": {
-            "optional": true
-          },
-          "utf-8-validate": {
-            "optional": true
-          }
-        }
-      },
       "motion@*": {
         "peerDependencies": {
           "motion-dom": "*"

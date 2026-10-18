@@ -1,5 +1,5 @@
-# Generated 2026-10-17 from the 10000 most-downloaded npm packages.
-# 759 packages, 1116 undeclared dependencies.
+# Generated 2026-10-18 from the 10000 most-downloaded npm packages.
+# 758 packages, 1114 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -3989,15 +3989,6 @@ packageExtensions:
       moment: "*"
     peerDependenciesMeta:
       moment:
-        optional: true
-  monocart-coverage-reports@*:
-    peerDependencies:
-      bufferutil: "*"
-      utf-8-validate: "*"
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
         optional: true
   motion@*:
     peerDependencies:

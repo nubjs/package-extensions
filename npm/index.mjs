@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.30 — generated 2026-10-17, do not edit.
-// 759 packages, 1116 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.31 — generated 2026-10-18, do not edit.
+// 758 packages, 1114 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -7673,23 +7673,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "moment": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "monocart-coverage-reports@*",
-  {
-   "peerDependencies": {
-    "bufferutil": "*",
-    "utf-8-validate": "*"
-   },
-   "peerDependenciesMeta": {
-    "bufferutil": {
-     "optional": true
-    },
-    "utf-8-validate": {
      "optional": true
     }
    }
