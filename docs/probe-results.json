@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-18",
-  "dataset": "d9a6f24ac2e88a45",
+  "generated": "2026-10-19",
+  "dataset": "1f2bbf42501718fe",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,8 +8,8 @@
   "tally": {
     "confirmed": 4,
     "confirmedViaPath": 6,
-    "notOnImport": 43,
-    "installFailed": 0,
+    "notOnImport": 41,
+    "installFailed": 3,
     "inconclusive": 3
   },
   "results": [
@@ -152,21 +152,22 @@
       "specifiersTried": 35
     },
     {
-      "package": "@nestjs/platform-fastify",
-      "version": "12.1.3",
+      "package": "@nestjs/platform-express",
+      "version": "12.2.0",
       "expected": [
         "rxjs"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "@nestjs/common"
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nestjs/\u001b[39m\u001b[38;5;173mplatform-express\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:12.2.0\u001b[39m: All versions satisfying \"12.2.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39"
+    },
+    {
+      "package": "@nestjs/platform-fastify",
+      "version": "12.2.0",
+      "expected": [
+        "rxjs"
       ],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nestjs/\u001b[39m\u001b[38;5;173mplatform-fastify\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:12.2.0\u001b[39m: All versions satisfying \"12.2.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39"
     },
     {
       "package": "@newrelic/security-agent",
@@ -521,20 +522,12 @@
     },
     {
       "package": "expo-asset",
-      "version": "58.0.16",
+      "version": "58.0.17",
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 8,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "expo"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 13
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-asset\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.17\u001b[39m: All versions satisfying \"58.0.17\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-as"
     },
     {
       "package": "expo-auth-session",
@@ -979,7 +972,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:6131) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-8jJWUp/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5902) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-5f1Jff/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",

@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.31 — generated 2026-10-18, do not edit.
-// 758 packages, 1114 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.32 — generated 2026-10-19, do not edit.
+// 759 packages, 1116 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -2012,6 +2012,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@standard-schema/spec": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@nestjs/platform-express@*",
+  {
+   "peerDependencies": {
+    "rxjs": "*"
+   },
+   "peerDependenciesMeta": {
+    "rxjs": {
      "optional": true
     }
    }
@@ -7855,7 +7868,8 @@ export const packageExtensions = [
    "peerDependencies": {
     "@cloudflare/workers-types": "*",
     "@scalar/api-reference": "*",
-    "firebase-functions": "*"
+    "firebase-functions": "*",
+    "rolldown": "*"
    },
    "peerDependenciesMeta": {
     "@cloudflare/workers-types": {
@@ -7865,6 +7879,9 @@ export const packageExtensions = [
      "optional": true
     },
     "firebase-functions": {
+     "optional": true
+    },
+    "rolldown": {
      "optional": true
     }
    }

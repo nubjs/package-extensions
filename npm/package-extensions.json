@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18",
+ "generated": "2026-10-19",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1114,
-   "packages": 627
+   "entries": 1116,
+   "packages": 628
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
   }
  },
  "totals": {
-  "packages": 758,
-  "selectors": 778,
-  "entries": 1114,
+  "packages": 759,
+  "selectors": 779,
+  "entries": 1116,
   "byClass": {
-   "runtime": 179,
+   "runtime": 180,
    "adapter": 128,
-   "types": 509,
+   "types": 510,
    "deep-path": 0,
    "guarded": 298
   },
   "byField": {
    "dependency": 32,
-   "peer": 1082
+   "peer": 1084
   },
-  "candidatesForReview": 75,
+  "candidatesForReview": 76,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
@@ -2565,6 +2565,7 @@
     "swagger-client/es/resolver/strategies/openapi-2",
     "swagger-client/es/resolver/strategies/openapi-3-0",
     "swagger-client/es/resolver/strategies/openapi-3-1-apidom",
+    "swagger-client/es/resolver/strategies/openapi-3-2-apidom",
     "swagger-client/es/resolver",
     "swagger-client/es/execute",
     "swagger-client/es/http",
@@ -4465,6 +4466,16 @@
    },
    "peerDependenciesMeta": {
     "@standard-schema/spec": {
+     "optional": true
+    }
+   }
+  },
+  "@nestjs/platform-express@*": {
+   "peerDependencies": {
+    "rxjs": "*"
+   },
+   "peerDependenciesMeta": {
+    "rxjs": {
      "optional": true
     }
    }
@@ -9276,7 +9287,8 @@
    "peerDependencies": {
     "@cloudflare/workers-types": "*",
     "@scalar/api-reference": "*",
-    "firebase-functions": "*"
+    "firebase-functions": "*",
+    "rolldown": "*"
    },
    "peerDependenciesMeta": {
     "@cloudflare/workers-types": {
@@ -9286,6 +9298,9 @@
      "optional": true
     },
     "firebase-functions": {
+     "optional": true
+    },
+    "rolldown": {
      "optional": true
     }
    }
@@ -13559,7 +13574,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.28.1",
+   "measuredVersion": "5.28.2",
    "targets": [
     {
      "target": "react",
@@ -13621,7 +13636,7 @@
   },
   {
    "package": "@expo/cli",
-   "measuredVersion": "58.1.11",
+   "measuredVersion": "58.1.12",
    "targets": [
     {
      "target": "@expo/fingerprint",
@@ -13760,7 +13775,7 @@
   },
   {
    "package": "@expo/metro-config",
-   "measuredVersion": "58.0.14",
+   "measuredVersion": "58.0.15",
    "targets": [
     {
      "target": "babel-preset-expo",
@@ -15560,7 +15575,7 @@
   },
   {
    "package": "@mendable/firecrawl-js",
-   "measuredVersion": "4.46.0",
+   "measuredVersion": "4.49.2",
    "targets": [
     {
      "target": "undici",
@@ -15850,7 +15865,7 @@
   },
   {
    "package": "@nestjs/core",
-   "measuredVersion": "12.1.3",
+   "measuredVersion": "12.2.0",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -15869,8 +15884,28 @@
    ]
   },
   {
+   "package": "@nestjs/platform-express",
+   "measuredVersion": "12.2.0",
+   "targets": [
+    {
+     "target": "rxjs",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "rxjs"
+     ],
+     "files": [
+      "multer/multer/multer.utils.js"
+     ],
+     "fileCount": 1
+    }
+   ]
+  },
+  {
    "package": "@nestjs/platform-fastify",
-   "measuredVersion": "12.1.3",
+   "measuredVersion": "12.2.0",
    "targets": [
     {
      "target": "rxjs",
@@ -16123,7 +16158,7 @@
   },
   {
    "package": "@nuxt/devtools",
-   "measuredVersion": "3.4.3",
+   "measuredVersion": "3.4.4",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16158,7 +16193,7 @@
   },
   {
    "package": "@nuxt/devtools-kit",
-   "measuredVersion": "3.4.3",
+   "measuredVersion": "3.4.4",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -19696,7 +19731,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.64.1",
+   "measuredVersion": "2.65.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -19931,7 +19966,7 @@
   },
   {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.2.13",
+   "measuredVersion": "2.2.14",
    "targets": [
     {
      "target": "tsx",
@@ -24140,7 +24175,7 @@
   },
   {
    "package": "auth0",
-   "measuredVersion": "7.5.0",
+   "measuredVersion": "7.6.0",
    "targets": [
     {
      "target": "undici-types",
@@ -24272,7 +24307,7 @@
   },
   {
    "package": "babel-preset-expo",
-   "measuredVersion": "58.0.17",
+   "measuredVersion": "58.0.18",
    "targets": [
     {
      "target": "@babel/core",
@@ -24393,7 +24428,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.16",
+   "measuredVersion": "6.3.17",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -25493,7 +25528,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.3.11",
+   "measuredVersion": "65.3.15",
    "targets": [
     {
      "target": "@eslint/core",
@@ -25787,7 +25822,7 @@
   },
   {
    "package": "expo-asset",
-   "measuredVersion": "58.0.16",
+   "measuredVersion": "58.0.17",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26013,7 +26048,7 @@
   },
   {
    "package": "expo-image",
-   "measuredVersion": "58.0.15",
+   "measuredVersion": "58.0.16",
    "targets": [
     {
      "target": "expo-app-metrics",
@@ -26185,7 +26220,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "58.0.23",
+   "measuredVersion": "58.0.24",
    "targets": [
     {
      "target": "react-native-tab-view",
@@ -27485,7 +27520,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.41.0",
+   "measuredVersion": "6.42.0",
    "targets": [
     {
      "target": "vue",
@@ -28244,7 +28279,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "14.3.0",
+   "measuredVersion": "14.4.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -28697,7 +28732,7 @@
   },
   {
    "package": "nitropack",
-   "measuredVersion": "2.13.4",
+   "measuredVersion": "2.13.5",
    "targets": [
     {
      "target": "@cloudflare/workers-types",
@@ -28724,7 +28759,7 @@
      ],
      "files": [
       "dist/kit/index.d.ts",
-      "dist/shared/nitro.D682J6aL.d.ts",
+      "dist/shared/nitro.TNvtAJEc.d.ts",
       "dist/types/index.d.ts"
      ],
      "fileCount": 3
@@ -28743,6 +28778,22 @@
       "dist/presets/firebase/types.d.ts"
      ],
      "fileCount": 1
+    },
+    {
+     "target": "rolldown",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "rolldown"
+     ],
+     "files": [
+      "dist/kit/index.d.ts",
+      "dist/shared/nitro.TNvtAJEc.d.ts",
+      "dist/types/index.d.ts"
+     ],
+     "fileCount": 3
     }
    ]
   },
@@ -30964,7 +31015,7 @@
   },
   {
    "package": "satori",
-   "measuredVersion": "0.62.0",
+   "measuredVersion": "0.63.0",
    "targets": [
     {
      "target": "react",
@@ -31259,7 +31310,7 @@
   },
   {
    "package": "streamdown",
-   "measuredVersion": "2.7.0",
+   "measuredVersion": "2.7.1",
    "targets": [
     {
      "target": "hast",
@@ -32486,7 +32537,7 @@
   },
   {
    "package": "webpack-dev-server",
-   "measuredVersion": "6.0.0",
+   "measuredVersion": "6.1.0",
    "targets": [
     {
      "target": "qs",
@@ -32568,7 +32619,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261018.1",
+   "measuredVersion": "1.20261019.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32588,7 +32639,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.151.1",
+   "measuredVersion": "4.151.2",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -32848,8 +32899,16 @@
    ]
   },
   {
+   "package": "@nestjs/platform-express",
+   "measuredVersion": "12.2.0",
+   "target": "rxjs",
+   "specifiers": [
+    "rxjs"
+   ]
+  },
+  {
    "package": "@nestjs/platform-fastify",
-   "measuredVersion": "12.1.3",
+   "measuredVersion": "12.2.0",
    "target": "rxjs",
    "specifiers": [
     "rxjs"
@@ -33092,7 +33151,7 @@
   },
   {
    "package": "expo-asset",
-   "measuredVersion": "58.0.16",
+   "measuredVersion": "58.0.17",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"

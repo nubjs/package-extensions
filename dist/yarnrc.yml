@@ -1,5 +1,5 @@
-# Generated 2026-10-18 from the 10000 most-downloaded npm packages.
-# 758 packages, 1114 undeclared dependencies.
+# Generated 2026-10-19 from the 10000 most-downloaded npm packages.
+# 759 packages, 1116 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -992,6 +992,12 @@ packageExtensions:
       "@standard-schema/spec": "*"
     peerDependenciesMeta:
       "@standard-schema/spec":
+        optional: true
+  "@nestjs/platform-express@*":
+    peerDependencies:
+      rxjs: "*"
+    peerDependenciesMeta:
+      rxjs:
         optional: true
   "@nestjs/platform-fastify@*":
     peerDependencies:
@@ -4094,12 +4100,15 @@ packageExtensions:
       "@cloudflare/workers-types": "*"
       "@scalar/api-reference": "*"
       firebase-functions: "*"
+      rolldown: "*"
     peerDependenciesMeta:
       "@cloudflare/workers-types":
         optional: true
       "@scalar/api-reference":
         optional: true
       firebase-functions:
+        optional: true
+      rolldown:
         optional: true
   node-fetch-commonjs@*:
     peerDependencies:

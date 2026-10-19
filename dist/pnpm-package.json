@@ -1591,6 +1591,16 @@
           }
         }
       },
+      "@nestjs/platform-express@*": {
+        "peerDependencies": {
+          "rxjs": "*"
+        },
+        "peerDependenciesMeta": {
+          "rxjs": {
+            "optional": true
+          }
+        }
+      },
       "@nestjs/platform-fastify@*": {
         "peerDependencies": {
           "rxjs": "*"
@@ -6398,7 +6408,8 @@
         "peerDependencies": {
           "@cloudflare/workers-types": "*",
           "@scalar/api-reference": "*",
-          "firebase-functions": "*"
+          "firebase-functions": "*",
+          "rolldown": "*"
         },
         "peerDependenciesMeta": {
           "@cloudflare/workers-types": {
@@ -6408,6 +6419,9 @@
             "optional": true
           },
           "firebase-functions": {
+            "optional": true
+          },
+          "rolldown": {
             "optional": true
           }
         }

@@ -957,8 +957,8 @@
           "webpack-cli"
         ],
         "metaOnly": true,
-        "version": "6.0.0",
-        "why": "latest 6.0.0 is outside <3.10.2"
+        "version": "6.1.0",
+        "why": "latest 6.1.0 is outside <3.10.2"
       },
       {
         "package": "terser",
