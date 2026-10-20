@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19",
+ "generated": "2026-10-20",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1116,
-   "packages": 628
+   "entries": 1115,
+   "packages": 627
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
   }
  },
  "totals": {
-  "packages": 759,
-  "selectors": 779,
-  "entries": 1116,
+  "packages": 758,
+  "selectors": 778,
+  "entries": 1115,
   "byClass": {
    "runtime": 180,
    "adapter": 128,
    "types": 510,
    "deep-path": 0,
-   "guarded": 298
+   "guarded": 297
   },
   "byField": {
    "dependency": 32,
-   "peer": 1084
+   "peer": 1083
   },
   "candidatesForReview": 76,
   "droppedUnpublishedTargets": 202,
@@ -4320,16 +4320,6 @@
     }
    }
   },
-  "@mendable/firecrawl-js@*": {
-   "peerDependencies": {
-    "undici": "*"
-   },
-   "peerDependenciesMeta": {
-    "undici": {
-     "optional": true
-    }
-   }
-  },
   "@middy/core@*": {
    "peerDependencies": {
     "aws-lambda": "*"
@@ -4600,10 +4590,10 @@
   "@nuxt/devtools-kit@*": {
    "peerDependencies": {
     "@nuxt/schema": "*",
+    "@vitejs/devtools-kit": "*",
     "birpc": "*",
     "error-stack-parser-es": "*",
     "hookable": "*",
-    "nitropack": "*",
     "nuxt": "*",
     "ofetch": "*",
     "shiki": "*",
@@ -4616,6 +4606,9 @@
     "@nuxt/schema": {
      "optional": true
     },
+    "@vitejs/devtools-kit": {
+     "optional": true
+    },
     "birpc": {
      "optional": true
     },
@@ -4623,9 +4616,6 @@
      "optional": true
     },
     "hookable": {
-     "optional": true
-    },
-    "nitropack": {
      "optional": true
     },
     "nuxt": {
@@ -12608,7 +12598,7 @@
   },
   {
    "package": "@apollo/client",
-   "measuredVersion": "4.3.4",
+   "measuredVersion": "4.3.5",
    "targets": [
     {
      "target": "relay-runtime",
@@ -13554,7 +13544,7 @@
   },
   {
    "package": "@es-joy/jsdoccomment",
-   "measuredVersion": "0.99.0",
+   "measuredVersion": "0.100.0",
    "targets": [
     {
      "target": "eslint",
@@ -13636,7 +13626,7 @@
   },
   {
    "package": "@expo/cli",
-   "measuredVersion": "58.1.12",
+   "measuredVersion": "58.1.13",
    "targets": [
     {
      "target": "@expo/fingerprint",
@@ -14678,7 +14668,7 @@
   },
   {
    "package": "@graphql-tools/graphql-tag-pluck",
-   "measuredVersion": "8.3.41",
+   "measuredVersion": "9.0.3",
    "targets": [
     {
      "target": "@astrojs/compiler",
@@ -15574,27 +15564,6 @@
    ]
   },
   {
-   "package": "@mendable/firecrawl-js",
-   "measuredVersion": "4.49.2",
-   "targets": [
-    {
-     "target": "undici",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "undici"
-     ],
-     "files": [
-      "dist/index.cjs",
-      "dist/index.js"
-     ],
-     "fileCount": 2
-    }
-   ]
-  },
-  {
    "package": "@middy/core",
    "measuredVersion": "7.9.2",
    "targets": [
@@ -16158,7 +16127,7 @@
   },
   {
    "package": "@nuxt/devtools",
-   "measuredVersion": "3.4.4",
+   "measuredVersion": "4.0.0-beta.7",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16184,16 +16153,15 @@
       "vue"
      ],
      "files": [
-      "dist/webcomponents/index.d.mts",
       "dist/webcomponents/index.mjs"
      ],
-     "fileCount": 2
+     "fileCount": 1
     }
    ]
   },
   {
    "package": "@nuxt/devtools-kit",
-   "measuredVersion": "3.4.4",
+   "measuredVersion": "4.0.0-beta.7",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16205,9 +16173,26 @@
       "@nuxt/schema"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.D39hg9bG.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
+      "dist/types.d.mts"
+     ],
+     "fileCount": 3
+    },
+    {
+     "target": "@vitejs/devtools-kit",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "@vitejs/devtools-kit",
+      "@vitejs/devtools-kit/client"
+     ],
+     "files": [
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16221,9 +16206,9 @@
       "birpc"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.D39hg9bG.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16237,7 +16222,7 @@
       "error-stack-parser-es"
      ],
      "files": [
-      "dist/types.d.ts"
+      "dist/types.d.mts"
      ],
      "fileCount": 1
     },
@@ -16251,25 +16236,9 @@
       "hookable"
      ],
      "files": [
-      "dist/types.d.ts"
+      "dist/types.d.mts"
      ],
      "fileCount": 1
-    },
-    {
-     "target": "nitropack",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "nitropack"
-     ],
-     "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.D39hg9bG.d.ts",
-      "dist/types.d.ts"
-     ],
-     "fileCount": 3
     },
     {
      "target": "nuxt",
@@ -16282,9 +16251,9 @@
       "nuxt/app"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.D39hg9bG.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16298,7 +16267,7 @@
       "ofetch"
      ],
      "files": [
-      "dist/types.d.ts"
+      "dist/types.d.mts"
      ],
      "fileCount": 1
     },
@@ -16312,7 +16281,7 @@
       "shiki"
      ],
      "files": [
-      "dist/types.d.ts"
+      "dist/types.d.mts"
      ],
      "fileCount": 1
     },
@@ -16326,9 +16295,9 @@
       "unimport"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.D39hg9bG.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16342,9 +16311,9 @@
       "unstorage"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.D39hg9bG.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16358,15 +16327,13 @@
       "vue"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/runtime/host-client.d.ts",
+      "dist/index.d.mts",
       "dist/runtime/host-client.mjs",
-      "dist/runtime/iframe-client.d.ts",
       "dist/runtime/iframe-client.mjs",
-      "dist/shared/devtools-kit.D39hg9bG.d.ts",
-      "dist/types.d.ts"
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
+      "dist/types.d.mts"
      ],
-     "fileCount": 7
+     "fileCount": 5
     },
     {
      "target": "vue-router",
@@ -16378,9 +16345,9 @@
       "vue-router"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.D39hg9bG.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.CtfaEBN3.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     }
@@ -18231,7 +18198,7 @@
   },
   {
    "package": "@oclif/core",
-   "measuredVersion": "5.1.8",
+   "measuredVersion": "5.1.9",
    "targets": [
     {
      "target": "pnpapi",
@@ -19348,7 +19315,7 @@
   },
   {
    "package": "@react-native-firebase/app",
-   "measuredVersion": "26.4.0",
+   "measuredVersion": "27.0.0",
    "targets": [
     {
      "target": "@expo/config-plugins",
@@ -19376,7 +19343,7 @@
   },
   {
    "package": "@react-native-firebase/messaging",
-   "measuredVersion": "26.4.0",
+   "measuredVersion": "27.0.0",
    "targets": [
     {
      "target": "@expo/config-plugins",
@@ -19390,9 +19357,10 @@
      "files": [
       "plugin/build/android/setupFirebaseNotifationIcon.js",
       "plugin/build/index.d.ts",
-      "plugin/build/index.js"
+      "plugin/build/index.js",
+      "plugin/build/ios/setupInstallationId.js"
      ],
-     "fileCount": 3
+     "fileCount": 4
     },
     {
      "target": "react-native",
@@ -19674,7 +19642,7 @@
   },
   {
    "package": "@react-router/dev",
-   "measuredVersion": "8.4.0",
+   "measuredVersion": "8.5.0",
    "targets": [
     {
      "target": "react",
@@ -19731,7 +19699,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.65.0",
+   "measuredVersion": "2.65.1",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20625,7 +20593,7 @@
   },
   {
    "package": "@storybook/addon-a11y",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20673,7 +20641,7 @@
   },
   {
    "package": "@storybook/addon-designs",
-   "measuredVersion": "11.1.4",
+   "measuredVersion": "12.0.0",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20685,7 +20653,7 @@
       "@storybook/icons"
      ],
      "files": [
-      "dist/chunk-FEXYGUPS.js"
+      "dist/chunk-6WFNP6UH.js"
      ],
      "fileCount": 1
     }
@@ -20727,7 +20695,7 @@
   },
   {
    "package": "@storybook/addon-onboarding",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20780,7 +20748,7 @@
   },
   {
    "package": "@storybook/addon-themes",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20815,7 +20783,7 @@
   },
   {
    "package": "@storybook/addon-vitest",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "react",
@@ -20835,7 +20803,7 @@
   },
   {
    "package": "@storybook/builder-webpack5",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "@storybook/global",
@@ -20921,7 +20889,7 @@
   },
   {
    "package": "@storybook/nextjs",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "sb-original",
@@ -20943,7 +20911,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "sb-original",
@@ -20955,7 +20923,7 @@
       "sb-original/image-context"
      ],
      "files": [
-      "dist/_browser-chunks/chunk-342N7CWU.js"
+      "dist/_browser-chunks/chunk-TCVY5TW2.js"
      ],
      "fileCount": 1
     }
@@ -22111,7 +22079,7 @@
   },
   {
    "package": "@typescript-eslint/types",
-   "measuredVersion": "8.71.2",
+   "measuredVersion": "8.72.0",
    "targets": [
     {
      "target": "typescript",
@@ -22214,7 +22182,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "22.0.3",
+   "measuredVersion": "23.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -22291,7 +22259,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "21.0.3",
+   "measuredVersion": "22.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -24141,7 +24109,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.4.0",
+   "measuredVersion": "7.4.1",
    "targets": [
     {
      "target": "@astrojs/cloudflare",
@@ -24196,7 +24164,7 @@
   },
   {
    "package": "aws-cdk",
-   "measuredVersion": "2.1145.0",
+   "measuredVersion": "2.1146.0",
    "targets": [
     {
      "target": "@aws-cdk/cloud-assembly-api",
@@ -24428,7 +24396,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.17",
+   "measuredVersion": "6.3.18",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -24872,7 +24840,7 @@
   },
   {
    "package": "dependency-cruiser",
-   "measuredVersion": "18.6.0",
+   "measuredVersion": "18.7.0",
    "targets": [
     {
      "target": "typescript",
@@ -25610,7 +25578,7 @@
   },
   {
    "package": "eslint-plugin-perfectionist",
-   "measuredVersion": "5.12.1",
+   "measuredVersion": "5.13.0",
    "targets": [
     {
      "target": "typescript",
@@ -25875,7 +25843,7 @@
   },
   {
    "package": "expo-camera",
-   "measuredVersion": "58.0.10",
+   "measuredVersion": "58.0.11",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25974,7 +25942,7 @@
   },
   {
    "package": "expo-file-system",
-   "measuredVersion": "58.0.9",
+   "measuredVersion": "58.0.10",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26001,7 +25969,7 @@
   },
   {
    "package": "expo-font",
-   "measuredVersion": "58.0.8",
+   "measuredVersion": "58.0.9",
    "targets": [
     {
      "target": "expo-asset",
@@ -26082,7 +26050,7 @@
   },
   {
    "package": "expo-image-manipulator",
-   "measuredVersion": "58.0.14",
+   "measuredVersion": "58.0.15",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26154,7 +26122,7 @@
   },
   {
    "package": "expo-location",
-   "measuredVersion": "58.0.17",
+   "measuredVersion": "58.0.18",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26287,7 +26255,7 @@
   },
   {
    "package": "expo-video",
-   "measuredVersion": "58.0.11",
+   "measuredVersion": "58.0.12",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27520,7 +27488,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.42.0",
+   "measuredVersion": "6.42.1",
    "targets": [
     {
      "target": "vue",
@@ -29225,7 +29193,7 @@
   },
   {
    "package": "oxc-minify",
-   "measuredVersion": "0.154.0",
+   "measuredVersion": "0.155.0",
    "targets": [
     {
      "target": "@oxc-minify/binding-wasm32-wasi",
@@ -29265,7 +29233,7 @@
   },
   {
    "package": "oxc-parser",
-   "measuredVersion": "0.154.0",
+   "measuredVersion": "0.155.0",
    "targets": [
     {
      "target": "@oxc-parser/binding-wasm32-wasi",
@@ -29326,7 +29294,7 @@
   },
   {
    "package": "oxc-transform",
-   "measuredVersion": "0.154.0",
+   "measuredVersion": "0.155.0",
    "targets": [
     {
      "target": "@oxc-transform/binding-wasm32-wasi",
@@ -30743,7 +30711,7 @@
   },
   {
    "package": "remotion",
-   "measuredVersion": "4.0.536",
+   "measuredVersion": "4.0.537",
    "targets": [
     {
      "target": "zod",
@@ -31015,7 +30983,7 @@
   },
   {
    "package": "satori",
-   "measuredVersion": "0.63.0",
+   "measuredVersion": "0.63.1",
    "targets": [
     {
      "target": "react",
@@ -31203,7 +31171,7 @@
   },
   {
    "package": "storybook",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "@storybook/react",
@@ -31276,7 +31244,7 @@
   },
   {
    "package": "storybook-addon-pseudo-states",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -31552,7 +31520,7 @@
   },
   {
    "package": "systeminformation",
-   "measuredVersion": "5.33.15",
+   "measuredVersion": "5.33.16",
    "targets": [
     {
      "target": "macos-temperature-sensor",
@@ -31708,7 +31676,7 @@
   },
   {
    "package": "typedoc-plugin-markdown",
-   "measuredVersion": "4.14.0",
+   "measuredVersion": "4.14.1",
    "targets": [
     {
      "target": "prettier",
@@ -32054,7 +32022,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.5.0",
+   "measuredVersion": "64.7.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -32500,7 +32468,7 @@
   },
   {
    "package": "vuetify",
-   "measuredVersion": "4.2.6",
+   "measuredVersion": "4.3.0",
    "targets": [
     {
      "target": "@vue/reactivity",
@@ -32771,7 +32739,7 @@
   },
   {
    "package": "yeoman-environment",
-   "measuredVersion": "8.2.0",
+   "measuredVersion": "8.3.0",
    "targets": [
     {
      "target": "yeoman-generator",
@@ -33069,7 +33037,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.2",
+   "measuredVersion": "10.6.3",
    "target": "sb-original",
    "specifiers": [
     "sb-original/image-context"
@@ -33085,7 +33053,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.4.0",
+   "measuredVersion": "7.4.1",
    "target": "@astrojs/cloudflare",
    "specifiers": [
     "@astrojs/cloudflare/info"
@@ -33183,7 +33151,7 @@
   },
   {
    "package": "expo-file-system",
-   "measuredVersion": "58.0.9",
+   "measuredVersion": "58.0.10",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -33191,7 +33159,7 @@
   },
   {
    "package": "expo-font",
-   "measuredVersion": "58.0.8",
+   "measuredVersion": "58.0.9",
    "target": "expo-asset",
    "specifiers": [
     "expo-asset"
@@ -33199,7 +33167,7 @@
   },
   {
    "package": "expo-font",
-   "measuredVersion": "58.0.8",
+   "measuredVersion": "58.0.9",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -33223,7 +33191,7 @@
   },
   {
    "package": "expo-video",
-   "measuredVersion": "58.0.11",
+   "measuredVersion": "58.0.12",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -33458,7 +33426,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.5.0",
+   "measuredVersion": "64.7.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -33466,7 +33434,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.5.0",
+   "measuredVersion": "64.7.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -33474,7 +33442,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.5.0",
+   "measuredVersion": "64.7.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -33482,7 +33450,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.5.0",
+   "measuredVersion": "64.7.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"

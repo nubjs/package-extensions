@@ -1,5 +1,5 @@
-# Generated 2026-10-19 from the 10000 most-downloaded npm packages.
-# 759 packages, 1116 undeclared dependencies.
+# Generated 2026-10-20 from the 10000 most-downloaded npm packages.
+# 758 packages, 1115 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -899,12 +899,6 @@ packageExtensions:
     peerDependenciesMeta:
       mdast:
         optional: true
-  "@mendable/firecrawl-js@*":
-    peerDependencies:
-      undici: "*"
-    peerDependenciesMeta:
-      undici:
-        optional: true
   "@middy/core@*":
     peerDependencies:
       aws-lambda: "*"
@@ -1070,10 +1064,10 @@ packageExtensions:
   "@nuxt/devtools-kit@*":
     peerDependencies:
       "@nuxt/schema": "*"
+      "@vitejs/devtools-kit": "*"
       birpc: "*"
       error-stack-parser-es: "*"
       hookable: "*"
-      nitropack: "*"
       nuxt: "*"
       ofetch: "*"
       shiki: "*"
@@ -1084,13 +1078,13 @@ packageExtensions:
     peerDependenciesMeta:
       "@nuxt/schema":
         optional: true
+      "@vitejs/devtools-kit":
+        optional: true
       birpc:
         optional: true
       error-stack-parser-es:
         optional: true
       hookable:
-        optional: true
-      nitropack:
         optional: true
       nuxt:
         optional: true

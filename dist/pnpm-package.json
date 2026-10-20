@@ -1441,16 +1441,6 @@
           }
         }
       },
-      "@mendable/firecrawl-js@*": {
-        "peerDependencies": {
-          "undici": "*"
-        },
-        "peerDependenciesMeta": {
-          "undici": {
-            "optional": true
-          }
-        }
-      },
       "@middy/core@*": {
         "peerDependencies": {
           "aws-lambda": "*"
@@ -1721,10 +1711,10 @@
       "@nuxt/devtools-kit@*": {
         "peerDependencies": {
           "@nuxt/schema": "*",
+          "@vitejs/devtools-kit": "*",
           "birpc": "*",
           "error-stack-parser-es": "*",
           "hookable": "*",
-          "nitropack": "*",
           "nuxt": "*",
           "ofetch": "*",
           "shiki": "*",
@@ -1737,6 +1727,9 @@
           "@nuxt/schema": {
             "optional": true
           },
+          "@vitejs/devtools-kit": {
+            "optional": true
+          },
           "birpc": {
             "optional": true
           },
@@ -1744,9 +1737,6 @@
             "optional": true
           },
           "hookable": {
-            "optional": true
-          },
-          "nitropack": {
             "optional": true
           },
           "nuxt": {

@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.32 — generated 2026-10-19, do not edit.
-// 759 packages, 1116 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.33 — generated 2026-10-20, do not edit.
+// 758 packages, 1115 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -1823,19 +1823,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@mendable/firecrawl-js@*",
-  {
-   "peerDependencies": {
-    "undici": "*"
-   },
-   "peerDependenciesMeta": {
-    "undici": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@middy/core@*",
   {
    "peerDependencies": {
@@ -2188,10 +2175,10 @@ export const packageExtensions = [
   {
    "peerDependencies": {
     "@nuxt/schema": "*",
+    "@vitejs/devtools-kit": "*",
     "birpc": "*",
     "error-stack-parser-es": "*",
     "hookable": "*",
-    "nitropack": "*",
     "nuxt": "*",
     "ofetch": "*",
     "shiki": "*",
@@ -2204,6 +2191,9 @@ export const packageExtensions = [
     "@nuxt/schema": {
      "optional": true
     },
+    "@vitejs/devtools-kit": {
+     "optional": true
+    },
     "birpc": {
      "optional": true
     },
@@ -2211,9 +2201,6 @@ export const packageExtensions = [
      "optional": true
     },
     "hookable": {
-     "optional": true
-    },
-    "nitropack": {
      "optional": true
     },
     "nuxt": {

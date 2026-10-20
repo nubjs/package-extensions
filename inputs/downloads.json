@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T13:47:02.903Z",
+  "generatedAt": "2026-10-20T11:55:30.337Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-10-12",
   "end": "2026-10-18",
@@ -139,7 +139,6 @@
     "@material-ui/lab": 345076,
     "@mdx-js/loader": 1358478,
     "@mdx-js/mdx": 7327022,
-    "@mendable/firecrawl-js": 666850,
     "@middy/core": 447643,
     "@module-federation/data-prefetch": 1180566,
     "@module-federation/managers": 2647048,
