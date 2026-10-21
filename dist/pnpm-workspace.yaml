@@ -1,5 +1,5 @@
-# Generated 2026-10-20 from the 10000 most-downloaded npm packages.
-# 758 packages, 1115 undeclared dependencies.
+# Generated 2026-10-21 from the 10000 most-downloaded npm packages.
+# 760 packages, 1117 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -338,6 +338,12 @@ packageExtensions:
     dependencies:
       "@edge-runtime/primitives": "*"
   "@electric-sql/pglite@*":
+    peerDependencies:
+      ws: "*"
+    peerDependenciesMeta:
+      ws:
+        optional: true
+  "@electric-sql/pglite-tools@*":
     peerDependencies:
       ws: "*"
     peerDependenciesMeta:
@@ -3827,6 +3833,12 @@ packageExtensions:
       puppeteer: "*"
     peerDependenciesMeta:
       puppeteer:
+        optional: true
+  linkedom@*:
+    peerDependencies:
+      cssstyle: "*"
+    peerDependenciesMeta:
+      cssstyle:
         optional: true
   livekit-client@*:
     peerDependencies:

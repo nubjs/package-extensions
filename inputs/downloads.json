@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T11:55:30.337Z",
+  "generatedAt": "2026-10-21T12:08:23.078Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-10-12",
   "end": "2026-10-18",
@@ -60,6 +60,7 @@
     "@edge-runtime/node-utils": 2749331,
     "@edge-runtime/ponyfill": 2745968,
     "@electric-sql/pglite": 15763538,
+    "@electric-sql/pglite-tools": 6546525,
     "@electron-forge/core": 636857,
     "@electron/asar": 5006312,
     "@emnapi/core": 45319288,
@@ -546,6 +547,7 @@
     "lib0": 6554732,
     "license-webpack-plugin": 2603295,
     "lighthouse": 3273927,
+    "linkedom": 3247102,
     "livekit-client": 2783283,
     "loglevel-plugin-prefix": 1846240,
     "lovable-tagger": 2701977,

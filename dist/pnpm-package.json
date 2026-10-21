@@ -549,6 +549,16 @@
           }
         }
       },
+      "@electric-sql/pglite-tools@*": {
+        "peerDependencies": {
+          "ws": "*"
+        },
+        "peerDependenciesMeta": {
+          "ws": {
+            "optional": true
+          }
+        }
+      },
       "@electron-forge/core@*": {
         "peerDependencies": {
           "@malept/cross-spawn-promise": "*"
@@ -5986,6 +5996,16 @@
         },
         "peerDependenciesMeta": {
           "puppeteer": {
+            "optional": true
+          }
+        }
+      },
+      "linkedom@*": {
+        "peerDependencies": {
+          "cssstyle": "*"
+        },
+        "peerDependenciesMeta": {
+          "cssstyle": {
             "optional": true
           }
         }

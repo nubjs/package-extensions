@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.33 — generated 2026-10-20, do not edit.
-// 758 packages, 1115 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.34 — generated 2026-10-21, do not edit.
+// 760 packages, 1117 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -691,6 +691,19 @@ export const packageExtensions = [
  ],
  [
   "@electric-sql/pglite@*",
+  {
+   "peerDependencies": {
+    "ws": "*"
+   },
+   "peerDependenciesMeta": {
+    "ws": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@electric-sql/pglite-tools@*",
   {
    "peerDependencies": {
     "ws": "*"
@@ -7347,6 +7360,19 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "puppeteer": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "linkedom@*",
+  {
+   "peerDependencies": {
+    "cssstyle": "*"
+   },
+   "peerDependenciesMeta": {
+    "cssstyle": {
      "optional": true
     }
    }

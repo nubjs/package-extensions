@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20",
+ "generated": "2026-10-21",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1115,
-   "packages": 627
+   "entries": 1117,
+   "packages": 629
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
   }
  },
  "totals": {
-  "packages": 758,
-  "selectors": 778,
-  "entries": 1115,
+  "packages": 760,
+  "selectors": 780,
+  "entries": 1117,
   "byClass": {
-   "runtime": 180,
+   "runtime": 181,
    "adapter": 128,
    "types": 510,
    "deep-path": 0,
-   "guarded": 297
+   "guarded": 298
   },
   "byField": {
    "dependency": 32,
-   "peer": 1083
+   "peer": 1085
   },
-  "candidatesForReview": 76,
+  "candidatesForReview": 77,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
@@ -3419,6 +3419,16 @@
    }
   },
   "@electric-sql/pglite@*": {
+   "peerDependencies": {
+    "ws": "*"
+   },
+   "peerDependenciesMeta": {
+    "ws": {
+     "optional": true
+    }
+   }
+  },
+  "@electric-sql/pglite-tools@*": {
    "peerDependencies": {
     "ws": "*"
    },
@@ -8869,6 +8879,16 @@
     }
    }
   },
+  "linkedom@*": {
+   "peerDependencies": {
+    "cssstyle": "*"
+   },
+   "peerDependenciesMeta": {
+    "cssstyle": {
+     "optional": true
+    }
+   }
+  },
   "livekit-client@*": {
    "peerDependencies": {
     "@livekit/throws-transformer": "*"
@@ -12312,7 +12332,7 @@
   },
   {
    "package": "@angular/cdk",
-   "measuredVersion": "22.2.3",
+   "measuredVersion": "22.2.4",
    "targets": [
     {
      "target": "@angular-devkit/core",
@@ -12550,7 +12570,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "0.135.0",
+   "measuredVersion": "0.137.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -13286,7 +13306,7 @@
   },
   {
    "package": "@dataform/core",
-   "measuredVersion": "3.1.0",
+   "measuredVersion": "3.1.2",
    "targets": [
     {
      "target": "long",
@@ -13443,7 +13463,7 @@
   },
   {
    "package": "@electric-sql/pglite",
-   "measuredVersion": "0.5.10",
+   "measuredVersion": "0.5.11",
    "targets": [
     {
      "target": "ws",
@@ -13459,6 +13479,28 @@
       "dist/index.js"
      ],
      "fileCount": 2
+    }
+   ]
+  },
+  {
+   "package": "@electric-sql/pglite-tools",
+   "measuredVersion": "0.4.11",
+   "targets": [
+    {
+     "target": "ws",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": true,
+     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "specifiers": [
+      "ws"
+     ],
+     "files": [
+      "dist/chunk-U6BVQWCT.js",
+      "dist/index.cjs",
+      "dist/pg_dump.cjs"
+     ],
+     "fileCount": 3
     }
    ]
   },
@@ -13564,7 +13606,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.28.2",
+   "measuredVersion": "5.28.4",
    "targets": [
     {
      "target": "react",
@@ -14572,7 +14614,7 @@
   },
   {
    "package": "@google/gemini-cli",
-   "measuredVersion": "0.64.0",
+   "measuredVersion": "0.65.0",
    "targets": [
     {
      "target": "bufferutil",
@@ -14668,7 +14710,7 @@
   },
   {
    "package": "@graphql-tools/graphql-tag-pluck",
-   "measuredVersion": "9.0.3",
+   "measuredVersion": "9.0.5",
    "targets": [
     {
      "target": "@astrojs/compiler",
@@ -15423,7 +15465,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.78.0",
+   "measuredVersion": "1.79.0",
    "targets": [
     {
      "target": "@workflow/serde",
@@ -15435,10 +15477,9 @@
       "@workflow/serde"
      ],
      "files": [
-      "dist/_types/@ai-sdk_provider-utils/dist/index.d.ts",
-      "dist/_types/@internal_ai-v7/dist/index.d.ts"
+      "dist/_types/@ai-sdk_provider-utils/dist/index.d.ts"
      ],
-     "fileCount": 2
+     "fileCount": 1
     },
     {
      "target": "msw",
@@ -15465,20 +15506,22 @@
       "undici"
      ],
      "files": [
-      "dist/dist-BJvRW0E0.cjs",
-      "dist/dist-BgUIUei9-BstmucK2.cjs",
-      "dist/dist-BgUIUei9-Cf3ZzunV.js",
-      "dist/dist-Btgwa9QY.js",
-      "dist/dist-CSedSB65.cjs",
-      "dist/dist-kwhHAw-p.js"
+      "dist/dist-Bu-6vOL-.cjs",
+      "dist/dist-rhpKBqPL-BLZvNl7l.js",
+      "dist/dist-rhpKBqPL-C7K8thwT.cjs",
+      "dist/dist-zI1ly-Pg.js",
+      "dist/netlify-D8tzM7la.cjs",
+      "dist/netlify-k1oRkpJD.js",
+      "dist/vector/index.cjs",
+      "dist/vector/index.js"
      ],
-     "fileCount": 6
+     "fileCount": 8
     }
    ]
   },
   {
    "package": "@mastra/schema-compat",
-   "measuredVersion": "1.3.15",
+   "measuredVersion": "1.3.16",
    "targets": [
     {
      "target": "zod-to-json-schema",
@@ -18475,7 +18518,7 @@
   },
   {
    "package": "@opentelemetry/instrumentation-winston",
-   "measuredVersion": "0.68.1",
+   "measuredVersion": "0.69.0",
    "targets": [
     {
      "target": "@opentelemetry/winston-transport",
@@ -18487,7 +18530,7 @@
       "@opentelemetry/winston-transport"
      ],
      "files": [
-      "build/src/instrumentation.js"
+      "dist/instrumentation.cjs"
      ],
      "fileCount": 1
     }
@@ -19699,7 +19742,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.65.1",
+   "measuredVersion": "2.66.1",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -21065,7 +21108,7 @@
   },
   {
    "package": "@swagger-api/apidom-ast",
-   "measuredVersion": "1.12.1",
+   "measuredVersion": "1.13.1",
    "targets": [
     {
      "target": "ts-toolbelt",
@@ -21085,7 +21128,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-arazzo-1",
-   "measuredVersion": "1.12.1",
+   "measuredVersion": "1.13.0",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -21119,7 +21162,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-asyncapi-2",
-   "measuredVersion": "1.12.1",
+   "measuredVersion": "1.13.1",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -21153,7 +21196,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-json-schema-draft-6",
-   "measuredVersion": "1.12.1",
+   "measuredVersion": "1.13.1",
    "targets": [
     {
      "target": "minim",
@@ -21173,7 +21216,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-json-schema-draft-7",
-   "measuredVersion": "1.12.1",
+   "measuredVersion": "1.13.1",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -21207,7 +21250,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-openapi-3-0",
-   "measuredVersion": "1.12.1",
+   "measuredVersion": "1.13.1",
    "targets": [
     {
      "target": "minim",
@@ -21716,7 +21759,7 @@
   },
   {
    "package": "@turbo/gen",
-   "measuredVersion": "2.11.9",
+   "measuredVersion": "2.11.10",
    "targets": [
     {
      "target": "kerberos",
@@ -22182,7 +22225,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "23.0.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -22259,7 +22302,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "22.0.0",
+   "measuredVersion": "23.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -23994,7 +24037,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "9.1.4",
+   "measuredVersion": "9.1.5",
    "targets": [
     {
      "target": "@appium/types",
@@ -24396,7 +24439,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.3.18",
+   "measuredVersion": "6.4.0",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -25496,7 +25539,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.3.15",
+   "measuredVersion": "65.4.0",
    "targets": [
     {
      "target": "@eslint/core",
@@ -27639,6 +27682,26 @@
    ]
   },
   {
+   "package": "linkedom",
+   "measuredVersion": "0.18.14",
+   "targets": [
+    {
+     "target": "cssstyle",
+     "class": "guarded",
+     "field": "peer",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+     "specifiers": [
+      "cssstyle"
+     ],
+     "files": [
+      "worker.js"
+     ],
+     "fileCount": 1
+    }
+   ]
+  },
+  {
    "package": "livekit-client",
    "measuredVersion": "2.23.0",
    "targets": [
@@ -28247,7 +28310,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "14.4.0",
+   "measuredVersion": "14.5.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -29472,7 +29535,7 @@
   },
   {
    "package": "pm2",
-   "measuredVersion": "7.0.4",
+   "measuredVersion": "7.1.0",
    "targets": [
     {
      "target": "@opentelemetry/auto-instrumentations-node",
@@ -30929,7 +30992,7 @@
   },
   {
    "package": "sass-embedded",
-   "measuredVersion": "1.105.2",
+   "measuredVersion": "1.106.0",
    "targets": [
     {
      "target": "sass",
@@ -30983,7 +31046,7 @@
   },
   {
    "package": "satori",
-   "measuredVersion": "0.63.1",
+   "measuredVersion": "0.63.2",
    "targets": [
     {
      "target": "react",
@@ -32022,7 +32085,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.7.0",
+   "measuredVersion": "65.0.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -32104,7 +32167,7 @@
   },
   {
    "package": "vite",
-   "measuredVersion": "8.3.4",
+   "measuredVersion": "8.3.5",
    "targets": [
     {
      "target": "pnpapi",
@@ -32587,7 +32650,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261019.1",
+   "measuredVersion": "1.20261021.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32607,7 +32670,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.151.2",
+   "measuredVersion": "4.151.3",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -32818,7 +32881,15 @@
   },
   {
    "package": "@electric-sql/pglite",
-   "measuredVersion": "0.5.10",
+   "measuredVersion": "0.5.11",
+   "target": "ws",
+   "specifiers": [
+    "ws"
+   ]
+  },
+  {
+   "package": "@electric-sql/pglite-tools",
+   "measuredVersion": "0.4.11",
    "target": "ws",
    "specifiers": [
     "ws"
@@ -32860,7 +32931,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.78.0",
+   "measuredVersion": "1.79.0",
    "target": "undici",
    "specifiers": [
     "undici"
@@ -33426,7 +33497,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.7.0",
+   "measuredVersion": "65.0.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -33434,7 +33505,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.7.0",
+   "measuredVersion": "65.0.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -33442,7 +33513,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.7.0",
+   "measuredVersion": "65.0.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -33450,7 +33521,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "64.7.0",
+   "measuredVersion": "65.0.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"
