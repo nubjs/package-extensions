@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.34 — generated 2026-10-21, do not edit.
-// 760 packages, 1117 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.35 — generated 2026-10-22, do not edit.
+// 759 packages, 1115 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -986,9 +986,13 @@ export const packageExtensions = [
   "@fastify/multipart@*",
   {
    "peerDependencies": {
+    "ajv": "*",
     "fastify": "*"
    },
    "peerDependenciesMeta": {
+    "ajv": {
+     "optional": true
+    },
     "fastify": {
      "optional": true
     }
@@ -2500,19 +2504,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@nx/eslint@*",
-  {
-   "peerDependencies": {
-    "@angular-devkit/core": "*"
-   },
-   "peerDependenciesMeta": {
-    "@angular-devkit/core": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@nx/eslint-plugin@*",
   {
    "dependencies": {
@@ -2616,34 +2607,17 @@ export const packageExtensions = [
   }
  ],
  [
-  "@nx/module-federation@*",
-  {
-   "peerDependencies": {
-    "@angular-devkit/build-angular": "*",
-    "nx": "*",
-    "typescript": "*"
-   },
-   "peerDependenciesMeta": {
-    "@angular-devkit/build-angular": {
-     "optional": true
-    },
-    "nx": {
-     "optional": true
-    },
-    "typescript": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@nx/node@*",
   {
    "peerDependencies": {
+    "@nx/rolldown": "*",
     "@nx/vitest": "*",
     "@nx/webpack": "*"
    },
    "peerDependenciesMeta": {
+    "@nx/rolldown": {
+     "optional": true
+    },
     "@nx/vitest": {
      "optional": true
     },
@@ -2781,6 +2755,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "@nx/rspack@*",
+  {
+   "peerDependencies": {
+    "yargs": "*"
+   },
+   "peerDependenciesMeta": {
+    "yargs": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@nx/storybook@*",
   {
    "peerDependencies": {
@@ -2840,14 +2827,10 @@ export const packageExtensions = [
   "@nx/webpack@*",
   {
    "peerDependencies": {
-    "@swc/core": "*",
     "swc-loader": "*",
     "typescript": "*"
    },
    "peerDependenciesMeta": {
-    "@swc/core": {
-     "optional": true
-    },
     "swc-loader": {
      "optional": true
     },

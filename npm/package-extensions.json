@@ -1,15 +1,15 @@
 {
- "generated": "2026-10-21",
+ "generated": "2026-10-22",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
-  "scannedOk": 9983,
-  "failed": 17
+  "scannedOk": 9982,
+  "failed": 18
  },
  "sources": {
   "scan": {
-   "entries": 1117,
-   "packages": 629
+   "entries": 1115,
+   "packages": 628
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
   }
  },
  "totals": {
-  "packages": 760,
-  "selectors": 780,
-  "entries": 1117,
+  "packages": 759,
+  "selectors": 779,
+  "entries": 1115,
   "byClass": {
    "runtime": 181,
    "adapter": 128,
    "types": 510,
    "deep-path": 0,
-   "guarded": 298
+   "guarded": 296
   },
   "byField": {
    "dependency": 32,
-   "peer": 1085
+   "peer": 1083
   },
-  "candidatesForReview": 77,
+  "candidatesForReview": 76,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
@@ -3650,9 +3650,13 @@
   },
   "@fastify/multipart@*": {
    "peerDependencies": {
+    "ajv": "*",
     "fastify": "*"
    },
    "peerDependenciesMeta": {
+    "ajv": {
+     "optional": true
+    },
     "fastify": {
      "optional": true
     }
@@ -4889,16 +4893,6 @@
     }
    }
   },
-  "@nx/eslint@*": {
-   "peerDependencies": {
-    "@angular-devkit/core": "*"
-   },
-   "peerDependenciesMeta": {
-    "@angular-devkit/core": {
-     "optional": true
-    }
-   }
-  },
   "@nx/eslint-plugin@*": {
    "dependencies": {
     "@eslint/js": "*",
@@ -4990,30 +4984,16 @@
     "tslib": "*"
    }
   },
-  "@nx/module-federation@*": {
-   "peerDependencies": {
-    "@angular-devkit/build-angular": "*",
-    "nx": "*",
-    "typescript": "*"
-   },
-   "peerDependenciesMeta": {
-    "@angular-devkit/build-angular": {
-     "optional": true
-    },
-    "nx": {
-     "optional": true
-    },
-    "typescript": {
-     "optional": true
-    }
-   }
-  },
   "@nx/node@*": {
    "peerDependencies": {
+    "@nx/rolldown": "*",
     "@nx/vitest": "*",
     "@nx/webpack": "*"
    },
    "peerDependenciesMeta": {
+    "@nx/rolldown": {
+     "optional": true
+    },
     "@nx/vitest": {
      "optional": true
     },
@@ -5140,6 +5120,16 @@
     }
    }
   },
+  "@nx/rspack@*": {
+   "peerDependencies": {
+    "yargs": "*"
+   },
+   "peerDependenciesMeta": {
+    "yargs": {
+     "optional": true
+    }
+   }
+  },
   "@nx/storybook@*": {
    "peerDependencies": {
     "typescript": "*"
@@ -5186,14 +5176,10 @@
   },
   "@nx/webpack@*": {
    "peerDependencies": {
-    "@swc/core": "*",
     "swc-loader": "*",
     "typescript": "*"
    },
    "peerDependenciesMeta": {
-    "@swc/core": {
-     "optional": true
-    },
     "swc-loader": {
      "optional": true
     },
@@ -12570,7 +12556,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "0.137.0",
+   "measuredVersion": "1.1.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -12713,7 +12699,7 @@
   },
   {
    "package": "@astrojs/language-server",
-   "measuredVersion": "2.17.2",
+   "measuredVersion": "2.17.3",
    "targets": [
     {
      "target": "typescript",
@@ -12733,7 +12719,7 @@
   },
   {
    "package": "@astrojs/markdown-remark",
-   "measuredVersion": "7.3.3",
+   "measuredVersion": "7.3.4",
    "targets": [
     {
      "target": "hast",
@@ -12782,7 +12768,7 @@
   },
   {
    "package": "@astrojs/react",
-   "measuredVersion": "7.1.0",
+   "measuredVersion": "7.1.1",
    "targets": [
     {
      "target": "astro",
@@ -13606,7 +13592,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.28.4",
+   "measuredVersion": "5.28.5",
    "targets": [
     {
      "target": "react",
@@ -13668,7 +13654,7 @@
   },
   {
    "package": "@expo/cli",
-   "measuredVersion": "58.1.13",
+   "measuredVersion": "58.1.14",
    "targets": [
     {
      "target": "@expo/fingerprint",
@@ -13772,7 +13758,7 @@
   },
   {
    "package": "@expo/log-box",
-   "measuredVersion": "58.0.12",
+   "measuredVersion": "58.0.13",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -13807,7 +13793,7 @@
   },
   {
    "package": "@expo/metro-config",
-   "measuredVersion": "58.0.15",
+   "measuredVersion": "58.0.16",
    "targets": [
     {
      "target": "babel-preset-expo",
@@ -13968,8 +13954,22 @@
   },
   {
    "package": "@fastify/multipart",
-   "measuredVersion": "10.1.4",
+   "measuredVersion": "10.1.6",
    "targets": [
+    {
+     "target": "ajv",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "ajv"
+     ],
+     "files": [
+      "types/index.d.ts"
+     ],
+     "fileCount": 1
+    },
     {
      "target": "fastify",
      "class": "types",
@@ -13980,11 +13980,12 @@
       "fastify"
      ],
      "files": [
+      "types/ajv-plugin.tst.ts",
       "types/index.d.ts",
       "types/index.tst.ts",
       "types/named-import.tst.ts"
      ],
-     "fileCount": 3
+     "fileCount": 4
     }
    ]
   },
@@ -14011,7 +14012,7 @@
   },
   {
    "package": "@fastify/static",
-   "measuredVersion": "10.1.6",
+   "measuredVersion": "10.1.7",
    "targets": [
     {
      "target": "fastify",
@@ -14167,7 +14168,7 @@
   },
   {
    "package": "@firebase/auth",
-   "measuredVersion": "1.13.7",
+   "measuredVersion": "1.13.8",
    "targets": [
     {
      "target": "@firebase/app-check-interop-types",
@@ -14286,7 +14287,7 @@
   },
   {
    "package": "@firebase/firestore-compat",
-   "measuredVersion": "0.4.15",
+   "measuredVersion": "0.4.16",
    "targets": [
     {
      "target": "@firebase/app-types",
@@ -14710,7 +14711,7 @@
   },
   {
    "package": "@graphql-tools/graphql-tag-pluck",
-   "measuredVersion": "9.0.5",
+   "measuredVersion": "9.0.6",
    "targets": [
     {
      "target": "@astrojs/compiler",
@@ -14826,7 +14827,7 @@
   },
   {
    "package": "@hapi/hapi",
-   "measuredVersion": "21.4.10",
+   "measuredVersion": "21.4.11",
    "targets": [
     {
      "target": "joi",
@@ -15795,7 +15796,7 @@
   },
   {
    "package": "@napi-rs/cli",
-   "measuredVersion": "3.10.8",
+   "measuredVersion": "3.10.9",
    "targets": [
     {
      "target": "@oxc-node/core",
@@ -15937,7 +15938,7 @@
   },
   {
    "package": "@netlify/serverless-functions-api",
-   "measuredVersion": "2.24.0",
+   "measuredVersion": "2.25.0",
    "targets": [
     {
      "target": "@netlify/cache",
@@ -16914,7 +16915,7 @@
   },
   {
    "package": "@nx/angular",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@angular-devkit/architect",
@@ -17028,17 +17029,15 @@
      ],
      "files": [
       "dist/src/builders/webpack-browser/webpack-browser.impl.js",
-      "dist/src/builders/webpack-server/webpack-server.impl.js",
-      "dist/src/executors/module-federation-dev-server/module-federation-dev-server.impl.js",
-      "dist/src/executors/module-federation-ssr-dev-server/module-federation-ssr-dev-server.impl.js"
+      "dist/src/builders/webpack-server/webpack-server.impl.js"
      ],
-     "fileCount": 4
+     "fileCount": 2
     }
    ]
   },
   {
    "package": "@nx/cypress",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "typescript",
@@ -17058,7 +17057,7 @@
   },
   {
    "package": "@nx/devkit",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@angular-devkit/architect",
@@ -17133,28 +17132,8 @@
    ]
   },
   {
-   "package": "@nx/eslint",
-   "measuredVersion": "23.3.0",
-   "targets": [
-    {
-     "target": "@angular-devkit/core",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@angular-devkit/core"
-     ],
-     "files": [
-      "dist/src/executors/lint/schema.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@eslint/js",
@@ -17282,7 +17261,7 @@
   },
   {
    "package": "@nx/jest",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@jest/core",
@@ -17331,7 +17310,7 @@
   },
   {
    "package": "@nx/js",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@nx/eslint",
@@ -17464,74 +17443,37 @@
    ]
   },
   {
-   "package": "@nx/module-federation",
-   "measuredVersion": "23.3.0",
-   "targets": [
-    {
-     "target": "@angular-devkit/build-angular",
-     "class": "adapter",
-     "field": "peer",
-     "candidate": false,
-     "reason": "adapter class — the consumer picked and installed the backend",
-     "specifiers": [
-      "@angular-devkit/build-angular"
-     ],
-     "files": [
-      "dist/src/with-module-federation/angular/with-module-federation.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "nx",
-     "class": "adapter",
-     "field": "peer",
-     "candidate": false,
-     "reason": "adapter class — the consumer picked and installed the backend",
-     "specifiers": [
-      "nx/bin/nx"
-     ],
-     "files": [
-      "dist/src/executors/utils/start-remote-iterators.js",
-      "dist/src/plugins/nx-module-federation-plugin/angular/nx-module-federation-dev-server-plugin.js",
-      "dist/src/plugins/nx-module-federation-plugin/angular/nx-module-federation-ssr-dev-server-plugin.js",
-      "dist/src/plugins/nx-module-federation-plugin/rspack/nx-module-federation-dev-server-plugin.js",
-      "dist/src/plugins/nx-module-federation-plugin/rspack/nx-module-federation-ssr-dev-server-plugin.js"
-     ],
-     "fileCount": 5
-    },
-    {
-     "target": "typescript",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "typescript"
-     ],
-     "files": [
-      "dist/src/utils/typescript.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "@nx/node",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
-     "target": "@nx/vitest",
+     "target": "@nx/rolldown",
      "class": "guarded",
      "field": "peer",
      "candidate": false,
      "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
-      "@nx/vitest/generators"
+      "@nx/rolldown"
      ],
      "files": [
       "dist/src/generators/application/application.js"
      ],
      "fileCount": 1
+    },
+    {
+     "target": "@nx/vitest",
+     "class": "runtime",
+     "field": "peer",
+     "candidate": false,
+     "reason": "target is a framework or tool a consumer installs itself",
+     "specifiers": [
+      "@nx/vitest/generators"
+     ],
+     "files": [
+      "dist/src/generators/application/application.js",
+      "dist/src/generators/e2e-project/e2e-project.js"
+     ],
+     "fileCount": 2
     },
     {
      "target": "@nx/webpack",
@@ -17551,7 +17493,7 @@
   },
   {
    "package": "@nx/plugin",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "nx",
@@ -17571,7 +17513,7 @@
   },
   {
    "package": "@nx/react",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@nx/cypress",
@@ -17646,7 +17588,8 @@
      "reason": "target is a framework or tool a consumer installs itself",
      "specifiers": [
       "@nx/webpack/internal",
-      "@nx/webpack"
+      "@nx/webpack",
+      "@nx/webpack/app-plugin"
      ],
      "files": [
       "dist/plugins/component-testing/index.js",
@@ -17654,10 +17597,9 @@
       "dist/plugins/storybook/index.js",
       "dist/plugins/webpack.js",
       "dist/plugins/with-react.d.ts",
-      "dist/plugins/with-react.js",
       "dist/src/generators/application/lib/bundlers/add-webpack.js"
      ],
-     "fileCount": 7
+     "fileCount": 6
     },
     {
      "target": "@pmmmwh/react-refresh-webpack-plugin",
@@ -17894,25 +17836,26 @@
       "webpack"
      ],
      "files": [
+      "dist/plugins/nx-react-webpack-plugin/lib/apply-react-config.d.ts",
       "dist/plugins/nx-react-webpack-plugin/nx-react-webpack-plugin.d.ts",
       "dist/plugins/storybook/index.d.ts",
       "dist/plugins/storybook/index.js",
       "dist/plugins/with-react.d.ts"
      ],
-     "fileCount": 4
+     "fileCount": 5
     }
    ]
   },
   {
    "package": "@nx/rollup",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@swc/core",
-     "class": "runtime",
+     "class": "adapter",
      "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "candidate": false,
+     "reason": "adapter class — the consumer picked and installed the backend",
      "specifiers": [
       "@swc/core"
      ],
@@ -17938,8 +17881,28 @@
    ]
   },
   {
+   "package": "@nx/rspack",
+   "measuredVersion": "24.0.0",
+   "targets": [
+    {
+     "target": "yargs",
+     "class": "adapter",
+     "field": "peer",
+     "candidate": false,
+     "reason": "adapter class — the consumer picked and installed the backend",
+     "specifiers": [
+      "yargs"
+     ],
+     "files": [
+      "dist/src/utils/dev-server-ready-check.js"
+     ],
+     "fileCount": 1
+    }
+   ]
+  },
+  {
    "package": "@nx/storybook",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "typescript",
@@ -17959,7 +17922,7 @@
   },
   {
    "package": "@nx/vite",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@nx/eslint",
@@ -17993,7 +17956,7 @@
   },
   {
    "package": "@nx/vitest",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "typescript",
@@ -18013,7 +17976,7 @@
   },
   {
    "package": "@nx/web",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@nx/vitest",
@@ -18033,22 +17996,8 @@
   },
   {
    "package": "@nx/webpack",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
-    {
-     "target": "@swc/core",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "@swc/core"
-     ],
-     "files": [
-      "dist/src/executors/webpack/webpack.impl.js"
-     ],
-     "fileCount": 1
-    },
     {
      "target": "swc-loader",
      "class": "runtime",
@@ -18059,10 +18008,9 @@
       "swc-loader"
      ],
      "files": [
-      "dist/src/executors/webpack/webpack.impl.js",
       "dist/src/plugins/nx-webpack-plugin/lib/compiler-loaders.js"
      ],
-     "fileCount": 2
+     "fileCount": 1
     },
     {
      "target": "typescript",
@@ -18082,7 +18030,7 @@
   },
   {
    "package": "@nx/workspace",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@angular-devkit/schematics",
@@ -18409,7 +18357,7 @@
   },
   {
    "package": "@opennextjs/cloudflare",
-   "measuredVersion": "1.20.12",
+   "measuredVersion": "1.20.13",
    "targets": [
     {
      "target": "esbuild",
@@ -18970,7 +18918,7 @@
   },
   {
    "package": "@pulumi/pulumi",
-   "measuredVersion": "3.270.0",
+   "measuredVersion": "3.271.0",
    "targets": [
     {
      "target": "@microsoft/typescript-etw",
@@ -19742,7 +19690,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.66.1",
+   "measuredVersion": "2.68.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -19957,7 +19905,7 @@
   },
   {
    "package": "@rolldown/binding-wasm32-wasi",
-   "measuredVersion": "1.2.14",
+   "measuredVersion": "1.2.15",
    "targets": [
     {
      "target": "@oxc-project/types",
@@ -21108,7 +21056,7 @@
   },
   {
    "package": "@swagger-api/apidom-ast",
-   "measuredVersion": "1.13.1",
+   "measuredVersion": "1.13.3",
    "targets": [
     {
      "target": "ts-toolbelt",
@@ -21128,7 +21076,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-arazzo-1",
-   "measuredVersion": "1.13.0",
+   "measuredVersion": "1.13.3",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -21162,7 +21110,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-asyncapi-2",
-   "measuredVersion": "1.13.1",
+   "measuredVersion": "1.13.3",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -21196,7 +21144,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-json-schema-draft-6",
-   "measuredVersion": "1.13.1",
+   "measuredVersion": "1.13.3",
    "targets": [
     {
      "target": "minim",
@@ -21216,7 +21164,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-json-schema-draft-7",
-   "measuredVersion": "1.13.1",
+   "measuredVersion": "1.13.3",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -21250,7 +21198,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-openapi-3-0",
-   "measuredVersion": "1.13.1",
+   "measuredVersion": "1.13.3",
    "targets": [
     {
      "target": "minim",
@@ -21270,7 +21218,7 @@
   },
   {
    "package": "@swagger-api/apidom-reference",
-   "measuredVersion": "1.12.1",
+   "measuredVersion": "1.13.3",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-asyncapi-3",
@@ -21310,7 +21258,7 @@
   },
   {
    "package": "@swc/core",
-   "measuredVersion": "1.16.18",
+   "measuredVersion": "1.16.20",
    "targets": [
     {
      "target": "@swc/core-android-arm-eabi",
@@ -22225,7 +22173,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "24.0.0",
+   "measuredVersion": "25.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -22302,7 +22250,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "23.0.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -23625,7 +23573,7 @@
   },
   {
    "package": "ably",
-   "measuredVersion": "2.29.0",
+   "measuredVersion": "2.30.0",
    "targets": [
     {
      "target": "react-native",
@@ -24152,7 +24100,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.4.1",
+   "measuredVersion": "7.4.2",
    "targets": [
     {
      "target": "@astrojs/cloudflare",
@@ -24318,7 +24266,7 @@
   },
   {
    "package": "babel-preset-expo",
-   "measuredVersion": "58.0.18",
+   "measuredVersion": "58.0.19",
    "targets": [
     {
      "target": "@babel/core",
@@ -25833,7 +25781,7 @@
   },
   {
    "package": "expo-asset",
-   "measuredVersion": "58.0.17",
+   "measuredVersion": "58.0.18",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25860,7 +25808,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "58.0.13",
+   "measuredVersion": "58.0.14",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25886,7 +25834,7 @@
   },
   {
    "package": "expo-camera",
-   "measuredVersion": "58.0.11",
+   "measuredVersion": "58.0.12",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25906,7 +25854,7 @@
   },
   {
    "package": "expo-clipboard",
-   "measuredVersion": "58.0.3",
+   "measuredVersion": "58.0.4",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25927,7 +25875,7 @@
   },
   {
    "package": "expo-constants",
-   "measuredVersion": "58.0.12",
+   "measuredVersion": "58.0.13",
    "targets": [
     {
      "target": "expo-manifests",
@@ -26138,7 +26086,7 @@
   },
   {
    "package": "expo-linking",
-   "measuredVersion": "58.0.13",
+   "measuredVersion": "58.0.14",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26187,7 +26135,7 @@
   },
   {
    "package": "expo-modules-autolinking",
-   "measuredVersion": "58.0.13",
+   "measuredVersion": "58.0.14",
    "targets": [
     {
      "target": "expo-modules-macros",
@@ -26208,7 +26156,7 @@
   },
   {
    "package": "expo-notifications",
-   "measuredVersion": "58.1.5",
+   "measuredVersion": "58.1.6",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26231,7 +26179,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "58.0.24",
+   "measuredVersion": "58.0.25",
    "targets": [
     {
      "target": "react-native-tab-view",
@@ -26252,7 +26200,7 @@
   },
   {
    "package": "expo-splash-screen",
-   "measuredVersion": "58.0.10",
+   "measuredVersion": "58.0.11",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26272,7 +26220,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "58.0.17",
+   "measuredVersion": "58.0.18",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26444,7 +26392,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.34.0",
+   "measuredVersion": "15.34.1",
    "targets": [
     {
      "target": "astro",
@@ -27104,7 +27052,7 @@
   },
   {
    "package": "jest-expo",
-   "measuredVersion": "58.0.11",
+   "measuredVersion": "58.0.12",
    "targets": [
     {
      "target": "babel-preset-expo",
@@ -28310,7 +28258,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "14.5.0",
+   "measuredVersion": "14.6.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -28994,7 +28942,7 @@
   },
   {
    "package": "nx",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "targets": [
     {
      "target": "@angular-devkit/build-angular",
@@ -29624,7 +29572,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.56.2",
+   "measuredVersion": "5.56.4",
    "targets": [
     {
      "target": "express",
@@ -30106,7 +30054,7 @@
   },
   {
    "package": "react-i18next",
-   "measuredVersion": "17.1.0",
+   "measuredVersion": "17.1.1",
    "targets": [
     {
      "target": "babel-plugin-macros",
@@ -30992,7 +30940,7 @@
   },
   {
    "package": "sass-embedded",
-   "measuredVersion": "1.106.0",
+   "measuredVersion": "1.106.1",
    "targets": [
     {
      "target": "sass",
@@ -32085,7 +32033,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.0.0",
+   "measuredVersion": "65.1.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -32650,7 +32598,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261021.1",
+   "measuredVersion": "1.20261022.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32802,7 +32750,7 @@
   },
   {
    "package": "yeoman-environment",
-   "measuredVersion": "8.3.0",
+   "measuredVersion": "8.5.0",
    "targets": [
     {
      "target": "yeoman-generator",
@@ -32814,7 +32762,7 @@
       "yeoman-generator"
      ],
      "files": [
-      "dist/environment-full.js"
+      "dist/environment/environment-full.js"
      ],
      "fileCount": 1
     }
@@ -32979,7 +32927,7 @@
   },
   {
    "package": "@nx/devkit",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "target": "@angular-devkit/architect",
    "specifiers": [
     "@angular-devkit/architect"
@@ -32987,7 +32935,7 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "target": "eslint-plugin-jsx-a11y",
    "specifiers": [
     "eslint-plugin-jsx-a11y"
@@ -32995,7 +32943,7 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "target": "eslint-plugin-react",
    "specifiers": [
     "eslint-plugin-react"
@@ -33003,7 +32951,7 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "target": "eslint-plugin-react-hooks",
    "specifiers": [
     "eslint-plugin-react-hooks"
@@ -33011,23 +32959,15 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "target": "typescript-eslint",
    "specifiers": [
     "typescript-eslint"
    ]
   },
   {
-   "package": "@nx/rollup",
-   "measuredVersion": "23.3.0",
-   "target": "@swc/core",
-   "specifiers": [
-    "@swc/core"
-   ]
-  },
-  {
    "package": "@nx/webpack",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "target": "swc-loader",
    "specifiers": [
     "swc-loader"
@@ -33116,7 +33056,7 @@
   },
   {
    "package": "@swagger-api/apidom-reference",
-   "measuredVersion": "1.12.1",
+   "measuredVersion": "1.13.3",
    "target": "@swagger-api/apidom-ns-asyncapi-3",
    "specifiers": [
     "@swagger-api/apidom-ns-asyncapi-3"
@@ -33124,7 +33064,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.4.1",
+   "measuredVersion": "7.4.2",
    "target": "@astrojs/cloudflare",
    "specifiers": [
     "@astrojs/cloudflare/info"
@@ -33190,7 +33130,7 @@
   },
   {
    "package": "expo-asset",
-   "measuredVersion": "58.0.17",
+   "measuredVersion": "58.0.18",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -33198,7 +33138,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "58.0.13",
+   "measuredVersion": "58.0.14",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -33206,7 +33146,7 @@
   },
   {
    "package": "expo-clipboard",
-   "measuredVersion": "58.0.3",
+   "measuredVersion": "58.0.4",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -33254,7 +33194,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "58.0.17",
+   "measuredVersion": "58.0.18",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -33270,7 +33210,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.34.0",
+   "measuredVersion": "15.34.1",
    "target": "astro",
    "specifiers": [
     "astro/package.json"
@@ -33278,7 +33218,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.34.0",
+   "measuredVersion": "15.34.1",
    "target": "firebase-functions",
    "specifiers": [
     "firebase-functions",
@@ -33388,7 +33328,7 @@
   },
   {
    "package": "nx",
-   "measuredVersion": "23.3.0",
+   "measuredVersion": "24.0.0",
    "target": "ts-node",
    "specifiers": [
     "ts-node"
@@ -33497,7 +33437,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.0.0",
+   "measuredVersion": "65.1.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -33505,7 +33445,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.0.0",
+   "measuredVersion": "65.1.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -33513,7 +33453,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.0.0",
+   "measuredVersion": "65.1.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -33521,7 +33461,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.0.0",
+   "measuredVersion": "65.1.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"

@@ -1,5 +1,5 @@
-# Generated 2026-10-21 from the 10000 most-downloaded npm packages.
-# 760 packages, 1117 undeclared dependencies.
+# Generated 2026-10-22 from the 10000 most-downloaded npm packages.
+# 759 packages, 1115 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -480,8 +480,11 @@ packageExtensions:
         optional: true
   "@fastify/multipart@*":
     peerDependencies:
+      ajv: "*"
       fastify: "*"
     peerDependenciesMeta:
+      ajv:
+        optional: true
       fastify:
         optional: true
   "@fastify/rate-limit@*":
@@ -1274,12 +1277,6 @@ packageExtensions:
         optional: true
       typescript:
         optional: true
-  "@nx/eslint@*":
-    peerDependencies:
-      "@angular-devkit/core": "*"
-    peerDependenciesMeta:
-      "@angular-devkit/core":
-        optional: true
   "@nx/eslint-plugin@*":
     dependencies:
       "@eslint/js": "*"
@@ -1343,23 +1340,14 @@ packageExtensions:
   "@nx/linter@*":
     dependencies:
       tslib: "*"
-  "@nx/module-federation@*":
-    peerDependencies:
-      "@angular-devkit/build-angular": "*"
-      nx: "*"
-      typescript: "*"
-    peerDependenciesMeta:
-      "@angular-devkit/build-angular":
-        optional: true
-      nx:
-        optional: true
-      typescript:
-        optional: true
   "@nx/node@*":
     peerDependencies:
+      "@nx/rolldown": "*"
       "@nx/vitest": "*"
       "@nx/webpack": "*"
     peerDependenciesMeta:
+      "@nx/rolldown":
+        optional: true
       "@nx/vitest":
         optional: true
       "@nx/webpack":
@@ -1448,6 +1436,12 @@ packageExtensions:
         optional: true
       typescript:
         optional: true
+  "@nx/rspack@*":
+    peerDependencies:
+      yargs: "*"
+    peerDependenciesMeta:
+      yargs:
+        optional: true
   "@nx/storybook@*":
     peerDependencies:
       typescript: "*"
@@ -1477,12 +1471,9 @@ packageExtensions:
         optional: true
   "@nx/webpack@*":
     peerDependencies:
-      "@swc/core": "*"
       swc-loader: "*"
       typescript: "*"
     peerDependenciesMeta:
-      "@swc/core":
-        optional: true
       swc-loader:
         optional: true
       typescript:

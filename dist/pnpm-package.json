@@ -771,9 +771,13 @@
       },
       "@fastify/multipart@*": {
         "peerDependencies": {
+          "ajv": "*",
           "fastify": "*"
         },
         "peerDependenciesMeta": {
+          "ajv": {
+            "optional": true
+          },
           "fastify": {
             "optional": true
           }
@@ -2010,16 +2014,6 @@
           }
         }
       },
-      "@nx/eslint@*": {
-        "peerDependencies": {
-          "@angular-devkit/core": "*"
-        },
-        "peerDependenciesMeta": {
-          "@angular-devkit/core": {
-            "optional": true
-          }
-        }
-      },
       "@nx/eslint-plugin@*": {
         "dependencies": {
           "@eslint/js": "*",
@@ -2111,30 +2105,16 @@
           "tslib": "*"
         }
       },
-      "@nx/module-federation@*": {
-        "peerDependencies": {
-          "@angular-devkit/build-angular": "*",
-          "nx": "*",
-          "typescript": "*"
-        },
-        "peerDependenciesMeta": {
-          "@angular-devkit/build-angular": {
-            "optional": true
-          },
-          "nx": {
-            "optional": true
-          },
-          "typescript": {
-            "optional": true
-          }
-        }
-      },
       "@nx/node@*": {
         "peerDependencies": {
+          "@nx/rolldown": "*",
           "@nx/vitest": "*",
           "@nx/webpack": "*"
         },
         "peerDependenciesMeta": {
+          "@nx/rolldown": {
+            "optional": true
+          },
           "@nx/vitest": {
             "optional": true
           },
@@ -2261,6 +2241,16 @@
           }
         }
       },
+      "@nx/rspack@*": {
+        "peerDependencies": {
+          "yargs": "*"
+        },
+        "peerDependenciesMeta": {
+          "yargs": {
+            "optional": true
+          }
+        }
+      },
       "@nx/storybook@*": {
         "peerDependencies": {
           "typescript": "*"
@@ -2307,14 +2297,10 @@
       },
       "@nx/webpack@*": {
         "peerDependencies": {
-          "@swc/core": "*",
           "swc-loader": "*",
           "typescript": "*"
         },
         "peerDependenciesMeta": {
-          "@swc/core": {
-            "optional": true
-          },
           "swc-loader": {
             "optional": true
           },

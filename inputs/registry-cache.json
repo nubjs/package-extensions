@@ -217,6 +217,7 @@
   "@nx/oxlint": true,
   "@nx/powerpack-conformance": true,
   "@nx/powerpack-license": true,
+  "@nx/rolldown": true,
   "@nx/rsbuild": true,
   "@nx/storybook": true,
   "@nx/vitest": true,
