@@ -4009,20 +4009,6 @@
           }
         }
       },
-      "@volar/typescript@*": {
-        "peerDependencies": {
-          "@volar/language-service": "*",
-          "typescript": "*"
-        },
-        "peerDependenciesMeta": {
-          "@volar/language-service": {
-            "optional": true
-          },
-          "typescript": {
-            "optional": true
-          }
-        }
-      },
       "@vue-macros/common@*": {
         "peerDependencies": {
           "@babel/types": "*",
@@ -9250,6 +9236,16 @@
       "@parcel/node-resolver-core@>=2": {
         "peerDependencies": {
           "@parcel/core": "*"
+        }
+      },
+      "@volar/typescript@*": {
+        "peerDependencies": {
+          "typescript": "*"
+        },
+        "peerDependenciesMeta": {
+          "typescript": {
+            "optional": true
+          }
         }
       },
       "@volar/language-server@*": {

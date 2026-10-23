@@ -5,21 +5,21 @@
     "entries": 159
   },
   "corpus": {
-    "scannedOk": 9982,
+    "scannedOk": 9979,
     "corpusKnown": true
   },
   "buckets": {
-    "applicable": 17,
-    "fixed": 43,
+    "applicable": 16,
+    "fixed": 44,
     "optionality": 1,
     "outOfCorpus": 98,
     "unresolved": 0
   },
   "agreement": {
-    "entriesFullyMatched": 10,
+    "entriesFullyMatched": 9,
     "entriesPartiallyMatched": 1,
     "entriesMissed": 6,
-    "edgeAgreement": "9/22",
+    "edgeAgreement": "8/21",
     "edgesNotReferenced": 6,
     "edgesDynamicSpecifier": 10
   },
@@ -355,23 +355,6 @@
           "@parcel/core": "dynamic"
         },
         "notReferenced": []
-      },
-      {
-        "package": "@volar/typescript",
-        "range": "*",
-        "targets": [
-          "typescript"
-        ],
-        "metaOnly": false,
-        "version": "2.4.28",
-        "undeclared": [
-          "typescript"
-        ],
-        "hit": [
-          "typescript"
-        ],
-        "miss": [],
-        "scanned": true
       },
       {
         "package": "volar-service-typescript",
@@ -762,7 +745,7 @@
           "protobufjs"
         ],
         "metaOnly": false,
-        "version": "9.3.1",
+        "version": "9.4.0",
         "why": "the package now declares every target"
       },
       {
@@ -937,8 +920,8 @@
           "webpack-command"
         ],
         "metaOnly": true,
-        "version": "5.112.0",
-        "why": "latest 5.112.0 is outside <4.44.1"
+        "version": "5.112.1",
+        "why": "latest 5.112.1 is outside <4.44.1"
       },
       {
         "package": "webpack",
@@ -947,8 +930,8 @@
           "webpack-cli"
         ],
         "metaOnly": true,
-        "version": "5.112.0",
-        "why": "latest 5.112.0 is outside <5.0.0-beta.23"
+        "version": "5.112.1",
+        "why": "latest 5.112.1 is outside <5.0.0-beta.23"
       },
       {
         "package": "webpack-dev-server",
@@ -1060,6 +1043,16 @@
         "metaOnly": false,
         "version": "0.4.0",
         "why": "latest 0.4.0 is outside <=0.3.2"
+      },
+      {
+        "package": "@volar/typescript",
+        "range": "*",
+        "targets": [
+          "typescript"
+        ],
+        "metaOnly": false,
+        "version": "2.4.30",
+        "why": "the package now declares every target"
       }
     ],
     "optionality": [

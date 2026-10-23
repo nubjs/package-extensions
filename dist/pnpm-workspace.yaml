@@ -1,5 +1,5 @@
-# Generated 2026-10-22 from the 10000 most-downloaded npm packages.
-# 759 packages, 1115 undeclared dependencies.
+# Generated 2026-10-23 from the 10000 most-downloaded npm packages.
+# 759 packages, 1113 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -2548,15 +2548,6 @@ packageExtensions:
       timing-object: "*"
     peerDependenciesMeta:
       timing-object:
-        optional: true
-  "@volar/typescript@*":
-    peerDependencies:
-      "@volar/language-service": "*"
-      typescript: "*"
-    peerDependenciesMeta:
-      "@volar/language-service":
-        optional: true
-      typescript:
         optional: true
   "@vue-macros/common@*":
     peerDependencies:
@@ -5885,6 +5876,12 @@ packageExtensions:
   "@parcel/node-resolver-core@>=2":
     peerDependencies:
       "@parcel/core": "*"
+  "@volar/typescript@*":
+    peerDependencies:
+      typescript: "*"
+    peerDependenciesMeta:
+      typescript:
+        optional: true
   "@volar/language-server@*":
     peerDependencies:
       typescript: "*"
