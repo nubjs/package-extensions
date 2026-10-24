@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23",
+  "generated": "2026-10-24",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1113,
-      "packages": 627
+      "entries": 1112,
+      "packages": 626
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 759,
-    "selectors": 779,
-    "entries": 1113,
+    "packages": 758,
+    "selectors": 778,
+    "entries": 1112,
     "byClass": {
       "runtime": 181,
       "adapter": 128,
-      "types": 508,
+      "types": 507,
       "deep-path": 0,
       "guarded": 296
     },
     "byField": {
       "dependency": 32,
-      "peer": 1081
+      "peer": 1080
     },
     "candidatesForReview": 76,
     "droppedUnpublishedTargets": 202,
@@ -6648,16 +6648,6 @@
         }
       }
     },
-    "@tokenizer/inflate@*": {
-      "peerDependencies": {
-        "strtok3": "*"
-      },
-      "peerDependenciesMeta": {
-        "strtok3": {
-          "optional": true
-        }
-      }
-    },
     "@trpc/server@*": {
       "peerDependencies": {
         "@tanstack/intent": "*",
@@ -12552,7 +12542,7 @@
     },
     {
       "package": "@anthropic-ai/sdk",
-      "measuredVersion": "1.1.0",
+      "measuredVersion": "1.3.0",
       "targets": [
         {
           "target": "node-fetch",
@@ -13588,7 +13578,7 @@
     },
     {
       "package": "@eslint-react/shared",
-      "measuredVersion": "5.28.7",
+      "measuredVersion": "5.28.8",
       "targets": [
         {
           "target": "react",
@@ -13650,7 +13640,7 @@
     },
     {
       "package": "@expo/cli",
-      "measuredVersion": "58.1.14",
+      "measuredVersion": "58.1.15",
       "targets": [
         {
           "target": "@expo/fingerprint",
@@ -13789,7 +13779,7 @@
     },
     {
       "package": "@expo/metro-config",
-      "measuredVersion": "58.0.16",
+      "measuredVersion": "58.0.17",
       "targets": [
         {
           "target": "babel-preset-expo",
@@ -15771,7 +15761,7 @@
     },
     {
       "package": "@mux/mux-video",
-      "measuredVersion": "0.31.5",
+      "measuredVersion": "0.31.6",
       "targets": [
         {
           "target": "mux-embed",
@@ -16002,7 +15992,7 @@
     },
     {
       "package": "@next/bundle-analyzer",
-      "measuredVersion": "16.4.2",
+      "measuredVersion": "16.4.3",
       "targets": [
         {
           "target": "next",
@@ -16022,7 +16012,7 @@
     },
     {
       "package": "@next/eslint-plugin-next",
-      "measuredVersion": "16.4.2",
+      "measuredVersion": "16.4.3",
       "targets": [
         {
           "target": "eslint",
@@ -16911,7 +16901,7 @@
     },
     {
       "package": "@nx/angular",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@angular-devkit/architect",
@@ -17033,7 +17023,7 @@
     },
     {
       "package": "@nx/cypress",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "typescript",
@@ -17053,7 +17043,7 @@
     },
     {
       "package": "@nx/devkit",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@angular-devkit/architect",
@@ -17129,7 +17119,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@eslint/js",
@@ -17257,7 +17247,7 @@
     },
     {
       "package": "@nx/jest",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@jest/core",
@@ -17306,7 +17296,7 @@
     },
     {
       "package": "@nx/js",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@nx/eslint",
@@ -17440,7 +17430,7 @@
     },
     {
       "package": "@nx/node",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@nx/rolldown",
@@ -17489,7 +17479,7 @@
     },
     {
       "package": "@nx/plugin",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "nx",
@@ -17509,7 +17499,7 @@
     },
     {
       "package": "@nx/react",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@nx/cypress",
@@ -17844,7 +17834,7 @@
     },
     {
       "package": "@nx/rollup",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@swc/core",
@@ -17878,7 +17868,7 @@
     },
     {
       "package": "@nx/rspack",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "yargs",
@@ -17898,7 +17888,7 @@
     },
     {
       "package": "@nx/storybook",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "typescript",
@@ -17918,7 +17908,7 @@
     },
     {
       "package": "@nx/vite",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@nx/eslint",
@@ -17952,7 +17942,7 @@
     },
     {
       "package": "@nx/vitest",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "typescript",
@@ -17972,7 +17962,7 @@
     },
     {
       "package": "@nx/web",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@nx/vitest",
@@ -17992,7 +17982,7 @@
     },
     {
       "package": "@nx/webpack",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "swc-loader",
@@ -18026,7 +18016,7 @@
     },
     {
       "package": "@nx/workspace",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@angular-devkit/schematics",
@@ -19228,7 +19218,7 @@
     },
     {
       "package": "@react-native-community/slider",
-      "measuredVersion": "5.2.1",
+      "measuredVersion": "5.2.2",
       "targets": [
         {
           "target": "@babel/runtime",
@@ -19244,12 +19234,11 @@
           ],
           "files": [
             "dist/RNCSliderNativeComponent.web.js",
-            "dist/RangeSlider.js",
             "dist/Slider.js",
             "dist/components/StepNumber.js",
             "dist/components/TrackMark.js"
           ],
-          "fileCount": 5
+          "fileCount": 4
         },
         {
           "target": "react",
@@ -19263,15 +19252,15 @@
           ],
           "files": [
             "dist/RNCSliderNativeComponent.web.js",
-            "dist/RangeSlider.js",
             "dist/Slider.js",
             "dist/components/StepNumber.js",
             "dist/components/StepsIndicator.js",
             "dist/components/TrackMark.js",
             "src/RNCSliderNativeComponent.web.tsx",
-            "src/Slider.tsx"
+            "src/Slider.tsx",
+            "src/components/StepNumber.tsx"
           ],
-          "fileCount": 12
+          "fileCount": 11
         },
         {
           "target": "react-native",
@@ -19289,20 +19278,20 @@
           "files": [
             "dist/RNCSliderNativeComponent.js",
             "dist/RNCSliderNativeComponent.web.js",
-            "dist/RangeSlider.js",
             "dist/Slider.js",
-            "dist/SliderNativeComponent.js",
             "dist/components/StepNumber.js",
             "dist/components/StepsIndicator.js",
-            "dist/components/TrackMark.js"
+            "dist/components/TrackMark.js",
+            "dist/utils/constants.js",
+            "dist/utils/styles.js"
           ],
-          "fileCount": 19
+          "fileCount": 17
         }
       ]
     },
     {
       "package": "@react-native-firebase/app",
-      "measuredVersion": "27.0.0",
+      "measuredVersion": "27.1.0",
       "targets": [
         {
           "target": "@expo/config-plugins",
@@ -19330,7 +19319,7 @@
     },
     {
       "package": "@react-native-firebase/messaging",
-      "measuredVersion": "27.0.0",
+      "measuredVersion": "27.1.0",
       "targets": [
         {
           "target": "@expo/config-plugins",
@@ -19686,7 +19675,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.70.0",
+      "measuredVersion": "2.71.0",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20918,7 +20907,7 @@
     },
     {
       "package": "@stryker-mutator/core",
-      "measuredVersion": "10.0.0",
+      "measuredVersion": "10.1.1",
       "targets": [
         {
           "target": "typescript",
@@ -20938,7 +20927,7 @@
     },
     {
       "package": "@stryker-mutator/instrumenter",
-      "measuredVersion": "10.0.0",
+      "measuredVersion": "10.1.1",
       "targets": [
         {
           "target": "svelte",
@@ -21594,28 +21583,6 @@
       ]
     },
     {
-      "package": "@tokenizer/inflate",
-      "measuredVersion": "0.5.1",
-      "targets": [
-        {
-          "target": "strtok3",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "strtok3"
-          ],
-          "files": [
-            "lib/GzipHandler.d.ts",
-            "lib/ZipHandler.d.ts",
-            "lib/ZipToken.d.ts"
-          ],
-          "fileCount": 3
-        }
-      ]
-    },
-    {
       "package": "@trpc/server",
       "measuredVersion": "11.19.0",
       "targets": [
@@ -22169,7 +22136,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "25.0.1",
+      "measuredVersion": "25.0.2",
       "targets": [
         {
           "target": "encoding",
@@ -22246,7 +22213,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "encoding",
@@ -23627,7 +23594,7 @@
     },
     {
       "package": "app-builder-lib",
-      "measuredVersion": "26.15.3",
+      "measuredVersion": "26.18.0",
       "targets": [
         {
           "target": "@babel/core",
@@ -23941,7 +23908,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "9.1.5",
+      "measuredVersion": "9.1.6",
       "targets": [
         {
           "target": "@appium/types",
@@ -23976,7 +23943,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "10.9.1",
+      "measuredVersion": "10.9.2",
       "targets": [
         {
           "target": "@appium/types",
@@ -24222,7 +24189,7 @@
     },
     {
       "package": "babel-preset-expo",
-      "measuredVersion": "58.0.19",
+      "measuredVersion": "58.0.20",
       "targets": [
         {
           "target": "@babel/core",
@@ -24343,7 +24310,7 @@
     },
     {
       "package": "bullmq",
-      "measuredVersion": "6.4.0",
+      "measuredVersion": "6.4.1",
       "targets": [
         {
           "target": "@valkey/valkey-glide",
@@ -25306,7 +25273,7 @@
     },
     {
       "package": "eslint-config-next",
-      "measuredVersion": "16.4.2",
+      "measuredVersion": "16.4.3",
       "targets": [
         {
           "target": "next",
@@ -25889,7 +25856,7 @@
     },
     {
       "package": "expo-file-system",
-      "measuredVersion": "58.0.10",
+      "measuredVersion": "58.0.11",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -25916,7 +25883,7 @@
     },
     {
       "package": "expo-font",
-      "measuredVersion": "58.0.9",
+      "measuredVersion": "58.0.10",
       "targets": [
         {
           "target": "expo-asset",
@@ -25963,7 +25930,7 @@
     },
     {
       "package": "expo-image",
-      "measuredVersion": "58.0.16",
+      "measuredVersion": "58.0.17",
       "targets": [
         {
           "target": "expo-app-metrics",
@@ -26069,7 +26036,7 @@
     },
     {
       "package": "expo-location",
-      "measuredVersion": "58.0.18",
+      "measuredVersion": "58.0.19",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26091,7 +26058,7 @@
     },
     {
       "package": "expo-modules-autolinking",
-      "measuredVersion": "58.0.14",
+      "measuredVersion": "58.0.15",
       "targets": [
         {
           "target": "expo-modules-macros",
@@ -26135,7 +26102,7 @@
     },
     {
       "package": "expo-router",
-      "measuredVersion": "58.0.25",
+      "measuredVersion": "58.0.26",
       "targets": [
         {
           "target": "react-native-tab-view",
@@ -26415,7 +26382,7 @@
     },
     {
       "package": "gaxios",
-      "measuredVersion": "8.3.1",
+      "measuredVersion": "8.3.2",
       "targets": [
         {
           "target": "undici-types",
@@ -26813,7 +26780,7 @@
     },
     {
       "package": "i18next-browser-languagedetector",
-      "measuredVersion": "8.2.1",
+      "measuredVersion": "8.2.2",
       "targets": [
         {
           "target": "i18next",
@@ -26855,7 +26822,7 @@
     },
     {
       "package": "i18next-http-backend",
-      "measuredVersion": "4.0.4",
+      "measuredVersion": "4.0.5",
       "targets": [
         {
           "target": "i18next",
@@ -27435,7 +27402,7 @@
     },
     {
       "package": "knip",
-      "measuredVersion": "6.42.1",
+      "measuredVersion": "6.43.0",
       "targets": [
         {
           "target": "vue",
@@ -27770,7 +27737,7 @@
     },
     {
       "package": "media-chrome",
-      "measuredVersion": "4.19.3",
+      "measuredVersion": "4.19.4",
       "targets": [
         {
           "target": "react",
@@ -28294,7 +28261,7 @@
     },
     {
       "package": "natural",
-      "measuredVersion": "8.2.0",
+      "measuredVersion": "8.2.3",
       "targets": [
         {
           "target": "webworker-threads",
@@ -28334,7 +28301,7 @@
     },
     {
       "package": "next",
-      "measuredVersion": "16.4.2",
+      "measuredVersion": "16.4.3",
       "targets": [
         {
           "target": "critters",
@@ -28898,7 +28865,7 @@
     },
     {
       "package": "nx",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "targets": [
         {
           "target": "@angular-devkit/build-angular",
@@ -29439,7 +29406,7 @@
     },
     {
       "package": "pm2",
-      "measuredVersion": "7.1.0",
+      "measuredVersion": "7.1.1",
       "targets": [
         {
           "target": "@opentelemetry/auto-instrumentations-node",
@@ -29528,7 +29495,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.57.0",
+      "measuredVersion": "5.57.1",
       "targets": [
         {
           "target": "express",
@@ -30010,7 +29977,7 @@
     },
     {
       "package": "react-i18next",
-      "measuredVersion": "17.1.4",
+      "measuredVersion": "17.1.7",
       "targets": [
         {
           "target": "babel-plugin-macros",
@@ -32554,7 +32521,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261023.1",
+      "measuredVersion": "1.20261024.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32883,7 +32850,7 @@
     },
     {
       "package": "@nx/devkit",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "target": "@angular-devkit/architect",
       "specifiers": [
         "@angular-devkit/architect"
@@ -32891,7 +32858,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "target": "eslint-plugin-jsx-a11y",
       "specifiers": [
         "eslint-plugin-jsx-a11y"
@@ -32899,7 +32866,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "target": "eslint-plugin-react",
       "specifiers": [
         "eslint-plugin-react"
@@ -32907,7 +32874,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "target": "eslint-plugin-react-hooks",
       "specifiers": [
         "eslint-plugin-react-hooks"
@@ -32915,7 +32882,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "target": "typescript-eslint",
       "specifiers": [
         "typescript-eslint"
@@ -32923,7 +32890,7 @@
     },
     {
       "package": "@nx/webpack",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "target": "swc-loader",
       "specifiers": [
         "swc-loader"
@@ -33118,7 +33085,7 @@
     },
     {
       "package": "expo-file-system",
-      "measuredVersion": "58.0.10",
+      "measuredVersion": "58.0.11",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -33126,7 +33093,7 @@
     },
     {
       "package": "expo-font",
-      "measuredVersion": "58.0.9",
+      "measuredVersion": "58.0.10",
       "target": "expo-asset",
       "specifiers": [
         "expo-asset"
@@ -33134,7 +33101,7 @@
     },
     {
       "package": "expo-font",
-      "measuredVersion": "58.0.9",
+      "measuredVersion": "58.0.10",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -33220,7 +33187,7 @@
     },
     {
       "package": "next",
-      "measuredVersion": "16.4.2",
+      "measuredVersion": "16.4.3",
       "target": "critters",
       "specifiers": [
         "critters"
@@ -33284,7 +33251,7 @@
     },
     {
       "package": "nx",
-      "measuredVersion": "24.0.0",
+      "measuredVersion": "24.0.1",
       "target": "ts-node",
       "specifiers": [
         "ts-node"

@@ -1,5 +1,5 @@
-# Generated 2026-10-23 from the 10000 most-downloaded npm packages.
-# 759 packages, 1113 undeclared dependencies.
+# Generated 2026-10-24 from the 10000 most-downloaded npm packages.
+# 758 packages, 1112 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -2401,12 +2401,6 @@ packageExtensions:
       prosemirror-model: "*"
     peerDependenciesMeta:
       prosemirror-model:
-        optional: true
-  "@tokenizer/inflate@*":
-    peerDependencies:
-      strtok3: "*"
-    peerDependenciesMeta:
-      strtok3:
         optional: true
   "@trpc/server@*":
     peerDependencies:

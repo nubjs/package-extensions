@@ -670,7 +670,7 @@
           "@babel/types"
         ],
         "metaOnly": false,
-        "version": "8.0.7",
+        "version": "8.0.8",
         "why": "the package now declares every target"
       },
       {
@@ -920,8 +920,8 @@
           "webpack-command"
         ],
         "metaOnly": true,
-        "version": "5.112.1",
-        "why": "latest 5.112.1 is outside <4.44.1"
+        "version": "5.112.2",
+        "why": "latest 5.112.2 is outside <4.44.1"
       },
       {
         "package": "webpack",
@@ -930,8 +930,8 @@
           "webpack-cli"
         ],
         "metaOnly": true,
-        "version": "5.112.1",
-        "why": "latest 5.112.1 is outside <5.0.0-beta.23"
+        "version": "5.112.2",
+        "why": "latest 5.112.2 is outside <5.0.0-beta.23"
       },
       {
         "package": "webpack-dev-server",
