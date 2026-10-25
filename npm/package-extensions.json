@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24",
+ "generated": "2026-10-25",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -20014,7 +20014,7 @@
   },
   {
    "package": "@salesforce/sf-plugins-core",
-   "measuredVersion": "13.0.7",
+   "measuredVersion": "13.0.8",
    "targets": [
     {
      "target": "sinon",
@@ -22233,7 +22233,7 @@
   },
   {
    "package": "@verdaccio/config",
-   "measuredVersion": "8.3.3",
+   "measuredVersion": "8.4.0",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -22260,7 +22260,7 @@
   },
   {
    "package": "@verdaccio/core",
-   "measuredVersion": "8.3.3",
+   "measuredVersion": "8.4.0",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -23943,7 +23943,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "10.9.2",
+   "measuredVersion": "10.10.0",
    "targets": [
     {
      "target": "@appium/types",
@@ -24310,7 +24310,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.4.1",
+   "measuredVersion": "6.4.2",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -26746,7 +26746,7 @@
   },
   {
    "package": "http-proxy-middleware",
-   "measuredVersion": "4.2.0",
+   "measuredVersion": "4.2.1",
    "targets": [
     {
      "target": "@hono/node-server",
@@ -29977,7 +29977,7 @@
   },
   {
    "package": "react-i18next",
-   "measuredVersion": "17.1.7",
+   "measuredVersion": "17.1.8",
    "targets": [
     {
      "target": "babel-plugin-macros",
@@ -30766,7 +30766,7 @@
   },
   {
    "package": "rrdom",
-   "measuredVersion": "2.1.7",
+   "measuredVersion": "2.2.0",
    "targets": [
     {
      "target": "@rrweb/types",
@@ -30786,7 +30786,7 @@
   },
   {
    "package": "rrweb-snapshot",
-   "measuredVersion": "2.1.7",
+   "measuredVersion": "2.2.0",
    "targets": [
     {
      "target": "@rrweb/types",
@@ -32018,7 +32018,7 @@
   },
   {
    "package": "verdaccio-htpasswd",
-   "measuredVersion": "13.1.6",
+   "measuredVersion": "13.1.7",
    "targets": [
     {
      "target": "@verdaccio/types",
@@ -32521,7 +32521,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261024.1",
+   "measuredVersion": "1.20261025.1",
    "targets": [
     {
      "target": "pnpapi",
