@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25",
+ "generated": "2026-10-26",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -13025,7 +13025,7 @@
   },
   {
    "package": "@base44/vite-plugin",
-   "measuredVersion": "1.0.47",
+   "measuredVersion": "1.0.48",
    "targets": [
     {
      "target": "vite",
@@ -13163,7 +13163,7 @@
   },
   {
    "package": "@datadog/datadog-ci",
-   "measuredVersion": "5.25.0",
+   "measuredVersion": "5.26.1",
    "targets": [
     {
      "target": "@datadog/mobile-react-native",
@@ -13197,7 +13197,7 @@
   },
   {
    "package": "@datadog/datadog-ci-base",
-   "measuredVersion": "5.25.0",
+   "measuredVersion": "5.26.1",
    "targets": [
     {
      "target": "@datadog/mobile-react-native",
@@ -15375,7 +15375,7 @@
   },
   {
    "package": "@mantine/hooks",
-   "measuredVersion": "9.7.3",
+   "measuredVersion": "9.7.4",
    "targets": [
     {
      "target": "react-dom",
@@ -15924,7 +15924,7 @@
   },
   {
    "package": "@netlify/serverless-functions-api",
-   "measuredVersion": "2.25.0",
+   "measuredVersion": "2.25.1",
    "targets": [
     {
      "target": "@netlify/cache",
@@ -20077,7 +20077,7 @@
   },
   {
    "package": "@secretlint/secretlint-rule-preset-recommend",
-   "measuredVersion": "13.0.7",
+   "measuredVersion": "13.1.0",
    "targets": [
     {
      "target": "@secretlint/secretlint-rule-aws",
@@ -20569,7 +20569,7 @@
   },
   {
    "package": "@storybook/addon-a11y",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20671,7 +20671,7 @@
   },
   {
    "package": "@storybook/addon-onboarding",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20724,7 +20724,7 @@
   },
   {
    "package": "@storybook/addon-themes",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20759,7 +20759,7 @@
   },
   {
    "package": "@storybook/addon-vitest",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "react",
@@ -20779,7 +20779,7 @@
   },
   {
    "package": "@storybook/builder-webpack5",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "@storybook/global",
@@ -20865,7 +20865,7 @@
   },
   {
    "package": "@storybook/nextjs",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "sb-original",
@@ -20887,7 +20887,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "sb-original",
@@ -24351,7 +24351,7 @@
   },
   {
    "package": "coffeescript",
-   "measuredVersion": "2.7.0",
+   "measuredVersion": "2.7.1",
    "targets": [
     {
      "target": "@babel/core",
@@ -25586,7 +25586,7 @@
   },
   {
    "package": "eslint-plugin-vue",
-   "measuredVersion": "10.11.1",
+   "measuredVersion": "10.12.0",
    "targets": [
     {
      "target": "eslint-scope",
@@ -26780,7 +26780,7 @@
   },
   {
    "package": "i18next-browser-languagedetector",
-   "measuredVersion": "8.2.2",
+   "measuredVersion": "8.2.3",
    "targets": [
     {
      "target": "i18next",
@@ -26822,7 +26822,7 @@
   },
   {
    "package": "i18next-http-backend",
-   "measuredVersion": "4.0.5",
+   "measuredVersion": "4.0.6",
    "targets": [
     {
      "target": "i18next",
@@ -28261,7 +28261,7 @@
   },
   {
    "package": "natural",
-   "measuredVersion": "8.2.3",
+   "measuredVersion": "8.2.6",
    "targets": [
     {
      "target": "webworker-threads",
@@ -29495,7 +29495,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.57.1",
+   "measuredVersion": "5.57.2",
    "targets": [
     {
      "target": "express",
@@ -29977,7 +29977,7 @@
   },
   {
    "package": "react-i18next",
-   "measuredVersion": "17.1.8",
+   "measuredVersion": "17.1.9",
    "targets": [
     {
      "target": "babel-plugin-macros",
@@ -30645,7 +30645,7 @@
   },
   {
    "package": "remotion",
-   "measuredVersion": "4.0.538",
+   "measuredVersion": "4.0.539",
    "targets": [
     {
      "target": "zod",
@@ -31105,7 +31105,7 @@
   },
   {
    "package": "storybook",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "@storybook/react",
@@ -31178,7 +31178,7 @@
   },
   {
    "package": "storybook-addon-pseudo-states",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -31752,7 +31752,7 @@
   },
   {
    "package": "unplugin",
-   "measuredVersion": "3.4.0",
+   "measuredVersion": "3.5.0",
    "targets": [
     {
      "target": "bun",
@@ -32521,7 +32521,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261025.1",
+   "measuredVersion": "1.20261026.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32971,7 +32971,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.3",
+   "measuredVersion": "10.6.4",
    "target": "sb-original",
    "specifiers": [
     "sb-original/image-context"

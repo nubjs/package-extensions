@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25",
+  "generated": "2026-10-26",
   "dataset": "78d54121b97ec622",
   "instrument": {
     "yarn": "4.18.0",
@@ -8,8 +8,8 @@
   "tally": {
     "confirmed": 4,
     "confirmedViaPath": 6,
-    "notOnImport": 44,
-    "installFailed": 0,
+    "notOnImport": 43,
+    "installFailed": 1,
     "inconclusive": 3
   },
   "results": [
@@ -439,24 +439,12 @@
     },
     {
       "package": "@storybook/nextjs-vite",
-      "version": "10.6.3",
+      "version": "10.6.4",
       "expected": [
         "sb-original"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "storybook",
-        "next",
-        "react"
-      ],
-      "byOtherIssuers": [
-        "vite-tsconfig-paths -> vite (unprovided peer)"
-      ],
-      "specifiersTried": 12
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@storybook/\u001b[39m\u001b[38;5;173mnextjs-vite\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:10.6.4\u001b[39m: All versions satisfying \"10.6.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m "
     },
     {
       "package": "@swagger-api/apidom-reference",
@@ -992,7 +980,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:5931) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-YDQ0NR/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5894) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-kL8wpO/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
