@@ -1,5 +1,5 @@
-# Generated 2026-10-26 from the 10000 most-downloaded npm packages.
-# 758 packages, 1112 undeclared dependencies.
+# Generated 2026-10-27 from the 10000 most-downloaded npm packages.
+# 757 packages, 1111 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -4808,12 +4808,6 @@ packageExtensions:
       macos-temperature-sensor:
         optional: true
       osx-temperature-sensor:
-        optional: true
-  tmcp@*:
-    peerDependencies:
-      json-schema: "*"
-    peerDependenciesMeta:
-      json-schema:
         optional: true
   toml-eslint-parser@*:
     peerDependencies:

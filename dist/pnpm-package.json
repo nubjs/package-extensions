@@ -7549,16 +7549,6 @@
           }
         }
       },
-      "tmcp@*": {
-        "peerDependencies": {
-          "json-schema": "*"
-        },
-        "peerDependenciesMeta": {
-          "json-schema": {
-            "optional": true
-          }
-        }
-      },
       "toml-eslint-parser@*": {
         "peerDependencies": {
           "eslint": "*"

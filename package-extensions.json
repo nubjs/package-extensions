@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26",
+  "generated": "2026-10-27",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1112,
-      "packages": 626
+      "entries": 1111,
+      "packages": 625
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 758,
-    "selectors": 778,
-    "entries": 1112,
+    "packages": 757,
+    "selectors": 777,
+    "entries": 1111,
     "byClass": {
       "runtime": 181,
       "adapter": 128,
-      "types": 507,
+      "types": 506,
       "deep-path": 0,
       "guarded": 296
     },
     "byField": {
       "dependency": 32,
-      "peer": 1080
+      "peer": 1079
     },
     "candidatesForReview": 76,
     "droppedUnpublishedTargets": 202,
@@ -10428,16 +10428,6 @@
         }
       }
     },
-    "tmcp@*": {
-      "peerDependencies": {
-        "json-schema": "*"
-      },
-      "peerDependenciesMeta": {
-        "json-schema": {
-          "optional": true
-        }
-      }
-    },
     "toml-eslint-parser@*": {
       "peerDependencies": {
         "eslint": "*"
@@ -12611,7 +12601,7 @@
     },
     {
       "package": "@appium/types",
-      "measuredVersion": "1.7.1",
+      "measuredVersion": "1.7.2",
       "targets": [
         {
           "target": "express",
@@ -13435,7 +13425,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.11",
+      "measuredVersion": "0.5.12",
       "targets": [
         {
           "target": "ws",
@@ -13456,7 +13446,7 @@
     },
     {
       "package": "@electric-sql/pglite-tools",
-      "measuredVersion": "0.4.11",
+      "measuredVersion": "0.4.12",
       "targets": [
         {
           "target": "ws",
@@ -13779,7 +13769,7 @@
     },
     {
       "package": "@expo/metro-config",
-      "measuredVersion": "58.0.17",
+      "measuredVersion": "58.0.18",
       "targets": [
         {
           "target": "babel-preset-expo",
@@ -13856,7 +13846,7 @@
     },
     {
       "package": "@fastify/cookie",
-      "measuredVersion": "11.1.3",
+      "measuredVersion": "11.1.5",
       "targets": [
         {
           "target": "fastify",
@@ -13998,7 +13988,7 @@
     },
     {
       "package": "@fastify/static",
-      "measuredVersion": "10.1.7",
+      "measuredVersion": "10.1.8",
       "targets": [
         {
           "target": "fastify",
@@ -14697,7 +14687,7 @@
     },
     {
       "package": "@graphql-tools/graphql-tag-pluck",
-      "measuredVersion": "9.0.7",
+      "measuredVersion": "9.0.8",
       "targets": [
         {
           "target": "@astrojs/compiler",
@@ -15844,7 +15834,7 @@
     },
     {
       "package": "@nestjs/cache-manager",
-      "measuredVersion": "12.0.1",
+      "measuredVersion": "12.0.2",
       "targets": [
         {
           "target": "cacheable",
@@ -15864,7 +15854,7 @@
     },
     {
       "package": "@nestjs/core",
-      "measuredVersion": "12.2.0",
+      "measuredVersion": "12.3.2",
       "targets": [
         {
           "target": "@standard-schema/spec",
@@ -15884,7 +15874,7 @@
     },
     {
       "package": "@nestjs/platform-express",
-      "measuredVersion": "12.2.0",
+      "measuredVersion": "12.3.2",
       "targets": [
         {
           "target": "rxjs",
@@ -15904,7 +15894,7 @@
     },
     {
       "package": "@nestjs/platform-fastify",
-      "measuredVersion": "12.2.0",
+      "measuredVersion": "12.3.2",
       "targets": [
         {
           "target": "rxjs",
@@ -15924,7 +15914,7 @@
     },
     {
       "package": "@netlify/serverless-functions-api",
-      "measuredVersion": "2.25.1",
+      "measuredVersion": "2.26.0",
       "targets": [
         {
           "target": "@netlify/cache",
@@ -16157,7 +16147,7 @@
     },
     {
       "package": "@nuxt/devtools",
-      "measuredVersion": "4.0.0-beta.7",
+      "measuredVersion": "4.0.0",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16191,7 +16181,7 @@
     },
     {
       "package": "@nuxt/devtools-kit",
-      "measuredVersion": "4.0.0-beta.7",
+      "measuredVersion": "4.0.0",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16385,7 +16375,7 @@
     },
     {
       "package": "@nuxt/nitro-server",
-      "measuredVersion": "4.6.2",
+      "measuredVersion": "4.6.3",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16405,7 +16395,7 @@
     },
     {
       "package": "@nuxt/schema",
-      "measuredVersion": "4.6.2",
+      "measuredVersion": "4.6.3",
       "targets": [
         {
           "target": "@unhead/vue",
@@ -16418,7 +16408,7 @@
             "@unhead/vue/vite"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16432,7 +16422,7 @@
             "@vitejs/plugin-vue"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16446,7 +16436,7 @@
             "@vitejs/plugin-vue-jsx"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16460,7 +16450,7 @@
             "@vue/compiler-core"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16474,7 +16464,7 @@
             "@vue/compiler-sfc"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16488,7 +16478,7 @@
             "@vue/language-core"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16502,7 +16492,7 @@
             "autoprefixer"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16516,7 +16506,7 @@
             "chokidar"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16530,7 +16520,7 @@
             "compatx"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16544,7 +16534,7 @@
             "css-minimizer-webpack-plugin"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16558,7 +16548,7 @@
             "cssnano"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16572,7 +16562,7 @@
             "esbuild"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16586,7 +16576,7 @@
             "esbuild-loader"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16600,7 +16590,7 @@
             "h3"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16614,7 +16604,7 @@
             "mini-css-extract-plugin"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16628,7 +16618,7 @@
             "oxc-transform"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16642,7 +16632,7 @@
             "postcss"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16656,7 +16646,7 @@
             "pug"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16670,7 +16660,7 @@
             "rollup-plugin-visualizer"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16684,7 +16674,7 @@
             "unctx/transform"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16698,7 +16688,7 @@
             "unimport"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16712,7 +16702,7 @@
             "untyped"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts",
+            "dist/compatibility-Bq3T9YWB.d.mts",
             "dist/index.d.mts"
           ],
           "fileCount": 2
@@ -16727,7 +16717,7 @@
             "vite"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16741,7 +16731,7 @@
             "vue"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16755,7 +16745,7 @@
             "vue-loader"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16769,7 +16759,7 @@
             "vue-router"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16783,7 +16773,7 @@
             "webpack"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16797,7 +16787,7 @@
             "webpack-bundle-analyzer"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16811,7 +16801,7 @@
             "webpack-dev-middleware"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         },
@@ -16825,7 +16815,7 @@
             "webpack-hot-middleware"
           ],
           "files": [
-            "dist/compatibility-DIbKObPB.d.mts"
+            "dist/compatibility-Bq3T9YWB.d.mts"
           ],
           "fileCount": 1
         }
@@ -16867,7 +16857,7 @@
     },
     {
       "package": "@nuxt/vite-builder",
-      "measuredVersion": "4.6.2",
+      "measuredVersion": "4.6.3",
       "targets": [
         {
           "target": "@babel/core",
@@ -16901,7 +16891,7 @@
     },
     {
       "package": "@nx/angular",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@angular-devkit/architect",
@@ -17023,7 +17013,7 @@
     },
     {
       "package": "@nx/cypress",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "typescript",
@@ -17043,7 +17033,7 @@
     },
     {
       "package": "@nx/devkit",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@angular-devkit/architect",
@@ -17119,7 +17109,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@eslint/js",
@@ -17247,7 +17237,7 @@
     },
     {
       "package": "@nx/jest",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@jest/core",
@@ -17296,7 +17286,7 @@
     },
     {
       "package": "@nx/js",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@nx/eslint",
@@ -17430,7 +17420,7 @@
     },
     {
       "package": "@nx/node",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@nx/rolldown",
@@ -17479,7 +17469,7 @@
     },
     {
       "package": "@nx/plugin",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "nx",
@@ -17499,7 +17489,7 @@
     },
     {
       "package": "@nx/react",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@nx/cypress",
@@ -17834,7 +17824,7 @@
     },
     {
       "package": "@nx/rollup",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@swc/core",
@@ -17868,7 +17858,7 @@
     },
     {
       "package": "@nx/rspack",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "yargs",
@@ -17888,7 +17878,7 @@
     },
     {
       "package": "@nx/storybook",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "typescript",
@@ -17908,7 +17898,7 @@
     },
     {
       "package": "@nx/vite",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@nx/eslint",
@@ -17942,7 +17932,7 @@
     },
     {
       "package": "@nx/vitest",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "typescript",
@@ -17962,7 +17952,7 @@
     },
     {
       "package": "@nx/web",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@nx/vitest",
@@ -17982,7 +17972,7 @@
     },
     {
       "package": "@nx/webpack",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "swc-loader",
@@ -18016,7 +18006,7 @@
     },
     {
       "package": "@nx/workspace",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@angular-devkit/schematics",
@@ -19357,7 +19347,7 @@
     },
     {
       "package": "@react-native/community-cli-plugin",
-      "measuredVersion": "0.88.0",
+      "measuredVersion": "0.88.1",
       "targets": [
         {
           "target": "react-native",
@@ -19381,7 +19371,7 @@
     },
     {
       "package": "@react-native/debugger-frontend",
-      "measuredVersion": "0.88.0",
+      "measuredVersion": "0.88.1",
       "targets": [
         {
           "target": "debug",
@@ -19415,7 +19405,7 @@
     },
     {
       "package": "@react-native/metro-config",
-      "measuredVersion": "0.88.0",
+      "measuredVersion": "0.88.1",
       "targets": [
         {
           "target": "react-native",
@@ -19675,7 +19665,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.71.0",
+      "measuredVersion": "2.71.2",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -21690,7 +21680,7 @@
     },
     {
       "package": "@types/k6",
-      "measuredVersion": "2.3.0",
+      "measuredVersion": "2.3.1",
       "targets": [
         {
           "target": "k6",
@@ -22033,7 +22023,7 @@
     },
     {
       "package": "@typescript-eslint/types",
-      "measuredVersion": "8.72.0",
+      "measuredVersion": "8.72.1",
       "targets": [
         {
           "target": "typescript",
@@ -22136,7 +22126,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "25.0.2",
+      "measuredVersion": "26.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -22213,7 +22203,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "24.0.2",
+      "measuredVersion": "25.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -23540,7 +23530,7 @@
     },
     {
       "package": "algoliasearch-helper",
-      "measuredVersion": "3.30.0",
+      "measuredVersion": "3.30.1",
       "targets": [
         {
           "target": "@algolia/client-search",
@@ -24310,7 +24300,7 @@
     },
     {
       "package": "bullmq",
-      "measuredVersion": "6.4.2",
+      "measuredVersion": "6.5.0",
       "targets": [
         {
           "target": "@valkey/valkey-glide",
@@ -24672,7 +24662,7 @@
     },
     {
       "package": "danger",
-      "measuredVersion": "14.0.7",
+      "measuredVersion": "14.1.0",
       "targets": [
         {
           "target": "prettier",
@@ -25757,7 +25747,7 @@
     },
     {
       "package": "expo-camera",
-      "measuredVersion": "58.0.12",
+      "measuredVersion": "58.0.13",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -25856,7 +25846,7 @@
     },
     {
       "package": "expo-file-system",
-      "measuredVersion": "58.0.11",
+      "measuredVersion": "58.0.12",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -27442,7 +27432,7 @@
     },
     {
       "package": "langsmith",
-      "measuredVersion": "0.11.1",
+      "measuredVersion": "0.11.2",
       "targets": [
         {
           "target": "@jest/globals",
@@ -27815,7 +27805,7 @@
     },
     {
       "package": "metro",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "@babel/runtime",
@@ -27827,7 +27817,7 @@
             "@babel/runtime/package.json"
           ],
           "files": [
-            "src/lib/metroSchemeResolver.js"
+            "src/lib/metroBabelRuntime.js"
           ],
           "fileCount": 1
         },
@@ -27852,7 +27842,7 @@
     },
     {
       "package": "metro-babel-transformer",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "@babel/types",
@@ -27872,7 +27862,7 @@
     },
     {
       "package": "metro-config",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "metro-babel-register",
@@ -27934,7 +27924,7 @@
     },
     {
       "package": "metro-core",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "metro",
@@ -27968,7 +27958,7 @@
     },
     {
       "package": "metro-file-map",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "metro-config",
@@ -27988,7 +27978,7 @@
     },
     {
       "package": "metro-minify-terser",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "metro-transform-worker",
@@ -28008,7 +27998,7 @@
     },
     {
       "package": "metro-resolver",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "metro",
@@ -28028,7 +28018,7 @@
     },
     {
       "package": "metro-source-map",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "@babel/core",
@@ -28048,7 +28038,7 @@
     },
     {
       "package": "metro-transform-plugins",
-      "measuredVersion": "0.87.1",
+      "measuredVersion": "0.87.2",
       "targets": [
         {
           "target": "@babel/types",
@@ -28181,7 +28171,7 @@
     },
     {
       "package": "motion",
-      "measuredVersion": "14.6.0",
+      "measuredVersion": "14.7.1",
       "targets": [
         {
           "target": "motion-dom",
@@ -28865,7 +28855,7 @@
     },
     {
       "package": "nx",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "targets": [
         {
           "target": "@angular-devkit/build-angular",
@@ -29127,7 +29117,7 @@
     },
     {
       "package": "oxc-minify",
-      "measuredVersion": "0.155.0",
+      "measuredVersion": "0.156.0",
       "targets": [
         {
           "target": "@oxc-minify/binding-wasm32-wasi",
@@ -29167,7 +29157,7 @@
     },
     {
       "package": "oxc-parser",
-      "measuredVersion": "0.155.0",
+      "measuredVersion": "0.156.0",
       "targets": [
         {
           "target": "@oxc-parser/binding-wasm32-wasi",
@@ -29228,7 +29218,7 @@
     },
     {
       "package": "oxc-transform",
-      "measuredVersion": "0.155.0",
+      "measuredVersion": "0.156.0",
       "targets": [
         {
           "target": "@oxc-transform/binding-wasm32-wasi",
@@ -30317,7 +30307,7 @@
     },
     {
       "package": "react-native-worklets",
-      "measuredVersion": "0.13.0",
+      "measuredVersion": "0.13.1",
       "targets": [
         {
           "target": "@babel/plugin-transform-react-jsx",
@@ -31488,26 +31478,6 @@
       ]
     },
     {
-      "package": "tmcp",
-      "measuredVersion": "1.20.0",
-      "targets": [
-        {
-          "target": "json-schema",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "json-schema"
-          ],
-          "files": [
-            "src/types/index.d.ts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "toml-eslint-parser",
       "measuredVersion": "1.0.3",
       "targets": [
@@ -31956,7 +31926,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.2.0",
+      "measuredVersion": "65.4.0",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -32402,7 +32372,7 @@
     },
     {
       "package": "vuetify",
-      "measuredVersion": "4.3.0",
+      "measuredVersion": "4.3.1",
       "targets": [
         {
           "target": "@vue/reactivity",
@@ -32521,7 +32491,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261026.1",
+      "measuredVersion": "1.20261027.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32541,7 +32511,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.152.0",
+      "measuredVersion": "4.153.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -32752,7 +32722,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.11",
+      "measuredVersion": "0.5.12",
       "target": "ws",
       "specifiers": [
         "ws"
@@ -32760,7 +32730,7 @@
     },
     {
       "package": "@electric-sql/pglite-tools",
-      "measuredVersion": "0.4.11",
+      "measuredVersion": "0.4.12",
       "target": "ws",
       "specifiers": [
         "ws"
@@ -32810,7 +32780,7 @@
     },
     {
       "package": "@nestjs/platform-express",
-      "measuredVersion": "12.2.0",
+      "measuredVersion": "12.3.2",
       "target": "rxjs",
       "specifiers": [
         "rxjs"
@@ -32818,7 +32788,7 @@
     },
     {
       "package": "@nestjs/platform-fastify",
-      "measuredVersion": "12.2.0",
+      "measuredVersion": "12.3.2",
       "target": "rxjs",
       "specifiers": [
         "rxjs"
@@ -32850,7 +32820,7 @@
     },
     {
       "package": "@nx/devkit",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "target": "@angular-devkit/architect",
       "specifiers": [
         "@angular-devkit/architect"
@@ -32858,7 +32828,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "target": "eslint-plugin-jsx-a11y",
       "specifiers": [
         "eslint-plugin-jsx-a11y"
@@ -32866,7 +32836,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "target": "eslint-plugin-react",
       "specifiers": [
         "eslint-plugin-react"
@@ -32874,7 +32844,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "target": "eslint-plugin-react-hooks",
       "specifiers": [
         "eslint-plugin-react-hooks"
@@ -32882,7 +32852,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "target": "typescript-eslint",
       "specifiers": [
         "typescript-eslint"
@@ -32890,7 +32860,7 @@
     },
     {
       "package": "@nx/webpack",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "target": "swc-loader",
       "specifiers": [
         "swc-loader"
@@ -33085,7 +33055,7 @@
     },
     {
       "package": "expo-file-system",
-      "measuredVersion": "58.0.11",
+      "measuredVersion": "58.0.12",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -33251,7 +33221,7 @@
     },
     {
       "package": "nx",
-      "measuredVersion": "24.0.1",
+      "measuredVersion": "24.0.2",
       "target": "ts-node",
       "specifiers": [
         "ts-node"
@@ -33360,7 +33330,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.2.0",
+      "measuredVersion": "65.4.0",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -33368,7 +33338,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.2.0",
+      "measuredVersion": "65.4.0",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -33376,7 +33346,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.2.0",
+      "measuredVersion": "65.4.0",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -33384,7 +33354,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.2.0",
+      "measuredVersion": "65.4.0",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"
