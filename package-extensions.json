@@ -1,15 +1,15 @@
 {
-  "generated": "2026-10-27",
+  "generated": "2026-10-28",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
-    "scannedOk": 9979,
-    "failed": 21
+    "scannedOk": 9978,
+    "failed": 22
   },
   "sources": {
     "scan": {
-      "entries": 1111,
-      "packages": 625
+      "entries": 1107,
+      "packages": 623
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,25 +28,25 @@
     }
   },
   "totals": {
-    "packages": 757,
-    "selectors": 777,
-    "entries": 1111,
+    "packages": 755,
+    "selectors": 775,
+    "entries": 1107,
     "byClass": {
-      "runtime": 181,
+      "runtime": 180,
       "adapter": 128,
-      "types": 506,
+      "types": 503,
       "deep-path": 0,
       "guarded": 296
     },
     "byField": {
       "dependency": 32,
-      "peer": 1079
+      "peer": 1075
     },
-    "candidatesForReview": 76,
+    "candidatesForReview": 75,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 0,
     "droppedUnresolvedTargets": 0,
-    "withheldDeepPath": 237
+    "withheldDeepPath": 236
   },
   "withheldDeepPath": [
     {
@@ -920,6 +920,7 @@
         "@redocly/client-generator/runtime-sources",
         "@redocly/client-generator/contracts/typescript",
         "@redocly/client-generator/printers/go",
+        "@redocly/client-generator/printers/java",
         "@redocly/client-generator/printers/typescript",
         "@redocly/client-generator/printers/php",
         "@redocly/client-generator/printers/python"
@@ -943,6 +944,7 @@
       ],
       "files": [
         "lib/eject-assets/generators/cli/render.ts",
+        "lib/eject-assets/generators/java/index.ts",
         "lib/eject-assets/generators/mock/render.ts",
         "lib/eject-assets/generators/mock/sample.ts"
       ]
@@ -1683,16 +1685,6 @@
       ],
       "files": [
         "contract-tests/index.js"
-      ]
-    },
-    {
-      "package": "lighthouse",
-      "target": "escape-string-regexp",
-      "specifiers": [
-        "escape-string-regexp"
-      ],
-      "files": [
-        "third-party/esbuild-plugins-polyfills/esbuild-polyfills.js"
       ]
     },
     {
@@ -3419,16 +3411,6 @@
       }
     },
     "@electric-sql/pglite@*": {
-      "peerDependencies": {
-        "ws": "*"
-      },
-      "peerDependenciesMeta": {
-        "ws": {
-          "optional": true
-        }
-      }
-    },
-    "@electric-sql/pglite-tools@*": {
       "peerDependencies": {
         "ws": "*"
       },
@@ -6604,25 +6586,11 @@
         }
       }
     },
-    "@temporalio/client@*": {
-      "peerDependencies": {
-        "protobufjs": "*"
-      },
-      "peerDependenciesMeta": {
-        "protobufjs": {
-          "optional": true
-        }
-      }
-    },
     "@temporalio/workflow@*": {
       "peerDependencies": {
-        "long": "*",
         "source-map": "*"
       },
       "peerDependenciesMeta": {
-        "long": {
-          "optional": true
-        },
         "source-map": {
           "optional": true
         }
@@ -10274,15 +10242,11 @@
     },
     "storybook@*": {
       "peerDependencies": {
-        "@storybook/react": "*",
         "react": "*",
         "react-dom": "*",
         "valibot": "*"
       },
       "peerDependenciesMeta": {
-        "@storybook/react": {
-          "optional": true
-        },
         "react": {
           "optional": true
         },
@@ -12218,7 +12182,7 @@
     },
     {
       "package": "@angular-devkit/build-angular",
-      "measuredVersion": "22.2.4",
+      "measuredVersion": "22.2.5",
       "targets": [
         {
           "target": "zone.js",
@@ -12403,7 +12367,7 @@
     },
     {
       "package": "@angular/cli",
-      "measuredVersion": "22.2.4",
+      "measuredVersion": "22.2.5",
       "targets": [
         {
           "target": "typescript",
@@ -13015,7 +12979,7 @@
     },
     {
       "package": "@base44/vite-plugin",
-      "measuredVersion": "1.0.48",
+      "measuredVersion": "1.0.50",
       "targets": [
         {
           "target": "vite",
@@ -13030,10 +12994,11 @@
             "dist/html-injections-plugin.js",
             "dist/index.d.ts",
             "dist/index.js",
+            "dist/private-data-sources-plugin.js",
             "dist/utils.js",
             "dist/workerd-compat-plugin.js"
           ],
-          "fileCount": 5
+          "fileCount": 6
         }
       ]
     },
@@ -13221,7 +13186,7 @@
     },
     {
       "package": "@datadog/flagging-core",
-      "measuredVersion": "3.2.0",
+      "measuredVersion": "3.3.0",
       "targets": [
         {
           "target": "@openfeature/core",
@@ -13445,28 +13410,6 @@
       ]
     },
     {
-      "package": "@electric-sql/pglite-tools",
-      "measuredVersion": "0.4.12",
-      "targets": [
-        {
-          "target": "ws",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "ws"
-          ],
-          "files": [
-            "dist/chunk-U6BVQWCT.js",
-            "dist/index.cjs",
-            "dist/pg_dump.cjs"
-          ],
-          "fileCount": 3
-        }
-      ]
-    },
-    {
       "package": "@electron-forge/core",
       "measuredVersion": "8.0.1",
       "targets": [
@@ -13630,7 +13573,7 @@
     },
     {
       "package": "@expo/cli",
-      "measuredVersion": "58.1.15",
+      "measuredVersion": "58.1.16",
       "targets": [
         {
           "target": "@expo/fingerprint",
@@ -14591,7 +14534,7 @@
     },
     {
       "package": "@google/gemini-cli",
-      "measuredVersion": "0.65.0",
+      "measuredVersion": "0.66.0",
       "targets": [
         {
           "target": "bufferutil",
@@ -14803,7 +14746,7 @@
     },
     {
       "package": "@hapi/hapi",
-      "measuredVersion": "21.4.11",
+      "measuredVersion": "21.4.12",
       "targets": [
         {
           "target": "joi",
@@ -16022,7 +15965,7 @@
     },
     {
       "package": "@ngx-translate/http-loader",
-      "measuredVersion": "18.0.0",
+      "measuredVersion": "18.1.0",
       "targets": [
         {
           "target": "rxjs",
@@ -19608,7 +19551,7 @@
     },
     {
       "package": "@react-router/dev",
-      "measuredVersion": "8.5.0",
+      "measuredVersion": "8.5.1",
       "targets": [
         {
           "target": "react",
@@ -19665,7 +19608,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.71.2",
+      "measuredVersion": "2.72.0",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -20559,7 +20502,7 @@
     },
     {
       "package": "@storybook/addon-a11y",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
         {
           "target": "@storybook/icons",
@@ -20661,7 +20604,7 @@
     },
     {
       "package": "@storybook/addon-onboarding",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
         {
           "target": "@storybook/icons",
@@ -20714,7 +20657,7 @@
     },
     {
       "package": "@storybook/addon-themes",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
         {
           "target": "@storybook/icons",
@@ -20749,7 +20692,7 @@
     },
     {
       "package": "@storybook/addon-vitest",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
         {
           "target": "react",
@@ -20769,7 +20712,7 @@
     },
     {
       "package": "@storybook/builder-webpack5",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
         {
           "target": "@storybook/global",
@@ -20855,7 +20798,7 @@
     },
     {
       "package": "@storybook/nextjs",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
         {
           "target": "sb-original",
@@ -20877,7 +20820,7 @@
     },
     {
       "package": "@storybook/nextjs-vite",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
         {
           "target": "sb-original",
@@ -21477,43 +21420,9 @@
       ]
     },
     {
-      "package": "@temporalio/client",
-      "measuredVersion": "1.24.0",
-      "targets": [
-        {
-          "target": "protobufjs",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "protobufjs"
-          ],
-          "files": [
-            "lib/connection.d.ts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "@temporalio/workflow",
-      "measuredVersion": "1.24.0",
+      "measuredVersion": "1.25.0",
       "targets": [
-        {
-          "target": "long",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "long"
-          ],
-          "files": [
-            "lib/event-groups.d.ts"
-          ],
-          "fileCount": 1
-        },
         {
           "target": "source-map",
           "class": "types",
@@ -21524,9 +21433,10 @@
             "source-map"
           ],
           "files": [
-            "lib/interfaces.d.ts"
+            "lib/interfaces.d.ts",
+            "lib/internals.d.ts"
           ],
-          "fileCount": 1
+          "fileCount": 2
         }
       ]
     },
@@ -23898,7 +23808,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "9.1.6",
+      "measuredVersion": "9.1.9",
       "targets": [
         {
           "target": "@appium/types",
@@ -24179,7 +24089,7 @@
     },
     {
       "package": "babel-preset-expo",
-      "measuredVersion": "58.0.20",
+      "measuredVersion": "58.0.21",
       "targets": [
         {
           "target": "@babel/core",
@@ -24696,7 +24606,7 @@
     },
     {
       "package": "dd-trace",
-      "measuredVersion": "6.21.0",
+      "measuredVersion": "6.22.0",
       "targets": [
         {
           "target": "@vitest/runner",
@@ -25142,7 +25052,7 @@
     },
     {
       "package": "elkjs",
-      "measuredVersion": "0.12.0",
+      "measuredVersion": "0.12.1",
       "targets": [
         {
           "target": "web-worker",
@@ -25721,7 +25631,7 @@
     },
     {
       "package": "expo-auth-session",
-      "measuredVersion": "58.0.14",
+      "measuredVersion": "58.0.15",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -26092,7 +26002,7 @@
     },
     {
       "package": "expo-router",
-      "measuredVersion": "58.0.26",
+      "measuredVersion": "58.0.27",
       "targets": [
         {
           "target": "react-native-tab-view",
@@ -27432,7 +27342,7 @@
     },
     {
       "package": "langsmith",
-      "measuredVersion": "0.11.2",
+      "measuredVersion": "0.11.3",
       "targets": [
         {
           "target": "@jest/globals",
@@ -27484,7 +27394,7 @@
     },
     {
       "package": "less-loader",
-      "measuredVersion": "13.0.0",
+      "measuredVersion": "13.1.0",
       "targets": [
         {
           "target": "schema-utils",
@@ -27524,7 +27434,7 @@
     },
     {
       "package": "lighthouse",
-      "measuredVersion": "13.5.0",
+      "measuredVersion": "13.6.0",
       "targets": [
         {
           "target": "puppeteer",
@@ -30008,7 +29918,7 @@
     },
     {
       "package": "react-native",
-      "measuredVersion": "0.88.0",
+      "measuredVersion": "0.88.1",
       "targets": [
         {
           "target": "@react-native-community/cli",
@@ -30656,7 +30566,7 @@
     },
     {
       "package": "resend",
-      "measuredVersion": "6.34.1",
+      "measuredVersion": "6.35.0",
       "targets": [
         {
           "target": "react",
@@ -30887,7 +30797,7 @@
     },
     {
       "package": "sass-loader",
-      "measuredVersion": "17.0.1",
+      "measuredVersion": "17.1.0",
       "targets": [
         {
           "target": "schema-utils",
@@ -31095,23 +31005,8 @@
     },
     {
       "package": "storybook",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
-        {
-          "target": "@storybook/react",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@storybook/react"
-          ],
-          "files": [
-            "dist/chunk-D4lKaBz7.d.ts",
-            "dist/chunk-DY6-qCWl.d.ts"
-          ],
-          "fileCount": 2
-        },
         {
           "target": "react",
           "class": "adapter",
@@ -31130,7 +31025,7 @@
             "dist/chunk-BxCdsGId.d.ts",
             "dist/chunk-CSYKg21N.d.ts",
             "dist/chunk-CdMoRv3z.d.ts",
-            "dist/chunk-DY6-qCWl.d.ts"
+            "dist/chunk-DrDCFVzm.d.ts"
           ],
           "fileCount": 15
         },
@@ -31168,7 +31063,7 @@
     },
     {
       "package": "storybook-addon-pseudo-states",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "targets": [
         {
           "target": "@storybook/icons",
@@ -31222,7 +31117,7 @@
     },
     {
       "package": "stylus-loader",
-      "measuredVersion": "9.0.0",
+      "measuredVersion": "9.1.0",
       "targets": [
         {
           "target": "schema-utils",
@@ -31444,7 +31339,7 @@
     },
     {
       "package": "systeminformation",
-      "measuredVersion": "5.33.16",
+      "measuredVersion": "5.33.17",
       "targets": [
         {
           "target": "macos-temperature-sensor",
@@ -31722,7 +31617,7 @@
     },
     {
       "package": "unplugin",
-      "measuredVersion": "3.5.0",
+      "measuredVersion": "3.7.0",
       "targets": [
         {
           "target": "bun",
@@ -31926,7 +31821,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.4.0",
+      "measuredVersion": "65.5.0",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -32491,7 +32386,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261027.1",
+      "measuredVersion": "1.20261028.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32511,7 +32406,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.153.0",
+      "measuredVersion": "4.154.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -32729,14 +32624,6 @@
       ]
     },
     {
-      "package": "@electric-sql/pglite-tools",
-      "measuredVersion": "0.4.12",
-      "target": "ws",
-      "specifiers": [
-        "ws"
-      ]
-    },
-    {
       "package": "@expo/dom-webview",
       "measuredVersion": "58.0.2",
       "target": "expo-modules-core",
@@ -32804,7 +32691,7 @@
     },
     {
       "package": "@ngx-translate/http-loader",
-      "measuredVersion": "18.0.0",
+      "measuredVersion": "18.1.0",
       "target": "rxjs",
       "specifiers": [
         "rxjs"
@@ -32941,7 +32828,7 @@
     },
     {
       "package": "@storybook/nextjs-vite",
-      "measuredVersion": "10.6.4",
+      "measuredVersion": "10.6.5",
       "target": "sb-original",
       "specifiers": [
         "sb-original/image-context"
@@ -33031,7 +32918,7 @@
     },
     {
       "package": "expo-auth-session",
-      "measuredVersion": "58.0.14",
+      "measuredVersion": "58.0.15",
       "target": "expo-modules-core",
       "specifiers": [
         "expo-modules-core"
@@ -33254,7 +33141,7 @@
     },
     {
       "package": "react-native",
-      "measuredVersion": "0.88.0",
+      "measuredVersion": "0.88.1",
       "target": "@react-native-community/cli",
       "specifiers": [
         "@react-native-community/cli"
@@ -33330,7 +33217,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.4.0",
+      "measuredVersion": "65.5.0",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -33338,7 +33225,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.4.0",
+      "measuredVersion": "65.5.0",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -33346,7 +33233,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.4.0",
+      "measuredVersion": "65.5.0",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -33354,7 +33241,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.4.0",
+      "measuredVersion": "65.5.0",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"

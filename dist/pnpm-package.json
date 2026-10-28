@@ -549,16 +549,6 @@
           }
         }
       },
-      "@electric-sql/pglite-tools@*": {
-        "peerDependencies": {
-          "ws": "*"
-        },
-        "peerDependenciesMeta": {
-          "ws": {
-            "optional": true
-          }
-        }
-      },
       "@electron-forge/core@*": {
         "peerDependencies": {
           "@malept/cross-spawn-promise": "*"
@@ -3725,25 +3715,11 @@
           }
         }
       },
-      "@temporalio/client@*": {
-        "peerDependencies": {
-          "protobufjs": "*"
-        },
-        "peerDependenciesMeta": {
-          "protobufjs": {
-            "optional": true
-          }
-        }
-      },
       "@temporalio/workflow@*": {
         "peerDependencies": {
-          "long": "*",
           "source-map": "*"
         },
         "peerDependenciesMeta": {
-          "long": {
-            "optional": true
-          },
           "source-map": {
             "optional": true
           }
@@ -7395,15 +7371,11 @@
       },
       "storybook@*": {
         "peerDependencies": {
-          "@storybook/react": "*",
           "react": "*",
           "react-dom": "*",
           "valibot": "*"
         },
         "peerDependenciesMeta": {
-          "@storybook/react": {
-            "optional": true
-          },
           "react": {
             "optional": true
           },

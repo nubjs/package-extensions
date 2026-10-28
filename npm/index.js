@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.38 — generated 2026-10-27, do not edit.
-// 757 packages, 1111 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.39 — generated 2026-10-28, do not edit.
+// 755 packages, 1107 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -693,19 +693,6 @@ exports.packageExtensions = [
  ],
  [
   "@electric-sql/pglite@*",
-  {
-   "peerDependencies": {
-    "ws": "*"
-   },
-   "peerDependenciesMeta": {
-    "ws": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@electric-sql/pglite-tools@*",
   {
    "peerDependencies": {
     "ws": "*"
@@ -4589,29 +4576,12 @@ exports.packageExtensions = [
   }
  ],
  [
-  "@temporalio/client@*",
-  {
-   "peerDependencies": {
-    "protobufjs": "*"
-   },
-   "peerDependenciesMeta": {
-    "protobufjs": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@temporalio/workflow@*",
   {
    "peerDependencies": {
-    "long": "*",
     "source-map": "*"
    },
    "peerDependenciesMeta": {
-    "long": {
-     "optional": true
-    },
     "source-map": {
      "optional": true
     }
@@ -9103,15 +9073,11 @@ exports.packageExtensions = [
   "storybook@*",
   {
    "peerDependencies": {
-    "@storybook/react": "*",
     "react": "*",
     "react-dom": "*",
     "valibot": "*"
    },
    "peerDependenciesMeta": {
-    "@storybook/react": {
-     "optional": true
-    },
     "react": {
      "optional": true
     },
