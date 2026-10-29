@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-28",
+  "generated": "2026-10-29",
   "dataset": "e53b784414283841",
   "instrument": {
     "yarn": "4.18.0",
@@ -7,9 +7,9 @@
   },
   "tally": {
     "confirmed": 4,
-    "confirmedViaPath": 6,
-    "notOnImport": 38,
-    "installFailed": 5,
+    "confirmedViaPath": 4,
+    "notOnImport": 34,
+    "installFailed": 11,
     "inconclusive": 3
   },
   "results": [
@@ -47,18 +47,18 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "version": "0.5.12",
+      "version": "0.5.13",
       "expected": [
         "ws"
       ],
       "verdict": "notOnImport",
       "confirmed": [],
       "confirmedViaPath": [],
-      "citedPathsTried": 2,
+      "citedPathsTried": 3,
       "accessedButNotPredicted": [],
       "unprovidedPeers": [],
       "byOtherIssuers": [],
-      "specifiersTried": 3
+      "specifiersTried": 4
     },
     {
       "package": "@expo/dom-webview",
@@ -131,25 +131,14 @@
     },
     {
       "package": "@mastra/core",
-      "version": "1.79.0",
+      "version": "1.80.0",
       "expected": [
         "@workflow/serde",
         "msw",
         "undici"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 10,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "zod"
-      ],
-      "byOtherIssuers": [
-        "@mastra/schema-compat -> zod (unprovided peer)",
-        "@ai-sdk/provider-utils -> zod (unprovided peer)"
-      ],
-      "specifiersTried": 36
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.80.0\u001b[39m: All versions satisfying \"1.80.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
     },
     {
       "package": "@nestjs/platform-express",
@@ -187,19 +176,13 @@
     },
     {
       "package": "@newrelic/security-agent",
-      "version": "3.0.4",
+      "version": "3.0.5",
       "expected": [
         "@aws-sdk/client-lambda",
         "@grpc/grpc-js"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 3
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@newrelic/\u001b[39m\u001b[38;5;173msecurity-agent\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:3.0.5\u001b[39m: All versions satisfying \"3.0.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m "
     },
     {
       "package": "@ngx-translate/http-loader",
@@ -207,8 +190,16 @@
       "expected": [
         "rxjs"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@ngx-translate/\u001b[39m\u001b[38;5;173mhttp-loader\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:18.1.0\u001b[39m: All versions satisfying \"18.1.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b["
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "@angular/common"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@nivo/line",
@@ -420,8 +411,20 @@
       "expected": [
         "sb-original"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@storybook/\u001b[39m\u001b[38;5;173mnextjs-vite\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:10.6.5\u001b[39m: All versions satisfying \"10.6.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m "
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "storybook",
+        "next",
+        "react"
+      ],
+      "byOtherIssuers": [
+        "vite-tsconfig-paths -> vite (unprovided peer)"
+      ],
+      "specifiersTried": 12
     },
     {
       "package": "@swagger-api/apidom-reference",
@@ -443,19 +446,13 @@
     },
     {
       "package": "astro",
-      "version": "7.4.2",
+      "version": "7.4.4",
       "expected": [
         "@astrojs/cloudflare",
         "typescript"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 28
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mastro\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.4.4\u001b[39m: All versions satisfying \"7.4.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mastro\u001b[39m\u001b[38;5"
     },
     {
       "package": "domino",
@@ -499,29 +496,21 @@
     },
     {
       "package": "expo-asset",
-      "version": "58.0.18",
-      "expected": [
-        "expo-modules-core"
-      ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 8,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "expo"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 13
-    },
-    {
-      "package": "expo-auth-session",
-      "version": "58.0.15",
+      "version": "58.0.19",
       "expected": [
         "expo-modules-core"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-auth-session\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.15\u001b[39m: All versions satisfying \"58.0.15\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-asset\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.19\u001b[39m: All versions satisfying \"58.0.19\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-as"
+    },
+    {
+      "package": "expo-auth-session",
+      "version": "58.0.16",
+      "expected": [
+        "expo-modules-core"
+      ],
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-auth-session\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.16\u001b[39m: All versions satisfying \"58.0.16\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
     },
     {
       "package": "expo-clipboard",
@@ -555,38 +544,22 @@
     },
     {
       "package": "expo-file-system",
-      "version": "58.0.12",
+      "version": "58.0.13",
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 8,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "expo"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 14
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-file-system\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.13\u001b[39m: All versions satisfying \"58.0.13\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173me"
     },
     {
       "package": "expo-font",
-      "version": "58.0.10",
+      "version": "58.0.11",
       "expected": [
         "expo-asset",
         "expo-modules-core"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 13,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "expo"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 18
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-font\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.11\u001b[39m: All versions satisfying \"58.0.11\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-fon"
     },
     {
       "package": "expo-keep-awake",
@@ -605,53 +578,31 @@
     },
     {
       "package": "expo-updates",
-      "version": "58.0.18",
+      "version": "58.0.19",
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "expo-modules-core"
-      ],
-      "citedPathsTried": 7,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 9
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-updates\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.19\u001b[39m: All versions satisfying \"58.0.19\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-"
     },
     {
       "package": "expo-video",
-      "version": "58.0.12",
+      "version": "58.0.13",
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 4,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 5
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-video\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.13\u001b[39m: All versions satisfying \"58.0.13\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-vi"
     },
     {
       "package": "firebase-tools",
-      "version": "15.34.1",
+      "version": "15.34.2",
       "expected": [
         "astro",
         "firebase-functions"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "firebase-functions"
-      ],
-      "citedPathsTried": 9,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 10
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mfirebase-tools\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:15.34.2\u001b[39m: All versions satisfying \"15.34.2\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mfir"
     },
     {
       "package": "http-call",
@@ -851,8 +802,14 @@
       "expected": [
         "@react-native-community/cli"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mreact-native\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.88.1\u001b[39m: All versions satisfying \"0.88.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mreact-n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 6
     },
     {
       "package": "react-native-gesture-handler",
@@ -943,11 +900,11 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:5807) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-5YqDrb/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5669) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-1CJTQ3/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
-      "version": "65.5.0",
+      "version": "65.7.0",
       "expected": [
         "@vltpkg/graph",
         "@vltpkg/package-info",
@@ -955,7 +912,7 @@
         "path-scurry"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:65.5.0\u001b[39m: All versions satisfying \"65.5.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:65.7.0\u001b[39m: All versions satisfying \"65.7.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m\u001b["
     }
   ]
 }

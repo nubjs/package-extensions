@@ -1,4 +1,4 @@
-// @nubjs/extensions 1.0.39 — generated 2026-10-28, do not edit.
+// @nubjs/extensions 1.0.40 — generated 2026-10-29, do not edit.
 // 755 packages, 1107 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
