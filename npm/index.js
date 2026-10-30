@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.40 — generated 2026-10-29, do not edit.
-// 755 packages, 1107 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.40 — generated 2026-10-30, do not edit.
+// 753 packages, 1096 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -4498,32 +4498,6 @@ exports.packageExtensions = [
   }
  ],
  [
-  "@tanstack/devtools@*",
-  {
-   "peerDependencies": {
-    "@tanstack/intent": "*"
-   },
-   "peerDependenciesMeta": {
-    "@tanstack/intent": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@tanstack/devtools-event-client@*",
-  {
-   "peerDependencies": {
-    "@tanstack/intent": "*"
-   },
-   "peerDependenciesMeta": {
-    "@tanstack/intent": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@tanstack/react-start-rsc@*",
   {
    "peerDependencies": {
@@ -7760,41 +7734,15 @@ exports.packageExtensions = [
  [
   "nitro@*",
   {
-   "dependencies": {
-    "croner": "*",
-    "scule": "*",
-    "ufo": "*",
-    "unctx": "*"
-   },
    "peerDependencies": {
-    "defu": "*",
-    "destr": "*",
-    "get-port-please": "*",
-    "rendu": "*",
-    "source-map": "*",
-    "youch": "*",
-    "youch-core": "*"
+    "db0": "*",
+    "unstorage": "*"
    },
    "peerDependenciesMeta": {
-    "defu": {
+    "db0": {
      "optional": true
     },
-    "destr": {
-     "optional": true
-    },
-    "get-port-please": {
-     "optional": true
-    },
-    "rendu": {
-     "optional": true
-    },
-    "source-map": {
-     "optional": true
-    },
-    "youch": {
-     "optional": true
-    },
-    "youch-core": {
+    "unstorage": {
      "optional": true
     }
    }

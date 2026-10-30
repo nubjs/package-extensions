@@ -620,6 +620,7 @@
   "d3-transition": true,
   "d3-zoom": true,
   "date-fns": true,
+  "db0": true,
   "debug": true,
   "deep-extend": true,
   "define-data-property": true,

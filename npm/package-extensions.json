@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29",
+ "generated": "2026-10-30",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1107,
-   "packages": 623
+   "entries": 1096,
+   "packages": 621
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
   }
  },
  "totals": {
-  "packages": 755,
-  "selectors": 775,
-  "entries": 1107,
+  "packages": 753,
+  "selectors": 773,
+  "entries": 1096,
   "byClass": {
-   "runtime": 180,
+   "runtime": 171,
    "adapter": 128,
    "types": 503,
    "deep-path": 0,
-   "guarded": 296
+   "guarded": 294
   },
   "byField": {
-   "dependency": 32,
-   "peer": 1075
+   "dependency": 28,
+   "peer": 1068
   },
-  "candidatesForReview": 75,
+  "candidatesForReview": 68,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
@@ -6526,26 +6526,6 @@
     }
    }
   },
-  "@tanstack/devtools@*": {
-   "peerDependencies": {
-    "@tanstack/intent": "*"
-   },
-   "peerDependenciesMeta": {
-    "@tanstack/intent": {
-     "optional": true
-    }
-   }
-  },
-  "@tanstack/devtools-event-client@*": {
-   "peerDependencies": {
-    "@tanstack/intent": "*"
-   },
-   "peerDependenciesMeta": {
-    "@tanstack/intent": {
-     "optional": true
-    }
-   }
-  },
   "@tanstack/react-start-rsc@*": {
    "peerDependencies": {
     "vite": "*"
@@ -9184,41 +9164,15 @@
    }
   },
   "nitro@*": {
-   "dependencies": {
-    "croner": "*",
-    "scule": "*",
-    "ufo": "*",
-    "unctx": "*"
-   },
    "peerDependencies": {
-    "defu": "*",
-    "destr": "*",
-    "get-port-please": "*",
-    "rendu": "*",
-    "source-map": "*",
-    "youch": "*",
-    "youch-core": "*"
+    "db0": "*",
+    "unstorage": "*"
    },
    "peerDependenciesMeta": {
-    "defu": {
+    "db0": {
      "optional": true
     },
-    "destr": {
-     "optional": true
-    },
-    "get-port-please": {
-     "optional": true
-    },
-    "rendu": {
-     "optional": true
-    },
-    "source-map": {
-     "optional": true
-    },
-    "youch": {
-     "optional": true
-    },
-    "youch-core": {
+    "unstorage": {
      "optional": true
     }
    }
@@ -12095,7 +12049,7 @@
  "findings": [
   {
    "package": "@acemir/cssom",
-   "measuredVersion": "0.9.32",
+   "measuredVersion": "0.10.1",
    "targets": [
     {
      "target": "cssstyle",
@@ -12107,16 +12061,9 @@
       "cssstyle"
      ],
      "files": [
-      "build/CSSOM.js",
-      "lib/CSSFontFaceRule.js",
-      "lib/CSSKeyframeRule.js",
-      "lib/CSSNestedDeclarations.js",
-      "lib/CSSPageRule.js",
-      "lib/CSSStyleRule.js",
-      "lib/clone.js",
       "lib/cssstyleTryCatchBlock.js"
      ],
-     "fileCount": 8
+     "fileCount": 1
     }
    ]
   },
@@ -12387,7 +12334,7 @@
   },
   {
    "package": "@angular/common",
-   "measuredVersion": "22.2.3",
+   "measuredVersion": "22.2.4",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -12408,7 +12355,7 @@
   },
   {
    "package": "@angular/language-service",
-   "measuredVersion": "22.2.3",
+   "measuredVersion": "22.2.4",
    "targets": [
     {
      "target": "@angular/compiler",
@@ -12475,7 +12422,7 @@
   },
   {
    "package": "@angular/router",
-   "measuredVersion": "22.2.3",
+   "measuredVersion": "22.2.4",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -12599,7 +12546,7 @@
   },
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.13",
+   "measuredVersion": "1.6.14",
    "targets": [
     {
      "target": "@applitools/test-utils",
@@ -13186,7 +13133,7 @@
   },
   {
    "package": "@datadog/flagging-core",
-   "measuredVersion": "3.3.0",
+   "measuredVersion": "3.4.0",
    "targets": [
     {
      "target": "@openfeature/core",
@@ -13199,15 +13146,15 @@
      ],
      "files": [
       "cjs/configuration/configuration.d.ts",
+      "cjs/configuration/exposure-decision.d.ts",
       "cjs/configuration/exposureEvent.d.ts",
       "cjs/configuration/exposureEvent.types.d.ts",
       "cjs/configuration/flagEvaluationAggregator.d.ts",
       "cjs/configuration/flagEvaluationEvent.d.ts",
       "cjs/configuration/flagEvaluationEvent.types.d.ts",
-      "cjs/configuration/precomputed-context.d.ts",
-      "cjs/configuration/prepared-rules-response.d.ts"
+      "cjs/configuration/precomputed-context.d.ts"
      ],
-     "fileCount": 15
+     "fileCount": 17
     }
    ]
   },
@@ -15858,7 +15805,7 @@
   },
   {
    "package": "@netlify/serverless-functions-api",
-   "measuredVersion": "2.26.0",
+   "measuredVersion": "2.27.0",
    "targets": [
     {
      "target": "@netlify/cache",
@@ -19824,7 +19771,7 @@
   },
   {
    "package": "@rolldown/binding-wasm32-wasi",
-   "measuredVersion": "1.2.15",
+   "measuredVersion": "1.2.16",
    "targets": [
     {
      "target": "@oxc-project/types",
@@ -19914,7 +19861,7 @@
   },
   {
    "package": "@rushstack/rush-sdk",
-   "measuredVersion": "5.181.0",
+   "measuredVersion": "5.182.0",
    "targets": [
     {
      "target": "@rushstack/stream-collator",
@@ -19991,7 +19938,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.25.2",
+   "measuredVersion": "0.26.0",
    "targets": [
     {
      "target": "har-format",
@@ -21294,46 +21241,6 @@
    ]
   },
   {
-   "package": "@tanstack/devtools",
-   "measuredVersion": "0.15.0",
-   "targets": [
-    {
-     "target": "@tanstack/intent",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "@tanstack/intent/intent-library"
-     ],
-     "files": [
-      "bin/intent.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "@tanstack/devtools-event-client",
-   "measuredVersion": "0.5.0",
-   "targets": [
-    {
-     "target": "@tanstack/intent",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "@tanstack/intent/intent-library"
-     ],
-     "files": [
-      "bin/intent.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "@tanstack/react-start-rsc",
    "measuredVersion": "0.1.65",
    "targets": [
@@ -22037,7 +21944,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "26.0.1",
+   "measuredVersion": "27.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -22057,7 +21964,7 @@
   },
   {
    "package": "@vercel/otel",
-   "measuredVersion": "2.1.3",
+   "measuredVersion": "2.2.0",
    "targets": [
     {
      "target": "@opentelemetry/core",
@@ -22114,7 +22021,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "25.0.1",
+   "measuredVersion": "26.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -22242,7 +22149,7 @@
   },
   {
    "package": "@videojs/http-streaming",
-   "measuredVersion": "3.17.5",
+   "measuredVersion": "3.17.6",
    "targets": [
     {
      "target": "@xmldom/xmldom",
@@ -23248,7 +23155,7 @@
   },
   {
    "package": "@vue/language-core",
-   "measuredVersion": "3.3.13",
+   "measuredVersion": "3.3.14",
    "targets": [
     {
      "target": "@vue/compiler-sfc",
@@ -23809,7 +23716,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "9.1.9",
+   "measuredVersion": "9.1.11",
    "targets": [
     {
      "target": "@appium/types",
@@ -25447,7 +25354,7 @@
   },
   {
    "package": "eslint-plugin-security",
-   "measuredVersion": "4.2.0",
+   "measuredVersion": "4.2.1",
    "targets": [
     {
      "target": "eslint",
@@ -26462,7 +26369,7 @@
   },
   {
    "package": "hast-util-from-parse5",
-   "measuredVersion": "8.0.3",
+   "measuredVersion": "8.0.4",
    "targets": [
     {
      "target": "parse5",
@@ -26681,7 +26588,7 @@
   },
   {
    "package": "i18next-browser-languagedetector",
-   "measuredVersion": "8.2.3",
+   "measuredVersion": "8.2.4",
    "targets": [
     {
      "target": "i18next",
@@ -26723,7 +26630,7 @@
   },
   {
    "package": "i18next-http-backend",
-   "measuredVersion": "4.0.6",
+   "measuredVersion": "4.0.7",
    "targets": [
     {
      "target": "i18next",
@@ -27303,7 +27210,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.43.0",
+   "measuredVersion": "6.44.0",
    "targets": [
     {
      "target": "vue",
@@ -27343,7 +27250,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.11.4",
+   "measuredVersion": "0.11.5",
    "targets": [
     {
      "target": "@jest/globals",
@@ -28082,7 +27989,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "14.7.1",
+   "measuredVersion": "14.9.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -28362,172 +28269,33 @@
   },
   {
    "package": "nitro",
-   "measuredVersion": "3.0.260903-beta",
+   "measuredVersion": "3.0.261029-rc",
    "targets": [
     {
-     "target": "croner",
+     "target": "db0",
      "class": "adapter",
-     "field": "dependency",
+     "field": "peer",
      "candidate": false,
-     "reason": "probe 3.0.260903-beta: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access croner\"",
+     "reason": "adapter class — the consumer picked and installed the backend",
      "specifiers": [
-      "croner"
+      "db0"
      ],
      "files": [
-      "dist/runtime/internal/task.mjs"
+      "dist/runtime/internal/database.mjs"
      ],
      "fileCount": 1
     },
     {
-     "target": "defu",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "defu"
-     ],
-     "files": [
-      "dist/_build/rolldown.mjs",
-      "dist/_build/rollup.mjs",
-      "dist/_chunks/nitro.mjs",
-      "dist/_libs/c12+rc9.mjs",
-      "dist/_presets.mjs",
-      "dist/vite.mjs"
-     ],
-     "fileCount": 6
-    },
-    {
-     "target": "destr",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "destr"
-     ],
-     "files": [
-      "dist/_libs/c12+rc9.mjs",
-      "dist/cli/_chunks/run.mjs"
-     ],
-     "fileCount": 2
-    },
-    {
-     "target": "get-port-please",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "get-port-please"
-     ],
-     "files": [
-      "dist/_chunks/nitro4.mjs"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "rendu",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "rendu"
-     ],
-     "files": [
-      "dist/_build/common.mjs"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "scule",
-     "class": "runtime",
-     "field": "dependency",
-     "candidate": false,
-     "reason": "probe 3.0.260903-beta: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access scule\"",
-     "specifiers": [
-      "scule"
-     ],
-     "files": [
-      "dist/_build/common.mjs",
-      "dist/_presets.mjs",
-      "dist/runtime/internal/runtime-config.mjs"
-     ],
-     "fileCount": 3
-    },
-    {
-     "target": "source-map",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "source-map"
-     ],
-     "files": [
-      "dist/_dev.mjs"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "ufo",
-     "class": "runtime",
-     "field": "dependency",
-     "candidate": false,
-     "reason": "probe 3.0.260903-beta: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access ufo\"",
-     "specifiers": [
-      "ufo"
-     ],
-     "files": [
-      "dist/_build/common.mjs",
-      "dist/_build/vite.dev.mjs",
-      "dist/_chunks/nitro.mjs",
-      "dist/_chunks/nitro2.mjs",
-      "dist/_dev.mjs",
-      "dist/_presets.mjs"
-     ],
-     "fileCount": 6
-    },
-    {
-     "target": "unctx",
+     "target": "unstorage",
      "class": "adapter",
-     "field": "dependency",
+     "field": "peer",
      "candidate": false,
-     "reason": "probe 3.0.260903-beta: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access unctx\"",
+     "reason": "adapter class — the consumer picked and installed the backend",
      "specifiers": [
-      "unctx"
+      "unstorage"
      ],
      "files": [
-      "dist/runtime/internal/context.mjs"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "youch",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "youch"
-     ],
-     "files": [
-      "dist/_dev.mjs"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "youch-core",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "youch-core"
-     ],
-     "files": [
-      "dist/_dev.mjs"
+      "dist/runtime/internal/kv.mjs"
      ],
      "fileCount": 1
     }
@@ -29396,7 +29164,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.60.0",
+   "measuredVersion": "5.61.0",
    "targets": [
     {
      "target": "express",
@@ -29562,7 +29330,7 @@
   },
   {
    "package": "prosemirror-changeset",
-   "measuredVersion": "2.4.4",
+   "measuredVersion": "2.4.5",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -29696,7 +29464,7 @@
   },
   {
    "package": "prosemirror-schema-list",
-   "measuredVersion": "1.5.1",
+   "measuredVersion": "1.6.0",
    "targets": [
     {
      "target": "orderedmap",
@@ -31340,7 +31108,7 @@
   },
   {
    "package": "systeminformation",
-   "measuredVersion": "5.33.18",
+   "measuredVersion": "5.33.19",
    "targets": [
     {
      "target": "macos-temperature-sensor",
@@ -31435,7 +31203,7 @@
   },
   {
    "package": "tuf-js",
-   "measuredVersion": "6.0.0",
+   "measuredVersion": "6.0.1",
    "targets": [
     {
      "target": "retry",
@@ -31822,7 +31590,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.7.0",
+   "measuredVersion": "65.8.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -32387,7 +32155,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261029.1",
+   "measuredVersion": "1.20261030.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32407,7 +32175,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.155.0",
+   "measuredVersion": "4.156.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -32602,7 +32370,7 @@
  "candidates": [
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.13",
+   "measuredVersion": "1.6.14",
    "target": "@applitools/test-utils",
    "specifiers": [
     "@applitools/test-utils/src/parse-env"
@@ -33052,62 +32820,6 @@
    ]
   },
   {
-   "package": "nitro",
-   "measuredVersion": "3.0.260903-beta",
-   "target": "defu",
-   "specifiers": [
-    "defu"
-   ]
-  },
-  {
-   "package": "nitro",
-   "measuredVersion": "3.0.260903-beta",
-   "target": "destr",
-   "specifiers": [
-    "destr"
-   ]
-  },
-  {
-   "package": "nitro",
-   "measuredVersion": "3.0.260903-beta",
-   "target": "get-port-please",
-   "specifiers": [
-    "get-port-please"
-   ]
-  },
-  {
-   "package": "nitro",
-   "measuredVersion": "3.0.260903-beta",
-   "target": "rendu",
-   "specifiers": [
-    "rendu"
-   ]
-  },
-  {
-   "package": "nitro",
-   "measuredVersion": "3.0.260903-beta",
-   "target": "source-map",
-   "specifiers": [
-    "source-map"
-   ]
-  },
-  {
-   "package": "nitro",
-   "measuredVersion": "3.0.260903-beta",
-   "target": "youch",
-   "specifiers": [
-    "youch"
-   ]
-  },
-  {
-   "package": "nitro",
-   "measuredVersion": "3.0.260903-beta",
-   "target": "youch-core",
-   "specifiers": [
-    "youch-core"
-   ]
-  },
-  {
    "package": "nx",
    "measuredVersion": "24.0.2",
    "target": "ts-node",
@@ -33218,7 +32930,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.7.0",
+   "measuredVersion": "65.8.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -33226,7 +32938,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.7.0",
+   "measuredVersion": "65.8.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -33234,7 +32946,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.7.0",
+   "measuredVersion": "65.8.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -33242,7 +32954,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.7.0",
+   "measuredVersion": "65.8.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"

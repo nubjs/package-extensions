@@ -3655,26 +3655,6 @@
           }
         }
       },
-      "@tanstack/devtools@*": {
-        "peerDependencies": {
-          "@tanstack/intent": "*"
-        },
-        "peerDependenciesMeta": {
-          "@tanstack/intent": {
-            "optional": true
-          }
-        }
-      },
-      "@tanstack/devtools-event-client@*": {
-        "peerDependencies": {
-          "@tanstack/intent": "*"
-        },
-        "peerDependenciesMeta": {
-          "@tanstack/intent": {
-            "optional": true
-          }
-        }
-      },
       "@tanstack/react-start-rsc@*": {
         "peerDependencies": {
           "vite": "*"
@@ -6313,41 +6293,15 @@
         }
       },
       "nitro@*": {
-        "dependencies": {
-          "croner": "*",
-          "scule": "*",
-          "ufo": "*",
-          "unctx": "*"
-        },
         "peerDependencies": {
-          "defu": "*",
-          "destr": "*",
-          "get-port-please": "*",
-          "rendu": "*",
-          "source-map": "*",
-          "youch": "*",
-          "youch-core": "*"
+          "db0": "*",
+          "unstorage": "*"
         },
         "peerDependenciesMeta": {
-          "defu": {
+          "db0": {
             "optional": true
           },
-          "destr": {
-            "optional": true
-          },
-          "get-port-please": {
-            "optional": true
-          },
-          "rendu": {
-            "optional": true
-          },
-          "source-map": {
-            "optional": true
-          },
-          "youch": {
-            "optional": true
-          },
-          "youch-core": {
+          "unstorage": {
             "optional": true
           }
         }
