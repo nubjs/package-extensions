@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30",
+ "generated": "2026-10-31",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,7 +8,7 @@
  },
  "sources": {
   "scan": {
-   "entries": 1096,
+   "entries": 1095,
    "packages": 621
   },
   "yarn": {
@@ -30,17 +30,17 @@
  "totals": {
   "packages": 753,
   "selectors": 773,
-  "entries": 1096,
+  "entries": 1095,
   "byClass": {
    "runtime": 171,
    "adapter": 128,
    "types": 503,
    "deep-path": 0,
-   "guarded": 294
+   "guarded": 293
   },
   "byField": {
    "dependency": 28,
-   "peer": 1068
+   "peer": 1067
   },
   "candidatesForReview": 68,
   "droppedUnpublishedTargets": 202,
@@ -9285,8 +9285,7 @@
     "nx-cloud": "*",
     "oxfmt": "*",
     "prettier": "*",
-    "ts-node": "*",
-    "typescript": "*"
+    "ts-node": "*"
    },
    "peerDependenciesMeta": {
     "@angular-devkit/build-angular": {
@@ -9326,9 +9325,6 @@
      "optional": true
     },
     "ts-node": {
-     "optional": true
-    },
-    "typescript": {
      "optional": true
     }
    }
@@ -13337,7 +13333,7 @@
   },
   {
    "package": "@electric-sql/pglite",
-   "measuredVersion": "0.5.13",
+   "measuredVersion": "0.5.14",
    "targets": [
     {
      "target": "ws",
@@ -13349,7 +13345,7 @@
       "ws"
      ],
      "files": [
-      "dist/chunk-23XIDXWY.js",
+      "dist/chunk-66APQTYC.js",
       "dist/index.cjs",
       "dist/node-postgres/index.cjs"
      ],
@@ -13521,7 +13517,7 @@
   },
   {
    "package": "@expo/cli",
-   "measuredVersion": "58.1.17",
+   "measuredVersion": "58.1.18",
    "targets": [
     {
      "target": "@expo/fingerprint",
@@ -13625,7 +13621,7 @@
   },
   {
    "package": "@expo/log-box",
-   "measuredVersion": "58.0.13",
+   "measuredVersion": "58.0.14",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -13660,7 +13656,7 @@
   },
   {
    "package": "@expo/metro-config",
-   "measuredVersion": "58.0.19",
+   "measuredVersion": "58.0.20",
    "targets": [
     {
      "target": "babel-preset-expo",
@@ -14578,7 +14574,7 @@
   },
   {
    "package": "@graphql-tools/graphql-tag-pluck",
-   "measuredVersion": "9.0.8",
+   "measuredVersion": "9.0.9",
    "targets": [
     {
      "target": "@astrojs/compiler",
@@ -15333,7 +15329,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.80.0",
+   "measuredVersion": "1.81.0",
    "targets": [
     {
      "target": "@workflow/serde",
@@ -15374,12 +15370,12 @@
       "undici"
      ],
      "files": [
-      "dist/dist-BfQg06Jx.cjs",
-      "dist/dist-D3RmrgPX-B56dpZCe.cjs",
-      "dist/dist-D3RmrgPX-BAd2dEdp.js",
-      "dist/dist-DpLrhPWv.js",
-      "dist/netlify-CGQcc7B9.js",
-      "dist/netlify-DMIwZdE1.cjs",
+      "dist/dist-BivncwVZ.js",
+      "dist/dist-CFYPWO89-BC-GXJev.cjs",
+      "dist/dist-CFYPWO89-Dv0WLHZf.js",
+      "dist/dist-CmpSQja8.cjs",
+      "dist/netlify-CAH5VW8O.js",
+      "dist/netlify-Dj0aUgc0.cjs",
       "dist/vector/index.cjs",
       "dist/vector/index.js"
      ],
@@ -15805,7 +15801,7 @@
   },
   {
    "package": "@netlify/serverless-functions-api",
-   "measuredVersion": "2.27.0",
+   "measuredVersion": "2.28.1",
    "targets": [
     {
      "target": "@netlify/cache",
@@ -16782,7 +16778,7 @@
   },
   {
    "package": "@nx/angular",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@angular-devkit/architect",
@@ -16904,7 +16900,7 @@
   },
   {
    "package": "@nx/cypress",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "typescript",
@@ -16924,7 +16920,7 @@
   },
   {
    "package": "@nx/devkit",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@angular-devkit/architect",
@@ -17000,7 +16996,7 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@eslint/js",
@@ -17128,7 +17124,7 @@
   },
   {
    "package": "@nx/jest",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@jest/core",
@@ -17177,7 +17173,7 @@
   },
   {
    "package": "@nx/js",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@nx/eslint",
@@ -17311,7 +17307,7 @@
   },
   {
    "package": "@nx/node",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@nx/rolldown",
@@ -17360,7 +17356,7 @@
   },
   {
    "package": "@nx/plugin",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "nx",
@@ -17380,7 +17376,7 @@
   },
   {
    "package": "@nx/react",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@nx/cypress",
@@ -17715,7 +17711,7 @@
   },
   {
    "package": "@nx/rollup",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@swc/core",
@@ -17749,7 +17745,7 @@
   },
   {
    "package": "@nx/rspack",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "yargs",
@@ -17769,7 +17765,7 @@
   },
   {
    "package": "@nx/storybook",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "typescript",
@@ -17789,7 +17785,7 @@
   },
   {
    "package": "@nx/vite",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@nx/eslint",
@@ -17823,7 +17819,7 @@
   },
   {
    "package": "@nx/vitest",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "typescript",
@@ -17843,7 +17839,7 @@
   },
   {
    "package": "@nx/web",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@nx/vitest",
@@ -17863,7 +17859,7 @@
   },
   {
    "package": "@nx/webpack",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "swc-loader",
@@ -17897,7 +17893,7 @@
   },
   {
    "package": "@nx/workspace",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@angular-devkit/schematics",
@@ -18224,7 +18220,7 @@
   },
   {
    "package": "@opennextjs/cloudflare",
-   "measuredVersion": "1.20.14",
+   "measuredVersion": "1.20.15",
    "targets": [
     {
      "target": "esbuild",
@@ -19861,7 +19857,7 @@
   },
   {
    "package": "@rushstack/rush-sdk",
-   "measuredVersion": "5.182.0",
+   "measuredVersion": "5.182.1",
    "targets": [
     {
      "target": "@rushstack/stream-collator",
@@ -21124,7 +21120,7 @@
   },
   {
    "package": "@swc/core",
-   "measuredVersion": "1.16.20",
+   "measuredVersion": "1.16.21",
    "targets": [
     {
      "target": "@swc/core-android-arm-eabi",
@@ -21372,7 +21368,7 @@
   },
   {
    "package": "@tiptap/extension-list",
-   "measuredVersion": "3.32.1",
+   "measuredVersion": "3.32.2",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -21944,7 +21940,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "27.0.0",
+   "measuredVersion": "27.0.1",
    "targets": [
     {
      "target": "encoding",
@@ -22021,7 +22017,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "26.0.0",
+   "measuredVersion": "26.0.1",
    "targets": [
     {
      "target": "encoding",
@@ -23716,7 +23712,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "9.1.11",
+   "measuredVersion": "9.1.12",
    "targets": [
     {
      "target": "@appium/types",
@@ -23886,7 +23882,7 @@
   },
   {
    "package": "aws-cdk",
-   "measuredVersion": "2.1146.1",
+   "measuredVersion": "2.1147.0",
    "targets": [
     {
      "target": "@aws-cdk/cloud-assembly-api",
@@ -23997,7 +23993,7 @@
   },
   {
    "package": "babel-preset-expo",
-   "measuredVersion": "58.0.22",
+   "measuredVersion": "58.0.23",
    "targets": [
     {
      "target": "@babel/core",
@@ -24118,7 +24114,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.5.1",
+   "measuredVersion": "6.5.3",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -24252,7 +24248,7 @@
   },
   {
    "package": "convex",
-   "measuredVersion": "1.48.0",
+   "measuredVersion": "1.49.0",
    "targets": [
     {
      "target": "fsevents",
@@ -24514,7 +24510,7 @@
   },
   {
    "package": "dd-trace",
-   "measuredVersion": "6.22.0",
+   "measuredVersion": "6.23.0",
    "targets": [
     {
      "target": "@vitest/runner",
@@ -25910,7 +25906,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "58.0.28",
+   "measuredVersion": "58.0.29",
    "targets": [
     {
      "target": "react-native-tab-view",
@@ -25951,7 +25947,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "58.0.19",
+   "measuredVersion": "58.0.20",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -27210,7 +27206,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.44.0",
+   "measuredVersion": "6.44.1",
    "targets": [
     {
      "target": "vue",
@@ -27250,7 +27246,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.11.5",
+   "measuredVersion": "0.11.6",
    "targets": [
     {
      "target": "@jest/globals",
@@ -28534,7 +28530,7 @@
   },
   {
    "package": "nx",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "targets": [
     {
      "target": "@angular-devkit/build-angular",
@@ -28719,22 +28715,6 @@
       "dist/src/plugins/js/utils/register.js"
      ],
      "fileCount": 1
-    },
-    {
-     "target": "typescript",
-     "class": "guarded",
-     "field": "peer",
-     "candidate": false,
-     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-     "specifiers": [
-      "typescript"
-     ],
-     "files": [
-      "dist/src/plugins/js/project-graph/build-dependencies/build-dependencies.js",
-      "dist/src/plugins/js/utils/register.js",
-      "dist/src/plugins/js/utils/typescript.js"
-     ],
-     "fileCount": 3
     }
    ]
   },
@@ -29164,7 +29144,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.61.0",
+   "measuredVersion": "5.61.1",
    "targets": [
     {
      "target": "express",
@@ -30335,7 +30315,7 @@
   },
   {
    "package": "resend",
-   "measuredVersion": "6.35.0",
+   "measuredVersion": "6.37.0",
    "targets": [
     {
      "target": "react",
@@ -30532,7 +30512,7 @@
   },
   {
    "package": "sass-embedded",
-   "measuredVersion": "1.107.0",
+   "measuredVersion": "1.107.1",
    "targets": [
     {
      "target": "sass",
@@ -31032,7 +31012,7 @@
   },
   {
    "package": "swiper",
-   "measuredVersion": "14.3.0",
+   "measuredVersion": "14.4.0",
    "targets": [
     {
      "target": "react",
@@ -31590,7 +31570,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.8.0",
+   "measuredVersion": "65.9.0",
    "targets": [
     {
      "target": "@vltpkg/graph",
@@ -32155,7 +32135,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261030.1",
+   "measuredVersion": "1.20261031.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32386,7 +32366,7 @@
   },
   {
    "package": "@electric-sql/pglite",
-   "measuredVersion": "0.5.13",
+   "measuredVersion": "0.5.14",
    "target": "ws",
    "specifiers": [
     "ws"
@@ -32428,7 +32408,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.80.0",
+   "measuredVersion": "1.81.0",
    "target": "undici",
    "specifiers": [
     "undici"
@@ -32476,7 +32456,7 @@
   },
   {
    "package": "@nx/devkit",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "target": "@angular-devkit/architect",
    "specifiers": [
     "@angular-devkit/architect"
@@ -32484,7 +32464,7 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "target": "eslint-plugin-jsx-a11y",
    "specifiers": [
     "eslint-plugin-jsx-a11y"
@@ -32492,7 +32472,7 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "target": "eslint-plugin-react",
    "specifiers": [
     "eslint-plugin-react"
@@ -32500,7 +32480,7 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "target": "eslint-plugin-react-hooks",
    "specifiers": [
     "eslint-plugin-react-hooks"
@@ -32508,7 +32488,7 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "target": "typescript-eslint",
    "specifiers": [
     "typescript-eslint"
@@ -32516,7 +32496,7 @@
   },
   {
    "package": "@nx/webpack",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "target": "swc-loader",
    "specifiers": [
     "swc-loader"
@@ -32743,7 +32723,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "58.0.19",
+   "measuredVersion": "58.0.20",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -32821,7 +32801,7 @@
   },
   {
    "package": "nx",
-   "measuredVersion": "24.0.2",
+   "measuredVersion": "24.0.3",
    "target": "ts-node",
    "specifiers": [
     "ts-node"
@@ -32930,7 +32910,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.8.0",
+   "measuredVersion": "65.9.0",
    "target": "@vltpkg/graph",
    "specifiers": [
     "@vltpkg/graph"
@@ -32938,7 +32918,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.8.0",
+   "measuredVersion": "65.9.0",
    "target": "@vltpkg/package-info",
    "specifiers": [
     "@vltpkg/package-info"
@@ -32946,7 +32926,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.8.0",
+   "measuredVersion": "65.9.0",
    "target": "@vltpkg/package-json",
    "specifiers": [
     "@vltpkg/package-json"
@@ -32954,7 +32934,7 @@
   },
   {
    "package": "vercel",
-   "measuredVersion": "65.8.0",
+   "measuredVersion": "65.9.0",
    "target": "path-scurry",
    "specifiers": [
     "path-scurry"

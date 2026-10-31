@@ -6414,8 +6414,7 @@
           "nx-cloud": "*",
           "oxfmt": "*",
           "prettier": "*",
-          "ts-node": "*",
-          "typescript": "*"
+          "ts-node": "*"
         },
         "peerDependenciesMeta": {
           "@angular-devkit/build-angular": {
@@ -6455,9 +6454,6 @@
             "optional": true
           },
           "ts-node": {
-            "optional": true
-          },
-          "typescript": {
             "optional": true
           }
         }

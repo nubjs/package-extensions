@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.40 — generated 2026-10-30, do not edit.
-// 753 packages, 1096 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.41 — generated 2026-10-31, do not edit.
+// 753 packages, 1095 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -7879,8 +7879,7 @@ exports.packageExtensions = [
     "nx-cloud": "*",
     "oxfmt": "*",
     "prettier": "*",
-    "ts-node": "*",
-    "typescript": "*"
+    "ts-node": "*"
    },
    "peerDependenciesMeta": {
     "@angular-devkit/build-angular": {
@@ -7920,9 +7919,6 @@ exports.packageExtensions = [
      "optional": true
     },
     "ts-node": {
-     "optional": true
-    },
-    "typescript": {
      "optional": true
     }
    }
