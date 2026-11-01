@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31",
+  "generated": "2026-11-01",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1095,
-      "packages": 621
+      "entries": 1096,
+      "packages": 622
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,25 +28,25 @@
     }
   },
   "totals": {
-    "packages": 753,
-    "selectors": 773,
-    "entries": 1095,
+    "packages": 754,
+    "selectors": 774,
+    "entries": 1096,
     "byClass": {
-      "runtime": 171,
+      "runtime": 172,
       "adapter": 128,
-      "types": 503,
+      "types": 504,
       "deep-path": 0,
-      "guarded": 293
+      "guarded": 292
     },
     "byField": {
       "dependency": 28,
-      "peer": 1067
+      "peer": 1068
     },
-    "candidatesForReview": 68,
+    "candidatesForReview": 69,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 0,
     "droppedUnresolvedTargets": 0,
-    "withheldDeepPath": 236
+    "withheldDeepPath": 234
   },
   "withheldDeepPath": [
     {
@@ -743,7 +743,7 @@
         "svelte/compiler"
       ],
       "files": [
-        "bin/svelte_extractor-B8ObxDzR.js"
+        "bin/svelte_extractor-BXUkNMU7.js"
       ]
     },
     {
@@ -1737,26 +1737,6 @@
       "files": [
         "lib/msnodesqlv8/connection-pool.js",
         "lib/msnodesqlv8/request.js"
-      ]
-    },
-    {
-      "package": "muggle-string",
-      "target": "@jridgewell/sourcemap-codec",
-      "specifiers": [
-        "@jridgewell/sourcemap-codec"
-      ],
-      "files": [
-        "out/map.js"
-      ]
-    },
-    {
-      "package": "muggle-string",
-      "target": "vscode-languageserver-textdocument",
-      "specifiers": [
-        "vscode-languageserver-textdocument"
-      ],
-      "files": [
-        "out/map.js"
       ]
     },
     {
@@ -7318,6 +7298,16 @@
         }
       }
     },
+    "appium-adb@*": {
+      "peerDependencies": {
+        "@appium/types": "*"
+      },
+      "peerDependenciesMeta": {
+        "@appium/types": {
+          "optional": true
+        }
+      }
+    },
     "appium-chromedriver@*": {
       "peerDependencies": {
         "@appium/types": "*",
@@ -8785,16 +8775,6 @@
       },
       "peerDependenciesMeta": {
         "puppeteer": {
-          "optional": true
-        }
-      }
-    },
-    "linkedom@*": {
-      "peerDependencies": {
-        "cssstyle": "*"
-      },
-      "peerDependenciesMeta": {
-        "cssstyle": {
           "optional": true
         }
       }
@@ -10480,6 +10460,16 @@
           "optional": true
         },
         "vue": {
+          "optional": true
+        }
+      }
+    },
+    "unrs-resolver@*": {
+      "peerDependencies": {
+        "@unrs/resolver-binding-wasm32-wasi": "*"
+      },
+      "peerDependenciesMeta": {
+        "@unrs/resolver-binding-wasm32-wasi": {
           "optional": true
         }
       }
@@ -18052,7 +18042,7 @@
     },
     {
       "package": "@oclif/core",
-      "measuredVersion": "5.1.10",
+      "measuredVersion": "5.1.11",
       "targets": [
         {
           "target": "pnpapi",
@@ -18431,7 +18421,7 @@
     },
     {
       "package": "@playwright/mcp",
-      "measuredVersion": "0.0.83",
+      "measuredVersion": "0.0.84",
       "targets": [
         {
           "target": "@modelcontextprotocol/sdk",
@@ -23711,8 +23701,29 @@
       ]
     },
     {
+      "package": "appium-adb",
+      "measuredVersion": "16.3.1",
+      "targets": [
+        {
+          "target": "@appium/types",
+          "class": "types",
+          "field": "peer",
+          "candidate": false,
+          "reason": "types class — no runtime edge, only a declaration-file reference",
+          "specifiers": [
+            "@appium/types"
+          ],
+          "files": [
+            "build/lib/adb.d.ts",
+            "build/lib/types.d.ts"
+          ],
+          "fileCount": 2
+        }
+      ]
+    },
+    {
       "package": "appium-chromedriver",
-      "measuredVersion": "9.1.12",
+      "measuredVersion": "9.1.14",
       "targets": [
         {
           "target": "@appium/types",
@@ -25316,7 +25327,7 @@
     },
     {
       "package": "eslint-plugin-regexp",
-      "measuredVersion": "3.3.2",
+      "measuredVersion": "3.3.3",
       "targets": [
         {
           "target": "json-schema",
@@ -27351,26 +27362,6 @@
           ],
           "files": [
             "types/puppeteer.d.ts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
-      "package": "linkedom",
-      "measuredVersion": "0.18.14",
-      "targets": [
-        {
-          "target": "cssstyle",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "cssstyle"
-          ],
-          "files": [
-            "worker.js"
           ],
           "fileCount": 1
         }
@@ -29626,7 +29617,7 @@
     },
     {
       "package": "react-i18next",
-      "measuredVersion": "17.1.9",
+      "measuredVersion": "17.1.10",
       "targets": [
         {
           "target": "babel-plugin-macros",
@@ -31439,6 +31430,28 @@
       ]
     },
     {
+      "package": "unrs-resolver",
+      "measuredVersion": "1.13.0",
+      "targets": [
+        {
+          "target": "@unrs/resolver-binding-wasm32-wasi",
+          "class": "runtime",
+          "field": "peer",
+          "candidate": true,
+          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "specifiers": [
+            "@unrs/resolver-binding-wasm32-wasi",
+            "@unrs/resolver-binding-wasm32-wasi/package.json"
+          ],
+          "files": [
+            "browser.js",
+            "index.js"
+          ],
+          "fileCount": 2
+        }
+      ]
+    },
+    {
       "package": "untyped",
       "measuredVersion": "2.0.0",
       "targets": [
@@ -32135,7 +32148,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261031.1",
+      "measuredVersion": "1.20261101.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32890,6 +32903,15 @@
       "target": "should",
       "specifiers": [
         "should/as-function"
+      ]
+    },
+    {
+      "package": "unrs-resolver",
+      "measuredVersion": "1.13.0",
+      "target": "@unrs/resolver-binding-wasm32-wasi",
+      "specifiers": [
+        "@unrs/resolver-binding-wasm32-wasi",
+        "@unrs/resolver-binding-wasm32-wasi/package.json"
       ]
     },
     {

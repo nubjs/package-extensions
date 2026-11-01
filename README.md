@@ -23,7 +23,7 @@ packageExtensions:
         optional: true
 ```
 
-**753 package names.** The scan covers 9,982 of the top 10,000 and finds 621 with an undeclared dependency across 1,095 edges. The Yarn seed contributes 142 package names, including 132 not found by the scan.
+**754 package names.** The scan covers 9,982 of the top 10,000 and finds 622 with an undeclared dependency across 1,096 edges. The Yarn seed contributes 142 package names, including 132 not found by the scan.
 
 ## Installing
 
@@ -104,9 +104,9 @@ Each finding is classed by where the import sits. The class decides which manife
 
 | Class | Count | Shape | Field |
 | --- | --- | --- | --- |
-| `types` | 503 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
-| `guarded` | 293 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
-| `runtime` | 171 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
+| `types` | 504 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
+| `guarded` | 292 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
+| `runtime` | 172 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
 | `adapter` | 128 | A non-`.` exports subpath imports a backend the consumer chose. | optional peer |
 
 Two of these are easy to misread. A `types` finding breaks a type-check and nothing else, so it is never treated as a missing runtime dependency — it is also the largest class, and folding it into `runtime` would have put 538 declaration-file imports into the review queue. A `guarded` import misleads in the other direction: the package survives absence by design, but under a strict layout the guard swallows a resolution error that fires even when the consumer *has* the package, so the feature silently stays off.

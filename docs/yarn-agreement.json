@@ -1000,7 +1000,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "11.4.16",
+        "version": "11.4.17",
         "why": "the package now declares every target"
       },
       {

@@ -4447,6 +4447,16 @@
           }
         }
       },
+      "appium-adb@*": {
+        "peerDependencies": {
+          "@appium/types": "*"
+        },
+        "peerDependenciesMeta": {
+          "@appium/types": {
+            "optional": true
+          }
+        }
+      },
       "appium-chromedriver@*": {
         "peerDependencies": {
           "@appium/types": "*",
@@ -5914,16 +5924,6 @@
         },
         "peerDependenciesMeta": {
           "puppeteer": {
-            "optional": true
-          }
-        }
-      },
-      "linkedom@*": {
-        "peerDependencies": {
-          "cssstyle": "*"
-        },
-        "peerDependenciesMeta": {
-          "cssstyle": {
             "optional": true
           }
         }
@@ -7609,6 +7609,16 @@
             "optional": true
           },
           "vue": {
+            "optional": true
+          }
+        }
+      },
+      "unrs-resolver@*": {
+        "peerDependencies": {
+          "@unrs/resolver-binding-wasm32-wasi": "*"
+        },
+        "peerDependenciesMeta": {
+          "@unrs/resolver-binding-wasm32-wasi": {
             "optional": true
           }
         }

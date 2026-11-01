@@ -1,5 +1,5 @@
-# Generated 2026-10-31 from the 10000 most-downloaded npm packages.
-# 753 packages, 1095 undeclared dependencies.
+# Generated 2026-11-01 from the 10000 most-downloaded npm packages.
+# 754 packages, 1096 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -2861,6 +2861,12 @@ packageExtensions:
         optional: true
       toml:
         optional: true
+  appium-adb@*:
+    peerDependencies:
+      "@appium/types": "*"
+    peerDependenciesMeta:
+      "@appium/types":
+        optional: true
   appium-chromedriver@*:
     peerDependencies:
       "@appium/types": "*"
@@ -3782,12 +3788,6 @@ packageExtensions:
       puppeteer: "*"
     peerDependenciesMeta:
       puppeteer:
-        optional: true
-  linkedom@*:
-    peerDependencies:
-      cssstyle: "*"
-    peerDependenciesMeta:
-      cssstyle:
         optional: true
   livekit-client@*:
     peerDependencies:
@@ -4842,6 +4842,12 @@ packageExtensions:
       vite:
         optional: true
       vue:
+        optional: true
+  unrs-resolver@*:
+    peerDependencies:
+      "@unrs/resolver-binding-wasm32-wasi": "*"
+    peerDependenciesMeta:
+      "@unrs/resolver-binding-wasm32-wasi":
         optional: true
   untyped@*:
     peerDependencies:

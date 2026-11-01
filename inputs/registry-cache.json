@@ -455,6 +455,7 @@
   "@unrs/resolver-binding-freebsd-arm64": false,
   "@unrs/resolver-binding-openharmony-arm": false,
   "@unrs/resolver-binding-openharmony-x64": false,
+  "@unrs/resolver-binding-wasm32-wasi": true,
   "@unrs/resolver-binding-win32-x64-gnu": false,
   "@unrs/rspack-resolver-binding-android-arm-eabi": false,
   "@unrs/rspack-resolver-binding-android-arm64": false,
