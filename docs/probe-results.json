@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01",
+  "generated": "2026-11-02",
   "dataset": "b3a12f63425a2719",
   "instrument": {
     "yarn": "4.18.0",
@@ -7,9 +7,9 @@
   },
   "tally": {
     "confirmed": 3,
-    "confirmedViaPath": 6,
+    "confirmedViaPath": 5,
     "notOnImport": 43,
-    "installFailed": 1,
+    "installFailed": 2,
     "inconclusive": 3
   },
   "results": [
@@ -462,19 +462,13 @@
     },
     {
       "package": "astro",
-      "version": "7.4.4",
+      "version": "7.4.5",
       "expected": [
         "@astrojs/cloudflare",
         "typescript"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 28
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mastro\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.4.5\u001b[39m: All versions satisfying \"7.4.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mastro\u001b[39m\u001b[38;5"
     },
     {
       "package": "domino",
@@ -741,7 +735,7 @@
     },
     {
       "package": "next",
-      "version": "16.4.3",
+      "version": "16.4.4",
       "expected": [
         "critters",
         "next-rspack",
@@ -750,19 +744,8 @@
         "react-server-dom-webpack",
         "server-only"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "private-next-instrumentation-client",
-        "react-server-dom-webpack"
-      ],
-      "citedPathsTried": 20,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "react"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 21
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mnext\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:16.4.4\u001b[39m: All versions satisfying \"16.4.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mnext\u001b[39m\u001b[38;5"
     },
     {
       "package": "nx",
@@ -943,8 +926,14 @@
       "expected": [
         "@unrs/resolver-binding-wasm32-wasi"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173munrs-resolver\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.13.0\u001b[39m: All versions satisfying \"1.13.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173munrs-r"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "useragent",
@@ -954,7 +943,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:6219) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-Tpeybs/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5793) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-wMXgeo/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",

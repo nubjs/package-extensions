@@ -33,7 +33,7 @@
           "vscode-languageserver-protocol"
         ],
         "metaOnly": false,
-        "version": "6.0.2",
+        "version": "6.0.3",
         "undeclared": [
           "vscode-jsonrpc",
           "vscode-languageserver-protocol"
@@ -670,7 +670,7 @@
           "@babel/types"
         ],
         "metaOnly": false,
-        "version": "8.0.10",
+        "version": "8.1.0",
         "why": "the package now declares every target"
       },
       {
