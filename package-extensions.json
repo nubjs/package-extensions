@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02",
+  "generated": "2026-11-03",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1096,
-      "packages": 622
+      "entries": 1091,
+      "packages": 620
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 754,
-    "selectors": 774,
-    "entries": 1096,
+    "packages": 752,
+    "selectors": 772,
+    "entries": 1091,
     "byClass": {
       "runtime": 172,
-      "adapter": 128,
-      "types": 504,
+      "adapter": 127,
+      "types": 501,
       "deep-path": 0,
-      "guarded": 292
+      "guarded": 291
     },
     "byField": {
       "dependency": 28,
-      "peer": 1068
+      "peer": 1063
     },
     "candidatesForReview": 69,
     "droppedUnpublishedTargets": 202,
@@ -4346,16 +4346,6 @@
         }
       }
     },
-    "@module-federation/webpack-bundler-runtime@*": {
-      "peerDependencies": {
-        "@module-federation/runtime-core": "*"
-      },
-      "peerDependenciesMeta": {
-        "@module-federation/runtime-core": {
-          "optional": true
-        }
-      }
-    },
     "@monaco-editor/loader@*": {
       "peerDependencies": {
         "monaco-editor": "*"
@@ -6572,28 +6562,6 @@
       },
       "peerDependenciesMeta": {
         "prosemirror-model": {
-          "optional": true
-        }
-      }
-    },
-    "@trpc/server@*": {
-      "peerDependencies": {
-        "@tanstack/intent": "*",
-        "express": "*",
-        "next": "*",
-        "ws": "*"
-      },
-      "peerDependenciesMeta": {
-        "@tanstack/intent": {
-          "optional": true
-        },
-        "express": {
-          "optional": true
-        },
-        "next": {
-          "optional": true
-        },
-        "ws": {
           "optional": true
         }
       }
@@ -12429,7 +12397,7 @@
     },
     {
       "package": "@anthropic-ai/sdk",
-      "measuredVersion": "1.3.0",
+      "measuredVersion": "1.4.0",
       "targets": [
         {
           "target": "node-fetch",
@@ -12477,7 +12445,7 @@
     },
     {
       "package": "@apollo/client",
-      "measuredVersion": "4.3.5",
+      "measuredVersion": "4.3.6",
       "targets": [
         {
           "target": "relay-runtime",
@@ -13085,7 +13053,7 @@
     },
     {
       "package": "@datadog/datadog-ci-base",
-      "measuredVersion": "5.26.1",
+      "measuredVersion": "5.27.0",
       "targets": [
         {
           "target": "@datadog/mobile-react-native",
@@ -13323,7 +13291,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.14",
+      "measuredVersion": "0.5.15",
       "targets": [
         {
           "target": "ws",
@@ -13335,7 +13303,7 @@
             "ws"
           ],
           "files": [
-            "dist/chunk-66APQTYC.js",
+            "dist/chunk-O74Z5DUS.js",
             "dist/index.cjs",
             "dist/node-postgres/index.cjs"
           ],
@@ -13844,7 +13812,7 @@
     },
     {
       "package": "@fastify/rate-limit",
-      "measuredVersion": "11.2.1",
+      "measuredVersion": "11.2.2",
       "targets": [
         {
           "target": "fastify",
@@ -14021,7 +13989,7 @@
     },
     {
       "package": "@firebase/auth",
-      "measuredVersion": "1.13.8",
+      "measuredVersion": "1.13.9",
       "targets": [
         {
           "target": "@firebase/app-check-interop-types",
@@ -14140,7 +14108,7 @@
     },
     {
       "package": "@firebase/firestore-compat",
-      "measuredVersion": "0.4.16",
+      "measuredVersion": "0.4.17",
       "targets": [
         {
           "target": "@firebase/app-types",
@@ -15172,7 +15140,7 @@
     },
     {
       "package": "@lhci/cli",
-      "measuredVersion": "0.15.1",
+      "measuredVersion": "0.16.0",
       "targets": [
         {
           "target": "@lhci/server",
@@ -15503,7 +15471,7 @@
     },
     {
       "package": "@module-federation/managers",
-      "measuredVersion": "2.9.2",
+      "measuredVersion": "2.9.3",
       "targets": [
         {
           "target": "webpack",
@@ -15524,7 +15492,7 @@
     },
     {
       "package": "@module-federation/manifest",
-      "measuredVersion": "2.9.2",
+      "measuredVersion": "2.9.3",
       "targets": [
         {
           "target": "webpack",
@@ -15546,7 +15514,7 @@
     },
     {
       "package": "@module-federation/sdk",
-      "measuredVersion": "2.9.2",
+      "measuredVersion": "2.9.3",
       "targets": [
         {
           "target": "webpack",
@@ -15562,27 +15530,6 @@
             "dist/types/plugins/ModuleFederationPlugin.d.ts"
           ],
           "fileCount": 2
-        }
-      ]
-    },
-    {
-      "package": "@module-federation/webpack-bundler-runtime",
-      "measuredVersion": "2.9.2",
-      "targets": [
-        {
-          "target": "@module-federation/runtime-core",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@module-federation/runtime-core",
-            "@module-federation/runtime-core/types"
-          ],
-          "files": [
-            "dist/index.d.ts"
-          ],
-          "fileCount": 1
         }
       ]
     },
@@ -15649,7 +15596,7 @@
     },
     {
       "package": "@napi-rs/cli",
-      "measuredVersion": "3.10.9",
+      "measuredVersion": "3.10.12",
       "targets": [
         {
           "target": "@oxc-node/core",
@@ -15825,7 +15772,7 @@
     },
     {
       "package": "@newrelic/security-agent",
-      "measuredVersion": "3.0.5",
+      "measuredVersion": "4.0.0",
       "targets": [
         {
           "target": "@aws-sdk/client-lambda",
@@ -16252,7 +16199,7 @@
     },
     {
       "package": "@nuxt/nitro-server",
-      "measuredVersion": "4.6.3",
+      "measuredVersion": "4.6.4",
       "targets": [
         {
           "target": "@nuxt/schema",
@@ -16272,7 +16219,7 @@
     },
     {
       "package": "@nuxt/schema",
-      "measuredVersion": "4.6.3",
+      "measuredVersion": "4.6.4",
       "targets": [
         {
           "target": "@unhead/vue",
@@ -16285,7 +16232,7 @@
             "@unhead/vue/vite"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16299,7 +16246,7 @@
             "@vitejs/plugin-vue"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16313,7 +16260,7 @@
             "@vitejs/plugin-vue-jsx"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16327,7 +16274,7 @@
             "@vue/compiler-core"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16341,7 +16288,7 @@
             "@vue/compiler-sfc"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16355,7 +16302,7 @@
             "@vue/language-core"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16369,7 +16316,7 @@
             "autoprefixer"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16383,7 +16330,7 @@
             "chokidar"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16397,7 +16344,7 @@
             "compatx"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16411,7 +16358,7 @@
             "css-minimizer-webpack-plugin"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16425,7 +16372,7 @@
             "cssnano"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16439,7 +16386,7 @@
             "esbuild"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16453,7 +16400,7 @@
             "esbuild-loader"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16467,7 +16414,7 @@
             "h3"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16481,7 +16428,7 @@
             "mini-css-extract-plugin"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16495,7 +16442,7 @@
             "oxc-transform"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16509,7 +16456,7 @@
             "postcss"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16523,7 +16470,7 @@
             "pug"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16537,7 +16484,7 @@
             "rollup-plugin-visualizer"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16551,7 +16498,7 @@
             "unctx/transform"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16565,7 +16512,7 @@
             "unimport"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16579,7 +16526,7 @@
             "untyped"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts",
+            "dist/compatibility-DL8IIFh6.d.mts",
             "dist/index.d.mts"
           ],
           "fileCount": 2
@@ -16594,7 +16541,7 @@
             "vite"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16608,7 +16555,7 @@
             "vue"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16622,7 +16569,7 @@
             "vue-loader"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16636,7 +16583,7 @@
             "vue-router"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16650,7 +16597,7 @@
             "webpack"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16664,7 +16611,7 @@
             "webpack-bundle-analyzer"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16678,7 +16625,7 @@
             "webpack-dev-middleware"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         },
@@ -16692,7 +16639,7 @@
             "webpack-hot-middleware"
           ],
           "files": [
-            "dist/compatibility-Bq3T9YWB.d.mts"
+            "dist/compatibility-DL8IIFh6.d.mts"
           ],
           "fileCount": 1
         }
@@ -16734,7 +16681,7 @@
     },
     {
       "package": "@nuxt/vite-builder",
-      "measuredVersion": "4.6.3",
+      "measuredVersion": "4.6.4",
       "targets": [
         {
           "target": "@babel/core",
@@ -19777,7 +19724,7 @@
     },
     {
       "package": "@rsbuild/core",
-      "measuredVersion": "2.3.0",
+      "measuredVersion": "2.3.1",
       "targets": [
         {
           "target": "tsx",
@@ -21192,7 +21139,7 @@
     },
     {
       "package": "@tailwindcss/oxide",
-      "measuredVersion": "4.3.3",
+      "measuredVersion": "4.3.4",
       "targets": [
         {
           "target": "@tailwindcss/oxide-android-arm-eabi",
@@ -21371,72 +21318,6 @@
           ],
           "files": [
             "dist/index.d.ts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
-      "package": "@trpc/server",
-      "measuredVersion": "11.22.1",
-      "targets": [
-        {
-          "target": "@tanstack/intent",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "@tanstack/intent/intent-library"
-          ],
-          "files": [
-            "bin/intent.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "express",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "express"
-          ],
-          "files": [
-            "dist/adapters/express.d.mts"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "next",
-          "class": "adapter",
-          "field": "peer",
-          "candidate": false,
-          "reason": "adapter class — the consumer picked and installed the backend",
-          "specifiers": [
-            "next/navigation",
-            "next"
-          ],
-          "files": [
-            "dist/adapters/next-app-dir.cjs",
-            "dist/adapters/next-app-dir.d.mts",
-            "dist/adapters/next-app-dir.mjs",
-            "dist/adapters/next.d.mts"
-          ],
-          "fileCount": 4
-        },
-        {
-          "target": "ws",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "ws"
-          ],
-          "files": [
-            "dist/ws-BR3-CM6m.d.mts"
           ],
           "fileCount": 1
         }
@@ -21950,7 +21831,7 @@
     },
     {
       "package": "@vercel/otel",
-      "measuredVersion": "2.2.0",
+      "measuredVersion": "2.2.1",
       "targets": [
         {
           "target": "@opentelemetry/core",
@@ -24125,7 +24006,7 @@
     },
     {
       "package": "bullmq",
-      "measuredVersion": "6.5.3",
+      "measuredVersion": "6.5.4",
       "targets": [
         {
           "target": "@valkey/valkey-glide",
@@ -24569,7 +24450,7 @@
     },
     {
       "package": "dependency-cruiser",
-      "measuredVersion": "18.7.1",
+      "measuredVersion": "18.7.2",
       "targets": [
         {
           "target": "typescript",
@@ -26637,7 +26518,7 @@
     },
     {
       "package": "i18next-http-backend",
-      "measuredVersion": "4.0.9",
+      "measuredVersion": "4.0.10",
       "targets": [
         {
           "target": "i18next",
@@ -27555,7 +27436,7 @@
     },
     {
       "package": "mermaid",
-      "measuredVersion": "12.2.0",
+      "measuredVersion": "12.3.0",
       "targets": [
         {
           "target": "@iconify/types",
@@ -28256,7 +28137,7 @@
     },
     {
       "package": "nitro",
-      "measuredVersion": "3.0.261029-rc",
+      "measuredVersion": "3.0.261102-rc",
       "targets": [
         {
           "target": "db0",
@@ -28290,7 +28171,7 @@
     },
     {
       "package": "nitropack",
-      "measuredVersion": "2.13.5",
+      "measuredVersion": "2.13.6",
       "targets": [
         {
           "target": "@cloudflare/workers-types",
@@ -28767,7 +28648,7 @@
     },
     {
       "package": "oxc-minify",
-      "measuredVersion": "0.156.0",
+      "measuredVersion": "0.157.0",
       "targets": [
         {
           "target": "@oxc-minify/binding-wasm32-wasi",
@@ -28807,7 +28688,7 @@
     },
     {
       "package": "oxc-parser",
-      "measuredVersion": "0.156.0",
+      "measuredVersion": "0.157.0",
       "targets": [
         {
           "target": "@oxc-parser/binding-wasm32-wasi",
@@ -28868,7 +28749,7 @@
     },
     {
       "package": "oxc-transform",
-      "measuredVersion": "0.156.0",
+      "measuredVersion": "0.157.0",
       "targets": [
         {
           "target": "@oxc-transform/binding-wasm32-wasi",
@@ -29046,7 +28927,7 @@
     },
     {
       "package": "pm2",
-      "measuredVersion": "7.1.1",
+      "measuredVersion": "7.1.2",
       "targets": [
         {
           "target": "@opentelemetry/auto-instrumentations-node",
@@ -29301,7 +29182,7 @@
     },
     {
       "package": "prosemirror-changeset",
-      "measuredVersion": "2.4.5",
+      "measuredVersion": "2.4.6",
       "targets": [
         {
           "target": "prosemirror-model",
@@ -29617,7 +29498,7 @@
     },
     {
       "package": "react-i18next",
-      "measuredVersion": "17.1.11",
+      "measuredVersion": "17.1.12",
       "targets": [
         {
           "target": "babel-plugin-macros",
@@ -31583,7 +31464,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.9.0",
+      "measuredVersion": "65.10.0",
       "targets": [
         {
           "target": "@vltpkg/graph",
@@ -32148,7 +32029,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261102.1",
+      "measuredVersion": "1.20261103.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32168,7 +32049,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.156.2",
+      "measuredVersion": "4.157.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -32379,7 +32260,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.14",
+      "measuredVersion": "0.5.15",
       "target": "ws",
       "specifiers": [
         "ws"
@@ -32412,7 +32293,7 @@
     },
     {
       "package": "@lhci/cli",
-      "measuredVersion": "0.15.1",
+      "measuredVersion": "0.16.0",
       "target": "@lhci/server",
       "specifiers": [
         "@lhci/server",
@@ -32445,7 +32326,7 @@
     },
     {
       "package": "@newrelic/security-agent",
-      "measuredVersion": "3.0.5",
+      "measuredVersion": "4.0.0",
       "target": "@grpc/grpc-js",
       "specifiers": [
         "@grpc/grpc-js"
@@ -32932,7 +32813,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.9.0",
+      "measuredVersion": "65.10.0",
       "target": "@vltpkg/graph",
       "specifiers": [
         "@vltpkg/graph"
@@ -32940,7 +32821,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.9.0",
+      "measuredVersion": "65.10.0",
       "target": "@vltpkg/package-info",
       "specifiers": [
         "@vltpkg/package-info"
@@ -32948,7 +32829,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.9.0",
+      "measuredVersion": "65.10.0",
       "target": "@vltpkg/package-json",
       "specifiers": [
         "@vltpkg/package-json"
@@ -32956,7 +32837,7 @@
     },
     {
       "package": "vercel",
-      "measuredVersion": "65.9.0",
+      "measuredVersion": "65.10.0",
       "target": "path-scurry",
       "specifiers": [
         "path-scurry"

@@ -1495,16 +1495,6 @@
           }
         }
       },
-      "@module-federation/webpack-bundler-runtime@*": {
-        "peerDependencies": {
-          "@module-federation/runtime-core": "*"
-        },
-        "peerDependenciesMeta": {
-          "@module-federation/runtime-core": {
-            "optional": true
-          }
-        }
-      },
       "@monaco-editor/loader@*": {
         "peerDependencies": {
           "monaco-editor": "*"
@@ -3721,28 +3711,6 @@
         },
         "peerDependenciesMeta": {
           "prosemirror-model": {
-            "optional": true
-          }
-        }
-      },
-      "@trpc/server@*": {
-        "peerDependencies": {
-          "@tanstack/intent": "*",
-          "express": "*",
-          "next": "*",
-          "ws": "*"
-        },
-        "peerDependenciesMeta": {
-          "@tanstack/intent": {
-            "optional": true
-          },
-          "express": {
-            "optional": true
-          },
-          "next": {
-            "optional": true
-          },
-          "ws": {
             "optional": true
           }
         }

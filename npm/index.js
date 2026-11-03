@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.43 — generated 2026-11-02, do not edit.
-// 754 packages, 1096 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.43 — generated 2026-11-03, do not edit.
+// 752 packages, 1091 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -1888,19 +1888,6 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "webpack": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@module-federation/webpack-bundler-runtime@*",
-  {
-   "peerDependencies": {
-    "@module-federation/runtime-core": "*"
-   },
-   "peerDependenciesMeta": {
-    "@module-federation/runtime-core": {
      "optional": true
     }
    }
@@ -4583,31 +4570,6 @@ exports.packageExtensions = [
    },
    "peerDependenciesMeta": {
     "prosemirror-model": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@trpc/server@*",
-  {
-   "peerDependencies": {
-    "@tanstack/intent": "*",
-    "express": "*",
-    "next": "*",
-    "ws": "*"
-   },
-   "peerDependenciesMeta": {
-    "@tanstack/intent": {
-     "optional": true
-    },
-    "express": {
-     "optional": true
-    },
-    "next": {
-     "optional": true
-    },
-    "ws": {
      "optional": true
     }
    }
