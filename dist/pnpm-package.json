@@ -4761,14 +4761,10 @@
       },
       "dd-trace@*": {
         "peerDependencies": {
-          "@vitest/runner": "*",
           "pnpapi": "*",
           "typescript": "*"
         },
         "peerDependenciesMeta": {
-          "@vitest/runner": {
-            "optional": true
-          },
           "pnpapi": {
             "optional": true
           },
@@ -6088,16 +6084,6 @@
           }
         }
       },
-      "metro-source-map@*": {
-        "peerDependencies": {
-          "@babel/core": "*"
-        },
-        "peerDependenciesMeta": {
-          "@babel/core": {
-            "optional": true
-          }
-        }
-      },
       "metro-transform-plugins@*": {
         "peerDependencies": {
           "@babel/types": "*"
@@ -6997,6 +6983,16 @@
         },
         "peerDependenciesMeta": {
           "ioredis": {
+            "optional": true
+          }
+        }
+      },
+      "redoc@*": {
+        "peerDependencies": {
+          "@redocly/markdoc": "*"
+        },
+        "peerDependenciesMeta": {
+          "@redocly/markdoc": {
             "optional": true
           }
         }

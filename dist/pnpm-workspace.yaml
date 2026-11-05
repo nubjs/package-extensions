@@ -1,5 +1,5 @@
-# Generated 2026-11-04 from the 10000 most-downloaded npm packages.
-# 752 packages, 1091 undeclared dependencies.
+# Generated 2026-11-05 from the 10000 most-downloaded npm packages.
+# 752 packages, 1090 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -3058,12 +3058,9 @@ packageExtensions:
         optional: true
   dd-trace@*:
     peerDependencies:
-      "@vitest/runner": "*"
       pnpapi: "*"
       typescript: "*"
     peerDependenciesMeta:
-      "@vitest/runner":
-        optional: true
       pnpapi:
         optional: true
       typescript:
@@ -3888,12 +3885,6 @@ packageExtensions:
     peerDependenciesMeta:
       metro:
         optional: true
-  metro-source-map@*:
-    peerDependencies:
-      "@babel/core": "*"
-    peerDependenciesMeta:
-      "@babel/core":
-        optional: true
   metro-transform-plugins@*:
     peerDependencies:
       "@babel/types": "*"
@@ -4464,6 +4455,12 @@ packageExtensions:
       ioredis: "*"
     peerDependenciesMeta:
       ioredis:
+        optional: true
+  redoc@*:
+    peerDependencies:
+      "@redocly/markdoc": "*"
+    peerDependenciesMeta:
+      "@redocly/markdoc":
         optional: true
   rehype-harden@*:
     peerDependencies:

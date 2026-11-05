@@ -1,32 +1,26 @@
 {
-  "generated": "2026-11-04",
-  "dataset": "39f14b181a3a122e",
+  "generated": "2026-11-05",
+  "dataset": "74f5a245188b7e16",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
-    "confirmed": 2,
+    "confirmed": 3,
     "confirmedViaPath": 4,
-    "notOnImport": 35,
-    "installFailed": 13,
-    "inconclusive": 2
+    "notOnImport": 44,
+    "installFailed": 2,
+    "inconclusive": 3
   },
   "results": [
     {
       "package": "@applitools/spec-driver-webdriver",
-      "version": "1.6.14",
+      "version": "1.6.15",
       "expected": [
         "@applitools/test-utils"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@applitools/\u001b[39m\u001b[38;5;173mspec-driver-webdriver\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.6.15\u001b[39m: All versions satisfying \"1.6.15\" are quarantined\n::endgroup::\n\u001b"
     },
     {
       "package": "@ardatan/relay-compiler",
@@ -137,8 +131,18 @@
         "msw",
         "undici"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.82.0\u001b[39m: All versions satisfying \"1.82.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 10,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "zod"
+      ],
+      "byOtherIssuers": [
+        "@ai-sdk/provider-utils -> zod (unprovided peer)"
+      ],
+      "specifiersTried": 36
     },
     {
       "package": "@nestjs/platform-express",
@@ -146,8 +150,16 @@
       "expected": [
         "rxjs"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nestjs/\u001b[39m\u001b[38;5;173mplatform-express\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:12.3.3\u001b[39m: All versions satisfying \"12.3.3\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "@nestjs/common"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "@nestjs/platform-fastify",
@@ -155,8 +167,16 @@
       "expected": [
         "rxjs"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nestjs/\u001b[39m\u001b[38;5;173mplatform-fastify\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:12.3.3\u001b[39m: All versions satisfying \"12.3.3\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "@nestjs/common"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "@newrelic/security-agent",
@@ -218,8 +238,16 @@
         "rxjs",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mdevkit\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.4\u001b[39m: All versions satisfying \"24.0.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 5,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "nx"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 14
     },
     {
       "package": "@nx/eslint-plugin",
@@ -234,8 +262,20 @@
         "typescript",
         "typescript-eslint"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173meslint-plugin\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.4\u001b[39m: All versions satisfying \"24.0.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN001"
+      "verdict": "confirmed",
+      "confirmed": [
+        "@eslint/js",
+        "angular-eslint",
+        "eslint-plugin-import"
+      ],
+      "confirmedViaPath": [],
+      "citedPathsTried": 13,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@nx/devkit -> nx (unprovided peer)"
+      ],
+      "specifiersTried": 20
     },
     {
       "package": "@nx/webpack",
@@ -244,8 +284,16 @@
         "swc-loader",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mwebpack\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.4\u001b[39m: All versions satisfying \"24.0.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[3"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@nx/devkit -> nx (unprovided peer)"
+      ],
+      "specifiersTried": 12
     },
     {
       "package": "@oclif/config",
@@ -395,8 +443,16 @@
         "@swagger-api/apidom-ns-asyncapi-3",
         "minim"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@swagger-api/\u001b[39m\u001b[38;5;173mapidom-reference\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.14.0\u001b[39m: All versions satisfying \"1.14.0\" are quarantined\n::endgroup::\n\u001b[91m"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@swaggerexpert/json-pointer -> @swagger-api/apidom-core"
+      ],
+      "specifiersTried": 9
     },
     {
       "package": "astro",
@@ -460,8 +516,16 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-asset\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.20\u001b[39m: All versions satisfying \"58.0.20\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-as"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 8,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "expo"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 13
     },
     {
       "package": "expo-auth-session",
@@ -469,8 +533,16 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-auth-session\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.17\u001b[39m: All versions satisfying \"58.0.17\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 7,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 14
     },
     {
       "package": "expo-clipboard",
@@ -558,8 +630,14 @@
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-updates\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.21\u001b[39m: All versions satisfying \"58.0.21\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 7,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 9
     },
     {
       "package": "expo-video",
@@ -578,21 +656,13 @@
     },
     {
       "package": "firebase-tools",
-      "version": "15.34.2",
+      "version": "15.35.0",
       "expected": [
         "astro",
         "firebase-functions"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "firebase-functions"
-      ],
-      "citedPathsTried": 9,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 10
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mfirebase-tools\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:15.35.0\u001b[39m: All versions satisfying \"15.35.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mfir"
     },
     {
       "package": "http-call",
@@ -664,8 +734,19 @@
         "react-server-dom-webpack",
         "server-only"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mnext\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:16.4.5\u001b[39m: All versions satisfying \"16.4.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mnext\u001b[39m\u001b[38;5"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "private-next-instrumentation-client",
+        "react-server-dom-webpack"
+      ],
+      "citedPathsTried": 20,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "react"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 21
     },
     {
       "package": "nx",
@@ -685,8 +766,8 @@
         "prettier",
         "ts-node"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mnx\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.4\u001b[39m: All versions satisfying \"24.0.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mnx\u001b[39m\u001b[38;5;37m"
+      "verdict": "inconclusive",
+      "detail": "fatal: not a git repository (or any of the parent directories): .git\n"
     },
     {
       "package": "playwright-core",
@@ -863,7 +944,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:5440) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-dMXKFx/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5860) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-wt1q4O/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     },
     {
       "package": "vercel",
@@ -874,8 +955,14 @@
         "@vltpkg/package-json",
         "path-scurry"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mvercel\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:65.11.0\u001b[39m: All versions satisfying \"65.11.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mvercel\u001b[39m"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     }
   ]
 }

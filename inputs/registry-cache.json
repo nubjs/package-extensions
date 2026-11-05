@@ -329,6 +329,7 @@
   "@react-pdf/font": true,
   "@react-pdf/layout": true,
   "@redocly/client-generator": true,
+  "@redocly/markdoc": true,
   "@redocly/openapi-core": true,
   "@remix-run/dev": true,
   "@remix-run/node": true,
