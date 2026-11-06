@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.44 — generated 2026-11-05, do not edit.
-// 752 packages, 1090 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.45 — generated 2026-11-06, do not edit.
+// 749 packages, 1084 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -1990,32 +1990,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@standard-schema/spec": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@nestjs/platform-express@*",
-  {
-   "peerDependencies": {
-    "rxjs": "*"
-   },
-   "peerDependenciesMeta": {
-    "rxjs": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@nestjs/platform-fastify@*",
-  {
-   "peerDependencies": {
-    "rxjs": "*"
-   },
-   "peerDependenciesMeta": {
-    "rxjs": {
      "optional": true
     }
    }
@@ -9422,31 +9396,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "node": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "vercel@*",
-  {
-   "peerDependencies": {
-    "@vltpkg/graph": "*",
-    "@vltpkg/package-info": "*",
-    "@vltpkg/package-json": "*",
-    "path-scurry": "*"
-   },
-   "peerDependenciesMeta": {
-    "@vltpkg/graph": {
-     "optional": true
-    },
-    "@vltpkg/package-info": {
-     "optional": true
-    },
-    "@vltpkg/package-json": {
-     "optional": true
-    },
-    "path-scurry": {
      "optional": true
     }
    }

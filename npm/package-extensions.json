@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05",
+ "generated": "2026-11-06",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1090,
-   "packages": 620
+   "entries": 1084,
+   "packages": 617
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
   }
  },
  "totals": {
-  "packages": 752,
-  "selectors": 772,
-  "entries": 1090,
+  "packages": 749,
+  "selectors": 769,
+  "entries": 1084,
   "byClass": {
-   "runtime": 172,
+   "runtime": 165,
    "adapter": 127,
    "types": 501,
    "deep-path": 0,
-   "guarded": 290
+   "guarded": 291
   },
   "byField": {
    "dependency": 28,
-   "peer": 1062
+   "peer": 1056
   },
-  "candidatesForReview": 69,
+  "candidatesForReview": 62,
   "droppedUnpublishedTargets": 201,
   "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
@@ -4423,26 +4423,6 @@
    },
    "peerDependenciesMeta": {
     "@standard-schema/spec": {
-     "optional": true
-    }
-   }
-  },
-  "@nestjs/platform-express@*": {
-   "peerDependencies": {
-    "rxjs": "*"
-   },
-   "peerDependenciesMeta": {
-    "rxjs": {
-     "optional": true
-    }
-   }
-  },
-  "@nestjs/platform-fastify@*": {
-   "peerDependencies": {
-    "rxjs": "*"
-   },
-   "peerDependenciesMeta": {
-    "rxjs": {
      "optional": true
     }
    }
@@ -10497,28 +10477,6 @@
     }
    }
   },
-  "vercel@*": {
-   "peerDependencies": {
-    "@vltpkg/graph": "*",
-    "@vltpkg/package-info": "*",
-    "@vltpkg/package-json": "*",
-    "path-scurry": "*"
-   },
-   "peerDependenciesMeta": {
-    "@vltpkg/graph": {
-     "optional": true
-    },
-    "@vltpkg/package-info": {
-     "optional": true
-    },
-    "@vltpkg/package-json": {
-     "optional": true
-    },
-    "path-scurry": {
-     "optional": true
-    }
-   }
-  },
   "verdaccio-htpasswd@*": {
    "peerDependencies": {
     "@verdaccio/types": "*"
@@ -12394,7 +12352,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "1.5.0",
+   "measuredVersion": "1.6.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -12442,7 +12400,7 @@
   },
   {
    "package": "@apollo/client",
-   "measuredVersion": "4.3.6",
+   "measuredVersion": "4.3.7",
    "targets": [
     {
      "target": "relay-runtime",
@@ -12557,7 +12515,7 @@
   },
   {
    "package": "@astrojs/markdown-remark",
-   "measuredVersion": "7.3.5",
+   "measuredVersion": "7.3.6",
    "targets": [
     {
      "target": "hast",
@@ -12606,7 +12564,7 @@
   },
   {
    "package": "@astrojs/react",
-   "measuredVersion": "7.1.2",
+   "measuredVersion": "7.1.4",
    "targets": [
     {
      "target": "astro",
@@ -13131,7 +13089,7 @@
   },
   {
    "package": "@dataform/core",
-   "measuredVersion": "3.1.3",
+   "measuredVersion": "3.1.4",
    "targets": [
     {
      "target": "long",
@@ -13772,7 +13730,7 @@
   },
   {
    "package": "@fastify/multipart",
-   "measuredVersion": "10.1.7",
+   "measuredVersion": "10.1.8",
    "targets": [
     {
      "target": "ajv",
@@ -14228,7 +14186,7 @@
   },
   {
    "package": "@formkit/auto-animate",
-   "measuredVersion": "0.10.1",
+   "measuredVersion": "0.10.2",
    "targets": [
     {
      "target": "@angular/core",
@@ -15655,7 +15613,7 @@
   },
   {
    "package": "@nestjs/cache-manager",
-   "measuredVersion": "12.0.2",
+   "measuredVersion": "12.0.4",
    "targets": [
     {
      "target": "cacheable",
@@ -15675,7 +15633,7 @@
   },
   {
    "package": "@nestjs/core",
-   "measuredVersion": "12.3.3",
+   "measuredVersion": "12.4.0",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -15694,48 +15652,8 @@
    ]
   },
   {
-   "package": "@nestjs/platform-express",
-   "measuredVersion": "12.3.3",
-   "targets": [
-    {
-     "target": "rxjs",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "rxjs"
-     ],
-     "files": [
-      "multer/multer/multer.utils.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "@nestjs/platform-fastify",
-   "measuredVersion": "12.3.3",
-   "targets": [
-    {
-     "target": "rxjs",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "rxjs"
-     ],
-     "files": [
-      "multipart/multipart/multipart-interceptor.factory.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "@netlify/serverless-functions-api",
-   "measuredVersion": "2.28.1",
+   "measuredVersion": "2.29.1",
    "targets": [
     {
      "target": "@netlify/cache",
@@ -15769,7 +15687,7 @@
   },
   {
    "package": "@newrelic/security-agent",
-   "measuredVersion": "4.0.0",
+   "measuredVersion": "4.0.1",
    "targets": [
     {
      "target": "@aws-sdk/client-lambda",
@@ -18263,7 +18181,7 @@
   },
   {
    "package": "@opentelemetry/instrumentation-winston",
-   "measuredVersion": "0.69.0",
+   "measuredVersion": "0.70.0",
    "targets": [
     {
      "target": "@opentelemetry/winston-transport",
@@ -18715,7 +18633,7 @@
   },
   {
    "package": "@pulumi/pulumi",
-   "measuredVersion": "3.274.0",
+   "measuredVersion": "3.274.1",
    "targets": [
     {
      "target": "@microsoft/typescript-etw",
@@ -19486,7 +19404,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.75.0",
+   "measuredVersion": "2.76.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20380,7 +20298,7 @@
   },
   {
    "package": "@storybook/addon-a11y",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20482,7 +20400,7 @@
   },
   {
    "package": "@storybook/addon-onboarding",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20535,7 +20453,7 @@
   },
   {
    "package": "@storybook/addon-themes",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20570,7 +20488,7 @@
   },
   {
    "package": "@storybook/addon-vitest",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "react",
@@ -20590,7 +20508,7 @@
   },
   {
    "package": "@storybook/builder-webpack5",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "@storybook/global",
@@ -20676,7 +20594,7 @@
   },
   {
    "package": "@storybook/nextjs",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "sb-original",
@@ -20698,7 +20616,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "sb-original",
@@ -21302,7 +21220,7 @@
   },
   {
    "package": "@tiptap/extension-list",
-   "measuredVersion": "3.32.3",
+   "measuredVersion": "3.33.0",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -21808,7 +21726,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "27.0.1",
+   "measuredVersion": "28.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -21828,7 +21746,7 @@
   },
   {
    "package": "@vercel/otel",
-   "measuredVersion": "2.2.1",
+   "measuredVersion": "2.3.0",
    "targets": [
     {
      "target": "@opentelemetry/core",
@@ -21849,7 +21767,7 @@
   },
   {
    "package": "@vercel/speed-insights",
-   "measuredVersion": "2.0.0",
+   "measuredVersion": "2.1.0",
    "targets": [
     {
      "target": "@nuxt/kit",
@@ -21885,7 +21803,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "26.0.1",
+   "measuredVersion": "27.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -23601,7 +23519,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "9.2.1",
+   "measuredVersion": "9.2.2",
    "targets": [
     {
      "target": "@appium/types",
@@ -23676,7 +23594,7 @@
   },
   {
    "package": "ast-kit",
-   "measuredVersion": "3.0.0",
+   "measuredVersion": "3.0.1",
    "targets": [
     {
      "target": "@babel/types",
@@ -23716,7 +23634,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.4.5",
+   "measuredVersion": "7.4.7",
    "targets": [
     {
      "target": "@astrojs/cloudflare",
@@ -23771,7 +23689,7 @@
   },
   {
    "package": "aws-cdk",
-   "measuredVersion": "2.1147.0",
+   "measuredVersion": "2.1148.0",
    "targets": [
     {
      "target": "@aws-cdk/cloud-assembly-api",
@@ -24003,7 +23921,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.7.0",
+   "measuredVersion": "6.7.1",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -25089,7 +25007,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.4.3",
+   "measuredVersion": "65.4.4",
    "targets": [
     {
      "target": "@eslint/core",
@@ -27362,7 +27280,7 @@
   },
   {
    "package": "mdast-util-gfm-autolink-literal",
-   "measuredVersion": "2.0.1",
+   "measuredVersion": "2.1.0",
    "targets": [
     {
      "target": "mdast-util-from-markdown",
@@ -27820,7 +27738,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "14.9.1",
+   "measuredVersion": "14.10.1",
    "targets": [
     {
      "target": "motion-dom",
@@ -28812,7 +28730,7 @@
   },
   {
    "package": "playwright-core",
-   "measuredVersion": "1.64.1",
+   "measuredVersion": "1.65.0",
    "targets": [
     {
      "target": "bufferutil",
@@ -28830,10 +28748,10 @@
     },
     {
      "target": "chromium-bidi",
-     "class": "runtime",
+     "class": "guarded",
      "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
       "chromium-bidi/lib/cjs/bidiMapper/BidiMapper",
       "chromium-bidi/lib/cjs/cdp/CdpConnection"
@@ -28979,7 +28897,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.62.0",
+   "measuredVersion": "5.63.1",
    "targets": [
     {
      "target": "express",
@@ -29547,7 +29465,7 @@
   },
   {
    "package": "react-native-gesture-handler",
-   "measuredVersion": "3.4.0",
+   "measuredVersion": "3.5.0",
    "targets": [
     {
      "target": "react-native-reanimated",
@@ -29563,14 +29481,14 @@
      "files": [
       "lib/module/components/ReanimatedDrawerLayout.js",
       "lib/module/components/ReanimatedSwipeable/ReanimatedSwipeable.js",
+      "lib/module/handlers/gestures/GestureDetector/refreshesAnimatableRef.js",
       "lib/module/handlers/gestures/reanimatedWrapper.js",
       "lib/module/v3/detectors/ReanimatedNativeDetector.js",
       "src/components/ReanimatedDrawerLayout.tsx",
       "src/components/ReanimatedSwipeable/ReanimatedSwipeable.tsx",
-      "src/handlers/gestures/reanimatedWrapper.ts",
-      "src/v3/detectors/ReanimatedNativeDetector.tsx"
+      "src/handlers/gestures/GestureDetector/refreshesAnimatableRef.ts"
      ],
-     "fileCount": 8
+     "fileCount": 10
     },
     {
      "target": "react-native-worklets",
@@ -30367,7 +30285,7 @@
   },
   {
    "package": "sass-embedded",
-   "measuredVersion": "1.107.1",
+   "measuredVersion": "1.108.0",
    "targets": [
     {
      "target": "sass",
@@ -30609,7 +30527,7 @@
   },
   {
    "package": "storybook",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "react",
@@ -30629,7 +30547,7 @@
       "dist/chunk-BxCdsGId.d.ts",
       "dist/chunk-CSYKg21N.d.ts",
       "dist/chunk-CdMoRv3z.d.ts",
-      "dist/chunk-DrDCFVzm.d.ts"
+      "dist/chunk-CkpWpwbe.d.ts"
      ],
      "fileCount": 15
     },
@@ -30667,7 +30585,7 @@
   },
   {
    "package": "storybook-addon-pseudo-states",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -31446,68 +31364,6 @@
    ]
   },
   {
-   "package": "vercel",
-   "measuredVersion": "65.11.0",
-   "targets": [
-    {
-     "target": "@vltpkg/graph",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "@vltpkg/graph"
-     ],
-     "files": [
-      "dist/chunks/vlt-builder-importer-RBUPAB6J.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "@vltpkg/package-info",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "@vltpkg/package-info"
-     ],
-     "files": [
-      "dist/chunks/vlt-builder-importer-RBUPAB6J.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "@vltpkg/package-json",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "@vltpkg/package-json"
-     ],
-     "files": [
-      "dist/chunks/vlt-builder-importer-RBUPAB6J.js"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "path-scurry",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "path-scurry"
-     ],
-     "files": [
-      "dist/chunks/vlt-builder-importer-RBUPAB6J.js"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "verdaccio-htpasswd",
    "measuredVersion": "13.1.7",
    "targets": [
@@ -31811,7 +31667,7 @@
   },
   {
    "package": "vue-bundle-renderer",
-   "measuredVersion": "2.4.0",
+   "measuredVersion": "2.5.0",
    "targets": [
     {
      "target": "vite",
@@ -32012,7 +31868,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261104.1",
+   "measuredVersion": "1.20261106.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32292,24 +32148,8 @@
    ]
   },
   {
-   "package": "@nestjs/platform-express",
-   "measuredVersion": "12.3.3",
-   "target": "rxjs",
-   "specifiers": [
-    "rxjs"
-   ]
-  },
-  {
-   "package": "@nestjs/platform-fastify",
-   "measuredVersion": "12.3.3",
-   "target": "rxjs",
-   "specifiers": [
-    "rxjs"
-   ]
-  },
-  {
    "package": "@newrelic/security-agent",
-   "measuredVersion": "4.0.0",
+   "measuredVersion": "4.0.1",
    "target": "@grpc/grpc-js",
    "specifiers": [
     "@grpc/grpc-js"
@@ -32454,7 +32294,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.5",
+   "measuredVersion": "10.6.6",
    "target": "sb-original",
    "specifiers": [
     "sb-original/image-context"
@@ -32470,7 +32310,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.4.5",
+   "measuredVersion": "7.4.7",
    "target": "@astrojs/cloudflare",
    "specifiers": [
     "@astrojs/cloudflare/info"
@@ -32685,15 +32525,6 @@
    ]
   },
   {
-   "package": "playwright-core",
-   "measuredVersion": "1.64.1",
-   "target": "chromium-bidi",
-   "specifiers": [
-    "chromium-bidi/lib/cjs/bidiMapper/BidiMapper",
-    "chromium-bidi/lib/cjs/cdp/CdpConnection"
-   ]
-  },
-  {
    "package": "prettier-plugin-organize-imports",
    "measuredVersion": "4.3.0",
    "target": "@volar/typescript",
@@ -32719,7 +32550,7 @@
   },
   {
    "package": "react-native-gesture-handler",
-   "measuredVersion": "3.4.0",
+   "measuredVersion": "3.5.0",
    "target": "react-native-reanimated",
    "specifiers": [
     "react-native-reanimated",
@@ -32729,7 +32560,7 @@
   },
   {
    "package": "react-native-gesture-handler",
-   "measuredVersion": "3.4.0",
+   "measuredVersion": "3.5.0",
    "target": "react-native-worklets",
    "specifiers": [
     "react-native-worklets"
@@ -32792,38 +32623,6 @@
    "target": "yamlparser",
    "specifiers": [
     "yamlparser"
-   ]
-  },
-  {
-   "package": "vercel",
-   "measuredVersion": "65.11.0",
-   "target": "@vltpkg/graph",
-   "specifiers": [
-    "@vltpkg/graph"
-   ]
-  },
-  {
-   "package": "vercel",
-   "measuredVersion": "65.11.0",
-   "target": "@vltpkg/package-info",
-   "specifiers": [
-    "@vltpkg/package-info"
-   ]
-  },
-  {
-   "package": "vercel",
-   "measuredVersion": "65.11.0",
-   "target": "@vltpkg/package-json",
-   "specifiers": [
-    "@vltpkg/package-json"
-   ]
-  },
-  {
-   "package": "vercel",
-   "measuredVersion": "65.11.0",
-   "target": "path-scurry",
-   "specifiers": [
-    "path-scurry"
    ]
   }
  ],
