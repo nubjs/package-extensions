@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-06",
+  "generated": "2026-11-07",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
-    "scannedOk": 9978,
-    "failed": 22
+    "scannedOk": 9979,
+    "failed": 21
   },
   "sources": {
     "scan": {
-      "entries": 1084,
-      "packages": 617
+      "entries": 1081,
+      "packages": 614
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 749,
-    "selectors": 769,
-    "entries": 1084,
+    "packages": 746,
+    "selectors": 766,
+    "entries": 1081,
     "byClass": {
       "runtime": 165,
-      "adapter": 127,
-      "types": 501,
+      "adapter": 126,
+      "types": 499,
       "deep-path": 0,
       "guarded": 291
     },
     "byField": {
       "dependency": 28,
-      "peer": 1056
+      "peer": 1053
     },
     "candidatesForReview": 62,
     "droppedUnpublishedTargets": 201,
@@ -3909,16 +3909,6 @@
       },
       "peerDependenciesMeta": {
         "@babel/core": {
-          "optional": true
-        }
-      }
-    },
-    "@graphql-codegen/plugin-helpers@*": {
-      "peerDependencies": {
-        "@graphql-tools/apollo-engine-loader": "*"
-      },
-      "peerDependenciesMeta": {
-        "@graphql-tools/apollo-engine-loader": {
           "optional": true
         }
       }
@@ -8774,16 +8764,6 @@
         }
       }
     },
-    "markdownlint@*": {
-      "peerDependencies": {
-        "markdown-it": "*"
-      },
-      "peerDependenciesMeta": {
-        "markdown-it": {
-          "optional": true
-        }
-      }
-    },
     "mdast-util-gfm-autolink-literal@*": {
       "peerDependencies": {
         "mdast-util-from-markdown": "*",
@@ -9621,16 +9601,6 @@
       },
       "peerDependenciesMeta": {
         "react": {
-          "optional": true
-        }
-      }
-    },
-    "react-i18next@*": {
-      "peerDependencies": {
-        "babel-plugin-macros": "*"
-      },
-      "peerDependenciesMeta": {
-        "babel-plugin-macros": {
           "optional": true
         }
       }
@@ -12243,7 +12213,7 @@
     },
     {
       "package": "@angular/common",
-      "measuredVersion": "22.2.4",
+      "measuredVersion": "22.2.5",
       "targets": [
         {
           "target": "@angular/upgrade",
@@ -12264,7 +12234,7 @@
     },
     {
       "package": "@angular/language-service",
-      "measuredVersion": "22.2.4",
+      "measuredVersion": "22.2.5",
       "targets": [
         {
           "target": "@angular/compiler",
@@ -12331,7 +12301,7 @@
     },
     {
       "package": "@angular/router",
-      "measuredVersion": "22.2.4",
+      "measuredVersion": "22.2.5",
       "targets": [
         {
           "target": "@angular/upgrade",
@@ -14447,7 +14417,7 @@
     },
     {
       "package": "@graphql-codegen/client-preset",
-      "measuredVersion": "6.2.3",
+      "measuredVersion": "7.0.0",
       "targets": [
         {
           "target": "@babel/core",
@@ -14460,26 +14430,6 @@
           ],
           "files": [
             "typings/babel.d.ts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
-      "package": "@graphql-codegen/plugin-helpers",
-      "measuredVersion": "7.4.2",
-      "targets": [
-        {
-          "target": "@graphql-tools/apollo-engine-loader",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@graphql-tools/apollo-engine-loader"
-          ],
-          "files": [
-            "typings/types.d.ts"
           ],
           "fileCount": 1
         }
@@ -16630,7 +16580,7 @@
     },
     {
       "package": "@nx/angular",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@angular-devkit/architect",
@@ -16752,7 +16702,7 @@
     },
     {
       "package": "@nx/cypress",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "typescript",
@@ -16772,7 +16722,7 @@
     },
     {
       "package": "@nx/devkit",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@angular-devkit/architect",
@@ -16848,7 +16798,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@eslint/js",
@@ -16976,7 +16926,7 @@
     },
     {
       "package": "@nx/jest",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@jest/core",
@@ -17025,7 +16975,7 @@
     },
     {
       "package": "@nx/js",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@nx/eslint",
@@ -17159,7 +17109,7 @@
     },
     {
       "package": "@nx/node",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@nx/rolldown",
@@ -17208,7 +17158,7 @@
     },
     {
       "package": "@nx/plugin",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "nx",
@@ -17228,7 +17178,7 @@
     },
     {
       "package": "@nx/react",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@nx/cypress",
@@ -17563,7 +17513,7 @@
     },
     {
       "package": "@nx/rollup",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@swc/core",
@@ -17597,7 +17547,7 @@
     },
     {
       "package": "@nx/rspack",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "yargs",
@@ -17617,7 +17567,7 @@
     },
     {
       "package": "@nx/storybook",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "typescript",
@@ -17637,7 +17587,7 @@
     },
     {
       "package": "@nx/vite",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@nx/eslint",
@@ -17671,7 +17621,7 @@
     },
     {
       "package": "@nx/vitest",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "typescript",
@@ -17691,7 +17641,7 @@
     },
     {
       "package": "@nx/web",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@nx/vitest",
@@ -17711,7 +17661,7 @@
     },
     {
       "package": "@nx/webpack",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "swc-loader",
@@ -17745,7 +17695,7 @@
     },
     {
       "package": "@nx/workspace",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@angular-devkit/schematics",
@@ -19743,7 +19693,7 @@
     },
     {
       "package": "@salesforce/sf-plugins-core",
-      "measuredVersion": "13.0.8",
+      "measuredVersion": "13.0.9",
       "targets": [
         {
           "target": "sinon",
@@ -21054,7 +21004,7 @@
     },
     {
       "package": "@tailwindcss/oxide",
-      "measuredVersion": "4.3.4",
+      "measuredVersion": "4.3.5",
       "targets": [
         {
           "target": "@tailwindcss/oxide-android-arm-eabi",
@@ -23554,7 +23504,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "10.10.0",
+      "measuredVersion": "10.11.0",
       "targets": [
         {
           "target": "@appium/types",
@@ -23921,7 +23871,7 @@
     },
     {
       "package": "bullmq",
-      "measuredVersion": "6.7.1",
+      "measuredVersion": "6.7.2",
       "targets": [
         {
           "target": "@valkey/valkey-glide",
@@ -24433,7 +24383,7 @@
     },
     {
       "package": "domino",
-      "measuredVersion": "2.1.8",
+      "measuredVersion": "2.1.9",
       "targets": [
         {
           "target": "parserlib",
@@ -24987,7 +24937,7 @@
     },
     {
       "package": "eslint-plugin-import-x",
-      "measuredVersion": "4.17.1",
+      "measuredVersion": "4.18.0",
       "targets": [
         {
           "target": "@typescript-eslint/scope-manager",
@@ -25007,7 +24957,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.4.4",
+      "measuredVersion": "65.4.5",
       "targets": [
         {
           "target": "@eslint/core",
@@ -25163,7 +25113,7 @@
     },
     {
       "package": "eslint-plugin-svelte",
-      "measuredVersion": "3.24.0",
+      "measuredVersion": "3.24.1",
       "targets": [
         {
           "target": "typescript",
@@ -26999,7 +26949,7 @@
     },
     {
       "package": "knip",
-      "measuredVersion": "6.44.1",
+      "measuredVersion": "6.44.2",
       "targets": [
         {
           "target": "vue",
@@ -27259,26 +27209,6 @@
       ]
     },
     {
-      "package": "markdownlint",
-      "measuredVersion": "0.42.0",
-      "targets": [
-        {
-          "target": "markdown-it",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "markdown-it"
-          ],
-          "files": [
-            "lib/markdownlint.d.mts"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "mdast-util-gfm-autolink-literal",
       "measuredVersion": "2.1.0",
       "targets": [
@@ -27392,7 +27322,7 @@
     },
     {
       "package": "metro",
-      "measuredVersion": "0.87.3",
+      "measuredVersion": "0.88.0",
       "targets": [
         {
           "target": "@babel/runtime",
@@ -27429,7 +27359,7 @@
     },
     {
       "package": "metro-babel-transformer",
-      "measuredVersion": "0.87.3",
+      "measuredVersion": "0.88.0",
       "targets": [
         {
           "target": "@babel/types",
@@ -27449,7 +27379,7 @@
     },
     {
       "package": "metro-config",
-      "measuredVersion": "0.87.3",
+      "measuredVersion": "0.88.0",
       "targets": [
         {
           "target": "metro-babel-register",
@@ -27511,7 +27441,7 @@
     },
     {
       "package": "metro-core",
-      "measuredVersion": "0.87.3",
+      "measuredVersion": "0.88.0",
       "targets": [
         {
           "target": "metro",
@@ -27545,7 +27475,7 @@
     },
     {
       "package": "metro-file-map",
-      "measuredVersion": "0.87.3",
+      "measuredVersion": "0.88.0",
       "targets": [
         {
           "target": "metro-config",
@@ -27565,7 +27495,7 @@
     },
     {
       "package": "metro-minify-terser",
-      "measuredVersion": "0.87.3",
+      "measuredVersion": "0.88.0",
       "targets": [
         {
           "target": "metro-transform-worker",
@@ -27585,7 +27515,7 @@
     },
     {
       "package": "metro-resolver",
-      "measuredVersion": "0.87.3",
+      "measuredVersion": "0.88.0",
       "targets": [
         {
           "target": "metro",
@@ -27605,7 +27535,7 @@
     },
     {
       "package": "metro-transform-plugins",
-      "measuredVersion": "0.87.3",
+      "measuredVersion": "0.88.0",
       "targets": [
         {
           "target": "@babel/types",
@@ -28283,7 +28213,7 @@
     },
     {
       "package": "nx",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "targets": [
         {
           "target": "@angular-devkit/build-angular",
@@ -29378,26 +29308,6 @@
       ]
     },
     {
-      "package": "react-i18next",
-      "measuredVersion": "17.1.13",
-      "targets": [
-        {
-          "target": "babel-plugin-macros",
-          "class": "adapter",
-          "field": "peer",
-          "candidate": false,
-          "reason": "adapter class — the consumer picked and installed the backend",
-          "specifiers": [
-            "babel-plugin-macros"
-          ],
-          "files": [
-            "icu.macro.js"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "react-leaflet",
       "measuredVersion": "5.0.0",
       "targets": [
@@ -29909,7 +29819,7 @@
     },
     {
       "package": "rehype-harden",
-      "measuredVersion": "1.1.8",
+      "measuredVersion": "1.1.9",
       "targets": [
         {
           "target": "hast",
@@ -30188,7 +30098,7 @@
     },
     {
       "package": "rrdom",
-      "measuredVersion": "2.2.0",
+      "measuredVersion": "2.2.1",
       "targets": [
         {
           "target": "@rrweb/types",
@@ -30208,7 +30118,7 @@
     },
     {
       "package": "rrweb-snapshot",
-      "measuredVersion": "2.2.0",
+      "measuredVersion": "2.2.1",
       "targets": [
         {
           "target": "@rrweb/types",
@@ -30285,7 +30195,7 @@
     },
     {
       "package": "sass-embedded",
-      "measuredVersion": "1.108.0",
+      "measuredVersion": "1.108.1",
       "targets": [
         {
           "target": "sass",
@@ -31868,7 +31778,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261106.1",
+      "measuredVersion": "1.20261107.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32173,7 +32083,7 @@
     },
     {
       "package": "@nx/devkit",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "target": "@angular-devkit/architect",
       "specifiers": [
         "@angular-devkit/architect"
@@ -32181,7 +32091,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "target": "eslint-plugin-jsx-a11y",
       "specifiers": [
         "eslint-plugin-jsx-a11y"
@@ -32189,7 +32099,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "target": "eslint-plugin-react",
       "specifiers": [
         "eslint-plugin-react"
@@ -32197,7 +32107,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "target": "eslint-plugin-react-hooks",
       "specifiers": [
         "eslint-plugin-react-hooks"
@@ -32205,7 +32115,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "target": "typescript-eslint",
       "specifiers": [
         "typescript-eslint"
@@ -32213,7 +32123,7 @@
     },
     {
       "package": "@nx/webpack",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "target": "swc-loader",
       "specifiers": [
         "swc-loader"
@@ -32318,7 +32228,7 @@
     },
     {
       "package": "domino",
-      "measuredVersion": "2.1.8",
+      "measuredVersion": "2.1.9",
       "target": "parserlib",
       "specifiers": [
         "parserlib"
@@ -32518,7 +32428,7 @@
     },
     {
       "package": "nx",
-      "measuredVersion": "24.0.4",
+      "measuredVersion": "24.0.5",
       "target": "ts-node",
       "specifiers": [
         "ts-node"

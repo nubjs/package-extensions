@@ -1061,16 +1061,6 @@
           }
         }
       },
-      "@graphql-codegen/plugin-helpers@*": {
-        "peerDependencies": {
-          "@graphql-tools/apollo-engine-loader": "*"
-        },
-        "peerDependenciesMeta": {
-          "@graphql-tools/apollo-engine-loader": {
-            "optional": true
-          }
-        }
-      },
       "@graphql-tools/graphql-tag-pluck@*": {
         "peerDependencies": {
           "@astrojs/compiler": "*",
@@ -5922,16 +5912,6 @@
           }
         }
       },
-      "markdownlint@*": {
-        "peerDependencies": {
-          "markdown-it": "*"
-        },
-        "peerDependenciesMeta": {
-          "markdown-it": {
-            "optional": true
-          }
-        }
-      },
       "mdast-util-gfm-autolink-literal@*": {
         "peerDependencies": {
           "mdast-util-from-markdown": "*",
@@ -6769,16 +6749,6 @@
         },
         "peerDependenciesMeta": {
           "react": {
-            "optional": true
-          }
-        }
-      },
-      "react-i18next@*": {
-        "peerDependencies": {
-          "babel-plugin-macros": "*"
-        },
-        "peerDependenciesMeta": {
-          "babel-plugin-macros": {
             "optional": true
           }
         }

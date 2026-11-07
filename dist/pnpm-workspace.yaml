@@ -1,5 +1,5 @@
-# Generated 2026-11-06 from the 10000 most-downloaded npm packages.
-# 749 packages, 1084 undeclared dependencies.
+# Generated 2026-11-07 from the 10000 most-downloaded npm packages.
+# 746 packages, 1081 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -660,12 +660,6 @@ packageExtensions:
       "@babel/core": "*"
     peerDependenciesMeta:
       "@babel/core":
-        optional: true
-  "@graphql-codegen/plugin-helpers@*":
-    peerDependencies:
-      "@graphql-tools/apollo-engine-loader": "*"
-    peerDependenciesMeta:
-      "@graphql-tools/apollo-engine-loader":
         optional: true
   "@graphql-tools/graphql-tag-pluck@*":
     peerDependencies:
@@ -3783,12 +3777,6 @@ packageExtensions:
     peerDependenciesMeta:
       form-data:
         optional: true
-  markdownlint@*:
-    peerDependencies:
-      markdown-it: "*"
-    peerDependenciesMeta:
-      markdown-it:
-        optional: true
   mdast-util-gfm-autolink-literal@*:
     peerDependencies:
       mdast-util-from-markdown: "*"
@@ -4322,12 +4310,6 @@ packageExtensions:
       react: "*"
     peerDependenciesMeta:
       react:
-        optional: true
-  react-i18next@*:
-    peerDependencies:
-      babel-plugin-macros: "*"
-    peerDependenciesMeta:
-      babel-plugin-macros:
         optional: true
   react-leaflet@*:
     peerDependencies:
