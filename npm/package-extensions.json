@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07",
+ "generated": "2026-11-08",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -21040,7 +21040,7 @@
   },
   {
    "package": "@tanstack/react-start-rsc",
-   "measuredVersion": "0.1.65",
+   "measuredVersion": "0.1.66",
    "targets": [
     {
      "target": "vite",
@@ -21060,7 +21060,7 @@
   },
   {
    "package": "@tanstack/router-devtools-core",
-   "measuredVersion": "1.168.2",
+   "measuredVersion": "1.168.3",
    "targets": [
     {
      "target": "solid-js",
@@ -21081,7 +21081,7 @@
   },
   {
    "package": "@tanstack/router-plugin",
-   "measuredVersion": "1.168.48",
+   "measuredVersion": "1.169.0",
    "targets": [
     {
      "target": "@tanstack/virtual-file-routes",
@@ -21094,19 +21094,21 @@
      ],
      "files": [
       "dist/cjs/core/config.d.cts",
-      "dist/cjs/esbuild.d.cts",
+      "dist/cjs/rspack.d.cts",
       "dist/cjs/vite.d.cts",
+      "dist/cjs/webpack.d.cts",
       "dist/esm/core/config.d.ts",
-      "dist/esm/esbuild.d.ts",
-      "dist/esm/vite.d.ts"
+      "dist/esm/rspack.d.ts",
+      "dist/esm/vite.d.ts",
+      "dist/esm/webpack.d.ts"
      ],
-     "fileCount": 6
+     "fileCount": 8
     }
    ]
   },
   {
    "package": "@tanstack/router-utils",
-   "measuredVersion": "1.162.4",
+   "measuredVersion": "1.163.0",
    "targets": [
     {
      "target": "vite",
@@ -21594,7 +21596,7 @@
   },
   {
    "package": "@typespec/ts-http-runtime",
-   "measuredVersion": "0.3.9",
+   "measuredVersion": "0.3.10",
    "targets": [
     {
      "target": "react-native",
@@ -23448,7 +23450,7 @@
   },
   {
    "package": "appium-adb",
-   "measuredVersion": "16.3.1",
+   "measuredVersion": "16.4.1",
    "targets": [
     {
      "target": "@appium/types",
@@ -23469,7 +23471,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "9.2.2",
+   "measuredVersion": "9.2.3",
    "targets": [
     {
      "target": "@appium/types",
@@ -23504,7 +23506,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "10.11.0",
+   "measuredVersion": "10.11.2",
    "targets": [
     {
      "target": "@appium/types",
@@ -31778,7 +31780,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261107.1",
+   "measuredVersion": "1.20261108.1",
    "targets": [
     {
      "target": "pnpapi",

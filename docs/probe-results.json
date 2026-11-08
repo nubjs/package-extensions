@@ -1,16 +1,16 @@
 {
-  "generated": "2026-11-07",
+  "generated": "2026-11-08",
   "dataset": "08270d4c16402c9f",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
-    "confirmed": 2,
+    "confirmed": 3,
     "confirmedViaPath": 5,
-    "notOnImport": 38,
-    "installFailed": 5,
-    "inconclusive": 2
+    "notOnImport": 41,
+    "installFailed": 0,
+    "inconclusive": 3
   },
   "results": [
     {
@@ -210,8 +210,16 @@
         "rxjs",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mdevkit\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.5\u001b[39m: All versions satisfying \"24.0.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 5,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "nx"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 14
     },
     {
       "package": "@nx/eslint-plugin",
@@ -226,8 +234,20 @@
         "typescript",
         "typescript-eslint"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173meslint-plugin\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.5\u001b[39m: All versions satisfying \"24.0.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN001"
+      "verdict": "confirmed",
+      "confirmed": [
+        "@eslint/js",
+        "angular-eslint",
+        "eslint-plugin-import"
+      ],
+      "confirmedViaPath": [],
+      "citedPathsTried": 13,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@nx/devkit -> nx (unprovided peer)"
+      ],
+      "specifiersTried": 20
     },
     {
       "package": "@nx/webpack",
@@ -236,8 +256,16 @@
         "swc-loader",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mwebpack\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.5\u001b[39m: All versions satisfying \"24.0.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[3"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [
+        "@nx/devkit -> nx (unprovided peer)"
+      ],
+      "specifiersTried": 12
     },
     {
       "package": "@oclif/config",
@@ -420,8 +448,14 @@
       "expected": [
         "parserlib"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mdomino\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:2.1.9\u001b[39m: All versions satisfying \"2.1.9\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mdomino\u001b[39m\u001b[38"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "drizzle-kit",
@@ -712,8 +746,8 @@
         "prettier",
         "ts-node"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mnx\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.5\u001b[39m: All versions satisfying \"24.0.5\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mnx\u001b[39m\u001b[38;5;37m"
+      "verdict": "inconclusive",
+      "detail": "fatal: not a git repository (or any of the parent directories): .git\n"
     },
     {
       "package": "prettier-plugin-organize-imports",
@@ -871,7 +905,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:6060) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-pSfpO0/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:6078) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-rmBKbh/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }
