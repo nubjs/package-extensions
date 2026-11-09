@@ -7615,6 +7615,16 @@
           }
         }
       },
+      "vite-plugin-checker@*": {
+        "peerDependencies": {
+          "@vitejs/devtools-kit": "*"
+        },
+        "peerDependenciesMeta": {
+          "@vitejs/devtools-kit": {
+            "optional": true
+          }
+        }
+      },
       "vite-plugin-full-reload@*": {
         "peerDependencies": {
           "vite": "*"

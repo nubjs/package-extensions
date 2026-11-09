@@ -1,5 +1,5 @@
-# Generated 2026-11-08 from the 10000 most-downloaded npm packages.
-# 746 packages, 1081 undeclared dependencies.
+# Generated 2026-11-09 from the 10000 most-downloaded npm packages.
+# 747 packages, 1082 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -4842,6 +4842,12 @@ packageExtensions:
       pnpapi: "*"
     peerDependenciesMeta:
       pnpapi:
+        optional: true
+  vite-plugin-checker@*:
+    peerDependencies:
+      "@vitejs/devtools-kit": "*"
+    peerDependenciesMeta:
+      "@vitejs/devtools-kit":
         optional: true
   vite-plugin-full-reload@*:
     peerDependencies:

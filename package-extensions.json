@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08",
+  "generated": "2026-11-09",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1081,
-      "packages": 614
+      "entries": 1082,
+      "packages": 615
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
     }
   },
   "totals": {
-    "packages": 746,
-    "selectors": 766,
-    "entries": 1081,
+    "packages": 747,
+    "selectors": 767,
+    "entries": 1082,
     "byClass": {
       "runtime": 165,
       "adapter": 126,
-      "types": 499,
+      "types": 500,
       "deep-path": 0,
       "guarded": 291
     },
     "byField": {
       "dependency": 28,
-      "peer": 1053
+      "peer": 1054
     },
     "candidatesForReview": 62,
     "droppedUnpublishedTargets": 201,
@@ -10467,6 +10467,16 @@
         }
       }
     },
+    "vite-plugin-checker@*": {
+      "peerDependencies": {
+        "@vitejs/devtools-kit": "*"
+      },
+      "peerDependenciesMeta": {
+        "@vitejs/devtools-kit": {
+          "optional": true
+        }
+      }
+    },
     "vite-plugin-full-reload@*": {
       "peerDependencies": {
         "vite": "*"
@@ -12534,7 +12544,7 @@
     },
     {
       "package": "@astrojs/react",
-      "measuredVersion": "7.1.4",
+      "measuredVersion": "7.1.5",
       "targets": [
         {
           "target": "astro",
@@ -12745,7 +12755,7 @@
     },
     {
       "package": "@azure/core-rest-pipeline",
-      "measuredVersion": "1.25.0",
+      "measuredVersion": "1.25.1",
       "targets": [
         {
           "target": "react-native",
@@ -12830,7 +12840,7 @@
     },
     {
       "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.67.0",
+      "measuredVersion": "1.68.0",
       "targets": [
         {
           "target": "@cloudflare/workers-utils",
@@ -13216,7 +13226,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.15",
+      "measuredVersion": "0.5.16",
       "targets": [
         {
           "target": "ws",
@@ -13228,7 +13238,7 @@
             "ws"
           ],
           "files": [
-            "dist/chunk-O74Z5DUS.js",
+            "dist/chunk-XZUEO4BZ.js",
             "dist/index.cjs",
             "dist/node-postgres/index.cjs"
           ],
@@ -15115,7 +15125,7 @@
     },
     {
       "package": "@mantine/hooks",
-      "measuredVersion": "9.7.5",
+      "measuredVersion": "9.8.0",
       "targets": [
         {
           "target": "react-dom",
@@ -15583,7 +15593,7 @@
     },
     {
       "package": "@nestjs/core",
-      "measuredVersion": "12.4.0",
+      "measuredVersion": "12.4.2",
       "targets": [
         {
           "target": "@standard-schema/spec",
@@ -19354,7 +19364,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.76.0",
+      "measuredVersion": "2.77.0",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -19569,7 +19579,7 @@
     },
     {
       "package": "@rolldown/binding-wasm32-wasi",
-      "measuredVersion": "1.3.0",
+      "measuredVersion": "1.3.1",
       "targets": [
         {
           "target": "@oxc-project/types",
@@ -23586,7 +23596,7 @@
     },
     {
       "package": "astro",
-      "measuredVersion": "7.4.7",
+      "measuredVersion": "7.4.8",
       "targets": [
         {
           "target": "@astrojs/cloudflare",
@@ -24939,7 +24949,7 @@
     },
     {
       "package": "eslint-plugin-import-x",
-      "measuredVersion": "4.18.0",
+      "measuredVersion": "4.18.1",
       "targets": [
         {
           "target": "@typescript-eslint/scope-manager",
@@ -26971,7 +26981,7 @@
     },
     {
       "package": "langium",
-      "measuredVersion": "4.4.0",
+      "measuredVersion": "4.4.2",
       "targets": [
         {
           "target": "@chevrotain/types",
@@ -27063,7 +27073,7 @@
     },
     {
       "package": "lib0",
-      "measuredVersion": "0.2.119",
+      "measuredVersion": "0.2.120",
       "targets": [
         {
           "target": "isomorphic-webcrypto",
@@ -27670,7 +27680,7 @@
     },
     {
       "package": "motion",
-      "measuredVersion": "14.10.1",
+      "measuredVersion": "14.11.1",
       "targets": [
         {
           "target": "motion-dom",
@@ -28461,7 +28471,7 @@
     },
     {
       "package": "oxc-minify",
-      "measuredVersion": "0.157.0",
+      "measuredVersion": "0.158.0",
       "targets": [
         {
           "target": "@oxc-minify/binding-wasm32-wasi",
@@ -28501,7 +28511,7 @@
     },
     {
       "package": "oxc-parser",
-      "measuredVersion": "0.157.0",
+      "measuredVersion": "0.158.0",
       "targets": [
         {
           "target": "@oxc-parser/binding-wasm32-wasi",
@@ -28562,7 +28572,7 @@
     },
     {
       "package": "oxc-transform",
-      "measuredVersion": "0.157.0",
+      "measuredVersion": "0.158.0",
       "targets": [
         {
           "target": "@oxc-transform/binding-wasm32-wasi",
@@ -28829,7 +28839,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.63.1",
+      "measuredVersion": "5.63.2",
       "targets": [
         {
           "target": "express",
@@ -29734,7 +29744,7 @@
     },
     {
       "package": "recast",
-      "measuredVersion": "0.24.0",
+      "measuredVersion": "0.24.3",
       "targets": [
         {
           "target": "babylon",
@@ -29979,7 +29989,7 @@
     },
     {
       "package": "remotion",
-      "measuredVersion": "4.0.541",
+      "measuredVersion": "4.0.542",
       "targets": [
         {
           "target": "zod",
@@ -30100,7 +30110,7 @@
     },
     {
       "package": "rrdom",
-      "measuredVersion": "2.2.1",
+      "measuredVersion": "2.2.2",
       "targets": [
         {
           "target": "@rrweb/types",
@@ -30120,7 +30130,7 @@
     },
     {
       "package": "rrweb-snapshot",
-      "measuredVersion": "2.2.1",
+      "measuredVersion": "2.2.2",
       "targets": [
         {
           "target": "@rrweb/types",
@@ -31297,7 +31307,7 @@
     },
     {
       "package": "vite",
-      "measuredVersion": "8.3.6",
+      "measuredVersion": "8.3.7",
       "targets": [
         {
           "target": "pnpapi",
@@ -31310,6 +31320,26 @@
           ],
           "files": [
             "dist/node/chunks/node.js"
+          ],
+          "fileCount": 1
+        }
+      ]
+    },
+    {
+      "package": "vite-plugin-checker",
+      "measuredVersion": "1.0.0",
+      "targets": [
+        {
+          "target": "@vitejs/devtools-kit",
+          "class": "types",
+          "field": "peer",
+          "candidate": false,
+          "reason": "types class — no runtime edge, only a declaration-file reference",
+          "specifiers": [
+            "@vitejs/devtools-kit"
+          ],
+          "files": [
+            "dist/devtools.d.ts"
           ],
           "fileCount": 1
         }
@@ -31780,7 +31810,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261108.1",
+      "measuredVersion": "1.20261109.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -31800,7 +31830,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.158.0",
+      "measuredVersion": "4.159.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -32011,7 +32041,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.15",
+      "measuredVersion": "0.5.16",
       "target": "ws",
       "specifiers": [
         "ws"
@@ -32222,7 +32252,7 @@
     },
     {
       "package": "astro",
-      "measuredVersion": "7.4.7",
+      "measuredVersion": "7.4.8",
       "target": "@astrojs/cloudflare",
       "specifiers": [
         "@astrojs/cloudflare/info"

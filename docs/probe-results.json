@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-08",
-  "dataset": "08270d4c16402c9f",
+  "generated": "2026-11-09",
+  "dataset": "cb593697ea0d0030",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,8 +8,8 @@
   "tally": {
     "confirmed": 3,
     "confirmedViaPath": 5,
-    "notOnImport": 41,
-    "installFailed": 0,
+    "notOnImport": 39,
+    "installFailed": 2,
     "inconclusive": 3
   },
   "results": [
@@ -47,18 +47,12 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "version": "0.5.15",
+      "version": "0.5.16",
       "expected": [
         "ws"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 3,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 4
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@electric-sql/\u001b[39m\u001b[38;5;173mpglite\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.5.16\u001b[39m: All versions satisfying \"0.5.16\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN"
     },
     {
       "package": "@expo/dom-webview",
@@ -428,19 +422,13 @@
     },
     {
       "package": "astro",
-      "version": "7.4.7",
+      "version": "7.4.8",
       "expected": [
         "@astrojs/cloudflare",
         "typescript"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 28
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mastro\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.4.8\u001b[39m: All versions satisfying \"7.4.8\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mastro\u001b[39m\u001b[38;5"
     },
     {
       "package": "domino",
@@ -905,7 +893,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:6078) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-rmBKbh/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5946) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-CgisvS/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }
