@@ -172,6 +172,7 @@
   "@napi-rs/nice-wasm32-wasi": false,
   "@napi-rs/snappy-darwin-universal": false,
   "@napi-rs/snappy-freebsd-arm64": false,
+  "@napi-rs/snappy-freebsd-ppc64": false,
   "@napi-rs/snappy-linux-arm-musleabihf": false,
   "@napi-rs/snappy-linux-loong64-gnu": false,
   "@napi-rs/snappy-linux-loong64-musl": false,

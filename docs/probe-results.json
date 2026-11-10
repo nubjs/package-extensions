@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09",
+  "generated": "2026-11-10",
   "dataset": "cb593697ea0d0030",
   "instrument": {
     "yarn": "4.18.0",
@@ -7,9 +7,9 @@
   },
   "tally": {
     "confirmed": 3,
-    "confirmedViaPath": 5,
-    "notOnImport": 39,
-    "installFailed": 2,
+    "confirmedViaPath": 4,
+    "notOnImport": 37,
+    "installFailed": 5,
     "inconclusive": 3
   },
   "results": [
@@ -30,20 +30,12 @@
     },
     {
       "package": "@ardatan/relay-compiler",
-      "version": "13.0.2",
+      "version": "13.0.3",
       "expected": [
         "glob"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "graphql"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@ardatan/\u001b[39m\u001b[38;5;173mrelay-compiler\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:13.0.3\u001b[39m: All versions satisfying \"13.0.3\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m"
     },
     {
       "package": "@electric-sql/pglite",
@@ -383,24 +375,12 @@
     },
     {
       "package": "@storybook/nextjs-vite",
-      "version": "10.6.6",
+      "version": "10.6.7",
       "expected": [
         "sb-original"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "storybook",
-        "next",
-        "react"
-      ],
-      "byOtherIssuers": [
-        "vite-tsconfig-paths -> vite (unprovided peer)"
-      ],
-      "specifiersTried": 12
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@storybook/\u001b[39m\u001b[38;5;173mnextjs-vite\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:10.6.7\u001b[39m: All versions satisfying \"10.6.7\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m "
     },
     {
       "package": "@swagger-api/apidom-reference",
@@ -427,8 +407,14 @@
         "@astrojs/cloudflare",
         "typescript"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mastro\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.4.8\u001b[39m: All versions satisfying \"7.4.8\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mastro\u001b[39m\u001b[38;5"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 28
     },
     {
       "package": "domino",
@@ -693,7 +679,7 @@
     },
     {
       "package": "next",
-      "version": "16.4.5",
+      "version": "16.4.6",
       "expected": [
         "critters",
         "next-rspack",
@@ -702,19 +688,8 @@
         "react-server-dom-webpack",
         "server-only"
       ],
-      "verdict": "confirmedViaPath",
-      "confirmed": [],
-      "confirmedViaPath": [
-        "private-next-instrumentation-client",
-        "react-server-dom-webpack"
-      ],
-      "citedPathsTried": 20,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "react"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 21
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mnext\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:16.4.6\u001b[39m: All versions satisfying \"16.4.6\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mnext\u001b[39m\u001b[38;5"
     },
     {
       "package": "nx",
@@ -840,18 +815,12 @@
     },
     {
       "package": "snappy",
-      "version": "7.4.3",
+      "version": "7.4.4",
       "expected": [
         "@napi-rs/snappy-wasm32-wasi"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 2,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 3
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173msnappy\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.4.4\u001b[39m: All versions satisfying \"7.4.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173msnappy\u001b[39m\u001b[38"
     },
     {
       "package": "swagger2openapi",
@@ -893,7 +862,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:5946) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-CgisvS/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:8410) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-gqp7Z5/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }

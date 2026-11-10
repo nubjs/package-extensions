@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09",
+ "generated": "2026-11-10",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -43,7 +43,7 @@
    "peer": 1054
   },
   "candidatesForReview": 62,
-  "droppedUnpublishedTargets": 201,
+  "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
   "withheldDeepPath": 234
@@ -12332,7 +12332,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "1.6.0",
+   "measuredVersion": "1.7.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -12380,7 +12380,7 @@
   },
   {
    "package": "@apollo/client",
-   "measuredVersion": "4.3.7",
+   "measuredVersion": "4.3.8",
    "targets": [
     {
      "target": "relay-runtime",
@@ -12455,7 +12455,7 @@
   },
   {
    "package": "@ardatan/relay-compiler",
-   "measuredVersion": "13.0.2",
+   "measuredVersion": "13.0.3",
    "targets": [
     {
      "target": "glob",
@@ -13069,7 +13069,7 @@
   },
   {
    "package": "@dataform/core",
-   "measuredVersion": "3.1.4",
+   "measuredVersion": "3.1.5",
    "targets": [
     {
      "target": "long",
@@ -13348,7 +13348,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.28.8",
+   "measuredVersion": "5.30.1",
    "targets": [
     {
      "target": "react",
@@ -14447,7 +14447,7 @@
   },
   {
    "package": "@graphql-tools/graphql-tag-pluck",
-   "measuredVersion": "9.0.9",
+   "measuredVersion": "9.0.10",
    "targets": [
     {
      "target": "@astrojs/compiler",
@@ -15681,7 +15681,7 @@
   },
   {
    "package": "@next/bundle-analyzer",
-   "measuredVersion": "16.4.5",
+   "measuredVersion": "16.4.6",
    "targets": [
     {
      "target": "next",
@@ -15701,7 +15701,7 @@
   },
   {
    "package": "@next/eslint-plugin-next",
-   "measuredVersion": "16.4.5",
+   "measuredVersion": "16.4.6",
    "targets": [
     {
      "target": "eslint",
@@ -17864,7 +17864,7 @@
   },
   {
    "package": "@oclif/core",
-   "measuredVersion": "5.1.11",
+   "measuredVersion": "5.1.12",
    "targets": [
     {
      "target": "pnpapi",
@@ -18243,7 +18243,7 @@
   },
   {
    "package": "@playwright/mcp",
-   "measuredVersion": "0.0.84",
+   "measuredVersion": "0.0.85",
    "targets": [
     {
      "target": "@modelcontextprotocol/sdk",
@@ -19599,7 +19599,7 @@
   },
   {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.3.1",
+   "measuredVersion": "2.3.2",
    "targets": [
     {
      "target": "tsx",
@@ -19723,7 +19723,7 @@
   },
   {
    "package": "@scalar/openapi-upgrader",
-   "measuredVersion": "0.4.7",
+   "measuredVersion": "0.4.8",
    "targets": [
     {
      "target": "@scalar/types",
@@ -19746,7 +19746,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.27.0",
+   "measuredVersion": "0.28.0",
    "targets": [
     {
      "target": "har-format",
@@ -20258,7 +20258,7 @@
   },
   {
    "package": "@storybook/addon-a11y",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20360,7 +20360,7 @@
   },
   {
    "package": "@storybook/addon-onboarding",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20413,7 +20413,7 @@
   },
   {
    "package": "@storybook/addon-themes",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20448,7 +20448,7 @@
   },
   {
    "package": "@storybook/addon-vitest",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "react",
@@ -20468,7 +20468,7 @@
   },
   {
    "package": "@storybook/builder-webpack5",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "@storybook/global",
@@ -20554,7 +20554,7 @@
   },
   {
    "package": "@storybook/nextjs",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "sb-original",
@@ -20576,7 +20576,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "sb-original",
@@ -21182,7 +21182,7 @@
   },
   {
    "package": "@tiptap/extension-list",
-   "measuredVersion": "3.33.0",
+   "measuredVersion": "3.33.1",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -21585,7 +21585,7 @@
   },
   {
    "package": "@typescript-eslint/types",
-   "measuredVersion": "8.72.1",
+   "measuredVersion": "8.72.2",
    "targets": [
     {
      "target": "typescript",
@@ -21688,7 +21688,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "28.0.0",
+   "measuredVersion": "28.0.1",
    "targets": [
     {
      "target": "encoding",
@@ -23092,7 +23092,7 @@
   },
   {
    "package": "algoliasearch-helper",
-   "measuredVersion": "3.30.1",
+   "measuredVersion": "3.30.2",
    "targets": [
     {
      "target": "@algolia/client-search",
@@ -23481,7 +23481,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "9.2.3",
+   "measuredVersion": "9.2.4",
    "targets": [
     {
      "target": "@appium/types",
@@ -23883,7 +23883,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.7.2",
+   "measuredVersion": "6.7.3",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -24832,7 +24832,7 @@
   },
   {
    "package": "eslint-config-next",
-   "measuredVersion": "16.4.5",
+   "measuredVersion": "16.4.6",
    "targets": [
     {
      "target": "next",
@@ -24872,7 +24872,7 @@
   },
   {
    "package": "eslint-import-context",
-   "measuredVersion": "0.2.0",
+   "measuredVersion": "0.2.1",
    "targets": [
     {
      "target": "@typescript-eslint/utils",
@@ -25145,7 +25145,7 @@
   },
   {
    "package": "eslint-plugin-vue",
-   "measuredVersion": "10.12.0",
+   "measuredVersion": "10.12.1",
    "targets": [
     {
      "target": "eslint-scope",
@@ -26066,7 +26066,7 @@
   },
   {
    "package": "graphql-ws",
-   "measuredVersion": "6.4.1",
+   "measuredVersion": "6.4.2",
    "targets": [
     {
      "target": "bun",
@@ -26359,7 +26359,7 @@
   },
   {
    "package": "i18next-fs-backend",
-   "measuredVersion": "2.6.10",
+   "measuredVersion": "2.6.11",
    "targets": [
     {
      "target": "i18next",
@@ -26961,7 +26961,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.44.2",
+   "measuredVersion": "6.45.0",
    "targets": [
     {
      "target": "vue",
@@ -27001,7 +27001,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.11.8",
+   "measuredVersion": "0.12.0",
    "targets": [
     {
      "target": "@jest/globals",
@@ -27680,7 +27680,7 @@
   },
   {
    "package": "motion",
-   "measuredVersion": "14.11.1",
+   "measuredVersion": "14.12.0",
    "targets": [
     {
      "target": "motion-dom",
@@ -27800,7 +27800,7 @@
   },
   {
    "package": "next",
-   "measuredVersion": "16.4.5",
+   "measuredVersion": "16.4.6",
    "targets": [
     {
      "target": "critters",
@@ -27920,7 +27920,7 @@
   },
   {
    "package": "next-intl",
-   "measuredVersion": "4.14.9",
+   "measuredVersion": "4.14.10",
    "targets": [
     {
      "target": "webpack",
@@ -28839,7 +28839,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "5.63.2",
+   "measuredVersion": "5.68.0",
    "targets": [
     {
      "target": "express",
@@ -30407,7 +30407,7 @@
   },
   {
    "package": "snappy",
-   "measuredVersion": "7.4.3",
+   "measuredVersion": "7.4.4",
    "targets": [
     {
      "target": "@napi-rs/snappy-wasm32-wasi",
@@ -30449,7 +30449,7 @@
   },
   {
    "package": "storybook",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "react",
@@ -30467,9 +30467,9 @@
       "dist/_browser-chunks/chunk-W22LQPXL.js",
       "dist/_browser-chunks/syntaxhighlighter-4REYKNEV.js",
       "dist/chunk-BxCdsGId.d.ts",
+      "dist/chunk-CAhv0_wr.d.ts",
       "dist/chunk-CSYKg21N.d.ts",
-      "dist/chunk-CdMoRv3z.d.ts",
-      "dist/chunk-CkpWpwbe.d.ts"
+      "dist/chunk-CdMoRv3z.d.ts"
      ],
      "fileCount": 15
     },
@@ -30507,7 +30507,7 @@
   },
   {
    "package": "storybook-addon-pseudo-states",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -31691,7 +31691,7 @@
   },
   {
    "package": "vuetify",
-   "measuredVersion": "4.3.2",
+   "measuredVersion": "4.3.3",
    "targets": [
     {
      "target": "@vue/reactivity",
@@ -31810,7 +31810,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261109.1",
+   "measuredVersion": "1.20261110.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -31830,7 +31830,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.159.0",
+   "measuredVersion": "4.160.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -32033,7 +32033,7 @@
   },
   {
    "package": "@ardatan/relay-compiler",
-   "measuredVersion": "13.0.2",
+   "measuredVersion": "13.0.3",
    "target": "glob",
    "specifiers": [
     "glob"
@@ -32236,7 +32236,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.6",
+   "measuredVersion": "10.6.7",
    "target": "sb-original",
    "specifiers": [
     "sb-original/image-context"
@@ -32452,7 +32452,7 @@
   },
   {
    "package": "next",
-   "measuredVersion": "16.4.5",
+   "measuredVersion": "16.4.6",
    "target": "critters",
    "specifiers": [
     "critters"
@@ -32527,7 +32527,7 @@
   },
   {
    "package": "snappy",
-   "measuredVersion": "7.4.3",
+   "measuredVersion": "7.4.4",
    "target": "@napi-rs/snappy-wasm32-wasi",
    "specifiers": [
     "@napi-rs/snappy-wasm32-wasi",
@@ -32754,6 +32754,7 @@
    "rspack-resolver -> @unrs/rspack-resolver-binding-linux-riscv64-musl",
    "snappy -> @napi-rs/snappy-darwin-universal",
    "snappy -> @napi-rs/snappy-freebsd-arm64",
+   "snappy -> @napi-rs/snappy-freebsd-ppc64",
    "snappy -> @napi-rs/snappy-linux-arm-musleabihf",
    "snappy -> @napi-rs/snappy-linux-loong64-gnu",
    "snappy -> @napi-rs/snappy-linux-loong64-musl",
