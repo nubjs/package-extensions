@@ -1,5 +1,5 @@
-# Generated 2026-11-10 from the 10000 most-downloaded npm packages.
-# 747 packages, 1082 undeclared dependencies.
+# Generated 2026-11-11 from the 10000 most-downloaded npm packages.
+# 747 packages, 1081 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -2864,11 +2864,8 @@ packageExtensions:
   astro@*:
     peerDependencies:
       "@astrojs/cloudflare": "*"
-      typescript: "*"
     peerDependenciesMeta:
       "@astrojs/cloudflare":
-        optional: true
-      typescript:
         optional: true
   auth0@*:
     peerDependencies:

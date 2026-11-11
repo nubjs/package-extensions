@@ -745,7 +745,7 @@
           "protobufjs"
         ],
         "metaOnly": false,
-        "version": "9.4.0",
+        "version": "9.4.1",
         "why": "the package now declares every target"
       },
       {
@@ -1010,7 +1010,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "5.4.0",
+        "version": "5.5.0",
         "why": "the package now declares every target"
       },
       {

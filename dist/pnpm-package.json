@@ -4451,14 +4451,10 @@
       },
       "astro@*": {
         "peerDependencies": {
-          "@astrojs/cloudflare": "*",
-          "typescript": "*"
+          "@astrojs/cloudflare": "*"
         },
         "peerDependenciesMeta": {
           "@astrojs/cloudflare": {
-            "optional": true
-          },
-          "typescript": {
             "optional": true
           }
         }
