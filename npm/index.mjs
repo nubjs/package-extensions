@@ -1,4 +1,4 @@
-// @nubjs/extensions 1.0.50 — generated 2026-11-12, do not edit.
+// @nubjs/extensions 1.0.51 — generated 2026-11-12, do not edit.
 // 747 packages, 1082 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
@@ -4668,10 +4668,10 @@ export const packageExtensions = [
   "@vercel/go@*",
   {
    "peerDependencies": {
-    "encoding": "*"
+    "execa": "*"
    },
    "peerDependenciesMeta": {
-    "encoding": {
+    "execa": {
      "optional": true
     }
    }
@@ -7831,14 +7831,15 @@ export const packageExtensions = [
  [
   "oxc-minify@*",
   {
-   "dependencies": {
-    "@oxc-minify/binding-wasm32-wasip1": "*"
-   },
    "peerDependencies": {
-    "@oxc-minify/binding-wasm32-wasi": "*"
+    "@oxc-minify/binding-wasm32-wasi": "*",
+    "@oxc-minify/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-minify/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-minify/binding-wasm32-wasip1": {
      "optional": true
     }
    }
@@ -7847,14 +7848,15 @@ export const packageExtensions = [
  [
   "oxc-parser@*",
   {
-   "dependencies": {
-    "@oxc-parser/binding-wasm32-wasip1": "*"
-   },
    "peerDependencies": {
-    "@oxc-parser/binding-wasm32-wasi": "*"
+    "@oxc-parser/binding-wasm32-wasi": "*",
+    "@oxc-parser/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-parser/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-parser/binding-wasm32-wasip1": {
      "optional": true
     }
    }
@@ -7876,14 +7878,15 @@ export const packageExtensions = [
  [
   "oxc-transform@*",
   {
-   "dependencies": {
-    "@oxc-transform/binding-wasm32-wasip1": "*"
-   },
    "peerDependencies": {
-    "@oxc-transform/binding-wasm32-wasi": "*"
+    "@oxc-transform/binding-wasm32-wasi": "*",
+    "@oxc-transform/binding-wasm32-wasip1": "*"
    },
    "peerDependenciesMeta": {
     "@oxc-transform/binding-wasm32-wasi": {
+     "optional": true
+    },
+    "@oxc-transform/binding-wasm32-wasip1": {
      "optional": true
     }
    }

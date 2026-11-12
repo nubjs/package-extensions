@@ -10,12 +10,12 @@
       "error": "tarball too large (159262440 bytes)"
     },
     {
-      "package": "contenthook",
-      "error": "no version in metadata"
-    },
-    {
       "package": "@contenthook/node",
       "error": "metadata: HTTP status client error (404 Not Found) for url (https://registry.npmjs.org/@contenthook/node)"
+    },
+    {
+      "package": "contenthook",
+      "error": "no version in metadata"
     },
     {
       "package": "@contenthook/browser",
@@ -16465,7 +16465,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "version": "10.0.1",
+      "version": "10.0.2",
       "hard_phantoms": [
         {
           "package": "@appium/types",
@@ -19647,7 +19647,7 @@
     },
     {
       "package": "@capacitor/core",
-      "version": "8.6.0",
+      "version": "8.6.2",
       "hard_phantoms": [
         {
           "package": "cordova",
@@ -20139,7 +20139,7 @@
     },
     {
       "package": "@es-joy/jsdoccomment",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "hard_phantoms": [
         {
           "package": "eslint",
@@ -25333,6 +25333,31 @@
       ]
     },
     {
+      "package": "@vercel/go",
+      "version": "28.0.2",
+      "hard_phantoms": [
+        {
+          "package": "execa",
+          "verdict": "hard-phantom",
+          "soft": false,
+          "from_main": false,
+          "from_subpath": false,
+          "from_types": true,
+          "from_deep_path": false,
+          "specifiers": [
+            "execa"
+          ],
+          "files": [
+            "dist/go-helpers.d.ts"
+          ],
+          "file_count": 1
+        }
+      ],
+      "soft_phantoms": [],
+      "subpath_adapter_phantoms": [],
+      "deep_path_phantoms": []
+    },
+    {
       "package": "@vercel/hydrogen",
       "version": "26.0.0",
       "hard_phantoms": [
@@ -25376,7 +25401,7 @@
     },
     {
       "package": "@vercel/next",
-      "version": "29.0.0",
+      "version": "29.1.0",
       "hard_phantoms": [
         {
           "package": "next-server",
@@ -27445,7 +27470,7 @@
     },
     {
       "package": "expo-location",
-      "version": "58.0.21",
+      "version": "58.0.22",
       "hard_phantoms": [
         {
           "package": "expo-modules-core",
@@ -28788,7 +28813,7 @@
     },
     {
       "package": "media-chrome",
-      "version": "4.19.4",
+      "version": "4.19.5",
       "hard_phantoms": [
         {
           "package": "react",
@@ -30703,7 +30728,7 @@
     },
     {
       "package": "posthog-node",
-      "version": "5.70.0",
+      "version": "5.71.0",
       "hard_phantoms": [
         {
           "package": "express",
@@ -35276,7 +35301,7 @@
     },
     {
       "package": "@pulumi/pulumi",
-      "version": "3.275.0",
+      "version": "3.276.0",
       "hard_phantoms": [],
       "soft_phantoms": [
         {
@@ -36438,31 +36463,6 @@
           ],
           "files": [
             "dist/dist-B9nNajtO.js"
-          ],
-          "file_count": 1
-        }
-      ],
-      "subpath_adapter_phantoms": [],
-      "deep_path_phantoms": []
-    },
-    {
-      "package": "@vercel/go",
-      "version": "28.0.1",
-      "hard_phantoms": [],
-      "soft_phantoms": [
-        {
-          "package": "encoding",
-          "verdict": "soft-phantom",
-          "soft": true,
-          "from_main": true,
-          "from_subpath": false,
-          "from_types": false,
-          "from_deep_path": false,
-          "specifiers": [
-            "encoding"
-          ],
-          "files": [
-            "dist/index.js"
           ],
           "file_count": 1
         }
@@ -40282,6 +40282,14 @@
       ]
     },
     {
+      "target": "execa",
+      "importer_count": 2,
+      "importers": [
+        "@prisma/get-platform",
+        "@vercel/go"
+      ]
+    },
+    {
       "target": "firebase-functions",
       "importer_count": 2,
       "importers": [
@@ -42319,13 +42327,6 @@
       ]
     },
     {
-      "target": "execa",
-      "importer_count": 1,
-      "importers": [
-        "@prisma/get-platform"
-      ]
-    },
-    {
       "target": "expo",
       "importer_count": 1,
       "importers": [
@@ -43510,17 +43511,17 @@
     }
   ],
   "totals": {
-    "packages_with_hard_phantom": 598,
-    "total_hard_phantom_edges": 1048,
+    "packages_with_hard_phantom": 599,
+    "total_hard_phantom_edges": 1049,
     "distinct_hard_phantom_targets": 573,
     "packages_with_subpath_adapter": 61,
     "subpath_adapter_edges": 127,
     "packages_with_deep_path": 91,
     "deep_path_edges": 234,
-    "main_graph_hard_edges": 687,
+    "main_graph_hard_edges": 688,
     "naive_phantom_flags": 2395,
-    "real_hard_phantom_flags": 1048,
+    "real_hard_phantom_flags": 1049,
     "optional_peers_excluded": 877,
-    "soft_phantoms_excluded": 470
+    "soft_phantoms_excluded": 469
   }
 }

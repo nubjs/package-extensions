@@ -104,8 +104,8 @@ Each finding is classed by where the import sits. The class decides which manife
 
 | Class | Count | Shape | Field |
 | --- | --- | --- | --- |
-| `types` | 498 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
-| `guarded` | 293 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
+| `types` | 499 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
+| `guarded` | 292 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
 | `runtime` | 165 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
 | `adapter` | 126 | A non-`.` exports subpath imports a backend the consumer chose. | optional peer |
 

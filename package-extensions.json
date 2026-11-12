@@ -34,13 +34,13 @@
     "byClass": {
       "runtime": 165,
       "adapter": 126,
-      "types": 498,
+      "types": 499,
       "deep-path": 0,
-      "guarded": 293
+      "guarded": 292
     },
     "byField": {
-      "dependency": 28,
-      "peer": 1054
+      "dependency": 25,
+      "peer": 1057
     },
     "candidatesForReview": 62,
     "droppedUnpublishedTargets": 202,
@@ -6639,10 +6639,10 @@
     },
     "@vercel/go@*": {
       "peerDependencies": {
-        "encoding": "*"
+        "execa": "*"
       },
       "peerDependenciesMeta": {
-        "encoding": {
+        "execa": {
           "optional": true
         }
       }
@@ -9235,27 +9235,29 @@
       }
     },
     "oxc-minify@*": {
-      "dependencies": {
-        "@oxc-minify/binding-wasm32-wasip1": "*"
-      },
       "peerDependencies": {
-        "@oxc-minify/binding-wasm32-wasi": "*"
+        "@oxc-minify/binding-wasm32-wasi": "*",
+        "@oxc-minify/binding-wasm32-wasip1": "*"
       },
       "peerDependenciesMeta": {
         "@oxc-minify/binding-wasm32-wasi": {
+          "optional": true
+        },
+        "@oxc-minify/binding-wasm32-wasip1": {
           "optional": true
         }
       }
     },
     "oxc-parser@*": {
-      "dependencies": {
-        "@oxc-parser/binding-wasm32-wasip1": "*"
-      },
       "peerDependencies": {
-        "@oxc-parser/binding-wasm32-wasi": "*"
+        "@oxc-parser/binding-wasm32-wasi": "*",
+        "@oxc-parser/binding-wasm32-wasip1": "*"
       },
       "peerDependenciesMeta": {
         "@oxc-parser/binding-wasm32-wasi": {
+          "optional": true
+        },
+        "@oxc-parser/binding-wasm32-wasip1": {
           "optional": true
         }
       }
@@ -9271,14 +9273,15 @@
       }
     },
     "oxc-transform@*": {
-      "dependencies": {
-        "@oxc-transform/binding-wasm32-wasip1": "*"
-      },
       "peerDependencies": {
-        "@oxc-transform/binding-wasm32-wasi": "*"
+        "@oxc-transform/binding-wasm32-wasi": "*",
+        "@oxc-transform/binding-wasm32-wasip1": "*"
       },
       "peerDependenciesMeta": {
         "@oxc-transform/binding-wasm32-wasi": {
+          "optional": true
+        },
+        "@oxc-transform/binding-wasm32-wasip1": {
           "optional": true
         }
       }
@@ -13328,7 +13331,7 @@
     },
     {
       "package": "@es-joy/jsdoccomment",
-      "measuredVersion": "1.1.0",
+      "measuredVersion": "1.2.0",
       "targets": [
         {
           "target": "eslint",
@@ -18593,7 +18596,7 @@
     },
     {
       "package": "@pulumi/pulumi",
-      "measuredVersion": "3.275.0",
+      "measuredVersion": "3.276.0",
       "targets": [
         {
           "target": "@microsoft/typescript-etw",
@@ -21688,19 +21691,19 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "28.0.1",
+      "measuredVersion": "28.0.2",
       "targets": [
         {
-          "target": "encoding",
-          "class": "guarded",
+          "target": "execa",
+          "class": "types",
           "field": "peer",
           "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+          "reason": "types class — no runtime edge, only a declaration-file reference",
           "specifiers": [
-            "encoding"
+            "execa"
           ],
           "files": [
-            "dist/index.js"
+            "dist/go-helpers.d.ts"
           ],
           "fileCount": 1
         }
@@ -23481,7 +23484,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "10.0.1",
+      "measuredVersion": "10.0.2",
       "targets": [
         {
           "target": "@appium/types",
@@ -25581,7 +25584,7 @@
     },
     {
       "package": "expo-location",
-      "measuredVersion": "58.0.21",
+      "measuredVersion": "58.0.22",
       "targets": [
         {
           "target": "expo-modules-core",
@@ -27215,7 +27218,7 @@
     },
     {
       "package": "media-chrome",
-      "measuredVersion": "4.19.4",
+      "measuredVersion": "4.19.5",
       "targets": [
         {
           "target": "react",
@@ -28450,9 +28453,9 @@
         {
           "target": "@oxc-minify/binding-wasm32-wasip1",
           "class": "runtime",
-          "field": "dependency",
+          "field": "peer",
           "candidate": false,
-          "reason": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-minify/binding-wasm32-wasip1\"",
+          "reason": "index.js loads it only after the native binding fails, and only the opt-in ./workerd subpath export imports it unconditionally; the probe that promoted it counted that subpath throw. A dependency would install a WebAssembly build on every host that never loads it.",
           "specifiers": [
             "@oxc-minify/binding-wasm32-wasip1",
             "@oxc-minify/binding-wasm32-wasip1/package.json",
@@ -28490,9 +28493,9 @@
         {
           "target": "@oxc-parser/binding-wasm32-wasip1",
           "class": "runtime",
-          "field": "dependency",
+          "field": "peer",
           "candidate": false,
-          "reason": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-parser/binding-wasm32-wasip1\"",
+          "reason": "src-js/bindings.js loads it only after the native binding fails, and only the opt-in WebAssembly subpath exports (./src-js/wasm, ./workerd) import it unconditionally; the probe that promoted it counted those subpath throws. A dependency would install a WebAssembly build on every host that never loads it.",
           "specifiers": [
             "@oxc-parser/binding-wasm32-wasip1/workerd",
             "@oxc-parser/binding-wasm32-wasip1/package.json",
@@ -28551,9 +28554,9 @@
         {
           "target": "@oxc-transform/binding-wasm32-wasip1",
           "class": "runtime",
-          "field": "dependency",
+          "field": "peer",
           "candidate": false,
-          "reason": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-transform/binding-wasm32-wasip1\"",
+          "reason": "index.js loads it only after the native binding fails, and only the opt-in ./workerd subpath export imports it unconditionally; the probe that promoted it counted that subpath throw. A dependency would install a WebAssembly build on every host that never loads it.",
           "specifiers": [
             "@oxc-transform/binding-wasm32-wasip1",
             "@oxc-transform/binding-wasm32-wasip1/package.json",
@@ -28798,7 +28801,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.70.0",
+      "measuredVersion": "5.71.0",
       "targets": [
         {
           "target": "express",

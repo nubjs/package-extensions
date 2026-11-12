@@ -3787,10 +3787,10 @@
       },
       "@vercel/go@*": {
         "peerDependencies": {
-          "encoding": "*"
+          "execa": "*"
         },
         "peerDependenciesMeta": {
-          "encoding": {
+          "execa": {
             "optional": true
           }
         }
@@ -6383,27 +6383,29 @@
         }
       },
       "oxc-minify@*": {
-        "dependencies": {
-          "@oxc-minify/binding-wasm32-wasip1": "*"
-        },
         "peerDependencies": {
-          "@oxc-minify/binding-wasm32-wasi": "*"
+          "@oxc-minify/binding-wasm32-wasi": "*",
+          "@oxc-minify/binding-wasm32-wasip1": "*"
         },
         "peerDependenciesMeta": {
           "@oxc-minify/binding-wasm32-wasi": {
+            "optional": true
+          },
+          "@oxc-minify/binding-wasm32-wasip1": {
             "optional": true
           }
         }
       },
       "oxc-parser@*": {
-        "dependencies": {
-          "@oxc-parser/binding-wasm32-wasip1": "*"
-        },
         "peerDependencies": {
-          "@oxc-parser/binding-wasm32-wasi": "*"
+          "@oxc-parser/binding-wasm32-wasi": "*",
+          "@oxc-parser/binding-wasm32-wasip1": "*"
         },
         "peerDependenciesMeta": {
           "@oxc-parser/binding-wasm32-wasi": {
+            "optional": true
+          },
+          "@oxc-parser/binding-wasm32-wasip1": {
             "optional": true
           }
         }
@@ -6419,14 +6421,15 @@
         }
       },
       "oxc-transform@*": {
-        "dependencies": {
-          "@oxc-transform/binding-wasm32-wasip1": "*"
-        },
         "peerDependencies": {
-          "@oxc-transform/binding-wasm32-wasi": "*"
+          "@oxc-transform/binding-wasm32-wasi": "*",
+          "@oxc-transform/binding-wasm32-wasip1": "*"
         },
         "peerDependenciesMeta": {
           "@oxc-transform/binding-wasm32-wasi": {
+            "optional": true
+          },
+          "@oxc-transform/binding-wasm32-wasip1": {
             "optional": true
           }
         }
