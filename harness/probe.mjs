@@ -28,13 +28,21 @@
 //     promoting an entry from an optional peer to a real dependency
 //
 // THREE TIERS, and the distance between them is the point. `confirmed` means a
-// bare import throws. `confirmedViaPath` means the entry surface loads fine and
-// the finding's own CITED FILE throws when required directly — `es-abstract`
-// really does `require('for-each')` unguarded in
-// `2025/EncodeForRegExpEscape.js`, which the main entry never pulls in, so it is
-// a true finding no entry-surface probe can reach. `notOnImport` now means
-// neither route reached it, which is a much stronger statement than it used to
-// be.
+// bare import throws. `confirmedViaPath` means the bare import loads fine and
+// only a path the consumer must opt into throws: the finding's own CITED FILE
+// required directly, or a non-root `exports` subpath. `es-abstract` really does
+// `require('for-each')` unguarded in `2025/EncodeForRegExpEscape.js`, which the
+// main entry never pulls in, so it is a true finding no bare import can reach.
+// `notOnImport` now means no route reached it, which is a much stronger
+// statement than it used to be.
+//
+// Subpaths belong in the middle tier, not the top one. `oxc-parser` publishes
+// `./src-js/wasm` and `./workerd`, entry points for WebAssembly hosts that
+// import `@oxc-parser/binding-wasm32-wasip1` unconditionally, while its bare
+// import loads the native binding and reaches the WebAssembly one only as a
+// fallback. Counting the subpath throw as `confirmed` promoted that fallback to
+// a required dependency of `oxc-parser`, `oxc-transform` and `oxc-minify`,
+// installing a WebAssembly build on every host that never loads it.
 //
 // The middle tier stays separate because the two claims are not
 // interchangeable. Only `confirmed` feeds `--promote`: "this breaks if a
@@ -131,7 +139,7 @@ writeFileSync(
 );
 
 console.log(`\nconfirmed        ${tally.confirmed}   (the import really fails, and Yarn names the target)`);
-console.log(`confirmed (path) ${tally.confirmedViaPath}   (loads fine on import; fails when the cited file is required)`);
+console.log(`confirmed (path) ${tally.confirmedViaPath}   (loads fine on import; fails when a cited file or a subpath export is required)`);
 console.log(`not on import    ${tally.notOnImport}   (neither the entry surface nor any cited path reaches it)`);
 console.log(`install failed   ${tally.installFailed}`);
 console.log(`inconclusive     ${tally.inconclusive}`);
@@ -237,7 +245,8 @@ async function probe(finding) {
 
     // Import the main entry and every non-`.` exports subpath. An adapter-class
     // phantom lives only behind a subpath, so importing the root alone would
-    // report it as fine.
+    // report it as fine. Only the root's throw is `confirmed`; a subpath's is
+    // evidence for the middle tier (see the header).
     const entrySpecifiers = [finding.package, ...(await subpaths(dir, finding.package)).map((s) => `${finding.package}${s.slice(1)}`)];
     // The cited files, required DIRECTLY. This is what the entry-surface probe
     // structurally cannot reach: `es-abstract` really does `require('for-each')`
@@ -291,10 +300,9 @@ console.log(JSON.stringify(out));`
     // under test, which on the promotion path would write a `dependencies` entry
     // onto the wrong package entirely.
     const accessed = new Set();
-    const viaCitedPath = new Set();
+    const viaOptInPath = new Set();
     const unprovidedPeers = new Set();
     const byOtherIssuers = new Set();
-    const citedSet = new Set(cited);
     for (const r of parsed) {
       if (r.ok) continue;
       for (const m of r.message.matchAll(/([@\w./-]+) tried to access ([@\w./-]+)(\s*\(a peer dependency\))?/g)) {
@@ -312,24 +320,26 @@ console.log(JSON.stringify(out));`
         // `2025/EncodeForRegExpEscape.js` directly, and `--promote` would have
         // written a required `for-each` dependency off the back of it.
         if (isPeer) unprovidedPeers.add(target);
-        else if (citedSet.has(r.specifier)) viaCitedPath.add(target);
-        else accessed.add(target);
+        else if (r.specifier === finding.package) accessed.add(target);
+        else viaOptInPath.add(target);
       }
     }
-    // A target reached ONLY through a cited path is a separate tier, and it must
-    // stay separate. `confirmed` is what `--promote` turns into a hard
-    // `dependencies` entry, and "this breaks if a consumer requires this deep
-    // file" is not the same claim as "this breaks on import" — promoting the
-    // former would put a required dependency on every consumer for a path most
-    // never touch, which is the shape of the `react-csv` mistake above.
+    // A target reached ONLY through a cited path or a subpath export is a
+    // separate tier, and it must stay separate. `confirmed` is what `--promote`
+    // turns into a hard `dependencies` entry, and "this breaks if a consumer
+    // requires this deep file or opts into this entry point" is not the same
+    // claim as "this breaks on import" — promoting the former would put a
+    // required dependency on every consumer for a path most never touch, which
+    // is the shape of the `react-csv` mistake above. A subpath that most
+    // consumers DO use can still become a dependency, by a reviewed override.
     const confirmed = base.expected.filter((t) => accessed.has(t));
-    const confirmedViaPath = base.expected.filter((t) => !accessed.has(t) && viaCitedPath.has(t));
+    const confirmedViaPath = base.expected.filter((t) => !accessed.has(t) && viaOptInPath.has(t));
     return {
       ...base,
       verdict: confirmed.length ? 'confirmed' : confirmedViaPath.length ? 'confirmedViaPath' : 'notOnImport',
       confirmed,
-      // Real, and reached only by requiring the file the finding cites. Evidence,
-      // never a promotion basis.
+      // Real, and reached only by requiring the file the finding cites or a
+      // subpath export. Evidence, never a promotion basis.
       confirmedViaPath,
       citedPathsTried: cited.length,
       // Undeclared imports the detector did not predict — a genuine false-negative
@@ -339,7 +349,7 @@ console.log(JSON.stringify(out));`
       // its own graph, so it can surface a target nothing predicted, and reading
       // `accessed` alone would drop exactly the misses this list exists to
       // catch. The tier split governs promotion, not detection.
-      accessedButNotPredicted: [...new Set([...accessed, ...viaCitedPath])].filter(
+      accessedButNotPredicted: [...new Set([...accessed, ...viaOptInPath])].filter(
         (t) => !base.expected.includes(t)
       ),
       unprovidedPeers: [...unprovidedPeers],

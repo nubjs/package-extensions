@@ -264,20 +264,20 @@
   },
   "oxc-minify": {
     "@oxc-minify/binding-wasm32-wasip1": {
-      "field": "dependency",
-      "why": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-minify/binding-wasm32-wasip1\""
+      "field": "peer",
+      "why": "index.js loads it only after the native binding fails, and only the opt-in ./workerd subpath export imports it unconditionally; the probe that promoted it counted that subpath throw. A dependency would install a WebAssembly build on every host that never loads it."
     }
   },
   "oxc-parser": {
     "@oxc-parser/binding-wasm32-wasip1": {
-      "field": "dependency",
-      "why": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-parser/binding-wasm32-wasip1\""
+      "field": "peer",
+      "why": "src-js/bindings.js loads it only after the native binding fails, and only the opt-in WebAssembly subpath exports (./src-js/wasm, ./workerd) import it unconditionally; the probe that promoted it counted those subpath throws. A dependency would install a WebAssembly build on every host that never loads it."
     }
   },
   "oxc-transform": {
     "@oxc-transform/binding-wasm32-wasip1": {
-      "field": "dependency",
-      "why": "probe 0.152.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @oxc-transform/binding-wasm32-wasip1\""
+      "field": "peer",
+      "why": "index.js loads it only after the native binding fails, and only the opt-in ./workerd subpath export imports it unconditionally; the probe that promoted it counted that subpath throw. A dependency would install a WebAssembly build on every host that never loads it."
     }
   },
   "expo-constants": {
