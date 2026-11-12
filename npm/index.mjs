@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.49 — generated 2026-11-11, do not edit.
-// 747 packages, 1081 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.50 — generated 2026-11-12, do not edit.
+// 747 packages, 1082 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -7191,19 +7191,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "livekit-client@*",
-  {
-   "peerDependencies": {
-    "@livekit/throws-transformer": "*"
-   },
-   "peerDependenciesMeta": {
-    "@livekit/throws-transformer": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "loglevel-plugin-prefix@*",
   {
    "peerDependencies": {
@@ -9156,6 +9143,23 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "prettier": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "typeorm@*",
+  {
+   "peerDependencies": {
+    "expo-sqlite": "*",
+    "react-native-sqlite-storage": "*"
+   },
+   "peerDependenciesMeta": {
+    "expo-sqlite": {
+     "optional": true
+    },
+    "react-native-sqlite-storage": {
      "optional": true
     }
    }

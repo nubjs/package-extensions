@@ -5858,16 +5858,6 @@
           }
         }
       },
-      "livekit-client@*": {
-        "peerDependencies": {
-          "@livekit/throws-transformer": "*"
-        },
-        "peerDependenciesMeta": {
-          "@livekit/throws-transformer": {
-            "optional": true
-          }
-        }
-      },
       "loglevel-plugin-prefix@*": {
         "peerDependencies": {
           "loglevel": "*"
@@ -7432,6 +7422,20 @@
         },
         "peerDependenciesMeta": {
           "prettier": {
+            "optional": true
+          }
+        }
+      },
+      "typeorm@*": {
+        "peerDependencies": {
+          "expo-sqlite": "*",
+          "react-native-sqlite-storage": "*"
+        },
+        "peerDependenciesMeta": {
+          "expo-sqlite": {
+            "optional": true
+          },
+          "react-native-sqlite-storage": {
             "optional": true
           }
         }

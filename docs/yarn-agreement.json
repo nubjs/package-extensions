@@ -670,7 +670,7 @@
           "@babel/types"
         ],
         "metaOnly": false,
-        "version": "8.1.0",
+        "version": "8.1.2",
         "why": "the package now declares every target"
       },
       {
@@ -1000,7 +1000,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "11.4.18",
+        "version": "11.4.19",
         "why": "the package now declares every target"
       },
       {

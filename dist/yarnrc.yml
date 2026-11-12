@@ -1,5 +1,5 @@
-# Generated 2026-11-11 from the 10000 most-downloaded npm packages.
-# 747 packages, 1081 undeclared dependencies.
+# Generated 2026-11-12 from the 10000 most-downloaded npm packages.
+# 747 packages, 1082 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -3748,12 +3748,6 @@ packageExtensions:
     peerDependenciesMeta:
       puppeteer:
         optional: true
-  livekit-client@*:
-    peerDependencies:
-      "@livekit/throws-transformer": "*"
-    peerDependenciesMeta:
-      "@livekit/throws-transformer":
-        optional: true
   loglevel-plugin-prefix@*:
     peerDependencies:
       loglevel: "*"
@@ -4735,6 +4729,15 @@ packageExtensions:
       prettier: "*"
     peerDependenciesMeta:
       prettier:
+        optional: true
+  typeorm@*:
+    peerDependencies:
+      expo-sqlite: "*"
+      react-native-sqlite-storage: "*"
+    peerDependenciesMeta:
+      expo-sqlite:
+        optional: true
+      react-native-sqlite-storage:
         optional: true
   typescript-json-schema@*:
     peerDependencies:
