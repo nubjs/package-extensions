@@ -1,5 +1,5 @@
-# Generated 2026-11-12 from the 10000 most-downloaded npm packages.
-# 747 packages, 1082 undeclared dependencies.
+# Generated 2026-11-13 from the 10000 most-downloaded npm packages.
+# 755 packages, 1094 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -643,6 +643,18 @@ packageExtensions:
       "@opentelemetry/api": "*"
     peerDependenciesMeta:
       "@opentelemetry/api":
+        optional: true
+  "@google-cloud/run@*":
+    peerDependencies:
+      long: "*"
+    peerDependenciesMeta:
+      long:
+        optional: true
+  "@google-cloud/secret-manager@*":
+    peerDependencies:
+      long: "*"
+    peerDependenciesMeta:
+      long:
         optional: true
   "@google/gemini-cli@*":
     peerDependencies:
@@ -2167,10 +2179,13 @@ packageExtensions:
     peerDependencies:
       react: "*"
       react-dom: "*"
+      string_decoder: "*"
     peerDependenciesMeta:
       react:
         optional: true
       react-dom:
+        optional: true
+      string_decoder:
         optional: true
   "@storybook/docs-mdx@*":
     peerDependencies:
@@ -2928,8 +2943,11 @@ packageExtensions:
   broccoli-persistent-filter@*:
     peerDependencies:
       broccoli-node-api: "*"
+      fs-merger: "*"
     peerDependenciesMeta:
       broccoli-node-api:
+        optional: true
+      fs-merger:
         optional: true
   browser-sync@*:
     peerDependencies:
@@ -2948,6 +2966,18 @@ packageExtensions:
       "@valkey/valkey-glide": "*"
     peerDependenciesMeta:
       "@valkey/valkey-glide":
+        optional: true
+  chromatic@*:
+    peerDependencies:
+      bufferutil: "*"
+      kerberos: "*"
+      utf-8-validate: "*"
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      kerberos:
+        optional: true
+      utf-8-validate:
         optional: true
   cls-hooked@*:
     peerDependencies:
@@ -3457,6 +3487,12 @@ packageExtensions:
         optional: true
       style-vendorizer:
         optional: true
+  google-gax@*:
+    peerDependencies:
+      long: "*"
+    peerDependenciesMeta:
+      long:
+        optional: true
   gradient-string@*:
     peerDependencies:
       tinycolor2: "*"
@@ -3615,6 +3651,12 @@ packageExtensions:
       "@jest/types":
         optional: true
       playwright:
+        optional: true
+  jest-pnp-resolver@*:
+    peerDependencies:
+      pnpapi: "*"
+    peerDependenciesMeta:
+      pnpapi:
         optional: true
   jest-preset-angular@*:
     peerDependencies:
@@ -4123,6 +4165,12 @@ packageExtensions:
     peerDependenciesMeta:
       type-fest:
         optional: true
+  parse-url@*:
+    peerDependencies:
+      normalize-url: "*"
+    peerDependenciesMeta:
+      normalize-url:
+        optional: true
   pg-connection-string@*:
     peerDependencies:
       pg: "*"
@@ -4164,6 +4212,12 @@ packageExtensions:
       "@opentelemetry/sdk-node":
         optional: true
       ts-node:
+        optional: true
+  pnp-webpack-plugin@*:
+    peerDependencies:
+      pnpapi: "*"
+    peerDependenciesMeta:
+      pnpapi:
         optional: true
   postcss-import@*:
     peerDependencies:
@@ -4707,6 +4761,12 @@ packageExtensions:
       eslint:
         optional: true
   ts-node-dev@*:
+    peerDependencies:
+      pnpapi: "*"
+    peerDependenciesMeta:
+      pnpapi:
+        optional: true
+  ts-pnp@*:
     peerDependencies:
       pnpapi: "*"
     peerDependenciesMeta:

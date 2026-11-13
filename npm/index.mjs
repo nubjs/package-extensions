@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.51 — generated 2026-11-12, do not edit.
-// 747 packages, 1082 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.51 — generated 2026-11-13, do not edit.
+// 755 packages, 1094 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -1301,6 +1301,32 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@opentelemetry/api": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@google-cloud/run@*",
+  {
+   "peerDependencies": {
+    "long": "*"
+   },
+   "peerDependenciesMeta": {
+    "long": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@google-cloud/secret-manager@*",
+  {
+   "peerDependencies": {
+    "long": "*"
+   },
+   "peerDependenciesMeta": {
+    "long": {
      "optional": true
     }
    }
@@ -4148,13 +4174,17 @@ export const packageExtensions = [
   {
    "peerDependencies": {
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "string_decoder": "*"
    },
    "peerDependenciesMeta": {
     "react": {
      "optional": true
     },
     "react-dom": {
+     "optional": true
+    },
+    "string_decoder": {
      "optional": true
     }
    }
@@ -5556,10 +5586,14 @@ export const packageExtensions = [
   "broccoli-persistent-filter@*",
   {
    "peerDependencies": {
-    "broccoli-node-api": "*"
+    "broccoli-node-api": "*",
+    "fs-merger": "*"
    },
    "peerDependenciesMeta": {
     "broccoli-node-api": {
+     "optional": true
+    },
+    "fs-merger": {
      "optional": true
     }
    }
@@ -5599,6 +5633,27 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "@valkey/valkey-glide": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "chromatic@*",
+  {
+   "peerDependencies": {
+    "bufferutil": "*",
+    "kerberos": "*",
+    "utf-8-validate": "*"
+   },
+   "peerDependenciesMeta": {
+    "bufferutil": {
+     "optional": true
+    },
+    "kerberos": {
+     "optional": true
+    },
+    "utf-8-validate": {
      "optional": true
     }
    }
@@ -6613,6 +6668,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "google-gax@*",
+  {
+   "peerDependencies": {
+    "long": "*"
+   },
+   "peerDependenciesMeta": {
+    "long": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "gradient-string@*",
   {
    "peerDependencies": {
@@ -6924,6 +6992,19 @@ export const packageExtensions = [
      "optional": true
     },
     "playwright": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "jest-pnp-resolver@*",
+  {
+   "peerDependencies": {
+    "pnpapi": "*"
+   },
+   "peerDependenciesMeta": {
+    "pnpapi": {
      "optional": true
     }
    }
@@ -7906,6 +7987,19 @@ export const packageExtensions = [
   }
  ],
  [
+  "parse-url@*",
+  {
+   "peerDependencies": {
+    "normalize-url": "*"
+   },
+   "peerDependenciesMeta": {
+    "normalize-url": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "pg-connection-string@*",
   {
    "peerDependencies": {
@@ -7976,6 +8070,19 @@ export const packageExtensions = [
      "optional": true
     },
     "ts-node": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "pnp-webpack-plugin@*",
+  {
+   "peerDependencies": {
+    "pnpapi": "*"
+   },
+   "peerDependenciesMeta": {
+    "pnpapi": {
      "optional": true
     }
    }
@@ -9093,6 +9200,19 @@ export const packageExtensions = [
  ],
  [
   "ts-node-dev@*",
+  {
+   "peerDependencies": {
+    "pnpapi": "*"
+   },
+   "peerDependenciesMeta": {
+    "pnpapi": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "ts-pnp@*",
   {
    "peerDependencies": {
     "pnpapi": "*"

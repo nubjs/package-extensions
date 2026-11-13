@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-12",
-  "dataset": "84ab8d2bd0c8ed4e",
+  "generated": "2026-11-13",
+  "dataset": "2dcb47eac0337f3b",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
     "confirmed": 2,
-    "confirmedViaPath": 5,
-    "notOnImport": 35,
-    "installFailed": 7,
+    "confirmedViaPath": 6,
+    "notOnImport": 41,
+    "installFailed": 2,
     "inconclusive": 3
   },
   "results": [
@@ -19,8 +19,14 @@
       "expected": [
         "@applitools/test-utils"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@applitools/\u001b[39m\u001b[38;5;173mspec-driver-webdriver\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.6.16\u001b[39m: All versions satisfying \"1.6.16\" are quarantined\n::endgroup::\n\u001b"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "@ardatan/relay-compiler",
@@ -114,29 +120,25 @@
         "puppeteer",
         "puppeteer-core"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@lhci/\u001b[39m\u001b[38;5;173mcli\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.16.1\u001b[39m: All versions satisfying \"0.16.1\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "@mastra/core",
-      "version": "1.82.0",
+      "version": "1.83.0",
       "expected": [
         "@workflow/serde",
         "msw",
         "undici"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 10,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "zod"
-      ],
-      "byOtherIssuers": [
-        "@ai-sdk/provider-utils -> zod (unprovided peer)"
-      ],
-      "specifiersTried": 36
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.83.0\u001b[39m: All versions satisfying \"1.83.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
     },
     {
       "package": "@newrelic/security-agent",
@@ -317,8 +319,14 @@
         "@react-native-community/cli-platform-apple",
         "react-native"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@react-native-community/\u001b[39m\u001b[38;5;173mcli\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:21.0.0\u001b[39m: All versions satisfying \"21.0.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "@react-native-community/cli-config-apple",
@@ -328,8 +336,14 @@
         "fs-extra",
         "ora"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@react-native-community/\u001b[39m\u001b[38;5;173mcli-config-apple\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:21.0.0\u001b[39m: All versions satisfying \"21.0.0\" are quarantined\n::endgr"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 6,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 7
     },
     {
       "package": "@react-native-community/cli-doctor",
@@ -338,8 +352,14 @@
         "@react-native-community/cli-types",
         "fs-extra"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@react-native-community/\u001b[39m\u001b[38;5;173mcli-doctor\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:21.0.0\u001b[39m: All versions satisfying \"21.0.0\" are quarantined\n::endgroup::\n"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "@react-native-community/cli-platform-apple",
@@ -348,8 +368,14 @@
         "@react-native-community/cli-types",
         "fs-extra"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@react-native-community/\u001b[39m\u001b[38;5;173mcli-platform-apple\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:21.0.0\u001b[39m: All versions satisfying \"21.0.0\" are quarantined\n::end"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 4,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 5
     },
     {
       "package": "@storybook/nextjs-vite",
@@ -596,8 +622,16 @@
         "astro",
         "firebase-functions"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mfirebase-tools\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:15.36.0\u001b[39m: All versions satisfying \"15.36.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mfir"
+      "verdict": "confirmedViaPath",
+      "confirmed": [],
+      "confirmedViaPath": [
+        "firebase-functions"
+      ],
+      "citedPathsTried": 9,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 10
     },
     {
       "package": "http-call",
@@ -724,6 +758,15 @@
       "specifiersTried": 2
     },
     {
+      "package": "prosemirror-inputrules",
+      "version": "1.6.0",
+      "expected": [
+        "prosemirror-model"
+      ],
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mprosemirror-inputrules\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.6.0\u001b[39m: All versions satisfying \"1.6.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173"
+    },
+    {
       "package": "react-csv",
       "version": "2.2.2",
       "expected": [
@@ -838,6 +881,21 @@
       "specifiersTried": 2
     },
     {
+      "package": "ts-pnp",
+      "version": "1.2.0",
+      "expected": [
+        "pnpapi"
+      ],
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
+    },
+    {
       "package": "unrs-resolver",
       "version": "1.13.0",
       "expected": [
@@ -860,7 +918,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:8147) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-DkXccx/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5903) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-NHlIhv/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }
