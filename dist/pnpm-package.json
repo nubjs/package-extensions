@@ -5174,15 +5174,16 @@
       },
       "expo-constants@*": {
         "peerDependencies": {
-          "expo-manifests": "*"
+          "expo-manifests": "*",
+          "expo-modules-core": "*"
         },
         "peerDependenciesMeta": {
           "expo-manifests": {
             "optional": true
+          },
+          "expo-modules-core": {
+            "optional": true
           }
-        },
-        "dependencies": {
-          "expo-modules-core": "*"
         }
       },
       "expo-eas-client@*": {
@@ -5254,8 +5255,13 @@
         }
       },
       "expo-linking@*": {
-        "dependencies": {
+        "peerDependencies": {
           "expo-modules-core": "*"
+        },
+        "peerDependenciesMeta": {
+          "expo-modules-core": {
+            "optional": true
+          }
         }
       },
       "expo-location@*": {

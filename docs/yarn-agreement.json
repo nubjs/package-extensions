@@ -1010,7 +1010,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "5.5.0",
+        "version": "5.5.1",
         "why": "the package now declares every target"
       },
       {

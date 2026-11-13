@@ -10,12 +10,12 @@
       "error": "tarball too large (167493933 bytes)"
     },
     {
-      "package": "contenthook",
-      "error": "no version in metadata"
-    },
-    {
       "package": "@contenthook/node",
       "error": "metadata: HTTP status client error (404 Not Found) for url (https://registry.npmjs.org/@contenthook/node)"
+    },
+    {
+      "package": "contenthook",
+      "error": "no version in metadata"
     },
     {
       "package": "@contenthook/browser",
@@ -6123,7 +6123,7 @@
     },
     {
       "package": "wrangler",
-      "version": "4.161.0",
+      "version": "4.162.0",
       "hard_phantoms": [
         {
           "package": "@cloudflare/containers-shared",
@@ -17894,7 +17894,7 @@
     },
     {
       "package": "openid-client",
-      "version": "6.8.9",
+      "version": "6.9.0",
       "hard_phantoms": [
         {
           "package": "express",
@@ -20704,7 +20704,7 @@
     },
     {
       "package": "@fastify/swagger",
-      "version": "9.9.3",
+      "version": "9.9.4",
       "hard_phantoms": [
         {
           "package": "fastify",
@@ -26196,7 +26196,7 @@
     },
     {
       "package": "applicationinsights",
-      "version": "3.17.0",
+      "version": "3.17.1",
       "hard_phantoms": [
         {
           "package": "@opentelemetry/instrumentation",
@@ -27972,7 +27972,7 @@
     },
     {
       "package": "gaxios",
-      "version": "8.3.2",
+      "version": "8.3.3",
       "hard_phantoms": [
         {
           "package": "undici-types",
@@ -29285,7 +29285,7 @@
     },
     {
       "package": "motion",
-      "version": "14.13.0",
+      "version": "14.14.0",
       "hard_phantoms": [
         {
           "package": "motion-dom",
@@ -33311,7 +33311,7 @@
     },
     {
       "package": "vue-router",
-      "version": "5.5.0",
+      "version": "5.5.1",
       "hard_phantoms": [
         {
           "package": "@vue/language-core",
@@ -43820,9 +43820,9 @@
     "packages_with_deep_path": 91,
     "deep_path_edges": 234,
     "main_graph_hard_edges": 694,
-    "naive_phantom_flags": 2409,
+    "naive_phantom_flags": 2410,
     "real_hard_phantom_flags": 1055,
-    "optional_peers_excluded": 879,
+    "optional_peers_excluded": 880,
     "soft_phantoms_excluded": 475
   }
 }

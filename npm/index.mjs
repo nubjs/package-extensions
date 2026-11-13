@@ -1,4 +1,4 @@
-// @nubjs/extensions 1.0.51 — generated 2026-11-13, do not edit.
+// @nubjs/extensions 1.0.52 — generated 2026-11-13, do not edit.
 // 755 packages, 1094 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
@@ -6328,15 +6328,16 @@ export const packageExtensions = [
   "expo-constants@*",
   {
    "peerDependencies": {
-    "expo-manifests": "*"
+    "expo-manifests": "*",
+    "expo-modules-core": "*"
    },
    "peerDependenciesMeta": {
     "expo-manifests": {
      "optional": true
+    },
+    "expo-modules-core": {
+     "optional": true
     }
-   },
-   "dependencies": {
-    "expo-modules-core": "*"
    }
   }
  ],
@@ -6429,8 +6430,13 @@ export const packageExtensions = [
  [
   "expo-linking@*",
   {
-   "dependencies": {
+   "peerDependencies": {
     "expo-modules-core": "*"
+   },
+   "peerDependenciesMeta": {
+    "expo-modules-core": {
+     "optional": true
+    }
    }
   }
  ],

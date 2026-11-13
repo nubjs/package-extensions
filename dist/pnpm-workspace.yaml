@@ -3322,11 +3322,12 @@ packageExtensions:
   expo-constants@*:
     peerDependencies:
       expo-manifests: "*"
+      expo-modules-core: "*"
     peerDependenciesMeta:
       expo-manifests:
         optional: true
-    dependencies:
-      expo-modules-core: "*"
+      expo-modules-core:
+        optional: true
   expo-eas-client@*:
     peerDependencies:
       expo-modules-core: "*"
@@ -3370,8 +3371,11 @@ packageExtensions:
       expo-modules-core:
         optional: true
   expo-linking@*:
-    dependencies:
+    peerDependencies:
       expo-modules-core: "*"
+    peerDependenciesMeta:
+      expo-modules-core:
+        optional: true
   expo-location@*:
     peerDependencies:
       expo-modules-core: "*"

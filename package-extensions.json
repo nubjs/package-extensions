@@ -39,8 +39,8 @@
       "guarded": 298
     },
     "byField": {
-      "dependency": 25,
-      "peer": 1069
+      "dependency": 23,
+      "peer": 1071
     },
     "candidatesForReview": 64,
     "droppedUnpublishedTargets": 202,
@@ -8027,15 +8027,16 @@
     },
     "expo-constants@*": {
       "peerDependencies": {
-        "expo-manifests": "*"
+        "expo-manifests": "*",
+        "expo-modules-core": "*"
       },
       "peerDependenciesMeta": {
         "expo-manifests": {
           "optional": true
+        },
+        "expo-modules-core": {
+          "optional": true
         }
-      },
-      "dependencies": {
-        "expo-modules-core": "*"
       }
     },
     "expo-eas-client@*": {
@@ -8107,8 +8108,13 @@
       }
     },
     "expo-linking@*": {
-      "dependencies": {
+      "peerDependencies": {
         "expo-modules-core": "*"
+      },
+      "peerDependenciesMeta": {
+        "expo-modules-core": {
+          "optional": true
+        }
       }
     },
     "expo-location@*": {
@@ -13890,7 +13896,7 @@
     },
     {
       "package": "@fastify/swagger",
-      "measuredVersion": "9.9.3",
+      "measuredVersion": "9.9.4",
       "targets": [
         {
           "target": "fastify",
@@ -23693,7 +23699,7 @@
     },
     {
       "package": "applicationinsights",
-      "measuredVersion": "3.17.0",
+      "measuredVersion": "3.17.1",
       "targets": [
         {
           "target": "@opentelemetry/instrumentation",
@@ -25582,9 +25588,9 @@
         {
           "target": "expo-modules-core",
           "class": "runtime",
-          "field": "dependency",
+          "field": "peer",
           "candidate": false,
-          "reason": "probe 58.0.12: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access expo-modules-core\"",
+          "reason": "override asked for a dependency, refused: expo-modules-core is supplied by the consumer or its host, so a private copy would break rather than fix it",
           "specifiers": [
             "expo-modules-core"
           ],
@@ -25779,9 +25785,9 @@
         {
           "target": "expo-modules-core",
           "class": "runtime",
-          "field": "dependency",
+          "field": "peer",
           "candidate": false,
-          "reason": "probe 58.0.13: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access expo-modules-core\"",
+          "reason": "override asked for a dependency, refused: expo-modules-core is supplied by the consumer or its host, so a private copy would break rather than fix it",
           "specifiers": [
             "expo-modules-core"
           ],
@@ -26148,7 +26154,7 @@
     },
     {
       "package": "gaxios",
-      "measuredVersion": "8.3.2",
+      "measuredVersion": "8.3.3",
       "targets": [
         {
           "target": "undici-types",
@@ -27902,7 +27908,7 @@
     },
     {
       "package": "motion",
-      "measuredVersion": "14.13.0",
+      "measuredVersion": "14.14.0",
       "targets": [
         {
           "target": "motion-dom",
@@ -28659,7 +28665,7 @@
     },
     {
       "package": "openid-client",
-      "measuredVersion": "6.8.9",
+      "measuredVersion": "6.9.0",
       "targets": [
         {
           "target": "express",
@@ -31949,7 +31955,7 @@
     },
     {
       "package": "vue-router",
-      "measuredVersion": "5.5.0",
+      "measuredVersion": "5.5.1",
       "targets": [
         {
           "target": "@vue/language-core",
@@ -32150,7 +32156,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.161.0",
+      "measuredVersion": "4.162.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
