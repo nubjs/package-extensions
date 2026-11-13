@@ -101,6 +101,11 @@ const DUPLICATION_BREAKS = [
   'eslint', 'typescript', 'webpack', 'vite', 'rollup', 'jest', 'vitest', 'nx',
   // Throws by name on objects from another copy of itself.
   'graphql',
+  // The Expo SDK pins one native-module core, and a second copy splits the
+  // JavaScript side from the native binary. As a `*` dependency of
+  // `expo-linking` it resolved to 58.1.0 next to SDK 52's pinned 2.0.0 whenever
+  // the edge was reached before `expo`'s own.
+  'expo-modules-core',
 ];
 
 export function mustNotBeDependency(target) {
