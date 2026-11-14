@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-13",
+  "generated": "2026-11-14",
   "dataset": "106202b955b3b8bf",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
-    "confirmed": 2,
+    "confirmed": 3,
     "confirmedViaPath": 6,
     "notOnImport": 41,
-    "installFailed": 2,
+    "installFailed": 1,
     "inconclusive": 3
   },
   "results": [
@@ -137,8 +137,18 @@
         "msw",
         "undici"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.83.0\u001b[39m: All versions satisfying \"1.83.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 10,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "zod"
+      ],
+      "byOtherIssuers": [
+        "@ai-sdk/provider-utils -> zod (unprovided peer)"
+      ],
+      "specifiersTried": 36
     },
     {
       "package": "@newrelic/security-agent",
@@ -418,18 +428,12 @@
     },
     {
       "package": "astro",
-      "version": "7.4.11",
+      "version": "7.4.12",
       "expected": [
         "@astrojs/cloudflare"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 27
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mastro\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:7.4.12\u001b[39m: All versions satisfying \"7.4.12\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mastro\u001b[39m\u001b[38"
     },
     {
       "package": "domino",
@@ -763,8 +767,16 @@
       "expected": [
         "prosemirror-model"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mprosemirror-inputrules\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.6.0\u001b[39m: All versions satisfying \"1.6.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173"
+      "verdict": "confirmed",
+      "confirmed": [
+        "prosemirror-model"
+      ],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "react-csv",
@@ -918,7 +930,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:5835) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-jyoQmg/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:6009) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-w5hoOK/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }

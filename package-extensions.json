@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13",
+  "generated": "2026-11-14",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -39,10 +39,10 @@
       "guarded": 298
     },
     "byField": {
-      "dependency": 23,
-      "peer": 1071
+      "dependency": 24,
+      "peer": 1070
     },
-    "candidatesForReview": 64,
+    "candidatesForReview": 63,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 0,
     "droppedUnresolvedTargets": 0,
@@ -9576,13 +9576,8 @@
       }
     },
     "prosemirror-inputrules@*": {
-      "peerDependencies": {
+      "dependencies": {
         "prosemirror-model": "*"
-      },
-      "peerDependenciesMeta": {
-        "prosemirror-model": {
-          "optional": true
-        }
       }
     },
     "prosemirror-keymap@*": {
@@ -12601,7 +12596,7 @@
     },
     {
       "package": "@astrojs/markdown-remark",
-      "measuredVersion": "7.3.8",
+      "measuredVersion": "7.3.9",
       "targets": [
         {
           "target": "hast",
@@ -12650,7 +12645,7 @@
     },
     {
       "package": "@astrojs/react",
-      "measuredVersion": "7.1.8",
+      "measuredVersion": "7.1.9",
       "targets": [
         {
           "target": "astro",
@@ -12672,7 +12667,7 @@
     },
     {
       "package": "@astrojs/sitemap",
-      "measuredVersion": "3.7.4",
+      "measuredVersion": "3.7.5",
       "targets": [
         {
           "target": "astro",
@@ -13920,7 +13915,7 @@
     },
     {
       "package": "@fastify/swagger-ui",
-      "measuredVersion": "6.1.3",
+      "measuredVersion": "6.1.4",
       "targets": [
         {
           "target": "fastify",
@@ -21850,7 +21845,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "28.0.2",
+      "measuredVersion": "29.0.0",
       "targets": [
         {
           "target": "execa",
@@ -21927,7 +21922,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "27.0.0",
+      "measuredVersion": "28.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -23623,7 +23618,7 @@
     },
     {
       "package": "appium-adb",
-      "measuredVersion": "17.0.1",
+      "measuredVersion": "17.0.2",
       "targets": [
         {
           "target": "@appium/types",
@@ -23644,7 +23639,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "10.0.3",
+      "measuredVersion": "10.0.4",
       "targets": [
         {
           "target": "@appium/types",
@@ -23679,7 +23674,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "11.0.4",
+      "measuredVersion": "11.0.6",
       "targets": [
         {
           "target": "@appium/types",
@@ -23759,7 +23754,7 @@
     },
     {
       "package": "astro",
-      "measuredVersion": "7.4.11",
+      "measuredVersion": "7.4.12",
       "targets": [
         {
           "target": "@astrojs/cloudflare",
@@ -24068,7 +24063,7 @@
     },
     {
       "package": "chromatic",
-      "measuredVersion": "18.14.3",
+      "measuredVersion": "18.14.4",
       "targets": [
         {
           "target": "bufferutil",
@@ -24080,7 +24075,7 @@
             "bufferutil"
           ],
           "files": [
-            "dist/node-src-D97mP3tH.cjs"
+            "dist/node-src-BBp7WpAu.cjs"
           ],
           "fileCount": 1
         },
@@ -24094,7 +24089,7 @@
             "kerberos"
           ],
           "files": [
-            "dist/statsPaths-C5hQFMhP.cjs"
+            "dist/statsPaths-DGWEd5qr.cjs"
           ],
           "fileCount": 1
         },
@@ -24108,7 +24103,7 @@
             "utf-8-validate"
           ],
           "files": [
-            "dist/node-src-D97mP3tH.cjs"
+            "dist/node-src-BBp7WpAu.cjs"
           ],
           "fileCount": 1
         }
@@ -25181,7 +25176,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.4.6",
+      "measuredVersion": "65.4.7",
       "targets": [
         {
           "target": "@eslint/core",
@@ -28920,7 +28915,7 @@
     },
     {
       "package": "playwright-core",
-      "measuredVersion": "1.65.0",
+      "measuredVersion": "1.65.1",
       "targets": [
         {
           "target": "bufferutil",
@@ -29107,7 +29102,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.73.0",
+      "measuredVersion": "5.73.1",
       "targets": [
         {
           "target": "express",
@@ -29338,9 +29333,9 @@
         {
           "target": "prosemirror-model",
           "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
+          "field": "dependency",
+          "candidate": false,
+          "reason": "probe 1.6.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access prosemirror-model\"",
           "specifiers": [
             "prosemirror-model"
           ],
@@ -30280,7 +30275,7 @@
     },
     {
       "package": "resend",
-      "measuredVersion": "6.38.0",
+      "measuredVersion": "6.38.1",
       "targets": [
         {
           "target": "react",
@@ -31053,7 +31048,7 @@
     },
     {
       "package": "systeminformation",
-      "measuredVersion": "5.33.21",
+      "measuredVersion": "5.33.22",
       "targets": [
         {
           "target": "macos-temperature-sensor",
@@ -32136,7 +32131,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261113.1",
+      "measuredVersion": "1.20261114.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32578,7 +32573,7 @@
     },
     {
       "package": "astro",
-      "measuredVersion": "7.4.11",
+      "measuredVersion": "7.4.12",
       "target": "@astrojs/cloudflare",
       "specifiers": [
         "@astrojs/cloudflare/info"
@@ -32798,14 +32793,6 @@
       "target": "@volar/typescript",
       "specifiers": [
         "@volar/typescript"
-      ]
-    },
-    {
-      "package": "prosemirror-inputrules",
-      "measuredVersion": "1.6.0",
-      "target": "prosemirror-model",
-      "specifiers": [
-        "prosemirror-model"
       ]
     },
     {

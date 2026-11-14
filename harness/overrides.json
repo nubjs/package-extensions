@@ -291,5 +291,11 @@
       "field": "dependency",
       "why": "probe 58.0.13: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access expo-modules-core\""
     }
+  },
+  "prosemirror-inputrules": {
+    "prosemirror-model": {
+      "field": "dependency",
+      "why": "probe 1.6.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access prosemirror-model\""
+    }
   }
 }
