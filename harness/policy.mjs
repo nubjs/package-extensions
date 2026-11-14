@@ -99,8 +99,10 @@ const DUPLICATION_BREAKS = [
   'expo', 'electron', '@angular/', '@vue/runtime-core', '@vue/runtime-dom',
   // Plugin hosts that compare identity across the plugin boundary.
   'eslint', 'typescript', 'webpack', 'vite', 'rollup', 'jest', 'vitest', 'nx',
-  // Throws by name on objects from another copy of itself.
-  'graphql',
+  // Throws by name on objects from another copy of itself. `prosemirror-model`'s
+  // `Fragment.from` reports "looks like multiple versions of prosemirror-model
+  // were loaded".
+  'graphql', 'prosemirror-model',
   // The Expo SDK pins one native-module core, and a second copy splits the
   // JavaScript side from the native binary. As a `*` dependency of
   // `expo-linking` it resolved to 58.1.0 next to SDK 52's pinned 2.0.0 whenever
