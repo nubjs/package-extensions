@@ -6,7 +6,7 @@
     "mode": "pnp, pnpFallbackMode: none"
   },
   "tally": {
-    "confirmed": 3,
+    "confirmed": 2,
     "confirmedViaPath": 6,
     "notOnImport": 41,
     "installFailed": 1,
@@ -762,23 +762,6 @@
       "specifiersTried": 2
     },
     {
-      "package": "prosemirror-inputrules",
-      "version": "1.6.0",
-      "expected": [
-        "prosemirror-model"
-      ],
-      "verdict": "confirmed",
-      "confirmed": [
-        "prosemirror-model"
-      ],
-      "confirmedViaPath": [],
-      "citedPathsTried": 3,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 4
-    },
-    {
       "package": "react-csv",
       "version": "2.2.2",
       "expected": [
@@ -930,7 +913,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:6009) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-w5hoOK/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:6142) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-LCIyY5/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }

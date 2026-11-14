@@ -39,8 +39,8 @@
    "guarded": 298
   },
   "byField": {
-   "dependency": 24,
-   "peer": 1070
+   "dependency": 23,
+   "peer": 1071
   },
   "candidatesForReview": 63,
   "droppedUnpublishedTargets": 202,
@@ -9576,8 +9576,13 @@
    }
   },
   "prosemirror-inputrules@*": {
-   "dependencies": {
+   "peerDependencies": {
     "prosemirror-model": "*"
+   },
+   "peerDependenciesMeta": {
+    "prosemirror-model": {
+     "optional": true
+    }
    }
   },
   "prosemirror-keymap@*": {
@@ -29333,9 +29338,9 @@
     {
      "target": "prosemirror-model",
      "class": "runtime",
-     "field": "dependency",
+     "field": "peer",
      "candidate": false,
-     "reason": "probe 1.6.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access prosemirror-model\"",
+     "reason": "override asked for a dependency, refused: prosemirror-model is supplied by the consumer or its host, so a private copy would break rather than fix it",
      "specifiers": [
       "prosemirror-model"
      ],

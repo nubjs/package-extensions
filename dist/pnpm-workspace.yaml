@@ -4295,8 +4295,11 @@ packageExtensions:
       prosemirror-transform:
         optional: true
   prosemirror-inputrules@*:
-    dependencies:
+    peerDependencies:
       prosemirror-model: "*"
+    peerDependenciesMeta:
+      prosemirror-model:
+        optional: true
   prosemirror-keymap@*:
     peerDependencies:
       prosemirror-view: "*"

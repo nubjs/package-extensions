@@ -6723,8 +6723,13 @@
         }
       },
       "prosemirror-inputrules@*": {
-        "dependencies": {
+        "peerDependencies": {
           "prosemirror-model": "*"
+        },
+        "peerDependenciesMeta": {
+          "prosemirror-model": {
+            "optional": true
+          }
         }
       },
       "prosemirror-keymap@*": {

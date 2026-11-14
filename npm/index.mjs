@@ -1,4 +1,4 @@
-// @nubjs/extensions 1.0.52 — generated 2026-11-14, do not edit.
+// @nubjs/extensions 1.0.53 — generated 2026-11-14, do not edit.
 // 755 packages, 1094 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
@@ -8252,8 +8252,13 @@ export const packageExtensions = [
  [
   "prosemirror-inputrules@*",
   {
-   "dependencies": {
+   "peerDependencies": {
     "prosemirror-model": "*"
+   },
+   "peerDependenciesMeta": {
+    "prosemirror-model": {
+     "optional": true
+    }
    }
   }
  ],
