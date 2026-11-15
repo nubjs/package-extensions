@@ -1,5 +1,5 @@
-# Generated 2026-11-14 from the 10000 most-downloaded npm packages.
-# 755 packages, 1094 undeclared dependencies.
+# Generated 2026-11-15 from the 10000 most-downloaded npm packages.
+# 756 packages, 1094 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -118,14 +118,17 @@ packageExtensions:
     peerDependenciesMeta:
       relay-runtime:
         optional: true
-  "@appium/types@*":
+  "@appium/base-driver@*":
     peerDependencies:
       express: "*"
-      ws: "*"
     peerDependenciesMeta:
       express:
         optional: true
-      ws:
+  "@appium/docutils@*":
+    peerDependencies:
+      "@appium/types": "*"
+    peerDependenciesMeta:
+      "@appium/types":
         optional: true
   "@applitools/spec-driver-webdriver@*":
     peerDependencies:

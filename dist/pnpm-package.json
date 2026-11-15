@@ -181,16 +181,22 @@
           }
         }
       },
-      "@appium/types@*": {
+      "@appium/base-driver@*": {
         "peerDependencies": {
-          "express": "*",
-          "ws": "*"
+          "express": "*"
         },
         "peerDependenciesMeta": {
           "express": {
             "optional": true
-          },
-          "ws": {
+          }
+        }
+      },
+      "@appium/docutils@*": {
+        "peerDependencies": {
+          "@appium/types": "*"
+        },
+        "peerDependenciesMeta": {
+          "@appium/types": {
             "optional": true
           }
         }

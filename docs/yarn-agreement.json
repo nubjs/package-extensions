@@ -990,7 +990,7 @@
           "tabbable"
         ],
         "metaOnly": false,
-        "version": "12.0.3",
+        "version": "12.0.4",
         "why": "the package now declares every target"
       },
       {

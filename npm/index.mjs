@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.53 — generated 2026-11-14, do not edit.
-// 755 packages, 1094 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.53 — generated 2026-11-15, do not edit.
+// 756 packages, 1094 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -227,17 +227,26 @@ export const packageExtensions = [
   }
  ],
  [
-  "@appium/types@*",
+  "@appium/base-driver@*",
   {
    "peerDependencies": {
-    "express": "*",
-    "ws": "*"
+    "express": "*"
    },
    "peerDependenciesMeta": {
     "express": {
      "optional": true
-    },
-    "ws": {
+    }
+   }
+  }
+ ],
+ [
+  "@appium/docutils@*",
+  {
+   "peerDependencies": {
+    "@appium/types": "*"
+   },
+   "peerDependenciesMeta": {
+    "@appium/types": {
      "optional": true
     }
    }

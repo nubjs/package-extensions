@@ -23,7 +23,7 @@ packageExtensions:
         optional: true
 ```
 
-**755 package names.** The scan covers 9,982 of the top 10,000 and finds 623 with an undeclared dependency across 1,094 edges. The Yarn seed contributes 142 package names, including 132 not found by the scan.
+**756 package names.** The scan covers 9,982 of the top 10,000 and finds 624 with an undeclared dependency across 1,094 edges. The Yarn seed contributes 142 package names, including 132 not found by the scan.
 
 ## Installing
 
