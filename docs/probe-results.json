@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-15",
-  "dataset": "53a3d3be7fe1ab17",
+  "generated": "2026-11-16",
+  "dataset": "d3d58e7b1de2fe9c",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -919,7 +919,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:6220) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-606i00/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:6299) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-unp0ME/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }

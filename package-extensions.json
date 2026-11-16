@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15",
+  "generated": "2026-11-16",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1094,
-      "packages": 624
+      "entries": 1095,
+      "packages": 625
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,22 +28,22 @@
     }
   },
   "totals": {
-    "packages": 756,
-    "selectors": 776,
-    "entries": 1094,
+    "packages": 757,
+    "selectors": 777,
+    "entries": 1095,
     "byClass": {
       "runtime": 167,
       "adapter": 126,
-      "types": 503,
+      "types": 504,
       "deep-path": 0,
       "guarded": 298
     },
     "byField": {
       "dependency": 23,
-      "peer": 1071
+      "peer": 1072
     },
     "candidatesForReview": 63,
-    "droppedUnpublishedTargets": 202,
+    "droppedUnpublishedTargets": 203,
     "droppedBundlerLiterals": 0,
     "droppedUnresolvedTargets": 0,
     "withheldDeepPath": 234
@@ -10109,6 +10109,16 @@
         }
       }
     },
+    "semantic-release@*": {
+      "peerDependencies": {
+        "signale": "*"
+      },
+      "peerDependenciesMeta": {
+        "signale": {
+          "optional": true
+        }
+      }
+    },
     "sequelize-cli@*": {
       "peerDependencies": {
         "sequelize": "*"
@@ -12152,7 +12162,7 @@
     },
     {
       "package": "@angular-eslint/bundled-angular-compiler",
-      "measuredVersion": "22.6.0",
+      "measuredVersion": "22.7.0",
       "targets": [
         {
           "target": "@angular/compiler",
@@ -12172,7 +12182,7 @@
     },
     {
       "package": "@angular-eslint/template-parser",
-      "measuredVersion": "22.6.0",
+      "measuredVersion": "22.7.0",
       "targets": [
         {
           "target": "@typescript-eslint/types",
@@ -13474,7 +13484,7 @@
     },
     {
       "package": "@eslint-react/shared",
-      "measuredVersion": "5.30.2",
+      "measuredVersion": "5.30.3",
       "targets": [
         {
           "target": "react",
@@ -13836,7 +13846,7 @@
     },
     {
       "package": "@fastify/multipart",
-      "measuredVersion": "10.1.8",
+      "measuredVersion": "10.1.9",
       "targets": [
         {
           "target": "ajv",
@@ -13915,7 +13925,7 @@
     },
     {
       "package": "@fastify/swagger",
-      "measuredVersion": "9.9.4",
+      "measuredVersion": "9.9.5",
       "targets": [
         {
           "target": "fastify",
@@ -19290,7 +19300,7 @@
     },
     {
       "package": "@react-navigation/bottom-tabs",
-      "measuredVersion": "7.21.0",
+      "measuredVersion": "7.22.0",
       "targets": [
         {
           "target": "@react-navigation/core",
@@ -19311,7 +19321,7 @@
     },
     {
       "package": "@react-navigation/native",
-      "measuredVersion": "7.5.1",
+      "measuredVersion": "7.5.2",
       "targets": [
         {
           "target": "@react-navigation/routers",
@@ -19331,7 +19341,7 @@
     },
     {
       "package": "@react-navigation/native-stack",
-      "measuredVersion": "7.21.0",
+      "measuredVersion": "7.21.1",
       "targets": [
         {
           "target": "@react-navigation/core",
@@ -19351,7 +19361,7 @@
     },
     {
       "package": "@react-navigation/stack",
-      "measuredVersion": "7.12.1",
+      "measuredVersion": "7.12.2",
       "targets": [
         {
           "target": "@react-navigation/core",
@@ -19530,7 +19540,7 @@
     },
     {
       "package": "@redocly/respect-core",
-      "measuredVersion": "2.78.0",
+      "measuredVersion": "2.79.0",
       "targets": [
         {
           "target": "json-schema-to-ts",
@@ -19570,7 +19580,7 @@
     },
     {
       "package": "@reown/appkit",
-      "measuredVersion": "1.8.24",
+      "measuredVersion": "2.0.0",
       "targets": [
         {
           "target": "@reown/appkit-siwe",
@@ -19638,7 +19648,7 @@
     },
     {
       "package": "@reown/appkit-controllers",
-      "measuredVersion": "1.8.24",
+      "measuredVersion": "2.0.0",
       "targets": [
         {
           "target": "@walletconnect/types",
@@ -19889,7 +19899,7 @@
     },
     {
       "package": "@scalar/openapi-upgrader",
-      "measuredVersion": "0.4.9",
+      "measuredVersion": "0.4.10",
       "targets": [
         {
           "target": "@scalar/types",
@@ -19912,7 +19922,7 @@
     },
     {
       "package": "@scalar/types",
-      "measuredVersion": "0.28.1",
+      "measuredVersion": "0.29.0",
       "targets": [
         {
           "target": "har-format",
@@ -23308,7 +23318,7 @@
     },
     {
       "package": "angular-eslint",
-      "measuredVersion": "22.6.0",
+      "measuredVersion": "22.7.0",
       "targets": [
         {
           "target": "@eslint/core",
@@ -23698,7 +23708,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "11.0.6",
+      "measuredVersion": "11.0.7",
       "targets": [
         {
           "target": "@appium/types",
@@ -25200,7 +25210,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.4.7",
+      "measuredVersion": "65.4.9",
       "targets": [
         {
           "target": "@eslint/core",
@@ -25282,7 +25292,7 @@
     },
     {
       "package": "eslint-plugin-perfectionist",
-      "measuredVersion": "5.13.0",
+      "measuredVersion": "5.14.0",
       "targets": [
         {
           "target": "typescript",
@@ -26559,7 +26569,7 @@
     },
     {
       "package": "http-proxy-middleware",
-      "measuredVersion": "4.2.1",
+      "measuredVersion": "4.2.2",
       "targets": [
         {
           "target": "@hono/node-server",
@@ -28718,7 +28728,7 @@
     },
     {
       "package": "oxc-minify",
-      "measuredVersion": "0.158.0",
+      "measuredVersion": "0.159.0",
       "targets": [
         {
           "target": "@oxc-minify/binding-wasm32-wasi",
@@ -28758,7 +28768,7 @@
     },
     {
       "package": "oxc-parser",
-      "measuredVersion": "0.158.0",
+      "measuredVersion": "0.159.0",
       "targets": [
         {
           "target": "@oxc-parser/binding-wasm32-wasi",
@@ -28819,7 +28829,7 @@
     },
     {
       "package": "oxc-transform",
-      "measuredVersion": "0.158.0",
+      "measuredVersion": "0.159.0",
       "targets": [
         {
           "target": "@oxc-transform/binding-wasm32-wasi",
@@ -29126,7 +29136,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "5.73.1",
+      "measuredVersion": "5.74.0",
       "targets": [
         {
           "target": "express",
@@ -30278,7 +30288,7 @@
     },
     {
       "package": "remotion",
-      "measuredVersion": "4.0.543",
+      "measuredVersion": "4.0.544",
       "targets": [
         {
           "target": "zod",
@@ -30591,6 +30601,26 @@
             "dist/js/select2.min.js"
           ],
           "fileCount": 4
+        }
+      ]
+    },
+    {
+      "package": "semantic-release",
+      "measuredVersion": "26.0.1",
+      "targets": [
+        {
+          "target": "signale",
+          "class": "types",
+          "field": "peer",
+          "candidate": false,
+          "reason": "types class — no runtime edge, only a declaration-file reference",
+          "specifiers": [
+            "signale"
+          ],
+          "files": [
+            "index.d.ts"
+          ],
+          "fileCount": 1
         }
       ]
     },
@@ -32155,7 +32185,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261115.1",
+      "measuredVersion": "1.20261116.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32175,7 +32205,7 @@
     },
     {
       "package": "wrangler",
-      "measuredVersion": "4.162.0",
+      "measuredVersion": "4.163.0",
       "targets": [
         {
           "target": "@cloudflare/workers-shared",
@@ -32924,6 +32954,7 @@
   "dropped": {
     "unpublished": [
       "@ant-design/cssinjs -> React",
+      "@ant-design/cssinjs -> ReactDOM",
       "@anthropic-ai/sdk -> node-fetch.js",
       "@azure/functions -> @azure/functions-core",
       "@docusaurus/module-type-aliases -> @docusaurus/ErrorBoundary",

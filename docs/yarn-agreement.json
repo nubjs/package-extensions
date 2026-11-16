@@ -683,8 +683,8 @@
           "vue-template-compiler"
         ],
         "metaOnly": false,
-        "version": "9.1.0",
-        "why": "latest 9.1.0 is outside <=6.3.4"
+        "version": "9.1.1",
+        "why": "latest 9.1.1 is outside <=6.3.4"
       },
       {
         "package": "react-draggable",

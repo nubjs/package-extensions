@@ -1,5 +1,5 @@
-# Generated 2026-11-15 from the 10000 most-downloaded npm packages.
-# 756 packages, 1094 undeclared dependencies.
+# Generated 2026-11-16 from the 10000 most-downloaded npm packages.
+# 757 packages, 1095 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -4621,6 +4621,12 @@ packageExtensions:
       jquery: "*"
     peerDependenciesMeta:
       jquery:
+        optional: true
+  semantic-release@*:
+    peerDependencies:
+      signale: "*"
+    peerDependenciesMeta:
+      signale:
         optional: true
   sequelize-cli@*:
     peerDependencies:

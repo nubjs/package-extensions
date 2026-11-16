@@ -7256,6 +7256,16 @@
           }
         }
       },
+      "semantic-release@*": {
+        "peerDependencies": {
+          "signale": "*"
+        },
+        "peerDependenciesMeta": {
+          "signale": {
+            "optional": true
+          }
+        }
+      },
       "sequelize-cli@*": {
         "peerDependencies": {
           "sequelize": "*"
