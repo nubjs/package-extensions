@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.54 — generated 2026-11-16, do not edit.
-// 757 packages, 1095 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.55 — generated 2026-11-17, do not edit.
+// 755 packages, 1093 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -5853,19 +5853,6 @@ exports.packageExtensions = [
   }
  ],
  [
-  "dependency-cruiser@*",
-  {
-   "peerDependencies": {
-    "typescript": "*"
-   },
-   "peerDependenciesMeta": {
-    "typescript": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "diagnostic-channel-publishers@*",
   {
    "peerDependencies": {
@@ -5974,14 +5961,6 @@ exports.packageExtensions = [
     "react": {
      "optional": true
     }
-   }
-  }
- ],
- [
-  "echarts-for-react@*",
-  {
-   "dependencies": {
-    "tslib": "*"
    }
   }
  ],

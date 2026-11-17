@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16",
+ "generated": "2026-11-17",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1095,
-   "packages": 625
+   "entries": 1093,
+   "packages": 623
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
   }
  },
  "totals": {
-  "packages": 757,
-  "selectors": 777,
-  "entries": 1095,
+  "packages": 755,
+  "selectors": 775,
+  "entries": 1093,
   "byClass": {
-   "runtime": 167,
+   "runtime": 166,
    "adapter": 126,
-   "types": 504,
+   "types": 503,
    "deep-path": 0,
    "guarded": 298
   },
   "byField": {
-   "dependency": 23,
-   "peer": 1072
+   "dependency": 22,
+   "peer": 1071
   },
   "candidatesForReview": 63,
   "droppedUnpublishedTargets": 203,
@@ -7644,16 +7644,6 @@
     }
    }
   },
-  "dependency-cruiser@*": {
-   "peerDependencies": {
-    "typescript": "*"
-   },
-   "peerDependenciesMeta": {
-    "typescript": {
-     "optional": true
-    }
-   }
-  },
   "diagnostic-channel-publishers@*": {
    "peerDependencies": {
     "@azure/opentelemetry-instrumentation-azure-sdk": "*",
@@ -7752,11 +7742,6 @@
     "react": {
      "optional": true
     }
-   }
-  },
-  "echarts-for-react@*": {
-   "dependencies": {
-    "tslib": "*"
    }
   },
   "elkjs@*": {
@@ -12454,7 +12439,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "1.8.0",
+   "measuredVersion": "1.9.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -12975,7 +12960,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.69.1",
+   "measuredVersion": "1.70.0",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13546,7 +13531,7 @@
   },
   {
    "package": "@expo/cli",
-   "measuredVersion": "58.1.20",
+   "measuredVersion": "58.1.21",
    "targets": [
     {
      "target": "@expo/fingerprint",
@@ -13685,7 +13670,7 @@
   },
   {
    "package": "@expo/metro-config",
-   "measuredVersion": "58.0.22",
+   "measuredVersion": "58.0.23",
    "targets": [
     {
      "target": "babel-preset-expo",
@@ -14060,7 +14045,7 @@
   },
   {
    "package": "@firebase/auth",
-   "measuredVersion": "1.13.10",
+   "measuredVersion": "1.13.11",
    "targets": [
     {
      "target": "@firebase/app-check-interop-types",
@@ -15769,7 +15754,7 @@
   },
   {
    "package": "@nestjs/core",
-   "measuredVersion": "12.5.0",
+   "measuredVersion": "12.5.1",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -19775,7 +19760,7 @@
   },
   {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.3.2",
+   "measuredVersion": "2.3.3",
    "targets": [
     {
      "target": "tsx",
@@ -19899,7 +19884,7 @@
   },
   {
    "package": "@scalar/openapi-upgrader",
-   "measuredVersion": "0.4.10",
+   "measuredVersion": "0.4.11",
    "targets": [
     {
      "target": "@scalar/types",
@@ -19922,7 +19907,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.29.0",
+   "measuredVersion": "0.30.0",
    "targets": [
     {
      "target": "har-format",
@@ -20031,7 +20016,7 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "11.12.0",
+   "measuredVersion": "11.13.0",
    "targets": [
     {
      "target": "@sentry/opentelemetry",
@@ -20295,7 +20280,7 @@
   },
   {
    "package": "@stencil/core",
-   "measuredVersion": "4.45.3",
+   "measuredVersion": "4.45.4",
    "targets": [
     {
      "target": "@jest/core",
@@ -21330,7 +21315,7 @@
   },
   {
    "package": "@temporalio/workflow",
-   "measuredVersion": "1.25.0",
+   "measuredVersion": "1.26.0",
    "targets": [
     {
      "target": "source-map",
@@ -21393,7 +21378,7 @@
   },
   {
    "package": "@ts-morph/common",
-   "measuredVersion": "0.29.0",
+   "measuredVersion": "0.29.1",
    "targets": [
     {
      "target": "source-map-support",
@@ -21776,7 +21761,7 @@
   },
   {
    "package": "@typescript-eslint/types",
-   "measuredVersion": "8.72.2",
+   "measuredVersion": "8.73.0",
    "targets": [
     {
      "target": "typescript",
@@ -21879,7 +21864,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "29.0.0",
+   "measuredVersion": "29.0.1",
    "targets": [
     {
      "target": "execa",
@@ -21956,7 +21941,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "28.0.0",
+   "measuredVersion": "28.0.1",
    "targets": [
     {
      "target": "encoding",
@@ -23284,7 +23269,7 @@
   },
   {
    "package": "algoliasearch-helper",
-   "measuredVersion": "3.30.2",
+   "measuredVersion": "3.30.3",
    "targets": [
     {
      "target": "@algolia/client-search",
@@ -23708,7 +23693,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "11.0.7",
+   "measuredVersion": "11.1.0",
    "targets": [
     {
      "target": "@appium/types",
@@ -23940,7 +23925,7 @@
   },
   {
    "package": "babel-preset-expo",
-   "measuredVersion": "58.0.25",
+   "measuredVersion": "58.0.26",
    "targets": [
     {
      "target": "@babel/core",
@@ -24076,7 +24061,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.7.6",
+   "measuredVersion": "6.7.7",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -24097,7 +24082,7 @@
   },
   {
    "package": "chromatic",
-   "measuredVersion": "18.14.4",
+   "measuredVersion": "18.14.6",
    "targets": [
     {
      "target": "bufferutil",
@@ -24109,7 +24094,7 @@
       "bufferutil"
      ],
      "files": [
-      "dist/node-src-BBp7WpAu.cjs"
+      "dist/node-src-Buok088A.cjs"
      ],
      "fileCount": 1
     },
@@ -24123,7 +24108,7 @@
       "kerberos"
      ],
      "files": [
-      "dist/statsPaths-DGWEd5qr.cjs"
+      "dist/statsPaths-Cs6rIF7k.cjs"
      ],
      "fileCount": 1
     },
@@ -24137,7 +24122,7 @@
       "utf-8-validate"
      ],
      "files": [
-      "dist/node-src-BBp7WpAu.cjs"
+      "dist/node-src-Buok088A.cjs"
      ],
      "fileCount": 1
     }
@@ -24553,26 +24538,6 @@
    ]
   },
   {
-   "package": "dependency-cruiser",
-   "measuredVersion": "18.7.2",
-   "targets": [
-    {
-     "target": "typescript",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "typescript"
-     ],
-     "files": [
-      "types/config-utl/extract-ts-config.d.mts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "diagnostic-channel-publishers",
    "measuredVersion": "1.0.8",
    "targets": [
@@ -24927,30 +24892,6 @@
    ]
   },
   {
-   "package": "echarts-for-react",
-   "measuredVersion": "3.0.6",
-   "targets": [
-    {
-     "target": "tslib",
-     "class": "runtime",
-     "field": "dependency",
-     "candidate": false,
-     "reason": "probe 3.0.6: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access tslib\"",
-     "specifiers": [
-      "tslib"
-     ],
-     "files": [
-      "esm/core.js",
-      "esm/index.js",
-      "lib/core.js",
-      "lib/helper/is-equal.js",
-      "lib/index.js"
-     ],
-     "fileCount": 5
-    }
-   ]
-  },
-  {
    "package": "elkjs",
    "measuredVersion": "0.12.1",
    "targets": [
@@ -25210,7 +25151,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.4.9",
+   "measuredVersion": "65.4.10",
    "targets": [
     {
      "target": "@eslint/core",
@@ -25531,7 +25472,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "58.0.18",
+   "measuredVersion": "58.0.19",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25656,7 +25597,7 @@
   },
   {
    "package": "expo-file-system",
-   "measuredVersion": "58.0.13",
+   "measuredVersion": "58.0.14",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25902,7 +25843,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "58.0.31",
+   "measuredVersion": "58.0.32",
    "targets": [
     {
      "target": "react-native-tab-view",
@@ -26603,7 +26544,7 @@
   },
   {
    "package": "i18next-browser-languagedetector",
-   "measuredVersion": "8.3.0",
+   "measuredVersion": "8.3.1",
    "targets": [
     {
      "target": "i18next",
@@ -26798,7 +26739,7 @@
   },
   {
    "package": "jest-expo",
-   "measuredVersion": "58.0.14",
+   "measuredVersion": "58.0.15",
    "targets": [
     {
      "target": "babel-preset-expo",
@@ -27285,7 +27226,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.12.0",
+   "measuredVersion": "0.13.0",
    "targets": [
     {
      "target": "@jest/globals",
@@ -29757,7 +29698,7 @@
   },
   {
    "package": "react-native-reanimated",
-   "measuredVersion": "4.7.1",
+   "measuredVersion": "4.7.2",
    "targets": [
     {
      "target": "react-native-svg",
@@ -30860,7 +30801,7 @@
   },
   {
    "package": "streamdown",
-   "measuredVersion": "2.7.1",
+   "measuredVersion": "2.8.0",
    "targets": [
     {
      "target": "hast",
@@ -31854,7 +31795,7 @@
   },
   {
    "package": "vitefu",
-   "measuredVersion": "1.1.3",
+   "measuredVersion": "1.1.4",
    "targets": [
     {
      "target": "pnpapi",
@@ -32185,7 +32126,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261116.1",
+   "measuredVersion": "1.20261117.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32205,7 +32146,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.163.0",
+   "measuredVersion": "4.164.0",
    "targets": [
     {
      "target": "@cloudflare/workers-shared",
@@ -32337,7 +32278,7 @@
   },
   {
    "package": "yeoman-environment",
-   "measuredVersion": "8.5.1",
+   "measuredVersion": "8.6.0",
    "targets": [
     {
      "target": "yeoman-generator",
@@ -32701,7 +32642,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "58.0.18",
+   "measuredVersion": "58.0.19",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -32725,7 +32666,7 @@
   },
   {
    "package": "expo-file-system",
-   "measuredVersion": "58.0.13",
+   "measuredVersion": "58.0.14",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -32885,7 +32826,7 @@
   },
   {
    "package": "react-native-reanimated",
-   "measuredVersion": "4.7.1",
+   "measuredVersion": "4.7.2",
    "target": "react-native-web",
    "specifiers": [
     "react-native-web/dist/cjs/exports/StyleSheet/compiler/createReactDOMStyle.js",

@@ -4791,16 +4791,6 @@
           }
         }
       },
-      "dependency-cruiser@*": {
-        "peerDependencies": {
-          "typescript": "*"
-        },
-        "peerDependenciesMeta": {
-          "typescript": {
-            "optional": true
-          }
-        }
-      },
       "diagnostic-channel-publishers@*": {
         "peerDependencies": {
           "@azure/opentelemetry-instrumentation-azure-sdk": "*",
@@ -4899,11 +4889,6 @@
           "react": {
             "optional": true
           }
-        }
-      },
-      "echarts-for-react@*": {
-        "dependencies": {
-          "tslib": "*"
         }
       },
       "elkjs@*": {

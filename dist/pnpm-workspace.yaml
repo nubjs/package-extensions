@@ -1,5 +1,5 @@
-# Generated 2026-11-16 from the 10000 most-downloaded npm packages.
-# 757 packages, 1095 undeclared dependencies.
+# Generated 2026-11-17 from the 10000 most-downloaded npm packages.
+# 755 packages, 1093 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -3077,12 +3077,6 @@ packageExtensions:
         optional: true
       typescript:
         optional: true
-  dependency-cruiser@*:
-    peerDependencies:
-      typescript: "*"
-    peerDependenciesMeta:
-      typescript:
-        optional: true
   diagnostic-channel-publishers@*:
     peerDependencies:
       "@azure/opentelemetry-instrumentation-azure-sdk": "*"
@@ -3152,9 +3146,6 @@ packageExtensions:
         optional: true
       react:
         optional: true
-  echarts-for-react@*:
-    dependencies:
-      tslib: "*"
   elkjs@*:
     peerDependencies:
       web-worker: "*"
