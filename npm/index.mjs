@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.55 — generated 2026-11-17, do not edit.
-// 755 packages, 1093 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.56 — generated 2026-11-18, do not edit.
+// 761 packages, 1100 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -558,10 +558,14 @@ export const packageExtensions = [
   {
    "peerDependencies": {
     "@datadog/mobile-react-native": "*",
+    "kerberos": "*",
     "react-native": "*"
    },
    "peerDependenciesMeta": {
     "@datadog/mobile-react-native": {
+     "optional": true
+    },
+    "kerberos": {
      "optional": true
     },
     "react-native": {
@@ -582,6 +586,84 @@ export const packageExtensions = [
      "optional": true
     },
     "react-native": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@datadog/datadog-ci-plugin-deployment@*",
+  {
+   "peerDependencies": {
+    "kerberos": "*"
+   },
+   "peerDependenciesMeta": {
+    "kerberos": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@datadog/datadog-ci-plugin-dora@*",
+  {
+   "peerDependencies": {
+    "kerberos": "*"
+   },
+   "peerDependenciesMeta": {
+    "kerberos": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@datadog/datadog-ci-plugin-gate@*",
+  {
+   "peerDependencies": {
+    "kerberos": "*"
+   },
+   "peerDependenciesMeta": {
+    "kerberos": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@datadog/datadog-ci-plugin-junit@*",
+  {
+   "peerDependencies": {
+    "kerberos": "*"
+   },
+   "peerDependenciesMeta": {
+    "kerberos": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@datadog/datadog-ci-plugin-sarif@*",
+  {
+   "peerDependencies": {
+    "kerberos": "*"
+   },
+   "peerDependenciesMeta": {
+    "kerberos": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@datadog/datadog-ci-plugin-sbom@*",
+  {
+   "peerDependencies": {
+    "kerberos": "*"
+   },
+   "peerDependenciesMeta": {
+    "kerberos": {
      "optional": true
     }
    }

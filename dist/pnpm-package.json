@@ -436,10 +436,14 @@
       "@datadog/datadog-ci@*": {
         "peerDependencies": {
           "@datadog/mobile-react-native": "*",
+          "kerberos": "*",
           "react-native": "*"
         },
         "peerDependenciesMeta": {
           "@datadog/mobile-react-native": {
+            "optional": true
+          },
+          "kerberos": {
             "optional": true
           },
           "react-native": {
@@ -457,6 +461,66 @@
             "optional": true
           },
           "react-native": {
+            "optional": true
+          }
+        }
+      },
+      "@datadog/datadog-ci-plugin-deployment@*": {
+        "peerDependencies": {
+          "kerberos": "*"
+        },
+        "peerDependenciesMeta": {
+          "kerberos": {
+            "optional": true
+          }
+        }
+      },
+      "@datadog/datadog-ci-plugin-dora@*": {
+        "peerDependencies": {
+          "kerberos": "*"
+        },
+        "peerDependenciesMeta": {
+          "kerberos": {
+            "optional": true
+          }
+        }
+      },
+      "@datadog/datadog-ci-plugin-gate@*": {
+        "peerDependencies": {
+          "kerberos": "*"
+        },
+        "peerDependenciesMeta": {
+          "kerberos": {
+            "optional": true
+          }
+        }
+      },
+      "@datadog/datadog-ci-plugin-junit@*": {
+        "peerDependencies": {
+          "kerberos": "*"
+        },
+        "peerDependenciesMeta": {
+          "kerberos": {
+            "optional": true
+          }
+        }
+      },
+      "@datadog/datadog-ci-plugin-sarif@*": {
+        "peerDependencies": {
+          "kerberos": "*"
+        },
+        "peerDependenciesMeta": {
+          "kerberos": {
+            "optional": true
+          }
+        }
+      },
+      "@datadog/datadog-ci-plugin-sbom@*": {
+        "peerDependencies": {
+          "kerberos": "*"
+        },
+        "peerDependenciesMeta": {
+          "kerberos": {
             "optional": true
           }
         }

@@ -1,5 +1,5 @@
-# Generated 2026-11-17 from the 10000 most-downloaded npm packages.
-# 755 packages, 1093 undeclared dependencies.
+# Generated 2026-11-18 from the 10000 most-downloaded npm packages.
+# 761 packages, 1100 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -278,9 +278,12 @@ packageExtensions:
   "@datadog/datadog-ci@*":
     peerDependencies:
       "@datadog/mobile-react-native": "*"
+      kerberos: "*"
       react-native: "*"
     peerDependenciesMeta:
       "@datadog/mobile-react-native":
+        optional: true
+      kerberos:
         optional: true
       react-native:
         optional: true
@@ -292,6 +295,42 @@ packageExtensions:
       "@datadog/mobile-react-native":
         optional: true
       react-native:
+        optional: true
+  "@datadog/datadog-ci-plugin-deployment@*":
+    peerDependencies:
+      kerberos: "*"
+    peerDependenciesMeta:
+      kerberos:
+        optional: true
+  "@datadog/datadog-ci-plugin-dora@*":
+    peerDependencies:
+      kerberos: "*"
+    peerDependenciesMeta:
+      kerberos:
+        optional: true
+  "@datadog/datadog-ci-plugin-gate@*":
+    peerDependencies:
+      kerberos: "*"
+    peerDependenciesMeta:
+      kerberos:
+        optional: true
+  "@datadog/datadog-ci-plugin-junit@*":
+    peerDependencies:
+      kerberos: "*"
+    peerDependenciesMeta:
+      kerberos:
+        optional: true
+  "@datadog/datadog-ci-plugin-sarif@*":
+    peerDependencies:
+      kerberos: "*"
+    peerDependenciesMeta:
+      kerberos:
+        optional: true
+  "@datadog/datadog-ci-plugin-sbom@*":
+    peerDependencies:
+      kerberos: "*"
+    peerDependenciesMeta:
+      kerberos:
         optional: true
   "@datadog/flagging-core@*":
     peerDependencies:
