@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-18",
+ "generated": "2026-11-19",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
-  "scannedOk": 9979,
-  "failed": 21
+  "scannedOk": 9978,
+  "failed": 22
  },
  "sources": {
   "scan": {
-   "entries": 1100,
-   "packages": 629
+   "entries": 1096,
+   "packages": 627
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,22 +28,22 @@
   }
  },
  "totals": {
-  "packages": 761,
-  "selectors": 781,
-  "entries": 1100,
+  "packages": 759,
+  "selectors": 779,
+  "entries": 1096,
   "byClass": {
    "runtime": 166,
-   "adapter": 126,
-   "types": 503,
+   "adapter": 127,
+   "types": 495,
    "deep-path": 0,
-   "guarded": 305
+   "guarded": 308
   },
   "byField": {
    "dependency": 22,
-   "peer": 1078
+   "peer": 1074
   },
   "candidatesForReview": 63,
-  "droppedUnpublishedTargets": 203,
+  "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
   "withheldDeepPath": 234
@@ -6066,16 +6066,6 @@
     }
    }
   },
-  "@sentry/vercel-edge@*": {
-   "peerDependencies": {
-    "@sentry/opentelemetry": "*"
-   },
-   "peerDependenciesMeta": {
-    "@sentry/opentelemetry": {
-     "optional": true
-    }
-   }
-  },
   "@serverless/dashboard-plugin@*": {
    "peerDependencies": {
     "bufferutil": "*",
@@ -6574,10 +6564,10 @@
   },
   "@tanstack/router-devtools-core@*": {
    "peerDependencies": {
-    "solid-js": "*"
+    "@solidjs/web": "*"
    },
    "peerDependenciesMeta": {
-    "solid-js": {
+    "@solidjs/web": {
      "optional": true
     }
    }
@@ -9154,9 +9144,13 @@
   },
   "next-intl@*": {
    "peerDependencies": {
+    "po-parser": "*",
     "webpack": "*"
    },
    "peerDependenciesMeta": {
+    "po-parser": {
+     "optional": true
+    },
     "webpack": {
      "optional": true
     }
@@ -9922,16 +9916,6 @@
    },
    "peerDependenciesMeta": {
     "ioredis": {
-     "optional": true
-    }
-   }
-  },
-  "redoc@*": {
-   "peerDependencies": {
-    "@redocly/markdoc": "*"
-   },
-   "peerDependenciesMeta": {
-    "@redocly/markdoc": {
      "optional": true
     }
    }
@@ -10862,30 +10846,18 @@
   },
   "wrangler@*": {
    "peerDependencies": {
-    "@cloudflare/workers-shared": "*",
-    "@cloudflare/workers-utils": "*",
-    "cloudflare": "*",
-    "devtools-protocol": "*",
-    "undici": "*",
-    "yargs": "*"
+    "babylon": "*",
+    "bufferutil": "*",
+    "utf-8-validate": "*"
    },
    "peerDependenciesMeta": {
-    "@cloudflare/workers-shared": {
+    "babylon": {
      "optional": true
     },
-    "@cloudflare/workers-utils": {
+    "bufferutil": {
      "optional": true
     },
-    "cloudflare": {
-     "optional": true
-    },
-    "devtools-protocol": {
-     "optional": true
-    },
-    "undici": {
-     "optional": true
-    },
-    "yargs": {
+    "utf-8-validate": {
      "optional": true
     }
    }
@@ -12189,7 +12161,7 @@
   },
   {
    "package": "@angular-devkit/build-angular",
-   "measuredVersion": "22.2.7",
+   "measuredVersion": "22.3.0",
    "targets": [
     {
      "target": "zone.js",
@@ -12374,7 +12346,7 @@
   },
   {
    "package": "@angular/cli",
-   "measuredVersion": "22.2.7",
+   "measuredVersion": "22.3.0",
    "targets": [
     {
      "target": "typescript",
@@ -12386,7 +12358,7 @@
       "typescript"
      ],
      "files": [
-      "src/commands/mcp/tools/onpush-zoneless-migration/ts-utils.js"
+      "lib/cli-VFKJUMO6.js"
      ],
      "fileCount": 1
     }
@@ -12394,7 +12366,7 @@
   },
   {
    "package": "@angular/common",
-   "measuredVersion": "22.2.6",
+   "measuredVersion": "22.3.0",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -12415,7 +12387,7 @@
   },
   {
    "package": "@angular/language-service",
-   "measuredVersion": "22.2.6",
+   "measuredVersion": "22.3.0",
    "targets": [
     {
      "target": "@angular/compiler",
@@ -12482,7 +12454,7 @@
   },
   {
    "package": "@angular/router",
-   "measuredVersion": "22.2.6",
+   "measuredVersion": "22.3.0",
    "targets": [
     {
      "target": "@angular/upgrade",
@@ -12619,7 +12591,7 @@
   },
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.16",
+   "measuredVersion": "1.6.17",
    "targets": [
     {
      "target": "@applitools/test-utils",
@@ -12679,7 +12651,7 @@
   },
   {
    "package": "@astrojs/markdown-remark",
-   "measuredVersion": "7.3.9",
+   "measuredVersion": "7.3.10",
    "targets": [
     {
      "target": "hast",
@@ -12750,7 +12722,7 @@
   },
   {
    "package": "@astrojs/sitemap",
-   "measuredVersion": "3.7.5",
+   "measuredVersion": "3.7.6",
    "targets": [
     {
      "target": "astro",
@@ -13024,7 +12996,7 @@
   },
   {
    "package": "@cloudflare/vite-plugin",
-   "measuredVersion": "1.70.0",
+   "measuredVersion": "1.70.1",
    "targets": [
     {
      "target": "@cloudflare/workers-utils",
@@ -13545,7 +13517,7 @@
   },
   {
    "package": "@electric-sql/pglite",
-   "measuredVersion": "0.5.16",
+   "measuredVersion": "0.5.17",
    "targets": [
     {
      "target": "ws",
@@ -13557,7 +13529,7 @@
       "ws"
      ],
      "files": [
-      "dist/chunk-XZUEO4BZ.js",
+      "dist/chunk-CTPU3OXM.js",
       "dist/index.cjs",
       "dist/node-postgres/index.cjs"
      ],
@@ -13667,7 +13639,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.30.4",
+   "measuredVersion": "5.30.5",
    "targets": [
     {
      "target": "react",
@@ -14087,7 +14059,7 @@
   },
   {
    "package": "@fastify/static",
-   "measuredVersion": "10.1.11",
+   "measuredVersion": "10.1.12",
    "targets": [
     {
      "target": "fastify",
@@ -14730,7 +14702,7 @@
   },
   {
    "package": "@google/gemini-cli",
-   "measuredVersion": "0.68.0",
+   "measuredVersion": "0.69.0",
    "targets": [
     {
      "target": "bufferutil",
@@ -18600,7 +18572,7 @@
   },
   {
    "package": "@playwright/mcp",
-   "measuredVersion": "0.0.85",
+   "measuredVersion": "0.0.86",
    "targets": [
     {
      "target": "@modelcontextprotocol/sdk",
@@ -19664,7 +19636,7 @@
   },
   {
    "package": "@react-router/dev",
-   "measuredVersion": "8.5.1",
+   "measuredVersion": "8.5.2",
    "targets": [
     {
      "target": "react",
@@ -19721,7 +19693,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.80.0",
+   "measuredVersion": "2.82.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -20205,26 +20177,6 @@
      ],
      "files": [
       "types/index.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "@sentry/vercel-edge",
-   "measuredVersion": "11.14.0",
-   "targets": [
-    {
-     "target": "@sentry/opentelemetry",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@sentry/opentelemetry"
-     ],
-     "files": [
-      "build/types/client.d.ts"
      ],
      "fileCount": 1
     }
@@ -21422,7 +21374,7 @@
   },
   {
    "package": "@tanstack/react-start-rsc",
-   "measuredVersion": "0.1.66",
+   "measuredVersion": "0.1.68",
    "targets": [
     {
      "target": "vite",
@@ -21442,16 +21394,16 @@
   },
   {
    "package": "@tanstack/router-devtools-core",
-   "measuredVersion": "1.168.3",
+   "measuredVersion": "1.168.4",
    "targets": [
     {
-     "target": "solid-js",
+     "target": "@solidjs/web",
      "class": "types",
      "field": "peer",
      "candidate": false,
      "reason": "types class — no runtime edge, only a declaration-file reference",
      "specifiers": [
-      "solid-js"
+      "@solidjs/web"
      ],
      "files": [
       "dist/cjs/TanStackRouterDevtoolsPanelCore.d.cts",
@@ -21532,7 +21484,7 @@
   },
   {
    "package": "@testing-library/jest-dom",
-   "measuredVersion": "7.0.1",
+   "measuredVersion": "8.0.0",
    "targets": [
     {
      "target": "@jest/globals",
@@ -22060,7 +22012,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "29.0.2",
+   "measuredVersion": "30.0.0",
    "targets": [
     {
      "target": "execa",
@@ -22137,7 +22089,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "28.0.2",
+   "measuredVersion": "29.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -23969,7 +23921,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.4.12",
+   "measuredVersion": "7.4.13",
    "targets": [
     {
      "target": "@astrojs/cloudflare",
@@ -24010,7 +23962,7 @@
   },
   {
    "package": "aws-cdk",
-   "measuredVersion": "2.1148.1",
+   "measuredVersion": "2.1149.0",
    "targets": [
     {
      "target": "@aws-cdk/cloud-assembly-api",
@@ -24257,7 +24209,7 @@
   },
   {
    "package": "bullmq",
-   "measuredVersion": "6.7.7",
+   "measuredVersion": "6.7.8",
    "targets": [
     {
      "target": "@valkey/valkey-glide",
@@ -24278,7 +24230,7 @@
   },
   {
    "package": "chromatic",
-   "measuredVersion": "18.14.6",
+   "measuredVersion": "18.15.0",
    "targets": [
     {
      "target": "bufferutil",
@@ -24290,7 +24242,7 @@
       "bufferutil"
      ],
      "files": [
-      "dist/node-src-Buok088A.cjs"
+      "dist/node-src-O17shHIC.cjs"
      ],
      "fileCount": 1
     },
@@ -24304,7 +24256,7 @@
       "kerberos"
      ],
      "files": [
-      "dist/statsPaths-Cs6rIF7k.cjs"
+      "dist/statsPaths-8URvyHeN.cjs"
      ],
      "fileCount": 1
     },
@@ -24318,7 +24270,7 @@
       "utf-8-validate"
      ],
      "files": [
-      "dist/node-src-Buok088A.cjs"
+      "dist/node-src-O17shHIC.cjs"
      ],
      "fileCount": 1
     }
@@ -25347,7 +25299,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.4.12",
+   "measuredVersion": "65.5.0",
    "targets": [
     {
      "target": "@eslint/core",
@@ -26253,7 +26205,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.36.0",
+   "measuredVersion": "15.37.0",
    "targets": [
     {
      "target": "astro",
@@ -26760,7 +26712,7 @@
   },
   {
    "package": "i18next-fs-backend",
-   "measuredVersion": "2.6.12",
+   "measuredVersion": "2.7.0",
    "targets": [
     {
      "target": "i18next",
@@ -26782,7 +26734,7 @@
   },
   {
    "package": "i18next-http-backend",
-   "measuredVersion": "4.0.10",
+   "measuredVersion": "4.1.0",
    "targets": [
     {
      "target": "i18next",
@@ -26804,7 +26756,7 @@
   },
   {
    "package": "i18next-resources-to-backend",
-   "measuredVersion": "1.2.4",
+   "measuredVersion": "1.3.0",
    "targets": [
     {
      "target": "i18next",
@@ -27382,7 +27334,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.45.1",
+   "measuredVersion": "6.46.1",
    "targets": [
     {
      "target": "vue",
@@ -28314,8 +28266,22 @@
   },
   {
    "package": "next-intl",
-   "measuredVersion": "4.15.1",
+   "measuredVersion": "4.15.3",
    "targets": [
+    {
+     "target": "po-parser",
+     "class": "adapter",
+     "field": "peer",
+     "candidate": false,
+     "reason": "adapter class — the consumer picked and installed the backend",
+     "specifiers": [
+      "po-parser"
+     ],
+     "files": [
+      "dist/cjs/development/BuiltInPoCodec-DTvzO5td-kl77hRO7.cjs"
+     ],
+     "fileCount": 1
+    },
     {
      "target": "webpack",
      "class": "types",
@@ -29273,7 +29239,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "6.0.3",
+   "measuredVersion": "6.0.4",
    "targets": [
     {
      "target": "express",
@@ -29499,7 +29465,7 @@
   },
   {
    "package": "prosemirror-inputrules",
-   "measuredVersion": "1.6.0",
+   "measuredVersion": "1.7.0",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -29575,7 +29541,7 @@
   },
   {
    "package": "prosemirror-schema-list",
-   "measuredVersion": "1.6.0",
+   "measuredVersion": "1.6.1",
    "targets": [
     {
      "target": "orderedmap",
@@ -30077,7 +30043,7 @@
   },
   {
    "package": "react-native-worklets",
-   "measuredVersion": "0.13.1",
+   "measuredVersion": "0.14.0",
    "targets": [
     {
      "target": "@babel/plugin-transform-react-jsx",
@@ -30240,26 +30206,6 @@
      ],
      "files": [
       "dist/index.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "redoc",
-   "measuredVersion": "3.1.0",
-   "targets": [
-    {
-     "target": "@redocly/markdoc",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@redocly/markdoc"
-     ],
-     "files": [
-      "bundles/redoc.d.ts"
      ],
      "fileCount": 1
     }
@@ -30446,7 +30392,7 @@
   },
   {
    "package": "resend",
-   "measuredVersion": "6.38.1",
+   "measuredVersion": "6.39.0",
    "targets": [
     {
      "target": "react",
@@ -32322,7 +32268,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261118.1",
+   "measuredVersion": "1.20261119.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32342,90 +32288,47 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.164.0",
+   "measuredVersion": "4.165.0",
    "targets": [
     {
-     "target": "@cloudflare/workers-shared",
-     "class": "types",
+     "target": "babylon",
+     "class": "guarded",
      "field": "peer",
      "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
-      "@cloudflare/workers-shared"
+      "babylon"
      ],
      "files": [
-      "wrangler-dist/cli.d.ts"
+      "wrangler-dist/cli.js"
      ],
      "fileCount": 1
     },
     {
-     "target": "@cloudflare/workers-utils",
-     "class": "types",
+     "target": "bufferutil",
+     "class": "guarded",
      "field": "peer",
      "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
-      "@cloudflare/workers-utils"
+      "bufferutil"
      ],
      "files": [
-      "wrangler-dist/cli.d.ts"
+      "wrangler-dist/cli.js"
      ],
      "fileCount": 1
     },
     {
-     "target": "cloudflare",
-     "class": "types",
+     "target": "utf-8-validate",
+     "class": "guarded",
      "field": "peer",
      "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
-      "cloudflare"
+      "utf-8-validate"
      ],
      "files": [
-      "wrangler-dist/cli.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "devtools-protocol",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "devtools-protocol/types/protocol-mapping",
-      "devtools-protocol"
-     ],
-     "files": [
-      "wrangler-dist/cli.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "undici",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "undici"
-     ],
-     "files": [
-      "wrangler-dist/cli.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "yargs",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "yargs"
-     ],
-     "files": [
-      "wrangler-dist/cli.d.ts"
+      "wrangler-dist/cli.js"
      ],
      "fileCount": 1
     }
@@ -32474,7 +32377,7 @@
   },
   {
    "package": "yeoman-environment",
-   "measuredVersion": "8.6.0",
+   "measuredVersion": "8.7.0",
    "targets": [
     {
      "target": "yeoman-generator",
@@ -32537,7 +32440,7 @@
  "candidates": [
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.16",
+   "measuredVersion": "1.6.17",
    "target": "@applitools/test-utils",
    "specifiers": [
     "@applitools/test-utils/src/parse-env"
@@ -32553,7 +32456,7 @@
   },
   {
    "package": "@electric-sql/pglite",
-   "measuredVersion": "0.5.16",
+   "measuredVersion": "0.5.17",
    "target": "ws",
    "specifiers": [
     "ws"
@@ -32764,7 +32667,7 @@
   },
   {
    "package": "astro",
-   "measuredVersion": "7.4.12",
+   "measuredVersion": "7.4.13",
    "target": "@astrojs/cloudflare",
    "specifiers": [
     "@astrojs/cloudflare/info"
@@ -32910,7 +32813,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.36.0",
+   "measuredVersion": "15.37.0",
    "target": "astro",
    "specifiers": [
     "astro/package.json"
@@ -32918,7 +32821,7 @@
   },
   {
    "package": "firebase-tools",
-   "measuredVersion": "15.36.0",
+   "measuredVersion": "15.37.0",
    "target": "firebase-functions",
    "specifiers": [
     "firebase-functions",
@@ -33291,8 +33194,7 @@
    "unrs-resolver -> @unrs/resolver-binding-openharmony-x64",
    "unrs-resolver -> @unrs/resolver-binding-win32-x64-gnu",
    "vue-tsc -> @typescript/old",
-   "wrangler -> @cloudflare/containers-shared",
-   "wrangler -> @cloudflare/remote-bindings"
+   "wrangler -> @blitz/internal"
   ],
   "unresolved": [],
   "bundlerLiteral": []

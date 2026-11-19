@@ -5,7 +5,7 @@
     "entries": 159
   },
   "corpus": {
-    "scannedOk": 9979,
+    "scannedOk": 9978,
     "corpusKnown": true
   },
   "buckets": {
@@ -1000,7 +1000,7 @@
           "vue"
         ],
         "metaOnly": false,
-        "version": "11.4.22",
+        "version": "11.4.23",
         "why": "the package now declares every target"
       },
       {

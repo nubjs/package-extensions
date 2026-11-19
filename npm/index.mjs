@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.56 — generated 2026-11-18, do not edit.
-// 761 packages, 1100 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.57 — generated 2026-11-19, do not edit.
+// 759 packages, 1096 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -3955,19 +3955,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@sentry/vercel-edge@*",
-  {
-   "peerDependencies": {
-    "@sentry/opentelemetry": "*"
-   },
-   "peerDependenciesMeta": {
-    "@sentry/opentelemetry": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@serverless/dashboard-plugin@*",
   {
    "peerDependencies": {
@@ -4581,10 +4568,10 @@ export const packageExtensions = [
   "@tanstack/router-devtools-core@*",
   {
    "peerDependencies": {
-    "solid-js": "*"
+    "@solidjs/web": "*"
    },
    "peerDependenciesMeta": {
-    "solid-js": {
+    "@solidjs/web": {
      "optional": true
     }
    }
@@ -7740,9 +7727,13 @@ export const packageExtensions = [
   "next-intl@*",
   {
    "peerDependencies": {
+    "po-parser": "*",
     "webpack": "*"
    },
    "peerDependenciesMeta": {
+    "po-parser": {
+     "optional": true
+    },
     "webpack": {
      "optional": true
     }
@@ -8688,19 +8679,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "ioredis": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "redoc@*",
-  {
-   "peerDependencies": {
-    "@redocly/markdoc": "*"
-   },
-   "peerDependenciesMeta": {
-    "@redocly/markdoc": {
      "optional": true
     }
    }
@@ -9883,30 +9861,18 @@ export const packageExtensions = [
   "wrangler@*",
   {
    "peerDependencies": {
-    "@cloudflare/workers-shared": "*",
-    "@cloudflare/workers-utils": "*",
-    "cloudflare": "*",
-    "devtools-protocol": "*",
-    "undici": "*",
-    "yargs": "*"
+    "babylon": "*",
+    "bufferutil": "*",
+    "utf-8-validate": "*"
    },
    "peerDependenciesMeta": {
-    "@cloudflare/workers-shared": {
+    "babylon": {
      "optional": true
     },
-    "@cloudflare/workers-utils": {
+    "bufferutil": {
      "optional": true
     },
-    "cloudflare": {
-     "optional": true
-    },
-    "devtools-protocol": {
-     "optional": true
-    },
-    "undici": {
-     "optional": true
-    },
-    "yargs": {
+    "utf-8-validate": {
      "optional": true
     }
    }

@@ -1,5 +1,5 @@
-# Generated 2026-11-18 from the 10000 most-downloaded npm packages.
-# 761 packages, 1100 undeclared dependencies.
+# Generated 2026-11-19 from the 10000 most-downloaded npm packages.
+# 759 packages, 1096 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -2051,12 +2051,6 @@ packageExtensions:
         optional: true
       "@sentry/utils":
         optional: true
-  "@sentry/vercel-edge@*":
-    peerDependencies:
-      "@sentry/opentelemetry": "*"
-    peerDependenciesMeta:
-      "@sentry/opentelemetry":
-        optional: true
   "@serverless/dashboard-plugin@*":
     peerDependencies:
       bufferutil: "*"
@@ -2374,9 +2368,9 @@ packageExtensions:
         optional: true
   "@tanstack/router-devtools-core@*":
     peerDependencies:
-      solid-js: "*"
+      "@solidjs/web": "*"
     peerDependenciesMeta:
-      solid-js:
+      "@solidjs/web":
         optional: true
   "@tanstack/router-plugin@*":
     peerDependencies:
@@ -4023,8 +4017,11 @@ packageExtensions:
         optional: true
   next-intl@*:
     peerDependencies:
+      po-parser: "*"
       webpack: "*"
     peerDependenciesMeta:
+      po-parser:
+        optional: true
       webpack:
         optional: true
   ng-packagr@*:
@@ -4510,12 +4507,6 @@ packageExtensions:
       ioredis: "*"
     peerDependenciesMeta:
       ioredis:
-        optional: true
-  redoc@*:
-    peerDependencies:
-      "@redocly/markdoc": "*"
-    peerDependenciesMeta:
-      "@redocly/markdoc":
         optional: true
   rehype-harden@*:
     peerDependencies:
@@ -5089,24 +5080,15 @@ packageExtensions:
         optional: true
   wrangler@*:
     peerDependencies:
-      "@cloudflare/workers-shared": "*"
-      "@cloudflare/workers-utils": "*"
-      cloudflare: "*"
-      devtools-protocol: "*"
-      undici: "*"
-      yargs: "*"
+      babylon: "*"
+      bufferutil: "*"
+      utf-8-validate: "*"
     peerDependenciesMeta:
-      "@cloudflare/workers-shared":
+      babylon:
         optional: true
-      "@cloudflare/workers-utils":
+      bufferutil:
         optional: true
-      cloudflare:
-        optional: true
-      devtools-protocol:
-        optional: true
-      undici:
-        optional: true
-      yargs:
+      utf-8-validate:
         optional: true
   yaml-eslint-parser@*:
     peerDependencies:

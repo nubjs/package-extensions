@@ -3213,16 +3213,6 @@
           }
         }
       },
-      "@sentry/vercel-edge@*": {
-        "peerDependencies": {
-          "@sentry/opentelemetry": "*"
-        },
-        "peerDependenciesMeta": {
-          "@sentry/opentelemetry": {
-            "optional": true
-          }
-        }
-      },
       "@serverless/dashboard-plugin@*": {
         "peerDependencies": {
           "bufferutil": "*",
@@ -3721,10 +3711,10 @@
       },
       "@tanstack/router-devtools-core@*": {
         "peerDependencies": {
-          "solid-js": "*"
+          "@solidjs/web": "*"
         },
         "peerDependenciesMeta": {
-          "solid-js": {
+          "@solidjs/web": {
             "optional": true
           }
         }
@@ -6301,9 +6291,13 @@
       },
       "next-intl@*": {
         "peerDependencies": {
+          "po-parser": "*",
           "webpack": "*"
         },
         "peerDependenciesMeta": {
+          "po-parser": {
+            "optional": true
+          },
           "webpack": {
             "optional": true
           }
@@ -7069,16 +7063,6 @@
         },
         "peerDependenciesMeta": {
           "ioredis": {
-            "optional": true
-          }
-        }
-      },
-      "redoc@*": {
-        "peerDependencies": {
-          "@redocly/markdoc": "*"
-        },
-        "peerDependenciesMeta": {
-          "@redocly/markdoc": {
             "optional": true
           }
         }
@@ -8009,30 +7993,18 @@
       },
       "wrangler@*": {
         "peerDependencies": {
-          "@cloudflare/workers-shared": "*",
-          "@cloudflare/workers-utils": "*",
-          "cloudflare": "*",
-          "devtools-protocol": "*",
-          "undici": "*",
-          "yargs": "*"
+          "babylon": "*",
+          "bufferutil": "*",
+          "utf-8-validate": "*"
         },
         "peerDependenciesMeta": {
-          "@cloudflare/workers-shared": {
+          "babylon": {
             "optional": true
           },
-          "@cloudflare/workers-utils": {
+          "bufferutil": {
             "optional": true
           },
-          "cloudflare": {
-            "optional": true
-          },
-          "devtools-protocol": {
-            "optional": true
-          },
-          "undici": {
-            "optional": true
-          },
-          "yargs": {
+          "utf-8-validate": {
             "optional": true
           }
         }
