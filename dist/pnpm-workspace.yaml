@@ -1,4 +1,4 @@
-# Generated 2026-11-19 from the 10000 most-downloaded npm packages.
+# Generated 2026-11-20 from the 10000 most-downloaded npm packages.
 # 759 packages, 1096 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
@@ -1580,12 +1580,6 @@ packageExtensions:
         optional: true
       whatwg-fetch:
         optional: true
-  "@opennextjs/cloudflare@*":
-    peerDependencies:
-      esbuild: "*"
-    peerDependenciesMeta:
-      esbuild:
-        optional: true
   "@openrouter/ai-sdk-provider@*":
     peerDependencies:
       "@ai-sdk/provider": "*"
@@ -2050,6 +2044,12 @@ packageExtensions:
       "@sentry/core":
         optional: true
       "@sentry/utils":
+        optional: true
+  "@sentry/vercel-edge@*":
+    peerDependencies:
+      "@sentry/opentelemetry": "*"
+    peerDependenciesMeta:
+      "@sentry/opentelemetry":
         optional: true
   "@serverless/dashboard-plugin@*":
     peerDependencies:

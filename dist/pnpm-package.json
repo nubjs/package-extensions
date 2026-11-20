@@ -2467,16 +2467,6 @@
           }
         }
       },
-      "@opennextjs/cloudflare@*": {
-        "peerDependencies": {
-          "esbuild": "*"
-        },
-        "peerDependenciesMeta": {
-          "esbuild": {
-            "optional": true
-          }
-        }
-      },
       "@openrouter/ai-sdk-provider@*": {
         "peerDependencies": {
           "@ai-sdk/provider": "*",
@@ -3209,6 +3199,16 @@
             "optional": true
           },
           "@sentry/utils": {
+            "optional": true
+          }
+        }
+      },
+      "@sentry/vercel-edge@*": {
+        "peerDependencies": {
+          "@sentry/opentelemetry": "*"
+        },
+        "peerDependenciesMeta": {
+          "@sentry/opentelemetry": {
             "optional": true
           }
         }

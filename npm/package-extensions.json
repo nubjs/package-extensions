@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-19",
+ "generated": "2026-11-20",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
-  "scannedOk": 9978,
-  "failed": 22
+  "scannedOk": 9979,
+  "failed": 21
  },
  "sources": {
   "scan": {
@@ -32,9 +32,9 @@
   "selectors": 779,
   "entries": 1096,
   "byClass": {
-   "runtime": 166,
+   "runtime": 165,
    "adapter": 127,
-   "types": 495,
+   "types": 496,
    "deep-path": 0,
    "guarded": 308
   },
@@ -1733,7 +1733,8 @@
    "package": "mssql",
    "target": "msnodesqlv8",
    "specifiers": [
-    "msnodesqlv8"
+    "msnodesqlv8",
+    "msnodesqlv8/package.json"
    ],
    "files": [
     "lib/msnodesqlv8/connection-pool.js",
@@ -5320,16 +5321,6 @@
     }
    }
   },
-  "@opennextjs/cloudflare@*": {
-   "peerDependencies": {
-    "esbuild": "*"
-   },
-   "peerDependenciesMeta": {
-    "esbuild": {
-     "optional": true
-    }
-   }
-  },
   "@openrouter/ai-sdk-provider@*": {
    "peerDependencies": {
     "@ai-sdk/provider": "*",
@@ -6062,6 +6053,16 @@
      "optional": true
     },
     "@sentry/utils": {
+     "optional": true
+    }
+   }
+  },
+  "@sentry/vercel-edge@*": {
+   "peerDependencies": {
+    "@sentry/opentelemetry": "*"
+   },
+   "peerDependenciesMeta": {
+    "@sentry/opentelemetry": {
      "optional": true
     }
    }
@@ -12475,7 +12476,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "1.10.0",
+   "measuredVersion": "1.11.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -13312,7 +13313,7 @@
   },
   {
    "package": "@datadog/flagging-core",
-   "measuredVersion": "3.4.0",
+   "measuredVersion": "3.5.0",
    "targets": [
     {
      "target": "@openfeature/core",
@@ -13331,9 +13332,9 @@
       "cjs/configuration/flagEvaluationAggregator.d.ts",
       "cjs/configuration/flagEvaluationEvent.d.ts",
       "cjs/configuration/flagEvaluationEvent.types.d.ts",
-      "cjs/configuration/precomputed-context.d.ts"
+      "cjs/configuration/precompute-configuration.d.ts"
      ],
-     "fileCount": 17
+     "fileCount": 20
     }
    ]
   },
@@ -13360,7 +13361,7 @@
   },
   {
    "package": "@dataform/core",
-   "measuredVersion": "3.1.5",
+   "measuredVersion": "3.1.6",
    "targets": [
     {
      "target": "long",
@@ -14702,7 +14703,7 @@
   },
   {
    "package": "@google/gemini-cli",
-   "measuredVersion": "0.69.0",
+   "measuredVersion": "0.70.0",
    "targets": [
     {
      "target": "bufferutil",
@@ -15456,7 +15457,7 @@
   },
   {
    "package": "@mantine/hooks",
-   "measuredVersion": "9.8.1",
+   "measuredVersion": "9.8.2",
    "targets": [
     {
      "target": "react-dom",
@@ -15922,7 +15923,7 @@
   },
   {
    "package": "@nestjs/core",
-   "measuredVersion": "12.5.1",
+   "measuredVersion": "12.6.0",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -18360,30 +18361,6 @@
    ]
   },
   {
-   "package": "@opennextjs/cloudflare",
-   "measuredVersion": "1.20.17",
-   "targets": [
-    {
-     "target": "esbuild",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": false,
-     "reason": "target is a framework or tool a consumer installs itself",
-     "specifiers": [
-      "esbuild"
-     ],
-     "files": [
-      "dist/cli/build/bundle-server.js",
-      "dist/cli/build/open-next/bundle-node-middleware.js",
-      "dist/cli/build/open-next/compile-images.js",
-      "dist/cli/build/open-next/compile-init.js",
-      "dist/cli/build/open-next/compile-skew-protection.js"
-     ],
-     "fileCount": 5
-    }
-   ]
-  },
-  {
    "package": "@openrouter/ai-sdk-provider",
    "measuredVersion": "3.1.0",
    "targets": [
@@ -20052,7 +20029,7 @@
   },
   {
    "package": "@scalar/openapi-upgrader",
-   "measuredVersion": "0.5.0",
+   "measuredVersion": "0.5.1",
    "targets": [
     {
      "target": "@scalar/types",
@@ -20075,7 +20052,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.30.0",
+   "measuredVersion": "0.31.0",
    "targets": [
     {
      "target": "har-format",
@@ -20177,6 +20154,26 @@
      ],
      "files": [
       "types/index.d.ts"
+     ],
+     "fileCount": 1
+    }
+   ]
+  },
+  {
+   "package": "@sentry/vercel-edge",
+   "measuredVersion": "11.16.0",
+   "targets": [
+    {
+     "target": "@sentry/opentelemetry",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "@sentry/opentelemetry"
+     ],
+     "files": [
+      "build/types/client.d.ts"
      ],
      "fileCount": 1
     }
@@ -20428,7 +20425,7 @@
   },
   {
    "package": "@stencil/core",
-   "measuredVersion": "4.45.4",
+   "measuredVersion": "4.45.5",
    "targets": [
     {
      "target": "@jest/core",
@@ -20567,7 +20564,7 @@
   },
   {
    "package": "@storybook/addon-a11y",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20669,7 +20666,7 @@
   },
   {
    "package": "@storybook/addon-onboarding",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20722,7 +20719,7 @@
   },
   {
    "package": "@storybook/addon-themes",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -20757,7 +20754,7 @@
   },
   {
    "package": "@storybook/addon-vitest",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "react",
@@ -20777,7 +20774,7 @@
   },
   {
    "package": "@storybook/builder-webpack5",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "@storybook/global",
@@ -20877,7 +20874,7 @@
   },
   {
    "package": "@storybook/nextjs",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "sb-original",
@@ -20899,7 +20896,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "sb-original",
@@ -21506,7 +21503,7 @@
   },
   {
    "package": "@tiptap/extension-list",
-   "measuredVersion": "3.34.0",
+   "measuredVersion": "3.35.0",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -22321,7 +22318,7 @@
   },
   {
    "package": "@vue/compiler-core",
-   "measuredVersion": "3.5.45",
+   "measuredVersion": "3.5.46",
    "targets": [
     {
      "target": "@babel/types",
@@ -22341,7 +22338,7 @@
   },
   {
    "package": "@vue/compiler-sfc",
-   "measuredVersion": "3.5.45",
+   "measuredVersion": "3.5.46",
    "targets": [
     {
      "target": "@babel/types",
@@ -24230,7 +24227,7 @@
   },
   {
    "package": "chromatic",
-   "measuredVersion": "18.15.0",
+   "measuredVersion": "18.15.1",
    "targets": [
     {
      "target": "bufferutil",
@@ -24242,7 +24239,7 @@
       "bufferutil"
      ],
      "files": [
-      "dist/node-src-O17shHIC.cjs"
+      "dist/node-src-CuP1cxVx.cjs"
      ],
      "fileCount": 1
     },
@@ -24270,7 +24267,7 @@
       "utf-8-validate"
      ],
      "files": [
-      "dist/node-src-O17shHIC.cjs"
+      "dist/node-src-CuP1cxVx.cjs"
      ],
      "fileCount": 1
     }
@@ -24653,7 +24650,7 @@
   },
   {
    "package": "dd-trace",
-   "measuredVersion": "6.25.0",
+   "measuredVersion": "6.26.0",
    "targets": [
     {
      "target": "pnpapi",
@@ -27334,7 +27331,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.46.1",
+   "measuredVersion": "6.47.0",
    "targets": [
     {
      "target": "vue",
@@ -27374,7 +27371,7 @@
   },
   {
    "package": "langsmith",
-   "measuredVersion": "0.13.0",
+   "measuredVersion": "0.13.1",
    "targets": [
     {
      "target": "@jest/globals",
@@ -27426,7 +27423,7 @@
   },
   {
    "package": "less-loader",
-   "measuredVersion": "13.1.0",
+   "measuredVersion": "13.1.1",
    "targets": [
     {
      "target": "schema-utils",
@@ -27568,7 +27565,7 @@
   },
   {
    "package": "mdast-util-gfm-autolink-literal",
-   "measuredVersion": "2.1.0",
+   "measuredVersion": "2.1.2",
    "targets": [
     {
      "target": "mdast-util-from-markdown",
@@ -28797,7 +28794,7 @@
   },
   {
    "package": "openid-client",
-   "measuredVersion": "6.9.0",
+   "measuredVersion": "6.9.1",
    "targets": [
     {
      "target": "express",
@@ -29239,7 +29236,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "6.0.4",
+   "measuredVersion": "6.0.5",
    "targets": [
     {
      "target": "express",
@@ -29860,7 +29857,7 @@
   },
   {
    "package": "react-native-reanimated",
-   "measuredVersion": "4.7.2",
+   "measuredVersion": "4.8.0",
    "targets": [
     {
      "target": "react-native-svg",
@@ -29883,8 +29880,7 @@
      "candidate": true,
      "reason": "unguarded on the main entry graph — a dependency once reviewed",
      "specifiers": [
-      "react-native-web/dist/cjs/exports/StyleSheet/compiler/createReactDOMStyle.js",
-      "react-native-web/dist/cjs/exports/StyleSheet/preprocess.js"
+      "react-native-web"
      ],
      "files": [
       "lib/module/ReanimatedModule/js-reanimated/webUtils.js",
@@ -30623,7 +30619,7 @@
   },
   {
    "package": "sass-loader",
-   "measuredVersion": "17.1.0",
+   "measuredVersion": "17.1.1",
    "targets": [
     {
      "target": "schema-utils",
@@ -30851,7 +30847,7 @@
   },
   {
    "package": "storybook",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "react",
@@ -30869,7 +30865,7 @@
       "dist/_browser-chunks/chunk-W22LQPXL.js",
       "dist/_browser-chunks/syntaxhighlighter-4REYKNEV.js",
       "dist/chunk-BxCdsGId.d.ts",
-      "dist/chunk-CAhv0_wr.d.ts",
+      "dist/chunk-CGyOUSP9.d.ts",
       "dist/chunk-CSYKg21N.d.ts",
       "dist/chunk-CdMoRv3z.d.ts"
      ],
@@ -30909,7 +30905,7 @@
   },
   {
    "package": "storybook-addon-pseudo-states",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "targets": [
     {
      "target": "@storybook/icons",
@@ -30963,7 +30959,7 @@
   },
   {
    "package": "stylus-loader",
-   "measuredVersion": "9.1.0",
+   "measuredVersion": "9.1.1",
    "targets": [
     {
      "target": "schema-utils",
@@ -31300,7 +31296,7 @@
   },
   {
    "package": "tuf-js",
-   "measuredVersion": "6.0.2",
+   "measuredVersion": "6.0.3",
    "targets": [
     {
      "target": "retry",
@@ -31478,7 +31474,7 @@
   },
   {
    "package": "unified-engine",
-   "measuredVersion": "11.2.2",
+   "measuredVersion": "12.0.0",
    "targets": [
     {
      "target": "unified",
@@ -32268,7 +32264,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261119.1",
+   "measuredVersion": "1.20261120.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32377,7 +32373,7 @@
   },
   {
    "package": "yeoman-environment",
-   "measuredVersion": "8.7.0",
+   "measuredVersion": "8.9.0",
    "targets": [
     {
      "target": "yeoman-generator",
@@ -32651,7 +32647,7 @@
   },
   {
    "package": "@storybook/nextjs-vite",
-   "measuredVersion": "10.6.7",
+   "measuredVersion": "10.6.8",
    "target": "sb-original",
    "specifiers": [
     "sb-original/image-context"
@@ -32925,11 +32921,10 @@
   },
   {
    "package": "react-native-reanimated",
-   "measuredVersion": "4.7.2",
+   "measuredVersion": "4.8.0",
    "target": "react-native-web",
    "specifiers": [
-    "react-native-web/dist/cjs/exports/StyleSheet/compiler/createReactDOMStyle.js",
-    "react-native-web/dist/cjs/exports/StyleSheet/preprocess.js"
+    "react-native-web"
    ]
   },
   {

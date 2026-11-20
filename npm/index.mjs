@@ -1,4 +1,4 @@
-// @nubjs/extensions 1.0.57 — generated 2026-11-19, do not edit.
+// @nubjs/extensions 1.0.58 — generated 2026-11-20, do not edit.
 // 759 packages, 1096 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
@@ -3032,19 +3032,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@opennextjs/cloudflare@*",
-  {
-   "peerDependencies": {
-    "esbuild": "*"
-   },
-   "peerDependenciesMeta": {
-    "esbuild": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@openrouter/ai-sdk-provider@*",
   {
    "peerDependencies": {
@@ -3949,6 +3936,19 @@ export const packageExtensions = [
      "optional": true
     },
     "@sentry/utils": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
+  "@sentry/vercel-edge@*",
+  {
+   "peerDependencies": {
+    "@sentry/opentelemetry": "*"
+   },
+   "peerDependenciesMeta": {
+    "@sentry/opentelemetry": {
      "optional": true
     }
    }
