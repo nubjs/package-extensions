@@ -670,7 +670,7 @@
           "@babel/types"
         ],
         "metaOnly": false,
-        "version": "8.1.2",
+        "version": "8.1.3",
         "why": "the package now declares every target"
       },
       {
@@ -950,7 +950,7 @@
           "acorn"
         ],
         "metaOnly": false,
-        "version": "5.51.3",
+        "version": "5.51.4",
         "why": "the package now declares every target"
       },
       {
