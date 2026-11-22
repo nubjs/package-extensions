@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21",
+ "generated": "2026-11-22",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -13640,7 +13640,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.30.5",
+   "measuredVersion": "5.30.6",
    "targets": [
     {
      "target": "react",
@@ -14458,7 +14458,7 @@
   },
   {
    "package": "@formkit/auto-animate",
-   "measuredVersion": "0.10.2",
+   "measuredVersion": "0.10.3",
    "targets": [
     {
      "target": "@angular/core",
@@ -15154,7 +15154,7 @@
   },
   {
    "package": "@jimp/plugin-blur",
-   "measuredVersion": "1.6.1",
+   "measuredVersion": "1.7.0",
    "targets": [
     {
      "target": "@jimp/types",
@@ -25296,7 +25296,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.5.1",
+   "measuredVersion": "65.5.2",
    "targets": [
     {
      "target": "@eslint/core",
@@ -26709,7 +26709,7 @@
   },
   {
    "package": "i18next-fs-backend",
-   "measuredVersion": "2.7.0",
+   "measuredVersion": "2.7.1",
    "targets": [
     {
      "target": "i18next",
@@ -26731,7 +26731,7 @@
   },
   {
    "package": "i18next-http-backend",
-   "measuredVersion": "4.1.0",
+   "measuredVersion": "4.1.1",
    "targets": [
     {
      "target": "i18next",
@@ -30662,7 +30662,7 @@
   },
   {
    "package": "select2",
-   "measuredVersion": "4.1.0",
+   "measuredVersion": "4.1.1",
    "targets": [
     {
      "target": "jquery",
@@ -30999,7 +30999,7 @@
   },
   {
    "package": "svelte-eslint-parser",
-   "measuredVersion": "1.10.1",
+   "measuredVersion": "1.11.0",
    "targets": [
     {
      "target": "@typescript-eslint/parser",
@@ -31057,9 +31057,10 @@
      "files": [
       "lib/context/script-let.d.ts",
       "lib/main.d.ts",
-      "lib/parser/index.d.ts"
+      "lib/parser/index.d.ts",
+      "lib/parser/svelte-parse-context.d.ts"
      ],
-     "fileCount": 3
+     "fileCount": 4
     }
    ]
   },
