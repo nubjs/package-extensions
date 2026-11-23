@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22",
+  "generated": "2026-11-23",
   "dataset": "f5fede2495012a65",
   "instrument": {
     "yarn": "4.18.0",
@@ -8,8 +8,8 @@
   "tally": {
     "confirmed": 2,
     "confirmedViaPath": 6,
-    "notOnImport": 42,
-    "installFailed": 0,
+    "notOnImport": 41,
+    "installFailed": 1,
     "inconclusive": 3
   },
   "results": [
@@ -47,18 +47,12 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "version": "0.5.17",
+      "version": "0.6.0",
       "expected": [
         "ws"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 3,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 4
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@electric-sql/\u001b[39m\u001b[38;5;173mpglite\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.6.0\u001b[39m: All versions satisfying \"0.6.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN00"
     },
     {
       "package": "@expo/dom-webview",
@@ -919,7 +913,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:6099) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-BpAd72/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5851) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-Kh53xd/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }

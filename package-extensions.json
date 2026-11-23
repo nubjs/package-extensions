@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22",
+  "generated": "2026-11-23",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -12545,7 +12545,7 @@
     },
     {
       "package": "@appium/base-driver",
-      "measuredVersion": "11.0.0",
+      "measuredVersion": "11.0.1",
       "targets": [
         {
           "target": "express",
@@ -12570,7 +12570,7 @@
     },
     {
       "package": "@appium/docutils",
-      "measuredVersion": "4.0.0",
+      "measuredVersion": "4.0.1",
       "targets": [
         {
           "target": "@appium/types",
@@ -12845,7 +12845,7 @@
     },
     {
       "package": "@aws-lambda-powertools/logger",
-      "measuredVersion": "2.36.0",
+      "measuredVersion": "2.37.0",
       "targets": [
         {
           "target": "aws-lambda",
@@ -12972,7 +12972,7 @@
     },
     {
       "package": "@base44/vite-plugin",
-      "measuredVersion": "1.0.52",
+      "measuredVersion": "1.0.53",
       "targets": [
         {
           "target": "vite",
@@ -13361,7 +13361,7 @@
     },
     {
       "package": "@dataform/core",
-      "measuredVersion": "3.1.6",
+      "measuredVersion": "3.1.7",
       "targets": [
         {
           "target": "long",
@@ -13518,7 +13518,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.17",
+      "measuredVersion": "0.6.0",
       "targets": [
         {
           "target": "ws",
@@ -13530,7 +13530,7 @@
             "ws"
           ],
           "files": [
-            "dist/chunk-CTPU3OXM.js",
+            "dist/chunk-QCMPLXTY.js",
             "dist/index.cjs",
             "dist/node-postgres/index.cjs"
           ],
@@ -14458,7 +14458,7 @@
     },
     {
       "package": "@formkit/auto-animate",
-      "measuredVersion": "0.10.3",
+      "measuredVersion": "0.11.0",
       "targets": [
         {
           "target": "@angular/core",
@@ -15841,7 +15841,7 @@
     },
     {
       "package": "@napi-rs/cli",
-      "measuredVersion": "3.10.12",
+      "measuredVersion": "3.11.0",
       "targets": [
         {
           "target": "@oxc-node/core",
@@ -20052,7 +20052,7 @@
     },
     {
       "package": "@scalar/types",
-      "measuredVersion": "0.31.0",
+      "measuredVersion": "0.32.0",
       "targets": [
         {
           "target": "har-format",
@@ -20161,7 +20161,7 @@
     },
     {
       "package": "@sentry/vercel-edge",
-      "measuredVersion": "11.16.0",
+      "measuredVersion": "11.17.0",
       "targets": [
         {
           "target": "@sentry/opentelemetry",
@@ -21906,7 +21906,7 @@
     },
     {
       "package": "@typescript-eslint/types",
-      "measuredVersion": "8.73.0",
+      "measuredVersion": "8.74.0",
       "targets": [
         {
           "target": "typescript",
@@ -21968,7 +21968,7 @@
     },
     {
       "package": "@unhead/schema",
-      "measuredVersion": "3.4.3",
+      "measuredVersion": "3.5.0",
       "targets": [
         {
           "target": "unhead",
@@ -23803,7 +23803,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "10.0.6",
+      "measuredVersion": "11.1.0",
       "targets": [
         {
           "target": "@appium/types",
@@ -23938,7 +23938,7 @@
     },
     {
       "package": "auth0",
-      "measuredVersion": "7.8.0",
+      "measuredVersion": "7.9.0",
       "targets": [
         {
           "target": "undici-types",
@@ -25296,7 +25296,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.5.2",
+      "measuredVersion": "65.5.3",
       "targets": [
         {
           "target": "@eslint/core",
@@ -26182,7 +26182,7 @@
     },
     {
       "package": "fetch-nodeshim",
-      "measuredVersion": "0.4.10",
+      "measuredVersion": "0.4.11",
       "targets": [
         {
           "target": "undici-types",
@@ -27331,7 +27331,7 @@
     },
     {
       "package": "knip",
-      "measuredVersion": "6.47.0",
+      "measuredVersion": "6.48.0",
       "targets": [
         {
           "target": "vue",
@@ -28263,7 +28263,7 @@
     },
     {
       "package": "next-intl",
-      "measuredVersion": "4.15.3",
+      "measuredVersion": "4.16.0",
       "targets": [
         {
           "target": "po-parser",
@@ -28828,7 +28828,7 @@
     },
     {
       "package": "oxc-minify",
-      "measuredVersion": "0.159.0",
+      "measuredVersion": "0.160.0",
       "targets": [
         {
           "target": "@oxc-minify/binding-wasm32-wasi",
@@ -28868,7 +28868,7 @@
     },
     {
       "package": "oxc-parser",
-      "measuredVersion": "0.159.0",
+      "measuredVersion": "0.160.0",
       "targets": [
         {
           "target": "@oxc-parser/binding-wasm32-wasi",
@@ -28929,7 +28929,7 @@
     },
     {
       "package": "oxc-transform",
-      "measuredVersion": "0.159.0",
+      "measuredVersion": "0.160.0",
       "targets": [
         {
           "target": "@oxc-transform/binding-wasm32-wasi",
@@ -29236,7 +29236,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "6.0.5",
+      "measuredVersion": "6.0.6",
       "targets": [
         {
           "target": "express",
@@ -30367,7 +30367,7 @@
     },
     {
       "package": "remotion",
-      "measuredVersion": "4.0.545",
+      "measuredVersion": "4.0.546",
       "targets": [
         {
           "target": "zod",
@@ -30999,7 +30999,7 @@
     },
     {
       "package": "svelte-eslint-parser",
-      "measuredVersion": "1.11.0",
+      "measuredVersion": "1.12.0",
       "targets": [
         {
           "target": "@typescript-eslint/parser",
@@ -31011,9 +31011,10 @@
             "@typescript-eslint/parser"
           ],
           "files": [
-            "lib/parser/parser-object.d.ts"
+            "lib/parser/parser-object.d.ts",
+            "lib/parser/typescript/types.d.ts"
           ],
-          "fileCount": 1
+          "fileCount": 2
         },
         {
           "target": "@typescript-eslint/types",
@@ -31027,9 +31028,11 @@
           "files": [
             "lib/ast/html.d.ts",
             "lib/context/script-let.d.ts",
+            "lib/parser/typescript/analyze/component.d.ts",
+            "lib/parser/typescript/restore.d.ts",
             "lib/traverse.d.ts"
           ],
-          "fileCount": 3
+          "fileCount": 5
         },
         {
           "target": "@typescript-eslint/visitor-keys",
@@ -31182,7 +31185,7 @@
     },
     {
       "package": "systeminformation",
-      "measuredVersion": "5.33.23",
+      "measuredVersion": "5.33.24",
       "targets": [
         {
           "target": "macos-temperature-sensor",
@@ -32265,7 +32268,7 @@
     },
     {
       "package": "workerd",
-      "measuredVersion": "1.20261121.1",
+      "measuredVersion": "1.20261123.1",
       "targets": [
         {
           "target": "pnpapi",
@@ -32453,7 +32456,7 @@
     },
     {
       "package": "@electric-sql/pglite",
-      "measuredVersion": "0.5.17",
+      "measuredVersion": "0.6.0",
       "target": "ws",
       "specifiers": [
         "ws"
