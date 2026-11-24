@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.59 — generated 2026-11-23, do not edit.
-// 759 packages, 1096 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.59 — generated 2026-11-24, do not edit.
+// 757 packages, 1095 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -2313,6 +2313,8 @@ export const packageExtensions = [
   "@nuxt/schema@*",
   {
    "peerDependencies": {
+    "@rsbuild/core": "*",
+    "@rsbuild/plugin-vue": "*",
     "@unhead/vue": "*",
     "@vitejs/plugin-vue": "*",
     "@vitejs/plugin-vue-jsx": "*",
@@ -2334,7 +2336,6 @@ export const packageExtensions = [
     "rollup-plugin-visualizer": "*",
     "unctx": "*",
     "unimport": "*",
-    "untyped": "*",
     "vite": "*",
     "vue": "*",
     "vue-loader": "*",
@@ -2345,6 +2346,12 @@ export const packageExtensions = [
     "webpack-hot-middleware": "*"
    },
    "peerDependenciesMeta": {
+    "@rsbuild/core": {
+     "optional": true
+    },
+    "@rsbuild/plugin-vue": {
+     "optional": true
+    },
     "@unhead/vue": {
      "optional": true
     },
@@ -2406,9 +2413,6 @@ export const packageExtensions = [
      "optional": true
     },
     "unimport": {
-     "optional": true
-    },
-    "untyped": {
      "optional": true
     },
     "vite": {
@@ -3613,19 +3617,6 @@ export const packageExtensions = [
   }
  ],
  [
-  "@react-pdf/layout@*",
-  {
-   "peerDependencies": {
-    "@react-pdf/font": "*"
-   },
-   "peerDependenciesMeta": {
-    "@react-pdf/font": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "@react-pdf/render@*",
   {
    "peerDependencies": {
@@ -3637,23 +3628,6 @@ export const packageExtensions = [
      "optional": true
     },
     "pdfkit": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@react-pdf/textkit@*",
-  {
-   "peerDependencies": {
-    "@react-pdf/font": "*",
-    "fontkit": "*"
-   },
-   "peerDependenciesMeta": {
-    "@react-pdf/font": {
-     "optional": true
-    },
-    "fontkit": {
      "optional": true
     }
    }
@@ -6697,6 +6671,23 @@ export const packageExtensions = [
   }
  ],
  [
+  "formatly@*",
+  {
+   "peerDependencies": {
+    "@biomejs/js-api": "*",
+    "prettier": "*"
+   },
+   "peerDependenciesMeta": {
+    "@biomejs/js-api": {
+     "optional": true
+    },
+    "prettier": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "gaxios@*",
   {
    "peerDependencies": {
@@ -9573,19 +9564,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "pnpapi": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "vite-plugin-checker@*",
-  {
-   "peerDependencies": {
-    "@vitejs/devtools-kit": "*"
-   },
-   "peerDependenciesMeta": {
-    "@vitejs/devtools-kit": {
      "optional": true
     }
    }

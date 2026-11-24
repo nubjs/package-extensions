@@ -1828,6 +1828,8 @@
       },
       "@nuxt/schema@*": {
         "peerDependencies": {
+          "@rsbuild/core": "*",
+          "@rsbuild/plugin-vue": "*",
           "@unhead/vue": "*",
           "@vitejs/plugin-vue": "*",
           "@vitejs/plugin-vue-jsx": "*",
@@ -1849,7 +1851,6 @@
           "rollup-plugin-visualizer": "*",
           "unctx": "*",
           "unimport": "*",
-          "untyped": "*",
           "vite": "*",
           "vue": "*",
           "vue-loader": "*",
@@ -1860,6 +1861,12 @@
           "webpack-hot-middleware": "*"
         },
         "peerDependenciesMeta": {
+          "@rsbuild/core": {
+            "optional": true
+          },
+          "@rsbuild/plugin-vue": {
+            "optional": true
+          },
           "@unhead/vue": {
             "optional": true
           },
@@ -1921,9 +1928,6 @@
             "optional": true
           },
           "unimport": {
-            "optional": true
-          },
-          "untyped": {
             "optional": true
           },
           "vite": {
@@ -2937,16 +2941,6 @@
           }
         }
       },
-      "@react-pdf/layout@*": {
-        "peerDependencies": {
-          "@react-pdf/font": "*"
-        },
-        "peerDependenciesMeta": {
-          "@react-pdf/font": {
-            "optional": true
-          }
-        }
-      },
       "@react-pdf/render@*": {
         "peerDependencies": {
           "@react-pdf/layout": "*",
@@ -2957,20 +2951,6 @@
             "optional": true
           },
           "pdfkit": {
-            "optional": true
-          }
-        }
-      },
-      "@react-pdf/textkit@*": {
-        "peerDependencies": {
-          "@react-pdf/font": "*",
-          "fontkit": "*"
-        },
-        "peerDependenciesMeta": {
-          "@react-pdf/font": {
-            "optional": true
-          },
-          "fontkit": {
             "optional": true
           }
         }
@@ -5463,6 +5443,20 @@
           }
         }
       },
+      "formatly@*": {
+        "peerDependencies": {
+          "@biomejs/js-api": "*",
+          "prettier": "*"
+        },
+        "peerDependenciesMeta": {
+          "@biomejs/js-api": {
+            "optional": true
+          },
+          "prettier": {
+            "optional": true
+          }
+        }
+      },
       "gaxios@*": {
         "peerDependencies": {
           "undici-types": "*"
@@ -7765,16 +7759,6 @@
         },
         "peerDependenciesMeta": {
           "pnpapi": {
-            "optional": true
-          }
-        }
-      },
-      "vite-plugin-checker@*": {
-        "peerDependencies": {
-          "@vitejs/devtools-kit": "*"
-        },
-        "peerDependenciesMeta": {
-          "@vitejs/devtools-kit": {
             "optional": true
           }
         }

@@ -1,5 +1,5 @@
-# Generated 2026-11-23 from the 10000 most-downloaded npm packages.
-# 759 packages, 1096 undeclared dependencies.
+# Generated 2026-11-24 from the 10000 most-downloaded npm packages.
+# 757 packages, 1095 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -1145,6 +1145,8 @@ packageExtensions:
         optional: true
   "@nuxt/schema@*":
     peerDependencies:
+      "@rsbuild/core": "*"
+      "@rsbuild/plugin-vue": "*"
       "@unhead/vue": "*"
       "@vitejs/plugin-vue": "*"
       "@vitejs/plugin-vue-jsx": "*"
@@ -1166,7 +1168,6 @@ packageExtensions:
       rollup-plugin-visualizer: "*"
       unctx: "*"
       unimport: "*"
-      untyped: "*"
       vite: "*"
       vue: "*"
       vue-loader: "*"
@@ -1176,6 +1177,10 @@ packageExtensions:
       webpack-dev-middleware: "*"
       webpack-hot-middleware: "*"
     peerDependenciesMeta:
+      "@rsbuild/core":
+        optional: true
+      "@rsbuild/plugin-vue":
+        optional: true
       "@unhead/vue":
         optional: true
       "@vitejs/plugin-vue":
@@ -1217,8 +1222,6 @@ packageExtensions:
       unctx:
         optional: true
       unimport:
-        optional: true
-      untyped:
         optional: true
       vite:
         optional: true
@@ -1881,12 +1884,6 @@ packageExtensions:
         optional: true
       "@react-navigation/routers":
         optional: true
-  "@react-pdf/layout@*":
-    peerDependencies:
-      "@react-pdf/font": "*"
-    peerDependenciesMeta:
-      "@react-pdf/font":
-        optional: true
   "@react-pdf/render@*":
     peerDependencies:
       "@react-pdf/layout": "*"
@@ -1895,15 +1892,6 @@ packageExtensions:
       "@react-pdf/layout":
         optional: true
       pdfkit:
-        optional: true
-  "@react-pdf/textkit@*":
-    peerDependencies:
-      "@react-pdf/font": "*"
-      fontkit: "*"
-    peerDependenciesMeta:
-      "@react-pdf/font":
-        optional: true
-      fontkit:
         optional: true
   "@react-router/dev@*":
     peerDependencies:
@@ -3500,6 +3488,15 @@ packageExtensions:
     peerDependenciesMeta:
       bluebird:
         optional: true
+  formatly@*:
+    peerDependencies:
+      "@biomejs/js-api": "*"
+      prettier: "*"
+    peerDependenciesMeta:
+      "@biomejs/js-api":
+        optional: true
+      prettier:
+        optional: true
   gaxios@*:
     peerDependencies:
       undici-types: "*"
@@ -4943,12 +4940,6 @@ packageExtensions:
       pnpapi: "*"
     peerDependenciesMeta:
       pnpapi:
-        optional: true
-  vite-plugin-checker@*:
-    peerDependencies:
-      "@vitejs/devtools-kit": "*"
-    peerDependenciesMeta:
-      "@vitejs/devtools-kit":
         optional: true
   vite-plugin-full-reload@*:
     peerDependencies:

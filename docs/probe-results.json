@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-23",
-  "dataset": "f5fede2495012a65",
+  "generated": "2026-11-24",
+  "dataset": "329e695d836a9def",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,7 +8,7 @@
   "tally": {
     "confirmed": 2,
     "confirmedViaPath": 6,
-    "notOnImport": 41,
+    "notOnImport": 42,
     "installFailed": 1,
     "inconclusive": 3
   },
@@ -51,8 +51,14 @@
       "expected": [
         "ws"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@electric-sql/\u001b[39m\u001b[38;5;173mpglite\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.6.0\u001b[39m: All versions satisfying \"0.6.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN00"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 3,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 4
     },
     {
       "package": "@expo/dom-webview",
@@ -638,6 +644,16 @@
       "specifiersTried": 10
     },
     {
+      "package": "formatly",
+      "version": "0.12.3",
+      "expected": [
+        "@biomejs/js-api",
+        "prettier"
+      ],
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mformatly\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.12.3\u001b[39m: All versions satisfying \"0.12.3\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mformatly\u001b[3"
+    },
+    {
       "package": "http-call",
       "version": "5.3.0",
       "expected": [
@@ -913,7 +929,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:5851) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-Kh53xd/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5878) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-yfDXnN/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }
