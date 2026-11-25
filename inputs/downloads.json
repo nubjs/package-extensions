@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T18:02:06.846Z",
+  "generatedAt": "2026-11-25T06:40:26.994Z",
   "source": "https://api.npmjs.org/downloads/point",
   "start": "2026-11-17",
   "end": "2026-11-23",
@@ -139,6 +139,7 @@
     "@lexical/react": 8626733,
     "@lhci/cli": 3001750,
     "@lit/react": 5205184,
+    "@loaders.gl/images": 2381601,
     "@mantine/hooks": 4166572,
     "@mapbox/node-pre-gyp": 23789827,
     "@mariozechner/pi-ai": 580391,

@@ -1433,6 +1433,20 @@
           }
         }
       },
+      "@loaders.gl/images@*": {
+        "peerDependencies": {
+          "probe.gl": "*",
+          "sharp": "*"
+        },
+        "peerDependenciesMeta": {
+          "probe.gl": {
+            "optional": true
+          },
+          "sharp": {
+            "optional": true
+          }
+        }
+      },
       "@mantine/hooks@*": {
         "peerDependencies": {
           "react-dom": "*"
@@ -1750,40 +1764,30 @@
       },
       "@nuxt/devtools@*": {
         "peerDependencies": {
-          "@nuxt/schema": "*",
-          "vue": "*"
+          "@nuxt/schema": "*"
         },
         "peerDependenciesMeta": {
           "@nuxt/schema": {
-            "optional": true
-          },
-          "vue": {
             "optional": true
           }
         }
       },
       "@nuxt/devtools-kit@*": {
         "peerDependencies": {
-          "@nuxt/schema": "*",
-          "@vitejs/devtools-kit": "*",
           "birpc": "*",
           "error-stack-parser-es": "*",
           "hookable": "*",
+          "nitropack": "*",
           "nuxt": "*",
           "ofetch": "*",
           "shiki": "*",
           "unimport": "*",
           "unstorage": "*",
+          "vite-plugin-vue-inspector": "*",
           "vue": "*",
           "vue-router": "*"
         },
         "peerDependenciesMeta": {
-          "@nuxt/schema": {
-            "optional": true
-          },
-          "@vitejs/devtools-kit": {
-            "optional": true
-          },
           "birpc": {
             "optional": true
           },
@@ -1791,6 +1795,9 @@
             "optional": true
           },
           "hookable": {
+            "optional": true
+          },
+          "nitropack": {
             "optional": true
           },
           "nuxt": {
@@ -1806,6 +1813,9 @@
             "optional": true
           },
           "unstorage": {
+            "optional": true
+          },
+          "vite-plugin-vue-inspector": {
             "optional": true
           },
           "vue": {

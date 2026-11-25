@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.59 — generated 2026-11-24, do not edit.
-// 757 packages, 1095 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.60 — generated 2026-11-25, do not edit.
+// 758 packages, 1096 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -1815,6 +1815,23 @@ export const packageExtensions = [
   }
  ],
  [
+  "@loaders.gl/images@*",
+  {
+   "peerDependencies": {
+    "probe.gl": "*",
+    "sharp": "*"
+   },
+   "peerDependenciesMeta": {
+    "probe.gl": {
+     "optional": true
+    },
+    "sharp": {
+     "optional": true
+    }
+   }
+  }
+ ],
+ [
   "@mantine/hooks@*",
   {
    "peerDependencies": {
@@ -2226,14 +2243,10 @@ export const packageExtensions = [
   "@nuxt/devtools@*",
   {
    "peerDependencies": {
-    "@nuxt/schema": "*",
-    "vue": "*"
+    "@nuxt/schema": "*"
    },
    "peerDependenciesMeta": {
     "@nuxt/schema": {
-     "optional": true
-    },
-    "vue": {
      "optional": true
     }
    }
@@ -2243,26 +2256,20 @@ export const packageExtensions = [
   "@nuxt/devtools-kit@*",
   {
    "peerDependencies": {
-    "@nuxt/schema": "*",
-    "@vitejs/devtools-kit": "*",
     "birpc": "*",
     "error-stack-parser-es": "*",
     "hookable": "*",
+    "nitropack": "*",
     "nuxt": "*",
     "ofetch": "*",
     "shiki": "*",
     "unimport": "*",
     "unstorage": "*",
+    "vite-plugin-vue-inspector": "*",
     "vue": "*",
     "vue-router": "*"
    },
    "peerDependenciesMeta": {
-    "@nuxt/schema": {
-     "optional": true
-    },
-    "@vitejs/devtools-kit": {
-     "optional": true
-    },
     "birpc": {
      "optional": true
     },
@@ -2270,6 +2277,9 @@ export const packageExtensions = [
      "optional": true
     },
     "hookable": {
+     "optional": true
+    },
+    "nitropack": {
      "optional": true
     },
     "nuxt": {
@@ -2285,6 +2295,9 @@ export const packageExtensions = [
      "optional": true
     },
     "unstorage": {
+     "optional": true
+    },
+    "vite-plugin-vue-inspector": {
      "optional": true
     },
     "vue": {

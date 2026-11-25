@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-24",
-  "dataset": "329e695d836a9def",
+  "generated": "2026-11-25",
+  "dataset": "187bcea79b8f3556",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -131,24 +131,14 @@
     },
     {
       "package": "@mastra/core",
-      "version": "1.85.0",
+      "version": "1.86.0",
       "expected": [
         "@workflow/serde",
         "msw",
         "undici"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 8,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "zod"
-      ],
-      "byOtherIssuers": [
-        "@ai-sdk/provider-utils -> zod (unprovided peer)"
-      ],
-      "specifiersTried": 34
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@mastra/\u001b[39m\u001b[38;5;173mcore\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.86.0\u001b[39m: All versions satisfying \"1.86.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b["
     },
     {
       "package": "@newrelic/security-agent",
@@ -650,8 +640,14 @@
         "@biomejs/js-api",
         "prettier"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mformatly\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:0.12.3\u001b[39m: All versions satisfying \"0.12.3\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mformatly\u001b[3"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 2,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [],
+      "byOtherIssuers": [],
+      "specifiersTried": 3
     },
     {
       "package": "http-call",
@@ -929,7 +925,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:5878) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-yfDXnN/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:6214) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-jW7ns2/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }

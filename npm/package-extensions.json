@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24",
+ "generated": "2026-11-25",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1095,
-   "packages": 625
+   "entries": 1096,
+   "packages": 626
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
   }
  },
  "totals": {
-  "packages": 757,
-  "selectors": 777,
-  "entries": 1095,
+  "packages": 758,
+  "selectors": 778,
+  "entries": 1096,
   "byClass": {
    "runtime": 167,
    "adapter": 127,
    "types": 493,
    "deep-path": 0,
-   "guarded": 308
+   "guarded": 309
   },
   "byField": {
    "dependency": 22,
-   "peer": 1073
+   "peer": 1074
   },
   "candidatesForReview": 64,
   "droppedUnpublishedTargets": 202,
@@ -4287,6 +4287,20 @@
     }
    }
   },
+  "@loaders.gl/images@*": {
+   "peerDependencies": {
+    "probe.gl": "*",
+    "sharp": "*"
+   },
+   "peerDependenciesMeta": {
+    "probe.gl": {
+     "optional": true
+    },
+    "sharp": {
+     "optional": true
+    }
+   }
+  },
   "@mantine/hooks@*": {
    "peerDependencies": {
     "react-dom": "*"
@@ -4604,40 +4618,30 @@
   },
   "@nuxt/devtools@*": {
    "peerDependencies": {
-    "@nuxt/schema": "*",
-    "vue": "*"
+    "@nuxt/schema": "*"
    },
    "peerDependenciesMeta": {
     "@nuxt/schema": {
-     "optional": true
-    },
-    "vue": {
      "optional": true
     }
    }
   },
   "@nuxt/devtools-kit@*": {
    "peerDependencies": {
-    "@nuxt/schema": "*",
-    "@vitejs/devtools-kit": "*",
     "birpc": "*",
     "error-stack-parser-es": "*",
     "hookable": "*",
+    "nitropack": "*",
     "nuxt": "*",
     "ofetch": "*",
     "shiki": "*",
     "unimport": "*",
     "unstorage": "*",
+    "vite-plugin-vue-inspector": "*",
     "vue": "*",
     "vue-router": "*"
    },
    "peerDependenciesMeta": {
-    "@nuxt/schema": {
-     "optional": true
-    },
-    "@vitejs/devtools-kit": {
-     "optional": true
-    },
     "birpc": {
      "optional": true
     },
@@ -4645,6 +4649,9 @@
      "optional": true
     },
     "hookable": {
+     "optional": true
+    },
+    "nitropack": {
      "optional": true
     },
     "nuxt": {
@@ -4660,6 +4667,9 @@
      "optional": true
     },
     "unstorage": {
+     "optional": true
+    },
+    "vite-plugin-vue-inspector": {
      "optional": true
     },
     "vue": {
@@ -12460,7 +12470,7 @@
   },
   {
    "package": "@anthropic-ai/sdk",
-   "measuredVersion": "1.13.0",
+   "measuredVersion": "1.14.0",
    "targets": [
     {
      "target": "node-fetch",
@@ -13095,7 +13105,7 @@
   },
   {
    "package": "@datadog/datadog-ci",
-   "measuredVersion": "5.28.0",
+   "measuredVersion": "5.29.0",
    "targets": [
     {
      "target": "@datadog/mobile-react-native",
@@ -13143,7 +13153,7 @@
   },
   {
    "package": "@datadog/datadog-ci-base",
-   "measuredVersion": "5.28.0",
+   "measuredVersion": "5.29.0",
    "targets": [
     {
      "target": "@datadog/mobile-react-native",
@@ -13177,7 +13187,7 @@
   },
   {
    "package": "@datadog/datadog-ci-plugin-deployment",
-   "measuredVersion": "5.28.0",
+   "measuredVersion": "5.29.0",
    "targets": [
     {
      "target": "kerberos",
@@ -13197,7 +13207,7 @@
   },
   {
    "package": "@datadog/datadog-ci-plugin-dora",
-   "measuredVersion": "5.28.0",
+   "measuredVersion": "5.29.0",
    "targets": [
     {
      "target": "kerberos",
@@ -13217,7 +13227,7 @@
   },
   {
    "package": "@datadog/datadog-ci-plugin-gate",
-   "measuredVersion": "5.28.0",
+   "measuredVersion": "5.29.0",
    "targets": [
     {
      "target": "kerberos",
@@ -13237,7 +13247,7 @@
   },
   {
    "package": "@datadog/datadog-ci-plugin-junit",
-   "measuredVersion": "5.28.0",
+   "measuredVersion": "5.29.0",
    "targets": [
     {
      "target": "kerberos",
@@ -13257,7 +13267,7 @@
   },
   {
    "package": "@datadog/datadog-ci-plugin-sarif",
-   "measuredVersion": "5.28.0",
+   "measuredVersion": "5.29.0",
    "targets": [
     {
      "target": "kerberos",
@@ -13277,7 +13287,7 @@
   },
   {
    "package": "@datadog/datadog-ci-plugin-sbom",
-   "measuredVersion": "5.28.0",
+   "measuredVersion": "5.29.0",
    "targets": [
     {
      "target": "kerberos",
@@ -13345,7 +13355,7 @@
   },
   {
    "package": "@dataform/core",
-   "measuredVersion": "3.1.7",
+   "measuredVersion": "3.1.8",
    "targets": [
     {
      "target": "long",
@@ -13544,7 +13554,7 @@
   },
   {
    "package": "@electron/asar",
-   "measuredVersion": "4.3.2",
+   "measuredVersion": "4.3.4",
    "targets": [
     {
      "target": "original-fs",
@@ -15138,7 +15148,7 @@
   },
   {
    "package": "@jimp/plugin-blur",
-   "measuredVersion": "2.0.0",
+   "measuredVersion": "2.1.0",
    "targets": [
     {
      "target": "@jimp/types",
@@ -15440,6 +15450,48 @@
    ]
   },
   {
+   "package": "@loaders.gl/images",
+   "measuredVersion": "5.0.0",
+   "targets": [
+    {
+     "target": "probe.gl",
+     "class": "adapter",
+     "field": "peer",
+     "candidate": false,
+     "reason": "adapter class — the consumer picked and installed the backend",
+     "specifiers": [
+      "probe.gl/log"
+     ],
+     "files": [
+      "dist/basis-bundled.cjs",
+      "dist/basis.cjs",
+      "dist/bundled.cjs",
+      "dist/color-lut-bundled.cjs",
+      "dist/color-lut.cjs",
+      "dist/crunch.cjs",
+      "dist/image-bundled.cjs",
+      "dist/image.cjs"
+     ],
+     "fileCount": 10
+    },
+    {
+     "target": "sharp",
+     "class": "guarded",
+     "field": "peer",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+     "specifiers": [
+      "sharp"
+     ],
+     "files": [
+      "dist/basis-worker-node.cjs",
+      "dist/ktx2-basis-writer-worker-node.cjs"
+     ],
+     "fileCount": 2
+    }
+   ]
+  },
+  {
    "package": "@mantine/hooks",
    "measuredVersion": "9.8.2",
    "targets": [
@@ -15518,7 +15570,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.85.0",
+   "measuredVersion": "1.86.0",
    "targets": [
     {
      "target": "@workflow/serde",
@@ -15563,8 +15615,8 @@
       "dist/dist-ByO0vuJJ-CCXLBnvJ.js",
       "dist/dist-P2rjrlmj.cjs",
       "dist/dist-TPVqg8oV.js",
-      "dist/netlify-DrrhIGiN.cjs",
-      "dist/netlify-WYnWTeMp.js"
+      "dist/netlify-DTXLQiG1.cjs",
+      "dist/netlify-DUPSTzi6.js"
      ],
      "fileCount": 6
     }
@@ -15572,7 +15624,7 @@
   },
   {
    "package": "@mastra/schema-compat",
-   "measuredVersion": "1.4.0",
+   "measuredVersion": "1.4.1",
    "targets": [
     {
      "target": "zod-to-json-schema",
@@ -16160,7 +16212,7 @@
   },
   {
    "package": "@nuxt/devtools",
-   "measuredVersion": "4.2.0",
+   "measuredVersion": "1.7.1",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16172,21 +16224,7 @@
       "@nuxt/schema"
      ],
      "files": [
-      "dist/module.d.mts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "vue",
-     "class": "adapter",
-     "field": "peer",
-     "candidate": false,
-     "reason": "adapter class — the consumer picked and installed the backend",
-     "specifiers": [
-      "vue"
-     ],
-     "files": [
-      "dist/webcomponents/index.mjs"
+      "dist/module.d.ts"
      ],
      "fileCount": 1
     }
@@ -16194,41 +16232,8 @@
   },
   {
    "package": "@nuxt/devtools-kit",
-   "measuredVersion": "4.2.0",
+   "measuredVersion": "1.7.1",
    "targets": [
-    {
-     "target": "@nuxt/schema",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@nuxt/schema"
-     ],
-     "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
-      "dist/types.d.mts"
-     ],
-     "fileCount": 3
-    },
-    {
-     "target": "@vitejs/devtools-kit",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@vitejs/devtools-kit",
-      "@vitejs/devtools-kit/client"
-     ],
-     "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
-      "dist/types.d.mts"
-     ],
-     "fileCount": 3
-    },
     {
      "target": "birpc",
      "class": "types",
@@ -16239,9 +16244,9 @@
       "birpc"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16255,7 +16260,7 @@
       "error-stack-parser-es"
      ],
      "files": [
-      "dist/types.d.mts"
+      "dist/types.d.ts"
      ],
      "fileCount": 1
     },
@@ -16269,9 +16274,25 @@
       "hookable"
      ],
      "files": [
-      "dist/types.d.mts"
+      "dist/types.d.ts"
      ],
      "fileCount": 1
+    },
+    {
+     "target": "nitropack",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "nitropack"
+     ],
+     "files": [
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
+      "dist/types.d.ts"
+     ],
+     "fileCount": 3
     },
     {
      "target": "nuxt",
@@ -16284,9 +16305,9 @@
       "nuxt/app"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16300,7 +16321,7 @@
       "ofetch"
      ],
      "files": [
-      "dist/types.d.mts"
+      "dist/types.d.ts"
      ],
      "fileCount": 1
     },
@@ -16314,7 +16335,7 @@
       "shiki"
      ],
      "files": [
-      "dist/types.d.mts"
+      "dist/types.d.ts"
      ],
      "fileCount": 1
     },
@@ -16328,9 +16349,9 @@
       "unimport"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16344,9 +16365,25 @@
       "unstorage"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
+      "dist/types.d.ts"
+     ],
+     "fileCount": 3
+    },
+    {
+     "target": "vite-plugin-vue-inspector",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "vite-plugin-vue-inspector"
+     ],
+     "files": [
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     },
@@ -16360,13 +16397,15 @@
       "vue"
      ],
      "files": [
-      "dist/index.d.mts",
+      "dist/index.d.ts",
+      "dist/runtime/host-client.d.ts",
       "dist/runtime/host-client.mjs",
+      "dist/runtime/iframe-client.d.ts",
       "dist/runtime/iframe-client.mjs",
-      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
-      "dist/types.d.mts"
+      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
+      "dist/types.d.ts"
      ],
-     "fileCount": 5
+     "fileCount": 7
     },
     {
      "target": "vue-router",
@@ -16378,9 +16417,9 @@
       "vue-router"
      ],
      "files": [
-      "dist/index.d.mts",
-      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
-      "dist/types.d.mts"
+      "dist/index.d.ts",
+      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
+      "dist/types.d.ts"
      ],
      "fileCount": 3
     }
@@ -18730,7 +18769,7 @@
   },
   {
    "package": "@prisma/studio-core",
-   "measuredVersion": "0.34.1",
+   "measuredVersion": "0.35.0",
    "targets": [
     {
      "target": "@electric-sql/pglite",
@@ -19556,7 +19595,7 @@
   },
   {
    "package": "@react-router/dev",
-   "measuredVersion": "8.5.2",
+   "measuredVersion": "8.5.3",
    "targets": [
     {
      "target": "react",
@@ -24170,7 +24209,7 @@
   },
   {
    "package": "chromatic",
-   "measuredVersion": "18.15.2",
+   "measuredVersion": "18.15.3",
    "targets": [
     {
      "target": "bufferutil",
@@ -24182,7 +24221,7 @@
       "bufferutil"
      ],
      "files": [
-      "dist/node-src-DcLkRS-D.cjs"
+      "dist/node-src-42EtdXGz.cjs"
      ],
      "fileCount": 1
     },
@@ -24196,7 +24235,7 @@
       "kerberos"
      ],
      "files": [
-      "dist/e2ePackage-4eIZxBGT.cjs"
+      "dist/e2ePackage-Osg93awL.cjs"
      ],
      "fileCount": 1
     },
@@ -24210,7 +24249,7 @@
       "utf-8-validate"
      ],
      "files": [
-      "dist/node-src-DcLkRS-D.cjs"
+      "dist/node-src-42EtdXGz.cjs"
      ],
      "fileCount": 1
     }
@@ -32225,7 +32264,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261124.1",
+   "measuredVersion": "1.20261125.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32455,7 +32494,7 @@
   },
   {
    "package": "@mastra/core",
-   "measuredVersion": "1.85.0",
+   "measuredVersion": "1.86.0",
    "target": "undici",
    "specifiers": [
     "undici"
