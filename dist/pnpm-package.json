@@ -379,16 +379,6 @@
           }
         }
       },
-      "@cloudflare/vite-plugin@*": {
-        "peerDependencies": {
-          "@cloudflare/workers-utils": "*"
-        },
-        "peerDependenciesMeta": {
-          "@cloudflare/workers-utils": {
-            "optional": true
-          }
-        }
-      },
       "@codemirror/lang-json@*": {
         "peerDependencies": {
           "@codemirror/lint": "*",
@@ -2078,7 +2068,6 @@
           "eslint-plugin-jsx-a11y": "*",
           "eslint-plugin-react": "*",
           "eslint-plugin-react-hooks": "*",
-          "typescript": "*",
           "typescript-eslint": "*"
         },
         "peerDependenciesMeta": {
@@ -2094,9 +2083,6 @@
           "eslint-plugin-react-hooks": {
             "optional": true
           },
-          "typescript": {
-            "optional": true
-          },
           "typescript-eslint": {
             "optional": true
           }
@@ -2105,17 +2091,13 @@
       "@nx/jest@*": {
         "peerDependencies": {
           "@jest/core": "*",
-          "@jest/types": "*",
-          "typescript": "*"
+          "@jest/types": "*"
         },
         "peerDependenciesMeta": {
           "@jest/core": {
             "optional": true
           },
           "@jest/types": {
-            "optional": true
-          },
-          "typescript": {
             "optional": true
           }
         }
@@ -2126,9 +2108,7 @@
           "@nx/oxlint": "*",
           "@nx/vitest": "*",
           "core-js": "*",
-          "nx": "*",
-          "prettier": "*",
-          "typescript": "*"
+          "prettier": "*"
         },
         "peerDependenciesMeta": {
           "@nx/eslint": {
@@ -2143,13 +2123,7 @@
           "core-js": {
             "optional": true
           },
-          "nx": {
-            "optional": true
-          },
           "prettier": {
-            "optional": true
-          },
-          "typescript": {
             "optional": true
           }
         }
@@ -2209,7 +2183,6 @@
           "style-loader": "*",
           "swc-loader": "*",
           "tsconfig-paths-webpack-plugin": "*",
-          "typescript": "*",
           "webpack": "*"
         },
         "peerDependenciesMeta": {
@@ -2273,9 +2246,6 @@
           "tsconfig-paths-webpack-plugin": {
             "optional": true
           },
-          "typescript": {
-            "optional": true
-          },
           "webpack": {
             "optional": true
           }
@@ -2305,36 +2275,12 @@
           }
         }
       },
-      "@nx/storybook@*": {
-        "peerDependencies": {
-          "typescript": "*"
-        },
-        "peerDependenciesMeta": {
-          "typescript": {
-            "optional": true
-          }
-        }
-      },
       "@nx/vite@*": {
         "peerDependencies": {
-          "@nx/eslint": "*",
-          "typescript": "*"
+          "@nx/eslint": "*"
         },
         "peerDependenciesMeta": {
           "@nx/eslint": {
-            "optional": true
-          },
-          "typescript": {
-            "optional": true
-          }
-        }
-      },
-      "@nx/vitest@*": {
-        "peerDependencies": {
-          "typescript": "*"
-        },
-        "peerDependenciesMeta": {
-          "typescript": {
             "optional": true
           }
         }
@@ -6429,17 +6375,10 @@
         "peerDependencies": {
           "@angular-devkit/build-angular": "*",
           "@angular/build": "*",
-          "@angular/cli": "*",
           "@nx/angular": "*",
-          "@nx/conformance": "*",
           "@nx/js": "*",
-          "@nx/key": "*",
-          "@nx/powerpack-conformance": "*",
-          "@nx/powerpack-license": "*",
-          "nx-cloud": "*",
           "oxfmt": "*",
-          "prettier": "*",
-          "ts-node": "*"
+          "prettier": "*"
         },
         "peerDependenciesMeta": {
           "@angular-devkit/build-angular": {
@@ -6448,37 +6387,16 @@
           "@angular/build": {
             "optional": true
           },
-          "@angular/cli": {
-            "optional": true
-          },
           "@nx/angular": {
             "optional": true
           },
-          "@nx/conformance": {
-            "optional": true
-          },
           "@nx/js": {
-            "optional": true
-          },
-          "@nx/key": {
-            "optional": true
-          },
-          "@nx/powerpack-conformance": {
-            "optional": true
-          },
-          "@nx/powerpack-license": {
-            "optional": true
-          },
-          "nx-cloud": {
             "optional": true
           },
           "oxfmt": {
             "optional": true
           },
           "prettier": {
-            "optional": true
-          },
-          "ts-node": {
             "optional": true
           }
         }

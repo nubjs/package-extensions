@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25",
+  "generated": "2026-11-26",
   "corpus": {
     "ranking": "npm-high-impact topDownload",
     "size": 10000,
@@ -8,8 +8,8 @@
   },
   "sources": {
     "scan": {
-      "entries": 1096,
-      "packages": 626
+      "entries": 1080,
+      "packages": 623
     },
     "yarn": {
       "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
     }
   },
   "totals": {
-    "packages": 758,
-    "selectors": 778,
-    "entries": 1096,
+    "packages": 755,
+    "selectors": 775,
+    "entries": 1080,
     "byClass": {
-      "runtime": 167,
-      "adapter": 127,
-      "types": 493,
+      "runtime": 162,
+      "adapter": 124,
+      "types": 491,
       "deep-path": 0,
-      "guarded": 309
+      "guarded": 303
     },
     "byField": {
       "dependency": 22,
-      "peer": 1074
+      "peer": 1058
     },
-    "candidatesForReview": 64,
+    "candidatesForReview": 63,
     "droppedUnpublishedTargets": 202,
     "droppedBundlerLiterals": 0,
     "droppedUnresolvedTargets": 0,
@@ -3233,16 +3233,6 @@
         }
       }
     },
-    "@cloudflare/vite-plugin@*": {
-      "peerDependencies": {
-        "@cloudflare/workers-utils": "*"
-      },
-      "peerDependenciesMeta": {
-        "@cloudflare/workers-utils": {
-          "optional": true
-        }
-      }
-    },
     "@codemirror/lang-json@*": {
       "peerDependencies": {
         "@codemirror/lint": "*",
@@ -4932,7 +4922,6 @@
         "eslint-plugin-jsx-a11y": "*",
         "eslint-plugin-react": "*",
         "eslint-plugin-react-hooks": "*",
-        "typescript": "*",
         "typescript-eslint": "*"
       },
       "peerDependenciesMeta": {
@@ -4948,9 +4937,6 @@
         "eslint-plugin-react-hooks": {
           "optional": true
         },
-        "typescript": {
-          "optional": true
-        },
         "typescript-eslint": {
           "optional": true
         }
@@ -4959,17 +4945,13 @@
     "@nx/jest@*": {
       "peerDependencies": {
         "@jest/core": "*",
-        "@jest/types": "*",
-        "typescript": "*"
+        "@jest/types": "*"
       },
       "peerDependenciesMeta": {
         "@jest/core": {
           "optional": true
         },
         "@jest/types": {
-          "optional": true
-        },
-        "typescript": {
           "optional": true
         }
       }
@@ -4980,9 +4962,7 @@
         "@nx/oxlint": "*",
         "@nx/vitest": "*",
         "core-js": "*",
-        "nx": "*",
-        "prettier": "*",
-        "typescript": "*"
+        "prettier": "*"
       },
       "peerDependenciesMeta": {
         "@nx/eslint": {
@@ -4997,13 +4977,7 @@
         "core-js": {
           "optional": true
         },
-        "nx": {
-          "optional": true
-        },
         "prettier": {
-          "optional": true
-        },
-        "typescript": {
           "optional": true
         }
       }
@@ -5063,7 +5037,6 @@
         "style-loader": "*",
         "swc-loader": "*",
         "tsconfig-paths-webpack-plugin": "*",
-        "typescript": "*",
         "webpack": "*"
       },
       "peerDependenciesMeta": {
@@ -5127,9 +5100,6 @@
         "tsconfig-paths-webpack-plugin": {
           "optional": true
         },
-        "typescript": {
-          "optional": true
-        },
         "webpack": {
           "optional": true
         }
@@ -5159,36 +5129,12 @@
         }
       }
     },
-    "@nx/storybook@*": {
-      "peerDependencies": {
-        "typescript": "*"
-      },
-      "peerDependenciesMeta": {
-        "typescript": {
-          "optional": true
-        }
-      }
-    },
     "@nx/vite@*": {
       "peerDependencies": {
-        "@nx/eslint": "*",
-        "typescript": "*"
+        "@nx/eslint": "*"
       },
       "peerDependenciesMeta": {
         "@nx/eslint": {
-          "optional": true
-        },
-        "typescript": {
-          "optional": true
-        }
-      }
-    },
-    "@nx/vitest@*": {
-      "peerDependencies": {
-        "typescript": "*"
-      },
-      "peerDependenciesMeta": {
-        "typescript": {
           "optional": true
         }
       }
@@ -9283,17 +9229,10 @@
       "peerDependencies": {
         "@angular-devkit/build-angular": "*",
         "@angular/build": "*",
-        "@angular/cli": "*",
         "@nx/angular": "*",
-        "@nx/conformance": "*",
         "@nx/js": "*",
-        "@nx/key": "*",
-        "@nx/powerpack-conformance": "*",
-        "@nx/powerpack-license": "*",
-        "nx-cloud": "*",
         "oxfmt": "*",
-        "prettier": "*",
-        "ts-node": "*"
+        "prettier": "*"
       },
       "peerDependenciesMeta": {
         "@angular-devkit/build-angular": {
@@ -9302,37 +9241,16 @@
         "@angular/build": {
           "optional": true
         },
-        "@angular/cli": {
-          "optional": true
-        },
         "@nx/angular": {
           "optional": true
         },
-        "@nx/conformance": {
-          "optional": true
-        },
         "@nx/js": {
-          "optional": true
-        },
-        "@nx/key": {
-          "optional": true
-        },
-        "@nx/powerpack-conformance": {
-          "optional": true
-        },
-        "@nx/powerpack-license": {
-          "optional": true
-        },
-        "nx-cloud": {
           "optional": true
         },
         "oxfmt": {
           "optional": true
         },
         "prettier": {
-          "optional": true
-        },
-        "ts-node": {
           "optional": true
         }
       }
@@ -12606,7 +12524,7 @@
     },
     {
       "package": "@ardatan/relay-compiler",
-      "measuredVersion": "13.0.3",
+      "measuredVersion": "13.0.4",
       "targets": [
         {
           "target": "glob",
@@ -12966,7 +12884,7 @@
     },
     {
       "package": "@base44/vite-plugin",
-      "measuredVersion": "1.0.54",
+      "measuredVersion": "1.0.55",
       "targets": [
         {
           "target": "vite",
@@ -12986,26 +12904,6 @@
             "dist/workerd-compat-plugin.js"
           ],
           "fileCount": 6
-        }
-      ]
-    },
-    {
-      "package": "@cloudflare/vite-plugin",
-      "measuredVersion": "1.70.1",
-      "targets": [
-        {
-          "target": "@cloudflare/workers-utils",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "@cloudflare/workers-utils"
-          ],
-          "files": [
-            "dist/index.d.mts"
-          ],
-          "fileCount": 1
         }
       ]
     },
@@ -14773,7 +14671,7 @@
     },
     {
       "package": "@graphql-tools/graphql-tag-pluck",
-      "measuredVersion": "9.0.10",
+      "measuredVersion": "9.0.11",
       "targets": [
         {
           "target": "@astrojs/compiler",
@@ -14889,7 +14787,7 @@
     },
     {
       "package": "@hapi/hapi",
-      "measuredVersion": "21.4.13",
+      "measuredVersion": "21.4.14",
       "targets": [
         {
           "target": "joi",
@@ -15148,7 +15046,7 @@
     },
     {
       "package": "@jimp/plugin-blur",
-      "measuredVersion": "2.1.0",
+      "measuredVersion": "2.2.0",
       "targets": [
         {
           "target": "@jimp/types",
@@ -15959,7 +15857,7 @@
     },
     {
       "package": "@nestjs/core",
-      "measuredVersion": "12.6.0",
+      "measuredVersion": "12.6.2",
       "targets": [
         {
           "target": "@standard-schema/spec",
@@ -16956,7 +16854,7 @@
     },
     {
       "package": "@nx/angular",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@angular-devkit/architect",
@@ -17078,7 +16976,7 @@
     },
     {
       "package": "@nx/cypress",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "typescript",
@@ -17098,7 +16996,7 @@
     },
     {
       "package": "@nx/devkit",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@angular-devkit/architect",
@@ -17174,7 +17072,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@eslint/js",
@@ -17263,21 +17161,6 @@
           "fileCount": 1
         },
         {
-          "target": "typescript",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "target is a framework or tool a consumer installs itself",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "dist/src/rules/nx-plugin-checks.js",
-            "dist/src/utils/ast-utils.js"
-          ],
-          "fileCount": 2
-        },
-        {
           "target": "typescript-eslint",
           "class": "runtime",
           "field": "peer",
@@ -17302,7 +17185,7 @@
     },
     {
       "package": "@nx/jest",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@jest/core",
@@ -17331,27 +17214,12 @@
             "dist/src/utils/config/functions.d.ts"
           ],
           "fileCount": 1
-        },
-        {
-          "target": "typescript",
-          "class": "adapter",
-          "field": "peer",
-          "candidate": false,
-          "reason": "adapter class — the consumer picked and installed the backend",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "dist/plugins/resolver.js",
-            "dist/src/utils/config/functions.d.ts"
-          ],
-          "fileCount": 2
         }
       ]
     },
     {
       "package": "@nx/js",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@nx/eslint",
@@ -17410,23 +17278,6 @@
           "fileCount": 1
         },
         {
-          "target": "nx",
-          "class": "adapter",
-          "field": "peer",
-          "candidate": false,
-          "reason": "adapter class — the consumer picked and installed the backend",
-          "specifiers": [
-            "nx/bin/nx",
-            "nx/release"
-          ],
-          "files": [
-            "dist/src/plugins/jest/start-local-registry.js",
-            "dist/src/release/version-actions.d.ts",
-            "dist/src/release/version-actions.js"
-          ],
-          "fileCount": 3
-        },
-        {
           "target": "prettier",
           "class": "guarded",
           "field": "peer",
@@ -17439,27 +17290,6 @@
             "dist/src/utils/prettier.js"
           ],
           "fileCount": 1
-        },
-        {
-          "target": "typescript",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "target is a framework or tool a consumer installs itself",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "dist/src/plugins/typescript/plugin.js",
-            "dist/src/plugins/typescript/util.d.ts",
-            "dist/src/utils/buildable-libs-utils.d.ts",
-            "dist/src/utils/module-format/module-format.js",
-            "dist/src/utils/typescript/ast-utils.d.ts",
-            "dist/src/utils/typescript/ast-utils.js",
-            "dist/src/utils/typescript/compilation.d.ts",
-            "dist/src/utils/typescript/configuration.d.ts"
-          ],
-          "fileCount": 15
         }
       ]
     },
@@ -17485,7 +17315,7 @@
     },
     {
       "package": "@nx/node",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@nx/rolldown",
@@ -17534,7 +17364,7 @@
     },
     {
       "package": "@nx/plugin",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "nx",
@@ -17554,7 +17384,7 @@
     },
     {
       "package": "@nx/react",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@nx/cypress",
@@ -17853,21 +17683,6 @@
           "fileCount": 1
         },
         {
-          "target": "typescript",
-          "class": "types",
-          "field": "peer",
-          "candidate": false,
-          "reason": "types class — no runtime edge, only a declaration-file reference",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "dist/src/generators/component-story/component-story.d.ts",
-            "dist/src/utils/ast-utils.d.ts"
-          ],
-          "fileCount": 2
-        },
-        {
           "target": "webpack",
           "class": "adapter",
           "field": "peer",
@@ -17889,7 +17704,7 @@
     },
     {
       "package": "@nx/rollup",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@swc/core",
@@ -17923,7 +17738,7 @@
     },
     {
       "package": "@nx/rspack",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "yargs",
@@ -17942,28 +17757,8 @@
       ]
     },
     {
-      "package": "@nx/storybook",
-      "measuredVersion": "24.0.6",
-      "targets": [
-        {
-          "target": "typescript",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "target is a framework or tool a consumer installs itself",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "dist/src/utils/utilities.js"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
       "package": "@nx/vite",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@nx/eslint",
@@ -17978,46 +17773,12 @@
             "dist/src/utils/ignore-vite-temp-files.js"
           ],
           "fileCount": 1
-        },
-        {
-          "target": "typescript",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": false,
-          "reason": "target is a framework or tool a consumer installs itself",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "dist/src/utils/vite-config-edit-utils.js"
-          ],
-          "fileCount": 1
-        }
-      ]
-    },
-    {
-      "package": "@nx/vitest",
-      "measuredVersion": "24.0.6",
-      "targets": [
-        {
-          "target": "typescript",
-          "class": "adapter",
-          "field": "peer",
-          "candidate": false,
-          "reason": "adapter class — the consumer picked and installed the backend",
-          "specifiers": [
-            "typescript"
-          ],
-          "files": [
-            "dist/src/utils/vite-config-edit-utils.js"
-          ],
-          "fileCount": 1
         }
       ]
     },
     {
       "package": "@nx/web",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@nx/vitest",
@@ -18037,7 +17798,7 @@
     },
     {
       "package": "@nx/webpack",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "swc-loader",
@@ -18071,7 +17832,7 @@
     },
     {
       "package": "@nx/workspace",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@angular-devkit/schematics",
@@ -18935,7 +18696,7 @@
     },
     {
       "package": "@pulumi/pulumi",
-      "measuredVersion": "3.277.0",
+      "measuredVersion": "3.278.0",
       "targets": [
         {
           "target": "@microsoft/typescript-etw",
@@ -19322,7 +19083,7 @@
     },
     {
       "package": "@react-native-firebase/app",
-      "measuredVersion": "27.1.1",
+      "measuredVersion": "27.2.0",
       "targets": [
         {
           "target": "@expo/config-plugins",
@@ -19350,7 +19111,7 @@
     },
     {
       "package": "@react-native-firebase/messaging",
-      "measuredVersion": "27.1.1",
+      "measuredVersion": "27.2.0",
       "targets": [
         {
           "target": "@expo/config-plugins",
@@ -20011,7 +19772,7 @@
     },
     {
       "package": "@scalar/openapi-upgrader",
-      "measuredVersion": "0.5.1",
+      "measuredVersion": "0.5.2",
       "targets": [
         {
           "target": "@scalar/types",
@@ -20034,7 +19795,7 @@
     },
     {
       "package": "@scalar/types",
-      "measuredVersion": "0.32.0",
+      "measuredVersion": "0.32.1",
       "targets": [
         {
           "target": "har-format",
@@ -20143,7 +19904,7 @@
     },
     {
       "package": "@sentry/vercel-edge",
-      "measuredVersion": "11.17.0",
+      "measuredVersion": "11.18.0",
       "targets": [
         {
           "target": "@sentry/opentelemetry",
@@ -20546,7 +20307,7 @@
     },
     {
       "package": "@storybook/addon-a11y",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "@storybook/icons",
@@ -20648,7 +20409,7 @@
     },
     {
       "package": "@storybook/addon-onboarding",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "@storybook/icons",
@@ -20701,7 +20462,7 @@
     },
     {
       "package": "@storybook/addon-themes",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "@storybook/icons",
@@ -20736,7 +20497,7 @@
     },
     {
       "package": "@storybook/addon-vitest",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "react",
@@ -20756,7 +20517,7 @@
     },
     {
       "package": "@storybook/builder-webpack5",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "@storybook/global",
@@ -20856,7 +20617,7 @@
     },
     {
       "package": "@storybook/nextjs",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "sb-original",
@@ -20878,7 +20639,7 @@
     },
     {
       "package": "@storybook/nextjs-vite",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "sb-original",
@@ -21442,7 +21203,7 @@
     },
     {
       "package": "@temporalio/workflow",
-      "measuredVersion": "1.26.0",
+      "measuredVersion": "1.27.0",
       "targets": [
         {
           "target": "source-map",
@@ -21545,7 +21306,7 @@
     },
     {
       "package": "@types/k6",
-      "measuredVersion": "2.4.0",
+      "measuredVersion": "2.4.1",
       "targets": [
         {
           "target": "k6",
@@ -21950,7 +21711,7 @@
     },
     {
       "package": "@unhead/schema",
-      "measuredVersion": "3.5.2",
+      "measuredVersion": "3.5.3",
       "targets": [
         {
           "target": "unhead",
@@ -21991,7 +21752,7 @@
     },
     {
       "package": "@vercel/go",
-      "measuredVersion": "30.0.0",
+      "measuredVersion": "31.0.0",
       "targets": [
         {
           "target": "execa",
@@ -22068,7 +21829,7 @@
     },
     {
       "package": "@vercel/static-build",
-      "measuredVersion": "29.0.0",
+      "measuredVersion": "30.0.0",
       "targets": [
         {
           "target": "encoding",
@@ -23785,7 +23546,7 @@
     },
     {
       "package": "appium-chromedriver",
-      "measuredVersion": "11.1.1",
+      "measuredVersion": "11.1.2",
       "targets": [
         {
           "target": "@appium/types",
@@ -23820,7 +23581,7 @@
     },
     {
       "package": "appium-ios-simulator",
-      "measuredVersion": "11.1.2",
+      "measuredVersion": "11.2.0",
       "targets": [
         {
           "target": "@appium/types",
@@ -24453,7 +24214,7 @@
     },
     {
       "package": "cypress",
-      "measuredVersion": "16.3.0",
+      "measuredVersion": "16.4.0",
       "targets": [
         {
           "target": "@angular/common",
@@ -25020,7 +24781,7 @@
     },
     {
       "package": "elkjs",
-      "measuredVersion": "0.12.1",
+      "measuredVersion": "0.12.2",
       "targets": [
         {
           "target": "web-worker",
@@ -25278,7 +25039,7 @@
     },
     {
       "package": "eslint-plugin-jsdoc",
-      "measuredVersion": "65.5.4",
+      "measuredVersion": "65.5.5",
       "targets": [
         {
           "target": "@eslint/core",
@@ -26747,7 +26508,7 @@
     },
     {
       "package": "i18next-http-backend",
-      "measuredVersion": "4.1.1",
+      "measuredVersion": "4.1.2",
       "targets": [
         {
           "target": "i18next",
@@ -28279,7 +28040,7 @@
     },
     {
       "package": "next-intl",
-      "measuredVersion": "4.16.1",
+      "measuredVersion": "4.16.2",
       "targets": [
         {
           "target": "po-parser",
@@ -28598,7 +28359,7 @@
     },
     {
       "package": "nx",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "targets": [
         {
           "target": "@angular-devkit/build-angular",
@@ -28629,22 +28390,6 @@
           "fileCount": 1
         },
         {
-          "target": "@angular/cli",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "@angular/cli/lib/init.js",
-            "@angular/cli"
-          ],
-          "files": [
-            "dist/bin/init-local.js",
-            "dist/src/utils/find-workspace-root.js"
-          ],
-          "fileCount": 2
-        },
-        {
           "target": "@nx/angular",
           "class": "guarded",
           "field": "peer",
@@ -28659,20 +28404,6 @@
           "fileCount": 1
         },
         {
-          "target": "@nx/conformance",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "@nx/conformance"
-          ],
-          "files": [
-            "dist/src/command-line/nx-commands.js"
-          ],
-          "fileCount": 1
-        },
-        {
           "target": "@nx/js",
           "class": "guarded",
           "field": "peer",
@@ -28683,62 +28414,6 @@
           ],
           "files": [
             "dist/src/utils/has-nx-js-plugin.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "@nx/key",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "@nx/key"
-          ],
-          "files": [
-            "dist/src/utils/nx-key.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "@nx/powerpack-conformance",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "@nx/powerpack-conformance"
-          ],
-          "files": [
-            "dist/src/command-line/nx-commands.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "@nx/powerpack-license",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "@nx/powerpack-license"
-          ],
-          "files": [
-            "dist/src/utils/nx-key.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "nx-cloud",
-          "class": "guarded",
-          "field": "peer",
-          "candidate": false,
-          "reason": "guarded class — the package handles absence, so nothing may be installed for it",
-          "specifiers": [
-            "nx-cloud/bin/nx-cloud"
-          ],
-          "files": [
-            "dist/bin/nx-cloud.js"
           ],
           "fileCount": 1
         },
@@ -28767,20 +28442,6 @@
           ],
           "files": [
             "dist/src/generators/internal-utils/format-changed-files.js"
-          ],
-          "fileCount": 1
-        },
-        {
-          "target": "ts-node",
-          "class": "runtime",
-          "field": "peer",
-          "candidate": true,
-          "reason": "unguarded on the main entry graph — a dependency once reviewed",
-          "specifiers": [
-            "ts-node"
-          ],
-          "files": [
-            "dist/src/plugins/js/utils/register.js"
           ],
           "fileCount": 1
         }
@@ -29252,7 +28913,7 @@
     },
     {
       "package": "posthog-node",
-      "measuredVersion": "6.0.6",
+      "measuredVersion": "6.1.0",
       "targets": [
         {
           "target": "express",
@@ -30404,7 +30065,7 @@
     },
     {
       "package": "resend",
-      "measuredVersion": "6.39.0",
+      "measuredVersion": "6.40.0",
       "targets": [
         {
           "target": "react",
@@ -30863,7 +30524,7 @@
     },
     {
       "package": "storybook",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "react",
@@ -30921,7 +30582,7 @@
     },
     {
       "package": "storybook-addon-pseudo-states",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "targets": [
         {
           "target": "@storybook/icons",
@@ -31953,7 +31614,7 @@
     },
     {
       "package": "vitest",
-      "measuredVersion": "5.1.1",
+      "measuredVersion": "5.1.2",
       "targets": [
         {
           "target": "bufferutil",
@@ -31965,7 +31626,7 @@
             "bufferutil"
           ],
           "files": [
-            "dist/chunks/cli-api.D6E8EtSi.js"
+            "dist/chunks/cli-api.9v9AxcPO.js"
           ],
           "fileCount": 1
         },
@@ -31979,7 +31640,7 @@
             "utf-8-validate"
           ],
           "files": [
-            "dist/chunks/cli-api.D6E8EtSi.js"
+            "dist/chunks/cli-api.9v9AxcPO.js"
           ],
           "fileCount": 1
         }
@@ -32444,7 +32105,7 @@
     },
     {
       "package": "@ardatan/relay-compiler",
-      "measuredVersion": "13.0.3",
+      "measuredVersion": "13.0.4",
       "target": "glob",
       "specifiers": [
         "glob"
@@ -32526,7 +32187,7 @@
     },
     {
       "package": "@nx/devkit",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "target": "@angular-devkit/architect",
       "specifiers": [
         "@angular-devkit/architect"
@@ -32534,7 +32195,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "target": "eslint-plugin-jsx-a11y",
       "specifiers": [
         "eslint-plugin-jsx-a11y"
@@ -32542,7 +32203,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "target": "eslint-plugin-react",
       "specifiers": [
         "eslint-plugin-react"
@@ -32550,7 +32211,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "target": "eslint-plugin-react-hooks",
       "specifiers": [
         "eslint-plugin-react-hooks"
@@ -32558,7 +32219,7 @@
     },
     {
       "package": "@nx/eslint-plugin",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "target": "typescript-eslint",
       "specifiers": [
         "typescript-eslint"
@@ -32566,7 +32227,7 @@
     },
     {
       "package": "@nx/webpack",
-      "measuredVersion": "24.0.6",
+      "measuredVersion": "24.0.7",
       "target": "swc-loader",
       "specifiers": [
         "swc-loader"
@@ -32647,7 +32308,7 @@
     },
     {
       "package": "@storybook/nextjs-vite",
-      "measuredVersion": "10.6.8",
+      "measuredVersion": "10.6.9",
       "target": "sb-original",
       "specifiers": [
         "sb-original/image-context"
@@ -32875,14 +32536,6 @@
       "target": "critters",
       "specifiers": [
         "critters"
-      ]
-    },
-    {
-      "package": "nx",
-      "measuredVersion": "24.0.6",
-      "target": "ts-node",
-      "specifiers": [
-        "ts-node"
       ]
     },
     {

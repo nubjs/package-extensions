@@ -1,5 +1,5 @@
-# Generated 2026-11-25 from the 10000 most-downloaded npm packages.
-# 758 packages, 1096 undeclared dependencies.
+# Generated 2026-11-26 from the 10000 most-downloaded npm packages.
+# 755 packages, 1080 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -237,12 +237,6 @@ packageExtensions:
       vite: "*"
     peerDependenciesMeta:
       vite:
-        optional: true
-  "@cloudflare/vite-plugin@*":
-    peerDependencies:
-      "@cloudflare/workers-utils": "*"
-    peerDependenciesMeta:
-      "@cloudflare/workers-utils":
         optional: true
   "@codemirror/lang-json@*":
     peerDependencies:
@@ -1319,7 +1313,6 @@ packageExtensions:
       eslint-plugin-jsx-a11y: "*"
       eslint-plugin-react: "*"
       eslint-plugin-react-hooks: "*"
-      typescript: "*"
       typescript-eslint: "*"
     peerDependenciesMeta:
       angular-eslint:
@@ -1330,21 +1323,16 @@ packageExtensions:
         optional: true
       eslint-plugin-react-hooks:
         optional: true
-      typescript:
-        optional: true
       typescript-eslint:
         optional: true
   "@nx/jest@*":
     peerDependencies:
       "@jest/core": "*"
       "@jest/types": "*"
-      typescript: "*"
     peerDependenciesMeta:
       "@jest/core":
         optional: true
       "@jest/types":
-        optional: true
-      typescript:
         optional: true
   "@nx/js@*":
     peerDependencies:
@@ -1352,9 +1340,7 @@ packageExtensions:
       "@nx/oxlint": "*"
       "@nx/vitest": "*"
       core-js: "*"
-      nx: "*"
       prettier: "*"
-      typescript: "*"
     peerDependenciesMeta:
       "@nx/eslint":
         optional: true
@@ -1364,11 +1350,7 @@ packageExtensions:
         optional: true
       core-js:
         optional: true
-      nx:
-        optional: true
       prettier:
-        optional: true
-      typescript:
         optional: true
   "@nx/linter@*":
     dependencies:
@@ -1413,7 +1395,6 @@ packageExtensions:
       style-loader: "*"
       swc-loader: "*"
       tsconfig-paths-webpack-plugin: "*"
-      typescript: "*"
       webpack: "*"
     peerDependenciesMeta:
       "@nx/cypress":
@@ -1456,8 +1437,6 @@ packageExtensions:
         optional: true
       tsconfig-paths-webpack-plugin:
         optional: true
-      typescript:
-        optional: true
       webpack:
         optional: true
   "@nx/rollup@*":
@@ -1475,26 +1454,11 @@ packageExtensions:
     peerDependenciesMeta:
       yargs:
         optional: true
-  "@nx/storybook@*":
-    peerDependencies:
-      typescript: "*"
-    peerDependenciesMeta:
-      typescript:
-        optional: true
   "@nx/vite@*":
     peerDependencies:
       "@nx/eslint": "*"
-      typescript: "*"
     peerDependenciesMeta:
       "@nx/eslint":
-        optional: true
-      typescript:
-        optional: true
-  "@nx/vitest@*":
-    peerDependencies:
-      typescript: "*"
-    peerDependenciesMeta:
-      typescript:
         optional: true
   "@nx/web@*":
     peerDependencies:
@@ -4106,43 +4070,22 @@ packageExtensions:
     peerDependencies:
       "@angular-devkit/build-angular": "*"
       "@angular/build": "*"
-      "@angular/cli": "*"
       "@nx/angular": "*"
-      "@nx/conformance": "*"
       "@nx/js": "*"
-      "@nx/key": "*"
-      "@nx/powerpack-conformance": "*"
-      "@nx/powerpack-license": "*"
-      nx-cloud: "*"
       oxfmt: "*"
       prettier: "*"
-      ts-node: "*"
     peerDependenciesMeta:
       "@angular-devkit/build-angular":
         optional: true
       "@angular/build":
         optional: true
-      "@angular/cli":
-        optional: true
       "@nx/angular":
         optional: true
-      "@nx/conformance":
-        optional: true
       "@nx/js":
-        optional: true
-      "@nx/key":
-        optional: true
-      "@nx/powerpack-conformance":
-        optional: true
-      "@nx/powerpack-license":
-        optional: true
-      nx-cloud:
         optional: true
       oxfmt:
         optional: true
       prettier:
-        optional: true
-      ts-node:
         optional: true
   ofetch@*:
     peerDependencies:
