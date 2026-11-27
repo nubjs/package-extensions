@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-26",
-  "dataset": "f9c43445fdbe19e9",
+  "generated": "2026-11-27",
+  "dataset": "dd885fde07e57d41",
   "instrument": {
     "yarn": "4.18.0",
     "mode": "pnp, pnpFallbackMode: none"
@@ -8,25 +8,19 @@
   "tally": {
     "confirmed": 2,
     "confirmedViaPath": 5,
-    "notOnImport": 39,
-    "installFailed": 5,
+    "notOnImport": 36,
+    "installFailed": 8,
     "inconclusive": 2
   },
   "results": [
     {
       "package": "@applitools/spec-driver-webdriver",
-      "version": "1.6.17",
+      "version": "1.7.0",
       "expected": [
         "@applitools/test-utils"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 1,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 2
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@applitools/\u001b[39m\u001b[38;5;173mspec-driver-webdriver\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.7.0\u001b[39m: All versions satisfying \"1.7.0\" are quarantined\n::endgroup::\n\u001b[9"
     },
     {
       "package": "@ardatan/relay-compiler",
@@ -34,8 +28,16 @@
       "expected": [
         "glob"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@ardatan/\u001b[39m\u001b[38;5;173mrelay-compiler\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:13.0.4\u001b[39m: All versions satisfying \"13.0.4\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m"
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "graphql"
+      ],
+      "byOtherIssuers": [],
+      "specifiersTried": 2
     },
     {
       "package": "@electric-sql/pglite",
@@ -194,7 +196,7 @@
     },
     {
       "package": "@nx/devkit",
-      "version": "24.0.7",
+      "version": "24.1.0",
       "expected": [
         "@angular-devkit/architect",
         "@angular-devkit/schematics",
@@ -203,32 +205,31 @@
         "typescript"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mdevkit\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.7\u001b[39m: All versions satisfying \"24.0.7\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mdevkit\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.1.0\u001b[39m: All versions satisfying \"24.1.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38"
     },
     {
       "package": "@nx/eslint-plugin",
-      "version": "24.0.7",
+      "version": "24.1.0",
       "expected": [
-        "@eslint/js",
         "angular-eslint",
         "eslint-plugin-import",
+        "eslint-plugin-import-x",
         "eslint-plugin-jsx-a11y",
         "eslint-plugin-react",
-        "eslint-plugin-react-hooks",
-        "typescript-eslint"
+        "eslint-plugin-react-hooks"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173meslint-plugin\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.7\u001b[39m: All versions satisfying \"24.0.7\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN001"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173meslint-plugin\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.1.0\u001b[39m: All versions satisfying \"24.1.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN001"
     },
     {
       "package": "@nx/webpack",
-      "version": "24.0.7",
+      "version": "24.1.0",
       "expected": [
         "swc-loader",
         "typescript"
       ],
       "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mwebpack\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.0.7\u001b[39m: All versions satisfying \"24.0.7\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[3"
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@nx/\u001b[39m\u001b[38;5;173mwebpack\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:24.1.0\u001b[39m: All versions satisfying \"24.1.0\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[3"
     },
     {
       "package": "@oclif/config",
@@ -356,26 +357,30 @@
       "expected": [
         "sb-original"
       ],
-      "verdict": "installFailed",
-      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@storybook/\u001b[39m\u001b[38;5;173mnextjs-vite\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:10.6.9\u001b[39m: All versions satisfying \"10.6.9\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m "
+      "verdict": "notOnImport",
+      "confirmed": [],
+      "confirmedViaPath": [],
+      "citedPathsTried": 1,
+      "accessedButNotPredicted": [],
+      "unprovidedPeers": [
+        "storybook",
+        "next",
+        "react"
+      ],
+      "byOtherIssuers": [
+        "vite-tsconfig-paths -> vite (unprovided peer)"
+      ],
+      "specifiersTried": 12
     },
     {
       "package": "@swagger-api/apidom-reference",
-      "version": "1.14.0",
+      "version": "1.15.0",
       "expected": [
         "@swagger-api/apidom-ns-asyncapi-3",
         "minim"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 8,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [
-        "@swaggerexpert/json-pointer -> @swagger-api/apidom-core"
-      ],
-      "specifiersTried": 9
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;166m@swagger-api/\u001b[39m\u001b[38;5;173mapidom-reference\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:1.15.0\u001b[39m: All versions satisfying \"1.15.0\" are quarantined\n::endgroup::\n\u001b[91m"
     },
     {
       "package": "astro",
@@ -451,20 +456,12 @@
     },
     {
       "package": "expo-auth-session",
-      "version": "58.0.19",
+      "version": "58.0.20",
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 7,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "react"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 14
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-auth-session\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.20\u001b[39m: All versions satisfying \"58.0.20\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173m"
     },
     {
       "package": "expo-clipboard",
@@ -498,20 +495,12 @@
     },
     {
       "package": "expo-file-system",
-      "version": "58.0.14",
+      "version": "58.0.15",
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 8,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [
-        "expo"
-      ],
-      "byOtherIssuers": [],
-      "specifiersTried": 14
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-file-system\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.15\u001b[39m: All versions satisfying \"58.0.15\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173me"
     },
     {
       "package": "expo-font",
@@ -548,18 +537,12 @@
     },
     {
       "package": "expo-updates",
-      "version": "58.0.22",
+      "version": "58.0.23",
       "expected": [
         "expo-modules-core"
       ],
-      "verdict": "notOnImport",
-      "confirmed": [],
-      "confirmedViaPath": [],
-      "citedPathsTried": 7,
-      "accessedButNotPredicted": [],
-      "unprovidedPeers": [],
-      "byOtherIssuers": [],
-      "specifiersTried": 9
+      "verdict": "installFailed",
+      "detail": "\u001b[94m➤\u001b[39m YN0000: · Yarn 4.18.0\n\u001b[94m➤\u001b[39m \u001b[90mYN0000\u001b[39m: ┌ Resolution step\n::group::Resolution step\n\u001b[91m➤\u001b[39m YN0016: │ \u001b[38;5;173mexpo-updates\u001b[39m\u001b[38;5;37m@\u001b[39m\u001b[38;5;37mnpm:58.0.23\u001b[39m: All versions satisfying \"58.0.23\" are quarantined\n::endgroup::\n\u001b[91m➤\u001b[39m YN0016: \u001b[38;5;173mexpo-"
     },
     {
       "package": "expo-video",
@@ -865,7 +848,7 @@
         "yamlparser"
       ],
       "verdict": "inconclusive",
-      "detail": "(node:5731) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-opUMVQ/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
+      "detail": "(node:5602) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n/tmp/probe-6gdV4h/.pnp.cjs:5750\n      throw EROFS(`open '${p}'`);\n      ^\n\nError: EROFS: read-only file"
     }
   ]
 }

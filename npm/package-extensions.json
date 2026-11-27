@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26",
+ "generated": "2026-11-27",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1080,
-   "packages": 623
+   "entries": 1068,
+   "packages": 616
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,21 +28,21 @@
   }
  },
  "totals": {
-  "packages": 755,
-  "selectors": 775,
-  "entries": 1080,
+  "packages": 748,
+  "selectors": 768,
+  "entries": 1068,
   "byClass": {
-   "runtime": 162,
-   "adapter": 124,
-   "types": 491,
+   "runtime": 157,
+   "adapter": 125,
+   "types": 479,
    "deep-path": 0,
-   "guarded": 303
+   "guarded": 307
   },
   "byField": {
-   "dependency": 22,
-   "peer": 1058
+   "dependency": 21,
+   "peer": 1047
   },
-  "candidatesForReview": 63,
+  "candidatesForReview": 60,
   "droppedUnpublishedTargets": 202,
   "droppedBundlerLiterals": 0,
   "droppedUnresolvedTargets": 0,
@@ -2103,6 +2103,7 @@
     "expo/config-plugins"
    ],
    "files": [
+    "plugin/src/withBackgroundSessions.js",
     "plugin/src/withCustomCACerts.js"
    ]
   },
@@ -4608,30 +4609,40 @@
   },
   "@nuxt/devtools@*": {
    "peerDependencies": {
-    "@nuxt/schema": "*"
+    "@nuxt/schema": "*",
+    "vue": "*"
    },
    "peerDependenciesMeta": {
     "@nuxt/schema": {
+     "optional": true
+    },
+    "vue": {
      "optional": true
     }
    }
   },
   "@nuxt/devtools-kit@*": {
    "peerDependencies": {
+    "@nuxt/schema": "*",
+    "@vitejs/devtools-kit": "*",
     "birpc": "*",
     "error-stack-parser-es": "*",
     "hookable": "*",
-    "nitropack": "*",
     "nuxt": "*",
     "ofetch": "*",
     "shiki": "*",
     "unimport": "*",
     "unstorage": "*",
-    "vite-plugin-vue-inspector": "*",
     "vue": "*",
     "vue-router": "*"
    },
    "peerDependenciesMeta": {
+    "@nuxt/schema": {
+     "optional": true
+    },
+    "@vitejs/devtools-kit": {
+     "optional": true
+    },
     "birpc": {
      "optional": true
     },
@@ -4639,9 +4650,6 @@
      "optional": true
     },
     "hookable": {
-     "optional": true
-    },
-    "nitropack": {
      "optional": true
     },
     "nuxt": {
@@ -4657,9 +4665,6 @@
      "optional": true
     },
     "unstorage": {
-     "optional": true
-    },
-    "vite-plugin-vue-inspector": {
      "optional": true
     },
     "vue": {
@@ -4913,19 +4918,18 @@
    }
   },
   "@nx/eslint-plugin@*": {
-   "dependencies": {
-    "@eslint/js": "*",
-    "eslint-plugin-import": "*"
-   },
    "peerDependencies": {
     "angular-eslint": "*",
+    "eslint-plugin-import-x": "*",
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks": "*",
-    "typescript-eslint": "*"
+    "eslint-plugin-react-hooks": "*"
    },
    "peerDependenciesMeta": {
     "angular-eslint": {
+     "optional": true
+    },
+    "eslint-plugin-import-x": {
      "optional": true
     },
     "eslint-plugin-jsx-a11y": {
@@ -4936,10 +4940,10 @@
     },
     "eslint-plugin-react-hooks": {
      "optional": true
-    },
-    "typescript-eslint": {
-     "optional": true
     }
+   },
+   "dependencies": {
+    "eslint-plugin-import": "*"
    }
   },
   "@nx/jest@*": {
@@ -5449,7 +5453,6 @@
    "peerDependencies": {
     "@electric-sql/pglite": "*",
     "@emotion/is-prop-valid": "*",
-    "kysely": "*",
     "mysql2": "*",
     "nuqs": "*",
     "postgres": "*",
@@ -5460,9 +5463,6 @@
      "optional": true
     },
     "@emotion/is-prop-valid": {
-     "optional": true
-    },
-    "kysely": {
      "optional": true
     },
     "mysql2": {
@@ -5869,16 +5869,6 @@
    },
    "peerDependenciesMeta": {
     "json-schema": {
-     "optional": true
-    }
-   }
-  },
-  "@rolldown/binding-wasm32-wasi@*": {
-   "peerDependencies": {
-    "@oxc-project/types": "*"
-   },
-   "peerDependenciesMeta": {
-    "@oxc-project/types": {
      "optional": true
     }
    }
@@ -8875,88 +8865,12 @@
     }
    }
   },
-  "metro-babel-transformer@*": {
-   "peerDependencies": {
-    "@babel/types": "*"
-   },
-   "peerDependenciesMeta": {
-    "@babel/types": {
-     "optional": true
-    }
-   }
-  },
   "metro-config@*": {
    "peerDependencies": {
-    "metro-babel-register": "*",
-    "metro-file-map": "*",
-    "metro-resolver": "*",
-    "metro-transform-worker": "*"
+    "metro-babel-register": "*"
    },
    "peerDependenciesMeta": {
     "metro-babel-register": {
-     "optional": true
-    },
-    "metro-file-map": {
-     "optional": true
-    },
-    "metro-resolver": {
-     "optional": true
-    },
-    "metro-transform-worker": {
-     "optional": true
-    }
-   }
-  },
-  "metro-core@*": {
-   "peerDependencies": {
-    "metro": "*",
-    "metro-file-map": "*"
-   },
-   "peerDependenciesMeta": {
-    "metro": {
-     "optional": true
-    },
-    "metro-file-map": {
-     "optional": true
-    }
-   }
-  },
-  "metro-file-map@*": {
-   "peerDependencies": {
-    "metro-config": "*"
-   },
-   "peerDependenciesMeta": {
-    "metro-config": {
-     "optional": true
-    }
-   }
-  },
-  "metro-minify-terser@*": {
-   "peerDependencies": {
-    "metro-transform-worker": "*"
-   },
-   "peerDependenciesMeta": {
-    "metro-transform-worker": {
-     "optional": true
-    }
-   }
-  },
-  "metro-resolver@*": {
-   "peerDependencies": {
-    "metro": "*"
-   },
-   "peerDependenciesMeta": {
-    "metro": {
-     "optional": true
-    }
-   }
-  },
-  "metro-transform-plugins@*": {
-   "peerDependencies": {
-    "@babel/types": "*"
-   },
-   "peerDependenciesMeta": {
-    "@babel/types": {
      "optional": true
     }
    }
@@ -12504,7 +12418,7 @@
   },
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.17",
+   "measuredVersion": "1.7.0",
    "targets": [
     {
      "target": "@applitools/test-utils",
@@ -13512,7 +13426,7 @@
   },
   {
    "package": "@es-joy/jsdoccomment",
-   "measuredVersion": "1.2.1",
+   "measuredVersion": "1.2.2",
    "targets": [
     {
      "target": "eslint",
@@ -13594,7 +13508,7 @@
   },
   {
    "package": "@expo/cli",
-   "measuredVersion": "58.1.21",
+   "measuredVersion": "58.1.22",
    "targets": [
     {
      "target": "@expo/fingerprint",
@@ -13733,7 +13647,7 @@
   },
   {
    "package": "@expo/metro-config",
-   "measuredVersion": "58.0.23",
+   "measuredVersion": "58.0.24",
    "targets": [
     {
      "target": "babel-preset-expo",
@@ -13952,7 +13866,7 @@
   },
   {
    "package": "@fastify/static",
-   "measuredVersion": "10.1.12",
+   "measuredVersion": "11.0.0",
    "targets": [
     {
      "target": "fastify",
@@ -14651,7 +14565,7 @@
   },
   {
    "package": "@graphql-codegen/client-preset",
-   "measuredVersion": "7.0.0",
+   "measuredVersion": "7.0.1",
    "targets": [
     {
      "target": "@babel/core",
@@ -15349,7 +15263,7 @@
   },
   {
    "package": "@loaders.gl/images",
-   "measuredVersion": "5.0.0",
+   "measuredVersion": "5.0.1",
    "targets": [
     {
      "target": "probe.gl",
@@ -15361,16 +15275,16 @@
       "probe.gl/log"
      ],
      "files": [
-      "dist/basis-bundled.cjs",
-      "dist/basis.cjs",
-      "dist/bundled.cjs",
-      "dist/color-lut-bundled.cjs",
-      "dist/color-lut.cjs",
-      "dist/crunch.cjs",
-      "dist/image-bundled.cjs",
-      "dist/image.cjs"
+      "dist/basis-bundled-entry.cjs",
+      "dist/basis/metadata-entry.cjs",
+      "dist/bundled-entry.cjs",
+      "dist/color-lut-bundled-entry.cjs",
+      "dist/color-lut/metadata-entry.cjs",
+      "dist/crunch/bundled-entry.cjs",
+      "dist/crunch/metadata-entry.cjs",
+      "dist/gif-builder.cjs"
      ],
-     "fileCount": 10
+     "fileCount": 12
     },
     {
      "target": "sharp",
@@ -15857,7 +15771,7 @@
   },
   {
    "package": "@nestjs/core",
-   "measuredVersion": "12.6.2",
+   "measuredVersion": "12.6.3",
    "targets": [
     {
      "target": "@standard-schema/spec",
@@ -16110,7 +16024,7 @@
   },
   {
    "package": "@nuxt/devtools",
-   "measuredVersion": "1.7.1",
+   "measuredVersion": "4.2.2",
    "targets": [
     {
      "target": "@nuxt/schema",
@@ -16122,7 +16036,21 @@
       "@nuxt/schema"
      ],
      "files": [
-      "dist/module.d.ts"
+      "dist/module.d.mts"
+     ],
+     "fileCount": 1
+    },
+    {
+     "target": "vue",
+     "class": "adapter",
+     "field": "peer",
+     "candidate": false,
+     "reason": "adapter class — the consumer picked and installed the backend",
+     "specifiers": [
+      "vue"
+     ],
+     "files": [
+      "dist/webcomponents/index.mjs"
      ],
      "fileCount": 1
     }
@@ -16130,8 +16058,41 @@
   },
   {
    "package": "@nuxt/devtools-kit",
-   "measuredVersion": "1.7.1",
+   "measuredVersion": "4.2.2",
    "targets": [
+    {
+     "target": "@nuxt/schema",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "@nuxt/schema"
+     ],
+     "files": [
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
+      "dist/types.d.mts"
+     ],
+     "fileCount": 3
+    },
+    {
+     "target": "@vitejs/devtools-kit",
+     "class": "types",
+     "field": "peer",
+     "candidate": false,
+     "reason": "types class — no runtime edge, only a declaration-file reference",
+     "specifiers": [
+      "@vitejs/devtools-kit",
+      "@vitejs/devtools-kit/client"
+     ],
+     "files": [
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
+      "dist/types.d.mts"
+     ],
+     "fileCount": 3
+    },
     {
      "target": "birpc",
      "class": "types",
@@ -16142,9 +16103,9 @@
       "birpc"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16158,7 +16119,7 @@
       "error-stack-parser-es"
      ],
      "files": [
-      "dist/types.d.ts"
+      "dist/types.d.mts"
      ],
      "fileCount": 1
     },
@@ -16172,25 +16133,9 @@
       "hookable"
      ],
      "files": [
-      "dist/types.d.ts"
+      "dist/types.d.mts"
      ],
      "fileCount": 1
-    },
-    {
-     "target": "nitropack",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "nitropack"
-     ],
-     "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
-      "dist/types.d.ts"
-     ],
-     "fileCount": 3
     },
     {
      "target": "nuxt",
@@ -16203,9 +16148,9 @@
       "nuxt/app"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16219,7 +16164,7 @@
       "ofetch"
      ],
      "files": [
-      "dist/types.d.ts"
+      "dist/types.d.mts"
      ],
      "fileCount": 1
     },
@@ -16233,7 +16178,7 @@
       "shiki"
      ],
      "files": [
-      "dist/types.d.ts"
+      "dist/types.d.mts"
      ],
      "fileCount": 1
     },
@@ -16247,9 +16192,9 @@
       "unimport"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16263,25 +16208,9 @@
       "unstorage"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
-      "dist/types.d.ts"
-     ],
-     "fileCount": 3
-    },
-    {
-     "target": "vite-plugin-vue-inspector",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "vite-plugin-vue-inspector"
-     ],
-     "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     },
@@ -16295,15 +16224,13 @@
       "vue"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/runtime/host-client.d.ts",
+      "dist/index.d.mts",
       "dist/runtime/host-client.mjs",
-      "dist/runtime/iframe-client.d.ts",
       "dist/runtime/iframe-client.mjs",
-      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
-      "dist/types.d.ts"
+      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
+      "dist/types.d.mts"
      ],
-     "fileCount": 7
+     "fileCount": 5
     },
     {
      "target": "vue-router",
@@ -16315,9 +16242,9 @@
       "vue-router"
      ],
      "files": [
-      "dist/index.d.ts",
-      "dist/shared/devtools-kit.s0VF6R5p.d.ts",
-      "dist/types.d.ts"
+      "dist/index.d.mts",
+      "dist/shared/devtools-kit.DvZAnLVa.d.mts",
+      "dist/types.d.mts"
      ],
      "fileCount": 3
     }
@@ -16854,7 +16781,7 @@
   },
   {
    "package": "@nx/angular",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@angular-devkit/architect",
@@ -16976,7 +16903,7 @@
   },
   {
    "package": "@nx/cypress",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "typescript",
@@ -16996,7 +16923,7 @@
   },
   {
    "package": "@nx/devkit",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@angular-devkit/architect",
@@ -17072,23 +16999,8 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
-    {
-     "target": "@eslint/js",
-     "class": "runtime",
-     "field": "dependency",
-     "candidate": false,
-     "reason": "probe 23.2.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access @eslint/js\"",
-     "specifiers": [
-      "@eslint/js"
-     ],
-     "files": [
-      "dist/src/flat-configs/javascript.js",
-      "dist/src/flat-configs/typescript.js"
-     ],
-     "fileCount": 2
-    },
     {
      "target": "angular-eslint",
      "class": "runtime",
@@ -17106,7 +17018,7 @@
     },
     {
      "target": "eslint-plugin-import",
-     "class": "runtime",
+     "class": "guarded",
      "field": "dependency",
      "candidate": false,
      "reason": "probe 23.2.0: importing the package under Yarn PnP with pnpFallbackMode none throws \"tried to access eslint-plugin-import\"",
@@ -17119,11 +17031,25 @@
      "fileCount": 1
     },
     {
-     "target": "eslint-plugin-jsx-a11y",
-     "class": "runtime",
+     "target": "eslint-plugin-import-x",
+     "class": "guarded",
      "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
+     "specifiers": [
+      "eslint-plugin-import-x"
+     ],
+     "files": [
+      "dist/src/flat-configs/react-base.js"
+     ],
+     "fileCount": 1
+    },
+    {
+     "target": "eslint-plugin-jsx-a11y",
+     "class": "guarded",
+     "field": "peer",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
       "eslint-plugin-jsx-a11y"
      ],
@@ -17134,10 +17060,10 @@
     },
     {
      "target": "eslint-plugin-react",
-     "class": "runtime",
+     "class": "guarded",
      "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
+     "candidate": false,
+     "reason": "guarded class — the package handles absence, so nothing may be installed for it",
      "specifiers": [
       "eslint-plugin-react"
      ],
@@ -17159,33 +17085,12 @@
       "dist/src/flat-configs/react-jsx.js"
      ],
      "fileCount": 1
-    },
-    {
-     "target": "typescript-eslint",
-     "class": "runtime",
-     "field": "peer",
-     "candidate": true,
-     "reason": "unguarded on the main entry graph — a dependency once reviewed",
-     "specifiers": [
-      "typescript-eslint"
-     ],
-     "files": [
-      "dist/angular.d.ts",
-      "dist/react.d.ts",
-      "dist/src/flat-configs/angular-template.d.ts",
-      "dist/src/flat-configs/angular-template.js",
-      "dist/src/flat-configs/angular.d.ts",
-      "dist/src/flat-configs/angular.js",
-      "dist/src/flat-configs/javascript.d.ts",
-      "dist/src/flat-configs/javascript.js"
-     ],
-     "fileCount": 19
     }
    ]
   },
   {
    "package": "@nx/jest",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@jest/core",
@@ -17219,7 +17124,7 @@
   },
   {
    "package": "@nx/js",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@nx/eslint",
@@ -17315,7 +17220,7 @@
   },
   {
    "package": "@nx/node",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@nx/rolldown",
@@ -17364,7 +17269,7 @@
   },
   {
    "package": "@nx/plugin",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "nx",
@@ -17384,7 +17289,7 @@
   },
   {
    "package": "@nx/react",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@nx/cypress",
@@ -17704,7 +17609,7 @@
   },
   {
    "package": "@nx/rollup",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@swc/core",
@@ -17738,7 +17643,7 @@
   },
   {
    "package": "@nx/rspack",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "yargs",
@@ -17758,7 +17663,7 @@
   },
   {
    "package": "@nx/vite",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@nx/eslint",
@@ -17778,7 +17683,7 @@
   },
   {
    "package": "@nx/web",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@nx/vitest",
@@ -17798,7 +17703,7 @@
   },
   {
    "package": "@nx/webpack",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "swc-loader",
@@ -17832,7 +17737,7 @@
   },
   {
    "package": "@nx/workspace",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@angular-devkit/schematics",
@@ -18530,7 +18435,7 @@
   },
   {
    "package": "@prisma/studio-core",
-   "measuredVersion": "0.35.0",
+   "measuredVersion": "0.35.2",
    "targets": [
     {
      "target": "@electric-sql/pglite",
@@ -18559,27 +18464,6 @@
       "dist/ui/index.cjs"
      ],
      "fileCount": 1
-    },
-    {
-     "target": "kysely",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "kysely"
-     ],
-     "files": [
-      "dist/adapter-j-hUrs7K.d.ts",
-      "dist/data/bff/index.d.ts",
-      "dist/data/index.d.ts",
-      "dist/data/migrations.d.ts",
-      "dist/data/mysql-core/index.d.ts",
-      "dist/data/mysql2/index.d.ts",
-      "dist/data/node-sqlite/index.d.ts",
-      "dist/data/pglite/index.d.ts"
-     ],
-     "fileCount": 15
     },
     {
      "target": "mysql2",
@@ -19322,7 +19206,7 @@
   },
   {
    "package": "@react-pdf/render",
-   "measuredVersion": "4.7.1",
+   "measuredVersion": "4.7.2",
    "targets": [
     {
      "target": "@react-pdf/layout",
@@ -19413,7 +19297,7 @@
   },
   {
    "package": "@redocly/respect-core",
-   "measuredVersion": "2.83.0",
+   "measuredVersion": "2.84.0",
    "targets": [
     {
      "target": "json-schema-to-ts",
@@ -19627,28 +19511,8 @@
    ]
   },
   {
-   "package": "@rolldown/binding-wasm32-wasi",
-   "measuredVersion": "1.3.3",
-   "targets": [
-    {
-     "target": "@oxc-project/types",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@oxc-project/types"
-     ],
-     "files": [
-      "rolldown-binding.wasi.d.cts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "@rsbuild/core",
-   "measuredVersion": "2.3.4",
+   "measuredVersion": "2.3.5",
    "targets": [
     {
      "target": "tsx",
@@ -19772,7 +19636,7 @@
   },
   {
    "package": "@scalar/openapi-upgrader",
-   "measuredVersion": "0.5.2",
+   "measuredVersion": "0.5.3",
    "targets": [
     {
      "target": "@scalar/types",
@@ -19795,7 +19659,7 @@
   },
   {
    "package": "@scalar/types",
-   "measuredVersion": "0.32.1",
+   "measuredVersion": "0.33.0",
    "targets": [
     {
      "target": "har-format",
@@ -19904,7 +19768,7 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "11.18.0",
+   "measuredVersion": "11.19.0",
    "targets": [
     {
      "target": "@sentry/opentelemetry",
@@ -20793,7 +20657,7 @@
   },
   {
    "package": "@swagger-api/apidom-ast",
-   "measuredVersion": "1.14.0",
+   "measuredVersion": "1.15.0",
    "targets": [
     {
      "target": "ts-toolbelt",
@@ -20813,7 +20677,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-arazzo-1",
-   "measuredVersion": "1.14.0",
+   "measuredVersion": "1.15.0",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -20847,7 +20711,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-asyncapi-2",
-   "measuredVersion": "1.14.0",
+   "measuredVersion": "1.15.0",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -20881,7 +20745,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-json-schema-draft-6",
-   "measuredVersion": "1.14.0",
+   "measuredVersion": "1.15.0",
    "targets": [
     {
      "target": "minim",
@@ -20901,7 +20765,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-json-schema-draft-7",
-   "measuredVersion": "1.14.0",
+   "measuredVersion": "1.15.0",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-json-schema-draft-4",
@@ -20935,7 +20799,7 @@
   },
   {
    "package": "@swagger-api/apidom-ns-openapi-3-0",
-   "measuredVersion": "1.14.0",
+   "measuredVersion": "1.15.0",
    "targets": [
     {
      "target": "minim",
@@ -20955,7 +20819,7 @@
   },
   {
    "package": "@swagger-api/apidom-reference",
-   "measuredVersion": "1.14.0",
+   "measuredVersion": "1.15.0",
    "targets": [
     {
      "target": "@swagger-api/apidom-ns-asyncapi-3",
@@ -21793,7 +21657,7 @@
   },
   {
    "package": "@vercel/speed-insights",
-   "measuredVersion": "2.1.0",
+   "measuredVersion": "2.1.1",
    "targets": [
     {
      "target": "@nuxt/kit",
@@ -23026,7 +22890,7 @@
   },
   {
    "package": "@walletconnect/utils",
-   "measuredVersion": "2.26.0",
+   "measuredVersion": "2.26.1",
    "targets": [
     {
      "target": "@walletconnect/jsonrpc-types",
@@ -23581,7 +23445,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "11.2.0",
+   "measuredVersion": "11.3.0",
    "targets": [
     {
      "target": "@appium/types",
@@ -23813,7 +23677,7 @@
   },
   {
    "package": "babel-preset-expo",
-   "measuredVersion": "58.0.26",
+   "measuredVersion": "58.0.27",
    "targets": [
     {
      "target": "@babel/core",
@@ -25039,7 +24903,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.5.5",
+   "measuredVersion": "65.5.6",
    "targets": [
     {
      "target": "@eslint/core",
@@ -25360,7 +25224,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "58.0.19",
+   "measuredVersion": "58.0.20",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25485,7 +25349,7 @@
   },
   {
    "package": "expo-file-system",
-   "measuredVersion": "58.0.14",
+   "measuredVersion": "58.0.15",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25559,7 +25423,7 @@
   },
   {
    "package": "expo-image",
-   "measuredVersion": "58.0.18",
+   "measuredVersion": "58.0.19",
    "targets": [
     {
      "target": "expo-app-metrics",
@@ -25665,7 +25529,7 @@
   },
   {
    "package": "expo-location",
-   "measuredVersion": "58.0.22",
+   "measuredVersion": "58.0.23",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25708,7 +25572,7 @@
   },
   {
    "package": "expo-notifications",
-   "measuredVersion": "58.1.9",
+   "measuredVersion": "58.1.10",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25731,7 +25595,7 @@
   },
   {
    "package": "expo-router",
-   "measuredVersion": "58.0.32",
+   "measuredVersion": "58.0.33",
    "targets": [
     {
      "target": "react-native-tab-view",
@@ -25752,7 +25616,7 @@
   },
   {
    "package": "expo-splash-screen",
-   "measuredVersion": "58.0.14",
+   "measuredVersion": "58.0.15",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -25772,7 +25636,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "58.0.22",
+   "measuredVersion": "58.0.23",
    "targets": [
     {
      "target": "expo-modules-core",
@@ -26661,7 +26525,7 @@
   },
   {
    "package": "jest-expo",
-   "measuredVersion": "58.0.15",
+   "measuredVersion": "58.0.16",
    "targets": [
     {
      "target": "babel-preset-expo",
@@ -27454,7 +27318,7 @@
   },
   {
    "package": "metro",
-   "measuredVersion": "0.88.0",
+   "measuredVersion": "0.88.1",
    "targets": [
     {
      "target": "@babel/runtime",
@@ -27490,28 +27354,8 @@
    ]
   },
   {
-   "package": "metro-babel-transformer",
-   "measuredVersion": "0.88.0",
-   "targets": [
-    {
-     "target": "@babel/types",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@babel/types"
-     ],
-     "files": [
-      "src/index.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
    "package": "metro-config",
-   "measuredVersion": "0.88.0",
+   "measuredVersion": "0.88.1",
    "targets": [
     {
      "target": "metro-babel-register",
@@ -27526,165 +27370,6 @@
       "src/index.js"
      ],
      "fileCount": 1
-    },
-    {
-     "target": "metro-file-map",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "metro-file-map"
-     ],
-     "files": [
-      "src/types.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "metro-resolver",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "metro-resolver"
-     ],
-     "files": [
-      "src/types.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "metro-transform-worker",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "metro-transform-worker"
-     ],
-     "files": [
-      "src/types.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "metro-core",
-   "measuredVersion": "0.88.0",
-   "targets": [
-    {
-     "target": "metro",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "metro/private/shared/types"
-     ],
-     "files": [
-      "src/Logger.d.ts"
-     ],
-     "fileCount": 1
-    },
-    {
-     "target": "metro-file-map",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "metro-file-map"
-     ],
-     "files": [
-      "src/errors/AmbiguousModuleResolutionError.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "metro-file-map",
-   "measuredVersion": "0.88.0",
-   "targets": [
-    {
-     "target": "metro-config",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "metro-config"
-     ],
-     "files": [
-      "src/flow-types.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "metro-minify-terser",
-   "measuredVersion": "0.88.0",
-   "targets": [
-    {
-     "target": "metro-transform-worker",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "metro-transform-worker"
-     ],
-     "files": [
-      "src/minifier.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "metro-resolver",
-   "measuredVersion": "0.88.0",
-   "targets": [
-    {
-     "target": "metro",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "metro/private/DeltaBundler/types"
-     ],
-     "files": [
-      "src/types.d.ts"
-     ],
-     "fileCount": 1
-    }
-   ]
-  },
-  {
-   "package": "metro-transform-plugins",
-   "measuredVersion": "0.88.0",
-   "targets": [
-    {
-     "target": "@babel/types",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "@babel/types"
-     ],
-     "files": [
-      "src/constant-folding-plugin.d.ts",
-      "src/import-export-plugin.d.ts",
-      "src/inline-plugin.d.ts",
-      "src/normalizePseudoGlobals.d.ts"
-     ],
-     "fileCount": 4
     }
    ]
   },
@@ -28359,7 +28044,7 @@
   },
   {
    "package": "nx",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "targets": [
     {
      "target": "@angular-devkit/build-angular",
@@ -28913,7 +28598,7 @@
   },
   {
    "package": "posthog-node",
-   "measuredVersion": "6.1.0",
+   "measuredVersion": "6.2.0",
    "targets": [
     {
      "target": "express",
@@ -30065,7 +29750,7 @@
   },
   {
    "package": "resend",
-   "measuredVersion": "6.40.0",
+   "measuredVersion": "6.40.1",
    "targets": [
     {
      "target": "react",
@@ -31442,7 +31127,7 @@
   },
   {
    "package": "vite",
-   "measuredVersion": "8.3.8",
+   "measuredVersion": "8.4.0",
    "targets": [
     {
      "target": "pnpapi",
@@ -31744,7 +31429,7 @@
   },
   {
    "package": "vue-router",
-   "measuredVersion": "5.5.1",
+   "measuredVersion": "5.5.3",
    "targets": [
     {
      "target": "@vue/language-core",
@@ -31806,7 +31491,7 @@
   },
   {
    "package": "vuetify",
-   "measuredVersion": "4.3.4",
+   "measuredVersion": "4.3.5",
    "targets": [
     {
      "target": "@vue/reactivity",
@@ -31925,7 +31610,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261125.1",
+   "measuredVersion": "1.20261127.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -32097,7 +31782,7 @@
  "candidates": [
   {
    "package": "@applitools/spec-driver-webdriver",
-   "measuredVersion": "1.6.17",
+   "measuredVersion": "1.7.0",
    "target": "@applitools/test-utils",
    "specifiers": [
     "@applitools/test-utils/src/parse-env"
@@ -32187,7 +31872,7 @@
   },
   {
    "package": "@nx/devkit",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "target": "@angular-devkit/architect",
    "specifiers": [
     "@angular-devkit/architect"
@@ -32195,39 +31880,15 @@
   },
   {
    "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.7",
-   "target": "eslint-plugin-jsx-a11y",
-   "specifiers": [
-    "eslint-plugin-jsx-a11y"
-   ]
-  },
-  {
-   "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.7",
-   "target": "eslint-plugin-react",
-   "specifiers": [
-    "eslint-plugin-react"
-   ]
-  },
-  {
-   "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "target": "eslint-plugin-react-hooks",
    "specifiers": [
     "eslint-plugin-react-hooks"
    ]
   },
   {
-   "package": "@nx/eslint-plugin",
-   "measuredVersion": "24.0.7",
-   "target": "typescript-eslint",
-   "specifiers": [
-    "typescript-eslint"
-   ]
-  },
-  {
    "package": "@nx/webpack",
-   "measuredVersion": "24.0.7",
+   "measuredVersion": "24.1.0",
    "target": "swc-loader",
    "specifiers": [
     "swc-loader"
@@ -32316,7 +31977,7 @@
   },
   {
    "package": "@swagger-api/apidom-reference",
-   "measuredVersion": "1.14.0",
+   "measuredVersion": "1.15.0",
    "target": "@swagger-api/apidom-ns-asyncapi-3",
    "specifiers": [
     "@swagger-api/apidom-ns-asyncapi-3"
@@ -32398,7 +32059,7 @@
   },
   {
    "package": "expo-auth-session",
-   "measuredVersion": "58.0.19",
+   "measuredVersion": "58.0.20",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -32422,7 +32083,7 @@
   },
   {
    "package": "expo-file-system",
-   "measuredVersion": "58.0.14",
+   "measuredVersion": "58.0.15",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"
@@ -32454,7 +32115,7 @@
   },
   {
    "package": "expo-updates",
-   "measuredVersion": "58.0.22",
+   "measuredVersion": "58.0.23",
    "target": "expo-modules-core",
    "specifiers": [
     "expo-modules-core"

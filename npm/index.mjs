@@ -1,5 +1,5 @@
-// @nubjs/extensions 1.0.61 — generated 2026-11-26, do not edit.
-// 755 packages, 1080 undeclared dependencies found by scanning
+// @nubjs/extensions 1.0.62 — generated 2026-11-27, do not edit.
+// 748 packages, 1068 undeclared dependencies found by scanning
 // the 10000 most-downloaded npm packages, plus every rule from
 // @yarnpkg/extensions@2.0.7.
 // https://github.com/nubjs/package-extensions
@@ -2230,10 +2230,14 @@ export const packageExtensions = [
   "@nuxt/devtools@*",
   {
    "peerDependencies": {
-    "@nuxt/schema": "*"
+    "@nuxt/schema": "*",
+    "vue": "*"
    },
    "peerDependenciesMeta": {
     "@nuxt/schema": {
+     "optional": true
+    },
+    "vue": {
      "optional": true
     }
    }
@@ -2243,20 +2247,26 @@ export const packageExtensions = [
   "@nuxt/devtools-kit@*",
   {
    "peerDependencies": {
+    "@nuxt/schema": "*",
+    "@vitejs/devtools-kit": "*",
     "birpc": "*",
     "error-stack-parser-es": "*",
     "hookable": "*",
-    "nitropack": "*",
     "nuxt": "*",
     "ofetch": "*",
     "shiki": "*",
     "unimport": "*",
     "unstorage": "*",
-    "vite-plugin-vue-inspector": "*",
     "vue": "*",
     "vue-router": "*"
    },
    "peerDependenciesMeta": {
+    "@nuxt/schema": {
+     "optional": true
+    },
+    "@vitejs/devtools-kit": {
+     "optional": true
+    },
     "birpc": {
      "optional": true
     },
@@ -2264,9 +2274,6 @@ export const packageExtensions = [
      "optional": true
     },
     "hookable": {
-     "optional": true
-    },
-    "nitropack": {
      "optional": true
     },
     "nuxt": {
@@ -2282,9 +2289,6 @@ export const packageExtensions = [
      "optional": true
     },
     "unstorage": {
-     "optional": true
-    },
-    "vite-plugin-vue-inspector": {
      "optional": true
     },
     "vue": {
@@ -2562,19 +2566,18 @@ export const packageExtensions = [
  [
   "@nx/eslint-plugin@*",
   {
-   "dependencies": {
-    "@eslint/js": "*",
-    "eslint-plugin-import": "*"
-   },
    "peerDependencies": {
     "angular-eslint": "*",
+    "eslint-plugin-import-x": "*",
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks": "*",
-    "typescript-eslint": "*"
+    "eslint-plugin-react-hooks": "*"
    },
    "peerDependenciesMeta": {
     "angular-eslint": {
+     "optional": true
+    },
+    "eslint-plugin-import-x": {
      "optional": true
     },
     "eslint-plugin-jsx-a11y": {
@@ -2585,10 +2588,10 @@ export const packageExtensions = [
     },
     "eslint-plugin-react-hooks": {
      "optional": true
-    },
-    "typescript-eslint": {
-     "optional": true
     }
+   },
+   "dependencies": {
+    "eslint-plugin-import": "*"
    }
   }
  ],
@@ -3197,7 +3200,6 @@ export const packageExtensions = [
    "peerDependencies": {
     "@electric-sql/pglite": "*",
     "@emotion/is-prop-valid": "*",
-    "kysely": "*",
     "mysql2": "*",
     "nuqs": "*",
     "postgres": "*",
@@ -3208,9 +3210,6 @@ export const packageExtensions = [
      "optional": true
     },
     "@emotion/is-prop-valid": {
-     "optional": true
-    },
-    "kysely": {
      "optional": true
     },
     "mysql2": {
@@ -3710,19 +3709,6 @@ export const packageExtensions = [
    },
    "peerDependenciesMeta": {
     "json-schema": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "@rolldown/binding-wasm32-wasi@*",
-  {
-   "peerDependencies": {
-    "@oxc-project/types": "*"
-   },
-   "peerDependenciesMeta": {
-    "@oxc-project/types": {
      "optional": true
     }
    }
@@ -7396,107 +7382,13 @@ export const packageExtensions = [
   }
  ],
  [
-  "metro-babel-transformer@*",
-  {
-   "peerDependencies": {
-    "@babel/types": "*"
-   },
-   "peerDependenciesMeta": {
-    "@babel/types": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
   "metro-config@*",
   {
    "peerDependencies": {
-    "metro-babel-register": "*",
-    "metro-file-map": "*",
-    "metro-resolver": "*",
-    "metro-transform-worker": "*"
+    "metro-babel-register": "*"
    },
    "peerDependenciesMeta": {
     "metro-babel-register": {
-     "optional": true
-    },
-    "metro-file-map": {
-     "optional": true
-    },
-    "metro-resolver": {
-     "optional": true
-    },
-    "metro-transform-worker": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "metro-core@*",
-  {
-   "peerDependencies": {
-    "metro": "*",
-    "metro-file-map": "*"
-   },
-   "peerDependenciesMeta": {
-    "metro": {
-     "optional": true
-    },
-    "metro-file-map": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "metro-file-map@*",
-  {
-   "peerDependencies": {
-    "metro-config": "*"
-   },
-   "peerDependenciesMeta": {
-    "metro-config": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "metro-minify-terser@*",
-  {
-   "peerDependencies": {
-    "metro-transform-worker": "*"
-   },
-   "peerDependenciesMeta": {
-    "metro-transform-worker": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "metro-resolver@*",
-  {
-   "peerDependencies": {
-    "metro": "*"
-   },
-   "peerDependenciesMeta": {
-    "metro": {
-     "optional": true
-    }
-   }
-  }
- ],
- [
-  "metro-transform-plugins@*",
-  {
-   "peerDependencies": {
-    "@babel/types": "*"
-   },
-   "peerDependenciesMeta": {
-    "@babel/types": {
      "optional": true
     }
    }

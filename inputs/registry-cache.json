@@ -665,6 +665,7 @@
   "escape-string-regexp": true,
   "eslint": true,
   "eslint-plugin-import": true,
+  "eslint-plugin-import-x": true,
   "eslint-plugin-jsx-a11y": true,
   "eslint-plugin-react": true,
   "eslint-plugin-react-hooks": true,
