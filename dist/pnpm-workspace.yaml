@@ -1,5 +1,5 @@
-# Generated 2026-11-27 from the 10000 most-downloaded npm packages.
-# 748 packages, 1068 undeclared dependencies.
+# Generated 2026-11-28 from the 10000 most-downloaded npm packages.
+# 747 packages, 1067 undeclared dependencies.
 # Source, method and per-entry evidence: https://github.com/nubjs/package-extensions
 # Do not hand-edit — this block is regenerated.
 
@@ -4386,12 +4386,6 @@ packageExtensions:
       babylon: "*"
     peerDependenciesMeta:
       babylon:
-        optional: true
-  recharts@*:
-    peerDependencies:
-      redux: "*"
-    peerDependenciesMeta:
-      redux:
         optional: true
   redlock@*:
     peerDependencies:

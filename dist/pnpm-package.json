@@ -6882,16 +6882,6 @@
           }
         }
       },
-      "recharts@*": {
-        "peerDependencies": {
-          "redux": "*"
-        },
-        "peerDependenciesMeta": {
-          "redux": {
-            "optional": true
-          }
-        }
-      },
       "redlock@*": {
         "peerDependencies": {
           "ioredis": "*"

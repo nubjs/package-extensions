@@ -23,7 +23,7 @@ packageExtensions:
         optional: true
 ```
 
-**748 package names.** The scan covers 9,982 of the top 10,000 and finds 616 with an undeclared dependency across 1,068 edges. The Yarn seed contributes 142 package names, including 132 not found by the scan.
+**747 package names.** The scan covers 9,982 of the top 10,000 and finds 615 with an undeclared dependency across 1,067 edges. The Yarn seed contributes 142 package names, including 132 not found by the scan.
 
 ## Installing
 
@@ -104,7 +104,7 @@ Each finding is classed by where the import sits. The class decides which manife
 
 | Class | Count | Shape | Field |
 | --- | --- | --- | --- |
-| `types` | 479 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
+| `types` | 478 | Only a `.d.ts` references it. No runtime edge at all. | optional peer |
 | `guarded` | 307 | Every occurrence sits inside a try/catch or a conditional branch. | optional peer |
 | `runtime` | 157 | The main entry graph imports it, unguarded. | optional peer, or `dependencies` once reviewed |
 | `adapter` | 125 | A non-`.` exports subpath imports a backend the consumer chose. | optional peer |

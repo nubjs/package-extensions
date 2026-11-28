@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27",
+ "generated": "2026-11-28",
  "corpus": {
   "ranking": "npm-high-impact topDownload",
   "size": 10000,
@@ -8,8 +8,8 @@
  },
  "sources": {
   "scan": {
-   "entries": 1068,
-   "packages": 616
+   "entries": 1067,
+   "packages": 615
   },
   "yarn": {
    "package": "@yarnpkg/extensions",
@@ -28,19 +28,19 @@
   }
  },
  "totals": {
-  "packages": 748,
-  "selectors": 768,
-  "entries": 1068,
+  "packages": 747,
+  "selectors": 767,
+  "entries": 1067,
   "byClass": {
    "runtime": 157,
    "adapter": 125,
-   "types": 479,
+   "types": 478,
    "deep-path": 0,
    "guarded": 307
   },
   "byField": {
    "dependency": 21,
-   "peer": 1047
+   "peer": 1046
   },
   "candidatesForReview": 60,
   "droppedUnpublishedTargets": 202,
@@ -9737,16 +9737,6 @@
     }
    }
   },
-  "recharts@*": {
-   "peerDependencies": {
-    "redux": "*"
-   },
-   "peerDependenciesMeta": {
-    "redux": {
-     "optional": true
-    }
-   }
-  },
   "redlock@*": {
    "peerDependencies": {
     "ioredis": "*"
@@ -12371,7 +12361,7 @@
   },
   {
    "package": "@appium/base-driver",
-   "measuredVersion": "11.0.1",
+   "measuredVersion": "11.0.2",
    "targets": [
     {
      "target": "express",
@@ -12396,7 +12386,7 @@
   },
   {
    "package": "@appium/docutils",
-   "measuredVersion": "4.0.1",
+   "measuredVersion": "4.0.2",
    "targets": [
     {
      "target": "@appium/types",
@@ -13324,7 +13314,7 @@
   },
   {
    "package": "@electric-sql/pglite",
-   "measuredVersion": "0.6.0",
+   "measuredVersion": "0.6.1",
    "targets": [
     {
      "target": "ws",
@@ -13336,7 +13326,7 @@
       "ws"
      ],
      "files": [
-      "dist/chunk-QCMPLXTY.js",
+      "dist/chunk-GE4YWJAD.js",
       "dist/index.cjs",
       "dist/node-postgres/index.cjs"
      ],
@@ -13426,7 +13416,7 @@
   },
   {
    "package": "@es-joy/jsdoccomment",
-   "measuredVersion": "1.2.2",
+   "measuredVersion": "1.2.3",
    "targets": [
     {
      "target": "eslint",
@@ -13446,7 +13436,7 @@
   },
   {
    "package": "@eslint-react/shared",
-   "measuredVersion": "5.30.6",
+   "measuredVersion": "5.30.7",
    "targets": [
     {
      "target": "react",
@@ -14960,7 +14950,7 @@
   },
   {
    "package": "@jimp/plugin-blur",
-   "measuredVersion": "2.2.0",
+   "measuredVersion": "2.2.1",
    "targets": [
     {
      "target": "@jimp/types",
@@ -15263,7 +15253,7 @@
   },
   {
    "package": "@loaders.gl/images",
-   "measuredVersion": "5.0.1",
+   "measuredVersion": "5.0.2",
    "targets": [
     {
      "target": "probe.gl",
@@ -18435,7 +18425,7 @@
   },
   {
    "package": "@prisma/studio-core",
-   "measuredVersion": "0.35.2",
+   "measuredVersion": "0.36.0",
    "targets": [
     {
      "target": "@electric-sql/pglite",
@@ -19768,7 +19758,7 @@
   },
   {
    "package": "@sentry/vercel-edge",
-   "measuredVersion": "11.19.0",
+   "measuredVersion": "11.20.0",
    "targets": [
     {
      "target": "@sentry/opentelemetry",
@@ -20032,7 +20022,7 @@
   },
   {
    "package": "@stencil/core",
-   "measuredVersion": "4.45.5",
+   "measuredVersion": "4.45.6",
    "targets": [
     {
      "target": "@jest/core",
@@ -21110,7 +21100,7 @@
   },
   {
    "package": "@tiptap/extension-list",
-   "measuredVersion": "3.35.0",
+   "measuredVersion": "3.35.1",
    "targets": [
     {
      "target": "prosemirror-model",
@@ -21575,7 +21565,7 @@
   },
   {
    "package": "@unhead/schema",
-   "measuredVersion": "3.5.3",
+   "measuredVersion": "3.5.4",
    "targets": [
     {
      "target": "unhead",
@@ -21616,7 +21606,7 @@
   },
   {
    "package": "@vercel/go",
-   "measuredVersion": "31.0.0",
+   "measuredVersion": "32.0.0",
    "targets": [
     {
      "target": "execa",
@@ -21693,7 +21683,7 @@
   },
   {
    "package": "@vercel/static-build",
-   "measuredVersion": "30.0.0",
+   "measuredVersion": "31.0.0",
    "targets": [
     {
      "target": "encoding",
@@ -23389,7 +23379,7 @@
   },
   {
    "package": "appium-adb",
-   "measuredVersion": "17.0.4",
+   "measuredVersion": "17.0.5",
    "targets": [
     {
      "target": "@appium/types",
@@ -23410,7 +23400,7 @@
   },
   {
    "package": "appium-chromedriver",
-   "measuredVersion": "11.1.2",
+   "measuredVersion": "11.2.0",
    "targets": [
     {
      "target": "@appium/types",
@@ -23445,7 +23435,7 @@
   },
   {
    "package": "appium-ios-simulator",
-   "measuredVersion": "11.3.0",
+   "measuredVersion": "11.3.1",
    "targets": [
     {
      "target": "@appium/types",
@@ -24903,7 +24893,7 @@
   },
   {
    "package": "eslint-plugin-jsdoc",
-   "measuredVersion": "65.5.6",
+   "measuredVersion": "65.5.7",
    "targets": [
     {
      "target": "@eslint/core",
@@ -26883,7 +26873,7 @@
   },
   {
    "package": "jsonc-eslint-parser",
-   "measuredVersion": "3.3.0",
+   "measuredVersion": "3.3.1",
    "targets": [
     {
      "target": "eslint",
@@ -26972,7 +26962,7 @@
   },
   {
    "package": "knip",
-   "measuredVersion": "6.48.0",
+   "measuredVersion": "6.49.0",
    "targets": [
     {
      "target": "vue",
@@ -27263,7 +27253,7 @@
   },
   {
    "package": "mermaid",
-   "measuredVersion": "12.3.0",
+   "measuredVersion": "12.4.0",
    "targets": [
     {
      "target": "@iconify/types",
@@ -29523,33 +29513,6 @@
    ]
   },
   {
-   "package": "recharts",
-   "measuredVersion": "3.11.1",
-   "targets": [
-    {
-     "target": "redux",
-     "class": "types",
-     "field": "peer",
-     "candidate": false,
-     "reason": "types class — no runtime edge, only a declaration-file reference",
-     "specifiers": [
-      "redux"
-     ],
-     "files": [
-      "types/state/brushSlice.d.ts",
-      "types/state/cartesianAxisSlice.d.ts",
-      "types/state/chartDataSlice.d.ts",
-      "types/state/errorBarSlice.d.ts",
-      "types/state/eventSettingsSlice.d.ts",
-      "types/state/graphicalItemsSlice.d.ts",
-      "types/state/layoutSlice.d.ts",
-      "types/state/legendSlice.d.ts"
-     ],
-     "fileCount": 18
-    }
-   ]
-  },
-  {
    "package": "redlock",
    "measuredVersion": "5.0.0-beta.2",
    "targets": [
@@ -29750,7 +29713,7 @@
   },
   {
    "package": "resend",
-   "measuredVersion": "6.40.1",
+   "measuredVersion": "6.41.0",
    "targets": [
     {
      "target": "react",
@@ -30471,7 +30434,7 @@
   },
   {
    "package": "swiper",
-   "measuredVersion": "14.4.0",
+   "measuredVersion": "14.5.0",
    "targets": [
     {
      "target": "react",
@@ -30840,7 +30803,7 @@
   },
   {
    "package": "unified-engine",
-   "measuredVersion": "12.0.0",
+   "measuredVersion": "12.0.1",
    "targets": [
     {
      "target": "unified",
@@ -31610,7 +31573,7 @@
   },
   {
    "package": "workerd",
-   "measuredVersion": "1.20261127.1",
+   "measuredVersion": "1.20261128.1",
    "targets": [
     {
      "target": "pnpapi",
@@ -31630,7 +31593,7 @@
   },
   {
    "package": "wrangler",
-   "measuredVersion": "4.168.0",
+   "measuredVersion": "4.169.0",
    "targets": [
     {
      "target": "babylon",
@@ -31798,7 +31761,7 @@
   },
   {
    "package": "@electric-sql/pglite",
-   "measuredVersion": "0.6.0",
+   "measuredVersion": "0.6.1",
    "target": "ws",
    "specifiers": [
     "ws"
